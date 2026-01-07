@@ -2,6 +2,8 @@ services:
   selenium:
     image: selenium/standalone-chrome:latest
     shm_size: 512m
+    ports:
+      - "4444:4444"
 
   dagster:
     image: dagster/dagster-webserver:latest
@@ -9,11 +11,13 @@ services:
       - DAGSTER_HOME=/opt/dagster/dagster_home
       - SELENIUM_REMOTE_URL=http://selenium:4444/wd/hub
     volumes:
-      - ./dagster_repo:/opt/dagster/app
-      - ../scraper_repo:/opt/scraper
+      - /home/ubuntu/work/repo_dagster:/opt/dagster/app
       - ./dagster_home:/opt/dagster/dagster_home
+      - ./data:/opt/dagster/data
+      # añade aquí tu repo del scraper:
+      # - /home/ubuntu/work/<repo_scraper>:/opt/scraper
     ports:
-      - "8080:3000"   # 👈 AQUÍ
+      - "8080:3000"
     depends_on:
       - selenium
     command: >
