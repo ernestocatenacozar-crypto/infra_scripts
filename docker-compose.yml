@@ -6,7 +6,7 @@ services:
       - "4444:4444"
 
   dagster:
-    image: dagster/dagster-webserver:latest
+    image: dagster/dagster:latest
     environment:
       - DAGSTER_HOME=/opt/dagster/dagster_home
       - SELENIUM_REMOTE_URL=http://selenium:4444/wd/hub
