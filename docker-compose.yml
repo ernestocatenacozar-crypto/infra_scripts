@@ -3,7 +3,8 @@ services:
     image: selenium/standalone-chrome:latest
     shm_size: 512m
     ports:
-      - "4444:4444"
+    - "4444:4444"   # WebDriver
+    - "7900:7900"   # 👈 noVNC (el navegador visible)
 
   dagster:
     build:
