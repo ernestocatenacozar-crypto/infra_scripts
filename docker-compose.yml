@@ -8,8 +8,8 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__LOAD_EXAMPLES: "False"
     AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "True"
   volumes:
-    - /home/ubuntu/work/<AIRFLOW_REPO>/dags:/opt/airflow/dags
-    - /home/ubuntu/work/<AIRFLOW_REPO>:/opt/airflow/projects
+    - /home/ubuntu/work/repo_dag/dags:/opt/airflow/dags
+    - /home/ubuntu/work/repo_dag:/opt/airflow/projects
     - airflow_logs:/opt/airflow/logs
   depends_on:
     postgres:
