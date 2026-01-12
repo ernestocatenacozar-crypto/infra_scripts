@@ -1,25 +1,24 @@
 services:
   selenium:
     image: selenium/standalone-chrome:latest
-    shm_size: 512m
+    container_name: selenium
+    restart: unless-stopped
     ports:
-    - "4444:4444"   # WebDriver
-    - "7900:7900"   # 👈 noVNC (el navegador visible)
-
-  dagster:
-    build:
-      context: .
-      dockerfile: Dockerfile_dagster
+      - "4444:4444"
+      - "7900:7900"
+    shm_size: 2g
     environment:
-      - DAGSTER_HOME=/opt/dagster/dagster_home
-      - SELENIUM_REMOTE_URL=http://selenium:4444/wd/hub
-    volumes:
-      - /home/ubuntu/work/repo_dagster:/opt/dagster/app
-      - ./dagster_home:/opt/dagster/dagster_home
-      - ./data:/opt/dagster/data
+      - SE_NODE_MAX_SESSIONS=1
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+
+  cronicle:
+    build: ./cronicle
+    container_name: cronicle
+    restart: unless-stopped
     ports:
-      - "8080:3000"
-    depends_on:
-      - selenium
-    command: >
-      dagster-webserver -h 0.0.0.0 -p 3000 -f /opt/dagster/app/__init__.py
+      - "3012:3012"
+    volumes:
+      - ./cronicle/data:/opt/cronicle/data
+      - ./cronicle/conf/config.json:/opt/cronicle/conf/config.json
+      - ./cronicle/conf/setup.json:/opt/cronicle/conf/setup.json
+      - /var/run/docker.sock:/var/run/docker.sock
