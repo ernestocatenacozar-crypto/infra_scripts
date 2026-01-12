@@ -25,7 +25,8 @@ services:
 
   fisgon_api:
     build:
-      context: /home/ubuntu/work/event_flask_app/flask_app
+      context: /home/ubuntu/work/event_flask_app
+      dockerfile: Dockerfile
     container_name: fisgon_api
     restart: unless-stopped
     environment:
