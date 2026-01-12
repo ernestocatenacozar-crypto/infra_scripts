@@ -39,4 +39,6 @@ services:
       timeout: 5s
       retries: 5
     volumes:
+      - /home/ubuntu/work/event_flask_app:/app
+      - /home/ubuntu/work/fisgon:/deps/fisgon
       - /home/ubuntu/data_storage:/app/data
