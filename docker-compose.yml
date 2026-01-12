@@ -26,19 +26,20 @@ services:
   fisgon_api:
     build:
       context: /home/ubuntu/work/event_flask_app
-      dockerfile: Dockerfile
     container_name: fisgon_api
     restart: unless-stopped
     environment:
       TZ: Europe/Madrid
+      PYTHONPATH: /app:/deps/fisgon
     ports:
       - "5002:5002"
+    volumes:
+      - /home/ubuntu/work/event_flask_app:/app
+      - /home/ubuntu/work/fisgon:/deps/fisgon
+      - /home/ubuntu/data_storage:/app/data
+    command: ["gunicorn","-w","2","-k","gthread","--threads","4","-b","0.0.0.0:5002","--timeout","60","app:app"]
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://localhost:5002/health"]
       interval: 30s
       timeout: 5s
       retries: 5
-    volumes:
-      - /home/ubuntu/work/event_flask_app:/app
-      - /home/ubuntu/work/fisgon:/deps/fisgon
-      - /home/ubuntu/data_storage:/app/data
