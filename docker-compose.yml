@@ -22,3 +22,20 @@ services:
       - ./cronicle/conf/config.json:/opt/cronicle/conf/config.json
       - ./cronicle/conf/setup.json:/opt/cronicle/conf/setup.json
       - /var/run/docker.sock:/var/run/docker.sock
+
+  fisgon_api:
+    build:
+      context: /home/ubuntu/work/event_flask_app/flask_app
+    container_name: fisgon_api
+    restart: unless-stopped
+    environment:
+      TZ: Europe/Madrid
+    ports:
+      - "5002:5002"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:5002/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - /home/ubuntu/data_storage:/app/data
