@@ -31,7 +31,7 @@ services:
     environment:
       TZ: Europe/Madrid
       PYTHONPATH: /app:/deps/fisgon
-      DATA_STORAGE_PATH: /home/ubuntu/data_storage/:/home/ubuntu/data_storage/
+      DATA_STORAGE_PATH: /home/ubuntu/data_storage/
     ports:
       - "5002:5002"
     volumes:
