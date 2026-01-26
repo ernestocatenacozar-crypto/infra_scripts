@@ -2,7 +2,7 @@
 set -e
 
 REPO_DIR="/home/ubuntu/work/infra_scripts"
-MD_FILE="endpoints.md"
+MD_FILE="README.md"
 
 TOKEN=$(curl -s -X PUT "http://169.254.169.254/latest/api/token" \
   -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
