@@ -1,3 +1,3 @@
-Cronicle   :3012
-Selenium   :7900
-Flask      :5002
+Cronicle   54.246.4.182:3012
+Selenium   54.246.4.182:7900
+Flask      54.246.4.182:5002
