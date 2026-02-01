@@ -1,11 +1,36 @@
 name: "FisgonMultiTask"
 steps:
-  - name: "debug_env"
-    command: "printenv | sort | sed -n '1,200p'"
-
   - name: "tarea_1"
-    command: "python3 /app/script.py --param valor1"
+    command: >
+      docker run --rm
+      --network host
+      -v /home/ubuntu/work/fisgon:/app
+      -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
+      -w /app
+      -e OPERATION=0
+      -e TARGET_CITY=${TARGET_CITY}
+      -e TARGET_SCRAPER=${TARGET_SCRAPER}
+      -e DAGU_BASE_URL=${DAGU_BASE_URL}
+      -e DAG_ID=test
+      -e DAG_RUN_ID=${DAG_RUN_ID}
+      fisgon_scraper:1.0
 
   - name: "tarea_2"
     command: "python3 /app/script.py --param valor2"
     depends: ["tarea_1"] # Solo si quieres que vayan en orden
+
+
+#     import os
+
+# dagu_base_url = os.getenv("DAGU_BASE_URL", "")
+# dag_id = os.getenv("DAG_ID", "")
+# dag_run_id = os.getenv("DAG_RUN_ID", "")
+
+# # URL al run (si tienes base URL)
+# if dagu_base_url and dag_id and dag_run_id:
+#     run_url = f"{dagu_base_url}/dags/{dag_id}?dagRunId={dag_run_id}"
+# else:
+#     run_url = ""
+
+# print("DAGU run URL:", run_url)
+
