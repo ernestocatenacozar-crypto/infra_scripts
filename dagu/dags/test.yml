@@ -1,5 +1,8 @@
 name: "FisgonMultiTask"
 steps:
+  - name: "debug_env"
+    command: "printenv | sort | sed -n '1,200p'"
+
   - name: "tarea_1"
     command: "python3 /app/script.py --param valor1"
 
