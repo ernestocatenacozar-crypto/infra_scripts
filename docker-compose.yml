@@ -11,33 +11,21 @@ services:
       - SE_NODE_MAX_SESSIONS=1
       - SE_NODE_OVERRIDE_MAX_SESSIONS=true
 
-  # cronicle:
-  #   build: ./cronicle
-  #   container_name: cronicle
-  #   restart: unless-stopped
-  #   ports:
-  #     - "3012:3012"
-  #   volumes:
-  #     - ./cronicle/data:/opt/cronicle/data
-  #     - ./cronicle/conf/config.json:/opt/cronicle/conf/config.json
-  #     - ./cronicle/conf/setup.json:/opt/cronicle/conf/setup.json
-  #     - /var/run/docker.sock:/var/run/docker.sock
-
   dagu:
-      image: ghcr.io/dagu-org/dagu:latest
-      container_name: dagu
-      restart: unless-stopped
-      ports:
-        - "3012:6806"  # <--- Mapeo: Puerto de Cronicle afuera, Dagu adentro
-      volumes:
-        - ./dagu/dags:/home/dagu/dags
-        - ./dagu/configs:/home/dagu/configs
-        - /var/run/docker.sock:/var/run/docker.sock
-        - /home/ubuntu/work/fisgon:/deps/fisgon
-      environment:
-        - DAGU_HOST=0.0.0.0
-        - DAGU_PORT=6806
-        - TZ=Europe/Madrid
+    image: ghcr.io/dagu-org/dagu:latest
+    container_name: dagu
+    restart: unless-stopped
+    ports:
+      - "3012:6806"
+    volumes:
+      - ./dagu/dags:/var/lib/dagu/dags
+      - ./dagu/configs:/var/lib/dagu/configs
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/ubuntu/work/fisgon:/deps/fisgon
+    environment:
+      - DAGU_HOST=0.0.0.0
+      - DAGU_PORT=6806
+      - TZ=Europe/Madrid
 
   fisgon_api:
     build:

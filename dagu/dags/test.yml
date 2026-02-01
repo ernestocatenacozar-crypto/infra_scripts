@@ -1,4 +1,4 @@
-name: "Fisgon Multi Task"
+name: "FisgonMultiTask"
 steps:
   - name: "tarea_1"
     command: "python3 /app/script.py --param valor1"
