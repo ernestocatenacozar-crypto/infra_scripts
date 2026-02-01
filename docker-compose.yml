@@ -24,7 +24,7 @@ services:
   #     - /var/run/docker.sock:/var/run/docker.sock
 
   dagu:
-      image: dagu-org/dagu:latest
+      image: ghcr.io/dagu-org/dagu:latest
       container_name: dagu
       restart: unless-stopped
       ports:
