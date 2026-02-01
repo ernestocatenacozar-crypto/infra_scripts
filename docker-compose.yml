@@ -38,7 +38,6 @@ services:
       - /home/ubuntu/work/event_flask_app:/app
       - /home/ubuntu/work/fisgon:/deps/fisgon
       - /home/ubuntu/data_storage:/home/ubuntu/data_storage
-    # command: ["gunicorn","-w","2","-k","gthread","--threads","4","-b","0.0.0.0:5002","--timeout","60","app:app"]
     command: ["python", "app.py"]
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://localhost:5002/health"]
