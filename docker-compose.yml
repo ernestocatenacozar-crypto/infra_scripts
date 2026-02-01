@@ -23,21 +23,21 @@ services:
   #     - ./cronicle/conf/setup.json:/opt/cronicle/conf/setup.json
   #     - /var/run/docker.sock:/var/run/docker.sock
 
-dagu:
-    image: yohiste/dagu:latest
-    container_name: dagu
-    restart: unless-stopped
-    ports:
-      - "3012:6806"  # <--- Mapeo: Puerto de Cronicle afuera, Dagu adentro
-    volumes:
-      - ./dagu/dags:/home/dagu/dags
-      - ./dagu/configs:/home/dagu/configs
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /home/ubuntu/work/fisgon:/deps/fisgon
-    environment:
-      - DAGU_HOST=0.0.0.0
-      - DAGU_PORT=6806
-      - TZ=Europe/Madrid
+  dagu:
+      image: dagu-org/dagu:latest
+      container_name: dagu
+      restart: unless-stopped
+      ports:
+        - "3012:6806"  # <--- Mapeo: Puerto de Cronicle afuera, Dagu adentro
+      volumes:
+        - ./dagu/dags:/home/dagu/dags
+        - ./dagu/configs:/home/dagu/configs
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /home/ubuntu/work/fisgon:/deps/fisgon
+      environment:
+        - DAGU_HOST=0.0.0.0
+        - DAGU_PORT=6806
+        - TZ=Europe/Madrid
 
   fisgon_api:
     build:
