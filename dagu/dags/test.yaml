@@ -1,0 +1,8 @@
+name: "Fisgon Multi Task"
+tasks:
+  - name: "tarea_1"
+    command: "python3 /app/script.py --param valor1"
+  
+  - name: "tarea_2"
+    command: "python3 /app/script.py --param valor2"
+    depends_on: ["tarea_1"] # Solo si quieres que vayan en orden
