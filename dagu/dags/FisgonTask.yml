@@ -19,6 +19,7 @@ steps:
       -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
       fisgon_scraper:1.0;
       rc=$?;
+      echo "***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***";
       env DOCKER_CONFIG=/tmp/.docker HOME=/tmp docker restart selenium || true;
       for i in $(seq 1 30); do
         (echo > /dev/tcp/localhost/4444) >/dev/null 2>&1 && break;

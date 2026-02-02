@@ -1,0 +1,23 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+
+        SCRAPER=KuverProducciones, 
+
+Running for Almeria: KuverProducciones
+KuverProducciones
+RUNNING SESSION =  2026_02_02_15_32_Lunes
+Getting https://kuverproducciones.com/proximos-eventos/
+Sleep 1
+*** SCRAPED 87 URLS WITH EVENTS **
+New url events = 0
+#######################
+No new urls/events extracted. No new events to save
+#######################
+***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+selenium
