@@ -8,11 +8,21 @@ env:
   TARGET_SCRAPER: ${TARGET_SCRAPER}
   DAGU_BASE_URL: ${DAGU_BASE_URL}
 steps:
-  - name: "launch_children"
+  - name: "run_scrapers"
     command: >
       bash -lc 'IFS=","; for s in $TARGET_SCRAPER; do
       s="$(echo "$s" | xargs)";
       [ -z "$s" ] && continue;
-      /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonMultiTask.yml --
-      TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL";
+      docker run --rm
+      --network host
+      -v /home/ubuntu/work/fisgon:/app
+      -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
+      -w /app
+      -e OPERATION=0
+      -e DOCKER_CONFIG=/tmp/.docker
+      -e HOME=/tmp
+      -e TARGET_CITY="$TARGET_CITY"
+      -e TARGET_SCRAPER="$s"
+      -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+      fisgon_scraper:1.0;
       done'
