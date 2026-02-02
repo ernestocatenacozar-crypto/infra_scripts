@@ -6,7 +6,7 @@ params:
 steps:
   - name: "tarea_1"
     command: >
-      docker run --rm
+      bash -lc 'docker run --rm
       --network host
       -v /home/ubuntu/work/fisgon:/app
       -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
@@ -17,11 +17,14 @@ steps:
       -e TARGET_CITY
       -e TARGET_SCRAPER
       -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
-      fisgon_scraper:1.0
-
-  - name: "restart_selenium"
-    command: "env DOCKER_CONFIG=/tmp/.docker HOME=/tmp docker restart selenium"
-    depends: ["tarea_1"]
+      fisgon_scraper:1.0;
+      rc=$?;
+      env DOCKER_CONFIG=/tmp/.docker HOME=/tmp docker restart selenium || true;
+      for i in $(seq 1 30); do
+        (echo > /dev/tcp/localhost/4444) >/dev/null 2>&1 && break;
+        sleep 1;
+      done;
+      exit $rc'
 
 
 

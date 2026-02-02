@@ -15,5 +15,5 @@ steps:
       [ -z "$s" ] && continue;
       echo "Launching scraper: $s";
       /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonTask.yml -- \
-      TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL";
+      TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL" || true;
       done'
