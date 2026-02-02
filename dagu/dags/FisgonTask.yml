@@ -17,6 +17,7 @@ steps:
       -e TARGET_CITY
       -e TARGET_SCRAPER
       -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+      -e DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&step=tarea_1&dagRunId=${DAG_RUN_ID}"
       fisgon_scraper:1.0;
       rc=$?;
       echo "***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***";
