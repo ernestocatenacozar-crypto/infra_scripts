@@ -12,7 +12,7 @@ services:
       - SE_NODE_OVERRIDE_MAX_SESSIONS=true
 
   dagu:
-    image: ghcr.io/dagu-org/dagu:latest
+    build: ./dagu
     container_name: dagu
     restart: unless-stopped
     ports:
