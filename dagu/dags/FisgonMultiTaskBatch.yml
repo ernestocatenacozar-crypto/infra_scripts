@@ -1,0 +1,21 @@
+name: "FisgonMultiTaskBatch"
+params:
+  - name: TARGET_CITY
+    default: ""
+    description: "Ciudad objetivo"
+  - name: TARGET_SCRAPER
+    default: ""
+    description: "Lista de scrapers separada por comas"
+env:
+  TARGET_CITY: ${TARGET_CITY}
+  TARGET_SCRAPER: ${TARGET_SCRAPER}
+  DAGU_BASE_URL: ${DAGU_BASE_URL}
+steps:
+  - name: "launch_children"
+    command: >
+      bash -lc 'IFS=","; for s in $TARGET_SCRAPER; do
+      s="$(echo "$s" | xargs)";
+      [ -z "$s" ] && continue;
+      /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonMultiTask.yml --
+      TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL";
+      done'

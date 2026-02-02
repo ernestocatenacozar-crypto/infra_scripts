@@ -1,7 +1,7 @@
 name: "FisgonMultiTask"
 params:
   - TARGET_CITY: "Almeria"
-  - TARGET_SCRAPER: "KuverProduciones"
+  - TARGET_SCRAPER: "KuverProducciones"
 
 steps:
   - name: "tarea_1"
@@ -12,6 +12,8 @@ steps:
       -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
       -w /app
       -e OPERATION=0
+      -e DOCKER_CONFIG=/tmp/.docker
+      -e HOME=/tmp
       -e TARGET_CITY
       -e TARGET_SCRAPER
       -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"

@@ -7,7 +7,7 @@ USER root
 RUN apt-get update \
   && apt-get install -y --no-install-recommends docker.io \
   && rm -rf /var/lib/apt/lists/* \
-  && groupadd -g 988 docker || true \
-  && usermod -aG 988 dagu || true
+  && if getent group docker >/dev/null; then groupmod -g 988 docker; else groupadd -g 988 docker; fi \
+  && usermod -aG docker dagu
 
 # Leave user as root so entrypoint can manage users/groups.
