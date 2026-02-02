@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/app/run.py", line 74, in <module>
+    print_running_vars(TARGET_CITY, OPERATION, CREATE_SESSION, SESSION, IMAGES, TARGET_SCRAPER, DAG_RUN_URL)
+TypeError: print_running_vars() takes 6 positional arguments but 7 were given

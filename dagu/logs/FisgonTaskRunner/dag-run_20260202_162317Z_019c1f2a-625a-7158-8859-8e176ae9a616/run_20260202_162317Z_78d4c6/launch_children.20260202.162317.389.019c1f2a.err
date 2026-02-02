@@ -1,0 +1,15 @@
+time=2026-02-02T16:23:17.432Z level=INFO msg="Executing root dag-run" dag=FisgonTask run-id=019c1f2a-62b7-7253-bf02-b14eb670f7c0 params=""
+time=2026-02-02T16:23:17.439Z level=INFO msg="DAG run started" name=FisgonTask run-id=019c1f2a-62b7-7253-bf02-b14eb670f7c0 attempt-id="" dag=FisgonTask run-id=019c1f2a-62b7-7253-bf02-b14eb670f7c0 params="[TARGET_CITY=Almeria TARGET_SCRAPER=KuverProducciones 3=DAGU_BASE_URL=]"
+time=2026-02-02T16:23:17.441Z level=INFO msg="Step started" name=FisgonTask run-id=019c1f2a-62b7-7253-bf02-b14eb670f7c0 attempt-id="" dag=FisgonTask run-id=019c1f2a-62b7-7253-bf02-b14eb670f7c0 step=tarea_1
+time=2026-02-02T16:23:56.080Z level=INFO msg="DAG run finished" name=FisgonTask run-id=019c1f2a-62b7-7253-bf02-b14eb670f7c0 attempt-id="" dag=FisgonTask run-id=019c1f2a-62b7-7253-bf02-b14eb670f7c0 status=failed started-at=2026-02-02T16:23:17Z finished-at=2026-02-02T16:23:56Z
+time=2026-02-02T16:23:56.088Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTask run-id=019c1f2a-62b7-7253-bf02-b14eb670f7c0 err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 74, in <module>\n    print_running_vars(TARGET_CITY, OPERATION, CREATE_SESSION, SESSION, IMAGES, TARGET_SCRAPER, DAG_RUN_URL)\nTypeError: print_running_vars() takes 6 positional arguments but 7 were given\n"
+Error: failed to execute the dag-run FisgonTask (dag-run ID: 019c1f2a-62b7-7253-bf02-b14eb670f7c0): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 74, in <module>
+    print_running_vars(TARGET_CITY, OPERATION, CREATE_SESSION, SESSION, IMAGES, TARGET_SCRAPER, DAG_RUN_URL)
+TypeError: print_running_vars() takes 6 positional arguments but 7 were given
+
+time=2026-02-02T16:23:56.118Z level=INFO msg="Executing root dag-run" dag=FisgonTask run-id=019c1f2a-f9d5-7965-a5c2-b5c371b20970 params=""
+time=2026-02-02T16:23:56.127Z level=INFO msg="DAG run started" name=FisgonTask run-id=019c1f2a-f9d5-7965-a5c2-b5c371b20970 attempt-id="" dag=FisgonTask run-id=019c1f2a-f9d5-7965-a5c2-b5c371b20970 params="[TARGET_CITY=Almeria TARGET_SCRAPER=ClassicJazz 3=DAGU_BASE_URL=]"
+time=2026-02-02T16:23:56.129Z level=INFO msg="Step started" name=FisgonTask run-id=019c1f2a-f9d5-7965-a5c2-b5c371b20970 attempt-id="" dag=FisgonTask run-id=019c1f2a-f9d5-7965-a5c2-b5c371b20970 step=tarea_1

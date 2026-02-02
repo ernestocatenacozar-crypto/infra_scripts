@@ -1,0 +1,22 @@
+Launching scraper: KuverProducciones
+Failed - 2026-02-02T16:23:17Z
+
+dag: FisgonTask (39.0s)
+│
+└─tarea_1 (39.0s) [failed]
+  ├─stdout:
+  │   ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+  │   selenium
+  ├─stderr:
+  │   Traceback (most recent call last):
+  │   File "/app/run.py", line 74, in <module>
+  │   print_running_vars(TARGET_CITY, OPERATION, CREATE_SESSION, SESSION,
+  │   IMAGES, TARGET_SCRAPER, DAG_RUN_URL)
+  │   TypeError: print_running_vars() takes 6 positional arguments but 7 were
+  │   given
+  │
+  └─error: failed to execute step "tarea_1": exit status 1
+
+Result: Failed
+
+Launching scraper: ClassicJazz
