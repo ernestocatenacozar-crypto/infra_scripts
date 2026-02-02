@@ -1,7 +1,7 @@
 name: "FisgonTaskRunner"
 params:
   - TARGET_CITY: "Almeria"
-    TARGET_SCRAPER: "LaGuajira,ClassicJazz"
+    TARGET_SCRAPER: "KuverProducciones,ClassicJazz"
 env:
   TARGET_CITY: ${TARGET_CITY}
   TARGET_SCRAPER: ${TARGET_SCRAPER}
@@ -9,10 +9,11 @@ env:
 steps:
   - name: "launch_children"
     command: >
-      env HOME=/tmp bash -lc 'printf "%s" "$TARGET_SCRAPER" | tr "," "\n" | while read -r s; do
+      env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$TARGET_SCRAPER";
+      for s in "${SCRAPERS[@]}"; do
       s="$(echo "$s" | xargs)";
       [ -z "$s" ] && continue;
       echo "Launching scraper: $s";
-      /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonTask.yml --
+      /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonTask.yml -- \
       TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL";
       done'

@@ -1,0 +1,430 @@
+Launching scraper: LaGuajira
+Succeeded - 2026-02-02T15:55:04Z
+
+dag: FisgonTask (58.0s)
+│
+└─tarea_1 (58.0s) [succeeded]
+  ├─docker run --rm --network host -v /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   fisgon_scraper:1.0
+  │
+  ├─stdout: ... (31 more lines)
+  │   {'id': '5b35f1df', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'José López & Sabina Rodriguez',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-04', 'start_time': '22:00:00',
+  │   'end_date': '2026-02-04', 'end_time': '23:30:00', 'description': 'José
+  │   Francisco López, bailaor almeriense graduado en Grado Profesional de
+  │   Flamenco por el Conservatorio Kina Jiménez de Almería. Actualmente,
+  │   estudiando el grado superior de baile flamenco en Málaga. Compagina sus
+  │   estudios con formación con diferentes bailaores de la provincia como
+  │   Inka Díaz y Julio Ruiz, y fuera de esta con el artista Marco Flores. Ha
+  │   ...', 'others': {'ticket':
+  │   'https://laguajiradealmeria.com/evento/jose-lopez-sabina-rodriguez/#trib
+  │   e-tickets__tickets-form', 'price': '6,00€ – 12,00€', 'location':
+  │   'La Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source':
+  │   'LaGuajira', 'exec_time': '20260202T155504', 'session':
+  │   '2026_02_02_15_32_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Jose-Lopez-y-
+  │   Sabina-Rodriguez.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/jose-lopez-sabina-rodriguez/'}
+  │   Getting https://laguajiradealmeria.com/programacion/lista/página/2/
+  │   Sleep 16
+  │   --------------------
+  │   {'id': '96647645', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Hysteria Market', 'id_venue':
+  │   'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La Guajira',
+  │   'start_date': '2026-02-08', 'start_time': '12:00:00', 'end_date':
+  │   '2026-02-08', 'end_time': '18:00:00', 'description': 'Hysteria Market es
+  │   un evento que combina diferentes disciplinas: música, artesanía,
+  │   talleres, charlas... Nuestro objetivo es alejarnos de lo habitual para
+  │   adentrarnos en una programación algo más exclusiva y underground, que
+  │   mezcle temas sociales, culturales y artísticos. Queremos romper la
+  │   competitividad y lo individual. Nuestra motivación es crear una
+  │   comunidad artística y social, construir poco ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260202T155504', 'session': '2026_02_02_15_32_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Hysteria-Mark
+  │   et.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/hysteria-market-2/'}
+  │   --------------------
+  │   {'id': '25fcab5e', 'show': 1, 'in_city': '__NOT_FOUND__', 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Mery Gil & Paco Rivas #Nocheazul',
+  │   'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None,
+  │   'start_date': '2026-02-12', 'start_time': '22:00:00', 'end_date':
+  │   '2026-02-12', 'end_time': '23:30:00', 'description': 'Paco Rivas, nacido
+  │   en Almería en 1963, comenzó su formación musical en el Real
+  │   Conservatorio a los nueve años. Desde su adolescencia, destacó en
+  │   bandas locales y fundó el "Indal Jazz Quartet". Su versatilidad lo
+  │   llevó a explorar el jazz y el flamenco, colaborando con grandes nombres
+  │   como Tomatito y Enrique Morente. En los 80 ...', 'others': {'ticket':
+  │   'https://laguajiradealmeria.com/evento/mery-gil-paco-rivas-noche-azul/#t
+  │   ribe-tickets__tickets-form', 'price': '5,00€ – 10,00€',
+  │   'location': '__NOT_FOUND__'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260202T155504', 'session': '2026_02_02_15_32_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Paco-Rivas-Me
+  │   ry-Gil.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/mery-gil-paco-rivas-noche-azul/'}
+  │   --------------------
+  │   {'id': '2833a91b', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Clases de cante flamenco con Rocío
+  │   Zamora', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-10', 'start_time': '17:30:00',
+  │   'end_date': '2026-02-10', 'end_time': '19:30:00', 'description': '¿Te
+  │   interesa el cante flamenco y quieres desarrollarte como cantaor/a? Este
+  │   curso está pensado para todas las personas que quieran aprender desde
+  │   la raíz y explorar su voz en el universo del flamenco. ¿Qué se
+  │   trabaja en clase? Técnica vocal flamenca Aprenderás a conocer y cuidar
+  │   tu instrumento: la voz. Ejercicios para sacar el máximo ...', 'others':
+  │   {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260202T155504', 'session': '2026_02_02_15_32_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/09/Clases-de-can
+  │   te-Rocio.jpg', 'url':
+  │   'https://laguajiradealmeria.com/evento/clases-de-cante-flamenco-con-roci
+  │   o-zamora/2026-02-10/'}
+  │   --------------------
+  │   {'id': 'dda68787', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Anabel Veloso', 'id_venue': 'NhNQFPQh',
+  │   'venue': 'La Guajira', 'std_venue': 'La Guajira', 'start_date':
+  │   '2026-02-11', 'start_time': '22:00:00', 'end_date': '2026-02-11',
+  │   'end_time': '23:30:00', 'description': 'Anabel Veloso es una bailaora y
+  │   creadora de flamenco de reconocido prestigio internacional. Es
+  │   licenciada en Educación Física y máster en Gestión Cultural. Formada
+  │   con los más grandes maestros del flamenco, ha desarrollado una carrera
+  │   de más de veinte años en compañías de primer nivel como la de María
+  │   Pagés y el Ballet Flamenco de ...', 'others': {'ticket':
+  │   'https://laguajiradealmeria.com/evento/anabel-veloso/#tribe-tickets__tic
+  │   kets-form', 'price': '6,00€ – 12,00€', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260202T155504', 'session': '2026_02_02_15_32_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Anabel-Veloso
+  │   .png', 'url': 'https://laguajiradealmeria.com/evento/anabel-veloso/'}
+  │   --------------------
+  │   {'id': '54526993', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio de idiomas',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-13', 'start_time': '20:30:00',
+  │   'end_date': '2026-02-13', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260202T155504', 'session': '2026_02_02_15_32_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-02-13/'}
+  │   --------------------
+  │   {'id': '03f8e52b', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso de Teatro con Julio Béjar',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-09', 'start_time': '19:30:00',
+  │   'end_date': '2026-02-09', 'end_time': '21:30:00', 'description': 'De
+  │   noviembre de 2025 a junio de 2026, el dramaturgo y director Julio Béjar
+  │   impartirá en La Guajira un curso regular de creación escénica pensado
+  │   para quienes quieran explorar los distintos oficios del teatro y
+  │   desarrollar su propia pieza. Durante ocho meses, el grupo —de entre 10
+  │   y 20 participantes— recorrerá todos los aspectos del ...', 'others':
+  │   {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260202T155504', 'session': '2026_02_02_15_32_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-02-09/'}
+  │   --------------------
+  │   {'id': '915fe7a0', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Terraceo con Baay Selektah DJ',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-07', 'start_time': '16:00:00',
+  │   'end_date': '2026-02-07', 'end_time': '19:00:00', 'description':
+  │   'Déjate envolver por los mejores ritmos de reggae foundation y old
+  │   school, cuidadosamente seleccionados por DJ Baay Selectah. Con
+  │   influencias de rap, soul y dub, su estilo único hará vibrar la tarde
+  │   con una mezcla que conecta lo clásico con lo fresco. Desde sus inicios
+  │   en 2005 organizando reggae nights, hasta su dedicación actual a ...',
+  │   'others': {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__',
+  │   'location': 'La Guajira, C/ Cruces Bajas, 1, Almería, España'},
+  │   'source': 'LaGuajira', 'exec_time': '20260202T155504', 'session':
+  │   '2026_02_02_15_32_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Baay-Selecta.
+  │   png', 'url':
+  │   'https://laguajiradealmeria.com/evento/terraceo-con-baay-selektah-dj/'}
+  │   --------------------
+  │   {'id': 'bf8f1ca2', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo de La Guajira con Julián
+  │   Sánchez', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue':
+  │   'La Guajira', 'start_date': '2026-02-10', 'start_time': '20:00:00',
+  │   'end_date': '2026-02-10', 'end_time': '21:30:00', 'description':
+  │   '¡Llega el Coro-Combo de La Guajira! Si te gusta cantar, tocar un
+  │   instrumento o simplemente compartir la música como experiencia
+  │   colectiva, este proyecto es para ti. El Coro-Combo de La Guajira nace
+  │   con la idea de crear un espacio artístico estable, intercultural e
+  │   intergeneracional, abierto a todas las personas que quieran sumarse. La
+  │   propuesta es ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260202T155504',
+  │   'session': '2026_02_02_15_32_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-02-10/'}
+  │   --------------------
+  │   {'id': 'b79247f3', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Taller de baile amartu-flow',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-13', 'start_time': '21:00:00',
+  │   'end_date': '2026-02-13', 'end_time': '22:00:00', 'description': 'Una
+  │   propuesta para soltar el cuerpo y dejar que el movimiento te encuentre.
+  │   Martina te guiará en una sesión de conexión, ritmo y libertad al
+  │   compás de la música electrónica. Si te da vergüenza bailar en
+  │   público este es tu taller. Ella es la hechicera que romperá el conjuro
+  │   de tu miedo.', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260202T155504',
+  │   'session': '2026_02_02_15_32_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Martina-Aartu
+  │   flowlab.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-baile-amartu-flow/'}
+  │   --------------------
+  │   {'id': '86232692', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Derivas poéticas', 'id_venue':
+  │   'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La Guajira',
+  │   'start_date': '2026-02-13', 'start_time': '19:00:00', 'end_date':
+  │   '2026-02-13', 'end_time': '20:30:00', 'description': 'Nos hemos olvidado
+  │   del acto de recordar, en medio de esta fiesta de disfraces. Con la
+  │   excusa y las prisas en quitar o poner una nueva farsa, se nos ha
+  │   olvidado de nuevo quién es el actor que encarna. Solo me pregunto una
+  │   pequeña cosa, será que es solo un juego, ¿Y que tomamos en ...',
+  │   'others': {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__',
+  │   'location': 'La Guajira, C/ Cruces Bajas, 1, Almería, España'},
+  │   'source': 'LaGuajira', 'exec_time': '20260202T155504', 'session':
+  │   '2026_02_02_15_32_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Derivas-poeti
+  │   cas-1.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/derivas-poeticas-4/'}
+  │   Getting https://laguajiradealmeria.com/programacion/lista/página/3/
+  │   Sleep 16
+  │   --------------------
+  │   {'id': 'c85146a6', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Jam neo soul con Las Funghis',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-13', 'start_time': '22:30:00',
+  │   'end_date': '2026-02-14', 'end_time': '02:00:00', 'description': 'Vuelve
+  │   la energia femenina que tanto nos gusta a La Guajira. Grace (Againts the
+  │   Machine) voz y guitarra, Corina trombón y teclados y Sara al bajo. Esta
+  │   banda de talentosas músicas se ha consolidado para mejorar la escena
+  │   local almeriense. Esperemos que podamos disfrutar por mucho tiempo de
+  │   ellas. Por el momento es la banda ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260202T155504', 'session': '2026_02_02_15_32_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Setas-y-tetas
+  │   -jam-mujeres.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/jam-neo-soul-con-las-funghis/'}
+  │   --------------------
+  │   {'id': '170dd723', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso de Teatro con Julio Béjar',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-16', 'start_time': '19:30:00',
+  │   'end_date': '2026-02-16', 'end_time': '21:30:00', 'description': 'De
+  │   noviembre de 2025 a junio de 2026, el dramaturgo y director Julio Béjar
+  │   impartirá en La Guajira un curso regular de creación escénica pensado
+  │   para quienes quieran explorar los distintos oficios del teatro y
+  │   desarrollar su propia pieza. Durante ocho meses, el grupo —de entre 10
+  │   y 20 participantes— recorrerá todos los aspectos del ...', 'others':
+  │   {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260202T155504', 'session': '2026_02_02_15_32_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-02-16/'}
+  │   --------------------
+  │   {'id': 'dee825df', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio de idiomas',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-20', 'start_time': '20:30:00',
+  │   'end_date': '2026-02-20', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260202T155504', 'session': '2026_02_02_15_32_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-02-20/'}
+  │   --------------------
+  │   {'id': '050d4f88', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Christina Pagés', 'id_venue':
+  │   'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La Guajira',
+  │   'start_date': '2026-02-18', 'start_time': '22:00:00', 'end_date':
+  │   '2026-02-18', 'end_time': '23:30:00', 'description': 'Christina Pagés
+  │   es una bailaora profesional sexitana que realizó sus estudios en el
+  │   Conservatorio Profesional de Granada en la especialidad de Flamenco, y
+  │   en el Conservatorio Superior de Danza de Málaga, en la especialidad de
+  │   Coreografía e Interpretación. Ha dedicado su vida a los estudios de la
+  │   danza, de forma práctica y teórica, y actualmente ...', 'others':
+  │   {'ticket':
+  │   'https://laguajiradealmeria.com/evento/christina-pages-2/#tribe-tickets_
+  │   _tickets-form', 'price': '6,00€ – 12,00€', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260202T155504', 'session': '2026_02_02_15_32_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Cristina-Page
+  │   s-2.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/christina-pages-2/'}
+  │   --------------------
+  │   {'id': '9ad3a03e', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'La hora del vermú clásico con Mar y
+  │   Antonio', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue':
+  │   'La Guajira', 'start_date': '2026-02-14', 'start_time': '13:00:00',
+  │   'end_date': '2026-02-14', 'end_time': '16:00:00', 'description': 'Por
+  │   fin, "grazie al cielo" tendremos música clásica en nuestro terrazo a
+  │   las faldas de la Alcazaba. Un estupendo dúo a violín y piano que
+  │   estamos desando disfrutar. Mar y Antonio son del conservatorio de
+  │   Almería y agradecemos profundamente que quieran venir a compartir su
+  │   saber con nosotros.', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260202T155504',
+  │   'session': '2026_02_02_15_32_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Vermu-Mar-y-A
+  │   ntonio.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/la-hora-del-vermu-clasico-con-mar
+  │   -y-antonio/'}
+  │   --------------------
+  │   {'id': 'fc995dad', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo de La Guajira con Julián
+  │   Sánchez', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue':
+  │   'La Guajira', 'start_date': '2026-02-17', 'start_time': '20:00:00',
+  │   'end_date': '2026-02-17', 'end_time': '21:30:00', 'description':
+  │   '¡Llega el Coro-Combo de La Guajira! Si te gusta cantar, tocar un
+  │   instrumento o simplemente compartir la música como experiencia
+  │   colectiva, este proyecto es para ti. El Coro-Combo de La Guajira nace
+  │   con la idea de crear un espacio artístico estable, intercultural e
+  │   intergeneracional, abierto a todas las personas que quieran sumarse. La
+  │   propuesta es ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260202T155504',
+  │   'session': '2026_02_02_15_32_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-02-17/'}
+  │   --------------------
+  │   {'id': 'a97a503a', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Clases de cante flamenco con Rocío
+  │   Zamora', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-17', 'start_time': '17:30:00',
+  │   'end_date': '2026-02-17', 'end_time': '19:30:00', 'description': '¿Te
+  │   interesa el cante flamenco y quieres desarrollarte como cantaor/a? Este
+  │   curso está pensado para todas las personas que quieran aprender desde
+  │   la raíz y explorar su voz en el universo del flamenco. ¿Qué se
+  │   trabaja en clase? Técnica vocal flamenca Aprenderás a conocer y cuidar
+  │   tu instrumento: la voz. Ejercicios para sacar el máximo ...', 'others':
+  │   {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260202T155504', 'session': '2026_02_02_15_32_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/09/Clases-de-can
+  │   te-Rocio.jpg', 'url':
+  │   'https://laguajiradealmeria.com/evento/clases-de-cante-flamenco-con-roci
+  │   o-zamora/2026-02-17/'}
+  │   --------------------
+  │   {'id': 'bba63cb1', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Presentación de libro «¡Existo…?!»
+  │   de Kinga Broda', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-02-20', 'start_time':
+  │   '19:00:00', 'end_date': '2026-02-20', 'end_time': '20:30:00',
+  │   'description': 'Un libro de poesía donde el "yo lírico" es llevado al
+  │   límite en el campo emocional, existencial, físico... Rozando a veces
+  │   los bordes de locura se ve obligado a reaccionar, a pegar un grito e
+  │   intentar existir a su manera. En esa experiencia límite nos muestra sus
+  │   diferentes facetas, de la más sensible a la ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260202T155504', 'session': '2026_02_02_15_32_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Poemario-King
+  │   a-Broda.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/presentacion-de-libro-existo-de-k
+  │   inga-broda/'}
+  │   --------------------
+  │   {'id': 'd49dd83d', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Terraceo con Love Warrior DJ',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-14', 'start_time': '16:00:00',
+  │   'end_date': '2026-02-14', 'end_time': '19:00:00', 'description': 'Vuelve
+  │   nuestra guerrera del amor favorita. Con su arte del buen pinchar, nos
+  │   deleitará una vez más con su escepticismo. Con esta mujer nunca se
+  │   sabe.', 'others': {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__',
+  │   'location': 'La Guajira, C/ Cruces Bajas, 1, Almería, España'},
+  │   'source': 'LaGuajira', 'exec_time': '20260202T155504', 'session':
+  │   '2026_02_02_15_32_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/11/Web-2025-1-1.
+  │   png', 'url':
+  │   'https://laguajiradealmeria.com/evento/terraceo-con-love-warrior-dj-2/'}
+  │   --------------------
+  │   {'id': '0652d039', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'A PUERTA CERRADA con Cuarteto Majao y
+  │   Julián Sánchez', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-02-19', 'start_time':
+  │   '21:00:00', 'end_date': '2026-02-19', 'end_time': '23:30:00',
+  │   'description': 'A PUERTA CERRADA es un ciclo de sesiones de grabación,
+  │   donde la entrada para el público es libre hasta completar aforo.
+  │   Diferentes artistas con composiciones propias pasarán por este ciclo
+  │   para grabarlas y así poder obtener material de promoción con los fines
+  │   que crean oportunos. Para La Guajira es interesante crear este espacio
+  │   íntimo e ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260202T155504',
+  │   'session': '2026_02_02_15_32_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Majao.png',
+  │   'url':
+  │   'https://laguajiradealmeria.com/evento/a-puerta-cerrada-con-cuarteto-maj
+  │   ao-y-julian-sanchez/'}
+  │   Checking unique event url.
+  │   New url events = 0
+  │   #######################
+  │   No new urls/events extracted. No new events to save
+  │   #######################
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
