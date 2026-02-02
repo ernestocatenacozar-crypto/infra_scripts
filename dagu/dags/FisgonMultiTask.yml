@@ -1,7 +1,7 @@
 name: "FisgonMultiTask"
 params:
-  - TARGET_CITY: ""
-  - TARGET_SCRAPER: ""
+  - TARGET_CITY: "Almeria"
+  - TARGET_SCRAPER: "KuverProduciones"
 
 steps:
   - name: "tarea_1"
