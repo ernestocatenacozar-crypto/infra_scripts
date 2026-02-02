@@ -20,6 +20,9 @@ services:
     volumes:
       - ./dagu/dags:/var/lib/dagu/dags
       - ./dagu/configs:/var/lib/dagu/configs
+      - ./dagu/data:/var/lib/dagu/data
+      - ./dagu/logs:/var/lib/dagu/logs
+      - ./dagu/suspend:/var/lib/dagu/suspend
       - /var/run/docker.sock:/var/run/docker.sock
       - /home/ubuntu/work/fisgon:/deps/fisgon
     environment:

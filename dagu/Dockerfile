@@ -7,4 +7,4 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends docker.io \
   && rm -rf /var/lib/apt/lists/*
 
-USER dagu
+# Leave user as root so entrypoint can manage users/groups.
