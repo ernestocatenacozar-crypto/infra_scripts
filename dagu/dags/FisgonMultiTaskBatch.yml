@@ -1,11 +1,8 @@
 name: "FisgonMultiTaskBatch"
 params:
-  - name: TARGET_CITY
-    default: ""
-    description: "Ciudad objetivo"
-  - name: TARGET_SCRAPER
-    default: ""
-    description: "Lista de scrapers separada por comas"
+  - TARGET_CITY: ""
+    TARGET_SCRAPER: ""
+
 env:
   TARGET_CITY: ${TARGET_CITY}
   TARGET_SCRAPER: ${TARGET_SCRAPER}

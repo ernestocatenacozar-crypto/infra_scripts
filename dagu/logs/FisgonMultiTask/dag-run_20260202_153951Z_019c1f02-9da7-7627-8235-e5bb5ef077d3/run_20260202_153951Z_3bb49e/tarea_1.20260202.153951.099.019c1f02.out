@@ -1,0 +1,11 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+
+        SCRAPER=LaGuajira,ClassicJazz, 
+
