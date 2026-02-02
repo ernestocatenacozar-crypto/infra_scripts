@@ -1,0 +1,93 @@
+Launching scraper: KuverProducciones
+Succeeded - 2026-02-02T16:05:06Z
+
+dag: FisgonTask (6.0s)
+│
+└─tarea_1 (6.0s) [succeeded]
+  ├─docker run --rm --network host -v /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   fisgon_scraper:1.0
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   SCRAPER=KuverProducciones,
+  │   Running for Almeria: KuverProducciones
+  │   KuverProducciones
+  │   RUNNING SESSION =  2026_02_02_15_32_Lunes
+  │   Getting https://kuverproducciones.com/proximos-eventos/
+  │   Sleep 1
+  │   *** SCRAPED 87 URLS WITH EVENTS **
+  │   New url events = 0
+  │   #######################
+  │   No new urls/events extracted. No new events to save
+  │   #######################
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'kuverproducciones.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: ClassicJazz
+Succeeded - 2026-02-02T16:05:12Z
+
+dag: FisgonTask (1m 43s)
+│
+└─tarea_1 (1m 43s) [succeeded]
+  ├─docker run --rm --network host -v /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   fisgon_scraper:1.0
+  │
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      SCRAPER=ClassicJazz,
+      Running for Almeria: ClassicJazz
+      ClassicJazz
+      RUNNING SESSION =  2026_02_02_15_32_Lunes
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      *********************times =1
+      sleeping 7
+      Scrolling...
+      sleeping 1
+      Scrolling...
+      sleeping 1
+      Getting content
+      clicking
+      sleeping 3
+      sleeping 7
+      *********************times =2
+      sleeping 7
+      Scrolling...
+      sleeping 1
+      Getting content
+      clicking
+      sleeping 3
+      sleeping 7
+      *** SCRAPED 118 URLS WITH EVENTS **
+      New url events = 0
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+
+Result: Succeeded
+

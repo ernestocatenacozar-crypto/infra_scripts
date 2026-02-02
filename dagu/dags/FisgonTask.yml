@@ -19,6 +19,10 @@ steps:
       -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
       fisgon_scraper:1.0
 
+  - name: "restart_selenium"
+    command: "env DOCKER_CONFIG=/tmp/.docker HOME=/tmp docker restart selenium"
+    depends: ["tarea_1"]
+
 
 
 #import os
