@@ -20,3 +20,50 @@ dag: FisgonTask (39.0s)
 Result: Failed
 
 Launching scraper: ClassicJazz
+Succeeded - 2026-02-02T16:23:56Z
+
+dag: FisgonTask (1m 24s)
+│
+└─tarea_1 (1m 24s) [succeeded]
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      SCRAPER=ClassicJazz
+      DAG_RUN_URL=/dags/FisgonTask?dagRunId=019c1f2a-f9d5-7965-a5c2-b5c371b20970
+      Running for Almeria: ClassicJazz
+      ClassicJazz
+      RUNNING SESSION =  2026_02_02_15_32_Lunes
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      *********************times =1
+      sleeping 7
+      Scrolling...
+      sleeping 1
+      Scrolling...
+      sleeping 1
+      Getting content
+      clicking
+      sleeping 3
+      sleeping 7
+      *********************times =2
+      sleeping 7
+      Scrolling...
+      sleeping 1
+      Getting content
+      clicking
+      sleeping 3
+      sleeping 7
+      *** SCRAPED 118 URLS WITH EVENTS **
+      New url events = 0
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+      ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+      selenium
+
+Result: Succeeded
+
