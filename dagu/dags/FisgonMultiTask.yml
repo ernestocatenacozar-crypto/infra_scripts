@@ -11,7 +11,7 @@ steps:
       -e TARGET_CITY=${TARGET_CITY}
       -e TARGET_SCRAPER=${TARGET_SCRAPER}
       -e DAGU_BASE_URL=${DAGU_BASE_URL}
-      -e DAG_ID=test
+      -e DAG_ID=${DAG_NAME}
       -e DAG_RUN_ID=${DAG_RUN_ID}
       fisgon_scraper:1.0
 
@@ -33,4 +33,3 @@ steps:
 #     run_url = ""
 
 # print("DAGU run URL:", run_url)
-
