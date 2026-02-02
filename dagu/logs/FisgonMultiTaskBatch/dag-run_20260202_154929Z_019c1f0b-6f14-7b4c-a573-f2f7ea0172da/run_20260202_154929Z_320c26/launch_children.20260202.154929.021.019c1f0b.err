@@ -1,3 +1,10 @@
 time=2026-02-02T15:49:29.048Z level=INFO msg="Executing root dag-run" dag=FisgonMultiTask run-id=019c1f0b-6f56-793f-a9bc-29fed24e1748 params=""
 time=2026-02-02T15:49:29.061Z level=INFO msg="DAG run started" name=FisgonMultiTask run-id=019c1f0b-6f56-793f-a9bc-29fed24e1748 attempt-id="" dag=FisgonMultiTask run-id=019c1f0b-6f56-793f-a9bc-29fed24e1748 params="[TARGET_CITY=Almeria TARGET_SCRAPER=LaGuajira 3=DAGU_BASE_URL=]"
 time=2026-02-02T15:49:29.064Z level=INFO msg="Step started" name=FisgonMultiTask run-id=019c1f0b-6f56-793f-a9bc-29fed24e1748 attempt-id="" dag=FisgonMultiTask run-id=019c1f0b-6f56-793f-a9bc-29fed24e1748 step=tarea_1
+time=2026-02-02T15:50:28.639Z level=INFO msg="Step started" name=FisgonMultiTask run-id=019c1f0b-6f56-793f-a9bc-29fed24e1748 attempt-id="" dag=FisgonMultiTask run-id=019c1f0b-6f56-793f-a9bc-29fed24e1748 step=tarea_2
+time=2026-02-02T15:50:28.650Z level=INFO msg="DAG run finished" name=FisgonMultiTask run-id=019c1f0b-6f56-793f-a9bc-29fed24e1748 attempt-id="" dag=FisgonMultiTask run-id=019c1f0b-6f56-793f-a9bc-29fed24e1748 status=failed started-at=2026-02-02T15:49:29Z finished-at=2026-02-02T15:50:28Z
+time=2026-02-02T15:50:28.664Z level=ERROR msg="Failed to execute dag-run" dag=FisgonMultiTask run-id=019c1f0b-6f56-793f-a9bc-29fed24e1748 err="failed to execute step \"tarea_2\": exit status 127\nrecent stderr (tail):\n/bin/bash: line 1: python3: command not found\n"
+Error: failed to execute the dag-run FisgonMultiTask (dag-run ID: 019c1f0b-6f56-793f-a9bc-29fed24e1748): failed to execute step "tarea_2": exit status 127
+recent stderr (tail):
+/bin/bash: line 1: python3: command not found
+
