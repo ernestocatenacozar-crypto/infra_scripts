@@ -1,0 +1,25 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=KuverProducciones
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019c243b-3b48-74bc-b451-77da64a4fd47
+
+Running for Almeria: KuverProducciones
+KuverProducciones
+Creating rawfolder...
+RUNNING SESSION =  2026_02_03_15_59_Martes
+Getting https://kuverproducciones.com/proximos-eventos/
+Sleep 1
+*** SCRAPED 87 URLS WITH EVENTS **
+New url events = 0
+#######################
+No new urls/events extracted. No new events to save
+#######################

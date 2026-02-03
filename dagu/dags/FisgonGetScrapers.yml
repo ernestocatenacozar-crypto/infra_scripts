@@ -6,7 +6,12 @@ params:
 steps:
   - name: "get_scrapers"
     command: >
-      bash -lc 'docker run --rm
+      bash -lc 'case "$GET_SCRAPERS" in
+      Request) OUTPUT_FILE="/tmp/fisgon_scrapers_request.txt" ;;
+      Selenium) OUTPUT_FILE="/tmp/fisgon_scrapers_selenium.txt" ;;
+      *) OUTPUT_FILE="/tmp/fisgon_scrapers_unknown.txt" ;;
+      esac;
+      docker run --rm
       --network host
       -v /home/ubuntu/work/fisgon:/app
       -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
@@ -18,6 +23,6 @@ steps:
       -e GET_SCRAPERS
       -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
       -e DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&step=get_scrapers&dagRunId=${DAG_RUN_ID}"
-      fisgon_scraper:1.0;
+      fisgon_scraper:1.0 | tail -n 1 > "$OUTPUT_FILE";
       rc=$?;
       exit $rc'

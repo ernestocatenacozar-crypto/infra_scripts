@@ -1,0 +1,15 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=1,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=Request
+
+        SCRAPER=
+        DAG_RUN_URL=/dags/FisgonGetScrapers/log?remoteNode=local&step=get_scrapers&dagRunId=019c2437-1481-743e-a1c1-27ef5167f5d3
+
+KuverProducciones, LaVozAgenda, SalaBerlin, LaGuajira, ConciertosClub, LaPlaza, JacksonLive

@@ -1,0 +1,18 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=LaGuajira
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019c243b-72f7-7877-8e13-2bb762bca5c4
+
+Running for Almeria: LaGuajira
+LaGuajira
+RUNNING SESSION =  2026_02_03_15_59_Martes
+Getting https://laguajiradealmeria.com/programacion/lista/

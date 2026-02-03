@@ -15,15 +15,13 @@ steps:
       
   - name: "get_scrapers_request"
     command: >
-      env HOME=/tmp bash -lc 'SCRAPERS_REQUEST="$(/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonGetScrapers.yml -- \
-      TARGET_CITY="$TARGET_CITY" GET_SCRAPERS="Request" DAGU_BASE_URL="$DAGU_BASE_URL" | tail -n 1)";
-      printf "%s" "$SCRAPERS_REQUEST" > /tmp/fisgon_scrapers_request.txt'
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonGetScrapers.yml -- \
+      TARGET_CITY="$TARGET_CITY" GET_SCRAPERS="Request" DAGU_BASE_URL="$DAGU_BASE_URL"'
 
   - name: "get_scrapers_selenium"
     command: >
-      env HOME=/tmp bash -lc 'SCRAPERS_SELENIUM="$(/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonGetScrapers.yml -- \
-      TARGET_CITY="$TARGET_CITY" GET_SCRAPERS="Selenium" DAGU_BASE_URL="$DAGU_BASE_URL" | tail -n 1)";
-      printf "%s" "$SCRAPERS_SELENIUM" > /tmp/fisgon_scrapers_selenium.txt'
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonGetScrapers.yml -- \
+      TARGET_CITY="$TARGET_CITY" GET_SCRAPERS="Selenium" DAGU_BASE_URL="$DAGU_BASE_URL"'
 
   - name: "launch_children_request"
     command: >
