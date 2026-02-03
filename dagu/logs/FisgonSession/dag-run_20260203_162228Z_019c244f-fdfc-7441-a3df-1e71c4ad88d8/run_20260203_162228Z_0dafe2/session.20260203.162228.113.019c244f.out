@@ -1,0 +1,24 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=1,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=1,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=
+        DAG_RUN_URL=/dags/FisgonSession/log?remoteNode=local&step=session&dagRunId=019c244f-fdfc-7441-a3df-1e71c4ad88d8
+
+Executing final task with session: 2026_02_03_15_59_Martes
+Reading /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203_1603_JuntaAndaluciaAgenda.json...
+Reading /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203_1607_ClassicJazz.json...
+Reading /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203_1617_SalaEmma.json...
+Reading /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203_1610_FlowteTaquillaCultural.json...
+Reading /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203_1616_TodasLasEntradas.json...
+Reading /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203_1614_Entradium.json...
+Reading /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203_1602_AlmeriaTurismo.json...
+Saving 126 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/Merged.json

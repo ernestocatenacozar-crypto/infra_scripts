@@ -1885,3 +1885,11 @@ dag: FisgonTaskSelenium (46.0s)
 Result: Succeeded
 
 Launching scraper: Giglon
+Aborted - 2026-02-03T16:18:22Z
+
+dag: FisgonTaskSelenium (4m 5s)
+│
+└─tarea_1 [aborted]
+
+Result: Aborted
+
