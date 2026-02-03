@@ -1,0 +1,33 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=FlowteCineClub
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019c2444-157a-7d92-b80e-1dfca36281a4
+
+Running for Almeria: FlowteCineClub
+FlowteCineClub
+RUNNING SESSION =  2026_02_03_15_59_Martes
+Starting WebDriver...
+http://localhost:4444/wd/hub
+sleeping 5
+******
+xpath
+/html/body/div[6]/div[4]/div[1]/div[2]/div/div[1]/div[3]/h5
+/html/body/div[6]/div[4]/div[1]/div[2]/div/div[1]/div[3]/h5 Not found
+Checking unique event dict.
+Reading /home/ubuntu/data_storage/Almeria/00_master/master_events.json...
+*******
+[]
+#######################
+No new urls/events extracted. No new events to save
+#######################
+***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+selenium

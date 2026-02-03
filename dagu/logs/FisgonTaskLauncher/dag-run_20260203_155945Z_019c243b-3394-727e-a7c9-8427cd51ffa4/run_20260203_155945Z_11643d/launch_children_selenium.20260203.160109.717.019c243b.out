@@ -447,3 +447,562 @@ dag: FisgonTaskSelenium (1m 9s)
 Result: Succeeded
 
 Launching scraper: JuntaAndaluciaAgenda
+Succeeded - 2026-02-03T16:03:31Z
+
+dag: FisgonTaskSelenium (4m 26s)
+│
+└─tarea_1 (4m 26s) [succeeded]
+  ├─stdout: ... (161 more lines)
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '0b3cbd10', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': '¡Madre Mía! en Vera', 'id_venue':
+  │   None, 'venue': 'Auditorio Ciudad de Vera', 'std_venue': None,
+  │   'start_date': '2026-02-07', 'start_time': '21:00:00', 'end_date':
+  │   '2026-02-07', 'end_time': '__NOT_DEFINIED__', 'description':
+  │   'Recomendado +12 años', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/auditorio-ciudad-de-vera',
+  │   'location2': ' Auditorio Ciudad de Vera', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '07 de Febrero del 2026, 21:00 horas', 'town':
+  │   '__NOT_FOUND__', 'location': 'Carretera de Cuevas 1, Vera. Almería',
+  │   'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda',
+  │   'exec_time': '20260203T160332', 'session': '2026_02_03_15_59_Martes',
+  │   'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2024-10/madre_mia_0.jpg.webp?itok=Ci1OM8PG',
+  │   'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/madre-mia-en-vera-0'}
+  │   22 / 30
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /morricone-rock-experience
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'c1f27aef', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Morricone Rock Experience', 'id_venue':
+  │   '27qNP7DH', 'venue': 'Auditorio Municipal Maestro Padilla', 'std_venue':
+  │   'Auditorio Municipal Maestro Padilla', 'start_date': '2026-03-27',
+  │   'start_time': '20:30:00', 'end_date': '2026-03-27', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'De producción española, este
+  │   espectáculo nacido en Italia rinde tributo al legendario Ennio
+  │   Morricone, cuya música marcó para siempre la historia del cine.
+  │   Morricone Rock Experience reúne a músicos y voces que, a través de
+  │   instrumentos eléctricos y nuevas tecnologías, proponen una experiencia
+  │   innovadora: un recorrido por el universo cinematográfico del maestro
+  │   italiano y por algunas de sus bandas sonoras más emblemáticas. El
+  │   espectáculo se estrena en la provincia de Almería, un enclave clave en
+  │   la inspiración de Morricone para muchas de las películas que llevaron
+  │   su inconfundible sello musical.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/auditorio-municipal-maestro
+  │   -padilla', 'location2': 'Auditorio Municipal Maestro Padilla',
+  │   'duration': '__NOT_FOUND__', 'datetime_details': '27 de Marzo del 2026,
+  │   20:30 Horas', 'town': '__NOT_FOUND__', 'location': 'Plaza de Alfredo
+  │   Kraus, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'},
+  │   'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260203T160332',
+  │   'session': '2026_02_03_15_59_Martes', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/morricone_almeria.jpg.webp?itok=BllEpHpm',
+  │   'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/morricone-rock-experience'}
+  │   23 / 30
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /solazo-fest-2026
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'b1f093fb', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Solazo Fest 2026', 'id_venue':
+  │   'Dmb6Gmtr', 'venue': 'Recinto ferial de Almería', 'std_venue': 'Recinto
+  │   Ferial de Almería', 'start_date': '2026-05-01', 'start_time':
+  │   '__NOT_FOUND__', 'end_date': '2026-05-03', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Solazo Fest 2026 – El festival de
+  │   la primavera en Almería Solazo Fest vuelve los días 1, 2 y 3 de mayo
+  │   de 2026 para convertir Almería en el epicentro de la música y la
+  │   diversión durante el puente de mayo.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/recinto-ferial-de-almeria-0
+  │   ', 'location2': 'Recinto ferial de Almería', 'duration':
+  │   '__NOT_FOUND__', 'datetime_details': '01 de Mayo del 2026 - 03 de Mayo
+  │   del 2026, 12:00 h.', 'town': '__NOT_FOUND__', 'location': 'Avenida de
+  │   los Juegos Mediterráneos, s/n, Almería. Almería', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260203T160332', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/solazo_2026.jpg.webp?itok=2YAqZZqN',
+  │   'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/solazo-fest-2026'}
+  │   24 / 30
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /sumate-la-comunidad-caf
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '6b8279ac', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': '¡Súmate a la Comunidad CAF!',
+  │   'id_venue': 'DDDLJ7pm', 'venue': 'Centro Andaluz de la Fotografía',
+  │   'std_venue': 'Centro Andaluz de la Fotografía', 'start_date':
+  │   '2026-01-22', 'start_time': '__NOT_FOUND__', 'end_date': '2026-02-22',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Participa, descubre las
+  │   novedades y organiza tu agenda cultural. Cada semana recibirás un
+  │   correo con el calendario de la programación, alertas para que no te
+  │   pierdas las inauguraciones, los plazos de preinscripción a talleres y
+  │   certámenes, así como recomendaciones, entre otros contenidos.',
+  │   'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/centro-andaluz-de-la-fotogr
+  │   afia', 'location2': 'Centro Andaluz de la Fotografía', 'duration':
+  │   '__NOT_FOUND__', 'datetime_details': '22 de Enero del 2026 - 22 de
+  │   Febrero del 2026', 'town': '__NOT_FOUND__', 'location': 'Calle Pintor
+  │   Díaz Molina 9, Almería. Almería', 'duration_days': '__NOT_FOUND__'},
+  │   'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260203T160332',
+  │   'session': '2026_02_03_15_59_Martes', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/PROMOFORMULARIOONLINE.jpg.webp?itok=nwL5ti
+  │   qC', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/sumate-la-comunidad-caf'}
+  │   25 / 30
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /filmoteca-de-andalucia-programacion-febrero-en-almeria-0
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '0368504e', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Filmoteca de Andalucía. Programación
+  │   febrero en Almería', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca
+  │   Pública del Estado-Biblioteca Provincial de Almería Francisco
+  │   Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa',
+  │   'start_date': '2026-02-01', 'start_time': '__NOT_FOUND__', 'end_date':
+  │   '2026-02-28', 'end_time': '__NOT_DEFINIED__', 'description': 'V Premios
+  │   Carmen. Nominados. Granada acoge la entrega de los V Premios Carmen del
+  │   Cine Andaluz, organizados por la Academia de Cine de Andalucía. La
+  │   presencia de los Premios Carmen se extiende en la Filmoteca de
+  │   Andalucía con la proyección de los largometrajes, documentales y
+  │   cortometrajes nominados. Durante sus casi 70 años de trayectoria, Clint
+  │   Eastwood , el "último gran clásico del cine norteamericano", ha
+  │   obtenido un palmarés muy imponente y difícil de tan siquiera igualar:
+  │   cuatro Oscar de Hollywood, dos como director y otros dos como productor,
+  │   siete nominaciones más a los premios de la Academia, cinco Globos de
+  │   Oro y numerosos galardones tanto dentro como fuera de Estados Unidos. La
+  │   Filmoteca de Andalucía homenajea su trayectoria con sus títulos
+  │   fundamentales. Una mirada 50 años después al cine español de 1976, el
+  │   año en que estrenábamos libertades públicas y en el que el cine era
+  │   fiel reflejo de ese aprendizaje en libertad. Directores y directoras que
+  │   mostraban una España al fin en democracia. Paisajes andaluces de cine .
+  │   A partir de la exposición Misión Andalucía, organizada por el Centro
+  │   Andaluz de la Fotografía, la Filmoteca propone en la sala de Almería
+  │   un cuatro películas donde el paisaje andaluz tiene una relevancia
+  │   sustancial en sus respectivas narrativas fílmicas. 2 LUNES 19:00 h. V
+  │   Premios Carmen LOS TIGRES Alberto Rodríguez. España. 2025. 109 min.
+  │   Color. v.o.e. Colabora Academia de Cine de Andalucía 9 LUNES 19:00 h.
+  │   Clint Eastwood IMPACTO SÚBITO Clint Eastwood. EEUU. 1983. 117 min.
+  │   Color. v.o.s.e. 16 LUNES 19:00 h. 50 años CRÍA CUERVOS Carlos Saura .
+  │   España. 1976. 110 min. Color. v.o.e. 23 LUNES 19:00 h. Paisajes
+  │   andaluces de cine MANUELA Gonzalo García Pelayo. España. 1976. 105
+  │   min. Color. v.o.e.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-esta
+  │   do-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2':
+  │   'Biblioteca Pública del Estado-Biblioteca Provincial de Almería
+  │   Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details':
+  │   '01 de Febrero del 2026 - 28 de Febrero del 2026, 19.00 horas', 'town':
+  │   '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería.
+  │   Almería', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260203T160332', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/cdba9f76240bace37d4737199b4b63b5145c468cd5
+  │   bb5fa962d6f0e3cc18390e._SX1080_FMjpg_.jpg.webp?itok=yyp4WJBA', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/filmoteca-de-andalucia-programacion-febrero-en-almeria-0'}
+  │   26 / 30
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /dinero-negro
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'b3902f02', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Dinero negro', 'id_venue': 'tQfq78jF',
+  │   'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo', 'start_date':
+  │   '2026-03-11', 'start_time': '20:30:00', 'end_date': '2026-03-11',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'La trama gira en torno a
+  │   Carlos, que inesperadamente se encuentra con un maletín lleno de 10
+  │   millones de euros pertenecientes a la mafia rusa.', 'others':
+  │   {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/evento/teatro-apolo-almeria',
+  │   'location2': 'Teatro Apolo', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '11 de Marzo del 2026, 20:30 horas', 'town':
+  │   '__NOT_FOUND__', 'location': 'C. Rbla. Obispo Orberá, 25, Almería.
+  │   Almería', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260203T160332', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/dinero%20negro.png.webp?itok=BBHFI2GO',
+  │   'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/dinero-negro'}
+  │   27 / 30
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /como-una-ola-homenaje-rocio-jurado
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'db1b544e', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Como una ola, homenaje a Rocío Jurado',
+  │   'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes de Almería',
+  │   'std_venue': 'Teatro Cervantes', 'start_date': '2026-05-10',
+  │   'start_time': '20:30:00', 'end_date': '2026-05-10', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Homenaje musical a Rocío Jurado
+  │   interpretao por María Durán bajo la dirección de Ángel Valdegrama.',
+  │   'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/teatro-cervantes-de-almeria
+  │   ', 'location2': 'Teatro Cervantes de Almería', 'duration':
+  │   '__NOT_FOUND__', 'datetime_details': '10 de Mayo del 2026, 20:30 horas',
+  │   'town': '__NOT_FOUND__', 'location': 'c/ Poeta Villaespesa 1, Almería.
+  │   Almería', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260203T160332', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/homenaje%20rocio%20juradojpg.jpg.webp?itok
+  │   =XsAFSdv2', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/como-una-ola-homenaje-rocio-jurado'}
+  │   28 / 30
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /concierto-de-cafe-quijano-en-almeria
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '7807c1c9', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Café Quijano en Almería',
+  │   'id_venue': '27qNP7DH', 'venue': 'Auditorio Municipal Maestro Padilla',
+  │   'std_venue': 'Auditorio Municipal Maestro Padilla', 'start_date':
+  │   '2026-04-10', 'start_time': '21:00:00', 'end_date': '2026-04-10',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Café Quijano es un
+  │   grupo musical español de pop/rock. llegan a Almería con su último
+  │   trabajo, “Miami 1990”, una fresca continuación del sonido Quijano
+  │   más auténtico no sin ciertos retazos sonoros noventeros.', 'others':
+  │   {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/auditorio-municipal-maestro
+  │   -padilla', 'location2': 'Auditorio Municipal Maestro Padilla Evento al
+  │   que pertenece:\n ', 'duration': '__NOT_FOUND__', 'datetime_details': '10
+  │   de Abril del 2026, 21:00 h.', 'town': '__NOT_FOUND__', 'location':
+  │   'Plaza de Alfredo Kraus, s/n, Almería. Almería', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260203T160332', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2023-11/Cafe-Quijano-1.jpg.webp?itok=MH3yHFxL',
+  │   'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/concierto-de-cafe-quijano-en-almeria'}
+  │   29 / 30
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /vicente-amigo-en-almeria
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '1840d082', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Vicente Amigo en Almería', 'id_venue':
+  │   '27qNP7DH', 'venue': 'Auditorio Municipal Maestro Padilla', 'std_venue':
+  │   'Auditorio Municipal Maestro Padilla', 'start_date': '2026-02-27',
+  │   'start_time': '20:30:00', 'end_date': '2026-02-27', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': "Vicente Amigo , figura esencial de
+  │   la guitarra y de la música contemporánea, se reencuentra con su
+  │   público almeriense con su gira 'Andenes del tiempo'.", 'others':
+  │   {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/auditorio-municipal-maestro
+  │   -padilla', 'location2': 'Compra de entradas Auditorio Municipal Maestro
+  │   Padilla', 'duration': '__NOT_FOUND__', 'datetime_details': '27 de
+  │   Febrero del 2026, 20:30 h.', 'town': '__NOT_FOUND__', 'location': 'Plaza
+  │   de Alfredo Kraus, s/n, Almería. Almería', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260203T160332', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/image/2022/05/vicente_amigo.jpg.webp?itok=71n-2aag
+  │   ', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/vicente-amigo-en-almeria'}
+  │   ****************************
+  │   Saving 30 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203
+  │   _1603_JuntaAndaluciaAgenda.json
+  │   Saving 30 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  │   ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+  │   selenium
+  └─stderr: ... (10 more lines)
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: ClassicJazz
+Succeeded - 2026-02-03T16:07:57Z
+
+dag: FisgonTaskSelenium (1m 30s)
+│
+└─tarea_1 (1m 30s) [succeeded]
+  ├─stdout: ... (10 more lines)
+  │   Running for Almeria: ClassicJazz
+  │   ClassicJazz
+  │   RUNNING SESSION =  2026_02_03_15_59_Martes
+  │   Starting WebDriver...
+  │   http://localhost:4444/wd/hub
+  │   *********************times =1
+  │   sleeping 7
+  │   Scrolling...
+  │   sleeping 1
+  │   Scrolling...
+  │   sleeping 1
+  │   Getting content
+  │   clicking
+  │   sleeping 3
+  │   sleeping 7
+  │   *********************times =2
+  │   sleeping 7
+  │   Scrolling...
+  │   sleeping 1
+  │   Getting content
+  │   clicking
+  │   sleeping 3
+  │   sleeping 7
+  │   *** SCRAPED 121 URLS WITH EVENTS **
+  │   New url events = 3
+  │   0 / 3
+  │   Getting https://clasijazz.com/evento/disconcierto-gumbo-yaya-mardi-gras/
+  │   Sleep 4
+  │   2026-02-14T18:00:00 2026-02-14T22:00:00
+  │   --------------------
+  │   {'id': 'd3b31115', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Disconcierto Gumbo Yaya (Mardi Gras)',
+  │   'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue':
+  │   'Clasijazz', 'start_date': '2026-02-14', 'start_time': '18:00:00',
+  │   'end_date': '2026-02-14', 'end_time': '22:00:00', 'description': 'Sala
+  │   Industrial | Entrada Libre', 'others': {'price': '__NOT_DEFINIED__',
+  │   'category': 'Programación', 'location_url':
+  │   'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro
+  │   Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260203T160758', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   '__NOT_FOUND__', 'url':
+  │   'https://clasijazz.com/evento/disconcierto-gumbo-yaya-mardi-gras/'}
+  │   1 / 3
+  │   Getting https://clasijazz.com/evento/impro-la-gata-purpura/
+  │   Sleep 4
+  │   2026-02-14T20:00:00 2026-02-14T21:30:00
+  │   --------------------
+  │   {'id': '414f2a3f', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Impro – La Gata Purpura', 'id_venue':
+  │   'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz',
+  │   'start_date': '2026-02-14', 'start_time': '20:00:00', 'end_date':
+  │   '2026-02-14', 'end_time': '21:30:00', 'description': '12€ NS / 5€ S
+  │   | Sala Swing', 'others': {'price': '5,00€ – 12,00€', 'category':
+  │   'Programación', 'location_url':
+  │   'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro
+  │   Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260203T160758', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   '__NOT_FOUND__', 'url':
+  │   'https://clasijazz.com/evento/impro-la-gata-purpura/'}
+  │   2 / 3
+  │   Getting https://clasijazz.com/evento/carnaval-karaoke-port-of-spain/
+  │   Sleep 4
+  │   2026-02-20T22:00:00 2026-02-20T23:30:00
+  │   --------------------
+  │   {'id': 'f1f9bbb1', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Carnaval Karaoke', 'id_venue':
+  │   'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain',
+  │   'start_date': '2026-02-20', 'start_time': '22:00:00', 'end_date':
+  │   '2026-02-20', 'end_time': '23:30:00', 'description': 'Port of Spain |
+  │   Entrada Libre CARNAVAL KARAOKE – JAM WITH US ✨ After Casting Party
+  │   Viernes 20 de febrero Desde las 22:00 h Port Of Spain · Almería Tras
+  │   el casting oficial… ¡seguimos la fiesta! Llega una noche única de
+  │   Karaoke Internacional + Open Mic + Jam Session, en un ambiente
+  │   multitemático y carnavalero, inspirado en el Carnaval de Venecia. Ven
+  │   con máscara, colores, brillo o disfraz Canta, improvisa, comparte
+  │   escenario Idiomas, estilos y culturas mezcladas ✨ Diversión, música
+  │   y buen rollo asegurados Jam With Us Micrófono abierto Karaoke para
+  │   todos Vive la experiencia Más info: @AllStarsTalentFestival 633 120 150
+  │   · 686 273 681 ¡El talento no tiene límites! Déjate sorprender',
+  │   'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación',
+  │   'location_url': 'https://clasijazz.com/local/port-of-spain/',
+  │   'location': 'Parque Nicolás Salmeron 20, Almería'}, 'source':
+  │   'ClassicJazz', 'exec_time': '20260203T160758', 'session':
+  │   '2026_02_03_15_59_Martes', 'image': '__NOT_FOUND__', 'url':
+  │   'https://clasijazz.com/evento/carnaval-karaoke-port-of-spain/'}
+  │   ****************************
+  │   Saving 3 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203
+  │   _1607_ClassicJazz.json
+  │   Saving 3 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  │   ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+  │   selenium
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: FlowteCineClub
