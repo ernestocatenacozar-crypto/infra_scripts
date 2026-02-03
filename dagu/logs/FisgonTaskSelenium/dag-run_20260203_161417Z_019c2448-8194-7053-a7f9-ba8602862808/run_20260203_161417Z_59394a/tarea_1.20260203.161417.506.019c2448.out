@@ -1,0 +1,54 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=Entradium
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019c2448-8194-7053-a7f9-ba8602862808
+
+Running for Almeria: Entradium
+Entradium
+RUNNING SESSION =  2026_02_03_15_59_Martes
+Starting WebDriver...
+http://localhost:4444/wd/hub
+sleeping 5
+clicking
+sleeping 3
+sleeping 1.5
+sleeping 3
+******
+xpath
+/html/body/header/div[2]/div[1]/div/div/form/div/div/button/span/i
+clicking
+sleeping 3
+sleeping 8
+Getting content
+*** SCRAPED 22 URLS WITH EVENTS **
+New url events = 10
+0 / 10
+Getting https://entradium.com/es/events/stand-up-comedy-artenvacio-especial-san-valentin
+Sleep 4
+['14.02.2026', '21:00']
+--------------------
+{'id': '2a62aa94', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'ESPECIAL SAN VALENTÍN', 'id_venue': '9B7gDFP7', 'venue': 'Sala Stand Up Artenvacio', 'std_venue': 'Sala Artenvacio', 'start_date': '2026-02-14', 'start_time': '21:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'STAND UP COMEDY ARTENVACIO - ESPECIAL SAN VALENTÍNEste San Valentín haz humor con tu pareja......O con tu ex....O contigo mismo.Pero hazlo riendo.Apúntate a esta orgía cómica donde se habla —sin filtros y con mucha risa— de todo eso que nos pasa cuando estamos en pareja… y cuando ya no.De la mano de Paco Calavera, Antonia Triviño, El Gran Manley y Raquel Sastre, este especial SAN VALENTÍN reúne cuatro miradas distintas sobre el amor, el desamor, la convivencia, las manías, las expectativas… y todas esas pequeñas tragedias cotidianas que, vistas con humor, se convierten en carcajadas.Porque el amor es muy bonito, y si reís juntos es mucho mejor.Este San Valentín, regala risas.El amor... ya hará lo que pueda.Apertura de puertas a las: 18:30 h Primer pase a las 19:00 hSegundo pase a las 21:00 hEntradas en Entradium: 15€ Entradas en puerta: 18€', 'others': {}, 'source': 'Entradium', 'exec_time': '20260203T161418', 'session': '2026_02_03_15_59_Martes', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/7de7287ed46c2f61c5e96d5fe7003a23f1d3867d/event_m_stand_up_comedy_-_Hecho_con_PosterMyWall__1_.jpg?v=1770110052', 'url': 'https://entradium.com/es/events/stand-up-comedy-artenvacio-especial-san-valentin'}
+1 / 10
+Getting https://entradium.com/es/events/daniel-higienico-en-almeria
+Sleep 4
+['21.02.2026', '21:30']
+--------------------
+{'id': '58b3d9b8', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Daniel Higiénico en Almería', 'id_venue': 'trpmPB62', 'venue': 'El Zaguán Cultural', 'std_venue': 'Zaguán', 'start_date': '2026-02-21', 'start_time': '21:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Daniel Higiénico en concierto presentando su nuevo disco "Esperando a Robin Hood" y una selección de las mejores canciones de su extensa discografía. Humor, reflexión y música. Daniel mezclará todos esos ingredientes para ofrecer un espectáculo tan divertido como inclasificable. Sin duda, la mejor manera de disfrutar de Daniel Higiénico… ¡En su salsa!', 'others': {}, 'source': 'Entradium', 'exec_time': '20260203T161418', 'session': '2026_02_03_15_59_Martes', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/7c241579161a3e7169f8d9c0ae341dd44fadaeff/event_m_POST_INSTAGRAM_ALMERIA.jpg?v=1768823942', 'url': 'https://entradium.com/es/events/daniel-higienico-en-almeria'}
+2 / 10
+Getting https://entradium.com/es/events/paco-calavera-y-pepe-cespedes-berlin-social-club-21-febrero
+Sleep 4
+['Varias', 'fechas', '-']
+--------------------
+{'id': '15549523', 'show': 1, 'in_city': 1, 'one_day': 0, 'wrong_date_time': 1, 'event': 'PACO CALAVERA Y PEPE CESPEDES  - 21 FEBRERO', 'id_venue': 'NmPqTrh6', 'venue': 'Berlin Social Club', 'std_venue': 'Berlin Social Club', 'start_date': '__NOT_FOUND__', 'start_time': '__NOT_FOUND__', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'PACO CALAVERA Y PEPE CESPEDES nos traen un nuevo espectaculo cargado de sketches y monologos durante 2 horas...SABADO 21 FEBRERO¡DOBLE PASE!13:00 (la hora del vermut, y para eso os pondremos un aperitivo en el descanso)17:00 (aqui no hay aperitivo, pero hay gintonics fresquitos)ENTRADAS ANTICIPADAS 15€ENTRADAS EN TAQUILLA 18€COLABORA: AGUILA Y BEEFEATER', 'others': {}, 'source': 'Entradium', 'exec_time': '20260203T161418', 'session': '2026_02_03_15_59_Martes', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/1b0b2b3f33fdcfe044e820a434fb91454f9f693a/event_m_21_Feb_-_pacopepe.png?v=1769786916', 'url': 'https://entradium.com/es/events/paco-calavera-y-pepe-cespedes-berlin-social-club-21-febrero'}
+3 / 10
+Getting https://entradium.com/es/events/stand-up-comedy-artenvacio-kalderas-b12c5116-9256-451b-a06f-9c40f3c8a932
+Sleep 4

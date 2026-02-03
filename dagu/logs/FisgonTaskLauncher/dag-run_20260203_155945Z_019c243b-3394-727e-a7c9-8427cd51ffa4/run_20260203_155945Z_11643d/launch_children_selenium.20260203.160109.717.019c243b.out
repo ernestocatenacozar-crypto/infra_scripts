@@ -1006,3 +1006,143 @@ dag: FisgonTaskSelenium (1m 30s)
 Result: Succeeded
 
 Launching scraper: FlowteCineClub
+Succeeded - 2026-02-03T16:09:27Z
+
+dag: FisgonTaskSelenium (45.0s)
+│
+└─tarea_1 (45.0s) [succeeded]
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=FlowteCineClub
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019c2444-157a-7d92-b80e-1dfca36281a4
+      Running for Almeria: FlowteCineClub
+      FlowteCineClub
+      RUNNING SESSION =  2026_02_03_15_59_Martes
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      sleeping 5
+      ******
+      xpath
+      /html/body/div[6]/div[4]/div[1]/div[2]/div/div[1]/div[3]/h5
+      /html/body/div[6]/div[4]/div[1]/div[2]/div/div[1]/div[3]/h5 Not found
+      Checking unique event dict.
+      Reading /home/ubuntu/data_storage/Almeria/00_master/master_events.json...
+      *******
+      []
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+      ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+      selenium
+
+Result: Succeeded
+
+Launching scraper: FlowteTaquillaCultural
+Succeeded - 2026-02-03T16:10:12Z
+
+dag: FisgonTaskSelenium (4m 5s)
+│
+└─tarea_1 (4m 5s) [succeeded]
+  └─stdout: ... (293 more lines)
+      /html/body/div[6]/div[4]/div[1]/div[3]/div/div[26]/div[3]/h5
+      clicking
+      sleeping 3
+      sleeping 3
+      Getting content
+      sleeping 1
+      b_str ='12 Jun 2026 20:30'
+      {'id': 'd109e244', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'UN PATÉTICO AMOR DESCONOCIDO',
+      'id_venue': 'tQfq78jF', 'venue': 'teatro apolo almeria', 'std_venue':
+      'Teatro Apolo', 'start_date': '2026-06-12', 'start_time': '20:30:00',
+      'end_date': '2026-06-12', 'end_time': '__NOT_DEFINIED__', 'description':
+      'CICLO TRASLADANZA 2026. En un escenario vibrante donde convergen danza
+      contemporánea, teatro, acrobacias y danza española, tres personajes
+      exploran un amor lleno de contradicciones y situaciones ridiculas, pero
+      también conmovedoras. A través de una trama que combina la música en
+      directo con toques de dramatismo y comedia, la obra invita al público a
+      reflexionar sobre la naturaleza del amor y la identidad. LAS ENTRADAS PARA
+      CADA EVENTO DE FORMA INDIVIDUAL ESTARÁN DISPONIBLES PARA LA VENTA A
+      PARTIR DEL 01 DE ENERO DE 2026, HASTA ENTONCES SOLO SE PODRÁN ADQUIRIR
+      ABONOS. PRECIO DE LAS ENTRADAS: ANTICIPADA: 12 EUROS. GENERAL: 15 EUROS.
+      Debido a la normativa vigente, todos los asistentes deben adquirir
+      entrada, incluidos niños y adultos, independientemente de la edad y de si
+      ocupan butaca o no. Para cualquier incidencia derivada de la compra online
+      puede contactar a través del correo electrónico: info@flowte.es',
+      'others': {'price': 'PRECIO DE LAS ENTRADAS:\xa0ANTICIPADA: 12
+      EUROSGENERAL: 15 EUROS'}, 'source': 'FlowteTaquillaCultural', 'exec_time':
+      '20260203T161013', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.flowte.me/cabinet/event/img/36823-1765281217.4386.png',
+      'url': 'https://www.flowte.me/storefront/almeria-cultura-401?cc'}
+      -------------
+      ******
+      xpath
+      /html/body/div[6]/div[4]/div[1]/div[3]/div/div[27]/div[3]/h5
+      /html/body/div[6]/div[4]/div[1]/div[3]/div/div[27]/div[3]/h5 Not found
+      Checking unique event dict.
+      Reading /home/ubuntu/data_storage/Almeria/00_master/master_events.json...
+      *******
+      []
+      ('1ª SEMIFINAL - CARNAVAL DE ALMERÍA 2026', 'auditorio municipal maestro
+      padilla.', '2026-02-07', '19:00:00')
+      ('ROCÍO SEGURA', 'teatro apolo almeria', '2026-02-07', '21:00:00')
+      ('2ª SEMIFINAL - CARNAVAL DE ALMERÍA 2026', 'auditorio municipal maestro
+      padilla.', '2026-02-08', '17:30:00')
+      ('GALLOPERRO', 'teatro apolo almeria', '2026-02-11', '20:30:00')
+      ('LA DANZAORA', 'teatro apolo almeria', '2026-02-13', '20:30:00')
+      ('EL POZO DE LOS DESEOS', 'teatro apolo almeria', '2026-02-14',
+      '18:00:00')
+      ('EL ESTÓMAGO DE LA BALLENA', 'teatro apolo almeria', '2026-02-20',
+      '18:00:00')
+      ('OCAL - PURA LUZ', 'auditorio municipal maestro padilla.', '2026-02-22',
+      '12:30:00')
+      ('ALETHEIA', 'teatro apolo almeria', '2026-02-26', '20:30:00')
+      ('VICENTE AMIGO', 'auditorio municipal maestro padilla.', '2026-02-27',
+      '20:30:00')
+      ('UNITY GOSPEL CHOIR CON CLASIJAZZ BIG BAND', 'auditorio municipal maestro
+      padilla.', '2026-03-01', '12:30:00')
+      ('LUZ CASAL', 'auditorio municipal maestro padilla.', '2026-03-07',
+      '21:00:00')
+      ('DINERO NEGRO', 'teatro apolo almeria', '2026-03-11', '20:30:00')
+      ('BAILE DE BESTIAS', 'teatro apolo almeria', '2026-03-13', '20:30:00')
+      ('ORQUESTA FILARMÓNICA DE MÁLAGA', 'auditorio municipal maestro
+      padilla.', '2026-03-14', '20:30:00')
+      ('MARWÁN', 'teatro apolo almeria', '2026-03-15', '20:00:00')
+      ('500 NOCHES - TRIBUTO A SABINA', 'auditorio municipal maestro padilla.',
+      '2026-03-20', '20:30:00')
+      ('LORCAS´INDÓMITA', 'teatro apolo almeria', '2026-03-26', '20:30:00')
+      ('MORRICONE ROCK EXPERIENCE', 'auditorio municipal maestro padilla.',
+      '2026-03-27', '20:30:00')
+      ('PACO CANDELA', 'auditorio municipal maestro padilla.', '2026-03-28',
+      '21:00:00')
+      ('CAFÉ QUIJANO', 'auditorio municipal maestro padilla.', '2026-04-10',
+      '21:00:00')
+      ('NEXT TO MY SKIN', 'teatro apolo almeria', '2026-04-17', '20:30:00')
+      ('LAURA GALLEGO', 'auditorio municipal maestro padilla.', '2026-04-18',
+      '20:30:00')
+      ('CAMPEONES 2 EN EL TEATRO', 'auditorio municipal maestro padilla.',
+      '2026-04-25', '20:00:00')
+      ('PLEITA', 'teatro apolo almeria', '2026-05-22', '20:30:00')
+      ('UN PATÉTICO AMOR DESCONOCIDO', 'teatro apolo almeria', '2026-06-12',
+      '20:30:00')
+      ****************************
+      Saving 26 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203_1
+      610_FlowteTaquillaCultural.json
+      Saving 26 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+      ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+      selenium
+
+Result: Succeeded
+
+Launching scraper: Entradium
