@@ -1,0 +1,33 @@
+name: "FisgonTaskLauncher"
+params:
+  - TARGET_CITY: "Almeria"
+    SCRAPERS_REQUEST: "KuverProducciones,SalaBerlin"
+    SCRAPERS_SELENIUM: "SalaEmma,ClassicJazz"
+
+env:
+  TARGET_CITY: ${TARGET_CITY}
+  TARGET_SCRAPER: ${TARGET_SCRAPER}
+  DAGU_BASE_URL: ${DAGU_BASE_URL}
+
+steps:
+  - name: "launch_children_request"
+    command: >
+      env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$TARGET_SCRAPER";
+      for s in "${SCRAPERS_SELENIUM[@]}"; do
+      s="$(echo "$s" | xargs)";
+      [ -z "$s" ] && continue;
+      echo "Launching scraper: $s";
+      /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonTaskRequest.yml -- \
+      TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL" || true;
+      done'
+
+  - name: "launch_children_selenium"
+    command: >
+      env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$TARGET_SCRAPER";
+      for s in "${SCRAPERS_SELENIUM[@]}"; do
+      s="$(echo "$s" | xargs)";
+      [ -z "$s" ] && continue;
+      echo "Launching scraper: $s";
+      /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonTaskSelenium.yml -- \
+      TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL" || true;
+      done'

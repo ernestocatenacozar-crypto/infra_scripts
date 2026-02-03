@@ -1,0 +1,28 @@
+name: "FisgonTask"
+params:
+  - TARGET_CITY: ""
+  - TARGET_SCRAPER: ""
+
+steps:
+  - name: "tarea_1"
+    command: >
+      bash -lc 'docker run --rm
+      --network host
+      -v /home/ubuntu/work/fisgon:/app
+      -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
+      -w /app
+      -e OPERATION=0
+      -e DOCKER_CONFIG=/tmp/.docker
+      -e HOME=/tmp
+      -e TARGET_CITY
+      -e TARGET_SCRAPER
+      -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+      -e DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&step=tarea_1&dagRunId=${DAG_RUN_ID}"
+      fisgon_scraper:1.0;
+      rc=$?;
+      exit $rc'
+
+
+
+#import os
+#run_url = os.getenv("DAG_RUN_URL", "")
