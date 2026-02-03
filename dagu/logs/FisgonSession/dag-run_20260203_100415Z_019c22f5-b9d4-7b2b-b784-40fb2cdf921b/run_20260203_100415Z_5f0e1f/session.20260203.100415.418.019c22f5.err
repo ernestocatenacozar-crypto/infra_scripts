@@ -1,0 +1,8 @@
+bash: /root/.bash_profile: Permission denied
+WARNING: Error loading config file: open /root/.docker/config.json: permission denied
+Traceback (most recent call last):
+  File "/app/run.py", line 69, in <module>
+    CREATE_SESSION = int(os.getenv("CREATE_SESSION", 0))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+bash: line 1: /root/.bash_logout: Permission denied
