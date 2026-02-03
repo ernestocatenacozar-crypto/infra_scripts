@@ -1,13 +1,9 @@
 name: "FisgonTaskLauncher"
 params:
   - TARGET_CITY: "Almeria"
-    SCRAPERS_REQUEST: "KuverProducciones,SalaBerlin"
-    SCRAPERS_SELENIUM: "SalaEmma,ClassicJazz"
 
 env:
   TARGET_CITY: ${TARGET_CITY}
-  SCRAPERS_REQUEST: ${SCRAPERS_REQUEST}
-  SCRAPERS_SELENIUM: ${SCRAPERS_SELENIUM}
   DAGU_BASE_URL: ${DAGU_BASE_URL}
 
 steps:
@@ -32,6 +28,7 @@ steps:
   - name: "launch_children_request"
     command: >
       env HOME=/tmp bash -lc 'SCRAPERS_REQUEST_FILE="/tmp/fisgon_scrapers_request.txt";
+      SCRAPERS_REQUEST="";
       if [ -s "$SCRAPERS_REQUEST_FILE" ]; then
       SCRAPERS_REQUEST="$(cat "$SCRAPERS_REQUEST_FILE")";
       fi;
@@ -49,6 +46,7 @@ steps:
   - name: "launch_children_selenium"
     command: >
       env HOME=/tmp bash -lc 'SCRAPERS_SELENIUM_FILE="/tmp/fisgon_scrapers_selenium.txt";
+      SCRAPERS_SELENIUM="";
       if [ -s "$SCRAPERS_SELENIUM_FILE" ]; then
       SCRAPERS_SELENIUM="$(cat "$SCRAPERS_SELENIUM_FILE")";
       fi;
