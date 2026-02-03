@@ -11,6 +11,11 @@ env:
   DAGU_BASE_URL: ${DAGU_BASE_URL}
 
 steps:
+  - name: "open_session"
+    command: >
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
+      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="1" CLOSE_SESSION="" DAGU_BASE_URL="$DAGU_BASE_URL"'
+
   - name: "launch_children_request"
     command: >
       env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$SCRAPERS_REQUEST";
@@ -34,3 +39,10 @@ steps:
       /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonTaskSelenium.yml -- \
       TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL" || true;
       done'
+    continueOn:
+      failure: true
+
+  - name: "close_session"
+    command: >
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
+      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="" CLOSE_SESSION="1" DAGU_BASE_URL="$DAGU_BASE_URL"'
