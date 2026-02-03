@@ -16,7 +16,7 @@ steps:
     command: >
       env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
       TARGET_CITY="$TARGET_CITY" CREATE_SESSION="1" CLOSE_SESSION="" DAGU_BASE_URL="$DAGU_BASE_URL"'
-
+      
   - name: "get_scrapers_request"
     command: >
       env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
