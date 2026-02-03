@@ -19,17 +19,23 @@ steps:
       
   - name: "get_scrapers_request"
     command: >
-      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
-      TARGET_CITY="$TARGET_CITY" GET_SCRAPERS="Request" DAGU_BASE_URL="$DAGU_BASE_URL"'
+      env HOME=/tmp bash -lc 'SCRAPERS_REQUEST="$(/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonGetScrapers.yml -- \
+      TARGET_CITY="$TARGET_CITY" GET_SCRAPERS="Request" DAGU_BASE_URL="$DAGU_BASE_URL" | tail -n 1)";
+      printf "%s" "$SCRAPERS_REQUEST" > /tmp/fisgon_scrapers_request.txt'
 
   - name: "get_scrapers_selenium"
     command: >
-      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
-      TARGET_CITY="$TARGET_CITY" GET_SCRAPERS="Selenium" DAGU_BASE_URL="$DAGU_BASE_URL"'
+      env HOME=/tmp bash -lc 'SCRAPERS_SELENIUM="$(/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonGetScrapers.yml -- \
+      TARGET_CITY="$TARGET_CITY" GET_SCRAPERS="Selenium" DAGU_BASE_URL="$DAGU_BASE_URL" | tail -n 1)";
+      printf "%s" "$SCRAPERS_SELENIUM" > /tmp/fisgon_scrapers_selenium.txt'
 
   - name: "launch_children_request"
     command: >
-      env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$SCRAPERS_REQUEST";
+      env HOME=/tmp bash -lc 'SCRAPERS_REQUEST_FILE="/tmp/fisgon_scrapers_request.txt";
+      if [ -s "$SCRAPERS_REQUEST_FILE" ]; then
+      SCRAPERS_REQUEST="$(cat "$SCRAPERS_REQUEST_FILE")";
+      fi;
+      IFS="," read -ra SCRAPERS <<< "$SCRAPERS_REQUEST";
       for s in "${SCRAPERS[@]}"; do
       s="$(echo "$s" | xargs)";
       [ -z "$s" ] && continue;
@@ -42,7 +48,11 @@ steps:
 
   - name: "launch_children_selenium"
     command: >
-      env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$SCRAPERS_SELENIUM";
+      env HOME=/tmp bash -lc 'SCRAPERS_SELENIUM_FILE="/tmp/fisgon_scrapers_selenium.txt";
+      if [ -s "$SCRAPERS_SELENIUM_FILE" ]; then
+      SCRAPERS_SELENIUM="$(cat "$SCRAPERS_SELENIUM_FILE")";
+      fi;
+      IFS="," read -ra SCRAPERS <<< "$SCRAPERS_SELENIUM";
       for s in "${SCRAPERS[@]}"; do
       s="$(echo "$s" | xargs)";
       [ -z "$s" ] && continue;

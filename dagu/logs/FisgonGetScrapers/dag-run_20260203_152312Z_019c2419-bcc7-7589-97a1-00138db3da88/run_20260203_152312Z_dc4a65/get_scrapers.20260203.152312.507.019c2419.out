@@ -1,0 +1,15 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=1,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=Selenium
+
+        SCRAPER=
+        DAG_RUN_URL=/dags/FisgonGetScrapers/log?remoteNode=local&step=get_scrapers&dagRunId=019c2419-bcc7-7589-97a1-00138db3da88
+
+AlmeriaCiudad, AlmeriaTurismo, JuntaAndaluciaAgenda, ClassicJazz, FlowteCineClub, FlowteTaquillaCultural, Entradium, TodasLasEntradas, RedBibliotecas, SalaEmma, Giglon
