@@ -1,0 +1,150 @@
+Launching scraper: KuverProducciones
+Succeeded - 2026-02-03T09:24:35Z
+
+dag: FisgonTask (7.0s)
+│
+└─tarea_1 (7.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   SCRAPER=KuverProducciones
+  │   DAG_RUN_URL=/dags/FisgonTask?dagRunId=019c22d1-6b42-7ef1-9ecc-865eae502c
+  │   40
+  │   Running for Almeria: KuverProducciones
+  │   KuverProducciones
+  │   RUNNING SESSION =  2026_02_02_15_32_Lunes
+  │   Getting https://kuverproducciones.com/proximos-eventos/
+  │   Sleep 1
+  │   *** SCRAPED 87 URLS WITH EVENTS **
+  │   New url events = 0
+  │   #######################
+  │   No new urls/events extracted. No new events to save
+  │   #######################
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'kuverproducciones.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: SalaBerlin
+Succeeded - 2026-02-03T09:24:42Z
+
+dag: FisgonTask (15.0s)
+│
+└─tarea_1 (15.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   SCRAPER=SalaBerlin
+  │   DAG_RUN_URL=/dags/FisgonTask?dagRunId=019c22d1-869d-78e4-a2aa-43e0bddb8e
+  │   ea
+  │   Running for Almeria: SalaBerlin
+  │   SalaBerlin
+  │   RUNNING SESSION =  2026_02_02_15_32_Lunes
+  │   Getting https://berlinalmeria.com/eventos/
+  │   Sleep 1
+  │   *** SCRAPED 12 URLS WITH EVENTS **
+  │   New url events = 2
+  │   0 / 2
+  │   Getting https://berlinalmeria.com/producto/14-de-marzo-saurom/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '197e86df', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'SAUROM', 'id_venue': 'NmPqTrh6',
+  │   'venue': 'Sala Berlin', 'std_venue': 'Berlin Social Club', 'start_date':
+  │   '2026-03-14', 'start_time': '20:00:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Saurom se reserva el
+  │   derecho de suspensión del evento por fuerza mayor. En caso de
+  │   devolución de entrada por suspensión del evento, esta será de 15
+  │   días hábiles a partir del siguiente día de dicha suspensión.',
+  │   'others': {'price': '27,00\xa0€', 'ticket':
+  │   'https://entradas.crashmusic.es/event/concierto-saurom-almeria-sala-berl
+  │   in-social-club-sabado-14-de-marzo'}, 'source': 'SalaBerlin',
+  │   'exec_time': '20260203T092443', 'session': '2026_02_02_15_32_Lunes',
+  │   'image':
+  │   'https://berlinalmeria.com/wp-content/uploads/2026/01/saurom1x1.jpg',
+  │   'url': 'https://berlinalmeria.com/producto/14-de-marzo-saurom/'}
+  │   1 / 2
+  │   Getting
+  │   https://berlinalmeria.com/producto/21-febrero-paco-calavera-y-pepe-cespe
+  │   des/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '4b954c34', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 1, 'event': 'PACO CALAVERA Y PEPE CESPEDES',
+  │   'id_venue': 'NmPqTrh6', 'venue': 'Sala Berlin', 'std_venue': 'Berlin
+  │   Social Club', 'start_date': '__NOT_FOUND__', 'start_time':
+  │   '__NOT_FOUND__', 'end_date': '__NOT_DEFINIED__', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'PACO CALAVERA Y PEPE CESPEDES nos
+  │   traen un nuevo espectaculo cargado de sketches y monologos durante 2
+  │   horas…', 'others': {'price': '15,00\xa0€', 'ticket':
+  │   'https://entradium.com/events/paco-calavera-y-pepe-cespedes-berlin-socia
+  │   l-club-21-febrero'}, 'source': 'SalaBerlin', 'exec_time':
+  │   '20260203T092443', 'session': '2026_02_02_15_32_Lunes', 'image':
+  │   'https://berlinalmeria.com/wp-content/uploads/2026/01/PAco-1x1-1.jpg',
+  │   'url':
+  │   'https://berlinalmeria.com/producto/21-febrero-paco-calavera-y-pepe-cesp
+  │   edes/'}
+  │   ****************************
+  │   Saving 2 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_02_02_15_32_Lunes/0_raw/20260203_
+  │   0924_SalaBerlin.json
+  │   Saving 2 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'berlinalmeria.com'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'berlinalmeria.com'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'berlinalmeria.com'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+

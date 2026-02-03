@@ -6,25 +6,28 @@ params:
 
 env:
   TARGET_CITY: ${TARGET_CITY}
-  TARGET_SCRAPER: ${TARGET_SCRAPER}
+  SCRAPERS_REQUEST: ${SCRAPERS_REQUEST}
+  SCRAPERS_SELENIUM: ${SCRAPERS_SELENIUM}
   DAGU_BASE_URL: ${DAGU_BASE_URL}
 
 steps:
   - name: "launch_children_request"
     command: >
-      env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$TARGET_SCRAPER";
-      for s in "${SCRAPERS_SELENIUM[@]}"; do
+      env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$SCRAPERS_REQUEST";
+      for s in "${SCRAPERS[@]}"; do
       s="$(echo "$s" | xargs)";
       [ -z "$s" ] && continue;
       echo "Launching scraper: $s";
       /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonTaskRequest.yml -- \
       TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL" || true;
       done'
+    continueOn:
+      failure: true
 
   - name: "launch_children_selenium"
     command: >
-      env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$TARGET_SCRAPER";
-      for s in "${SCRAPERS_SELENIUM[@]}"; do
+      env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$SCRAPERS_SELENIUM";
+      for s in "${SCRAPERS[@]}"; do
       s="$(echo "$s" | xargs)";
       [ -z "$s" ] && continue;
       echo "Launching scraper: $s";

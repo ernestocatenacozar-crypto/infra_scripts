@@ -1,0 +1,3 @@
+time=2026-02-03T09:24:57.828Z level=INFO msg="Executing root dag-run" dag=FisgonTask run-id=019c22d1-c158-72aa-a37e-32848a6c3585 params=""
+time=2026-02-03T09:24:57.844Z level=INFO msg="DAG run started" name=FisgonTask run-id=019c22d1-c158-72aa-a37e-32848a6c3585 attempt-id="" dag=FisgonTask run-id=019c22d1-c158-72aa-a37e-32848a6c3585 params="[TARGET_CITY=Almeria TARGET_SCRAPER=SalaEmma 3=DAGU_BASE_URL=]"
+time=2026-02-03T09:24:57.847Z level=INFO msg="Step started" name=FisgonTask run-id=019c22d1-c158-72aa-a37e-32848a6c3585 attempt-id="" dag=FisgonTask run-id=019c22d1-c158-72aa-a37e-32848a6c3585 step=tarea_1
