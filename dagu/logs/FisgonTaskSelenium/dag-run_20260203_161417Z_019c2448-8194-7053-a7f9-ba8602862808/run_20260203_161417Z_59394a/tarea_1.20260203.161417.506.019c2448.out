@@ -52,3 +52,49 @@ Sleep 4
 3 / 10
 Getting https://entradium.com/es/events/stand-up-comedy-artenvacio-kalderas-b12c5116-9256-451b-a06f-9c40f3c8a932
 Sleep 4
+['28.02.2026', '18:00']
+--------------------
+{'id': '1da0e5fa', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'KALDERAS', 'id_venue': '9B7gDFP7', 'venue': 'Sala Stand Up Artenvacio', 'std_venue': 'Sala Artenvacio', 'start_date': '2026-02-28', 'start_time': '18:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Kalderas es una apuesta al humor exigente, un desafío a la seriedad más exquisita y una oportunidad única para pasar un rato divertido. ¡Eso si, no es apto para personas sensibles! Así es que si te gusta reírte de la vida y de situaciones de esas que suscitan miradas en la cena de familia, este es tu espectáculo. NADA DE IMPROVISACIÓN, SIN CANCIONES NI BAILES... solo un micro y comedia... mucha comedia.Sin duda un referente en la escena murciana y habitual en las mejores salas de comedia y teatros de toda España y si... murciano de pura cepa.Apertura de puertas a las: 17:30 h Espectáculo a las: 18:00 h Entradas en Entradium: 10€ Entradas en puerta: 10€', 'others': {}, 'source': 'Entradium', 'exec_time': '20260203T161418', 'session': '2026_02_03_15_59_Martes', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/baff7a3911cc0407e0899bd636811334d80a05a9/event_m_WhatsApp_Image_2026-01-13_at_20.05.51.jpeg?v=1768912371', 'url': 'https://entradium.com/es/events/stand-up-comedy-artenvacio-kalderas-b12c5116-9256-451b-a06f-9c40f3c8a932'}
+4 / 10
+Getting https://entradium.com/es/events/papallona
+Sleep 4
+['21.03.2026', '21:30']
+--------------------
+{'id': '8ff63ddc', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Papallona', 'id_venue': 'trpmPB62', 'venue': 'El Zaguán', 'std_venue': 'Zaguán', 'start_date': '2026-03-21', 'start_time': '21:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Myriam Cano, poeta y cantante junto a Carlos López a la guitarra, presenta en su debut en los escenarios un espectáculo de poesía y música dónde viajarás por tus emociones con cada letra, descubriendo las fases del renacer como individuo.', 'others': {}, 'source': 'Entradium', 'exec_time': '20260203T161418', 'session': '2026_02_03_15_59_Martes', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/dc7ba9a6835bce6b9edfee46cdcd745c5795cbae/event_m_1000427183.jpg?v=1768157053', 'url': 'https://entradium.com/es/events/papallona'}
+5 / 10
+Getting https://entradium.com/es/events/rock-in-love-almeria
+Sleep 4
+['14.02.2026', '21:00']
+--------------------
+{'id': 'b402749c', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Rock in Love', 'id_venue': None, 'venue': 'Casino de Dalías', 'std_venue': None, 'start_date': '2026-02-14', 'start_time': '21:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Rock in LoveEspectáculo + Cena + After ShowUn casino histórico, acróbatas aéreos, bailarinas, cantantes…El show más impresionante vuelve al Casino de Dalías de la mano de la compañía internacional Aribaldi Circus. La elegancia del lugar se mezcla con este nuevo, atrevido y sensual espectáculo que envolverá al público en un ambiente único.Un espectáculo para viajar a través de los sabores, gracias a un suculento menú compuesto de diferentes platos conectados con esa aventura sensorial que nos proponen los artistas. ¡Más que un cabaret!', 'others': {}, 'source': 'Entradium', 'exec_time': '20260203T161418', 'session': '2026_02_03_15_59_Martes', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/e138079d7f18e0e49b72590d158e874c8ce60173/event_m_RockInLove2.jpeg?v=1769243485', 'url': 'https://entradium.com/es/events/rock-in-love-almeria'}
+6 / 10
+Getting https://entradium.com/es/events/cuentacuentos-en-la-casa-del-cine
+Sleep 4
+['Varias', 'fechas', '-']
+--------------------
+{'id': '2f5f38d0', 'show': 1, 'in_city': 1, 'one_day': 0, 'wrong_date_time': 1, 'event': 'Cuentacuentos en la Casa del Cine', 'id_venue': 'df8rMnjt', 'venue': 'Casa del cine', 'std_venue': 'Casa del Cine', 'start_date': '__NOT_FOUND__', 'start_time': '__NOT_FOUND__', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': "PRÓXIMOS CUENTACUENTOS:7 FEBRERO, 11:30H: “Yo puedo”, de Inma Cazorla7 DE MARZO, 11:30H: “Cuentos del Mar de Alborán” de Moisés Palmero11 DE ABRIL, 11:30H: 'Pulpín y pulpón' de Ana PujadoSolo es necesario reservar la entrada para niños/as.Tendréis la oportunidad de comprar cuentos si queréis. ¡Y la autora os lo firmará!Actividad recomendada para niños/as a partir de 6 años. Se ruega un uso responsable de la entrada, es decir, ser consciente de que aquella entrada de la que no se haga uso podría ser la plaza de otro espectador que se ha quedado fuera. Gracias.", 'others': {}, 'source': 'Entradium', 'exec_time': '20260203T161418', 'session': '2026_02_03_15_59_Martes', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/05bdd66bc136e9f4e74da6e529f0a48b18bd9f31/event_m_Cuentacuentos.jpg?v=1769681324', 'url': 'https://entradium.com/es/events/cuentacuentos-en-la-casa-del-cine'}
+7 / 10
+Getting https://entradium.com/es/events/borja-pico-almeria
+Sleep 4
+['20.02.2026', '21:30']
+--------------------
+{'id': '15681ded', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Borja Picó - Almería', 'id_venue': 'trpmPB62', 'venue': 'El Zaguán', 'std_venue': 'Zaguán', 'start_date': '2026-02-20', 'start_time': '21:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Concierto en acústico del cantautor Borja Picó en la gira de presentación de su nuevo disco "Payaso Triste"', 'others': {}, 'source': 'Entradium', 'exec_time': '20260203T161418', 'session': '2026_02_03_15_59_Martes', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/18a8d39a18031eab51ad174f898b62cc519802e0/event_m_WhatsApp_Image_2026-01-27_at_10.10.46.jpeg?v=1769539039', 'url': 'https://entradium.com/es/events/borja-pico-almeria'}
+8 / 10
+Getting https://entradium.com/es/events/puroindie-en-almeria-sala-berlin-social-club-almeria
+Sleep 4
+['2.05.2026', '21:30']
+--------------------
+{'id': 'de030341', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'PuroIndie en Almería Sala Berlín Social Club', 'id_venue': 'NmPqTrh6', 'venue': 'Berlín social Club', 'std_venue': 'Berlin Social Club', 'start_date': '2026-05-02', 'start_time': '21:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'PuroIndie en Almería, de nuevo en Almería el mejor tributo indie nacional, mas de dos horas de música en directo con los mejores éxitos e himnos del panorama indie nacional.', 'others': {}, 'source': 'Entradium', 'exec_time': '20260203T161418', 'session': '2026_02_03_15_59_Martes', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/890ed0035fbce6c5ea6cc78421b969894df046d2/event_m_Cartel_Almer%C3%ADa_2026.jpeg?v=1769595073', 'url': 'https://entradium.com/es/events/puroindie-en-almeria-sala-berlin-social-club-almeria'}
+9 / 10
+Getting https://entradium.com/es/events/almeria-ongame-2026
+Sleep 4
+['4.04.2026', '10:00']
+--------------------
+{'id': '7be041c0', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'ALMERÍA ONGAME 2026', 'id_venue': '27qNP7DH', 'venue': 'AUDITORIO MUNICIPAL MAESTRO PADILLA', 'std_venue': 'Auditorio Municipal Maestro Padilla', 'start_date': '2026-04-04', 'start_time': '10:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Almería onGame es el gran punto de encuentro para familias, jóvenes y amantes del mundo gamer.Un evento pensado para compartir, jugar y disfrutar juntos, donde conviven los videojuegos de siempre con las últimas tecnologías.Durante todo el fin de semana podrás vivir torneos, simuladores, zonas de juego libre, actividades para todas las edades y un ambiente único, seguro y divertido, además de nuestra espectacular exhibición de baile de academias de baile de muchas procedencias y actuaciones que amenizarán los bailes. Da igual si vienes a competir, a descubrir o simplemente a pasar un gran día en familia: aquí todos tienen su espacio. Un evento para jugar, emocionarse y crear recuerdos inolvidables', 'others': {}, 'source': 'Entradium', 'exec_time': '20260203T161418', 'session': '2026_02_03_15_59_Martes', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/6c08f5b8464fe2b934c8bf0bbd10507828990cb0/event_m_WhatsApp_Image_2026-01-25_at_18.52.21.jpeg?v=1769363772', 'url': 'https://entradium.com/es/events/almeria-ongame-2026'}
+****************************
+Saving 10 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203_1614_Entradium.json
+Saving 10 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+selenium

@@ -1146,3 +1146,742 @@ dag: FisgonTaskSelenium (4m 5s)
 Result: Succeeded
 
 Launching scraper: Entradium
+Succeeded - 2026-02-03T16:14:17Z
+
+dag: FisgonTaskSelenium (1m 54s)
+│
+└─tarea_1 (1m 54s) [succeeded]
+  ├─stdout: ... (46 more lines)
+  │   {'id': '15549523', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'PACO CALAVERA Y PEPE CESPEDES - 21
+  │   FEBRERO', 'id_venue': 'NmPqTrh6', 'venue': 'Berlin Social Club',
+  │   'std_venue': 'Berlin Social Club', 'start_date': '__NOT_FOUND__',
+  │   'start_time': '__NOT_FOUND__', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'PACO CALAVERA Y PEPE
+  │   CESPEDES nos traen un nuevo espectaculo cargado de sketches y monologos
+  │   durante 2 horas...SABADO 21 FEBRERO¡DOBLE PASE!13:00 (la hora del
+  │   vermut, y para eso os pondremos un aperitivo en el descanso)17:00 (aqui
+  │   no hay aperitivo, pero hay gintonics fresquitos)ENTRADAS ANTICIPADAS
+  │   15€ENTRADAS EN TAQUILLA 18€COLABORA: AGUILA Y BEEFEATER', 'others':
+  │   {}, 'source': 'Entradium', 'exec_time': '20260203T161418', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/1b0b2b3f33fd
+  │   cfe044e820a434fb91454f9f693a/event_m_21_Feb_-_pacopepe.png?v=1769786916'
+  │   , 'url':
+  │   'https://entradium.com/es/events/paco-calavera-y-pepe-cespedes-berlin-so
+  │   cial-club-21-febrero'}
+  │   3 / 10
+  │   Getting
+  │   https://entradium.com/es/events/stand-up-comedy-artenvacio-kalderas-b12c
+  │   5116-9256-451b-a06f-9c40f3c8a932
+  │   Sleep 4
+  │   ['28.02.2026', '18:00']
+  │   --------------------
+  │   {'id': '1da0e5fa', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'KALDERAS', 'id_venue': '9B7gDFP7',
+  │   'venue': 'Sala Stand Up Artenvacio', 'std_venue': 'Sala Artenvacio',
+  │   'start_date': '2026-02-28', 'start_time': '18:00:00', 'end_date':
+  │   '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description':
+  │   'Kalderas es una apuesta al humor exigente, un desafío a la seriedad
+  │   más exquisita y una oportunidad única para pasar un rato divertido.
+  │   ¡Eso si, no es apto para personas sensibles! Así es que si te gusta
+  │   reírte de la vida y de situaciones de esas que suscitan miradas en la
+  │   cena de familia, este es tu espectáculo. NADA DE IMPROVISACIÓN, SIN
+  │   CANCIONES NI BAILES... solo un micro y comedia... mucha comedia.Sin duda
+  │   un referente en la escena murciana y habitual en las mejores salas de
+  │   comedia y teatros de toda España y si... murciano de pura cepa.Apertura
+  │   de puertas a las: 17:30 h Espectáculo a las: 18:00 h Entradas en
+  │   Entradium: 10€ Entradas en puerta: 10€', 'others': {}, 'source':
+  │   'Entradium', 'exec_time': '20260203T161418', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/baff7a3911cc
+  │   0407e0899bd636811334d80a05a9/event_m_WhatsApp_Image_2026-01-13_at_20.05.
+  │   51.jpeg?v=1768912371', 'url':
+  │   'https://entradium.com/es/events/stand-up-comedy-artenvacio-kalderas-b12
+  │   c5116-9256-451b-a06f-9c40f3c8a932'}
+  │   4 / 10
+  │   Getting https://entradium.com/es/events/papallona
+  │   Sleep 4
+  │   ['21.03.2026', '21:30']
+  │   --------------------
+  │   {'id': '8ff63ddc', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Papallona', 'id_venue': 'trpmPB62',
+  │   'venue': 'El Zaguán', 'std_venue': 'Zaguán', 'start_date':
+  │   '2026-03-21', 'start_time': '21:30:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Myriam Cano, poeta y
+  │   cantante junto a Carlos López a la guitarra, presenta en su debut en
+  │   los escenarios un espectáculo de poesía y música dónde viajarás por
+  │   tus emociones con cada letra, descubriendo las fases del renacer como
+  │   individuo.', 'others': {}, 'source': 'Entradium', 'exec_time':
+  │   '20260203T161418', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/dc7ba9a6835b
+  │   ce6b9edfee46cdcd745c5795cbae/event_m_1000427183.jpg?v=1768157053',
+  │   'url': 'https://entradium.com/es/events/papallona'}
+  │   5 / 10
+  │   Getting https://entradium.com/es/events/rock-in-love-almeria
+  │   Sleep 4
+  │   ['14.02.2026', '21:00']
+  │   --------------------
+  │   {'id': 'b402749c', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Rock in Love', 'id_venue': None,
+  │   'venue': 'Casino de Dalías', 'std_venue': None, 'start_date':
+  │   '2026-02-14', 'start_time': '21:00:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Rock in LoveEspectáculo
+  │   + Cena + After ShowUn casino histórico, acróbatas aéreos, bailarinas,
+  │   cantantes…El show más impresionante vuelve al Casino de Dalías de la
+  │   mano de la compañía internacional Aribaldi Circus. La elegancia del
+  │   lugar se mezcla con este nuevo, atrevido y sensual espectáculo que
+  │   envolverá al público en un ambiente único.Un espectáculo para viajar
+  │   a través de los sabores, gracias a un suculento menú compuesto de
+  │   diferentes platos conectados con esa aventura sensorial que nos proponen
+  │   los artistas. ¡Más que un cabaret!', 'others': {}, 'source':
+  │   'Entradium', 'exec_time': '20260203T161418', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/e138079d7f18
+  │   e0e49b72590d158e874c8ce60173/event_m_RockInLove2.jpeg?v=1769243485',
+  │   'url': 'https://entradium.com/es/events/rock-in-love-almeria'}
+  │   6 / 10
+  │   Getting
+  │   https://entradium.com/es/events/cuentacuentos-en-la-casa-del-cine
+  │   Sleep 4
+  │   ['Varias', 'fechas', '-']
+  │   --------------------
+  │   {'id': '2f5f38d0', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Cuentacuentos en la Casa del Cine',
+  │   'id_venue': 'df8rMnjt', 'venue': 'Casa del cine', 'std_venue': 'Casa del
+  │   Cine', 'start_date': '__NOT_FOUND__', 'start_time': '__NOT_FOUND__',
+  │   'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__',
+  │   'description': "PRÓXIMOS CUENTACUENTOS:7 FEBRERO, 11:30H: “Yo
+  │   puedo”, de Inma Cazorla7 DE MARZO, 11:30H: “Cuentos del Mar de
+  │   Alborán” de Moisés Palmero11 DE ABRIL, 11:30H: 'Pulpín y pulpón'
+  │   de Ana PujadoSolo es necesario reservar la entrada para
+  │   niños/as.Tendréis la oportunidad de comprar cuentos si queréis. ¡Y
+  │   la autora os lo firmará!Actividad recomendada para niños/as a partir
+  │   de 6 años. Se ruega un uso responsable de la entrada, es decir, ser
+  │   consciente de que aquella entrada de la que no se haga uso podría ser
+  │   la plaza de otro espectador que se ha quedado fuera. Gracias.",
+  │   'others': {}, 'source': 'Entradium', 'exec_time': '20260203T161418',
+  │   'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/05bdd66bc136
+  │   e9f4e74da6e529f0a48b18bd9f31/event_m_Cuentacuentos.jpg?v=1769681324',
+  │   'url':
+  │   'https://entradium.com/es/events/cuentacuentos-en-la-casa-del-cine'}
+  │   7 / 10
+  │   Getting https://entradium.com/es/events/borja-pico-almeria
+  │   Sleep 4
+  │   ['20.02.2026', '21:30']
+  │   --------------------
+  │   {'id': '15681ded', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Borja Picó - Almería', 'id_venue':
+  │   'trpmPB62', 'venue': 'El Zaguán', 'std_venue': 'Zaguán', 'start_date':
+  │   '2026-02-20', 'start_time': '21:30:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Concierto en acústico
+  │   del cantautor Borja Picó en la gira de presentación de su nuevo disco
+  │   "Payaso Triste"', 'others': {}, 'source': 'Entradium', 'exec_time':
+  │   '20260203T161418', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/18a8d39a1803
+  │   1eab51ad174f898b62cc519802e0/event_m_WhatsApp_Image_2026-01-27_at_10.10.
+  │   46.jpeg?v=1769539039', 'url':
+  │   'https://entradium.com/es/events/borja-pico-almeria'}
+  │   8 / 10
+  │   Getting
+  │   https://entradium.com/es/events/puroindie-en-almeria-sala-berlin-social-
+  │   club-almeria
+  │   Sleep 4
+  │   ['2.05.2026', '21:30']
+  │   --------------------
+  │   {'id': 'de030341', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'PuroIndie en Almería Sala Berlín
+  │   Social Club', 'id_venue': 'NmPqTrh6', 'venue': 'Berlín social Club',
+  │   'std_venue': 'Berlin Social Club', 'start_date': '2026-05-02',
+  │   'start_time': '21:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'PuroIndie en Almería, de nuevo en
+  │   Almería el mejor tributo indie nacional, mas de dos horas de música en
+  │   directo con los mejores éxitos e himnos del panorama indie nacional.',
+  │   'others': {}, 'source': 'Entradium', 'exec_time': '20260203T161418',
+  │   'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/890ed0035fbc
+  │   e6c5ea6cc78421b969894df046d2/event_m_Cartel_Almer%C3%ADa_2026.jpeg?v=176
+  │   9595073', 'url':
+  │   'https://entradium.com/es/events/puroindie-en-almeria-sala-berlin-social
+  │   -club-almeria'}
+  │   9 / 10
+  │   Getting https://entradium.com/es/events/almeria-ongame-2026
+  │   Sleep 4
+  │   ['4.04.2026', '10:00']
+  │   --------------------
+  │   {'id': '7be041c0', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'ALMERÍA ONGAME 2026', 'id_venue':
+  │   '27qNP7DH', 'venue': 'AUDITORIO MUNICIPAL MAESTRO PADILLA', 'std_venue':
+  │   'Auditorio Municipal Maestro Padilla', 'start_date': '2026-04-04',
+  │   'start_time': '10:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Almería onGame es el gran punto de
+  │   encuentro para familias, jóvenes y amantes del mundo gamer.Un evento
+  │   pensado para compartir, jugar y disfrutar juntos, donde conviven los
+  │   videojuegos de siempre con las últimas tecnologías.Durante todo el fin
+  │   de semana podrás vivir torneos, simuladores, zonas de juego libre,
+  │   actividades para todas las edades y un ambiente único, seguro y
+  │   divertido, además de nuestra espectacular exhibición de baile de
+  │   academias de baile de muchas procedencias y actuaciones que amenizarán
+  │   los bailes. Da igual si vienes a competir, a descubrir o simplemente a
+  │   pasar un gran día en familia: aquí todos tienen su espacio. Un evento
+  │   para jugar, emocionarse y crear recuerdos inolvidables', 'others': {},
+  │   'source': 'Entradium', 'exec_time': '20260203T161418', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/6c08f5b8464f
+  │   e2b934c8bf0bbd10507828990cb0/event_m_WhatsApp_Image_2026-01-25_at_18.52.
+  │   21.jpeg?v=1769363772', 'url':
+  │   'https://entradium.com/es/events/almeria-ongame-2026'}
+  │   ****************************
+  │   Saving 10 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203
+  │   _1614_Entradium.json
+  │   Saving 10 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  │   ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+  │   selenium
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: TodasLasEntradas
+Succeeded - 2026-02-03T16:16:11Z
+
+dag: FisgonTaskSelenium (45.0s)
+│
+└─tarea_1 (45.0s) [succeeded]
+  └─stdout: ... (19 more lines)
+      Getting content
+      {'id': 'ba455af0', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'LA ODISEA - UN CANTO A LOS ABUELOS',
+      'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes Almería ',
+      'std_venue': 'Teatro Cervantes', 'start_date': '2026-02-16', 'start_time':
+      '18:30:00', 'end_date': '2026-02-16', 'end_time': '__NOT_DEFINIED__',
+      'description': 'Una versión actualizada y profundamente emotiva de La
+      Odisea, ambientada en la España de los años 60 y 70, que conecta el
+      viaje clásico con nuestra memoria más cercana. A través del formato
+      musical, los jóvenes intérpretes emprenden un viaje épico lleno de
+      recuerdos, emociones y vivencias compartidas. La historia se desarrolla
+      acompañada por una banda sonora de clásicos inolvidables, que refuerza
+      cada escena y despierta la nostalgia del público. Música, palabras y
+      movimiento se unen para construir un relato cercano y reconocible. Un
+      espectáculo lleno de humor, música y ternura, que rinde homenaje a las
+      generaciones que nos precedieron y dejaron huella en nuestro camino:
+      nuestros abuelos.', 'others': {}, 'source': 'TodasLasEntradas',
+      'exec_time': '20260203T161612', 'session': '2026_02_03_15_59_Martes',
+      'image':
+      'https://eolstage.blob.core.windows.net/eol/475152%2F8c4ca0-WEB-2026-02-16
+      ---La-odisea-Un-canto-a-los-abuelos.jpg', 'url':
+      'https://www.todaslasentradas.com/par-public/rest/evento/id/7387979'}
+      -------------
+      1 / 11
+      Getting content
+      {'id': '2a1a1a6d', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'IM-PULSE PINK FLOYD TRIBUTE LIVE SHOW',
+      'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes Almería ',
+      'std_venue': 'Teatro Cervantes', 'start_date': '2026-04-17', 'start_time':
+      '20:00:00', 'end_date': '2026-04-17', 'end_time': '__NOT_DEFINIED__',
+      'description': 'IM-PULSE es la mejor banda tributo a Pink Floyd del país.
+      Con un excelente directo y una espectacular puesta en escena, han logrado
+      convertirse en todo un referente, siendo considerados el mejor homenaje a
+      la mítica banda británica, según la opinión de miles de personas que
+      han asistido ya a sus conciertos. Con un impresionante espectáculo de
+      imágenes, luz y sonido minuciosamente elaborado consiguen cautivar al
+      público recreando la particular atmósfera de los conciertos de esta gran
+      banda, una de las más representativas del rock progresivo de todos los
+      tiempos. Durante más de dos horas y media interpretan, con toda
+      fidelidad, un repertorio con los temas más emblemáticos de Pink Floyd
+      basándose, sobre todo, en el icónico directo P-U-L-S-E, pero sin...Leer
+      más', 'others': {}, 'source': 'TodasLasEntradas', 'exec_time':
+      '20260203T161612', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://eolstage.blob.core.windows.net/eol/475152%2F751a9a-WhatsApp%20Ima
+      ge%202026-01-21%20at%2017.04.59.jpeg', 'url':
+      'https://www.todaslasentradas.com/par-public/rest/evento/id/7475175'}
+      -------------
+      2 / 11
+      Getting content
+      {'id': 'df271736', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'IMAGILUSIÓN', 'id_venue': 'DgpfFbPt',
+      'venue': 'Teatro Cervantes Almería ', 'std_venue': 'Teatro Cervantes',
+      'start_date': '2026-03-29', 'start_time': '18:00:00', 'end_date':
+      '2026-03-29', 'end_time': '__NOT_DEFINIED__', 'description': 'Imagilusión
+      es un espectáculo familiar lleno de color, fantasía y emoción, donde la
+      magia de los grandes cuentos cobra vida sobre el escenario. A través de
+      la música, el baile y una cuidada puesta en escena, personajes inspirados
+      en historias tan queridas como Aladdín, Frozen, Toy Story, El Rey León,
+      Mary Poppins o La Bella y la Bestia se unen para invitar al público a un
+      viaje inolvidable al mundo de la imaginación. Un show dinámico y
+      participativo en el que pequeños y mayores disfrutarán de coreografías
+      espectaculares, momentos divertidos y mensajes positivos sobre la amistad,
+      los sueños y la importancia de creer en la magia. Imagilusión es una
+      experiencia pensada para disfrutar en familia, donde la ilusión, la
+      música y la fantasía...Leer más', 'others': {}, 'source':
+      'TodasLasEntradas', 'exec_time': '20260203T161612', 'session':
+      '2026_02_03_15_59_Martes', 'image':
+      'https://eolstage.blob.core.windows.net/eol/475152%2Fa050fd-WEB-2026-03-29
+      ---Imagilusion.jpg', 'url':
+      'https://www.todaslasentradas.com/par-public/rest/evento/id/7376958'}
+      -------------
+      3 / 11
+      Getting content
+      {'id': '54c625e5', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'A TODO VOLUMEN - ROCK SINFÓNICO',
+      'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes ', 'std_venue': 'Teatro
+      Cervantes', 'start_date': '2026-02-07', 'start_time': '21:30:00',
+      'end_date': '2026-02-07', 'end_time': '__NOT_DEFINIED__', 'description':
+      'Rock Sinfónico: A Todo Volumen es una experiencia musical única donde
+      dos universos se encuentran sobre el escenario. La fuerza arrolladora del
+      rock se fusiona con la grandeza y la emoción de una banda sinfónica en
+      un concierto que rompe fronteras y multiplica sensaciones. La Banda
+      Sinfónica de Huércal de Almería presenta un espectáculo cargado de
+      energía, potencia y emoción, con arreglos espectaculares, colaboraciones
+      especiales y una puesta en escena envolvente. Una noche pensada para
+      vibrar, emocionarse y vivir el rock como nunca antes: A TODO VOLUMEN.',
+      'others': {}, 'source': 'TodasLasEntradas', 'exec_time':
+      '20260203T161612', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://eolstage.blob.core.windows.net/eol/475152%2Fb9c2ed-WhatsApp%20Ima
+      ge%202026-01-13%20at%2017.51.04.jpeg', 'url':
+      'https://www.todaslasentradas.com/par-public/rest/evento/id/7377041'}
+      -------------
+      4 / 11
+      Getting content
+      {'id': 'a24f1b40', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'DE CARA AL PÚBLICO" - UN SHOW DE
+      DANNUSX', 'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes Almería ',
+      'std_venue': 'Teatro Cervantes', 'start_date': '2026-09-26', 'start_time':
+      '21:00:00', 'end_date': '2026-09-26', 'end_time': '__NOT_DEFINIED__',
+      'description': 'Dannusx nos presenta un monólogo donde hablaremos de lo
+      que se vive diariamente trabajando cara al público. Hablando de
+      anécdotas con clientes, con mucho sentido del humor, ironía y sarcasmo.
+      Dannusx es un creador de contenido de 35 años nacido en Madrid. Sus
+      vídeos se caracterizan por el humor, sarcasmo y la ironía. Es su sello
+      personal. En 2020, tras la pandemia, decidió entrar en el mundo de las
+      redes sociales. Era hora de contar, con ese toque de humor e ironía, lo
+      que se vive trabajando cara al público. Pensaba que, si en un minuto de
+      vídeo conseguía que alguien sonriera un poco viendo las situaciones
+      diarias que se vive en este sector, ya habría merecido la pena. Ya cuenta
+      con casi...Leer más', 'others': {}, 'source': 'TodasLasEntradas',
+      'exec_time': '20260203T161612', 'session': '2026_02_03_15_59_Martes',
+      'image':
+      'https://eolstage.blob.core.windows.net/eol/475152%2F866017-web-2026-09-29
+      ---de-cara-al-publico_720.jpg', 'url':
+      'https://www.todaslasentradas.com/par-public/rest/evento/id/7491726'}
+      -------------
+      5 / 11
+      Getting content
+      {'id': '5ada8d24', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'HALLOWEEN FOREVER', 'id_venue':
+      'DgpfFbPt', 'venue': 'Teatro Cervantes Almería ', 'std_venue': 'Teatro
+      Cervantes', 'start_date': '2026-03-05', 'start_time': '18:30:00',
+      'end_date': '2026-03-05', 'end_time': '__NOT_DEFINIED__', 'description':
+      'Los monstruos de Halloween han decidido que su noche favorita no puede
+      terminar y que Halloween debe durar para siempre. Para conseguirlo,
+      personajes tan conocidos como IT, La Monja, vampiras, Miércoles Addams y
+      Harley Quinn unirán fuerzas en un plan tan oscuro como divertido. Sin
+      embargo, un valiente grupo de niños humanos no está dispuesto a
+      permitirlo. Con ingenio, valentía y una gran amistad, se enfrentarán a
+      esta amenaza en una aventura llena de situaciones inesperadas. Una
+      historia divertida y dinámica, repleta de sustos simpáticos, magia y
+      acción, pensada para disfrutar en familia y demostrar que, incluso en la
+      noche más terrorífica, la amistad y el coraje siempre triunfan.',
+      'others': {}, 'source': 'TodasLasEntradas', 'exec_time':
+      '20260203T161612', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://eolstage.blob.core.windows.net/eol/475152%2F95b7ca-WEB-2026-03-05
+      ---Halloween-Forever.jpg', 'url':
+      'https://www.todaslasentradas.com/par-public/rest/evento/id/7387706'}
+      -------------
+      6 / 11
+      Getting content
+      {'id': '9ba1a1df', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'DANIEL FEZ - LA VIDA REGULINCHI',
+      'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes Almería ',
+      'std_venue': 'Teatro Cervantes', 'start_date': '2026-05-09', 'start_time':
+      '21:00:00', 'end_date': '2026-05-09', 'end_time': '__NOT_DEFINIED__',
+      'description': 'Daniel Fez se considera un influencer regulinchi. En su
+      espectáculo podréis escuchar de primera mano cómo es su vida de
+      influencer. ¿Cómo le va en el amor a Daniel? ¿Le servirán los
+      videotutoriales que se estudian? ¿Sacará la libreta azul? ¿Alguno de
+      vosotros tiene algún consejo para él? En esta función podréis ver un
+      monólogo fresco, con mucha interacción con el público y lleno de
+      historias regulinchis. Empezó a crear su propio contenido en la
+      plataforma «Vine». Ahora se pueden ver sus vídeos en TikTok, Instagram
+      y Twitter. Él se describe como «Hacedor de vídeos y cosas de esas».
+      Cuenta con más de 1.7 millones de seguidores en TikTok, supera los 390K
+      de seguidores en Instagram y en Twitter cuenta con más de...Leer más',
+      'others': {}, 'source': 'TodasLasEntradas', 'exec_time':
+      '20260203T161612', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://eolstage.blob.core.windows.net/eol/475152%2F0df34f-WEB-2026-05-09
+      ---Daniel-Fez.jpg', 'url':
+      'https://www.todaslasentradas.com/par-public/rest/evento/id/7376514'}
+      -------------
+      7 / 11
+      Getting content
+      {'id': '2051261e', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'EL RARO DE LOS 90s', 'id_venue':
+      'DgpfFbPt', 'venue': 'Teatro Cervantes Almería ', 'std_venue': 'Teatro
+      Cervantes', 'start_date': '2026-05-31', 'start_time': '18:00:00',
+      'end_date': '2026-05-31', 'end_time': '__NOT_DEFINIED__', 'description':
+      'David Domínguez presenta El raro de los 90, un espectáculo de humor en
+      el que, con ironía, simpatía y un punto gamberro, hace un viaje directo
+      a una de las décadas más memorables: los años 90. A través de
+      anécdotas personales, situaciones absurdas y personajes inolvidables, el
+      cómico repasa cómo era crecer en aquella época: las tribus urbanas, las
+      formas de ligar, los códigos sociales y esas pequeñas rarezas que hoy se
+      miran con nostalgia y muchas risas. ¿Todavía no conoces a Vicent? ¿Te
+      acuerdas de cómo se vivía sin redes sociales? Este espectáculo te lo
+      recuerda todo… y mejor. Con su estilo cercano y su gran capacidad para
+      conectar con el público, David saca a escena algunos de sus mejores
+      textos,...Leer más', 'others': {}, 'source': 'TodasLasEntradas',
+      'exec_time': '20260203T161612', 'session': '2026_02_03_15_59_Martes',
+      'image':
+      'https://eolstage.blob.core.windows.net/eol/475152%2F8c2898-WEB-2026-05-31
+      ---EL-RARO-DE-LOS-90.jpg', 'url':
+      'https://www.todaslasentradas.com/par-public/rest/evento/id/7376873'}
+      -------------
+      8 / 11
+      Getting content
+      {'id': '5086cc17', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'DREAMING BUBBLES', 'id_venue': 'DgpfFbPt',
+      'venue': 'Teatro Cervantes Almería ', 'std_venue': 'Teatro Cervantes',
+      'start_date': '2026-03-15', 'start_time': '18:00:00', 'end_date':
+      '2026-03-15', 'end_time': '__NOT_DEFINIED__', 'description': 'Dreaming
+      Bubbles es un espectáculo visual y sensorial que invita a soñar en
+      familia, sumergiendo al público en un universo mágico lleno de
+      emociones, risas y asombro. Un viaje único al efímero y fascinante mundo
+      de las burbujas, donde cada instante es tan bello como irrepetible. De la
+      mano de Whitedream, el Mago de las Pompas de Jabón y Récord Guinness, la
+      ilusión cobra vida en escena a través de impresionantes creaciones que
+      despiertan la imaginación y el asombro de pequeños y mayores. Un
+      espectáculo que nos recuerda que, incluso en la fragilidad de una
+      burbuja, existe una fuerza capaz de mantener vivos los sueños. Dreaming
+      Bubbles es una experiencia poética y emocionante que nos invita a creer
+      en la magia, a...Leer más', 'others': {}, 'source': 'TodasLasEntradas',
+      'exec_time': '20260203T161612', 'session': '2026_02_03_15_59_Martes',
+      'image':
+      'https://eolstage.blob.core.windows.net/eol/475152%2F2c8443-WEB-2026-03-15
+      ---Dreaming-Bubbles.jpg', 'url':
+      'https://www.todaslasentradas.com/par-public/rest/evento/id/7388932'}
+      -------------
+      9 / 11
+      Getting content
+      {'id': 'eb8e105a', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': '20.000 LEGUAS DE VIAJE SUBMARINO',
+      'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes Almería ',
+      'std_venue': 'Teatro Cervantes', 'start_date': '2026-02-17', 'start_time':
+      '18:30:00', 'end_date': '2026-02-17', 'end_time': '__NOT_DEFINIED__',
+      'description': 'Una aventura submarina llena de imaginación que invita a
+      soñar y dejarse llevar por la fantasía. Un grupo de jóvenes
+      exploradores se embarca a bordo del mítico Nautilus, guiados por el
+      enigmático Capitán Nemo, para vivir un viaje extraordinario por las
+      profundidades del océano. A lo largo de su travesía, descubrirán
+      criaturas sorprendentes, paisajes marinos mágicos y misterios ocultos que
+      se esconden bajo el mar, enfrentándose a situaciones tan emocionantes
+      como divertidas. Cada escena transporta al público a un mundo fascinante
+      donde la curiosidad y el espíritu de aventura son los verdaderos
+      protagonistas. Una obra llena de humor, fantasía y emoción, pensada para
+      disfrutar en familia y dejarse sorprender por una historia que despierta
+      la imaginación de pequeños y mayores.', 'others': {}, 'source':
+      'TodasLasEntradas', 'exec_time': '20260203T161612', 'session':
+      '2026_02_03_15_59_Martes', 'image':
+      'https://eolstage.blob.core.windows.net/eol/475152%2Ff89580-WEB-2026-02-17
+      ---20.000-Leguas-de-vieje-submarino.jpg', 'url':
+      'https://www.todaslasentradas.com/par-public/rest/evento/id/7387285'}
+      -------------
+      10 / 11
+      Getting content
+      {'id': 'aab8724f', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'PERDIDO EN LOS 80 - MENUDA MOVIDA',
+      'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes Almería ',
+      'std_venue': 'Teatro Cervantes', 'start_date': '2026-03-01', 'start_time':
+      '18:00:00', 'end_date': '2026-03-01', 'end_time': '__NOT_DEFINIED__',
+      'description': 'Los 80 no fueron una década, fueron una forma de vida.
+      Una época donde la música lo era todo, las noches se alargaban sin
+      WhatsApp y la pandilla de amigos era sagrada. Perdido en los 80 es un
+      viaje desternillante a aquellos años en los que sobrevivíamos sin
+      Google, los bares eran nuestro Instagram y el mayor reto tecnológico era
+      programar el vídeo VHS sin que se comiera la cinta. Diego del Notario nos
+      sumerge en las historias más míticas de la época: las batallitas de la
+      mili, los ligues en la pista de baile con coreografías improvisadas, los
+      colegas con los que compartíamos todo, y los pesados que siempre tenían
+      la última palabra. Porque si algo teníamos claro en los...Leer más',
+      'others': {}, 'source': 'TodasLasEntradas', 'exec_time':
+      '20260203T161612', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://eolstage.blob.core.windows.net/eol/475152%2F65ae2b-WEB-2026-03-01
+      ---Perdido-en-los-80.jpg', 'url':
+      'https://www.todaslasentradas.com/par-public/rest/evento/id/7376673'}
+      -------------
+      ****************************
+      Saving 11 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203_1
+      616_TodasLasEntradas.json
+      Saving 11 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+      ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+      selenium
+
+Result: Succeeded
+
+Launching scraper: RedBibliotecas
+Succeeded - 2026-02-03T16:16:56Z
+
+dag: FisgonTaskSelenium (40.0s)
+│
+└─tarea_1 (40.0s) [succeeded]
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=RedBibliotecas
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019c244a-ef96-7aed-a2a3-e014d886fb5c
+      Running for Almeria: RedBibliotecas
+      RedBibliotecas
+      RUNNING SESSION =  2026_02_03_15_59_Martes
+      START
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      page=1
+      Getting content
+      page=2
+      Getting content
+      page=3
+      Getting content
+      *** SCRAPED 0 URLS WITH EVENTS **
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+      ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+      selenium
+
+Result: Succeeded
+
+Launching scraper: SalaEmma
+Succeeded - 2026-02-03T16:17:36Z
+
+dag: FisgonTaskSelenium (46.0s)
+│
+└─tarea_1 (46.0s) [succeeded]
+  └─stdout: ... (17 more lines)
+      --------------------
+      {'id': '36790c8b', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'ALEX SALABERRI 100% RISAS', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-02-07', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 7 de Febrero, 2026 8:00 PM 14.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260203T161736', 'session':
+      '2026_02_03_15_59_Martes', 'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'a8c62fc9', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'UNA DE IMPRO', 'id_venue': '7qHRF9LM',
+      'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música &
+      Artes', 'start_date': '2026-02-26', 'start_time': '21:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Jueves, 26
+      de Febrero, 2026 9:00 PM 10.00 € Anticipada: 8.00 € hasta el
+      Miércoles, 4 de Febrero, 2026', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260203T161736', 'session': '2026_02_03_15_59_Martes',
+      'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '3c27e323', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': '¡COMEDIA! “MALAS Y MALDECÍAS TOCATA Y
+      FUGA”', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala
+      Escuela Municipal de Música & Artes', 'start_date': '2026-03-07',
+      'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time':
+      '__NOT_FOUND__', 'description': 'Sábado, 7 de Marzo, 2026 8:00 PM 12.00
+      €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260203T161736',
+      'session': '2026_02_03_15_59_Martes', 'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '1db6aee1', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'EDÉN SERRANO el show', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-03-06', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Viernes, 6 de Marzo, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260203T161736', 'session':
+      '2026_02_03_15_59_Martes', 'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'd44b6790', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': ' Kikín Fernández y Fernando Labordeta ',
+      'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela
+      Municipal de Música & Artes', 'start_date': '2026-05-16', 'start_time':
+      '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+      'description': 'Sábado, 16 de Mayo, 2026 8:00 PM 12.00 €', 'others':
+      {}, 'source': 'SalaEmma', 'exec_time': '20260203T161736', 'session':
+      '2026_02_03_15_59_Martes', 'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '395e1b9e', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'PEPE EL CAJA', 'id_venue': '7qHRF9LM',
+      'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música &
+      Artes', 'start_date': '2026-05-23', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 23
+      de Mayo, 2026 8:00 PM 15.00 €', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260203T161736', 'session': '2026_02_03_15_59_Martes',
+      'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '8430ff81', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'VICTOR CASTIGAO DESCONTROLAO', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-04-18', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 18 de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260203T161736', 'session':
+      '2026_02_03_15_59_Martes', 'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'e4baa17f', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'MANOLO LERA', 'id_venue': '7qHRF9LM',
+      'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música &
+      Artes', 'start_date': '2026-04-11', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 11
+      de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260203T161736', 'session': '2026_02_03_15_59_Martes',
+      'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'e6bb9a5a', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'CHRISTIAN GARCIA (10 AÑOS DANDO GUERRA)',
+      'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela
+      Municipal de Música & Artes', 'start_date': '2026-03-14', 'start_time':
+      '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+      'description': 'Sábado, 14 de Marzo, 2026 8:00 PM 15.00 €', 'others':
+      {}, 'source': 'SalaEmma', 'exec_time': '20260203T161736', 'session':
+      '2026_02_03_15_59_Martes', 'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'b543f102', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'MELOCOTÓN EN ALMÍBAR', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-05-09', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 9 de Mayo, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260203T161736', 'session':
+      '2026_02_03_15_59_Martes', 'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'a6d89f15', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'HUMOR DE CASADOS (MARIANO YPUNTO Y LA
+      NENA)', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala
+      Escuela Municipal de Música & Artes', 'start_date': '2026-06-13',
+      'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time':
+      '__NOT_FOUND__', 'description': 'Sábado, 13 de Junio, 2026 8:00 PM 15.00
+      €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260203T161736',
+      'session': '2026_02_03_15_59_Martes', 'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '911bcc29', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': '¡¡COMEDIA!! ‘MALAS Y MALDECÍAS’',
+      'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela
+      Municipal de Música & Artes', 'start_date': '2026-02-14', 'start_time':
+      '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+      'description': 'Sábado, 14 de Febrero, 2026 8:00 PM 12.00 €', 'others':
+      {}, 'source': 'SalaEmma', 'exec_time': '20260203T161736', 'session':
+      '2026_02_03_15_59_Martes', 'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '249edfa5', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': '¡CORTEN! UNA COMEDIA DE CINE',
+      'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela
+      Municipal de Música & Artes', 'start_date': '2026-04-25', 'start_time':
+      '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+      'description': 'Sábado, 25 de Abril, 2026 8:00 PM 12.00 €', 'others':
+      {}, 'source': 'SalaEmma', 'exec_time': '20260203T161736', 'session':
+      '2026_02_03_15_59_Martes', 'image': '__NOT_FOUND__', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      Checking unique event dict.
+      Reading /home/ubuntu/data_storage/Almeria/00_master/master_events.json...
+      *******
+      []
+      ('ALEX SALABERRI 100% RISAS', 'Sala EMMA', '2026-02-07', '20:00:00')
+      ('UNA DE IMPRO', 'Sala EMMA', '2026-02-26', '21:00:00')
+      ('¡COMEDIA! “MALAS Y MALDECÍAS TOCATA Y FUGA”', 'Sala EMMA',
+      '2026-03-07', '20:00:00')
+      ('EDÉN SERRANO el show', 'Sala EMMA', '2026-03-06', '20:00:00')
+      (' Kikín Fernández y Fernando Labordeta ', 'Sala EMMA', '2026-05-16',
+      '20:00:00')
+      ('PEPE EL CAJA', 'Sala EMMA', '2026-05-23', '20:00:00')
+      ('VICTOR CASTIGAO DESCONTROLAO', 'Sala EMMA', '2026-04-18', '20:00:00')
+      ('MANOLO LERA', 'Sala EMMA', '2026-04-11', '20:00:00')
+      ('CHRISTIAN GARCIA (10 AÑOS DANDO GUERRA)', 'Sala EMMA', '2026-03-14',
+      '20:00:00')
+      ('MELOCOTÓN EN ALMÍBAR', 'Sala EMMA', '2026-05-09', '20:00:00')
+      ('HUMOR DE CASADOS (MARIANO YPUNTO Y LA NENA)', 'Sala EMMA', '2026-06-13',
+      '20:00:00')
+      ('¡¡COMEDIA!! ‘MALAS Y MALDECÍAS’', 'Sala EMMA', '2026-02-14',
+      '20:00:00')
+      ('¡CORTEN! UNA COMEDIA DE CINE', 'Sala EMMA', '2026-04-25', '20:00:00')
+      ****************************
+      Saving 13 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203_1
+      617_SalaEmma.json
+      Saving 13 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+      ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+      selenium
+
+Result: Succeeded
+
+Launching scraper: Giglon
