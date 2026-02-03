@@ -1,1 +1,465 @@
 Launching scraper: AlmeriaTurismo
+Failed - 2026-02-03T09:29:46Z
+
+dag: FisgonTaskSelenium (53.0s)
+│
+└─tarea_1 (53.0s) [failed]
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   SCRAPER=AlmeriaTurismo
+  │   DAG_RUN_URL=/dags/FisgonTaskSelenium?dagRunId=019c22d6-27bf-783e-b731-7e
+  │   75ba141e4d
+  │   Running for Almeria: AlmeriaTurismo
+  │   AlmeriaTurismo
+  │   RUNNING SESSION =  2026_02_02_15_32_Lunes
+  │   Starting WebDriver...
+  │   http://localhost:4444/wd/hub
+  │   sleeping 10
+  │   month = 2 --------------------------
+  │   Getting content
+  │   month = 3 --------------------------
+  │   clicking
+  │   sleeping 3
+  │   ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+  │   selenium
+  ├─stderr:
+  │   Traceback (most recent call last):
+  │   File "/app/run.py", line 121, in <module>
+  │   run_one(events_extractors, TARGET_SCRAPER, session_manager, TARGET_CITY)
+  │   File "/app/run.py", line 18, in run_one
+  │   ev.run()
+  │   File "/app/scraper/extractors/main_pages/abc_main_pages_extractor.py",
+  │   line 17, in run
+  │   result = self.iterate_pages_clean_events()
+  │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  │   File "/app/scraper/extractors/main_pages/almeria_turismo.py", line 31,
+  │   in iterate_pages_clean_events
+  │   f.click_on(self.click_month_css.format(month))
+  │   File "/app/scraper/webdriver_controller/fisgon.py", line 150, in
+  │   click_on
+  │   button = self.driver.find_element(self.selector, css_selector)
+  │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  │   File
+  │   "/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdr
+  │   iver.py", line 802, in find_element
+  │   return self.execute(Command.FIND_ELEMENT, {"using": by, "value":
+  │   value})["value"]
+  │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  │   File
+  │   "/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdr
+  │   iver.py", line 432, in execute
+  │   self.error_handler.check_response(response)
+  │   File
+  │   "/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/error
+  │   handler.py", line 232, in check_response
+  │   raise exception_class(message, screen, stacktrace)
+  │   selenium.common.exceptions.NoSuchElementException: Message: no such
+  │   element: Unable to locate element: {"method":"css
+  │   selector","selector":"div.legend > a:nth-child(3)"}
+  │   (Session info: chrome=143.0.7499.169); For documentation on this error,
+  │   please visit:
+  │   https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#
+  │   nosuchelementexception
+  │   Stacktrace:
+  │   #0 0x5898b7d4761a <unknown>
+  │   #1 0x5898b77c420b <unknown>
+  │   #2 0x5898b781590f <unknown>
+  │   #3 0x5898b7815b51 <unknown>
+  │   #4 0x5898b7863d84 <unknown>
+  │   #5 0x5898b786120e <unknown>
+  │   #6 0x5898b7808232 <unknown>
+  │   #7 0x5898b7808ee1 <unknown>
+  │   #8 0x5898b7d103f9 <unknown>
+  │   #9 0x5898b7d1334d <unknown>
+  │   #10 0x5898b7cf9122 <unknown>
+  │   #11 0x5898b7d13f2b <unknown>
+  │   #12 0x5898b7cdfc30 <unknown>
+  │   #13 0x5898b7d34d78 <unknown>
+  │   #14 0x5898b7d34f4c <unknown>
+  │   #15 0x5898b7d46973 <unknown>
+  │   #16 0x767b14eb1aa4 <unknown>
+  │   #17 0x767b14f3ea64 __clone
+  │
+  └─error: failed to execute step "tarea_1": exit status 1
+
+Result: Failed
+
+Launching scraper: AlmeriaCiudad
+Succeeded - 2026-02-03T09:30:39Z
+
+dag: FisgonTaskSelenium (2m 27s)
+│
+└─tarea_1 (2m 27s) [succeeded]
+  ├─stdout: ... (74 more lines)
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '8503e7eb', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'ORQUESTA FILARMÓNICA DE MÁLAGA',
+  │   'id_venue': '27qNP7DH', 'venue': 'Auditorio Municipal Maestro Padilla',
+  │   'std_venue': 'Auditorio Municipal Maestro Padilla', 'start_date':
+  │   '2026-03-14', 'start_time': '20:30:00', 'end_date': '2026-03-14',
+  │   'end_time': '22:00:00', 'description': 'ORQUESTA FILARMÓNICA DE
+  │   MÁLAGA. #ALLEGRO. ALLEGRO. es una propuesta diferente y divertida
+  │   dentro del formato de los conciertos familiares y pedagógicos, el
+  │   objetivo, acercar la música clásica a todo tipo de público a través
+  │   de un repertorio popular, la risa y el juego escénico como guión del
+  │   concierto. ALLEGRO, como su propia etimología musical indica, pretende
+  │   contagiar al público con un repertorio positivo de alto ritmo escénico
+  │   y presentado por un excéntrico maestro de ceremonias que nos provocará
+  │   la risa con su torpe pretensión, rompiendo cariñosamente los
+  │   protocolos del concierto e involucrando a la orquesta y público en
+  │   situaciones cómicas e imprevisibles.. Repertorio: Obertura Guillermo
+  │   Tell - G. Rossini. The Entertainer - S. Joplin. Marcha Funebre - Chopin.
+  │   La primavera - A. Vivaldi. West Side History - L. Bernstein. Danubio
+  │   Azul - J. Strauss. The Empire Strikes Back - J. Williams. Can Can - J.
+  │   Offenbach\u200b', 'others': {'organizer': '__NOT_FOUND__', 'price':
+  │   'NIVEL A: 15 EUROS | NIVEL B: 12 EUROS', 'category': 'Orquesta',
+  │   'audience_age': '__NOT_FOUND__'}, 'source': 'AlmeriaCiudad',
+  │   'exec_time': '20260203T093039', 'session': '2026_02_02_15_32_Lunes',
+  │   'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/andalu
+  │   cia-sinfonica_2026-03-14.jpg?itok=Jx043W4i', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/orquesta-filarmonica-de-malaga
+  │   -0'}
+  │   10 / 18
+  │   Getting
+  │   https://almeriaciudad.es//cultura/evento/segunda-semifinal-de-carnaval-d
+  │   e-almeria
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '041705eb', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'SEGUNDA SEMIFINAL DE CARNAVAL DE
+  │   ALMERÍA', 'id_venue': '27qNP7DH', 'venue': 'Auditorio Municipal Maestro
+  │   Padilla', 'std_venue': 'Auditorio Municipal Maestro Padilla',
+  │   'start_date': '2026-02-08', 'start_time': '17:30:00', 'end_date':
+  │   '2026-02-08', 'end_time': '19:30:00', 'description': 'SEGUNDA SEMIFINAL
+  │   - CERTAMEN DE ADULTOS. CARNAVAL DE ALMERÍA 2026. Agrupaciones:
+  │   -CHIRIGOTA. "LOS DALÍ DE MÁS PA ALLÁ DE SUFLÍ". -COMPARSA. "LA
+  │   PARTIDA". -CHIRIGOTA. "LOS AHUMAOS". -COMPARSA. "LOS COLORAOS".
+  │   -CHIRIGOTA. "LOS HOMBRES DE PACO CANDELA". -CHIRIGOTA. "LOS COLEGAS DEL
+  │   BARRIO"', 'others': {'organizer': '__NOT_FOUND__', 'price':
+  │   'PRECIO\xa0DE LAS ENTRADAS:\xa05 EUROS', 'category': 'Carnaval',
+  │   'audience_age': '__NOT_FOUND__'}, 'source': 'AlmeriaCiudad',
+  │   'exec_time': '20260203T093039', 'session': '2026_02_02_15_32_Lunes',
+  │   'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/a03f18
+  │   ab-9ead-428d-9936-83f3065885e0.jpeg?itok=rDMhhbkG', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/segunda-semifinal-de-carnaval-
+  │   de-almeria'}
+  │   11 / 18
+  │   Getting https://almeriaciudad.es//cultura/evento/pleita
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'ca661674', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'PLEITA', 'id_venue': 'tQfq78jF',
+  │   'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo', 'start_date':
+  │   '2026-05-22', 'start_time': '20:30:00', 'end_date': '2026-05-22',
+  │   'end_time': '22:00:00', 'description': 'Pleita, es un viaje escénico
+  │   que une la fuerza del flamenco con la memoria viva del folklore, la
+  │   tradición artesana con la expresión contemporánea. El esparto, como
+  │   símbolo y testigo de una cultura tejida a mano, paso a paso, con sudor,
+  │   canto y resistencia, es el vinculo con la tierra, y se convierte aquí
+  │   en metáfora de las relaciones humanas y de la memoria compartida de un
+  │   pueblo para rendir homenaje a la memoria de Níjar. Es un canto a la
+  │   tierra seca que florece en esfuerzo, al arte que nace de un pueblo, a la
+  │   materia que se convierte en identidad.', 'others': {'organizer': 'Teatro
+  │   Apolo', 'price': 'ANTICIPADA: 12 EUROS | GENERAL: 15 EUROS | ABONO: 50
+  │   EUROS', 'category': 'Danza', 'audience_age': 'Todas las edades'},
+  │   'source': 'AlmeriaCiudad', 'exec_time': '20260203T093039', 'session':
+  │   '2026_02_02_15_32_Lunes', 'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/pleita
+  │   _tld_a4_26.jpg?itok=wfgkP3_P', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/pleita'}
+  │   12 / 18
+  │   Getting
+  │   https://almeriaciudad.es//cultura/evento/un-patetico-amor-desconocido
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'b6151ec4', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'UN PATÉTICO AMOR DESCONOCIDO',
+  │   'id_venue': 'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue': 'Teatro
+  │   Apolo', 'start_date': '2026-06-12', 'start_time': '20:30:00',
+  │   'end_date': '2026-06-12', 'end_time': '22:00:00', 'description': 'En un
+  │   escenario vibrante donde convergen danza contemporánea, teatro,
+  │   acrobacias y danza española, tres personajes exploran un amor lleno de
+  │   contradicciones y situaciones ridiculas, pero también conmovedoras. A
+  │   través de una trama que combina la música en directo con toques de
+  │   dramatismo y comedia, la obra invita al público a reflexionar sobre la
+  │   naturaleza del amor y la identidad.', 'others': {'organizer': 'Teatro
+  │   Apolo', 'price': 'ANTICIPADA: 12 EUROS | GENERAL: 15 EUROS | ABONO: 50
+  │   EUROS', 'category': 'Danza', 'audience_age': 'Todas las edades'},
+  │   'source': 'AlmeriaCiudad', 'exec_time': '20260203T093039', 'session':
+  │   '2026_02_02_15_32_Lunes', 'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/ridicu
+  │   la_tld_a4_26.jpg?itok=_ZWSlBhw', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/un-patetico-amor-desconocido'}
+  │   13 / 18
+  │   Getting https://almeriaciudad.es//cultura/evento/next-my-skin
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '83f2b102', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'NEXT TO MY SKIN', 'id_venue':
+  │   'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo',
+  │   'start_date': '2026-04-17', 'start_time': '20:30:00', 'end_date':
+  │   '2026-04-17', 'end_time': '22:00:00', 'description': 'Bajo los latidos
+  │   de nuestros cuerpos, nuestras pieles se fusionan para convertirse en una
+  │   sola. Cada abrazo, cada gesto, transforma, muda, rasga y regenera la
+  │   corteza del otro dejándose caer, hasta que las cicatrices más
+  │   profundas acarician nuestro contacto.', 'others': {'organizer': 'Teatro
+  │   Apolo', 'price': 'ANTICIPADA: 12 EUROS | GENERAL: 15 EUROS | ABONO: 50
+  │   EUROS', 'category': 'Danza', 'audience_age': 'Todas las edades'},
+  │   'source': 'AlmeriaCiudad', 'exec_time': '20260203T093039', 'session':
+  │   '2026_02_02_15_32_Lunes', 'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/lamont
+  │   o_tld_a4_26.jpg?itok=fhn64Yz8', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/next-my-skin'}
+  │   14 / 18
+  │   Getting
+  │   https://almeriaciudad.es//cultura/evento/primera-semifinal-de-carnaval-d
+  │   e-almeria
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '6e70bfaf', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'PRIMERA SEMIFINAL DE CARNAVAL DE
+  │   ALMERÍA', 'id_venue': '27qNP7DH', 'venue': 'Auditorio Municipal Maestro
+  │   Padilla', 'std_venue': 'Auditorio Municipal Maestro Padilla',
+  │   'start_date': '2026-02-07', 'start_time': '19:00:00', 'end_date':
+  │   '2026-02-07', 'end_time': '21:00:00', 'description': 'PRIMERA SEMIFINAL
+  │   - CERTAMEN DE ADULTOS. CARNAVAL DE ALMERÍA 2026. Agrupaciones:
+  │   -CHIRIGOTA. "LOS QUE TE DAN EL ÚLTIMO VIAJE". -COMPARSA. "EL NACIMIENTO
+  │   DE LA TRAGEDIA". -CHIRIGOTA. "QUÉ PESAITA ERES HIJA MÍA". -PARODIA.
+  │   "EL CUARTETO DEL JOSÉ: SÉ LO QUE HICÍSTEIS EL ÚLTIMO VERANO".
+  │   -CHIRIGOTA. "AGRUPACIÓN MUSICAL DEL REDOBLE PERPÉTUO". -COMPARSA. "LOS
+  │   REBELDES". -CHIRIGOTA. "LAS MALAS INFLUENCIAS"', 'others': {'organizer':
+  │   '__NOT_FOUND__', 'price': 'PRECIO\xa0DE LAS ENTRADAS:\xa05 EUROS',
+  │   'category': 'Carnaval', 'audience_age': '__NOT_FOUND__'}, 'source':
+  │   'AlmeriaCiudad', 'exec_time': '20260203T093039', 'session':
+  │   '2026_02_02_15_32_Lunes', 'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/909c0c
+  │   ab-006c-4ab6-93f3-5b97e9cc2bf0.jpeg?itok=kbjmBPyR', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/primera-semifinal-de-carnaval-
+  │   de-almeria'}
+  │   15 / 18
+  │   Getting https://almeriaciudad.es//cultura/evento/rocio-segura
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '71df3b1f', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'ROCIO SEGURA', 'id_venue': 'tQfq78jF',
+  │   'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo', 'start_date':
+  │   '2026-02-07', 'start_time': '21:00:00', 'end_date': '2026-02-07',
+  │   'end_time': '22:30:00', 'description': 'MIS 30 AÑOS DE CANTE. 30 años
+  │   de cante. 30 años de escenarios. 30 años de Amor, Pasión y compromiso
+  │   con el flamenco y el arte, Se dice pronto pero son tantas y tantas
+  │   vivencias, de compartir, de viajes y escenarios... Guitarrista: David de
+  │   la Fragua. Percusionista: Johny Cortés. Palmeros: Juan Andrés Heredia,
+  │   Tony Santiago y Antonio Pescaito', 'others': {'organizer':
+  │   '__NOT_FOUND__', 'price': 'PRECIO\xa0DE LAS ENTRADAS:\xa010 EUROS',
+  │   'category': 'Flamenco', 'audience_age': '__NOT_FOUND__'}, 'source':
+  │   'AlmeriaCiudad', 'exec_time': '20260203T093039', 'session':
+  │   '2026_02_02_15_32_Lunes', 'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/whatsa
+  │   pp-image-2026-01-09-at-09.23.17.jpeg?itok=rPKHs4oJ', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/rocio-segura'}
+  │   16 / 18
+  │   Getting https://almeriaciudad.es//cultura/evento/baile-de-bestias
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'b306bbcd', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'BAILE DE BESTIAS', 'id_venue':
+  │   'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo',
+  │   'start_date': '2026-03-13', 'start_time': '20:30:00', 'end_date':
+  │   '2026-03-13', 'end_time': '22:00:00', 'description': 'Baile de Bestias,
+  │   es la nueva propuesta de Jesús Carmona. Un espectáculo que nace de la
+  │   necesidad de dar un paso más hacia la verdad más absoluta del artista.
+  │   La vuelta hacía el movimiento primario y su aceptación, para después
+  │   alejarse de él y mirarlo con perspectiva tras la complejidad adquirida
+  │   con la experiencia de los años. Para este trabajo camina junto al
+  │   multi-instrumentista Manu Masaedo, quien creará espacios sonoros y
+  │   lugares musicales con los que viajar a un mundo onírico. Un bosque de
+  │   sentimientos donde dos individuos dialogan y desafían a sus bestias
+  │   interiores para terminar convirtiéndolas en movimiento, emoción y
+  │   belleza.', 'others': {'organizer': 'Teatro Apolo', 'price': 'ANTICIPADA:
+  │   12 EUROS | GENERAL: 15 EUROS | ABONO: 50 EUROS', 'category':
+  │   '__NOT_FOUND__', 'audience_age': 'Todas las edades'}, 'source':
+  │   'AlmeriaCiudad', 'exec_time': '20260203T093039', 'session':
+  │   '2026_02_02_15_32_Lunes', 'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/jesus_
+  │   tld_a4_26.jpg?itok=EYFDX_c0', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/baile-de-bestias'}
+  │   17 / 18
+  │   Getting https://almeriaciudad.es//cultura/evento/paco-candela
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '85ffc9d1', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'PACO CANDELA', 'id_venue': '27qNP7DH',
+  │   'venue': 'Auditorio Municipal Maestro Padilla', 'std_venue': 'Auditorio
+  │   Municipal Maestro Padilla', 'start_date': '2026-03-28', 'start_time':
+  │   '21:00:00', 'end_date': '2026-03-28', 'end_time': '22:30:00',
+  │   'description': 'Paco Candela celebra por todo lo alto. 30 años de
+  │   carrera con una nueva gira que será la más importante y emocionante
+  │   para el artista. , una serie de conciertos únicos rodeado por un gran
+  │   elenco de músicos que hacen de cada noche una nueva fiesta
+  │   interpretando sus mejores temas como sólo en directo se puede hacer.
+  │   “30” es un nuevo proyecto muy especial para Paco Candela y sus
+  │   “candelistas” con una serie de grandes acontecimientos que se irán
+  │   anunciando, entre ellos y además de esta gran gira un. nuevo disco del
+  │   mismo nombre “30”. , un viaje desde las raíces y comienzos del
+  │   artista hasta su faceta más actual. Entre sus nuevos temas podremos
+  │   esperar sevillanas o fandangos que buscan transportarnos a sus inicios
+  │   como el primer single. “Pa que yo te perdonara”. grabado en la
+  │   “Gruta de las Maravillas”, en Aracena (Huelva), únicamente
+  │   acompañado de la guitarra de Domi Serralbo, un lugar espectacular entre
+  │   varios de los elegidos para la grabación de “30”. Además, en el
+  │   disco inmortalizará sus populares “popurrís”, exclusivos de los
+  │   directos donde reinterpreta sus mejores canciones de una manera única y
+  │   muy especial y que ahora graba para el disfrute de todos sus fans; hasta
+  │   temas inéditos como baladas, tangos o rumbas, que experimentan nuevos
+  │   ritmos y nos sorprenderán con el Paco más actual que se reinventa año
+  │   tras año. Una nueva etapa y una nueva gira llena de sorpresas, un viaje
+  │   por la música flamenca, sevillanas con mensajes comprometidos y
+  │   canciones con estilos variados que harán emocionarnos. Pura emoción y
+  │   puro sentimiento, es Paco Candela. Después de 16 discos de estudio,
+  │   nominado a los Latin Grammy y Premios Odeón, premiado como Andaluz del
+  │   Año o Referente para la Juventud en el Parlamento de Andalucía, Paco
+  │   Candela ha logrado ser. una de las voces referentes a nivel nacional e
+  │   internacional de música flamenca y popular. . Considerado por muchos.
+  │   “el cantaor del pueblo”. presenta esta gira donde se celebra 30
+  │   años de carrera con sus “candelistas”, como así se autodenominan
+  │   sus fans, una multitud que crece cada día, en buena medida tras acudir
+  │   a sus conciertos y descubrir su carisma, cercanía y como no su gran
+  │   voz. Acompañado de un excelente elenco de músicos y técnicos que
+  │   hacen de cada actuación una noche que el público no puede olvidar,
+  │   pura emoción y puro sentimiento, es Paco Candela.', 'others':
+  │   {'organizer': '__NOT_FOUND__', 'price': 'NIVEL A: 38 EUROS | NIVEL B: 35
+  │   EUROS', 'category': 'Flamenco', 'audience_age': '__NOT_FOUND__'},
+  │   'source': 'AlmeriaCiudad', 'exec_time': '20260203T093039', 'session':
+  │   '2026_02_02_15_32_Lunes', 'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/post_p
+  │   acocandela.png?itok=eNbnDtCP', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/paco-candela'}
+  │   ****************************
+  │   Saving 18 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_02_02_15_32_Lunes/0_raw/20260203_
+  │   0930_AlmeriaCiudad.json
+  │   Saving 18 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  │   ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+  │   selenium
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
