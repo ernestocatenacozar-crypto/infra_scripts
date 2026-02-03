@@ -1,0 +1,17 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=1,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=1,
+            SESSION=None,
+            IMAGES=0,
+
+        SCRAPER=
+        DAG_RUN_URL=/dags/FisgonSession?dagRunId=019c2302-b8f6-77f9-baa7-f23d504b8dff
+
+Executing final task with session: 2026_02_03_10_15_Martes
+Reading /home/ubuntu/data_storage/Almeria/2026_02_03_10_15_Martes/0_raw/20260203_1016_SalaEmma.json...
+Saving 13 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_02_03_10_15_Martes/0_raw/Merged.json
