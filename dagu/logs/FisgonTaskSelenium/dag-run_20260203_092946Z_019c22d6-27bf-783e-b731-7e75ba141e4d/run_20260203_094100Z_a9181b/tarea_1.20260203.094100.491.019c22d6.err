@@ -1,0 +1,3 @@
+bash: /root/.bash_profile: Permission denied
+WARNING: Error loading config file: open /root/.docker/config.json: permission denied
+bash: line 4: /root/.bash_logout: Permission denied

@@ -42,3 +42,4 @@ Stacktrace:
 #16 0x7efe5c267aa4 <unknown>
 #17 0x7efe5c2f4a64 __clone
 
+bash: line 4: /root/.bash_logout: Permission denied
