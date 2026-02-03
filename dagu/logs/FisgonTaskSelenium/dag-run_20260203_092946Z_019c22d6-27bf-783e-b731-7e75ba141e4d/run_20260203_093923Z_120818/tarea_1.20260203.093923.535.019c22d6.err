@@ -23,23 +23,22 @@ Traceback (most recent call last):
 selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.legend > a:nth-child(3)"}
   (Session info: chrome=143.0.7499.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Stacktrace:
-#0 0x6235b5b2161a <unknown>
-#1 0x6235b559e20b <unknown>
-#2 0x6235b55ef90f <unknown>
-#3 0x6235b55efb51 <unknown>
-#4 0x6235b563dd84 <unknown>
-#5 0x6235b563b20e <unknown>
-#6 0x6235b55e2232 <unknown>
-#7 0x6235b55e2ee1 <unknown>
-#8 0x6235b5aea3f9 <unknown>
-#9 0x6235b5aed34d <unknown>
-#10 0x6235b5ad3122 <unknown>
-#11 0x6235b5aedf2b <unknown>
-#12 0x6235b5ab9c30 <unknown>
-#13 0x6235b5b0ed78 <unknown>
-#14 0x6235b5b0ef4c <unknown>
-#15 0x6235b5b20973 <unknown>
-#16 0x7acb58e1caa4 <unknown>
-#17 0x7acb58ea9a64 __clone
+#0 0x569b50ef461a <unknown>
+#1 0x569b5097120b <unknown>
+#2 0x569b509c290f <unknown>
+#3 0x569b509c2b51 <unknown>
+#4 0x569b50a10d84 <unknown>
+#5 0x569b50a0e20e <unknown>
+#6 0x569b509b5232 <unknown>
+#7 0x569b509b5ee1 <unknown>
+#8 0x569b50ebd3f9 <unknown>
+#9 0x569b50ec034d <unknown>
+#10 0x569b50ea6122 <unknown>
+#11 0x569b50ec0f2b <unknown>
+#12 0x569b50e8cc30 <unknown>
+#13 0x569b50ee1d78 <unknown>
+#14 0x569b50ee1f4c <unknown>
+#15 0x569b50ef3973 <unknown>
+#16 0x7efe5c267aa4 <unknown>
+#17 0x7efe5c2f4a64 __clone
 
-bash: line 4: /root/.bash_logout: Permission denied
