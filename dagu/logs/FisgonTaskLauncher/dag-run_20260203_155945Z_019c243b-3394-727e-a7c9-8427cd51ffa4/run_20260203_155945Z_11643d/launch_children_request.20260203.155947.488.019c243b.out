@@ -155,3 +155,1397 @@ dag: FisgonTaskRequest (7.0s)
 Result: Succeeded
 
 Launching scraper: LaGuajira
+Succeeded - 2026-02-03T16:00:01Z
+
+dag: FisgonTaskRequest (1m 0s)
+│
+└─tarea_1 (1m 0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout: ... (34 more lines)
+  │   {'id': 'd4301582', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Taller Lindy hop con al Swing y al
+  │   cabo', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-06', 'start_time': '21:00:00',
+  │   'end_date': '2026-02-06', 'end_time': '22:00:00', 'description': 'Ven a
+  │   disfrutar con el taller de baile swing, característicos de los años
+  │   30, como Lindy Hop, Balboa o Shag. Déjate llevar al ritmo del Jazz más
+  │   auténtico y aprende unos pasos para ponerlo en práctica en tu baile
+  │   social con Al Swing y al Cabo.', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260203T160003', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/12/Taller-de-swi
+  │   ng.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-lindy-hop-con-al-swing-y-a
+  │   l-cabo/'}
+  │   Getting https://laguajiradealmeria.com/programacion/lista/página/2/
+  │   Sleep 16
+  │   --------------------
+  │   {'id': 'cba8fafc', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Clases de cante flamenco con Rocío
+  │   Zamora', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-10', 'start_time': '17:30:00',
+  │   'end_date': '2026-02-10', 'end_time': '19:30:00', 'description': '¿Te
+  │   interesa el cante flamenco y quieres desarrollarte como cantaor/a? Este
+  │   curso está pensado para todas las personas que quieran aprender desde
+  │   la raíz y explorar su voz en el universo del flamenco. ¿Qué se
+  │   trabaja en clase? Técnica vocal flamenca Aprenderás a conocer y cuidar
+  │   tu instrumento: la voz. Ejercicios para sacar el máximo ...', 'others':
+  │   {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260203T160003', 'session': '2026_02_03_15_59_Martes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/09/Clases-de-can
+  │   te-Rocio.jpg', 'url':
+  │   'https://laguajiradealmeria.com/evento/clases-de-cante-flamenco-con-roci
+  │   o-zamora/2026-02-10/'}
+  │   --------------------
+  │   {'id': '2d47646c', 'show': 1, 'in_city': '__NOT_FOUND__', 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Mery Gil & Paco Rivas #Nocheazul',
+  │   'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None,
+  │   'start_date': '2026-02-12', 'start_time': '22:00:00', 'end_date':
+  │   '2026-02-12', 'end_time': '23:30:00', 'description': 'Paco Rivas, nacido
+  │   en Almería en 1963, comenzó su formación musical en el Real
+  │   Conservatorio a los nueve años. Desde su adolescencia, destacó en
+  │   bandas locales y fundó el "Indal Jazz Quartet". Su versatilidad lo
+  │   llevó a explorar el jazz y el flamenco, colaborando con grandes nombres
+  │   como Tomatito y Enrique Morente. En los 80 ...', 'others': {'ticket':
+  │   'https://laguajiradealmeria.com/evento/mery-gil-paco-rivas-noche-azul/#t
+  │   ribe-tickets__tickets-form', 'price': '5,00€ – 10,00€',
+  │   'location': '__NOT_FOUND__'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260203T160003', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Paco-Rivas-Me
+  │   ry-Gil.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/mery-gil-paco-rivas-noche-azul/'}
+  │   --------------------
+  │   {'id': 'f0b03d49', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso de Teatro con Julio Béjar',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-09', 'start_time': '19:30:00',
+  │   'end_date': '2026-02-09', 'end_time': '21:30:00', 'description': 'De
+  │   noviembre de 2025 a junio de 2026, el dramaturgo y director Julio Béjar
+  │   impartirá en La Guajira un curso regular de creación escénica pensado
+  │   para quienes quieran explorar los distintos oficios del teatro y
+  │   desarrollar su propia pieza. Durante ocho meses, el grupo —de entre 10
+  │   y 20 participantes— recorrerá todos los aspectos del ...', 'others':
+  │   {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260203T160003', 'session': '2026_02_03_15_59_Martes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-02-09/'}
+  │   --------------------
+  │   {'id': '6b5e46da', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Derivas poéticas', 'id_venue':
+  │   'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La Guajira',
+  │   'start_date': '2026-02-13', 'start_time': '19:00:00', 'end_date':
+  │   '2026-02-13', 'end_time': '20:30:00', 'description': 'Nos hemos olvidado
+  │   del acto de recordar, en medio de esta fiesta de disfraces. Con la
+  │   excusa y las prisas en quitar o poner una nueva farsa, se nos ha
+  │   olvidado de nuevo quién es el actor que encarna. Solo me pregunto una
+  │   pequeña cosa, será que es solo un juego, ¿Y que tomamos en ...',
+  │   'others': {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__',
+  │   'location': 'La Guajira, C/ Cruces Bajas, 1, Almería, España'},
+  │   'source': 'LaGuajira', 'exec_time': '20260203T160003', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Derivas-poeti
+  │   cas-1.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/derivas-poeticas-4/'}
+  │   --------------------
+  │   {'id': '6964ecb7', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio de idiomas',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-13', 'start_time': '20:30:00',
+  │   'end_date': '2026-02-13', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260203T160003', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-02-13/'}
+  │   --------------------
+  │   {'id': '5cbbb1e4', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Taller de baile amartu-flow',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-13', 'start_time': '21:00:00',
+  │   'end_date': '2026-02-13', 'end_time': '22:00:00', 'description': 'Una
+  │   propuesta para soltar el cuerpo y dejar que el movimiento te encuentre.
+  │   Martina te guiará en una sesión de conexión, ritmo y libertad al
+  │   compás de la música electrónica. Si te da vergüenza bailar en
+  │   público este es tu taller. Ella es la hechicera que romperá el conjuro
+  │   de tu miedo.', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260203T160003',
+  │   'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Martina-Aartu
+  │   flowlab.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-baile-amartu-flow/'}
+  │   --------------------
+  │   {'id': 'e7d53023', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Hysteria Market', 'id_venue':
+  │   'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La Guajira',
+  │   'start_date': '2026-02-08', 'start_time': '12:00:00', 'end_date':
+  │   '2026-02-08', 'end_time': '18:00:00', 'description': 'Hysteria Market es
+  │   un evento que combina diferentes disciplinas: música, artesanía,
+  │   talleres, charlas... Nuestro objetivo es alejarnos de lo habitual para
+  │   adentrarnos en una programación algo más exclusiva y underground, que
+  │   mezcle temas sociales, culturales y artísticos. Queremos romper la
+  │   competitividad y lo individual. Nuestra motivación es crear una
+  │   comunidad artística y social, construir poco ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260203T160003', 'session': '2026_02_03_15_59_Martes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Hysteria-Mark
+  │   et.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/hysteria-market-2/'}
+  │   --------------------
+  │   {'id': 'e9729de7', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Jam neo soul con Las Funghis',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-13', 'start_time': '22:30:00',
+  │   'end_date': '2026-02-14', 'end_time': '02:00:00', 'description': 'Vuelve
+  │   la energia femenina que tanto nos gusta a La Guajira. Grace (Againts the
+  │   Machine) voz y guitarra, Corina trombón y teclados y Sara al bajo. Esta
+  │   banda de talentosas músicas se ha consolidado para mejorar la escena
+  │   local almeriense. Esperemos que podamos disfrutar por mucho tiempo de
+  │   ellas. Por el momento es la banda ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260203T160003', 'session': '2026_02_03_15_59_Martes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Setas-y-tetas
+  │   -jam-mujeres.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/jam-neo-soul-con-las-funghis/'}
+  │   --------------------
+  │   {'id': '53c4eb74', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Anabel Veloso', 'id_venue': 'NhNQFPQh',
+  │   'venue': 'La Guajira', 'std_venue': 'La Guajira', 'start_date':
+  │   '2026-02-11', 'start_time': '22:00:00', 'end_date': '2026-02-11',
+  │   'end_time': '23:30:00', 'description': 'Anabel Veloso es una bailaora y
+  │   creadora de flamenco de reconocido prestigio internacional. Es
+  │   licenciada en Educación Física y máster en Gestión Cultural. Formada
+  │   con los más grandes maestros del flamenco, ha desarrollado una carrera
+  │   de más de veinte años en compañías de primer nivel como la de María
+  │   Pagés y el Ballet Flamenco de ...', 'others': {'ticket':
+  │   'https://laguajiradealmeria.com/evento/anabel-veloso/#tribe-tickets__tic
+  │   kets-form', 'price': '6,00€ – 12,00€', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260203T160003', 'session': '2026_02_03_15_59_Martes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Anabel-Veloso
+  │   .png', 'url': 'https://laguajiradealmeria.com/evento/anabel-veloso/'}
+  │   --------------------
+  │   {'id': '651d9d68', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo de La Guajira con Julián
+  │   Sánchez', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue':
+  │   'La Guajira', 'start_date': '2026-02-10', 'start_time': '20:00:00',
+  │   'end_date': '2026-02-10', 'end_time': '21:30:00', 'description':
+  │   '¡Llega el Coro-Combo de La Guajira! Si te gusta cantar, tocar un
+  │   instrumento o simplemente compartir la música como experiencia
+  │   colectiva, este proyecto es para ti. El Coro-Combo de La Guajira nace
+  │   con la idea de crear un espacio artístico estable, intercultural e
+  │   intergeneracional, abierto a todas las personas que quieran sumarse. La
+  │   propuesta es ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260203T160003',
+  │   'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-02-10/'}
+  │   Getting https://laguajiradealmeria.com/programacion/lista/página/3/
+  │   Sleep 16
+  │   --------------------
+  │   {'id': 'bde7071a', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Taller de dancehall con María Lera',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-20', 'start_time': '21:00:00',
+  │   'end_date': '2026-02-20', 'end_time': '22:00:00', 'description': 'En
+  │   este taller, aprenderemos diferentes pasos de este baile, el estilo
+  │   característico de movimiento (groove) y un pequeño combo coreográfico
+  │   para que puedas disfrutar de este ritmo caribeño tan poderoso y
+  │   sensual. El Dancehall es un estilo de danza urbana nacido en Jamaica en
+  │   los años 80, que surgió junto con el género musical del ...',
+  │   'others': {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__',
+  │   'location': 'La Guajira, C/ Cruces Bajas, 1, Almería, España'},
+  │   'source': 'LaGuajira', 'exec_time': '20260203T160003', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Maria-Lera.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-dancehall-con-maria-ler
+  │   a/'}
+  │   --------------------
+  │   {'id': 'e10d3b66', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'La hora del vermú con Banana Moon',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-14', 'start_time': '13:00:00',
+  │   'end_date': '2026-02-14', 'end_time': '16:00:00', 'description': '¿Qué
+  │   es Banana Moon? Banana Moon es muchas cosas, pero en está ocasión, nos
+  │   estimulará la memoria con su piano. Haciendo versiones que seguro todo
+  │   el mundo recuerda.', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260203T160003',
+  │   'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Vermu-Banana-
+  │   Moon-1.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/la-hora-del-vermu-clasico-con-mar
+  │   -y-antonio/'}
+  │   --------------------
+  │   {'id': '00fdb3cb', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso de Teatro con Julio Béjar',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-16', 'start_time': '19:30:00',
+  │   'end_date': '2026-02-16', 'end_time': '21:30:00', 'description': 'De
+  │   noviembre de 2025 a junio de 2026, el dramaturgo y director Julio Béjar
+  │   impartirá en La Guajira un curso regular de creación escénica pensado
+  │   para quienes quieran explorar los distintos oficios del teatro y
+  │   desarrollar su propia pieza. Durante ocho meses, el grupo —de entre 10
+  │   y 20 participantes— recorrerá todos los aspectos del ...', 'others':
+  │   {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260203T160003', 'session': '2026_02_03_15_59_Martes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-02-16/'}
+  │   --------------------
+  │   {'id': '41116d1a', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Christina Pagés', 'id_venue':
+  │   'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La Guajira',
+  │   'start_date': '2026-02-18', 'start_time': '22:00:00', 'end_date':
+  │   '2026-02-18', 'end_time': '23:30:00', 'description': 'Christina Pagés
+  │   es una bailaora profesional sexitana que realizó sus estudios en el
+  │   Conservatorio Profesional de Granada en la especialidad de Flamenco, y
+  │   en el Conservatorio Superior de Danza de Málaga, en la especialidad de
+  │   Coreografía e Interpretación. Ha dedicado su vida a los estudios de la
+  │   danza, de forma práctica y teórica, y actualmente ...', 'others':
+  │   {'ticket':
+  │   'https://laguajiradealmeria.com/evento/christina-pages-2/#tribe-tickets_
+  │   _tickets-form', 'price': '6,00€ – 12,00€', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260203T160003', 'session': '2026_02_03_15_59_Martes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Cristina-Page
+  │   s-2.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/christina-pages-2/'}
+  │   --------------------
+  │   {'id': 'a655d70c', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Presentación de libro «¡Existo…?!»
+  │   de Kinga Broda', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-02-20', 'start_time':
+  │   '19:00:00', 'end_date': '2026-02-20', 'end_time': '20:30:00',
+  │   'description': 'Un libro de poesía donde el "yo lírico" es llevado al
+  │   límite en el campo emocional, existencial, físico... Rozando a veces
+  │   los bordes de locura se ve obligado a reaccionar, a pegar un grito e
+  │   intentar existir a su manera. En esa experiencia límite nos muestra sus
+  │   diferentes facetas, de la más sensible a la ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260203T160003', 'session': '2026_02_03_15_59_Martes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Poemario-King
+  │   a-Broda.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/presentacion-de-libro-existo-de-k
+  │   inga-broda/'}
+  │   --------------------
+  │   {'id': 'ef44933e', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo de La Guajira con Julián
+  │   Sánchez', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue':
+  │   'La Guajira', 'start_date': '2026-02-17', 'start_time': '20:00:00',
+  │   'end_date': '2026-02-17', 'end_time': '21:30:00', 'description':
+  │   '¡Llega el Coro-Combo de La Guajira! Si te gusta cantar, tocar un
+  │   instrumento o simplemente compartir la música como experiencia
+  │   colectiva, este proyecto es para ti. El Coro-Combo de La Guajira nace
+  │   con la idea de crear un espacio artístico estable, intercultural e
+  │   intergeneracional, abierto a todas las personas que quieran sumarse. La
+  │   propuesta es ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260203T160003',
+  │   'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-02-17/'}
+  │   --------------------
+  │   {'id': 'b95da99a', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Clases de cante flamenco con Rocío
+  │   Zamora', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-17', 'start_time': '17:30:00',
+  │   'end_date': '2026-02-17', 'end_time': '19:30:00', 'description': '¿Te
+  │   interesa el cante flamenco y quieres desarrollarte como cantaor/a? Este
+  │   curso está pensado para todas las personas que quieran aprender desde
+  │   la raíz y explorar su voz en el universo del flamenco. ¿Qué se
+  │   trabaja en clase? Técnica vocal flamenca Aprenderás a conocer y cuidar
+  │   tu instrumento: la voz. Ejercicios para sacar el máximo ...', 'others':
+  │   {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260203T160003', 'session': '2026_02_03_15_59_Martes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/09/Clases-de-can
+  │   te-Rocio.jpg', 'url':
+  │   'https://laguajiradealmeria.com/evento/clases-de-cante-flamenco-con-roci
+  │   o-zamora/2026-02-17/'}
+  │   --------------------
+  │   {'id': 'c0b810dc', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'A PUERTA CERRADA con Cuarteto Majao y
+  │   Julián Sánchez', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-02-19', 'start_time':
+  │   '21:00:00', 'end_date': '2026-02-19', 'end_time': '23:30:00',
+  │   'description': 'A PUERTA CERRADA es un ciclo de sesiones de grabación,
+  │   donde la entrada para el público es libre hasta completar aforo.
+  │   Diferentes artistas con composiciones propias pasarán por este ciclo
+  │   para grabarlas y así poder obtener material de promoción con los fines
+  │   que crean oportunos. Para La Guajira es interesante crear este espacio
+  │   íntimo e ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260203T160003',
+  │   'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/01/Majao.png',
+  │   'url':
+  │   'https://laguajiradealmeria.com/evento/a-puerta-cerrada-con-cuarteto-maj
+  │   ao-y-julian-sanchez/'}
+  │   --------------------
+  │   {'id': '52ae70f9', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio de idiomas',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-20', 'start_time': '20:30:00',
+  │   'end_date': '2026-02-20', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260203T160003', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-02-20/'}
+  │   --------------------
+  │   {'id': '0147987e', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Terraceo con Love Warrior DJ',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-02-14', 'start_time': '16:00:00',
+  │   'end_date': '2026-02-14', 'end_time': '19:00:00', 'description': 'Vuelve
+  │   nuestra guerrera del amor favorita. Con su arte del buen pinchar, nos
+  │   deleitará una vez más con su escepticismo. Con esta mujer nunca se
+  │   sabe.', 'others': {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__',
+  │   'location': 'La Guajira, C/ Cruces Bajas, 1, Almería, España'},
+  │   'source': 'LaGuajira', 'exec_time': '20260203T160003', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/11/Web-2025-1-1.
+  │   png', 'url':
+  │   'https://laguajiradealmeria.com/evento/terraceo-con-love-warrior-dj-2/'}
+  │   Checking unique event url.
+  │   New url events = 0
+  │   #######################
+  │   No new urls/events extracted. No new events to save
+  │   #######################
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: ConciertosClub
+Succeeded - 2026-02-03T16:01:02Z
+
+dag: FisgonTaskRequest (3.0s)
+│
+└─tarea_1 (3.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=ConciertosClub
+  │   DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&da
+  │   gRunId=019c243c-5eab-7a98-9298-45713065c505
+  │   Running for Almeria: ConciertosClub
+  │   ConciertosClub
+  │   RUNNING SESSION =  2026_02_03_15_59_Martes
+  │   Getting https://conciertos.club/almeria
+  │   Sleep 1
+  │   *** SCRAPED 198 URLS WITH EVENTS **
+  │   New url events = 0
+  │   #######################
+  │   No new urls/events extracted. No new events to save
+  │   #######################
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: LaPlaza
+Succeeded - 2026-02-03T16:01:05Z
+
+dag: FisgonTaskRequest (2.0s)
+│
+└─tarea_1 (2.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=LaPlaza
+  │   DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&da
+  │   gRunId=019c243c-6a35-76d6-a742-959d9e135ff1
+  │   Running for Almeria: LaPlaza
+  │   LaPlaza
+  │   RUNNING SESSION =  2026_02_03_15_59_Martes
+  │   Getting https://sientelaplaza.com/agenda
+  │   Sleep 1
+  │   *** SCRAPED 0 URLS WITH EVENTS **
+  │   #######################
+  │   No new urls/events extracted. No new events to save
+  │   #######################
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'sientelaplaza.com'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: JacksonLive
+Succeeded - 2026-02-03T16:01:07Z
+
+dag: FisgonTaskRequest (2.0s)
+│
+└─tarea_1 (2.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout: ... (48 more lines)
+  │   {'id': '94ebdcc5', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Café Quijano en Almería',
+  │   'id_venue': '27qNP7DH', 'venue': 'Auditorio Municipal Maestro Padilla',
+  │   'std_venue': 'Auditorio Municipal Maestro Padilla', 'start_date':
+  │   '2026-04-10', 'start_time': '21:00:00', 'end_date': '__NOT_FOUND__',
+  │   'end_time': '__NOT_FOUND__', 'description': 'Café Quijano es un trío
+  │   Español originario de León. Son tres hermanos que abrieron una sala de
+  │   conciertos-cafetería en el centro de la ciudad llamado " La Lola " y
+  │   que es ahí donde empezaron tocando sus primeras canciones ante el gran
+  │   publico. A día de hoy tienen 8 trabajos discográficos de estudio. Es
+  │   una de las formaciones mas reconocidas de pop, rock latino . Desde que
+  │   la banda volvió a la actividad por el año 2010 han lanzado su
+  │   trilogía " Orígenes: El Bolero " y a pesar de ser un formato más
+  │   básico han conseguido 5 nominaciones a los Grammy Latinos, dos discos
+  │   de platino y tres de oro. En el año 2017 volverán a los escenarios con
+  │   una esperada gira 20 aniversario que recorrerá los principales
+  │   auditorios del país y en la cual repasaran sus mejores éxitos.',
+  │   'others': {}, 'source': 'JacksonLive', 'exec_time': '20260203T160108',
+  │   'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/470361760529514.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-cafe-quijano-en-almer
+  │   ia'}
+  │   --------------------
+  │   {'id': 'ab4775db', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Barry B en Almería',
+  │   'id_venue': 'NmPqTrh6', 'venue': 'Berlín Social Club (Almería)',
+  │   'std_venue': 'Berlin Social Club', 'start_date': '2026-04-18',
+  │   'start_time': '21:30:00', 'end_date': '__NOT_FOUND__', 'end_time':
+  │   '__NOT_FOUND__', 'description': 'Barry B , el proyecto musical del
+  │   arandino Gabriel Barriuso , se ha convertido en una de las revelaciones
+  │   más prometedoras del underground español . Con una propuesta fresca y
+  │   auténtica, Barry B ha logrado captar la atención de la escena gracias
+  │   a sus temas de gran calidad, en los que ha contado con la colaboración
+  │   de artistas de renombre como Rusowsky y Drummie . Este otoño , Barry B
+  │   dará un paso decisivo en su carrera con la publicación de su primer LP
+  │   , un trabajo muy esperado que incluirá colaboraciones de alto nivel,
+  │   entre ellas la de Carolina Durante , una de las bandas más influyentes
+  │   del panorama indie-rock nacional. . Con este álbum, el arandino busca
+  │   consolidarse como uno de los rookies más destacados del momento,
+  │   llevando su sonido característico a una nueva audiencia. Sin duda, un
+  │   artista a seguir muy de cerca en los próximos meses.', 'others': {},
+  │   'source': 'JacksonLive', 'exec_time': '20260203T160108', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/466221758731314.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-barry-b-en-almeria'}
+  │   --------------------
+  │   {'id': 'c213ef78', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Miguel Ríos en El Ejido',
+  │   'id_venue': None, 'venue': 'Auditorio de El Ejido', 'std_venue': None,
+  │   'start_date': '2026-05-02', 'start_time': '20:00:00', 'end_date':
+  │   '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Miguel
+  │   Ríos Campaña nace en Granada un 7 de junio de 1944, cantante,
+  │   compositor y actor, es uno de los pioneros del rock and roll en España.
+  │   Nacido en el barrio de La Cartuja de Granada, él fue el menor de los
+  │   siete hijos de una familia humilde, con lo cual nada más acabar los
+  │   estudios ya tuvo que ponerse a trabajar. Lo hizo a los 15 años y de
+  │   dependiente en un bar. Después fue empleado de unos almacenes. Sin
+  │   embargo, a Miguel no pudieron impedirle seguir con su sueño de ser
+  │   cantante de rock and roll.\r\n\r\nSe presentó en un concurso de Radio
+  │   Granada, llamado "Cenicienta 60", acompañado de un grupo de amigos, y
+  │   cantando una canción de Paul Anka, y se llevó la victoria. Con permiso
+  │   materno (su padre había muerto meses antes), un cazatalentos se lo
+  │   llevó a Madrid con solo 16 años. Tras superar problemas como la falta
+  │   de dinero , el 2 de enero de 1962 grabó sus cuatro primeras canciones
+  │   con destino a un EP. Para entonces el Rock and Roll (se decía) había
+  │   muerto y lo que triunfaba era el twist. No tuvo, pues, nada de extraño
+  │   que Miguel fuera bautizado como Mike Ríos, el rey del Twist. Lo
+  │   importante era grabar a toda costa.\r\n\r\nMike Ríos se hizo popular,
+  │   durante la primera mitad de los años 60, al participar en un concurso
+  │   presentado por Joaquín Soler Serrano. En 1964, recuperó su nombre,
+  │   olvidándose por completo de lo de Mike, y perdió a su grupo de
+  │   acompañamiento, Los Relámpagos. En esta época, hizo su primera
+  │   incursión en el cine, Dos chicas locas, locas, lo que le asentó entre
+  │   los cantantes más populares.\r\n\r\nLlegan los éxitos\r\n\r\nA partir
+  │   de 1968 llegaron sus éxitos, Vuelvo a granada, El Rio Contra el
+  │   cristal, El cartel y Mira hacia ti. Pero fue en 1970 cuando Miguel pasó
+  │   de ser estrella en España a megaestrella mundial. El Himno de la
+  │   alegría (extracto del último movimiento de la novena sinfonía de
+  │   Beethoven dirigido por Waldo de los Ríos) amaneció en plena era del
+  │   rock sinfónico, vendió 10 millones de copias en todo el mundo y llego
+  │   a no 1 en Estados Unidos, Alemania, Francia, Italia, o Reino
+  │   Unido.\r\n\r\nPero la búsqueda de su verdadera identidad fue lo que le
+  │   llevó a sufrir diversos altibajos con las drogas, fue detenido en 1972,
+  │   por fumar marihuana, y puesto en libertad sin cargos, después de sufrir
+  │   injustamente 27 días en la cárcel de Carabachel.\r\nPintura de Miguel
+  │   Ríos y Elvis Presley\r\nPintura de Miguel Ríos y Elvis
+  │   Presley\r\n\r\nLas grandes giras\r\n\r\nEn 1972 publica, Conciertos de
+  │   rock y amor uno de los primeros discos en directo grabados en España. Y
+  │   entró en su etapa más concienciada con álbumes como Memorias de un
+  │   ser humano, La huerta atómica, Rock sinfónico o Al-Andalus.\r\n\r\nEn
+  │   1978, organiza la gira La noche roja, donde participan artistas como
+  │   Tequila o Triana.\r\n\r\nEn 1979 se publica Los viejos rockeros nunca
+  │   mueren que le devolvió al camino del éxito. Sin embargo, entre finales
+  │   de los 70 y comienzos de los 80 nada hacía predecir que Miguel
+  │   volvería a ser el No1. Primero fue con "Santa Lucia" perteneciente al
+  │   disco "Rocanrol bumerang" de 1980 y "Estraños en el escaparate" de
+  │   1981, que contenía el éxito "Año 2000".\r\n\r\nEn 1982, se publica,
+  │   la gran joya del rock ibérico de los 80: Rock and Rios, doble álbum
+  │   grabado en Madrid, el 5 y 6 de marzo, siendo este su álbum de más
+  │   éxito.\r\n\r\nEn 1983 publica El rock de una noche de verano y realiza
+  │   la gira más multitudinaria y éxito en España, con Luz Casal y Leño,
+  │   como teloneros. En 1984 publica La encrucijada y en 1985, Rock en el
+  │   Ruedo un recopilatorio, con un tema nuevo, que daría paso a la gira del
+  │   mismo nombre, que fue un fracaso económico y que no gozo del éxito de
+  │   las anteriores.\r\n\r\nPosteriormente, en 1986, publica el disco El año
+  │   del cometa con producción internacional. Y en 1987 realiza para
+  │   televisión española, un programa sobre la historia de la música
+  │   pop-rock española de 1962-1987, ¡Que noche la de aquel año!, de gran
+  │   éxito, además de obtener un Premio Ondas por el programa.\r\n\r\nEn
+  │   1988, realiza una gira por México y es el primero que llena la plaza de
+  │   toros de México. Después publicaría Miguel Rios (1989), y Directo al
+  │   corazón (1991) y cierra su contrato con Polydor en 1992, publicando el
+  │   recopilatorio Así que pasen 30 años, con una canción nueva y otra
+  │   inédita.\r\n\r\nLos años 1990\r\n\r\nEn 1993 recibe la Medalla de las
+  │   Bellas Artes, la primera a un roquero en España, y que le entrego el
+  │   rey don Juan Carlos.\r\n\r\nDurante 1993 y 1994, realiza y presenta, un
+  │   programa para Canal Sur, "Fiebre de sur".\r\n\r\nEn 1996 publica el
+  │   disco Como si fuera la primera vez y realiza junto a Juan Manuel Serrat,
+  │   Ana Belén, y Victor Manuel, la gira "El gusto es nuestro", que ha sido
+  │   una de las más multitudinarias y exitosas realizadas en España y que
+  │   se retomó posteriormente, en el año 1997, por tierras americanas,
+  │   cosechando grandes éxitos. Más tarde, se publicó un disco del mismo
+  │   título, grabado durante la gira en España.\r\n\r\nPara comemorar sus
+  │   35 años en la música, en 1998, publica el disco en directo, "Big Band
+  │   Rios", grabado con una big band y realiza un gira por España y
+  │   Latinoamérica. Este mismo año, funda su sello discográfico, "Rock &
+  │   Rios Records", para publicar sus discos. Un año después, en 1999,
+  │   grabaría con Ana Belén, un disco homenaje a Kurt Weill, con una gira
+  │   posterior con la Orquesta Ciudad de Granada, por auditorios de todo el
+  │   país.\r\n\r\nEn el siglo XXI\r\n\r\nEl siglo XXI , recibe a Miguel con
+  │   el reconocimiento del sector discográfico andaluz, que le concede,
+  │   dentro de los Premios de la Música de Andalucía de ese año, el Premio
+  │   Especial al reconocimiento de una trayectoria musical , que le entregan
+  │   dos de las figuras emergentes de la música andaluza, Estrella Morente y
+  │   Marina Heredia.\r\n\r\nUn año después, en 2001, publicaría Miguel
+  │   Rios y las estrellas del rock latino, un disco de duetos con artitas
+  │   españoles como Rosendo, Joaquín Sabina y Manolo García, y artistas
+  │   latinomericanos, como el padre del rock sudamericano Charly Garcia, Fito
+  │   Paez, Aterciopelados, Maná o El Tri. disco que es nominado para un
+  │   Grammy Latino.\r\n\r\nEn 2002 recibe la Medalla de Plata de
+  │   Andalucia.\r\n\r\nEn 2004, Para celebrar sus 60 años, publica el disco
+  │   , 60 mp3 dedicado al blues, que recibe el premio al mejor disco de rock
+  │   en los Premios de Música en España. En ese mismo año, y cumpliendo
+  │   con uno de sus deseos íntimos, Miguel actúa en el Festival de Jazz de
+  │   Granada , junto con la Granada Big Band y el saxofonista norteamericano
+  │   Benny Golson.\r\n\r\nEn el año 2006, recibe el Premio Ondas en
+  │   reconocimiento de toda su carrera, "por ser un referente en la historia
+  │   del rock de España".\r\n\r\nColaboraciones\r\n\r\nEn 1982 hizo los
+  │   coros a Víctor Manuel en la canción Déjame en paz, del disco Por el
+  │   camino.\r\n\r\nEn 1994, e invitado por este mismo artista, participó en
+  │   el concierto de la gira "Mucho Más que Dos", celebrado los días 8 y 9
+  │   de abril de ese año, junto a Ana Belén, Joan Manuel Serrat, Antonio
+  │   Flores (que fallecería poco después), Pablo Milanés, Manolo Tena,
+  │   Joaquín Sabina y Juan Echanove. Miguel participó en las canciones
+  │   Luna, El Blues del Autobús y en La puerta de Alcalá, aparte de hacer
+  │   los coros a Ana Belén en España camisa blanca de mi
+  │   esperanza.\r\n\r\nEn el 2000, Miguel fue invitado por Alex Lora,
+  │   vocalista de la banda de rock Mexicana El Tri, para cantar un dueto con
+  │   Alex. La canción fue Madre Tierra, que trata sobre la conciencia
+  │   ambiental . Esta canción aparece en el album No Podemos Volar que por
+  │   cierto fue nominado al premio Grammy de rock en español. Y también se
+  │   puede encontrar en el album oficial de los Premios Grammy a la Música
+  │   Latina 2000. Miguel Ríos ha sido un buen amigo de la banda El Tri por
+  │   más de 20 años ya que en el 1986 invitó a la banda a tocar en el
+  │   magno evento del Festival Primer Encuentro
+  │   Iberoamericano.\r\n\r\nDiscografía\r\n\r\nNo se incluyen
+  │   recopilaciones\r\n\r\n * Mira hacia ti 1969\r\n * Despierta 1970\r\n *
+  │   Unidos 1971\r\n * Miguel Ríos en directo: Conciertos de Rock y
+  │   amor.1972\r\n * Miguel Ríos: Éxitos 1973\r\n * Memorias de un ser
+  │   humano 1974\r\n * La huerta atómica 1976\r\n * Al-Andalus 1977\r\n *
+  │   Los viejos rockeros nunca mueren 1979\r\n * Rockanrol bumerang 1980\r\n
+  │   * Extraños en el escaparate 1981\r\n * Rock and Ríos 1982\r\n * El
+  │   Rock de una noche de verano 1983\r\n * La encrucijada 1984\r\n * Lo más
+  │   de rock en el ruedo 1985\r\n * El año del cometa 1986\r\n * Que noche
+  │   la de aquel año 1987\r\n * Miguel Ríos 1989\r\n * Directo al corazón
+  │   1991\r\n * Así que pasen treinta años 1992\r\n * Por siempre 1995\r\n
+  │   * Canciones de amor para tiempos difíciles 1995\r\n * Como si fuera la
+  │   primera vez 1996\r\n * Miguel Ríos en concierto: Big Band Ríos
+  │   1998\r\n * Ana Belén, Miguel Ríos cantan a Kurt Weill 1999\r\n *
+  │   Miguel Ríos y las estrellas del rock latino 2001\r\n * 60mp3 2004\r\n *
+  │   Solo y en Compañía de Otros 2008', 'others': {}, 'source':
+  │   'JacksonLive', 'exec_time': '20260203T160108', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/476011762789435.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-miguel-rios-en-el-eji
+  │   do'}
+  │   --------------------
+  │   {'id': 'b9f38a8c', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Aitana en Roquetas de Mar',
+  │   'id_venue': None, 'venue': 'Estadio Municipal Antonio Peroles',
+  │   'std_venue': None, 'start_date': '2026-05-09', 'start_time': '20:00:00',
+  │   'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+  │   'Aitana Ocaña, conocida artísticamente como Aitana, es una cantante
+  │   catalana que ganó popularidad como finalista en la primera edición del
+  │   programa de televisión español "Operación Triunfo" en 2017. Nacida un
+  │   27 de junio de 1999 en Sant Climent de Llobregat, Barcelona,
+  │   \u200b\u200bEspaña. Aitana ha logrado consolidarse como una figura
+  │   destacada en la industria de la música en España. Después de su
+  │   participación en "Operación Triunfo", lanzó su carrera musical con
+  │   éxito, firmando un contrato disco.', 'others': {}, 'source':
+  │   'JacksonLive', 'exec_time': '20260203T160108', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/469951760384895.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-aitana-en-roquetas-de
+  │   -mar'}
+  │   --------------------
+  │   {'id': '53de1826', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Uña y Carne en Almería',
+  │   'id_venue': 'NmPqTrh6', 'venue': 'Berlín Social Club (Almería)',
+  │   'std_venue': 'Berlin Social Club', 'start_date': '2026-05-15',
+  │   'start_time': '22:00:00', 'end_date': '__NOT_FOUND__', 'end_time':
+  │   '__NOT_FOUND__', 'description': 'De la unión nace la música , y UÑA Y
+  │   CARNE es el ejemplo más claro de esta afirmación. Este grupo surge en
+  │   el señor de la productora de entretenimiento Uniacords & Grupoidex ,
+  │   impulsado por el compositor y cineasta Carlos Salado y el cantante
+  │   Antonio Clavería . El sonido de Uña y Carne se distingue por su
+  │   habilidad para combinar con sensibilidad rumba, balada y melodías
+  │   pegadizas . Además, destacan por defender con carisma, nobleza y
+  │   rebeldía la música artesanal, donde la guitarra española es la gran
+  │   protagonista. El grupo se dio a conocer gracias a la banda sonora
+  │   original de la película “Criando Ratas” (2016) y, en su primer año
+  │   en el mercado, lograron hitos importantes como: Colaboraciones con
+  │   artistas destacados como Jincho, Costa Gamberro, Bebe y Canijo de Jerez
+  │   . Alcanzar el 5o puesto de tendencias en YouTube con el lanzamiento de
+  │   su primer videoclip, “Yo Me Drogo” . Entrar en el ranking de Spotify
+  │   de las 15 canciones más virales de España . Participar en festivales
+  │   destacados como Brilla Torrevieja , Farándula Festival o Granca Live
+  │   Fest , entre otros. Uña y Carne combinan alma y corazón en un proyecto
+  │   que muestra un talento especial para fusionar los aspectos más festivos
+  │   de su música con aquellos más cercanos a la reflexión y el
+  │   sentimiento .', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260203T160108', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/496321769533895.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-una-y-carne-en-almeri
+  │   a'}
+  │   --------------------
+  │   {'id': '90907f26', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de El Arrebato en Roquetas de
+  │   Mar', 'id_venue': None, 'venue': 'Teatro Auditorio de Roquetas de Mar',
+  │   'std_venue': None, 'start_date': '2026-05-16', 'start_time': '20:00:00',
+  │   'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+  │   'Francisco Javier Labandón Pérez es un cantante y compositor sevillano
+  │   de estilo rumba/flamenco , mejor conocido como El Arrebato . Empezó su
+  │   carrera en el año 1985 formando parte de la banda "Piel Morena", la
+  │   cual se disolvió. El músico emprendió su carrera en solitario, el
+  │   comienzo de la cual es la maqueta que mando a Dioni (Camela) y que acabo
+  │   en la discográfica EMI. El primer álbum " Poquito a poco " ha tenido
+  │   una tremenda aceptación y supuso el comienzo de una larga carrera
+  │   profesional del cantante. Actualmente El Arrebato tiene una decena de
+  │   discos, ademas colaboraciones con Haze, Los Chichos, Los Rebujitos,
+  │   Camela...', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260203T160108', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/478651763468077.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-el-arrebato-en-roquet
+  │   as-de-mar'}
+  │   --------------------
+  │   {'id': '0b42ab24', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de El Último de la Fila en
+  │   Roquetas de Mar', 'id_venue': None, 'venue': 'Estadio Municipal Antonio
+  │   Peroles', 'std_venue': None, 'start_date': '2026-05-16', 'start_time':
+  │   '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+  │   'description': 'El Último de la Fila, un influyente grupo de pop rock
+  │   español formado en Barcelona en 1984 por la icónica dupla de Manolo
+  │   García (vocalista) y Quimi Portet (guitarrista), marcó una era dorada
+  │   en la música española durante las décadas de los 80 y 90. Con siete
+  │   álbumes de estudio y extensas giras, principalmente en España, se
+  │   consolidaron como una de las bandas más exitosas del país. Antes de
+  │   unir sus caminos, ambos músicos ya habían explorado diversas
+  │   agrupaciones: Manolo García como baterista en Materia Gris y
+  │   posteriormente como líder de Los Rápidos, una banda de pop rock
+  │   ochentero con un único LP publicado en 1981; y Quimi Portet en varias
+  │   formaciones hasta recalar en el grupo catalán Kul de Mandril. Su
+  │   encuentro en el festival Rock de Lluna en 1981 propició la
+  │   incorporación de Quimi a la banda de Manolo, aunque esta primera unión
+  │   fue efímera. Tras la disolución, Manolo se trasladó al País Vasco,
+  │   mientras Quimi y otros ex-miembros de Los Rápidos formaron Los Burros,
+  │   a los que se unió Manolo a su regreso. Con la discográfica Belter,
+  │   lanzaron "Rebuznos de amor", un álbum con composiciones principalmente
+  │   de Manolo y Quimi, incluyendo temas rescatados de Los Rápidos. A pesar
+  │   de no alcanzar el éxito comercial, dejaron canciones memorables y un
+  │   sonido más original. La bancarrota de Belter truncó el futuro de Los
+  │   Burros, llevando a Manolo y Quimi a probar suerte con la pequeña
+  │   discográfica PDI bajo el nombre de El Último de la Fila, tomado de una
+  │   canción australiana. Su triunfo en un concurso de maquetas con los
+  │   temas "Cuando la pobreza entra por la puerta, el amor salta por la
+  │   ventana" y "A cualquiera puede sucederle" les abrió las puertas de PDI,
+  │   rechazando una oferta de Virgin para cumplir su compromiso inicial. En
+  │   1985, lanzaron su primer LP, "Cuando la pobreza entra por la puerta, el
+  │   amor salta por la ventana", que fusionaba su pop rock con influencias
+  │   sureñas, árabes y flamencas, destacando canciones como "Dulces
+  │   sueños" y "Querida Milagros", lo que les valió el premio de "Grupo
+  │   revelación" de Radio 3. Su segundo álbum, "Enemigos de lo ajeno"
+  │   (1986), consolidó su éxito con temas emblemáticos como "Aviones
+  │   plateados" e "Insurrección", nombrada mejor canción del año por Rock
+  │   de Lux, revista que también los reconoció como "Grupo del año en
+  │   directo" y su disco como "Disco del año". Sus enérgicos directos
+  │   aumentaron su base de seguidores masivamente. Para mejorar la calidad
+  │   sonora de sus primeros éxitos, grabaron en Londres "Nuevas mezclas"
+  │   (1987), regrabando canciones con nuevos arreglos e incluyendo el tema
+  │   inédito "¿Quién eres tú?". Este álbum se convirtió en su mayor
+  │   éxito de ventas hasta el momento. Paralelamente, Quimi lanzó su primer
+  │   álbum en solitario en catalán, "Persones estranyes", y GASA reeditó
+  │   material de Los Burros. En 1988, firmaron con EMI y lanzaron bajo su
+  │   propio sello, Perro Records, el álbum "Como la cabeza al sombrero", un
+  │   trabajo más intimista y acústico que, aunque inicialmente desconcertó
+  │   a algunos fans, pronto se consagró como una obra maestra con éxitos
+  │   como "Sara", "Llanto de pasión" y "Ya no danzo al son de los tambores".
+  │   Su fama creció exponencialmente, llenando conciertos y participando en
+  │   el concierto Human Rights Now! junto a artistas internacionales. En
+  │   1990, presentaron "Nuevo pequeño catálogo de seres y estares", un
+  │   álbum experimental con un sonido más pop y protagonismo de teclados,
+  │   con éxitos como "Cuando el mar te tenga" y "Canta por mí". Su
+  │   compromiso social y ecológico se hizo evidente al rechazar ofertas
+  │   comerciales y colaborar con ONGs. La gira de este disco atrajo a cerca
+  │   de 750.000 espectadores. En 1993, lanzaron "Astronomía razonable", un
+  │   álbum que consagró su éxito con ventas masivas y canciones icónicas
+  │   como "Mar antiguo" y "Como un burro amarrado en la puerta del baile".
+  │   Con una producción de David Tickle, el álbum recuperaba el sonido de
+  │   guitarras y letras líricas de sus inicios. Tras un año sabático, en
+  │   1995 presentaron "La rebelión de los hombres rana", un disco más
+  │   oscuro y de ritmos lentos que, aunque no igualó el éxito de su
+  │   predecesor, contenía canciones destacadas. Ese mismo año, se publicó
+  │   una maqueta inédita de Los Rápidos. Tras este álbum, los miembros se
+  │   tomaron un tiempo para proyectos personales: Quimi lanzó su segundo
+  │   álbum en solitario, "Hoquei sobre pedres" (1997), y Manolo trabajó en
+  │   composiciones propias. El 13 de enero de 1998, anunciaron su
+  │   disolución, alegando haber dado todo lo que podían juntos y desear
+  │   explorar caminos individuales. Tras la separación, ambos artistas han
+  │   continuado sus carreras en solitario con éxito, manteniendo un vínculo
+  │   a través de su sello discográfico.', 'others': {}, 'source':
+  │   'JacksonLive', 'exec_time': '20260203T160108', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/444391748539750.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-el-ultimo-de-la-fila-
+  │   en-roquetas-de-mar'}
+  │   --------------------
+  │   {'id': 'cd5efb94', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Tributo a Radio Futura + El Último de
+  │   la Fila + Héroes del Silencio en Almería', 'id_venue': 'NmPqTrh6',
+  │   'venue': 'Berlín Social Club (Almería)', 'std_venue': 'Berlin Social
+  │   Club', 'start_date': '2026-05-22', 'start_time': '21:30:00', 'end_date':
+  │   '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Mescalina
+  │   es una banda formada en 2024 por artistas con una amplia experiencia en
+  │   giras, lo que se refleja en la calidad de sus conciertos. A pesar de su
+  │   reciente creación, ya se han presentado en recintos emblemáticos de
+  │   España, como el Kafe Antzokia de Bilbao, la Sala Oasis de Zaragoza, la
+  │   Sala París 15 de Málaga o el Moon de Valencia, ante un público
+  │   entusiasta. Actualmente, Mescalina tiene programadas giras con dos de
+  │   sus espectáculos homenaje. El primero, #80sEnEspañol , rinde tributo a
+  │   bandas icónicas como Radio Futura , El Último De La Fila y Héroes Del
+  │   Silencio . El segundo, llamado #RaízLatina , celebra la música de Los
+  │   Rodríguez , Jarabe De Palo y Maná , llevando a las principales salas
+  │   de España el espíritu de estos clásicos del rock en español.',
+  │   'others': {}, 'source': 'JacksonLive', 'exec_time': '20260203T160108',
+  │   'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/462881757676050.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/tributo-a-radio-futura-el-ultimo-d
+  │   e-la-fila-heroes-del-silencio-en-almeria'}
+  │   --------------------
+  │   {'id': 'ca2da312', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 0, 'event': 'Festival Murmura 2026', 'id_venue':
+  │   None, 'venue': 'Salón Pedro Murillo Velarde', 'std_venue': None,
+  │   'start_date': '2026-05-29', 'start_time': '11:00:00', 'end_date':
+  │   '2026-05-31', 'end_time': '23:55:00', 'description': 'El Festival
+  │   Murmura celebrará su sexta edición del 29 al 31 de mayo de 2026 ,
+  │   consolidándose como uno de los eventos "bouquet" más exclusivos y
+  │   respetados del país. Localizado en el entorno privilegiado de la
+  │   Alpujarra Almeriense, el festival propone una experiencia multisensorial
+  │   que fusiona la excelencia gastronómica de Sabores Almería, la riqueza
+  │   natural de la zona y una programación musical de primer nivel. Las
+  │   entradas y abonos se han puesto a la venta este viernes, 26 de diciembre
+  │   de 2025, posicionándose como un regalo de distinción para estas fechas
+  │   navideñas. El cartel de esta edición destaca por su calidad y
+  │   variedad, encabezado por el rock atemporal de los granadinos 091 y la
+  │   pasión flamenca de Miguel Campello. La propuesta se completa con la
+  │   psicodelia de Rufus T. Firefly, la honestidad de Arco, la voz de Amparo
+  │   Sánchez y la revelación folk de El Nido. Además, el festival contará
+  │   con proyección internacional gracias a los británicos The Molotovs,
+  │   junto a la fuerza de Guadalupe Plata, la electrónica de Ale Acosta y el
+  │   talento local de Maruja Limón , ofreciendo conciertos poco masificados
+  │   en escenarios singulares. Más allá de lo musical, Murmura reafirma su
+  │   compromiso con la sostenibilidad, la igualdad y la inclusión de la mano
+  │   de la Fundación Music For All . Actualmente, el certamen es candidato a
+  │   siete premios en los Iberian Festival Awards, destacando en categorías
+  │   de promoción turística y gestión cultural. Con actividades
+  │   complementarias como catas y secret shows, el festival se ratifica como
+  │   un ecosistema donde la música deja de ser un producto de masas para
+  │   convertirse en un bastión de la cultura y el respeto al patrimonio
+  │   ambiental.', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260203T160108', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/491511766773314.jpg', 'url':
+  │   'https://www.jacksonlive.es/festival/festival-murmura-2026'}
+  │   --------------------
+  │   {'id': '32789bca', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Paula Koops en Almería',
+  │   'id_venue': 'NmPqTrh6', 'venue': 'Berlín Social Club (Almería)',
+  │   'std_venue': 'Berlin Social Club', 'start_date': '2026-05-29',
+  │   'start_time': '22:00:00', 'end_date': '__NOT_FOUND__', 'end_time':
+  │   '__NOT_FOUND__', 'description': 'Paula Koops es una joven cantante,
+  │   música y compositora que ha captado la atención de la industria
+  │   musical con su distintivo estilo. En menos de un año desde su
+  │   incursión en la música, se ha consolidado como una de las promesas
+  │   emergentes del pop español, acumulando más de 600.000 oyentes
+  │   mensuales de manera constante en plataformas digitales. Su sonido único
+  │   fusiona la nostalgia de los años 2000 con las tendencias actuales,
+  │   creando una mezcla fresca y evocadora. Las letras de Koops reflejan sus
+  │   experiencias personales, resonando profundamente con sus seguidores en
+  │   redes sociales, quienes a menudo crean contenido inspirado en sus
+  │   canciones. El proyecto de Paula Koops comenzó en julio de 2020 con el
+  │   lanzamiento de su primer single, "Magia en Caos". Desde entonces, ha
+  │   trabajado en adaptar sus influencias, mayormente de habla inglesa, al
+  │   español, su lengua materna tras regresar a Madrid después de estudiar
+  │   en Inglaterra. Este enfoque ha permitido a Koops desarrollar un estilo
+  │   propio y distintivo, marcando el inicio de un prometedor nuevo proyecto
+  │   musical.', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260203T160108', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/493191767977239.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-paula-koops-en-almeri
+  │   a'}
+  │   --------------------
+  │   {'id': 'c03362b0', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Lola Indigo en Almería',
+  │   'id_venue': 'T7JHd2rR', 'venue': 'Plaza de Toros de Almería',
+  │   'std_venue': 'Plaza de Toros', 'start_date': '2026-06-06', 'start_time':
+  │   '22:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+  │   'description': 'Miriam Doblas nació en Madrid en la primavera de 1992,
+  │   pero pasó su infancia en la localidad granadina de Huétor Tájar.
+  │   Desde temprana edad, se destacó en el mundo artístico, especialmente
+  │   en el ámbito del baile y la coreografía. Inició su carrera como
+  │   bailarina y coreógrafa, llegando a desempeñarse como profesora de
+  │   baile y participando en diversos musicales. Su talento la llevó a
+  │   trabajar como bailarina en países como China y Los Ángeles,
+  │   colaborando con reconocidos artistas como Chris Brown, Miguel Bosé,
+  │   Sweet California, Enrique Iglesias, Marta Sánchez y The Baseballs. En
+  │   2010, Miriam Doblas participó en el programa de talentos "Fama
+  │   Revolution" de Cuatro, lo que marcó un paso importante en su carrera
+  │   artística. Conocida inicialmente como Mimi o Mimi Doblas, Miriam fue la
+  │   primera concursante expulsada de Operación Triunfo 2017, un concurso
+  │   televisivo emitido en La 1 de Televisión Española en horario de
+  │   máxima audiencia. Su participación en el programa le brindó
+  │   visibilidad a nivel nacional y marcó el inicio de su carrera como
+  │   cantante solista.', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260203T160108', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/488001765823628.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-lola-indigo-en-almeri
+  │   a'}
+  │   --------------------
+  │   {'id': '375070dd', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Chayanne en Almería',
+  │   'id_venue': 'T7JHd2rR', 'venue': 'Plaza de Toros de Almería',
+  │   'std_venue': 'Plaza de Toros', 'start_date': '2026-07-08', 'start_time':
+  │   '22:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+  │   'description': 'Elmer Figueroa Arce (1968) es un cantante, compositor,
+  │   bailarín y actor puertorriqueño mejor conocido como Chayanne. Cuenta
+  │   con una espectacular carrera musical de más de 3 décadas, 50 millones
+  │   de discos vendidos y reconocidos éxitos mundiales como "Torero",
+  │   "Dejaria todo", "Provócame", "Salomé"... etc. Actualmente a sus más
+  │   de 50 años sigue en activo y ofreciendo actuaciones en directo por todo
+  │   el mundo.', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260203T160108', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/484321764783738.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-chayanne-en-almeria'}
+  │   --------------------
+  │   {'id': '9abfad63', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 0, 'event': 'Puro Latino Almería Fest 2026',
+  │   'id_venue': 'Dmb6Gmtr', 'venue': 'Recinto Ferial de Almeria',
+  │   'std_venue': 'Recinto Ferial de Almería', 'start_date': '2026-07-10',
+  │   'start_time': '16:00:00', 'end_date': '2026-07-11', 'end_time':
+  │   '23:55:00', 'description': 'Los entusiastas de los ritmos latinos y la
+  │   música bailable tienen motivos para celebrar. Una vez más, el Festival
+  │   Puro Latino regresa a nuestro país para consolidarse como uno de los
+  │   principales eventos de reguetón, trap y pop latino de la temporada.
+  │   Desde su inauguración en 2018, este destacado macroevento de música
+  │   latina no ha dejado de asombrar, atrayendo a multitudes de hasta 30,000
+  │   personas en cada una de sus distintas citas. Esta cita se ha convertido
+  │   en un epicentro vibrante para este ciclo de conciertos que ha
+  │   conquistado a un considerable público juvenil. Artistas de renombre
+  │   como Daddy Yankee, Juan Magan y Farruko han tenido el honor de deleitar
+  │   al público en diversas ediciones del Festival Puro Latino. Si también
+  │   deseas experimentar sus actuaciones en vivo, asegura tus entradas para
+  │   este festival de música aquí mismo y prepárate para vivir uno de los
+  │   eventos más destacados del verano.', 'others': {}, 'source':
+  │   'JacksonLive', 'exec_time': '20260203T160108', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/474061769518185.jpg', 'url':
+  │   'https://www.jacksonlive.es/festival/puro-latino-almeria-fest-2026'}
+  │   --------------------
+  │   {'id': '7c9464df', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Antonio Orozco en
+  │   Almería', 'id_venue': 'T7JHd2rR', 'venue': 'Plaza de Toros de
+  │   Almería', 'std_venue': 'Plaza de Toros', 'start_date': '2026-07-10',
+  │   'start_time': '22:00:00', 'end_date': '__NOT_FOUND__', 'end_time':
+  │   '__NOT_FOUND__', 'description': 'Antonio Orozco nació en Barcelona el
+  │   23 de noviembre de 1972, aunque creció en Hospitalet de Llobregat
+  │   (Barcelona). Hijo de padres sevillanos (de Osuna) de clase trabajadora,
+  │   su vocación musical despertó a los 15 años durante un viaje a Triana
+  │   (Sevilla). Allí, al ver a unos músicos tocar en la calle Betis,
+  │   decidió reunir dinero para comprar su primera guitarra, la cual
+  │   todavía conserva. Con gran constancia, y tras tocar en numerosos bares
+  │   "pagando por hacerlo", Orozco logró grabar su primer disco. En marzo de
+  │   2000 , editó su debut, Un reloj y una vela , producido por Xavi Pérez
+  │   y Tato Latorre, vendiendo más de 100.000 copias. Su segundo álbum,
+  │   Semilla del Silencio (2001), superó las 300.000 copias e incluyó una
+  │   reedición con un DVD de un concierto en la Sala Luz de Gas de
+  │   Barcelona. En mayo de 2004 , con la discográfica Universal, lanzó El
+  │   principio del comienzo , del que confesó que era su verdadero estilo,
+  │   al haberle permitido mayor libertad creativa. En esta etapa, realizó
+  │   duetos conocidos, como "What You\'re Made Of" con Lucie Silvas y la
+  │   exitosa "Devuélveme la vida" con Malú . El año 2005 marcó su
+  │   expansión internacional con el disco Antonio Orozco , una recopilación
+  │   de sus doce mejores canciones para el mercado latinoamericano y global.
+  │   Como parte de esta estrategia, fue telonero de Juanes en su gira
+  │   americana en Nueva York, Miami y Los Ángeles, lo que le permitió darse
+  │   a conocer en Estados Unidos. En 2007 publicó su cuarto álbum,
+  │   Cádizfornia , que presentó notables colaboraciones con artistas de
+  │   géneros diversos como Toteking, Iván Ferreiro y Youssou N\'Dour. A lo
+  │   largo de su carrera, Orozco ha cosechado importantes galardones,
+  │   incluyendo un Premio Ondas al Mejor Directo y un premio Tu Música
+  │   (Puerto Rico) por su canción "Devuélveme la vida".', 'others': {},
+  │   'source': 'JacksonLive', 'exec_time': '20260203T160108', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/487001765549346.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-antonio-orozco-en-alm
+  │   eria'}
+  │   --------------------
+  │   {'id': '8b75a7b9', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Galvan Real en Almería',
+  │   'id_venue': 'T7JHd2rR', 'venue': 'Plaza de Toros de Almería',
+  │   'std_venue': 'Plaza de Toros', 'start_date': '2026-07-11', 'start_time':
+  │   '22:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+  │   'description': 'Oscar Espinosa Castillo, conocido artísticamente como
+  │   Galvan Real, nació en Valencia en 1992. Desde temprana edad, mostró
+  │   interés por la música y comenzó a dar sus primeros pasos con su voz a
+  │   la tierna edad de 8 años. El flamenco siempre fue una pasión arraigada
+  │   en su interior desde muy pequeño. Con el tiempo, Oscar se sumergió en
+  │   la música en general y en 2012 comenzó a realizar sus primeras
+  │   producciones. Después de un tiempo, decidió grabar sus canciones con
+  │   un toque urbano y actual, adoptando el nombre artístico de Galvan Real.
+  │   El artista fusiona sonidos latinos y urbanos sin perder su esencia
+  │   flamenca en cada uno de sus trabajos. Su canal de Youtube cuenta con
+  │   millones de reproducciones y tiene miles de seguidores en sus redes
+  │   sociales. Sus últimos trabajos han alcanzado el Top de tendencias en
+  │   España.', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260203T160108', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/456841754423455.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-galvan-real-en-almeri
+  │   a'}
+  │   --------------------
+  │   {'id': '49880918', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Carlos Rivera en Almería',
+  │   'id_venue': 'T7JHd2rR', 'venue': 'Plaza de Toros de Almería',
+  │   'std_venue': 'Plaza de Toros', 'start_date': '2026-07-18', 'start_time':
+  │   '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+  │   'description': 'Carlos Augusto Rivera Guerra es un cantante, actor y
+  │   compositor mexicano mejor conocido como simplemente Carlos Rivera . En
+  │   el año 2004 salto a la fama gracias al programa La Academia (tercera
+  │   temporada) de TV Azteca con tan solo 18 años. Con algo mas de 10 años
+  │   en los escenarios en el año 2016 presenta su nuevo álbum "Yo Creo" .
+  │   Un trabajo que ha alcanzado el numero 1 en iTunes y Google Play en
+  │   España. El disco ha sido producido por los laureados Kiko Cibrian
+  │   (Reik, Luis Miguel) y Armando Ávila (Malú, Leonel Garcia). En el
+  │   encontraras 13 nuevos temas compuestas por el mismo junto a Pablo
+  │   López, Abel Pintos, Leonel Garcia y Carlos Baute .', 'others': {},
+  │   'source': 'JacksonLive', 'exec_time': '20260203T160108', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/486671765472011.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-carlos-rivera-en-alme
+  │   ria'}
+  │   --------------------
+  │   {'id': '4b51f828', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Monica Naranjo en
+  │   Almería', 'id_venue': 'T7JHd2rR', 'venue': 'Plaza de Toros de
+  │   Almería', 'std_venue': 'Plaza de Toros', 'start_date': '2026-07-25',
+  │   'start_time': '22:00:00', 'end_date': '__NOT_FOUND__', 'end_time':
+  │   '__NOT_FOUND__', 'description': 'Mónica Naranjo Carrasco, nacida el 23
+  │   de mayo de 1974 en Figueras, Gerona , es una de las voces más icónicas
+  │   de la música española y latinoamericana . Su poderosa voz y estilo
+  │   inconfundible la convirtió en una de las grandes divas del pop y el
+  │   rock sinfónico de los años 90 y principios de los 2000. Comenzó su
+  │   carrera en 1994 con el lanzamiento de su álbum debut, Mónica Naranjo ,
+  │   que inicialmente tuvo una acogida modesta en España pero triunfó en
+  │   México , donde vendió más de 1.5 millones de copias y la llevó a
+  │   ganarse el apodo de "la chica bicolor" debido a su característico
+  │   cabello mitad rubio y mitad oscuro. El verdadero salto a la fama
+  │   internacional llegó en 1997 con su segundo álbum, Palabra de Mujer ,
+  │   que incluyó éxitos como "Desátame" , "Pantera en Libertad" y
+  │   "Entender el amor" . Este disco la consolidó como una estrella al
+  │   vender más de 2,5 millones de copias y le valió un World Music Award
+  │   como una de las artistas latinas más vendidas del año. En 2000,
+  │   Mónica demostró su versatilidad artística con Minage , un homenaje a
+  │   la cantante italiana Mina que incluyó arreglos favorables y baladas
+  │   profundas, entre las que destacó "Sobreviviré" , una de sus canciones
+  │   más emblemáticas. Con el tiempo, Mónica Naranjo ha sabido
+  │   reinventarse , explorando diferentes estilos y géneros musicales ,
+  │   consolidando su lugar como una artista audaz y única . Su capacidad
+  │   para conectarse con el público a través de su voz y su presencia
+  │   escénica la ha convertido en un referente de la música en español .',
+  │   'others': {}, 'source': 'JacksonLive', 'exec_time': '20260203T160108',
+  │   'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/491681767032043.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-monica-naranjo-en-alm
+  │   eria'}
+  │   --------------------
+  │   {'id': '59e986e2', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 0, 'event': 'Cooltural Fest 2026', 'id_venue':
+  │   'Dmb6Gmtr', 'venue': 'Recinto Ferial de Almeria', 'std_venue': 'Recinto
+  │   Ferial de Almería', 'start_date': '2026-08-20', 'start_time':
+  │   '17:00:00', 'end_date': '2026-08-23', 'end_time': '23:55:00',
+  │   'description': 'El Cooltural Fest ha revolucionado el final de este 2025
+  │   con un particular "calendario de adviento" que ha mantenido en vilo a su
+  │   comunidad de seguidores. Durante los últimos días, el festival
+  │   almeriense ha desvelado cinco nombres de primer nivel que confirman su
+  │   apuesta por un cartel ecléctico, dinámico y, sobre todo, inclusivo.
+  │   Del 20 al 23 de agosto de 2026 , Almería volverá a ser el epicentro de
+  │   la música en directo con una propuesta que mezcla leyendas del pop
+  │   español, la frescura de la escena urbana y el espíritu festivo que
+  │   caracteriza al evento organizado por Crash Music y el Ayuntamiento de
+  │   Almería. Las nuevas incorporaciones son una auténtica declaración de
+  │   intenciones. La veteranía y el carisma de Ana Torroja se unen a la
+  │   energía rockera de Sidecars y al fenómeno pop de Rigoberta Bandini .
+  │   El cartel suma también la autenticidad de La Plazuela , que sigue
+  │   rompiendo moldes con su fusión de flamenco y electrónica, y la
+  │   garantía de fiesta de La Pegatina . Estos cinco nombres se integran en
+  │   una nómina de artistas ya anunciados que incluye a Hombres G , La
+  │   M.O.D.A. , Rusowsky , Sexy Zebras y Samuraï , entre otros, dibujando un
+  │   festival capaz de atraer a públicos de todas las edades. Más allá de
+  │   los nombres, el Cooltural Fest reafirma su compromiso social a través
+  │   de la Fundación ‘Music For All’ . El festival no es solo una
+  │   sucesión de conciertos, sino un ecosistema diseñado para que cualquier
+  │   persona, independientemente de sus capacidades, pueda disfrutar de la
+  │   experiencia al 100%. En este cierre de año, el festival se posiciona no
+  │   solo como una de las grandes citas musicales del próximo verano, sino
+  │   como un ejemplo de cómo la industria puede unir diversas miradas y
+  │   formas de vivir la música bajo un mismo espíritu de convivencia y
+  │   respeto.', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260203T160108', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/491651766938758.jpg', 'url':
+  │   'https://www.jacksonlive.es/festival/cooltural-fest-2026'}
+  │   --------------------
+  │   {'id': 'a97998d3', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Raphael en Almería',
+  │   'id_venue': 'T7JHd2rR', 'venue': 'Plaza de Toros de Almería',
+  │   'std_venue': 'Plaza de Toros', 'start_date': '2026-09-19', 'start_time':
+  │   '22:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+  │   'description': 'Miguel Rafael Martos Sánchez , conocido mundialmente
+  │   como Raphael , es una leyenda viva de la música y la actuación
+  │   española. Nacido en Linares (Jaén) el 5 de mayo de 1943, su carrera
+  │   abarca más de 60 años y se caracteriza por un amplio rango vocal y una
+  │   presencia escénica inconfundible. Su influencia en el mercado
+  │   hispanohablante es inmensa, habiendo vendido más de 70 millones de
+  │   álbumes en hasta siete idiomas . Su despegue a la fama ocurrió a
+  │   principios de la década de 1960. Tras ganar el Festival de Benidorm ,
+  │   se convirtió en el representante de España en el Festival de
+  │   Eurovisión en dos años consecutivos: 1966 con «Yo soy aquel» (7.a
+  │   posición) y 1967 con «Hablemos del amor» (6.a posición). Su ascenso
+  │   global fue meteórico: en 1967, hizo historia al actuar en la sala
+  │   grande del Madison Square Garden de Nueva York ante 48.000 personas. El
+  │   reconocimiento a su impacto se materializó en 1982 con un Disco de
+  │   Uranio por superar los 50 millones de discos vendidos. Actualmente,
+  │   Raphael sigue siendo uno de los "divos de la balada romántica" más
+  │   activos. Realiza giras por América y Europa, y mantiene su repertorio
+  │   plenamente vigente al regrabar y remasterizar sus temas más antiguos
+  │   con sonidos modernos para acercarse a las nuevas generaciones. En cuanto
+  │   a sus influencias, él mismo ha citado a gigantes como Pedro Infante,
+  │   Elvis Presley, Carlos Gardel y Adriano Celentano , junto a figuras del
+  │   flamenco como Manolo Caracol y Fosforito , y la admiración por voces
+  │   como Édith Piaf y Juanita Reina .', 'others': {}, 'source':
+  │   'JacksonLive', 'exec_time': '20260203T160108', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/442431746040191.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-raphael-en-almeria'}
+  │   --------------------
+  │   {'id': '042a0383', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Miguel Poveda en Almería',
+  │   'id_venue': 'T7JHd2rR', 'venue': 'Plaza de Toros de Almería',
+  │   'std_venue': 'Plaza de Toros', 'start_date': '2026-09-26', 'start_time':
+  │   '21:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+  │   'description': 'Miguel Poveda es uno de los cantaores flamenco mas
+  │   reconocidos de nuestro país. Se sube por primera vez a un escenario a
+  │   los 15 años en una peña flamenca de Badalona (Barcelona). De familia
+  │   humilde y en un entorno no muy propicio para el flamenco ha conseguido
+  │   gracias a su empeño personal y talento convertirse en lo que es hoy en
+  │   día. Numerosos premios y reconocimientos de la música así como una
+  │   legión de fans lo confirman. \r\n\r\n Tiene casi 3 décadas de
+  │   experiencia y medio centenar de trabajos discográficos entre suyos
+  │   propios y colaboraciones con otros artistas. Es un trabajador incansable
+  │   que vive por y para la música . En el año 2018 Miguel Poveda se
+  │   encuentra embarcado en su nuevo proyecto, EnLorquecido , disco homenaje
+  │   a Federico García Lorca.', 'others': {}, 'source': 'JacksonLive',
+  │   'exec_time': '20260203T160108', 'session': '2026_02_03_15_59_Martes',
+  │   'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/491471766769422.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-miguel-poveda-en-alme
+  │   ria'}
+  │   --------------------
+  │   {'id': '055b0102', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 0, 'event': 'Festival Otoño y Sal 2026', 'id_venue':
+  │   None, 'venue': 'Parque Natural de Cabo de Gata', 'std_venue': None,
+  │   'start_date': '2026-10-10', 'start_time': '16:00:00', 'end_date':
+  │   '2026-10-11', 'end_time': '23:55:00', 'description': 'La tercera
+  │   edición del festival Otoño y Sal se presenta como un evento ineludible
+  │   en el calendario de 2026 , reafirmando su éxito tras agotar entradas en
+  │   sus dos primeras convocatorias con meses de antelación. Organizado por
+  │   el Ayuntamiento de Níjar y Crash Music, el festival regresa al
+  │   espectacular entorno de Rodalquilar, en el corazón del Cabo de Gata,
+  │   con el objetivo de fusionar música, paisaje y un ambiente de calma
+  │   inigualable. La cita está programada para los días 10 y 11 de octubre,
+  │   aprovechando las bondades climáticas de Almería para promover la
+  │   desestacionalización cultural. El cartel de esta edición promete ser
+  │   uno de los más atractivos y variados, reuniendo a grandes nombres de la
+  │   escena nacional con propuestas eclécticas . Entre los principales
+  │   atractivos se encuentran la vuelta de La Cabra Mecánica con sus matices
+  │   de rumba, rock y jazz; el rock & soul estiloso de Morgan y la voz de
+  │   Nina de Juan; la cumbia caníbal de Eskorzo; y el folk rock genuino de
+  │   Santero y Los Muchachos. La oferta se completa con la vibrante firma de
+  │   autor de Carlos Ares, la mezcla urbana y folclórica de Queralt Lahoz,
+  │   el ska clásico de Alamedadosoulna, el britpop castizo de La Sonrisa de
+  │   Julia y la frescura de la cantautora Ángela González, además del
+  │   talento emergente de Pepe Delestal y el DJ residente PCR. Bajo el lema
+  │   "Yo Nunca Voy a Fallarte" (aunque este lema es de Miguel Cabrera, el
+  │   texto describe la filosofía de conexión del festival) , el evento se
+  │   concibe como una experiencia que va más allá de la música. Es una
+  │   celebración que busca emocionar y conectar con el público en un
+  │   entorno natural privilegiado, demostrando, una vez más, por qué Otoño
+  │   y Sal se ha convertido en una referencia de festivales boutique que
+  │   logran sold-out con una propuesta de calidad y un ambiente
+  │   inconfundible.', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260203T160108', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/483181764419830.jpg', 'url':
+  │   'https://www.jacksonlive.es/festival/festival-otono-y-sal-2026'}
+  │   --------------------
+  │   {'id': 'a1445427', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Merino en Almería',
+  │   'id_venue': 'NmPqTrh6', 'venue': 'Berlín Social Club (Almería)',
+  │   'std_venue': 'Berlin Social Club', 'start_date': '2026-10-15',
+  │   'start_time': '21:30:00', 'end_date': '__NOT_FOUND__', 'end_time':
+  │   '__NOT_FOUND__', 'description': 'Los madrileños Merino (Hook
+  │   Management) es un proyecto musical de Sandra Merino y Álex Gallego cuyo
+  │   origen se remonta al año 2019. En el año 2020 han lanzado su primer
+  │   disco debut "Piel, equilibrio y humo" y recientemente 2023 han lanzado
+  │   su exitoso segundo disco de estudio " Himnos de Guerra ". Un trabajo en
+  │   el cual puedes encontrar colaboraciones con Mikel Izal o Iván Ferreiro.
+  │   Un trabajo que les ha permito actuar en la Sala de WiZink Center y
+  │   organizar una gran gira por toda España.', 'others': {}, 'source':
+  │   'JacksonLive', 'exec_time': '20260203T160108', 'session':
+  │   '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/490251766424274.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-merino-en-almeria'}
+  │   --------------------
+  │   {'id': '57c65ac9', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Julio Iglesias Jr. en
+  │   Roquetas del Mar', 'id_venue': None, 'venue': 'Teatro Auditorio de
+  │   Roquetas de Mar', 'std_venue': None, 'start_date': '2026-11-13',
+  │   'start_time': '19:00:00', 'end_date': '__NOT_FOUND__', 'end_time':
+  │   '__NOT_FOUND__', 'description': 'Julio José Iglesias Preysler Jr. nace
+  │   un 25 de febrero de 1973 en Madrid, más conocido como Julio Iglesias
+  │   Jr. es el hijo del cantante español Julio Iglesias y la modelo filipina
+  │   Isabel Preysler, fruto de ese matrimonio también son Chabeli Iglesias,
+  │   y el cantante Enrique Iglesias. Julio Jr. fue a la universidad cerca de
+  │   San Francisco, en Menlo College en Atherton, California. Ganó la
+  │   oportunidad de participar en la NBC Out of the Blue, y fue contratado
+  │   por el Travel Channel, donde se organizó un "Mosaico" de viaje que le
+  │   llevó por toda América Latina. \r\n\r\nCon la ayuda de su amigo y
+  │   director de Darius Jordi Lassus incursiona por primera vez en el mundo
+  │   del espectáculo como modelo. Fue su jefe quien negocia un acuerdo
+  │   exclusivo como modelo masculino para Joey Hunter (en el momento era el
+  │   presidente de la división Modelo Masculino) en la Agencia Ford Models
+  │   en Nueva York. A través de Joey Hunter, Julio José fue visto por el
+  │   fotógrafo Bruce Weber, participando asi en la campaña de Versace. Poco
+  │   después, Julio firma con el ejecutivo de publicidad Rubén Malaret
+  │   quien inició una campaña de prensa para obtener la exposición de
+  │   Julio al mercado anglo, algo que ha resultado muy bien, Algunos de los
+  │   logros fueron notables, presentaciones en Oprah Winfrey\'s talk show, y
+  │   apareció en la campaña de Gap, y de modelo para el diseñador John
+  │   Bartlett VII sobre Sexta Fashion Show. \r\n\r\nEn la TV le ofrecieron
+  │   dos telenovelas, una en Televisa (Mexico), otra en la cadena
+  │   Estadounidense ABC para participar en, All My Children. Él también
+  │   había recibido una oferta de los productores de Broadway como estrella,
+  │   pero decidió no participar porque quería centrarse en su música, algo
+  │   que es su pasión desde niño.\r\n\r\nEn Cuanto a su música
+  │   :\r\n\r\nJulio Iglesias Jr. firmó un acuerdo para la grabación con
+  │   Epic Records. Regresó a Miami, donde comenzó a grabar su primer
+  │   álbum, Under My Eyes, con Rodolfo Castillo. Este disco fue expuesto a
+  │   finales de 1999, la grabación de este álbum le llevó a Nueva York y
+  │   Los Ángeles presentandose en diferentes show entre ellos de la cadena
+  │   MTV. Sacó como single dos canciones de este álbum One More Chance y
+  │   Under My Eyes. Realizó presentacion en el Miss Universo y fue telonero
+  │   de Cher en su gira por América del Norte. \r\n\r\nJulio Iglesias Jr.
+  │   cambia de compañia disquera y saca un muy buen disco titulado Tercera
+  │   Dimensión, se publicó en 2003 con el sello Warner Music Latina y
+  │   figura del pop-rock español sacando singles como Los Demás y Déjame
+  │   Volar. Este disco despertó más atención en el público hispano, ya
+  │   que con canciones de su completa autoria, que tratan historias de la
+  │   vida misma, Julio logra ganarse el respeto del publico, y atraer más
+  │   fanaticada.\r\n\r\nLuego en el 2008 surge Por la Mitad un disco de
+  │   covers de canciones originalmente en ingles trasladadas al castellano,
+  │   surgiendo como primer single "Los Demás" siendo la version de "Time
+  │   after Time" de la multigalardonada cantante Cindy Lauper, y saca como
+  │   segundo single The Way I Want You.\r\n\r\nLuego va a España y participa
+  │   en la version española del programa "Dancing with the Stars called" y
+  │   logra obtener el papel principal en la película "The Music of You"
+  │   dirigida por Lloyd DeSouza\r\n\r\nJulio Iglesias Jr. fue el ganador del
+  │   programa de televisión CMT reality show "Gone Country", en la que
+  │   artistas de otros géneros de la música vivieron juntos en una casa en
+  │   Nashville y compitieron para ganar un contrato de la música country. Su
+  │   cancion The Way I Want You fue liberada a los países el 10 de marzo de
+  │   2008 y le ayudo mucho a entrar en distintos mercados de Europa y Norte
+  │   America.', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260203T160108', 'session': '2026_02_03_15_59_Martes', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/484501767637539.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-julio-iglesias-jr-en-
+  │   roquetas-del-mar'}
+  │   Checking unique event url.
+  │   New url events = 0
+  │   #######################
+  │   No new urls/events extracted. No new events to save
+  │   #######################
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.jacksonlive.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+

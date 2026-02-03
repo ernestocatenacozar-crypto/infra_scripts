@@ -1,0 +1,449 @@
+Launching scraper: AlmeriaCiudad
+Succeeded - 2026-02-03T16:01:09Z
+
+dag: FisgonTaskSelenium (1m 13s)
+│
+└─tarea_1 (1m 13s) [succeeded]
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=AlmeriaCiudad
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019c243c-7c70-745b-b43e-17de82537c39
+      Running for Almeria: AlmeriaCiudad
+      AlmeriaCiudad
+      RUNNING SESSION =  2026_02_03_15_59_Martes
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      sleeping 5
+      Getting content
+      page = 0
+      -----------https://almeriaciudad.es/cultura/agenda?page=0---------------
+      len 12
+      sleeping 5
+      Getting content
+      page = 1
+      -----------https://almeriaciudad.es/cultura/agenda?page=1---------------
+      len 12
+      sleeping 5
+      Getting content
+      page = 2
+      -----------https://almeriaciudad.es/cultura/agenda?page=2---------------
+      len 2
+      sleeping 5
+      Getting content
+      page = 3
+      -----------https://almeriaciudad.es/cultura/agenda?page=3---------------
+      len 0
+      *** SCRAPED 26 URLS WITH EVENTS **
+      New url events = 0
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+      ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+      selenium
+
+Result: Succeeded
+
+Launching scraper: AlmeriaTurismo
+Succeeded - 2026-02-03T16:02:22Z
+
+dag: FisgonTaskSelenium (1m 9s)
+│
+└─tarea_1 (1m 9s) [succeeded]
+  └─stdout: ... (359 more lines)
+      {'id': '45785130', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 1, 'event': 'UD Almería vs CD Leonesa', 'id_venue':
+      '2c7846a2', 'venue': 'UD Almería Stadium', 'std_venue': 'UD Almería
+      Stadium', 'start_date': '2026-03-08', 'start_time': '__NOT_FOUND__',
+      'end_date': '2026-03-08', 'end_time': '__NOT_FOUND__', 'description': 'El
+      próximo domingo 8 de marzo se celebrará el emocionante encuentro entre
+      UD Almería y Cultural y Deportiva Leonesa en el UD Almería Stadium. Un
+      duelo imperdible para los amantes del fútbol.', 'others': {'category':
+      'UD Almería Stadium', 'hour': '__NOT_FOUND__', 'startDate': '2026-3-8',
+      'endDate': '2026-3-8', 'duration_days': 0, 'location': 'C. Alcalde
+      Santiago Martínez Cabrejas, 5, 04007 Almería'}, 'source':
+      'AlmeriaTurismo', 'exec_time': '20260203T160223', 'session':
+      '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/UD-Almeria-vs
+      -CD-Leonesa.png', 'url':
+      'https://www.turismodealmeria.org/evento/ud-almeria-vs-cd-leonesa/'}
+      --------------------
+      {'id': '13851602', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'DINERO NEGRO', 'id_venue': 'tQfq78jF',
+      'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo', 'start_date':
+      '2026-03-11', 'start_time': '20:30:00', 'end_date': '2026-03-11',
+      'end_time': '21:30:00', 'description': '11 DE MARZO DE 2026 A LAS 20:30
+      HORAS. PRECIO DE LAS ENTRADAS: 10 EUROS. mié 11 mar 2026 20:30. teatro
+      apolo almeria', 'others': {'category': '__NOT_FOUND__', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-3-11T20:30+2:00', 'endDate':
+      '2026-3-11T21:30+2:00', 'duration_days': 0, 'location': 'Rambla Obispo
+      Orbera, 25,04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260203T160223', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/dinero-negro.
+      jpg', 'url': 'https://www.turismodealmeria.org/evento/dinero-negro/'}
+      --------------------
+      {'id': 'ca9963ce', 'show': 1, 'in_city': 1, 'one_day': 0,
+      'wrong_date_time': 1, 'event': 'V Gran Feria de Exposiciones de Almería -
+      Toyo Ferial 2026', 'id_venue': None, 'venue': 'Palacio de Exposiciones y
+      Congresos Cabo de Gata – Ciudad de Almería', 'std_venue': None,
+      'start_date': '2026-03-13', 'start_time': '__NOT_FOUND__', 'end_date':
+      '2026-03-15', 'end_time': '__NOT_FOUND__', 'description': 'La V Gran Feria
+      de Exposiciones de Almería, también conocida como Toyo Ferial 2026, se
+      celebrará los días 13, 14 y 15 de marzo en el emblemático Palacio de
+      Exposiciones de El Toyo, Retamar, Almería.. El evento reunirá a sectores
+      clave como hogar, inmobiliaria, gastronomía, moda, náutica, salud y
+      talleres de artesanía, además de un área especial dedicada al mundo del
+      motor.. Se incluirán sorteos con cheques regalo y muchas sorpresas
+      más.', 'others': {'category': 'Palacio de Exposiciones de El Toyo,
+      Retamar, Almería', 'hour': '__NOT_FOUND__', 'startDate': '2026-3-13',
+      'endDate': '2026-3-15', 'duration_days': 2, 'location': 'Calle de los
+      Juegos de Casablanca, 1, 04131 Almería'}, 'source': 'AlmeriaTurismo',
+      'exec_time': '20260203T160223', 'session': '2026_02_03_15_59_Martes',
+      'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/V-Gran-Feria-
+      de-Exposiciones-de-Almeria-Toyo-Ferial-2026.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/v-gran-feria-de-exposiciones-de-a
+      lmeria-toyo-ferial-2026/'}
+      --------------------
+      {'id': '47f0488e', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 1, 'event': 'VISITA GUIADA A LA CASA DEL CINE',
+      'id_venue': 'df8rMnjt', 'venue': 'Casa del Cine de Almería', 'std_venue':
+      'Casa del Cine', 'start_date': '2026-03-13', 'start_time':
+      '__NOT_FOUND__', 'end_date': '2026-03-13', 'end_time': '__NOT_FOUND__',
+      'description': 'Si buscas planazo para el viernes… aquí lo tienes. A
+      partir del 12 de diciembre, gran oportunidad para conocer la Casa del
+      Cine, su legado y la historia cinematográfica de Almería.. Únete a
+      nuestra visita guiada por la Finca Santa Isabel y descubre los secretos,
+      anécdotas y rincones que guarda.. Asegura tu plaza llamando al 950 21 00
+      30 (En horario de Casa del Cine). ¡Te esperamos!', 'others': {'category':
+      'Todos los viernes', 'hour': '__NOT_FOUND__', 'startDate': '2026-3-13',
+      'endDate': '2026-3-13', 'duration_days': 0, 'location': 'Camino Romero, 1,
+      04009 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260203T160223', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2025/12/visita-guiada
+      .jpg', 'url':
+      'https://www.turismodealmeria.org/evento/visita-guiada-a-la-casa-del-cine/
+      var/ri-13.l-L1'}
+      --------------------
+      {'id': '398cc5be', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'BAILE DE BESTIAS - CICLO TRASLADANZA
+      2026', 'id_venue': 'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue':
+      'Teatro Apolo', 'start_date': '2026-03-13', 'start_time': '20:30:00',
+      'end_date': '2026-03-13', 'end_time': '22:30:00', 'description': 'Baile de
+      Bestias, es la nueva propuesta de Jesús Carmona. Un espectáculo que nace
+      de la necesidad de dar un paso más hacia la verdad más absoluta del
+      artista. La vuelta hacía el movimiento primario y su aceptación, para
+      después alejarse de él y mirarlo con perspectiva tras la complejidad
+      adquirida con la experiencia de los años.. 13 DE MARZO DE 2026 A LAS
+      20:30 HORAS. PRECIO DE LAS ENTRADAS:. ANTICIPADA: 12 EUROS. GENERAL: 15
+      EUROS. vie 13 mar 2026 20:30', 'others': {'category': '__NOT_FOUND__',
+      'hour': '__NOT_FOUND__', 'startDate': '2026-3-13T20:30+2:00', 'endDate':
+      '2026-3-13T22:30+2:00', 'duration_days': 0, 'location': 'Rambla Obispo
+      Orbera, 25,04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260203T160223', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/baile-de-best
+      ias.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/baile-de-bestias-ciclo-trasladanz
+      a-2026/'}
+      --------------------
+      {'id': 'b6353d03', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'MIGUEL CABRERA', 'id_venue': 'NmPqTrh6',
+      'venue': 'Berlin Social Club', 'std_venue': 'Berlin Social Club',
+      'start_date': '2026-03-13', 'start_time': '21:00:00', 'end_date':
+      '2026-03-13', 'end_time': '23:00:00', 'description': 'Viernes 13 Marzo.
+      Concierto: 22:00 H. Apertura de puertas VIP: 21:00 H. Apertura de puertas
+      General: 21:30 H. Precio del evento: 22,00 €', 'others': {'category':
+      '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-3-13T21:00+2:00', 'endDate': '2026-3-13T23:00+2:00',
+      'duration_days': 0, 'location': 'Parque de Nicolás Salmerón, 9, Bajo 2,
+      04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260203T160223', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/nunca-te-fall
+      are.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/miguel-cabrera/'}
+      --------------------
+      {'id': '0b0c87ab', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'CHRISTIAN GARCIA - (10 AÑOS DANDO GUERRA)
+      - MONÓLOGO', 'id_venue': '7qHRF9LM', 'venue': 'Escuela Municipal de
+      Música y Artes', 'std_venue': 'Sala Escuela Municipal de Música &
+      Artes', 'start_date': '2026-03-14', 'start_time': '20:00:00', 'end_date':
+      '2026-03-14', 'end_time': '22:00:00', 'description': 'Sábado, 14 de
+      Marzo, 2026. 8:00 PM. 15.00 €', 'others': {'category': '__NOT_FOUND__',
+      'hour': '__NOT_FOUND__', 'startDate': '2026-3-14T20:00+2:00', 'endDate':
+      '2026-3-14T22:00+2:00', 'duration_days': 0, 'location': 'Rambla del Obispo
+      Orbera, 23,04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260203T160223', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/10-anos-dando
+      -guerra.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/christian-garcia-10-anos-dando-gu
+      erra-monologo/'}
+      --------------------
+      {'id': '027bcc91', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'SAUROM', 'id_venue': 'NmPqTrh6', 'venue':
+      'Berlin Social Club', 'std_venue': 'Berlin Social Club', 'start_date':
+      '2026-03-14', 'start_time': '20:00:00', 'end_date': '2026-03-14',
+      'end_time': '22:00:00', 'description': 'La banda de folk metal SAUROM
+      presenta su espectáculo ‘El Principito’ en Almería el sábado 14 de
+      marzo de 2026 en el Berlin Social Club. Un evento cargado de música,
+      emoción y fantasía. El concierto comenzará a las 20:00. SAUROM se
+      reserva el derecho de suspensión del evento por fuerza mayor. En caso de
+      cancelación, las devoluciones de entrada se podrán tramitar durante los
+      15 días posteriores al anuncio.', 'others': {'category': 'Berlin Social
+      Club - Almería', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-3-14T20:00+2:00', 'endDate': '2026-3-14T22:00+2:00',
+      'duration_days': 0, 'location': 'Parque de Nicolás Salmerón, 9, Bajo 2,
+      04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260203T160223', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/Concierto-SAU
+      ROM-El-Principito.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/concierto-saurom/'}
+      --------------------
+      {'id': 'f6f2a166', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'LOS HUMANOS - MARTINEZ ARES', 'id_venue':
+      'DgpfFbPt', 'venue': 'Teatro Cervantes', 'std_venue': 'Teatro Cervantes',
+      'start_date': '2026-03-14', 'start_time': '21:30:00', 'end_date':
+      '2026-03-14', 'end_time': '22:30:00', 'description': 'Fecha: 14 de Marzo.
+      Lugar: Teatro Cervantes. Hora: 21:30 h. Venta de Entradas: Puedes comprar
+      tus entradas en eternidadeventos.com', 'others': {'category':
+      '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-3-14T21:30+2:00', 'endDate': '2026-3-14T22:30+2:00',
+      'duration_days': 0, 'location': 'Calle Poeta Villaespesa, 1, 04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260203T160223',
+      'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2025/12/los-humanos-c
+      artel.jpeg', 'url':
+      'https://www.turismodealmeria.org/evento/los-humanos-martinez-ares/'}
+      --------------------
+      {'id': 'b9df8325', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 1, 'event': 'VISITA GUIADA A LA CASA DEL CINE',
+      'id_venue': 'df8rMnjt', 'venue': 'Casa del Cine de Almería', 'std_venue':
+      'Casa del Cine', 'start_date': '2026-03-20', 'start_time':
+      '__NOT_FOUND__', 'end_date': '2026-03-20', 'end_time': '__NOT_FOUND__',
+      'description': 'Si buscas planazo para el viernes… aquí lo tienes. A
+      partir del 12 de diciembre, gran oportunidad para conocer la Casa del
+      Cine, su legado y la historia cinematográfica de Almería.. Únete a
+      nuestra visita guiada por la Finca Santa Isabel y descubre los secretos,
+      anécdotas y rincones que guarda.. Asegura tu plaza llamando al 950 21 00
+      30 (En horario de Casa del Cine). ¡Te esperamos!', 'others': {'category':
+      'Todos los viernes', 'hour': '__NOT_FOUND__', 'startDate': '2026-3-20',
+      'endDate': '2026-3-20', 'duration_days': 0, 'location': 'Camino Romero, 1,
+      04009 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260203T160223', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2025/12/visita-guiada
+      .jpg', 'url':
+      'https://www.turismodealmeria.org/evento/visita-guiada-a-la-casa-del-cine/
+      var/ri-14.l-L1'}
+      --------------------
+      {'id': '562c6551', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Noche de música con XoRayQué Flamenco',
+      'id_venue': None, 'venue': 'Restaurante Bagua Almería', 'std_venue':
+      None, 'start_date': '2026-03-20', 'start_time': '20:00:00', 'end_date':
+      '2026-03-20', 'end_time': '22:00:00', 'description': 'Ven al BAGUA-ROSSO
+      RESTORANTE el viernes 20 para disfrutar de una noche inolvidable de
+      música con @XORAYQUE_FLAMENCO. Un espectáculo de flamenco fusión que
+      combina diversos palos flamencos con estilos únicos, dando como resultado
+      una propuesta musical personal y vibrante. Preventa a 5 euros y entradas
+      en puerta por 7 euros. ¡No te lo pierdas!', 'others': {'category':
+      'BAGUA-ROSSO RESTORANTE, Av. Federico García Lorca 5', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-3-20T20:00+2:00', 'endDate':
+      '2026-3-20T22:00+2:00', 'duration_days': 0, 'location': 'Av. Federico
+      García Lorca, 5, 04004 Almería'}, 'source': 'AlmeriaTurismo',
+      'exec_time': '20260203T160223', 'session': '2026_02_03_15_59_Martes',
+      'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Noche-de-musi
+      ca-con-XoRayQue-Flamenco.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/noche-de-musica-con-xorayque-flam
+      enco/'}
+      --------------------
+      {'id': 'ee9693ec', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': '500 NOCHES - TRIBUTO A JOAQUÍN SABINA',
+      'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None,
+      'start_date': '2026-03-20', 'start_time': '20:30:00', 'end_date':
+      '2026-03-20', 'end_time': '21:30:00', 'description': 'Viernes 20 mar 2026
+      20:30. PRECIO DE LAS ENTRADAS:. ANTICIPADA NIVEL A: 25 EUROS. ANTICIPADA
+      NIVEL B: 20 EUROS. GENERAL DÍA DEL EVENTO (NIVEL A Y B): 30 EUROS',
+      'others': {'category': '__NOT_FOUND__', 'hour': '__NOT_FOUND__',
+      'startDate': '2026-3-20T20:30+2:00', 'endDate': '2026-3-20T21:30+2:00',
+      'duration_days': 0, 'location': '__NOT_FOUND__'}, 'source':
+      'AlmeriaTurismo', 'exec_time': '20260203T160223', 'session':
+      '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/500-noches.jp
+      g', 'url':
+      'https://www.turismodealmeria.org/evento/500-noches-tributo-a-joaquin-sabi
+      na/'}
+      --------------------
+      {'id': 'a58cc986', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'VEINTIUNO - MÍTOLOGÍA', 'id_venue':
+      'NmPqTrh6', 'venue': 'Berlin Social Club', 'std_venue': 'Berlin Social
+      Club', 'start_date': '2026-03-20', 'start_time': '22:00:00', 'end_date':
+      '2026-03-20', 'end_time': '23:00:00', 'description': 'Viernes 20 Marzo.
+      Apertura 22.00h. Precio del evento: 22,00 €', 'others': {'category':
+      '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-3-20T22:00+2:00', 'endDate': '2026-3-20T23:00+2:00',
+      'duration_days': 0, 'location': 'Parque de Nicolás Salmerón, 9, Bajo 2,
+      04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260203T160223', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/21.jpg',
+      'url': 'https://www.turismodealmeria.org/evento/veintiuno-mitologia/'}
+      --------------------
+      {'id': 'e17ddacc', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'LORCAS´INDÓMITA - DELICATESSEN INVIERNO
+      2026', 'id_venue': 'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue':
+      'Teatro Apolo', 'start_date': '2026-03-26', 'start_time': '20:30:00',
+      'end_date': '2026-03-26', 'end_time': '21:30:00', 'description': 'Jueves
+      26 de Marzo 2026 20:30. PRECIO DE LAS ENTRADAS: 14 EUROS. ABONO
+      DELICATESSEN INVIERNO 2026 (INCLUYE “ETER, DANZA DE LUCES”,
+      “ALETHEIA” Y “LORCAS´INDÓMITA”): 33 EUROS', 'others':
+      {'category': '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-3-26T20:30+2:00', 'endDate': '2026-3-26T21:30+2:00',
+      'duration_days': 0, 'location': 'Rambla Obispo Orbera, 25,04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260203T160223',
+      'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/lorca.jpg',
+      'url':
+      'https://www.turismodealmeria.org/evento/lorcasindomita-delicatessen-invie
+      rno-2026/'}
+      --------------------
+      {'id': '8c02203d', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 1, 'event': 'VISITA GUIADA A LA CASA DEL CINE',
+      'id_venue': 'df8rMnjt', 'venue': 'Casa del Cine de Almería', 'std_venue':
+      'Casa del Cine', 'start_date': '2026-03-27', 'start_time':
+      '__NOT_FOUND__', 'end_date': '2026-03-27', 'end_time': '__NOT_FOUND__',
+      'description': 'Si buscas planazo para el viernes… aquí lo tienes. A
+      partir del 12 de diciembre, gran oportunidad para conocer la Casa del
+      Cine, su legado y la historia cinematográfica de Almería.. Únete a
+      nuestra visita guiada por la Finca Santa Isabel y descubre los secretos,
+      anécdotas y rincones que guarda.. Asegura tu plaza llamando al 950 21 00
+      30 (En horario de Casa del Cine). ¡Te esperamos!', 'others': {'category':
+      'Todos los viernes', 'hour': '__NOT_FOUND__', 'startDate': '2026-3-27',
+      'endDate': '2026-3-27', 'duration_days': 0, 'location': 'Camino Romero, 1,
+      04009 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260203T160223', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2025/12/visita-guiada
+      .jpg', 'url':
+      'https://www.turismodealmeria.org/evento/visita-guiada-a-la-casa-del-cine/
+      var/ri-15.l-L1'}
+      --------------------
+      {'id': 'd9081757', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'MORRICONE ROCK EXPERIENCE', 'id_venue':
+      None, 'venue': '__NOT_FOUND__', 'std_venue': None, 'start_date':
+      '2026-03-27', 'start_time': '20:30:00', 'end_date': '2026-03-27',
+      'end_time': '23:00:00', 'description': 'vie 27 mar 2026 20:30. auditorio
+      municipal maestro padilla.', 'others': {'category': '__NOT_FOUND__',
+      'hour': '__NOT_FOUND__', 'startDate': '2026-3-27T20:30+2:00', 'endDate':
+      '2026-3-27T23:00+2:00', 'duration_days': 0, 'location': '__NOT_FOUND__'},
+      'source': 'AlmeriaTurismo', 'exec_time': '20260203T160223', 'session':
+      '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/morricone.jpg
+      ', 'url':
+      'https://www.turismodealmeria.org/evento/morricone-rock-experience/'}
+      --------------------
+      {'id': '9095cced', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Vera Fauna', 'id_venue': 'NmPqTrh6',
+      'venue': 'Berlin Social Club', 'std_venue': 'Berlin Social Club',
+      'start_date': '2026-03-27', 'start_time': '21:00:00', 'end_date':
+      '2026-03-27', 'end_time': '23:00:00', 'description': 'La banda Vera Fauna
+      llega a Almería con su gira ‘Dime Dónde Estamos’. El concierto
+      tendrá lugar el 27 de marzo en la Sala Berlin Social Club. No te pierdas
+      esta oportunidad de disfrutar en directo de su sonido fresco y
+      envolvente.', 'others': {'category': 'Gira Dime Dónde Estamos en
+      Almería', 'hour': '__NOT_FOUND__', 'startDate': '2026-3-27T21:00+2:00',
+      'endDate': '2026-3-27T23:00+2:00', 'duration_days': 0, 'location': 'Parque
+      de Nicolás Salmerón, 9, Bajo 2, 04001 Almería'}, 'source':
+      'AlmeriaTurismo', 'exec_time': '20260203T160223', 'session':
+      '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/Concierto-Ver
+      a-Fauna-Gira-Dime-Donde-Estamos-en-Almeria.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/vera-fauna/'}
+      --------------------
+      {'id': '273777e6', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Paco Candela - Gira 30 años', 'id_venue':
+      None, 'venue': '__NOT_FOUND__', 'std_venue': None, 'start_date':
+      '2026-03-28', 'start_time': '13:18:00', 'end_date': '2026-03-28',
+      'end_time': '13:18:00', 'description': 'Paco Candela celebra por todo lo
+      alto 30 años de carrera con una nueva gira que será la más importante y
+      emocionante para el artista, una serie de conciertos únicos rodeado por
+      un gran elenco de músicos que hacen de cada noche una nueva fiesta
+      interpretando sus mejores temas como sólo en directo se puede hacer.',
+      'others': {'category': '__NOT_FOUND__', 'hour': '__NOT_FOUND__',
+      'startDate': '2026-3-28T13:18+2:00', 'endDate': '2026-3-28T13:18+2:00',
+      'duration_days': 0, 'location': '__NOT_FOUND__'}, 'source':
+      'AlmeriaTurismo', 'exec_time': '20260203T160223', 'session':
+      '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/Paco-Candela-
+      Gira-30-anos.png', 'url':
+      'https://www.turismodealmeria.org/evento/paco-candela-gira-30-anos/'}
+      --------------------
+      {'id': '87fdd830', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'MARTA SOTO - REINICIO', 'id_venue':
+      'NmPqTrh6', 'venue': 'Berlin Social Club', 'std_venue': 'Berlin Social
+      Club', 'start_date': '2026-03-28', 'start_time': '22:30:00', 'end_date':
+      '2026-03-28', 'end_time': '23:30:00', 'description': 'Fecha: Sábado 28
+      Marzo. Precio del evento: 20,00 €', 'others': {'category':
+      '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-3-28T22:30+2:00', 'endDate': '2026-3-28T23:30+2:00',
+      'duration_days': 0, 'location': 'Parque de Nicolás Salmerón, 9, Bajo 2,
+      04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260203T160223', 'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/marta-soto.jp
+      g', 'url': 'https://www.turismodealmeria.org/evento/marta-soto-reinicio/'}
+      --------------------
+      {'id': '8f603982', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller Arte y Botánica – Herbario
+      Poético II', 'id_venue': None, 'venue': 'Pabellón de Historia Natural,
+      PHN', 'std_venue': None, 'start_date': '2026-03-29', 'start_time':
+      '11:00:00', 'end_date': '2026-03-29', 'end_time': '14:00:00',
+      'description': 'Un taller que combina arte y botánica organizado por el
+      Pabellón de Historia Natural de la Universidad de Almería.. Fechas
+      (ciclo de 3 sesiones):. 25 de enero a las 11:00 h.. 22 de febrero a las
+      11:00 h.. 29 de marzo a las 11:00 h.. Precio: 15 € por persona (incluye
+      las 3 sesiones).. Lugar: Pabellón de Historia Natural (UAL)..
+      Inscripciones: Enviando un correo a phnual@ual.es.', 'others':
+      {'category': '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-3-29T11:00+2:00', 'endDate': '2026-3-29T14:00+2:00',
+      'duration_days': 0, 'location': 'Universidad de Almería, 04120
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260203T160223',
+      'session': '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/taller-arte-b
+      otanica.jpeg', 'url':
+      'https://www.turismodealmeria.org/evento/taller-arte-y-botanica-herbario-p
+      oetico-ii/var/ri-2.l-L1'}
+      --------------------
+      {'id': '115ffb08', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 1, 'event': 'UD Almería vs R. Sociedad B', 'id_venue':
+      '2c7846a2', 'venue': 'UD Almería Stadium', 'std_venue': 'UD Almería
+      Stadium', 'start_date': '2026-03-29', 'start_time': '__NOT_FOUND__',
+      'end_date': '2026-03-29', 'end_time': '__NOT_FOUND__', 'description': 'El
+      próximo domingo 29 de marzo se celebrará el emocionante encuentro entre
+      UD Almería y R. Sociedad B en el UD Almería Stadium. Un duelo imperdible
+      para los amantes del fútbol.', 'others': {'category': 'Partido de fútbol
+      UD Almería vs R. Sociedad B', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-3-29', 'endDate': '2026-3-29', 'duration_days': 0, 'location': 'C.
+      Alcalde Santiago Martínez Cabrejas, 5, 04007 Almería'}, 'source':
+      'AlmeriaTurismo', 'exec_time': '20260203T160223', 'session':
+      '2026_02_03_15_59_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/UD-Almeria-vs
+      -R.-Sociedad-B.png', 'url':
+      'https://www.turismodealmeria.org/evento/ud-almeria-vs-r-sociedad-b/'}
+      Checking unique event url.
+      New url events = 33
+      ****************************
+      Saving 33 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_02_03_15_59_Martes/0_raw/20260203_1
+      602_AlmeriaTurismo.json
+      Saving 33 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+      ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+      selenium
+
+Result: Succeeded
+
+Launching scraper: JuntaAndaluciaAgenda

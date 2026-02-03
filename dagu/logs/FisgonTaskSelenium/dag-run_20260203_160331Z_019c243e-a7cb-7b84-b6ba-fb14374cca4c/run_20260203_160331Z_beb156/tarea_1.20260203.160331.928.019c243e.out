@@ -1,0 +1,91 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=JuntaAndaluciaAgenda
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019c243e-a7cb-7b84-b6ba-fb14374cca4c
+
+Running for Almeria: JuntaAndaluciaAgenda
+JuntaAndaluciaAgenda
+RUNNING SESSION =  2026_02_03_15_59_Martes
+Starting WebDriver...
+http://localhost:4444/wd/hub
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1) Not found
+Getting content
+*** SCRAPED 64 URLS WITH EVENTS **
+New url events = 30
+0 / 30
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/correspondencias
+Sleep 4
+--------------------
+{'id': 'c022ea65', 'show': 1, 'in_city': 1, 'one_day': 0, 'wrong_date_time': 1, 'event': 'Correspondencias', 'id_venue': 'DDDLJ7pm', 'venue': 'Centro Andaluz de la Fotografía', 'std_venue': 'Centro Andaluz de la Fotografía', 'start_date': '2025-12-04', 'start_time': '__NOT_FOUND__', 'end_date': '2026-02-08', 'end_time': '__NOT_DEFINIED__', 'description': 'El proyecto expositivo Correspondencias une al Centro Andaluz de la Fotografía y al Museo de Almería en torno a la muestra Roma , de David Jiménez. Una iniciativa que promueve un diálogo innovador entre el patrimonio arqueológico y la creación fotográfica contemporánea con el objetivo de generar nuevas lecturas y vínculos entre las colecciones de ambas instituciones.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/centro-andaluz-de-la-fotografia', 'location2': 'Centro Andaluz de la Fotografía', 'duration': '__NOT_FOUND__', 'datetime_details': '04 de Diciembre del 2025 - 08 de Febrero del 2026, Horario general (1 de octubre - 31 de mayo): de martes a domingo, de 10:00 a 14:00 y de 17:30 a 20:30.\xa0Horario especial de verano (1 de junio - 30 de septiembre): de martes a domingo, de 10:00 a 14:00 y de 18:30 a 21:30.', 'town': '__NOT_FOUND__', 'location': 'Calle Pintor Díaz Molina 9, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260203T160332', 'session': '2026_02_03_15_59_Martes', 'image': '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-01/IMG_6360.JPG.webp?itok=kEYCUT6m', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/correspondencias'}
+1 / 30
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/morricone-rock-experience-en-vera
+Sleep 4
+--------------------
+{'id': 'af814cd8', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Morricone Rock Experience en Vera', 'id_venue': None, 'venue': 'Auditorio Ciudad de Vera', 'std_venue': None, 'start_date': '2026-03-28', 'start_time': '20:30:00', 'end_date': '2026-03-28', 'end_time': '__NOT_DEFINIED__', 'description': 'De producción española, este espectáculo nacido en Italia rinde tributo al legendario Ennio Morricone, cuya música marcó para siempre la historia del cine. Morricone Rock Experience reúne a músicos y voces que, a través de instrumentos eléctricos y nuevas tecnologías, proponen una experiencia innovadora: un recorrido por el universo cinematográfico del maestro italiano y por algunas de sus bandas sonoras más emblemáticas. El espectáculo se estrena en la provincia de Almería, un enclave clave en la inspiración de Morricone para muchas de las películas que llevaron su inconfundible sello musical.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/auditorio-ciudad-de-vera', 'location2': 'Auditorio Ciudad de Vera', 'duration': '__NOT_FOUND__', 'datetime_details': '28 de Marzo del 2026, 20:30 Horas', 'town': '__NOT_FOUND__', 'location': 'Carretera de Cuevas 1, Vera. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260203T160332', 'session': '2026_02_03_15_59_Martes', 'image': '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-01/morricone_almeria.jpg.webp?itok=BllEpHpm', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/morricone-rock-experience-en-vera'}
+2 / 30
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/almeria-lectura-de-poemas-de-raul-quinto
+Sleep 4
+--------------------
+{'id': 'e69d899c', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Almería. Lectura de poemas de Raúl Quinto', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-02-17', 'start_time': '19:00:00', 'end_date': '2026-02-17', 'end_time': '__NOT_DEFINIED__', 'description': 'El Centro Andaluz de las Letras les invita en Almería a una nueva sesión del ciclo Poesía en el Centro , en la que habrá una lectura de poemas del libro de Raúl Quinto , titulado Un idioma siempre al borde de la extinción. Poesía 2002-2026 (Ed. La Bella Varsovia). Un idioma siempre al borde de la extinción recoge toda la producción poética publicada hasta la fecha por Raúl Quinto desde que en 2002 apareciera su primer poemario, Grietas . Esta edición, que abarca más de dos décadas, contiene los seis libros que le siguieron, así como también una antología de poemas dispersos y un librito inédito, escrito durante los días del confinamiento, titulado Cuaderno de la peste de 1348 y que aparece aquí por primera vez. La actividad será el martes 17 de febrero a las 19:00 horas en la Biblioteca Pública Provincial Francisco Villaespesa (c/ Hermanos Machado, s/n). Entrada libre hasta completar aforo.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-estado-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details': '17 de Febrero del 2026, 19:00 horas\n', 'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260203T160332', 'session': '2026_02_03_15_59_Martes', 'image': '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/external_images/raul_quinto_0.jpg.webp?itok=iInWAyHn', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/almeria-lectura-de-poemas-de-raul-quinto'}
+3 / 30
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/campeones-2-en-el-teatro
+Sleep 4
+--------------------
+{'id': '32eb157d', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Campeones 2 en el teatro', 'id_venue': '27qNP7DH', 'venue': 'Auditorio Municipal Maestro Padilla', 'std_venue': 'Auditorio Municipal Maestro Padilla', 'start_date': '2026-04-25', 'start_time': '20:00:00', 'end_date': '2026-04-25', 'end_time': '__NOT_DEFINIED__', 'description': 'Claudia es una actriz de éxito, pero siente que aún no ha llegado el papel que la consagre definitivamente. La oportunidad aparece cuando un legendario director la elige como protagonista de su última película, escrita especialmente para ella. Hay una condición: el personaje tiene una discapacidad y el director quiere verla antes de tomar la decisión final. Con solo tres semanas para prepararse, Claudia decide retomar la relación con Gloria, su prima con síndrome de Down, a la que abandonó años atrás al marcharse a cumplir su sueño. El reencuentro la lleva a un grupo de teatro inclusivo que ensaya una peculiar versión de La casa de Bernarda Alba, dirigido por Juan, un antiguo talento marcado por la fama y la renuncia. Mientras Claudia se integra en el grupo y finge tener una discapacidad para actuar con ellos, se verá obligada a enfrentarse a sus miedos, a su ambición y a una pregunta esencial: ¿qué es realmente el éxito?', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/auditorio-municipal-maestro-padilla', 'location2': 'Auditorio Municipal Maestro Padilla', 'duration': '__NOT_FOUND__', 'datetime_details': '25 de Abril del 2026, 20:00 horas', 'town': '__NOT_FOUND__', 'location': 'Plaza de Alfredo Kraus, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260203T160332', 'session': '2026_02_03_15_59_Martes', 'image': '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-01/campeones.jpg.webp?itok=bC_QwoIQ', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/campeones-2-en-el-teatro'}
+4 / 30
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/far-west-6
+Sleep 4
+--------------------
+{'id': 'cb5a6882', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 0, 'event': 'FAR WEST', 'id_venue': None, 'venue': 'Teatro Auditorio Ciudad de Vícar', 'std_venue': None, 'start_date': '2026-04-25', 'start_time': '20:30:00', 'end_date': '2026-04-25', 'end_time': '__NOT_DEFINIED__', 'description': 'COMPAÑÍA: Producciones Yllana. DURACIÓN: 80 min Un pacífico y sencillo granjero recibe, en una polvorienta estación de tren en el lejano oeste, a su prometida. Pero antes de que puedan darse el primer beso, es secuestrada por dos malísimos forajidos en busca y captura. Nuestro improbable héroe intentará por todos los medios a su alcance rescatar a su amor, mientras que ésta, durante su secuestro, encontrará dentro de ella valores que ella misma desconocía, que la transformarán en una auténtica heroína. Bienvenidos a Far West, la primera incursión de Yllana en el género del western. A través de la epopeya de nuestros antihéroes, nos adentraremos en un mundo salvaje y sin ley; visitaremos tribus indias, cantinas de mala muerte, desiertos llenos de peligros, duelos al sol, grandes persecuciones y, como en todo buen western, acción, mucha acción. Yllana homenajea con este nuevo espectáculo el mundo de las películas del oeste, que tanto estimularon nuestra imaginación e hicieron jugar; a sus héroes, sus villanos, sus fronteras y a los hombres que se atrevieron a desafiarlas.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/teatro-auditorio-ciudad-de-vicar-0', 'location2': 'Teatro Auditorio Ciudad de Vícar', 'duration': '80', 'datetime_details': '25 de Abril del 2026, 20:30\n', 'town': '__NOT_FOUND__', 'location': 'CalleHoracio, nº s/n, Vícar. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260203T160332', 'session': '2026_02_03_15_59_Martes', 'image': '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/external_images/FarWestImagen.jpg.webp?itok=0w8ZhKEL', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/far-west-6'}
+5 / 30
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/visitas-alcazaba-de-almeria
+Sleep 4
+--------------------
+{'id': '1c51754f', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 1, 'event': 'Conjunto Monumental de la Alcazaba de Almería', 'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None, 'start_date': '__NOT_FOUND__', 'start_time': '__NOT_FOUND__', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_DEFINIED__', 'description': 'Del 21 de marzo al 20 de junio: Martes a sábado de 09:00 a 21:00. Del 21 de junio al 20 de septiembre: Martes a sábado de 09:00 a 15:00 y de 20:00 a 22:00. Del 21 de septiembre al 20 de marzo: Martes a sábado de 09:00 a 18:00. TODO EL AÑO: Domingos, festivos y lunes víspera de festivos, de 9:00 a 15:00 horas.', 'others': {'location_url': '__NOT_FOUND__', 'location2': 'Calle Almanzor, s/n 950 801 008 / 600 142 982 alcazabaalmeria.ccul@juntadeandalucia.es Visitar la pagina web', 'duration': '__NOT_FOUND__', 'datetime_details': '__NOT_FOUND__', 'town': '__NOT_FOUND__', 'location': 'Calle Almanzor, s/n, Almería, Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260203T160332', 'session': '2026_02_03_15_59_Martes', 'image': '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/image/2023/11/almeria_-_alcazaba.jpg.webp?itok=gC4euQ7q', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/visitas-alcazaba-de-almeria'}
+6 / 30
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/alma-3
+Sleep 4
