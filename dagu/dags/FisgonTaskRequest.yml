@@ -1,4 +1,4 @@
-name: "FisgonTask"
+name: "FisgonTaskRequest"
 params:
   - TARGET_CITY: ""
   - TARGET_SCRAPER: ""

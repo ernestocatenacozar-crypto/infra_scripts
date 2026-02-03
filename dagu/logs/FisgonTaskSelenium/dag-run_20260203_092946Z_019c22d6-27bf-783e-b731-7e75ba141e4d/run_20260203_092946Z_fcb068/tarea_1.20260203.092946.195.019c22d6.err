@@ -1,0 +1,42 @@
+Traceback (most recent call last):
+  File "/app/run.py", line 121, in <module>
+    run_one(events_extractors, TARGET_SCRAPER, session_manager, TARGET_CITY)
+  File "/app/run.py", line 18, in run_one
+    ev.run()
+  File "/app/scraper/extractors/main_pages/abc_main_pages_extractor.py", line 17, in run
+    result = self.iterate_pages_clean_events()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/main_pages/almeria_turismo.py", line 31, in iterate_pages_clean_events
+    f.click_on(self.click_month_css.format(month))
+  File "/app/scraper/webdriver_controller/fisgon.py", line 150, in click_on
+    button = self.driver.find_element(self.selector, css_selector)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 802, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.legend > a:nth-child(3)"}
+  (Session info: chrome=143.0.7499.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+#0 0x5898b7d4761a <unknown>
+#1 0x5898b77c420b <unknown>
+#2 0x5898b781590f <unknown>
+#3 0x5898b7815b51 <unknown>
+#4 0x5898b7863d84 <unknown>
+#5 0x5898b786120e <unknown>
+#6 0x5898b7808232 <unknown>
+#7 0x5898b7808ee1 <unknown>
+#8 0x5898b7d103f9 <unknown>
+#9 0x5898b7d1334d <unknown>
+#10 0x5898b7cf9122 <unknown>
+#11 0x5898b7d13f2b <unknown>
+#12 0x5898b7cdfc30 <unknown>
+#13 0x5898b7d34d78 <unknown>
+#14 0x5898b7d34f4c <unknown>
+#15 0x5898b7d46973 <unknown>
+#16 0x767b14eb1aa4 <unknown>
+#17 0x767b14f3ea64 __clone
+

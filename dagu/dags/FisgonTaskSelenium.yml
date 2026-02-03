@@ -1,4 +1,4 @@
-name: "FisgonTask"
+name: "FisgonTaskSelenium"
 params:
   - TARGET_CITY: ""
   - TARGET_SCRAPER: ""

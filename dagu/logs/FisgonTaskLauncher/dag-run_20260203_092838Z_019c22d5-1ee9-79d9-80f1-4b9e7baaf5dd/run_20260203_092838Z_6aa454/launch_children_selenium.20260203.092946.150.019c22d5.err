@@ -1,0 +1,3 @@
+time=2026-02-03T09:29:46.176Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c22d6-27bf-783e-b731-7e75ba141e4d params=""
+time=2026-02-03T09:29:46.188Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c22d6-27bf-783e-b731-7e75ba141e4d attempt-id="" dag=FisgonTaskSelenium run-id=019c22d6-27bf-783e-b731-7e75ba141e4d params="[TARGET_CITY=Almeria TARGET_SCRAPER=AlmeriaTurismo 3=DAGU_BASE_URL=]"
+time=2026-02-03T09:29:46.191Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c22d6-27bf-783e-b731-7e75ba141e4d attempt-id="" dag=FisgonTaskSelenium run-id=019c22d6-27bf-783e-b731-7e75ba141e4d step=tarea_1
