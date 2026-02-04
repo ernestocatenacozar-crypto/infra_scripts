@@ -1,1 +1,433 @@
 Launching scraper: JuntaAndaluciaAgenda
+Succeeded - 2026-02-04T09:07:28Z
+
+dag: FisgonTaskSelenium (6m 4s)
+│
+└─tarea_1 (6m 4s) [succeeded]
+  ├─stdout: ... (228 more lines)
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '642846f7', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': "Festival Internacional de Música y
+  │   Danza 'Ciudad de Úbeda'", 'id_venue': None, 'venue': 'Auditorio del
+  │   centro Cultural Hospital de Santiago', 'std_venue': None, 'start_date':
+  │   '2026-05-15', 'start_time': '__NOT_FOUND__', 'end_date': '2026-06-20',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'El Festival
+  │   Internacional de Música y Danza “Ciudad de Úbeda” 2026 celebra del
+  │   15 de mayo al 20 de junio su 38a edición y vuelve a situar a la ciudad
+  │   Patrimonio de la Humanidad como uno de los grandes epicentros culturales
+  │   de España, con una programación de primer nivel que reúne a
+  │   orquestas, solistas y compañías de danza de prestigio internacional',
+  │   'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/auditorio-del-centro-cultur
+  │   al-hospital-de-santiago', 'location2': 'Facebook Twitter Auditorio del
+  │   centro Cultural Hospital de Santiago', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '15 de Mayo del 2026 - 20 de Junio del 2026, Se
+  │   recomienda consultar programación.\xa0', 'town': '__NOT_FOUND__',
+  │   'location': 'Obispo Cobos, 28, Úbeda. Jaén', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260204T090728', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/logo_festival_de_ubeda_amarillo_header.png
+  │   .webp?itok=XeeGE-A1', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/festival-internacional-de-musica-y-danza-ciudad-de-ubeda'}
+  │   37 / 45
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /imagina-funk-festival-sierra-magina-torres-jaen
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'e75bd3be', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Imágina Funk Festival Sierra Mágina
+  │   (Torres, Jaén)', 'id_venue': None, 'venue': 'Varios lugares en el
+  │   municipio, Pozo Alcón, Jaén', 'std_venue': None, 'start_date':
+  │   '2026-07-31', 'start_time': '__NOT_FOUND__', 'end_date': '2026-08-01',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Imagina funk es un
+  │   Festival de música Funk que se celebrará en Sierra Mágina, Torres,
+  │   Jaén. Del 31 de julio al 1 de agosto la localidad de Pozo Alcón
+  │   acogerá un año más el Imagina Funk, el festival, único de funk en
+  │   Europa, que rinde homenaje a la música negra, al funk, al soul, al
+  │   afrobeat, con una ambición humilde pero muy clara: ser un punto de
+  │   encuentro para amantes del groove más auténtico.', 'others':
+  │   {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/varios-lugares-en-el-munici
+  │   pio-pozo-alcon-jaen', 'location2': 'Facebook del festival Instagram del
+  │   festival Twitter del festival Youtube del festival Varios lugares en el
+  │   municipio, Pozo Alcón, Jaén', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '31 de Julio del 2026 - 01 de Agosto del 2026,
+  │   Consultar', 'town': '__NOT_FOUND__', 'location': ', Pozo Alcón. Jaén',
+  │   'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda',
+  │   'exec_time': '20260204T090728', 'session': '2026_02_04_09_04_Miercoles',
+  │   'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/imagina_funk.jpg.webp?itok=mazWH0Td',
+  │   'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/imagina-funk-festival-sierra-magina-torres-jaen'}
+  │   38 / 45
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /las-guerreras-k-pop-en-baeza
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '212e4765', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Las guerreras K-pop en Baeza',
+  │   'id_venue': None, 'venue': 'Teatro Montemar ', 'std_venue': None,
+  │   'start_date': '2026-02-08', 'start_time': '17:00:00', 'end_date':
+  │   '2026-02-08', 'end_time': '__NOT_DEFINIED__', 'description': 'Un tributo
+  │   musical para bailar y cantar los temas mas molones del momento.',
+  │   'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/teatro-montemar',
+  │   'location2': 'Teatro Montemar ', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '08 de Febrero del 2026, 17:00 horas', 'town':
+  │   '__NOT_FOUND__', 'location': 'C/ Cózar, Baeza. Jaén', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260204T090728', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2025-11/kpop_0.jpg.webp?itok=o5khhs55', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/las-guerreras-k-pop-en-baeza'}
+  │   39 / 45
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /jose-luis-calero-humorista-de-guardia-en-jaen
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'cae352b3', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'José Luis Calero. Humorista de guardia,
+  │   en Jaén', 'id_venue': '1bb137d9', 'venue': 'Teatro Infanta Leonor',
+  │   'std_venue': 'Teatro Infanta Leonor', 'start_date': '2026-02-20',
+  │   'start_time': '21:00:00', 'end_date': '2026-02-20', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Tras el gran éxito cosechado en sus
+  │   anteriores giras nacionales con Mi gran noche de humor y Vivir Así es
+  │   Morir de Humor , José Luis Calero vuelve de nuevo a los escenarios con
+  │   su nuevo espectáculo HUMORISTA DE GUARDIA Con más de 1 millón y medio
+  │   de seguidores y vídeos que han llegado a alcanzar los 12 millones de
+  │   visualizaciones, además de ser un rostro habitual en programas de
+  │   Telecinco o Canal Sur Radio, el humorista andaluz llega a los teatros
+  │   para contarle al público su alocada y surrealista vida repleta de
+  │   anécdotas y disparates. Una vida llena de comedia y de situaciones
+  │   cotidianas que te hará sentir fielmente reflejado y que te obligará a
+  │   decir frases como: "Y es verdad..." "esa es mi madre" o "eso me ha
+  │   pasado a mi"... HUMORISTA DE GUARDIA. En nuestros días, los problemas
+  │   son protagonistas en nuestras vidas. Problemas de trabajo, problemas
+  │   familiares, problemas económicos y, lo que es peor, problemas de salud.
+  │   Por todo esto, el joven humorista andaluz piensa que hoy más que nunca,
+  │   el público necesita un humorista de guardia.', 'others':
+  │   {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/evento/teatro-infanta-leonor-de-jaen
+  │   ', 'location2': 'Más información de José Luis Calero en Facebook Más
+  │   información de José Luis Calero en Instagram Más información de
+  │   José Luis Calero en TikTok Más información de José Luis Calero en
+  │   Twitter Teatro Infanta Leonor', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '20 de Febrero del 2026, 21:00 horas', 'town':
+  │   '__NOT_FOUND__', 'location': 'C/ Molino de Condesa, s/n, Jaén. Jaén',
+  │   'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda',
+  │   'exec_time': '20260204T090728', 'session': '2026_02_04_09_04_Miercoles',
+  │   'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2025-01/calero_general.png.webp?itok=9o-UFOXN',
+  │   'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/jose-luis-calero-humorista-de-guardia-en-jaen'}
+  │   40 / 45
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /eva-y-que-en-bailen-me-teneis-frita-0
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'ba35e33e', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Eva y qué en Bailén: Me tenéis
+  │   Frita', 'id_venue': None, 'venue': 'Auditorio municipal de Jamilena',
+  │   'std_venue': None, 'start_date': '2026-05-16', 'start_time': '19:00:00',
+  │   'end_date': '2026-05-16', 'end_time': '__NOT_DEFINIED__', 'description':
+  │   '"Me tenéis Frita" es el espectáculo de monólogos de la humorista
+  │   jiennense Eva y Qué , donde con humor directo y cercano se ríe de la
+  │   vida moderna, el amor maduro y los temas cotidianos, invitando al
+  │   público a desconectar y olvidarse de las preocupaciones, siendo un show
+  │   lleno de "puro, intenso y con mucho cuerpo" como el buen aceite de
+  │   oliva, con fechas de gira por España.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/auditorio-municipal-de-jami
+  │   lena', 'location2': 'Auditorio municipal de Jamilena', 'duration':
+  │   '__NOT_FOUND__', 'datetime_details': '16 de Mayo del 2026, 19:00 horas',
+  │   'town': '__NOT_FOUND__', 'location': 'Calle Murillo 2, Jamilena. Jaén',
+  │   'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda',
+  │   'exec_time': '20260204T090728', 'session': '2026_02_04_09_04_Miercoles',
+  │   'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/3-83595x1-0vq1c.jpg.webp?itok=Iwmk8qgi',
+  │   'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/eva-y-que-en-bailen-me-teneis-frita-0'}
+  │   41 / 45
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /tributo-las-guerreras-k-pop
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'fbffbe99', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Tributo: Las guerreras K-pop',
+  │   'id_venue': '1bb137d9', 'venue': 'Teatro Infanta Leonor', 'std_venue':
+  │   'Teatro Infanta Leonor', 'start_date': '2026-02-15', 'start_time':
+  │   '12:30:00', 'end_date': '2026-02-15', 'end_time': '__NOT_DEFINIED__',
+  │   'description': 'Los mayores de 24 meses deben tener su propia entrada
+  │   para acceder al recinto.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/evento/teatro-infanta-leonor-de-jaen
+  │   ', 'location2': 'Teatro Infanta Leonor', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '15 de Febrero del 2026, 12:30, 17:00 y 19:30
+  │   horas', 'town': '__NOT_FOUND__', 'location': 'C/ Molino de Condesa, s/n,
+  │   Jaén. Jaén', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260204T090728', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/tributo%20kpopjpeg.jpeg.webp?itok=Dg3D0eX1
+  │   ', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/tributo-las-guerreras-k-pop'}
+  │   42 / 45
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /festival-ibero-joven-en-jaen
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'a1b794c9', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Festival Ibero Joven en Jaén',
+  │   'id_venue': None, 'venue': 'Peal de Becerro', 'std_venue': None,
+  │   'start_date': '2026-03-28', 'start_time': '18:00:00', 'end_date':
+  │   '2026-03-28', 'end_time': '__NOT_DEFINIED__', 'description': 'Por el
+  │   escenario del Ibero Joven pasarán, entre otros artistas y grupos:
+  │   Sanguijuelas del Guadiana, Carmen y María, Flowtiago, La Década
+  │   Prodigiosa, Miguel Bastida, SDM, Antonio Díaz DJ y el DJ Miras.',
+  │   'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/peal-de-becerro',
+  │   'location2': 'Peal de Becerro', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '28 de Marzo del 2026, 18:00 horas', 'town':
+  │   '__NOT_FOUND__', 'location': '23460 Peal de Becerro , Peal de Becerro.
+  │   Jaén', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260204T090728', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/ibero%20joven.jpg.webp?itok=nx3QPBi-',
+  │   'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/festival-ibero-joven-en-jaen'}
+  │   43 / 45
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /guerrero-medina-memoria-y-denuncia
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '626e488a', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Guerrero Medina, memoria y denuncia',
+  │   'id_venue': '410590a8', 'venue': 'Museo de Jaén', 'std_venue': 'Museo
+  │   Arqueológico', 'start_date': '2025-12-03', 'start_time':
+  │   '__NOT_FOUND__', 'end_date': '2026-03-06', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Nueva exposición temporal en la
+  │   Sala IV del museo. Del 3 de diciembre de 2025 al 6 de marzo del 2026',
+  │   'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/evento/museo-de-jaen-0',
+  │   'location2': 'Museo de Jaén', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '03 de Diciembre del 2025 - 06 de Marzo del 2026,
+  │   Martes a sábado de 09:00 a 21:00; domingos y festivos de 09:00 a 15:00.
+  │   Lunes cerrado.', 'town': '__NOT_FOUND__', 'location': 'Paseo de la
+  │   Estación, 27, Jaén. Jaén', 'duration_days': '__NOT_FOUND__'},
+  │   'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260204T090728',
+  │   'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/guerrero_medina.jpg.webp?itok=Ti0Sfxdo',
+  │   'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/guerrero-medina-memoria-y-denuncia'}
+  │   44 / 45
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /festival-tolon-tolon-por-los-cencerros-de-ubeda
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '8e1f22a4', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Festival ‘Tolón, Tolón: por los
+  │   cencerros de Úbeda’', 'id_venue': None, 'venue': 'Teatro Safa',
+  │   'std_venue': None, 'start_date': '2026-01-06', 'start_time':
+  │   '__NOT_FOUND__', 'end_date': '2026-02-28', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Del 18 de enero al 28 de febrero,
+  │   Úbeda da la bienvenida a su tradicional e icónico festival de humor
+  │   ‘Tolón, Tolón: por los cencerros de Úbeda’. Esta edición
+  │   contará con un total de ocho actuaciones muy variopintas y estilos bien
+  │   distintos. Un certamen dirigido a todos los que aman el humor y buscan
+  │   pasar un rato divertido y distendido.', 'others': {'location_url':
+  │   '__NOT_FOUND__', 'location2': 'Teatro Safa La Cultural de Úbeda Pub La
+  │   Beltraneja', 'duration': '__NOT_FOUND__', 'datetime_details': '06 de
+  │   Enero del 2026 - 28 de Febrero del 2026', 'town': '__NOT_FOUND__',
+  │   'location': 'Múltiples espacios', 'duration_days': '__NOT_FOUND__'},
+  │   'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260204T090728',
+  │   'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   '/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_ac
+  │   tivity_ext_2xl/public/2026-01/TOLON%20TOLON%20%282%29.jpg.webp?itok=aTvt
+  │   -8px', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/festival-tolon-tolon-por-los-cencerros-de-ubeda'}
+  │   ****************************
+  │   Saving 45 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Jaen/2026_02_04_09_04_Miercoles/0_raw/20260204
+  │   _0907_JuntaAndaluciaAgenda.json
+  │   Saving 45 master url
+  │   Appending to  /home/ubuntu/data_storage/Jaen/00_master/master_url.json
+  │   ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+  │   selenium
+  └─stderr: ... (40 more lines)
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: Entradium
