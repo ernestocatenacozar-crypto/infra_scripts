@@ -1,1 +1,1183 @@
 Launching scraper: ConciertosClub
+Succeeded - 2026-02-04T09:04:25Z
+
+dag: FisgonTaskRequest (1m 51s)
+│
+└─tarea_1 (1m 51s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout: ... (78 more lines)
+  │   12 / 21
+  │   Getting
+  │   https://conciertos.club/jaen/conciertos/113793-halford-experiencie-tribu
+  │   to-a-judas-priest-sebas-souza
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'ffbd3298', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Halford Experiencie. Tributo a Judas
+  │   Priest + Sebas Souza', 'id_venue': 'c84b689b', 'venue': 'Rock States',
+  │   'std_venue': 'Pub Rock States', 'start_date': '2026-02-07',
+  │   'start_time': '20:30:00', 'end_date': '2026-02-07', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Halford Experiencie. Tributo a Judas
+  │   Priest + Sebas Souza. Concierto en Rock States, Jaén (Jaén) el Sábado
+  │   7 de Febrero de 2026. Es una actuación de estilo Versiones/Tributos.',
+  │   'others': {'category': 'Versiones', 'price': '13', 'place_url':
+  │   'https://conciertos.club/jaen/locales/rock-states', 'town': 'Jaén'},
+  │   'source': 'ConciertosClub', 'exec_time': '20260204T090426', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image': '__NOT_FOUND__', 'url':
+  │   'https://conciertos.club/jaen/conciertos/113793-halford-experiencie-trib
+  │   uto-a-judas-priest-sebas-souza'}
+  │   13 / 21
+  │   Getting https://conciertos.club/jaen/conciertos/100265-embusteros
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'df956e99', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Embusteros', 'id_venue': None, 'venue':
+  │   'Café Teatro Central', 'std_venue': None, 'start_date': '2026-02-06',
+  │   'start_time': '21:00:00', 'end_date': '2026-02-06', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': '\nEmbusteros \n\n\nEmbusteros es una
+  │   banda cordobesa que a finales de 2024 publicó "Vértigo", su cuarto
+  │   álbum de estudio, en el que exploran nuevos horizontes sonoros sin
+  │   perder la esencia que los caracteriza:\xa0rock y electrónica\nEn 2021
+  │   publicaron su tercer álbum, “Babel” (Sideral Music 2021), un disco
+  │   compuesto en gran medida desde el confinamiento, y en el que unos textos
+  │   más afilados que nunca nos hablan sobre la falta de comunicación, la
+  │   soledad y la necesidad de compartir ahora más que nunca.\nLa
+  │   electrónica, siempre presente en sus anteriores trabajos, queda
+  │   relegada en esta ocasión a un papel secundario, cediendo el
+  │   protagonismo a las melodías, guitarras y pianos.\nEn 2019 publicaron su
+  │   segundo álbum \'Pequeño Universo\', del que lanzaron como singles
+  │   "Coartada", un grito de ánimo, un canto contra la derrota, una
+  │   incitación a vivir el presente, "El Miedo",\xa0con un riff de bajo
+  │   distorsionado, y "Todo el Universo".\nSu primer lp, ‘‘La
+  │   Verdad’’ fue editado por la multinacional Warner Music.\nFormación:
+  │   José Espín (Voz principal y bajo), Germán Muñoz (Guitarras y coros)
+  │   Rafa Urbano (Guitarra y coros) y Faly (batería)\n', 'others':
+  │   {'category': 'Pop-rock', 'price': '16,50', 'place_url':
+  │   'https://conciertos.club/jaen/locales/cafe-teatro-central', 'town':
+  │   'Baeza (Jaén)'}, 'source': 'ConciertosClub', 'exec_time':
+  │   '20260204T090426', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://conciertos.club/doc/a/2017/a_embusteros.jpg', 'url':
+  │   'https://conciertos.club/jaen/conciertos/100265-embusteros'}
+  │   14 / 21
+  │   Getting
+  │   https://conciertos.club/jaen/conciertos/113802-heroes-el-culto-tributo-a
+  │   -heroes-del-silencio
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'cd89a01d', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Héroes. El Culto. Tributo a Héroes del
+  │   Silencio', 'id_venue': None, 'venue': 'Elviris Garage Bar', 'std_venue':
+  │   None, 'start_date': '2026-02-13', 'start_time': '21:30:00', 'end_date':
+  │   '2026-02-13', 'end_time': '__NOT_DEFINIED__', 'description': '\nHéroes
+  │   el culto sala garage bar Elviris. Linares ', 'others': {'category':
+  │   'Versiones', 'price': '12', 'place_url':
+  │   'https://conciertos.club/jaen/locales/elviris-garage-bar', 'town':
+  │   'Linares (Jaén)'}, 'source': 'ConciertosClub', 'exec_time':
+  │   '20260204T090426', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://conciertos.club/doc/a/2024/a_heroeselculto.jpg', 'url':
+  │   'https://conciertos.club/jaen/conciertos/113802-heroes-el-culto-tributo-
+  │   a-heroes-del-silencio'}
+  │   15 / 21
+  │   Getting https://conciertos.club/jaen/conciertos/113794-azrael
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'f5044cd5', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Azrael', 'id_venue': 'c84b689b',
+  │   'venue': 'Rock States', 'std_venue': 'Pub Rock States', 'start_date':
+  │   '2026-02-27', 'start_time': '21:00:00', 'end_date': '2026-02-27',
+  │   'end_time': '__NOT_DEFINIED__', 'description': '\nAzraelBanda formada en
+  │   1991 en Granada, España.\xa0Ha editado seis álbumes de estudio y
+  │   participado en varios discos tributo como "Larga vida al... Volumen
+  │   Brutal", dedicado a Barón Rojo y "Transilvania 666", dedicado a Iron
+  │   Maiden, así como también ha participado en varios discos
+  │   recopilatorios como "Estación 1" (Locomotive) y el reciente "Fábrica
+  │   de Metal Vol. 1" editado por el sello mexicano Denver. Su último disco
+  │   es "Aquelarre".\nDesde casi sus inicios ha participado en festivales de
+  │   prestigio como Espárrago Rock, Piorno Rock, Machina Rock, Leyendas del
+  │   Rock, y han realizado giras tanto nacionales como internacionales y han
+  │   acompañado a los mejores grupos nacionales y tocado con grandes
+  │   artistas internacionales de la talla de Barón Rojo, Mägo de Oz, Tierra
+  │   Santa, Saratoga, Lujuria, Saxon, Merciful Fate, W.A.S.P., Ángeles del
+  │   infierno, Kreator, Paul Di´Anno, Running Wild, Warcry, Avalanch,
+  │   Arthemis, Épica, Stratovarius... entre muchos otros.\nEntre sus éxitos
+  │   más destacados se encuentran temas emblemáticos como "Sacrificio",
+  │   "Tarde Ya", "Entre la Espada y la Pared", "Para Bien o Para Mal",
+  │   "Decirte Adiós" o "Libre".\nMarc Riera (vocalista), Mario Gutiérrez
+  │   (guitarra y coros), Enrique Rosales (guitarra y coros), J.M. Salas (bajo
+  │   y coros), Javier Saavedra (teclado y coros), Manuel "Maolo" Arquellada
+  │   (batería).\n', 'others': {'category': 'Metal', 'price': '15',
+  │   'place_url': 'https://conciertos.club/jaen/locales/rock-states', 'town':
+  │   'Jaén'}, 'source': 'ConciertosClub', 'exec_time': '20260204T090426',
+  │   'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://conciertos.club/doc/a/2025/a_azrael.jpg', 'url':
+  │   'https://conciertos.club/jaen/conciertos/113794-azrael'}
+  │   16 / 21
+  │   Getting https://conciertos.club/jaen/conciertos/109034-denisdenis
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'b23124f6', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Denisdenis', 'id_venue': None, 'venue':
+  │   'Café Teatro Central', 'std_venue': None, 'start_date': '2026-03-13',
+  │   'start_time': '21:30:00', 'end_date': '2026-03-13', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': '\nDENISDENIS EN BAEZA ', 'others':
+  │   {'category': 'Pop-rock', 'price': '11,76', 'place_url':
+  │   'https://conciertos.club/jaen/locales/cafe-teatro-central', 'town':
+  │   'Baeza (Jaén)'}, 'source': 'ConciertosClub', 'exec_time':
+  │   '20260204T090426', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://conciertos.club/doc/a/2024/a_denisdenis.jpg', 'url':
+  │   'https://conciertos.club/jaen/conciertos/109034-denisdenis'}
+  │   17 / 21
+  │   Getting
+  │   https://conciertos.club/jaen/conciertos/113769-jaen-mujer-india-martinez
+  │   -angeles-toledano-carmesi-y-mas
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '533b85fd', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Jaén Mujer', 'id_venue': None, 'venue':
+  │   'Olivo Arena', 'std_venue': None, 'start_date': '2026-03-21',
+  │   'start_time': '21:00:00', 'end_date': '2026-03-21', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': '\nJaén Mujer 2026: India Martínez,
+  │   Ángeles Toledano, B Jones, Octover, Carmesí ', 'others': {'category':
+  │   'Mestizaje', 'price': '27,25', 'place_url':
+  │   'https://conciertos.club/jaen/locales/olivo-arena', 'town': 'Jaén'},
+  │   'source': 'ConciertosClub', 'exec_time': '20260204T090426', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://conciertos.club/doc/a/2017/a_indiamartinez.jpg', 'url':
+  │   'https://conciertos.club/jaen/conciertos/113769-jaen-mujer-india-martine
+  │   z-angeles-toledano-carmesi-y-mas'}
+  │   18 / 21
+  │   Getting
+  │   https://conciertos.club/jaen/conciertos/111918-smells-like-polly-tributo
+  │   -a-nirvana
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '10cda2a8', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Smells Like Polly. Tributo a Nirvana',
+  │   'id_venue': '83cdd60a', 'venue': 'Inferno', 'std_venue': 'Sala inferno',
+  │   'start_date': '2026-03-21', 'start_time': '21:00:00', 'end_date':
+  │   '2026-03-21', 'end_time': '__NOT_DEFINIED__', 'description': '\nSmells
+  │   Like Polly (NIRVANA) en Jaén ', 'others': {'category': 'Versiones',
+  │   'price': '10,31', 'place_url':
+  │   'https://conciertos.club/jaen/locales/inferno', 'town': 'Jaén'},
+  │   'source': 'ConciertosClub', 'exec_time': '20260204T090426', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image': '__NOT_FOUND__', 'url':
+  │   'https://conciertos.club/jaen/conciertos/111918-smells-like-polly-tribut
+  │   o-a-nirvana'}
+  │   19 / 21
+  │   Getting
+  │   https://conciertos.club/jaen/conciertos/107687-stereo-linares-los-planet
+  │   as
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '57a5a32f', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Stereo Linares', 'id_venue': None,
+  │   'venue': 'Teatro Cervantes', 'std_venue': None, 'start_date':
+  │   '2026-03-21', 'start_time': '21:00:00', 'end_date': '2026-03-21',
+  │   'end_time': '__NOT_DEFINIED__', 'description': '\nLos PlanetasLos
+  │   planetas celebraron en 2024 el trigésimo aniversario de Super 8 con una
+  │   gira en la que interpretan íntegramente el disco en directo conforme
+  │   fue concebido: setlist, instrumentación y arreglos originales
+  │   enriquecidos por la inspirada identidad visual que el artista gráfico
+  │   donostiarra Javier Aramburu creó para el álbum.\nSu último disco de
+  │   estudio data de 2022, cuando publicaron \'Las canciones del agua\', con
+  │   nueve canciones que se articulan en dos bloques “temporalmente
+  │   autónomos”, uno local y otro global: Granada y el
+  │   mundo.\nImprevisibles, una vez más, Los planetas daban inicio a su
+  │   décimo álbum con una sobrecogedora adaptación de “El manantial”,
+  │   un poema en el que Federico García Lorca armoniza al ser humano y la
+  │   naturaleza, que los granadinos convierten en una canción magistral.\nDe
+  │   Lorca a Khaled (PXXR GVNG, Los santos), haciendo suya “Se quiere
+  │   venir”, del trapero granadino. Más Granada en la adaptación de “La
+  │   morralla”, de Carlos Cano, y en Las “Alegrías, de Graná”,
+  │   publicadas previamente como anticipo de este álbum que, en su segundo
+  │   bloque, recopila cinco de las canciones publicadas por Los planetas
+  │   durante el periodo pandémico: “La nueva normalidad”, “El
+  │   negacionista”, “El rey de España”, “El apocalipsis zombie” y
+  │   “El antiplanetismo”.\nLa banda inició su andadura a comienzos de
+  │   los años 90. La formación inicial del grupo estaba liderada por Juan
+  │   Rodríguez, "J", como vocalista y guitarrista, acompañado por Floren a
+  │   la guitarra, May Oliver en el bajo y Paco Rodríguez al a batería.\nEn
+  │   1993 publican su primer trabajo, "Medusa EP", y ganan un concurso de
+  │   maquetas en Radio3, con el tema "Mi hermana pequeña". Un año después
+  │   editan "Super 8", con la multinacional RCA. En este disco, el uso de las
+  │   guitarras se basa en distorsiones melódicas y en un uso extraordinario
+  │   del bajo.\nEn 1995 Los Planetas publican "Nuevas sensaciones", un disco
+  │   con el que tratan de encontrar el equilibrio necesario entre la música
+  │   comercial y el estilo alternativo que les define. Antes de este álbum
+  │   habían cambiado a Paco por Raúl en la batería.\nUn año más tarde,
+  │   Los Planetas publican "Pop". Se trata de un trabajo que incluye algunos
+  │   temas más cercanos al pop convencional, lo que les valió para auparse
+  │   en las listas y aparecer en las radios comerciales. Además, como
+  │   novedad, se incluía el uso de teclados electrónicos. Poco después
+  │   aparece el álbum "Venus", un disco con caras B y algunas rarezas.\nEn
+  │   1998 aparece uno de los mejores trabajos de Los Planetas. Se trata del
+  │   álbum "Una semana en el motor de un autobús", grabado en Nueva York y
+  │   alejado de lo comercial, que supone un retorno a los orígenes del
+  │   grupo.\nEn 1999 Los Planetas publican un doble álbum recopilatorio con
+  │   sus mejores sencillos, bajo el título de "Canciones para una orquesta
+  │   química". Al año siguiente publican su cuarto álbum de estudio,
+  │   titulado "Unidad de Desplazamiento", un trabajo producido por ellos
+  │   mismos.\nEn el año 2002 aparece "Encuentros con entidades", una
+  │   continuación con el estilo de su anterior trabajo, grabado en su propio
+  │   estudio de grabación (El Refugio). En 2004 publican "Contra la ley de
+  │   la gravedad".\nEn 2007 celebran sus 15 años de existencia lanzando su
+  │   séptimo álbum, titulado "La leyenda del espacio", con su habitual
+  │   estilo de rock psicodélico y eléctrico. Más información sobre Los
+  │   Planetas \n', 'others': {'category': 'Pop-rock', 'price':
+  │   '__NOT_FOUND__', 'place_url':
+  │   'https://conciertos.club/jaen/locales/teatro-cervantes-de-linares',
+  │   'town': 'Linares (Jaén)'}, 'source': 'ConciertosClub', 'exec_time':
+  │   '20260204T090426', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://conciertos.club/doc/c/2025/c_stereolinares2601.jpg', 'url':
+  │   'https://conciertos.club/jaen/conciertos/107687-stereo-linares-los-plane
+  │   tas'}
+  │   20 / 21
+  │   Getting
+  │   https://conciertos.club/jaen/conciertos/113768-alchemy-project-tributo-a
+  │   -dire-straits
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'f93ebf3e', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Alchemy Project. Tributo a Dire
+  │   Straits', 'id_venue': '1bb137d9', 'venue': 'Teatro Infanta Leonor',
+  │   'std_venue': 'Teatro Infanta Leonor', 'start_date': '2026-02-28',
+  │   'start_time': '21:00:00', 'end_date': '2026-02-28', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': '\nAlchemy Project. Tributo a Dire
+  │   Straits \n\n\n‘Alchemy’ se tituló el famoso disco en directo que
+  │   sacaron Dire Straits en 1984 y Alchemy Project es el nombre de una banda
+  │   tributo cuyos componentes, con toda seguridad, escucharon y apreciaron
+  │   el virtuosismo musical de Dire Straits y sus compañeros.\nPara emular a
+  │   músicos como los que compusieron Dire Straits hace falta tener bastante
+  │   solvencia como músicos. La tienen Roberto Sánchez (guitarra y voz),
+  │   Javi Cambra (saxo, flauta y percusión), David Carmona (guitarra y
+  │   coros), José Marín (bajo y coros), Julián Carrasco y Fernando Pujol
+  │   (teclados) y Juanjo Sanzo (batería), gente curtida y con bagaje, aunque
+  │   algunos de los componentes son aún bastante jóvenes.\nRoberto
+  │   Sánchez, que por decirlo de alguna forma hace de Mark Knopfler -incluso
+  │   lleva en las actuaciones americanas muy similares- confiesa que en 2002
+  │   ya tocaba con los grupos con los que se inició versiones de Dire
+  │   Straits. En 2017 reclutó a gente que compartía su devoción por la
+  │   banda inglesa y en 2018 Alchemy Project empezó a tener actuaciones en
+  │   directo.\nEn sus conciertos, Alchemy Project no sólo calca las
+  │   canciones de Dire Straits sino que trata de reproducir fielmente su
+  │   puesta en escena. Naturalmente tocan todos los clásicos de la banda,
+  │   pero incluso hacen temas que ni siquiera fueron publicados de manera
+  │   oficial pero a los que, como buen fan, Roberto Sánchez ha podido
+  │   acceder.\nUno de esos temas, de hecho, es una especie de maqueta
+  │   inacabada a la que el guitarrista español le dio forma hasta
+  │   completarla y presentarla en vivo como canción ya completamente
+  │   compuesta. No se sabe si Knopfler ha reaccionado ante esa iniciativa,
+  │   aunque si lo hace seguramente será para agradecer tanto entusiasmo por
+  │   su música.\n', 'others': {'category': 'Versiones', 'price': '26-32',
+  │   'place_url':
+  │   'https://conciertos.club/jaen/locales/teatro-infanta-leonor', 'town':
+  │   'Jaén'}, 'source': 'ConciertosClub', 'exec_time': '20260204T090426',
+  │   'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://conciertos.club/doc/a/2023/a_alchemyproject.jpg', 'url':
+  │   'https://conciertos.club/jaen/conciertos/113768-alchemy-project-tributo-
+  │   a-dire-straits'}
+  │   ****************************
+  │   Saving 21 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Jaen/2026_02_04_09_04_Miercoles/0_raw/20260204
+  │   _0904_ConciertosClub.json
+  │   Saving 21 master url
+  │   Appending to  /home/ubuntu/data_storage/Jaen/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: JacksonLive
+Succeeded - 2026-02-04T09:06:16Z
+
+dag: FisgonTaskRequest (3.0s)
+│
+└─tarea_1 (3.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Jaen,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=JacksonLive
+  │   DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&da
+  │   gRunId=019c27e7-030d-75f2-b8e4-f86e401f0698
+  │   Running for Jaen: JacksonLive
+  │   JacksonLive
+  │   RUNNING SESSION =  2026_02_04_09_04_Miercoles
+  │   Getting https://www.jacksonlive.es/jaen
+  │   Sleep 1
+  │   --------------------
+  │   {'id': 'cf21e421', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Embusteros en Baeza -
+  │   Jaén', 'id_venue': None, 'venue': 'Café Teatro Central', 'std_venue':
+  │   None, 'start_date': '2026-02-06', 'start_time': '21:00:00', 'end_date':
+  │   '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Formación
+  │   cordobesa formada por José Espín (voz principal y bajo), Germán
+  │   Muñoz (guitarras y coros), Rafa Urbano (guitarra y coros) y Faly
+  │   (batería), lleva más de una década en la escena musical,
+  │   destacándose por su propuesta de pop rock con toques electrónicos
+  │   distintivos. A lo largo de su carrera, han mantenido un enfoque en
+  │   letras que abordan temas sociales, cotidianos y urbanos, lo que
+  │   demuestra su habilidad para utilizar el español como un medio musical
+  │   expresivo. Su sonido ha evolucionado con el tiempo, y han consolidado su
+  │   presencia en escena gracias a numerosos conciertos que les han permitido
+  │   perfeccionar su actuación en vivo.Pequeño Universo es el nuevo disco
+  │   de Embusteros. Está compuesto por diez temas en los que la banda
+  │   cordobesa demuestra su evolución y madurez. Con este nuevo trabajo,
+  │   afrontan una nueva etapa en la que nos brindan un disco que es una
+  │   declaración de intenciones: con fuerza, sin miedo, con determinación,
+  │   vienen a comerse el mundo. El disco ha sido producido por José
+  │   Caballero en los estudios Neo. Embusteros aporta más potencia, más
+  │   carga eléctrica y una ambientación electrónica que lleva a las
+  │   canciones a su máxima expresión.\r\n \r\nPequeño Universo cuenta
+  │   además con un delicado dis eño, realizado a mano, por el ilustrador
+  │   Vorja Sánchez.\r\n \r\nEste microcosmos queda plasmado en sus pinceles
+  │   y convierte el disco en una obra redonda, tanto a nivel musical como
+  │   estético. Un regalo a los sentidos que nos sumerge en un mundo sin
+  │   miedo ni escusas, un canto a la acción y a la superación.\r\n
+  │   \r\nHasta la fecha, Embusteros han publicado tres singles adelanto del
+  │   disco que han supuesto un auténtico éxito. Con Coartada, primer single
+  │   adelanto, se han colocado entre los cincuenta temas más virales de
+  │   España. Estos tres singles acumulan en pocas semanas 160.000 escuchas y
+  │   con ellos se revela a Embusteros como uno de los grupos clave en el
+  │   panorama musical. José Espín, Germán Múñoz, Rafa Urbano y Fali el
+  │   Caballero, llevan más de diez años en activo. Su anterior trabajo, La
+  │   Verdad, les llevó a las principales salas y festivales del país y fue
+  │   reeditado colaborando con artistas como Shuarma (Elefantes), Sean
+  │   (Second), Juan Alberto (Niños Mutantes), Alex (Kitai), Dani
+  │   (Despistaos), Gabriel (Shinova) y Marcos (La sonrisa de Julia). Con su
+  │   nuevo trabajo, vienen dispuestos a arrasar con un trabajo optimista,
+  │   pero no ingenuo; poderoso e inolvidable, cargado de potentes riffs y
+  │   toques electrónicos que confieren a Embusteros una identidad
+  │   propia.\r\n \r\nLa gira de presentación del nuevo disco de Embusteros
+  │   les llevará a las principales salas del país y a los festivales más
+  │   relevantes de la escena Indie. Embusteros ofrecen un directo dinámico,
+  │   divertido y ganan en cada concierto nuevos seguidores que no los
+  │   abandonarán.', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260204T090617', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/446721748541688.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-embusteros-en-baeza-j
+  │   aen'}
+  │   --------------------
+  │   {'id': '388f8e6e', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Taburete en Jaén',
+  │   'id_venue': None, 'venue': 'Finca Badenes - Aires de Jaén',
+  │   'std_venue': None, 'start_date': '2026-04-18', 'start_time': '17:00:00',
+  │   'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+  │   'Taburete es una banda de Barcelona cuyo origen se remonta a final del
+  │   año 2014 y formada por Guillermo Bárcenas (hijo de Luis Barcenas) y
+  │   Joaquín Gasset. Dieron sus primeros pinitos en la música actuando en
+  │   las terrazas de la ciudad condal y gracias al boca a boca y sin ninguna
+  │   promoción de los medios se han convertido en una de las bandas
+  │   revelación del año 2016. El 17 y 18 de junio llenaron la Sala Riviera
+  │   dos veces. Su primer álbum se llama "Tres Tequilas".', 'others': {},
+  │   'source': 'JacksonLive', 'exec_time': '20260204T090617', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/490151766320426.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-taburete-en-jaen'}
+  │   --------------------
+  │   {'id': '6b4d7cdc', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 0, 'event': 'LaMona Fest 2026', 'id_venue':
+  │   'fd8a459c', 'venue': 'IFEJA (Recinto Ferial de Jaén)', 'std_venue':
+  │   'IFEJA', 'start_date': '2026-04-18', 'start_time': '17:00:00',
+  │   'end_date': '2026-04-18', 'end_time': '23:55:00', 'description': 'LaMona
+  │   Fest regresa a Jaén para una vibrante edición primaveral que promete
+  │   consolidar su éxito en la escena urbana. El festival ya tiene fecha de
+  │   celebración: será el sábado 18 de abril . La cita tendrá lugar en el
+  │   Pabellón de IFEJA , un recinto que ha demostrado su capacidad para
+  │   congregar a más de 13.000 asistentes , como sucedió en su reciente y
+  │   exitosa edición de otoño (temática Halloween). LaMona Fest busca
+  │   convertir a Jaén en la capital musical de los ritmos urbanos y latinos
+  │   más en boga. El primer gran artista confirmado para la edición de
+  │   primavera es el sevillano JC Reyes , considerado uno de los referentes
+  │   más duros de la nueva generación. JC Reyes llegará a Jaén con nuevo
+  │   material bajo el brazo, su celebrado álbum Vivir pa\' quedarse , aunque
+  │   se espera que su setlist incluya también éxitos que lo han catapultado
+  │   a la fama como "34 Amor y Mafia" y "Coronamos" . La confirmación de JC
+  │   Reyes promete un espectáculo de lujo y marca el tono para un cartel que
+  │   se espera sea de excepción. Dada la excelente acogida que el público
+  │   de Jaén ha dado a LaMona Fest, la organización recomienda asegurar los
+  │   abonos cuanto antes. Las entradas están en oferta de lanzamiento a un
+  │   precio magnífico. Además, como novedades destacadas para esta
+  │   edición, los abonos descuentan los gastos de distribución e incluyen
+  │   un seguro de no asistencia . Se pueden adquirir un máximo de cuatro
+  │   tickets por operación, y a las entradas se puede aplicar el Bono
+  │   Cultural .', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260204T090617', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/485631769849390.jpg', 'url':
+  │   'https://www.jacksonlive.es/festival/lamona-fest-2026'}
+  │   --------------------
+  │   {'id': '46e657b4', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 0, 'event': 'oleoSÓNICA Jaén Music Fest 2026',
+  │   'id_venue': 'fd8a459c', 'venue': 'IFEJA (Recinto Ferial de Jaén)',
+  │   'std_venue': 'IFEJA', 'start_date': '2026-05-22', 'start_time':
+  │   '16:00:00', 'end_date': '2026-05-23', 'end_time': '23:55:00',
+  │   'description': 'El oleoSÓNICA Jaén Music Fest se ha consolidado en su
+  │   tercera edición como una cita ineludible, transformando a Jaén en el
+  │   nuevo centro de gravedad del indie y el rock alternativo nacional. Los
+  │   días 22 y 23 de mayo de 2026 , el recinto Ifeja se convertirá en un
+  │   hervidero de vanguardia musical con un cartel que equilibra la
+  │   proyección internacional de Crystal Fighters con la urgencia
+  │   generacional de Carolina Durante y la épica consolidada de Love of
+  │   Lesbian . Bajo la dirección de OSM e Inala Producciones, el festival ha
+  │   logrado en tiempo récord pasar de ser una promesa a una realidad
+  │   incontestable, ofreciendo un refugio de calidad sonora que sitúa a la
+  │   capital jiennense en la primera línea del circuito de grandes
+  │   festivales. La propuesta artística de este año destaca por su
+  │   valentía y diversidad, huyendo de etiquetas rígidas para abrazar desde
+  │   el post-punk afilado de Alcalá Norte hasta la experimentación
+  │   legendaria de Lagartija Nick . El ecosistema del oleoSÓNICA permite que
+  │   el indie-rock emocional de Siloé y el magnetismo synth-pop de Nebulossa
+  │   convivan con el descaro de Ladilla Rusa o la potencia de Sexy Zebras .
+  │   Con dieciséis nombres en el cartel, incluyendo revelaciones como Las
+  │   Dianas o Sanguijuelas del Guadiana , el festival edifica un espacio
+  │   donde lo alternativo y lo popular dialogan, recuperando la mística del
+  │   directo en un despliegue sin precedentes para la provincia. Este
+  │   crecimiento exponencial, alcanzado en tan solo tres años, demuestra que
+  │   Jaén ha encontrado un lenguaje propio para competir con las grandes
+  │   capitales del sonido. El evento no solo apuesta por grandes nombres,
+  │   sino que mantiene un fuerte arraigo territorial con bandas como Buenos
+  │   días, Hiroshima , asegurando un pulso rítmico constante durante las
+  │   dos jornadas. Con la información ya disponible en sus canales oficiales
+  │   y las expectativas en todo lo alto, el oleoSÓNICA 2026 se presenta como
+  │   la experiencia más ambiciosa de su historia, diseñada para quienes
+  │   entienden la música como un territorio de libertad absoluta.',
+  │   'others': {}, 'source': 'JacksonLive', 'exec_time': '20260204T090617',
+  │   'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/495591769078877.jpg', 'url':
+  │   'https://www.jacksonlive.es/festival/oleosonica-jaen-music-fest-2026'}
+  │   --------------------
+  │   {'id': 'e1ec74d4', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 0, 'event': 'Sentir Baeza AOVE Fest 2026',
+  │   'id_venue': None, 'venue': 'Recinto Ferial de Baeza', 'std_venue': None,
+  │   'start_date': '2026-06-12', 'start_time': '17:00:00', 'end_date':
+  │   '2026-06-13', 'end_time': '23:55:00', 'description': 'El Sentir Baeza
+  │   AOVE Fest regresa en su cuarta edición para consolidarse como el
+  │   último reducto de la autenticidad musical frente a la homogeneización
+  │   del ocio masivo. Los días 12 y 13 de junio de 2026 , la ciudad de Baeza
+  │   (Jaén), declarada Patrimonio de la Humanidad, se transformará en el
+  │   epicentro de una propuesta que desafía el consumo efímero. Con un
+  │   aforo limitado a 5.000 personas , el festival huye de las multitudes
+  │   anónimas para ofrecer un rito sensorial donde la vanguardia sonora
+  │   colisiona con el rastro milenario del aceite de oliva virgen extra
+  │   (AOVE) y la arquitectura renacentista. El cartel de esta edición es una
+  │   declaración de principios que equilibra la veteranía con la urgencia
+  │   creativa. La Habitación Roja celebrará su trigésimo aniversario
+  │   aportando su inconfundible temperamento eléctrico, mientras que la
+  │   épica de raíz de La M.O.D.A. y el paisajismo lisérgico de Rufus T.
+  │   Firefly prometen elevar la experiencia a un plano casi espiritual. Junto
+  │   a ellos, nombres que definen el presente como Carlos Ares, Barry B y el
+  │   pop magnético de Marlena , completan una nómina de artistas
+  │   seleccionados por su honestidad y nervio. El Sentir Baeza no es solo un
+  │   festival; es un acto de fe cultural diseñado para quienes buscan que la
+  │   música , al igual que el buen aceite, deje un poso imborrable.',
+  │   'others': {}, 'source': 'JacksonLive', 'exec_time': '20260204T090617',
+  │   'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/497481769876837.jpg', 'url':
+  │   'https://www.jacksonlive.es/festival/sentir-baeza-aove-fest-2026'}
+  │   --------------------
+  │   {'id': '4adda039', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Antonio Orozco en La
+  │   Carolina', 'id_venue': None, 'venue': 'Recinto Ganadero Restituto
+  │   Martínez', 'std_venue': None, 'start_date': '2026-07-11', 'start_time':
+  │   '23:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+  │   'description': 'Antonio Orozco nació en Barcelona el 23 de noviembre de
+  │   1972, aunque creció en Hospitalet de Llobregat (Barcelona). Hijo de
+  │   padres sevillanos (de Osuna) de clase trabajadora, su vocación musical
+  │   despertó a los 15 años durante un viaje a Triana (Sevilla). Allí, al
+  │   ver a unos músicos tocar en la calle Betis, decidió reunir dinero para
+  │   comprar su primera guitarra, la cual todavía conserva. Con gran
+  │   constancia, y tras tocar en numerosos bares "pagando por hacerlo",
+  │   Orozco logró grabar su primer disco. En marzo de 2000 , editó su
+  │   debut, Un reloj y una vela , producido por Xavi Pérez y Tato Latorre,
+  │   vendiendo más de 100.000 copias. Su segundo álbum, Semilla del
+  │   Silencio (2001), superó las 300.000 copias e incluyó una reedición
+  │   con un DVD de un concierto en la Sala Luz de Gas de Barcelona. En mayo
+  │   de 2004 , con la discográfica Universal, lanzó El principio del
+  │   comienzo , del que confesó que era su verdadero estilo, al haberle
+  │   permitido mayor libertad creativa. En esta etapa, realizó duetos
+  │   conocidos, como "What You\'re Made Of" con Lucie Silvas y la exitosa
+  │   "Devuélveme la vida" con Malú . El año 2005 marcó su expansión
+  │   internacional con el disco Antonio Orozco , una recopilación de sus
+  │   doce mejores canciones para el mercado latinoamericano y global. Como
+  │   parte de esta estrategia, fue telonero de Juanes en su gira americana en
+  │   Nueva York, Miami y Los Ángeles, lo que le permitió darse a conocer en
+  │   Estados Unidos. En 2007 publicó su cuarto álbum, Cádizfornia , que
+  │   presentó notables colaboraciones con artistas de géneros diversos como
+  │   Toteking, Iván Ferreiro y Youssou N\'Dour. A lo largo de su carrera,
+  │   Orozco ha cosechado importantes galardones, incluyendo un Premio Ondas
+  │   al Mejor Directo y un premio Tu Música (Puerto Rico) por su canción
+  │   "Devuélveme la vida".', 'others': {}, 'source': 'JacksonLive',
+  │   'exec_time': '20260204T090617', 'session': '2026_02_04_09_04_Miercoles',
+  │   'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/486961765546626.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-antonio-orozco-en-la-
+  │   carolina'}
+  │   --------------------
+  │   {'id': '85d87145', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Sergio Dalma en Úbeda',
+  │   'id_venue': None, 'venue': 'Recinto Ferial de Úbeda', 'std_venue':
+  │   None, 'start_date': '2026-07-12', 'start_time': '20:00:00', 'end_date':
+  │   '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Josep
+  │   Sergi Capdevila i Querol es un cantante y compositor originario de
+  │   Sabadell (Barcelona) mejor conocido como Sergio Dalma . Empezó su
+  │   carrera cantando en diversas bandas y coros hasta que gano el concurso
+  │   de televisión catalana Gent d\'aquí, lo que le permitió dedicarse a
+  │   la música profesionalmente. Su álbum debut, "Esa chica es mía", lo
+  │   grabo en el año 1989 con la discográfica Horus. Un trabajo que alcanzo
+  │   el disco de platino y lanzo al Sergio al la fama en España y
+  │   Latinoamérica. Actualmente es uno de los músicos más reconocidos
+  │   mundialmente por su voz característica dentro del pop melódico o
+  │   balada romántica.', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260204T090617', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/474761762171804.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-sergio-dalma-en-ubeda
+  │   '}
+  │   --------------------
+  │   {'id': '6fb8db5e', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Aitana en Úbeda',
+  │   'id_venue': None, 'venue': 'Recinto Ferial de Úbeda', 'std_venue':
+  │   None, 'start_date': '2026-07-18', 'start_time': '20:00:00', 'end_date':
+  │   '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Aitana
+  │   Ocaña, conocida artísticamente como Aitana, es una cantante catalana
+  │   que ganó popularidad como finalista en la primera edición del programa
+  │   de televisión español "Operación Triunfo" en 2017. Nacida un 27 de
+  │   junio de 1999 en Sant Climent de Llobregat, Barcelona,
+  │   \u200b\u200bEspaña. Aitana ha logrado consolidarse como una figura
+  │   destacada en la industria de la música en España. Después de su
+  │   participación en "Operación Triunfo", lanzó su carrera musical con
+  │   éxito, firmando un contrato disco.', 'others': {}, 'source':
+  │   'JacksonLive', 'exec_time': '20260204T090617', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/469951760384895.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-aitana-en-ubeda'}
+  │   --------------------
+  │   {'id': '8ad592bf', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Galvan Real en Úbeda',
+  │   'id_venue': None, 'venue': 'Recinto Ferial de Úbeda', 'std_venue':
+  │   None, 'start_date': '2026-07-25', 'start_time': '22:00:00', 'end_date':
+  │   '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Oscar
+  │   Espinosa Castillo, conocido artísticamente como Galvan Real, nació en
+  │   Valencia en 1992. Desde temprana edad, mostró interés por la música y
+  │   comenzó a dar sus primeros pasos con su voz a la tierna edad de 8
+  │   años. El flamenco siempre fue una pasión arraigada en su interior
+  │   desde muy pequeño. Con el tiempo, Oscar se sumergió en la música en
+  │   general y en 2012 comenzó a realizar sus primeras producciones.
+  │   Después de un tiempo, decidió grabar sus canciones con un toque urbano
+  │   y actual, adoptando el nombre artístico de Galvan Real. El artista
+  │   fusiona sonidos latinos y urbanos sin perder su esencia flamenca en cada
+  │   uno de sus trabajos. Su canal de Youtube cuenta con millones de
+  │   reproducciones y tiene miles de seguidores en sus redes sociales. Sus
+  │   últimos trabajos han alcanzado el Top de tendencias en España.',
+  │   'others': {}, 'source': 'JacksonLive', 'exec_time': '20260204T090617',
+  │   'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/456861754424261.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-galvan-real-en-ubeda'
+  │   }
+  │   --------------------
+  │   {'id': '15e5e9dd', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de Miguel Poveda en Úbeda -
+  │   Jaén', 'id_venue': None, 'venue': 'Plaza de Toros de Úbeda',
+  │   'std_venue': None, 'start_date': '2026-07-31', 'start_time': '22:30:00',
+  │   'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+  │   'Miguel Poveda es uno de los cantaores flamenco mas reconocidos de
+  │   nuestro país. Se sube por primera vez a un escenario a los 15 años en
+  │   una peña flamenca de Badalona (Barcelona). De familia humilde y en un
+  │   entorno no muy propicio para el flamenco ha conseguido gracias a su
+  │   empeño personal y talento convertirse en lo que es hoy en día.
+  │   Numerosos premios y reconocimientos de la música así como una legión
+  │   de fans lo confirman. \r\n\r\n Tiene casi 3 décadas de experiencia y
+  │   medio centenar de trabajos discográficos entre suyos propios y
+  │   colaboraciones con otros artistas. Es un trabajador incansable que vive
+  │   por y para la música . En el año 2018 Miguel Poveda se encuentra
+  │   embarcado en su nuevo proyecto, EnLorquecido , disco homenaje a Federico
+  │   García Lorca.', 'others': {}, 'source': 'JacksonLive', 'exec_time':
+  │   '20260204T090617', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/491471766769422.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-miguel-poveda-en-ubed
+  │   a-jaen'}
+  │   --------------------
+  │   {'id': '8b80fec1', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto de OBK en Jaén', 'id_venue':
+  │   '1bb137d9', 'venue': 'Nuevo Teatro Infanta Leonor', 'std_venue': 'Teatro
+  │   Infanta Leonor', 'start_date': '2026-10-31', 'start_time': '20:00:00',
+  │   'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+  │   'Grupo músical de género synthpop procedente de Sant Feliu de
+  │   Llobregat (Barcelona), formado por Jordi Sánchez, artista nacido en
+  │   Valle de Abdalajís (Barcelona), un 21 de septiembre de 1968 y Miguel
+  │   Arjona, originario de Sant Feliu de Llobregat (Barcelona) y nacido un 21
+  │   de febrero de 1968. Hasta el 2012, año en el que Miguel Arjona deja el
+  │   grupo.\r\n\r\nAmbos se conocieron en el club de atletismo de Sant Feliú
+  │   de Llobregat a principios de los años ochenta, concretamente en 1982, y
+  │   su admiración por grupos como Depeche Mode, Yazoo u OMD les llevó a
+  │   componer algunas canciones llegando a formar un grupo llamado Oberkorn
+  │   (con cuatro componentes), finalmente cambiaron el nombre a OBK. En 1991
+  │   consiguen publicar su primer álbum con Blanco Y Negro Music, Llámalo
+  │   Sueño con el que llegaron a vender más de 400.000 copias.\r\n\r\nEn el
+  │   año 1993 grabaron su segundo álbum "Momentos de fé" en los estudios
+  │   Real World de Londres, sacaron sencillos como "Dicen" donde criticaban a
+  │   los que a su vez les tachaban de grupo para fans, "Todavía", "Robarle
+  │   al tiempo" o "Lágrimas de soledad".\r\n\r\nEn el año 1995 publican su
+  │   tercer álbum "Trilogía". Por primera vez trabajan con Jesús N. Gómez
+  │   como productor, habitual de Alaska y Dinarama, su éxito radicó en
+  │   sencillos como "Mi razón de ser" o "Dulce final".\r\n\r\nA lo largo de
+  │   su carrera han logrado diversos éxitos, manteniéndose en este género
+  │   no muy común en España. Junto a las canciones más electrónicas han
+  │   mezclado baladas de corte más clásico, como La princesa de mis sueños
+  │   o Falsa moral.\r\n\r\n En 1996 con el lanzamiento de su álbum "Donde el
+  │   corazón nos lleve" la popularidad de OBK empezó a desvanecerse, a
+  │   pesar de publicar grandes temas como "Un cielo gris" o "A
+  │   contrapie".\r\n\r\n Tras una larga crisis de dos años lanzan un disco
+  │   recopilatorio Singles \'91-\'98, en el que junto a los clásicos de
+  │   siempre se incluían dos temas nuevos "En medio de nada" y "Juicio
+  │   interior" y remezclas de algunos de sus éxitos.\r\n\r\nSingles
+  │   \'91-\'98 les hizo recuperar su popularidad, y en el año 2000 graban
+  │   Antropop con Carlos Jean como productor, famoso por su habilidad para
+  │   adaptarse a artistas de diversos estilos. Este trabajo supuso un punto y
+  │   aparte en su carrera, a partir de entonces con un sonido más duro y con
+  │   mayor presencia de guitarras, tal y como se expone en el tema Tú Sigue
+  │   Así. Los vídeos, realizados por J. Bayona, recibieron críticas
+  │   excelentes. Éstos destacan por su impacto visual y crítica social. El
+  │   segundo sencillo, El cielo no entiende, fue elegido como la Canción
+  │   Oficial de la Vuelta ciclista a España 2000, y fue entonces cuando el
+  │   grupo alcanzó las 300.000 copias vendidas de Antropop, su quinto disco
+  │   de estudio.\r\n\r\nUn año depués, tras este disco llegaría una
+  │   reedición muy especial del mismo, a la que titularían Extrapop (2001),
+  │   y donde incluyeron remixes, temas de las maquetas y alguna sorpresa para
+  │   sus fans.\r\n\r\nSu sexto álbum de estudio, Babylon, publicado en 2003,
+  │   siguió contando con la colaboración de J. A. Bayona para sus
+  │   videoclips. Los singles extraídos fueron Lucifer, Quiéreme otra vez,
+  │   La herida y Mírame bien. Sin duda "Babylon" fue su disco más ambicioso
+  │   y con un sonido influenciado por artistas como William Orbit y
+  │   Madonna.\r\n\r\nTras su otro recopilatorio, Sonorama, (2004), cuyo
+  │   single de presentación fue Ni te das cuenta, llegó su séptimo disco
+  │   de estudio, Feeling, a finales de 2005. Su primer single, Sin rencor,
+  │   con un estupendo videoclip que no era otra cosa que una crítica a los
+  │   que tanto se habían manifestado contra los matrimonios homosexuales,
+  │   fue secundado por A ras de suelo, sencillo que fue elegido por sus fans
+  │   desde su página web, y Yo no soy cool ganador del premio de la música
+  │   al mejor tema electrónico del año 2005.\r\n\r\nTras tres años de
+  │   gira, Obk lanzó a la venta Ultimátum el 23 de septiembre del 2008,
+  │   producido por ellos mismos, siendo éste el tercer álbum de producción
+  │   propia.\r\nEl disco no tuvo la aceptación del gran público, aún así
+  │   sacaron dos sencillos: "Yo no me escondo" y "Siempre tú", "Ultimátum"
+  │   ha sido el único disco de estudio del que han sacado apenas dos temas
+  │   teniendo una corta promoción.\r\n\r\nEn el 2009 y fuera de su último
+  │   disco sacan un sencillo en catalán "Si em tens aquí" para el disco
+  │   recopilatorio La marató de TV3. Éste tema tendrá gran repercusión en
+  │   Cataluña con un sonido tecnopop claramente ochentero.\r\n\r\nCon motivo
+  │   de sus veinte años de carrera , el 10 de Mayo del 2011 sacan a la venta
+  │   20BK, un album recopilatorio con nuevas versiones de sus canciones en
+  │   estos veinte años de carrera, solo editaron (en formato digital) dos
+  │   singles, Oculta Realidad e "Historias de amor" con un nuevo sonido,
+  │   ambas remezcladas por Xasqui Ten, el album tiene tanto nuevas versiones
+  │   creadas por OBK como de otros artistas colaboradores como Babylonia,
+  │   De/Vision entre otros, y duetos con Moenia y Umberto Tozzi, este album
+  │   también contiene la maqueta de Historias de amor en inglés (Come
+  │   crashing me) y una versión en italiano de Tú sigue así llamada
+  │   Continua Cosi. También incluye tres temas nuevos. Hasta la fecha es el
+  │   álbum menos vendido de toda su carrera, paradójicamente es el único
+  │   también que ha llegado al número 1 en ventas.\r\n\r\nDespués de su
+  │   gira "20bk Tour" por España y México, Jordi Sánchez prepara lo que
+  │   será su primer disco en solitario después de la marcha de Miguel de la
+  │   banda en Febrero del 2012.\r\n\r\nEn Junio del 2012 se publicó su nuevo
+  │   single "Promises" cantada a dúo con el cantante Pierre N\'Sue.\r\n\r\nA
+  │   finales del 2012 Obk comienza una nueva gira por Latinoamérica y
+  │   Europa, tocando con grupos como Mesh o De/Vision entre otros.\r\n\r\nEn
+  │   septiembre del 2013 presentaron su nuevo álbum "Revolución" del que
+  │   llevan tres singles publicados: "Revolución", "Besos de mentira" y
+  │   "Elaine", éste último es una canción que iba a ser publicada en su
+  │   primer álbum "Llámalo sueño", originariamente estuvo cantada en
+  │   "inglés" pero finalmente decidió publicarla casi 30 años después en
+  │   castellano.\r\n\r\nEn el 2015 lanza el recopilatorio "De
+  │   corazón".\r\n\r\nEn noviembre de 2016 publican otro recopilatorio, esta
+  │   vez en directo desde México.\r\n\r\nDesde entonces Jordi Sánchez ha
+  │   seguido de gira por España y Latinoamérica hasta el 2019 como Obk
+  │   cantando sus grandes éxitos y participando en giras de festivales de
+  │   los 90 tocando algunos temas populares.', 'others': {}, 'source':
+  │   'JacksonLive', 'exec_time': '20260204T090617', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://s3.eu-central-1.amazonaws.com/images.jacksonlive.es/upload/conc
+  │   erts/hd/476871763123142.jpg', 'url':
+  │   'https://www.jacksonlive.es/concierto/concierto-de-obk-en-jaen'}
+  │   Checking unique event url.
+  │   New url events = 11
+  │   ****************************
+  │   Saving 11 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Jaen/2026_02_04_09_04_Miercoles/0_raw/20260204
+  │   _0906_JacksonLive.json
+  │   Saving 11 master url
+  │   Appending to  /home/ubuntu/data_storage/Jaen/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.jacksonlive.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: Eventick
+Succeeded - 2026-02-04T09:06:19Z
+
+dag: FisgonTaskRequest (1m 9s)
+│
+└─tarea_1 (1m 9s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout: ... (53 more lines)
+  │   7 / 16
+  │   Getting https://eventick.esmailto:soporte@eventick.es
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '50029267', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 1, 'event': '__NOT_FOUND__', 'id_venue': None,
+  │   'venue': '__NOT_FOUND__', 'std_venue': None, 'start_date':
+  │   '__NOT_FOUND__', 'start_time': '__NOT_FOUND__', 'end_date':
+  │   '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': '',
+  │   'others': {}, 'source': 'Eventick', 'exec_time': '20260204T090619',
+  │   'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://apiq.eventick.es/uploads/images/ceb67ff0-e8ca-11f0-823a-472011e
+  │   5c03e.jpeg', 'url': 'https://eventick.esmailto:soporte@eventick.es'}
+  │   8 / 16
+  │   Getting https://eventick.es/fiesta-tematik/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '0ddc3d86', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Tematik', 'id_venue': 'bc47d054',
+  │   'venue': '\nDÃ\xada 10 jun a las 17:00hAuditorio municipal de La
+  │   Alameda', 'std_venue': 'Auditorio Municipal la Alameda', 'start_date':
+  │   '2026-06-10', 'start_time': '17:00:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': '__NOT_FOUND__',
+  │   'others': {}, 'source': 'Eventick', 'exec_time': '20260204T090619',
+  │   'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://apiq.eventick.es/uploads/images/63881590-f388-11f0-80a2-2b783d4
+  │   4d8c9.jpg', 'url': 'https://eventick.es/fiesta-tematik/'}
+  │   9 / 16
+  │   Getting https://eventick.es/entradas-vanesa-martin-jaen/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '9677eb7c', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Vanesa MartÃ\xadn', 'id_venue':
+  │   'bc47d054', 'venue': '\nDÃ\xada 6 jun a las 23:00hAuditorio municipal
+  │   de La Alameda', 'std_venue': 'Auditorio Municipal la Alameda',
+  │   'start_date': '2026-06-06', 'start_time': '23:00:00', 'end_date':
+  │   '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description':
+  │   '__NOT_FOUND__', 'others': {}, 'source': 'Eventick', 'exec_time':
+  │   '20260204T090619', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://apiq.eventick.es/uploads/images/16ba8c70-df1f-11f0-823a-472011e
+  │   5c03e.jpeg', 'url': 'https://eventick.es/entradas-vanesa-martin-jaen/'}
+  │   10 / 16
+  │   Getting https://eventick.es/v2/siarco-feria-cofrade-cazorla/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'e3515892', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'SIARCO I Feria Cofrade de Cazorla',
+  │   'id_venue': None, 'venue': '', 'std_venue': None, 'start_date':
+  │   '2026-02-21', 'start_time': '12:00:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Día 21 feb a las 12:00h
+  │   Es un evento pionero e histórico. Nunca antes se ha realizado algo así
+  │   en la comarca. El objetivo es convertir a Cazorla en la "Capital
+  │   Cofrade" de Jaén por un día, uniendo turismo, cultura y devoción. No
+  │   es solo un concierto, es una experiencia completa (feria) con
+  │   proyección de futuro. Organizado por Agrupación Musical Jesús Cautivo
+  │   de Cazorla. Disfrutaremos de. una concentración masiva de 12
+  │   Agrupaciones Musicales de reconocido prestigio de la provincia de Jaén.
+  │   Es un maratón de música cofrade en directo. Además de las bandas,
+  │   habrá una actuación musical especial sorpresa (de corte
+  │   flamenco/cante/sentimiento) que aportará un momento diferente y emotivo
+  │   al evento. Stands comerciales y de exhibición de Arte Sacro. Presencia
+  │   de artesanos de toda Andalucía: imagineros, orfebres, bordadores y
+  │   restauradores mostrando sus oficios en vivo.', 'others': {}, 'source':
+  │   'Eventick', 'exec_time': '20260204T090619', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://eventick.breathsoul.com/817cbc50-f6e3-11f0-a73b-cd04911ea043.jp
+  │   g', 'url': 'https://eventick.es/v2/siarco-feria-cofrade-cazorla/'}
+  │   11 / 16
+  │   Getting https://eventick.es/oleosonica-cashless-2026/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '6d7a87ef', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'OleosÃ³nica JaÃ©n Music Fest 2026 -
+  │   Recarga Cashless', 'id_venue': 'fd8a459c', 'venue': '\nDÃ\xada 23 may a
+  │   las 23:59hIfeja (Ferias JaÃ©n)', 'std_venue': 'IFEJA', 'start_date':
+  │   '2026-05-23', 'start_time': '23:59:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Día 23 may a las
+  │   23:59hIfeja (Ferias Jaén) Día 23 may a las 23:59h En 2026 vuelve
+  │   oleoSÓNICA Jaén Music Fest, el mejor festival de la provincia de Jaén
+  │   y uno de los mejores festivales medios de toda España (nominado a tres
+  │   premios en los FMF awards). PROMO. Recarga tu Pulsera OleoSónica de
+  │   forma anticipada, obtendrás crédito extra y evitarás colas. -Recarga
+  │   de 50€ y te regalamos 5€ GRATIS --Recarga 100€. y te regalamos
+  │   15€ GRATIS ---Recarga 150€ y te regalamos 30€ GRATIS Recarga sin
+  │   gastos de gestión. El importe sobrante de la promo recarga en las
+  │   pulseras NO tienen devolución.', 'others': {}, 'source': 'Eventick',
+  │   'exec_time': '20260204T090619', 'session': '2026_02_04_09_04_Miercoles',
+  │   'image':
+  │   'https://apiq.eventick.es/uploads/images/83080f30-f0ac-11f0-823a-472011e
+  │   5c03e.jpeg', 'url': 'https://eventick.es/oleosonica-cashless-2026/'}
+  │   12 / 16
+  │   Getting https://eventick.es/playa-sonora-2026-aguilera-y-meni/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'bf9ee0b0', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Playa Sonora - Aguilera y Meni',
+  │   'id_venue': None, 'venue': '\nDÃ\xada 9 ago a las 22:30hPlaya Sonora',
+  │   'std_venue': None, 'start_date': '2026-08-09', 'start_time': '22:30:00',
+  │   'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__',
+  │   'description': '__NOT_FOUND__', 'others': {}, 'source': 'Eventick',
+  │   'exec_time': '20260204T090619', 'session': '2026_02_04_09_04_Miercoles',
+  │   'image':
+  │   'https://apiq.eventick.es/uploads/images/827d1410-ba84-11f0-b522-2fdfdf3
+  │   f456a.jpg', 'url':
+  │   'https://eventick.es/playa-sonora-2026-aguilera-y-meni/'}
+  │   13 / 16
+  │   Getting https://eventick.es/oleosonica-2026-pmr/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '3e435d54', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'OleosÃ³nica JaÃ©n Music Fest - 22 y
+  │   23 Mayo 2026 PMR', 'id_venue': 'fd8a459c', 'venue': '\nDÃ\xada 23 may a
+  │   las 23:59hIfeja (Ferias JaÃ©n)', 'std_venue': 'IFEJA', 'start_date':
+  │   '2026-05-23', 'start_time': '23:59:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Día 23 may a las
+  │   23:59hIfeja (Ferias Jaén) Día 23 may a las 23:59h ABONOS PMR -
+  │   Oleosónica Jaén Music Fest - 22 y 23 Mayo 2026 Aquí podrás adquirir
+  │   tus abonos de acceso de movilidad reducida. Los asistentes que accedan
+  │   con entrada PMR, deberán presentar en el acceso al recinto el
+  │   certificado de discapacidad o de movilidad reducida.', 'others': {},
+  │   'source': 'Eventick', 'exec_time': '20260204T090619', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://apiq.eventick.es/uploads/images/565f7660-d060-11f0-82d5-49fcaf1
+  │   e39e6.jpeg', 'url': 'https://eventick.es/oleosonica-2026-pmr/'}
+  │   14 / 16
+  │   Getting
+  │   https://eventick.es/halford-experiencie-sebas-souza-rock-states-jaen/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '9331e063', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Halford Experiencie + Sebas Souza',
+  │   'id_venue': 'c84b689b', 'venue': '\nDÃ\xada 7 feb a las 20:30hRock
+  │   States JaÃ©n', 'std_venue': 'Pub Rock States', 'start_date':
+  │   '2026-02-07', 'start_time': '20:30:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Día 7 feb a las
+  │   20:30hRock States Jaén Día 7 feb a las 20:30h Sebas Souza,guitarrista
+  │   instrumental y compositor solista argentino residente en Madrid,con más
+  │   de 200 representaciones algunas con artistas de renombre,su estilo se
+  │   marca por el hard rock melódico,rock progresivo y metal clásico. Por
+  │   otro lado, Halford Experiencie,un grupo de Madrid,tributo a Judas
+  │   priest,con más de 20 años a sus espaldas girando por toda la
+  │   geografía española con un show plagado de verdaderos hits de la banda
+  │   británica ,ofreciendo un amplio show de Heavy Metal en su puta esencia
+  │   desde sus principios pasando por temas contemporáneos donde se podrá
+  │   ver unos músicos que rozan la perfección de los temas....En definitiva
+  │   una magica noche de Heavy Metal de Judas priest y hard rock melódico
+  │   Entrada Anticipada 12€+gg Entrada en Taquilla 15€+gg', 'others': {},
+  │   'source': 'Eventick', 'exec_time': '20260204T090619', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://apiq.eventick.es/uploads/images/ceb67ff0-e8ca-11f0-823a-472011e
+  │   5c03e.jpeg', 'url':
+  │   'https://eventick.es/halford-experiencie-sebas-souza-rock-states-jaen/'}
+  │   15 / 16
+  │   Getting https://eventick.es/oleosonica-2026/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'ab8c69fc', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 1, 'event': 'OleosÃ³nica JaÃ©n Music Fest - 22 y
+  │   23 Mayo 2026', 'id_venue': 'fd8a459c', 'venue': '22 y 23 de mayoIfeja
+  │   (Ferias JaÃ©n)', 'std_venue': 'IFEJA', 'start_date': '__NOT_FOUND__',
+  │   'start_time': '__NOT_FOUND__', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': '22 y 23 de mayoIfeja
+  │   (Ferias Jaén) En 2026 vuelve oleoSÓNICA Jaén Music Fest, el mejor
+  │   festival de la provincia de Jaén y uno de los mejores festivales medios
+  │   de toda España (nominado a tres premios en los FMF awards). En su
+  │   tercera edición promete más sorpresas y un cartel con los mejores
+  │   artistas del momento. El 22 y 23 de mayo próximos tienes, de nuevo, una
+  │   cita imprescindible con la mejor música, el mejor ambiente y la fiesta
+  │   más increíble en el recinto de Ifeja. Si has estado sabes que no te lo
+  │   puedes perder y si aún no lo has hecho, no sabes lo que te has perdido.
+  │   Recarga tu Pulsera OleoSónica AQUÍ Entradas PMR AQUÍ Estrenamos Zona
+  │   VIP elevada, con vista privilegiada al escenario para que vivas
+  │   oleoSÓNICA como nunca antes. Incluye: Acceso completo al recinto,
+  │   Acceso a Zona VIP,Acceso a Frontstage. La Zona VIP elevada cuenta con:
+  │   Plataforma elevada con visión directa al escenario, Barras propias,
+  │   Baños exclusivos VIP, Cerveza, vino y refrescos incluidos (en vaso
+  │   estándar). Bebidas disponibles exclusivamente en la barra VIP.',
+  │   'others': {}, 'source': 'Eventick', 'exec_time': '20260204T090619',
+  │   'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://apiq.eventick.es/uploads/images/2a939920-686f-11f0-8c8f-5d73d64
+  │   8ea9f.jpeg', 'url': 'https://eventick.es/oleosonica-2026/'}
+  │   ****************************
+  │   Saving 16 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Jaen/2026_02_04_09_04_Miercoles/0_raw/20260204
+  │   _0906_Eventick.json
+  │   Saving 16 master url
+  │   Appending to  /home/ubuntu/data_storage/Jaen/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'eventick.es'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+

@@ -1,0 +1,4 @@
+bash -lc 'docker run --rm --network host -v /home/ubuntu/work/fisgon:/app -v /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}" -e DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; echo "***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***"; env DOCKER_CONFIG=/tmp/.docker HOME=/tmp docker restart selenium || true; for i in $(seq 1 30); do
+  (echo > /dev/tcp/localhost/4444) >/dev/null 2>&1 && break;
+  sleep 1;
+done; exit $rc'

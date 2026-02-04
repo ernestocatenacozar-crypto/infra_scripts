@@ -1,0 +1,3 @@
+time=2026-02-04T09:07:28.177Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c27e8-192f-7d18-87a3-5bfc0ca584ad params=""
+time=2026-02-04T09:07:28.183Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c27e8-192f-7d18-87a3-5bfc0ca584ad attempt-id="" dag=FisgonTaskSelenium run-id=019c27e8-192f-7d18-87a3-5bfc0ca584ad params="[TARGET_CITY=Jaen TARGET_SCRAPER=JuntaAndaluciaAgenda 3=DAGU_BASE_URL=]"
+time=2026-02-04T09:07:28.185Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c27e8-192f-7d18-87a3-5bfc0ca584ad attempt-id="" dag=FisgonTaskSelenium run-id=019c27e8-192f-7d18-87a3-5bfc0ca584ad step=tarea_1
