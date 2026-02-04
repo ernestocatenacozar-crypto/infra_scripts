@@ -1,0 +1,25 @@
+
+RUNNING VARS → 
+        CITY=Jaen, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=Eventick
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019c283a-2102-7c19-b658-547a388b101c
+
+Running for Jaen: Eventick
+Eventick
+RUNNING SESSION =  2026_02_04_09_04_Miercoles
+Getting https://eventick.es/
+Sleep 1
+['https://eventick.es/halford-experiencie-sebas-souza-rock-states-jaen/', 'https://eventick.es/v2/siarco-feria-cofrade-cazorla/', 'https://eventick.es/azrael-rock-states-jaen/', 'https://eventick.es/v2/certamen-bandas-santa-cruz/', 'https://eventick.es/gansos-rosas-rock-states-2026/', 'https://eventick.es/gala-musica-cofrade-jaen-2026/', 'https://eventick.es/entradas-malacabeza-space-music-2026/', 'https://eventick.es/vincula-rock-2026-entradas/', 'https://eventick.es/oleosonica-2026/', 'https://eventick.es/oleosonica-2026-pmr/', 'https://eventick.es/oleosonica-cashless-2026/', 'https://eventick.es/entradas-vanesa-martin-jaen/', 'https://eventick.es/fiesta-tematik/', 'https://eventick.es/v2/playa-sonora-festival-la-antilla-2026/', 'https://eventick.es/playa-sonora-2026-aguilera-y-meni/']
+*** SCRAPED 15 URLS WITH EVENTS **
+New url events = 0
+#######################
+No new urls/events extracted. No new events to save
+#######################

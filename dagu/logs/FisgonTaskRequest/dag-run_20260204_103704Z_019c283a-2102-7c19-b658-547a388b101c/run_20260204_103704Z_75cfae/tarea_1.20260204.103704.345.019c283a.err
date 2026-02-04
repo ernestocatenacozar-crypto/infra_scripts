@@ -1,0 +1,5 @@
+bash: /root/.bash_profile: Permission denied
+WARNING: Error loading config file: open /root/.docker/config.json: permission denied
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'eventick.es'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+bash: line 1: /root/.bash_logout: Permission denied
