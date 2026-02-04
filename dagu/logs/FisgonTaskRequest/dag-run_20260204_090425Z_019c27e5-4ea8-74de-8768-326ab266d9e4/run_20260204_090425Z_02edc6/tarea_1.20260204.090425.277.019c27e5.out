@@ -1,0 +1,55 @@
+
+RUNNING VARS → 
+        CITY=Jaen, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ConciertosClub
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019c27e5-4ea8-74de-8768-326ab266d9e4
+
+Running for Jaen: ConciertosClub
+ConciertosClub
+Creating rawfolder...
+RUNNING SESSION =  2026_02_04_09_04_Miercoles
+Getting https://conciertos.club/jaen
+Sleep 1
+*** SCRAPED 63 URLS WITH EVENTS **
+New url events = 21
+0 / 21
+Getting https://conciertos.club/jaen/conciertos/111917-la-sombra-del-grajo-amokafre
+Sleep 4
+--------------------
+{'id': 'b9b07699', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'La sombra del grajo + Amokafre', 'id_venue': 'c84b689b', 'venue': 'Rock States', 'std_venue': 'Pub Rock States', 'start_date': '2026-02-06', 'start_time': '21:00:00', 'end_date': '2026-02-06', 'end_time': '__NOT_DEFINIED__', 'description': '\nLA SOMBRA DEL GRAJO + AMOKAFRE BAND\nLa Sombra del Grajo estarán en directo en Jaén acompañados por Amokafre Band. Dos bandas andaluzas con una larga trayectoria que unen sus caminos para descargar más de 2 horas de rock and roll. Rock urbano y rock rural se unen en un mismo concierto. ', 'others': {'category': 'Rock', 'price': '8', 'place_url': 'https://conciertos.club/jaen/locales/rock-states', 'town': 'Jaén'}, 'source': 'ConciertosClub', 'exec_time': '20260204T090426', 'session': '2026_02_04_09_04_Miercoles', 'image': '__NOT_FOUND__', 'url': 'https://conciertos.club/jaen/conciertos/111917-la-sombra-del-grajo-amokafre'}
+1 / 21
+Getting https://conciertos.club/jaen/conciertos/113763-o-funk-illo
+Sleep 4
+--------------------
+{'id': 'b096db73', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 0, 'event': "O'Funk'illo", 'id_venue': None, 'venue': 'Café Teatro Central', 'std_venue': None, 'start_date': '2026-02-07', 'start_time': '17:30:00', 'end_date': '2026-02-07', 'end_time': '__NOT_DEFINIED__', 'description': '\nO\'Funk\'illoO\'Funk\'illo es una banda de "Funky Andaluz Embrutessío" liderada por el cantante Andreas Lutz y el extraordinario bajista Pepe Bao que comenzó como trío, posteriormente fue dúo y actualmente actúan en modo tropa.\nCuentan con 6 álbumes editados, su última grabación data de 2019, \'Ofunkilloterapia\', que contenía entre otras canciones una divertida parodia del \'Stayin´Alive\' (\'Tengo que madurar\') de The Bee Gees.\xa0\nEn directo son una barbaridad que en escenarios grandes se crece.\n', 'others': {'category': 'Mestizaje', 'price': '19,80', 'place_url': 'https://conciertos.club/jaen/locales/cafe-teatro-central', 'town': 'Baeza (Jaén)'}, 'source': 'ConciertosClub', 'exec_time': '20260204T090426', 'session': '2026_02_04_09_04_Miercoles', 'image': 'https://conciertos.club/doc/a/2018/a_ofunkillo.jpg', 'url': 'https://conciertos.club/jaen/conciertos/113763-o-funk-illo'}
+2 / 21
+Getting https://conciertos.club/jaen/conciertos/113767-gladys-rocking
+Sleep 4
+--------------------
+{'id': 'd2bbd154', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Gladys Rocking', 'id_venue': None, 'venue': 'Café Teatro Central', 'std_venue': None, 'start_date': '2026-02-19', 'start_time': '22:30:00', 'end_date': '2026-02-19', 'end_time': '__NOT_DEFINIED__', 'description': '\nGladys RockingBanda de veteranos de la escena cordobesa con más de 30 años de experiencia liderados por la voz de Gladys Hidalgo con un repertorio lleno de clásicos del Rock and Roll, Rockabilly, Rhythm and Blues,Country.Temas propios y versiones de artistas actuales.\nHan pasado por varios de Festivales: Festival Internacional de Blues de Mijas, Alligator Rocking, Frank Rock and Blues Festival entre otros.\n', 'others': {'category': 'Rock and roll', 'price': '6', 'place_url': 'https://conciertos.club/jaen/locales/cafe-teatro-central', 'town': 'Baeza (Jaén)'}, 'source': 'ConciertosClub', 'exec_time': '20260204T090426', 'session': '2026_02_04_09_04_Miercoles', 'image': 'https://conciertos.club/doc/a/2025/a_gladysrocking.jpg', 'url': 'https://conciertos.club/jaen/conciertos/113767-gladys-rocking'}
+3 / 21
+Getting https://conciertos.club/jaen/conciertos/113764-pelomono
+Sleep 4
+--------------------
+{'id': 'ebeec86a', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Pelomono', 'id_venue': None, 'venue': 'The Garrison', 'std_venue': None, 'start_date': '2026-02-21', 'start_time': '20:00:00', 'end_date': '2026-02-21', 'end_time': '__NOT_DEFINIED__', 'description': '\nPelomonoPelomono es el experimento surgido de la involución hasta su estado de primates del Guadalupe Plata Perico de Dios y del primario batería Antonio Pelomono al poner en sus manos una guitarra y unas baquetas, respectivamente. El imprevisible resultado vino a dar una especie de exótico rock’n’roll, sucio blues, endemoniado rhythm&blues y un surf animalado como reverso de sus más bajos instintos musicales. Guitarras salvajes y ácidos efectos cortocircuitados cuyas chispas originan una propuesta musical que no atiende a géneros pero que los pervierte todos.\nCuentan que al ingerir su cóctel sónico "la experiencia resulta similar (de simio) a sentir fusionados el grito de Tarzán junto a los sensuales gemidos de nuestra querida musa Chita."\nEl dúo editó en 2013 su primer LP editado por Happy Place Records con temas propios y algunas versiones, con auténticas joyas de blues preciosista y pantanoso como \'Waaaaght!, \'Sonido Amazonico\' o \'Cortocircuito En La Selva\'.\nSiete años después de su debut discográfico, en 2020, publicaron su segundo trabajo grabado, en este caso para Everlasting: "Gibraltar", de nuevo con un fantástico artwork a cargo de Paloma Almagro. Perico y Antonio avanzan en su blues demoniaco primigenio y amplían y sofistican su horizonte. Resulta un privilegio asistir al nacimiento de una obra de semejante calibre y repercusión internacional, máxime en un género (como el rock instrumental) muy trillado y en el que la originalidad resulta complicada.\nEn "Gibraltar", su instrorock, su enérgico torrente melódico, va más allá del misterio y la oscuridad del primer disco para ofrecer un sonido bruto y sensible a la vez, con blues de ultratumba, luminoso surf y pizcas de exotismo politóxico y folclore andaluz. "Gnoisienne", "Sin rumbo", "Malagueña (para Jaén)", "Blues 79" o "Frío verano" son algunos de los cortes que se pueden disfrutar en "Gibraltar". Colaboran grandes músicos cercanos a la banda como Tito Ramírez o Sebastián Orellana.\nMonkey Week organizó en 2014 un concurso de videoclips musicales llamado\xa0Monkey Clips en el que resultó ganador una de las piezas elaboradas sobre su canción \'Cortocircuito En La Selva\', elaborada por el estudio Perles&Perles\n', 'others': {'category': 'Rock and roll', 'price': '10', 'place_url': 'https://conciertos.club/jaen/locales/the-garrison-jaen', 'town': 'Jaén'}, 'source': 'ConciertosClub', 'exec_time': '20260204T090426', 'session': '2026_02_04_09_04_Miercoles', 'image': 'https://conciertos.club/doc/a/2017/a_pelomono.jpg', 'url': 'https://conciertos.club/jaen/conciertos/113764-pelomono'}
+4 / 21
+Getting https://conciertos.club/jaen/conciertos/113799-luis-cortes
+Sleep 4
+--------------------
+{'id': '1784bd59', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Luis Cortés', 'id_venue': None, 'venue': 'Plaza de Toros', 'std_venue': None, 'start_date': '2026-03-28', 'start_time': '21:00:00', 'end_date': '2026-03-28', 'end_time': '__NOT_DEFINIED__', 'description': '\nLUIS CORTES CONCIERTO EN UBEDA (JAÉN) ', 'others': {'category': 'Urbana', 'price': '29,70', 'place_url': 'https://conciertos.club/jaen/locales/plaza-de-toros-de-ubeda', 'town': 'Úbeda (Jaén)'}, 'source': 'ConciertosClub', 'exec_time': '20260204T090426', 'session': '2026_02_04_09_04_Miercoles', 'image': 'https://conciertos.club/doc/a/2024/a_luiscortes.jpg', 'url': 'https://conciertos.club/jaen/conciertos/113799-luis-cortes'}
+5 / 21
+Getting https://conciertos.club/jaen/conciertos/113798-kadec-santa-anna
+Sleep 4
+--------------------
+{'id': '9f98cb62', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Kadec Santa Anna', 'id_venue': '077d428f', 'venue': 'Kharma Privée', 'std_venue': 'Sala Kharma', 'start_date': '2026-03-13', 'start_time': '21:00:00', 'end_date': '2026-03-13', 'end_time': '__NOT_DEFINIED__', 'description': '\nKadec Santa Anna \n\n\nEl rapero Kadec Santa Anna es un claro ejemplo de que los tiempos, musicalmente hablando, han cambiado. Es un artista que se mueve bastante más por las redes sociales que por los medios hasta ahora considerados convencionales y del que se tienen más en cuenta las reproducciones de sus temas en sitios de internet como Youtube que las ventas de sus discos.\nEn realidad, más que de discos, en su caso hay que hablar sólo de uno. Se llama ‘Cachitos de mi cora’ y lo autoeditó en 2020 en un sello que se llama, para no dejar lugar a la duda, Kadec Santa Anna. Ahí se recopilan canciones que ya había lanzado en plataformas diversas, como ‘Afloja’, ‘Carta de despedida’, ‘Todo este desastre’ o ‘Has visto qué suerte’, que tienen por cierto millones de reproducciones en sitios como Spotify. El signo de los tiempos, de nuevo.\nComo les sucede a otros muchos raperos, es alguien que no suele revelar mucho de sí mismo. Se sabe que nació en Barcelona y que empezó a hacer rimas en el año 2017. Con ellas compitió en las populares batallas de raperos que se celebraban en su barrio. Sus letras hablan fundamentalmente de amor –“Quiéreme por si las cosas se tuercen. Perdóname cariño porque soy un torpe. No sé valorarte, me viene grande quererte. Contigo vuelo alto sin pasaporte. Llévame a un lugar que estemos juntos para siempre. Estoy roto, ten cuidao, no te cortes. Tú eres mi soporte, mi amuleto de la suerte”, recita en ’22 daños’- , porque lo suyo no deja de ser el típico chico busca chica pero revestido con otro ropaje más contemporáneo.\nY aunque es jovencísimo, parece que en algunas letras evidencia que le está llegando, en cierto modo, la madurez. “He cambiado salir de fiesta por quedarnos viendo pelis, por mirar los vídeos que tenemos juntos en el móvil”, proclama en ‘Has visto qué suerte’, donde por lo demás deja claro que el lenguaje políticamente correcto no es el único que sabe emplear. “Porque cuando estoy contigo, al resto que le den por culo” o “Sólo tú me pones freno cuando voy cuesta abajo, cuando tengo ganas de mandarlo to’ al carajo”, dice en otros dos pasajes de esa misma canción.\n', 'others': {'category': 'Hip-Hop', 'price': '38,50', 'place_url': 'https://conciertos.club/jaen/locales/kharma-privee', 'town': 'Jaén'}, 'source': 'ConciertosClub', 'exec_time': '20260204T090426', 'session': '2026_02_04_09_04_Miercoles', 'image': 'https://conciertos.club/doc/a/2025/a_kadecsantaanna.jpg', 'url': 'https://conciertos.club/jaen/conciertos/113798-kadec-santa-anna'}
+6 / 21
+Getting https://conciertos.club/jaen/conciertos/109033-los-sabineros
+Sleep 4
