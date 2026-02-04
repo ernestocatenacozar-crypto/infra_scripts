@@ -431,3 +431,304 @@ dag: FisgonTaskSelenium (6m 4s)
 Result: Succeeded
 
 Launching scraper: Entradium
+Succeeded - 2026-02-04T09:13:32Z
+
+dag: FisgonTaskSelenium (1m 59s)
+│
+└─tarea_1 (1m 59s) [succeeded]
+  ├─stdout: ... (52 more lines)
+  │   {'id': '93d28f3f', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Smells Like Polly (NIRVANA) en Jaén',
+  │   'id_venue': '83cdd60a', 'venue': 'Sala Inferno', 'std_venue': 'Sala
+  │   inferno', 'start_date': '2026-03-21', 'start_time': '21:00:00',
+  │   'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__',
+  │   'description': '21 MARZOSMELLS LIKE POLLY - TRIBUTO A NIRVANA10€+G.D.
+  │   ANTICIPADAS EN WWW.ENTRADIUM.COM 13€ PUERTA APERTURA 21.00 HORAS SALA
+  │   INFERNO - JAÉNRevive la mítica gira de Nirvana en los 90’s y
+  │   disfruta de una auténtica y desenfrenada noche de grunge y rock
+  │   descarado. Ah…la gloriosa época de los 90’s… Si hay una banda que
+  │   marcó toda una década, esa es Nirvana Incluso sin haberla vivido,
+  │   cualquiera estaría de acuerdo en lo mágica que fue musicalmente
+  │   hablando. ¡No te lo puedes perder! Vive en directo la energía de
+  │   Nirvana y rememora los 90’s en una noche de auténtico grunge y rock
+  │   en su más pura esencia', 'others': {}, 'source': 'Entradium',
+  │   'exec_time': '20260204T091333', 'session': '2026_02_04_09_04_Miercoles',
+  │   'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/7053ba05b1d7
+  │   25995613fd0c9b58906a91f919cc/event_m_IMG-20251101-WA0076.jpg?v=176632075
+  │   1', 'url':
+  │   'https://entradium.com/es/events/smells-like-polly-nirvana-en-jaen'}
+  │   4 / 11
+  │   Getting
+  │   https://entradium.com/es/events/asesinos-del-amor-atticusfinch-jaen
+  │   Sleep 4
+  │   ['25.04.2026', '21:00']
+  │   --------------------
+  │   {'id': '06c832a2', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'ASESINOS DEL AMOR+ATTICUSFINCH',
+  │   'id_venue': None, 'venue': 'ROCKSTATES', 'std_venue': None,
+  │   'start_date': '2026-04-25', 'start_time': '21:00:00', 'end_date':
+  │   '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description':
+  │   'Concierto de Asesinos del Amor dentro de la Gira #mequieroirtour
+  │   presentando su nuevo trabajo GRITAR. Estaran acompañados por los
+  │   albaceteños Atticusfinch,powerpop, garage y surf, conocidos por su
+  │   sonido sesentero.', 'others': {}, 'source': 'Entradium', 'exec_time':
+  │   '20260204T091333', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/4458a987266e
+  │   c5d006ad3ccf7d3abfb27e91b4f1/event_m_SABADO_25_DE_ABRIL.png?v=1768924418
+  │   ', 'url':
+  │   'https://entradium.com/es/events/asesinos-del-amor-atticusfinch-jaen'}
+  │   5 / 11
+  │   Getting
+  │   https://entradium.com/es/events/los-sabineros-regresan-a-jaen-sala-rock-
+  │   states-jaen-febrero
+  │   Sleep 4
+  │   ['14.02.2026', '21:50']
+  │   --------------------
+  │   {'id': 'cec03ddf', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'LOS SABINEROS regresan a Jaén, Sala
+  │   Rock States!', 'id_venue': 'c84b689b', 'venue': 'Rock States Jaén',
+  │   'std_venue': 'Pub Rock States', 'start_date': '2026-02-14',
+  │   'start_time': '21:50:00', 'end_date': '__NOT_DEFINIED__', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Show cómico musical con canciones
+  │   de Joaquín Sabina y otros artistas. Más de 15 años de éxito en casi
+  │   toda la península, Ceuta, Tetuán (Marruecos), Baleares, Canarias, y
+  │   hasta Mérida, Yucatán, México. Elogiados por el mismo Sabina,
+  │   calificándolos como "Me han hablado de ellos. Sé que son dos
+  │   atorrantes de Granada que se ríen de todo, de ellos mismos y hasta de
+  │   mí, ¡y ese desparpajo me encanta! ¡Tendré que ir a verlos yo mismo!"
+  │   Un concierto familiar, participativo y muy divertido, que no se pueden
+  │   perder.', 'others': {}, 'source': 'Entradium', 'exec_time':
+  │   '20260204T091333', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/d439bacbfd62
+  │   6698ea1d5ec2a979aa01fdab23e6/event_m_Rock_states_febrero_instagram.jpg?v
+  │   =1766829703', 'url':
+  │   'https://entradium.com/es/events/los-sabineros-regresan-a-jaen-sala-rock
+  │   -states-jaen-febrero'}
+  │   6 / 11
+  │   Getting
+  │   https://entradium.com/es/events/la-sombra-del-grajo-amokafre-band
+  │   Sleep 4
+  │   ['6.02.2026', '21:00']
+  │   --------------------
+  │   {'id': 'bcaa7b1c', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'LA SOMBRA DEL GRAJO + AMOKAFRE BAND',
+  │   'id_venue': 'c84b689b', 'venue': 'Rock States', 'std_venue': 'Pub Rock
+  │   States', 'start_date': '2026-02-06', 'start_time': '21:00:00',
+  │   'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__',
+  │   'description': 'La Sombra del Grajo estarán en directo en Jaén
+  │   acompañados por Amokafre Band. Dos bandas andaluzas con una larga
+  │   trayectoria que unen sus caminos para descargar más de 2 horas de rock
+  │   and roll. Rock urbano y rock rural se unen en un mismo concierto que no
+  │   te puedes perder.', 'others': {}, 'source': 'Entradium', 'exec_time':
+  │   '20260204T091333', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/f90b40cd8ed8
+  │   40ca1cfad04f3bc369b1a61fcb21/event_m_1000094533.jpg?v=1765437167',
+  │   'url':
+  │   'https://entradium.com/es/events/la-sombra-del-grajo-amokafre-band'}
+  │   7 / 11
+  │   Getting https://entradium.com/es/events/denisdenis-en-jaen
+  │   Sleep 4
+  │   ['13.03.2026', '21:30']
+  │   --------------------
+  │   {'id': 'de0db4db', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'DENISDENIS EN BAEZA', 'id_venue': None,
+  │   'venue': 'CAFÉ TEATRO CENTRAL', 'std_venue': None, 'start_date':
+  │   '2026-03-13', 'start_time': '21:30:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': '¡Disfruta de la banda
+  │   de Indie-Rock del momento en Baeza, Jaén!', 'others': {}, 'source':
+  │   'Entradium', 'exec_time': '20260204T091333', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/46df4bcf6401
+  │   3572a784b6ef79955f1d2a3cc0bc/event_m_IMG_3496.png?v=1754739314', 'url':
+  │   'https://entradium.com/es/events/denisdenis-en-jaen'}
+  │   8 / 11
+  │   Getting
+  │   https://entradium.com/es/events/jose-carlos-escobar-jaen-la-fabrica-del-
+  │   arte
+  │   Sleep 4
+  │   ['20.03.2026', '21:00']
+  │   --------------------
+  │   {'id': '706d7c01', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Jose Carlos Escobar - JAÉN (LA FÁBRICA
+  │   DEL ARTE)', 'id_venue': 'e4237185', 'venue': 'La Fábrica del Arte',
+  │   'std_venue': 'La Fábrica del Arte', 'start_date': '2026-03-20',
+  │   'start_time': '21:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Jose Carlos Escobar, cantautor
+  │   flamenco, vuelve con sus canciones para emocionarte y hacerte bailar a
+  │   partes iguales. Viene presentando su nuevo disco "TRECE" y más
+  │   canciones nuevas que está componiendo, por lo que trae música fresca
+  │   para vuestros oídos!! No te lo pierdas!!!', 'others': {}, 'source':
+  │   'Entradium', 'exec_time': '20260204T091333', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/b0b489992f92
+  │   dffdc3f58964e88bead2ea142163/event_m_JAEN.png?v=1764269752', 'url':
+  │   'https://entradium.com/es/events/jose-carlos-escobar-jaen-la-fabrica-del
+  │   -arte'}
+  │   9 / 11
+  │   Getting https://entradium.com/es/events/y-tu-mira
+  │   Sleep 4
+  │   ['Varias', 'fechas', '-']
+  │   --------------------
+  │   {'id': '2a4812a6', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Y TU MIRÁ', 'id_venue': None, 'venue':
+  │   'PAPILION STUDIO', 'std_venue': None, 'start_date': '__NOT_FOUND__',
+  │   'start_time': '__NOT_FOUND__', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Y TU MIRÁExposición
+  │   pictórica de Ana_k_ene Papilion Studio Del 15/02 al 15/03 de 2026No es
+  │   una galería.No es una inauguración cualquiera.Es un encuentro íntimo
+  │   entre arte, mirada y presencia.Papilion Studio abre sus puertas para
+  │   acoger una exposición única, donde la pintura convive con el espacio,
+  │   el cuerpo y la emoción. Durante la inauguración, la artista estará
+  │   presente, compartiendo de cerca su obra, su proceso y su universo
+  │   creativo.Una experiencia pensada para pocos:mirar despacio, sentir sin
+  │   filtros y habitar el arte desde dentro.', 'others': {}, 'source':
+  │   'Entradium', 'exec_time': '20260204T091333', 'session':
+  │   '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/c57b3dda6f17
+  │   485cf832667a0edbcd067ab97bcf/event_m_Papilion_cartel_fecha_1.jpeg?v=1770
+  │   116819', 'url': 'https://entradium.com/es/events/y-tu-mira'}
+  │   10 / 11
+  │   Getting
+  │   https://entradium.com/es/events/jose-luis-jaen-cadiz-hotel-spa-cadiz-pla
+  │   za
+  │   Sleep 4
+  │   ['6.03.2026', '21:00']
+  │   --------------------
+  │   {'id': '86f3f715', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'JOSÉ LUIS JAÉN', 'id_venue': None,
+  │   'venue': 'HOTEL SPA CÁDIZ PLAZA', 'std_venue': None, 'start_date':
+  │   '2026-03-06', 'start_time': '21:00:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'José Luis Jaén es un
+  │   aclamado cantaor y artista flamenco-andaluz, conocido por su voz potente
+  │   y emotiva, que ha ganado popularidad tras ser finalista en talent shows
+  │   como Tierra de Talento y Cover Night, colaborando con grandes figuras
+  │   como María Peláe y Dorantes, y llevando su fusión de flamenco, copla
+  │   y otros géneros a escenarios nacionales e internacionales con llenos
+  │   totales.', 'others': {}, 'source': 'Entradium', 'exec_time':
+  │   '20260204T091333', 'session': '2026_02_04_09_04_Miercoles', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/ad8e998ef131
+  │   79f755bb764d05197e95823f38b9/event_m_IMG_5173.jpeg?v=1769991273', 'url':
+  │   'https://entradium.com/es/events/jose-luis-jaen-cadiz-hotel-spa-cadiz-pl
+  │   aza'}
+  │   ****************************
+  │   Saving 11 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Jaen/2026_02_04_09_04_Miercoles/0_raw/20260204
+  │   _0913_Entradium.json
+  │   Saving 11 master url
+  │   Appending to  /home/ubuntu/data_storage/Jaen/00_master/master_url.json
+  │   ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+  │   selenium
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: SalaLaPaca
+Failed - 2026-02-04T09:15:31Z
+
+dag: FisgonTaskSelenium (42.0s)
+│
+└─tarea_1 (42.0s) [failed]
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Jaen,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=SalaLaPaca
+  │   DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&d
+  │   agRunId=019c27ef-7830-73b2-96a3-f912da712734
+  │   Running for Jaen: SalaLaPaca
+  │   SalaLaPaca
+  │   RUNNING SESSION =  2026_02_04_09_04_Miercoles
+  │   Starting WebDriver...
+  │   http://localhost:4444/wd/hub
+  │   sleeping 2
+  │   Getting content
+  │   sleeping 2
+  │   ******
+  │   xpath
+  │   /html/body/div[2]/div[3]/div/div/div[2]/div[11]/ul/li[3]/a
+  │   /html/body/div[2]/div[3]/div/div/div[2]/div[11]/ul/li[3]/a Not found
+  │   Checking unique event url.
+  │   ***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+  │   selenium
+  ├─stderr:
+  │   Traceback (most recent call last):
+  │   File "/app/run.py", line 137, in <module>
+  │   run_one(events_extractors, TARGET_SCRAPER, session_manager, TARGET_CITY)
+  │   File "/app/run.py", line 18, in run_one
+  │   ev.run()
+  │   File "/app/scraper/extractors/main_pages/abc_main_pages_extractor.py",
+  │   line 28, in run
+  │   clean_event_list = self.filter_unique_not_extracted_url(result)
+  │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  │   File "/app/scraper/extractors/abc_base_extractor.py", line 154, in
+  │   filter_unique_not_extracted_url
+  │   if isinstance(url_event_list[0], dict):
+  │   ~~~~~~~~~~~~~~^^^
+  │   IndexError: list index out of range
+  │
+  └─error: failed to execute step "tarea_1": exit status 1
+
+Result: Failed
+

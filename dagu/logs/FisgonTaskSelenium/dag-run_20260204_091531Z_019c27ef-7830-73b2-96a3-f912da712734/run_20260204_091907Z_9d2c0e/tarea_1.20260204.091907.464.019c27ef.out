@@ -1,0 +1,69 @@
+
+RUNNING VARS → 
+        CITY=Jaen, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=SalaLaPaca
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019c27ef-7830-73b2-96a3-f912da712734
+
+Running for Jaen: SalaLaPaca
+SalaLaPaca
+Creating rawfolder...
+RUNNING SESSION =  2026_02_04_09_19_Miercoles
+Starting WebDriver...
+http://localhost:4444/wd/hub
+sleeping 2
+sleeping 2
+Getting content
+sleeping 2
+--------------------
+{'id': 'cc5c084c', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'MATILDA', 'id_venue': '5023dbce', 'venue': 'SalalaPaca', 'std_venue': 'SalalaPaca', 'start_date': '2026-02-20', 'start_time': '20:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Esta versión teatral de Matilda llega a escena como...', 'others': {}, 'source': 'SalaLaPaca', 'exec_time': '20260204T091908', 'session': '2026_02_04_09_19_Miercoles', 'image': 'https://salalapaca.es/wp-content/uploads/2026/01/matilda-1100x680.jpg', 'url': 'https://salalapaca.es/tc-events/matilda/'}
+--------------------
+{'id': 'f3921b41', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'IMPRöV (22 FEBRERO)', 'id_venue': '5023dbce', 'venue': 'SalalaPaca', 'std_venue': 'SalalaPaca', 'start_date': '2026-02-22', 'start_time': '19:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'IMPRöV es un espectáculo teatral de improvisación basado en...', 'others': {}, 'source': 'SalaLaPaca', 'exec_time': '20260204T091908', 'session': '2026_02_04_09_19_Miercoles', 'image': 'https://salalapaca.es/wp-content/uploads/2026/01/improv-feb-1100x680.jpg', 'url': 'https://salalapaca.es/tc-events/improv-22-febrero/'}
+--------------------
+{'id': '2e5dfec5', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'MOTEL ALKALÁ', 'id_venue': '5023dbce', 'venue': 'SalalaPaca', 'std_venue': 'SalalaPaca', 'start_date': '2026-02-14', 'start_time': '20:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Pili y Maricarmen están locas por trabajar, ganarse la vida y pegar el...', 'others': {}, 'source': 'SalaLaPaca', 'exec_time': '20260204T091908', 'session': '2026_02_04_09_19_Miercoles', 'image': 'https://salalapaca.es/wp-content/uploads/2026/01/motel-alkala-1100x680.jpg', 'url': 'https://salalapaca.es/tc-events/motel-alkala/'}
+--------------------
+{'id': 'a47bd967', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'EL GATO CON BOTAS', 'id_venue': '5023dbce', 'venue': 'SalalaPaca', 'std_venue': 'SalalaPaca', 'start_date': '2026-02-06', 'start_time': '19:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Compañía La Gotera de Lazotea.Con títeres, con actores, con música en directo.¿Quién no conoce la historia del...', 'others': {}, 'source': 'SalaLaPaca', 'exec_time': '20260204T091908', 'session': '2026_02_04_09_19_Miercoles', 'image': 'https://salalapaca.es/wp-content/uploads/2026/01/gato-feb-2026-1100x680.jpg', 'url': 'https://salalapaca.es/tc-events/el-gato-con-botas/'}
+--------------------
+{'id': '3e9ae543', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'ENTRE SOMBRAS Y PROMESAS', 'id_venue': '5023dbce', 'venue': 'SalalaPaca', 'std_venue': 'SalalaPaca', 'start_date': '2026-02-13', 'start_time': '20:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'El Monte de las Ánimas y La Promesa son...', 'others': {}, 'source': 'SalaLaPaca', 'exec_time': '20260204T091908', 'session': '2026_02_04_09_19_Miercoles', 'image': 'https://salalapaca.es/wp-content/uploads/2026/01/entre-sombras-y-promesas-1100x680.jpg', 'url': 'https://salalapaca.es/tc-events/entre-sombras-y-promesas/'}
+--------------------
+{'id': 'cff86680', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'CHRISTIAN GARCÍA: 10 AÑOS DANDO GUERRA', 'id_venue': '5023dbce', 'venue': 'SalalaPaca', 'std_venue': 'SalalaPaca', 'start_date': '2026-02-07', 'start_time': '20:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'La función tendrá lugar el...', 'others': {}, 'source': 'SalaLaPaca', 'exec_time': '20260204T091908', 'session': '2026_02_04_09_19_Miercoles', 'image': 'https://salalapaca.es/wp-content/uploads/2025/10/christian-7feb-1100x680.jpg', 'url': 'https://salalapaca.es/tc-events/christian-garcia-10-anos-dando-guerra/'}
+--------------------
+{'id': '56186cd4', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'SIN LENGUA EN LOS PELOS DE JESÚS PIÑA', 'id_venue': '5023dbce', 'venue': 'SalalaPaca', 'std_venue': 'SalalaPaca', 'start_date': '2026-03-14', 'start_time': '20:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'La función tendrá lugar el 14 de marzo a...', 'others': {}, 'source': 'SalaLaPaca', 'exec_time': '20260204T091908', 'session': '2026_02_04_09_19_Miercoles', 'image': 'https://salalapaca.es/wp-content/uploads/2025/10/sin-lengua-en-los-pelos-1100x680.jpg', 'url': 'https://salalapaca.es/tc-events/sin-lengua-en-los-pelos-de-jesus-pina/'}
+--------------------
+{'id': 'cd31035c', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': '3 DE 40', 'id_venue': '5023dbce', 'venue': 'SalalaPaca', 'std_venue': 'SalalaPaca', 'start_date': '2026-03-27', 'start_time': '21:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'De Compañía Arrajatabla Tras la muerte de la matriarca,...', 'others': {}, 'source': 'SalaLaPaca', 'exec_time': '20260204T091908', 'session': '2026_02_04_09_19_Miercoles', 'image': 'https://salalapaca.es/wp-content/uploads/2025/11/3-de-40-1100x680.jpg', 'url': 'https://salalapaca.es/tc-events/3-de-40/'}
+--------------------
+{'id': '4ded6d34', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'DESCONTROLAO DE VICTOR CASTIGAO', 'id_venue': '5023dbce', 'venue': 'SalalaPaca', 'std_venue': 'SalalaPaca', 'start_date': '2026-03-07', 'start_time': '19:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'La función tendrá lugar el 7 de marzo a...', 'others': {}, 'source': 'SalaLaPaca', 'exec_time': '20260204T091908', 'session': '2026_02_04_09_19_Miercoles', 'image': 'https://salalapaca.es/wp-content/uploads/2025/10/7-marzo-desc-1100x680.jpg', 'url': 'https://salalapaca.es/tc-events/descontrolao-de-victor-castigao/'}
+--------------------
+{'id': 'b391ff2c', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'TÓMATELO CON HUMOR', 'id_venue': '5023dbce', 'venue': 'SalalaPaca', 'std_venue': 'SalalaPaca', 'start_date': '2026-02-08', 'start_time': '19:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'La función tendrá lugar el...', 'others': {}, 'source': 'SalaLaPaca', 'exec_time': '20260204T091908', 'session': '2026_02_04_09_19_Miercoles', 'image': 'https://salalapaca.es/wp-content/uploads/2026/01/TOMATELO-CON-HUMOR-1100x680.jpg', 'url': 'https://salalapaca.es/tc-events/tomatelo-con-humor/'}
+******
+xpath
+/html/body/div[2]/div[3]/div/div/div[2]/div[11]/ul/li[3]/a
+clicking
+sleeping 3
+sleeping 5
+Getting content
+sleeping 2
+--------------------
+{'id': '9892472c', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'POCAS LUCES DE MANOLO LERA', 'id_venue': '5023dbce', 'venue': 'SalalaPaca', 'std_venue': 'SalalaPaca', 'start_date': '2026-05-08', 'start_time': '21:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'La función tendrá lugar el 8 de mayo a...', 'others': {}, 'source': 'SalaLaPaca', 'exec_time': '20260204T091908', 'session': '2026_02_04_09_19_Miercoles', 'image': 'https://salalapaca.es/wp-content/uploads/2025/10/POCAS-LUCES-MANOLO-LERA-1100x680.jpg', 'url': 'https://salalapaca.es/tc-events/pocas-luces-de-manolo-lera/'}
+--------------------
+{'id': '90d91f6c', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'ENCERRONA DE PEPE VIYUELA', 'id_venue': '5023dbce', 'venue': 'SalalaPaca', 'std_venue': 'SalalaPaca', 'start_date': '2026-05-03', 'start_time': '19:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': '¡¡¡Vuelve otra vez Pepe Viyuela!!!, el padrino de SALALApaca,...', 'others': {}, 'source': 'SalaLaPaca', 'exec_time': '20260204T091908', 'session': '2026_02_04_09_19_Miercoles', 'image': 'https://salalapaca.es/wp-content/uploads/2026/01/pepe-2026-1100x680.jpg', 'url': 'https://salalapaca.es/tc-events/encerrona-de-pepe-viyuela/'}
+******
+xpath
+/html/body/div[2]/div[3]/div/div/div[2]/div[11]/ul/li[3]/a
+/html/body/div[2]/div[3]/div/div/div[2]/div[11]/ul/li[3]/a Not found
+Checking unique event url.
+New url events = 12
+****************************
+Saving 12 new events
+Saving in  /home/ubuntu/data_storage/Jaen/2026_02_04_09_19_Miercoles/0_raw/20260204_0919_SalaLaPaca.json
+Saving 12 master url
+Appending to  /home/ubuntu/data_storage/Jaen/00_master/master_url.json
+***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***
+selenium
