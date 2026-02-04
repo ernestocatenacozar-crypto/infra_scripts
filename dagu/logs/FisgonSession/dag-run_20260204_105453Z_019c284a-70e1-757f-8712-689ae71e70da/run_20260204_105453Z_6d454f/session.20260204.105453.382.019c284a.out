@@ -1,0 +1,23 @@
+
+RUNNING VARS → 
+        CITY=Jaen, 
+
+        OPERATION=1,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=1,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=
+        DAG_RUN_URL=/dags/FisgonSession/log?remoteNode=local&step=session&dagRunId=019c284a-70e1-757f-8712-689ae71e70da
+
+Executing final task with session: 2026_02_04_09_04_Miercoles
+Reading /home/ubuntu/data_storage/Jaen/2026_02_04_09_04_Miercoles/0_raw/20260204_0904_ConciertosClub.json...
+Reading /home/ubuntu/data_storage/Jaen/2026_02_04_09_04_Miercoles/0_raw/20260204_0906_JacksonLive.json...
+Reading /home/ubuntu/data_storage/Jaen/2026_02_04_09_04_Miercoles/0_raw/20260204_1038_Eventick.json...
+Reading /home/ubuntu/data_storage/Jaen/2026_02_04_09_04_Miercoles/0_raw/20260204_0913_Entradium.json...
+Reading /home/ubuntu/data_storage/Jaen/2026_02_04_09_04_Miercoles/0_raw/20260204_1050_JuntaAndaluciaAgenda.json...
+Reading /home/ubuntu/data_storage/Jaen/2026_02_04_09_04_Miercoles/0_raw/20260204_0919_SalaLaPaca.json...
+Saving 102 new events
+Saving in  /home/ubuntu/data_storage/Jaen/2026_02_04_09_04_Miercoles/0_raw/Merged.json
