@@ -1,0 +1,7 @@
+bash: /root/.bash_profile: Permission denied
+WARNING: Error loading config file: open /root/.docker/config.json: permission denied
+Traceback (most recent call last):
+  File "/app/run.py", line 82, in <module>
+    raise ValueError(f"Unknown TARGET_CITY: {TARGET_CITY}")
+ValueError: Unknown TARGET_CITY: 
+bash: line 1: /root/.bash_logout: Permission denied
