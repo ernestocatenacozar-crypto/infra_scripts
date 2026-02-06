@@ -3,6 +3,8 @@ services:
     image: selenium/standalone-chrome:latest
     container_name: selenium
     restart: unless-stopped
+    profiles:
+      - selenium
     ports:
       - "4444:4444"
       - "7900:7900"

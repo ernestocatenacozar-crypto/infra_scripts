@@ -1,0 +1,51 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ClassicJazz
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019c3299-fbc0-7dbc-9196-301320eda977
+
+Running for Almeria: ClassicJazz
+ClassicJazz
+Creating rawfolder...
+RUNNING SESSION =  2026_02_06_10_58_Viernes
+Starting WebDriver...
+http://localhost:4444/wd/hub
+*********************times =1
+sleeping 7
+Scrolling...
+sleeping 1
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*********************times =2
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*** SCRAPED 125 URLS WITH EVENTS **
+New url events = 1
+0 / 1
+Getting https://clasijazz.com/evento/spicy-sessions-no-8/
+Sleep 4
+2026-03-12T22:00:00 2026-03-12T23:30:00
+--------------------
+{'id': '77c3f624', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Spicy Sessions No.8', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-03-12', 'start_time': '22:00:00', 'end_date': '2026-03-12', 'end_time': '23:30:00', 'description': '12€ NS / 5€ S | Sala Principal SPICY SESSION, el punto de encuentro donde los estilos se mezclan, las voces se cruzan y la energía se desborda. Seguimos fieles a la esencia con la que nació este proyecto: reunir a los músicos más talentosos y vanguardistas de la escena almeriense y abrir un escenario sin etiquetas, donde todo tiene cabida, del flamenco al latin-jazz, del soul a la música urbana. Tras una primera temporada llena de sold outs, y una segunda que sigue creciendo con cada edición, regresamos con más ritmo, más elegancia y más chispa que nunca. Porque cada SPICY SESSION es un viaje distinto. Cada noche, una historia nueva. Y cada público… lo convierte en algo irrepetible. Aquí no vienes solo a escuchar música. Vienes a vivirla, a sentirla, a ser parte de la magia Spicy.', 'others': {'price': '5,00€ – 12,00€', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260206T105804', 'session': '2026_02_06_10_58_Viernes', 'image': 'https://clasijazz.com/wp-content/uploads/2026/02/spicy-8.png', 'url': 'https://clasijazz.com/evento/spicy-sessions-no-8/'}
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_02_06_10_58_Viernes/0_raw/20260206_1058_ClassicJazz.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

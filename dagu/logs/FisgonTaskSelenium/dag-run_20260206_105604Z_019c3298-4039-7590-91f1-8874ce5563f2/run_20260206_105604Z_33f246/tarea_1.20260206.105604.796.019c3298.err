@@ -1,0 +1,2 @@
+bash: /root/.bash_profile: Permission denied
+bash: line 1: DAGU_BASE_URL: unbound variable
