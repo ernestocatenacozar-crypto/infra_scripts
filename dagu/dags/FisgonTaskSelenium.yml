@@ -21,6 +21,7 @@ steps:
       --network container:"$SELENIUM_NAME"
       -v /home/ubuntu/work/fisgon:/app
       -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
+      -v /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_flask_app/static/img
       -w /app
       -e OPERATION=0
       -e DOCKER_CONFIG=/tmp/.docker
