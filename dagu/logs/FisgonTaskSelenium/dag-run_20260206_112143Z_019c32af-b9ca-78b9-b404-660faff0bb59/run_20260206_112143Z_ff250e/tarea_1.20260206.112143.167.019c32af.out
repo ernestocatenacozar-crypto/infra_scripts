@@ -1,0 +1,21 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=SalaEmma
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019c32af-b9ca-78b9-b404-660faff0bb59
+
+Running for Almeria: SalaEmma
+SalaEmma
+RUNNING SESSION =  2026_02_06_10_58_Viernes
+Starting WebDriver...
+http://localhost:4444/wd/hub
+sleeping 10
+Getting content
