@@ -6,8 +6,19 @@ params:
 steps:
   - name: "tarea_1"
     command: >
-      bash -lc 'docker run --rm
-      --network host
+      bash -lc 'set -euo pipefail;
+      export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+      SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)";
+      cleanup() { docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; };
+      trap cleanup EXIT;
+      docker run -d --rm --name "$SELENIUM_NAME"
+      --shm-size=2g
+      -e SE_NODE_MAX_SESSIONS=1
+      -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+      selenium/standalone-chrome:latest >/dev/null;
+      docker exec "$SELENIUM_NAME" bash -lc "for i in \$(seq 1 60); do (echo > /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit 1";
+      docker run --rm
+      --network container:"$SELENIUM_NAME"
       -v /home/ubuntu/work/fisgon:/app
       -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
       -w /app
@@ -18,15 +29,7 @@ steps:
       -e TARGET_SCRAPER
       -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
       -e DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&step=tarea_1&dagRunId=${DAG_RUN_ID}"
-      fisgon_scraper:1.0;
-      rc=$?;
-      echo "***===*** SCRAPER DONE, RESTARTING SELENIUM ***===***";
-      env DOCKER_CONFIG=/tmp/.docker HOME=/tmp docker restart selenium || true;
-      for i in $(seq 1 30); do
-        (echo > /dev/tcp/localhost/4444) >/dev/null 2>&1 && break;
-        sleep 1;
-      done;
-      exit $rc'
+      fisgon_scraper:1.0'
 
 
 
