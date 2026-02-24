@@ -1,0 +1,180 @@
+time=2026-02-24T18:05:10.695Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c90d3-92a5-7c93-af29-af87455156a8 params=""
+time=2026-02-24T18:05:10.707Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c90d3-92a5-7c93-af29-af87455156a8 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-92a5-7c93-af29-af87455156a8 params="[TARGET_CITY=Almeria TARGET_SCRAPER=AlmeriaCiudad 3=DAGU_BASE_URL=]"
+time=2026-02-24T18:05:10.711Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c90d3-92a5-7c93-af29-af87455156a8 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-92a5-7c93-af29-af87455156a8 step=tarea_1
+time=2026-02-24T18:05:18.465Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019c90d3-92a5-7c93-af29-af87455156a8 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-92a5-7c93-af29-af87455156a8 status=failed started-at=2026-02-24T18:05:10Z finished-at=2026-02-24T18:05:18Z
+time=2026-02-24T18:05:18.479Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019c90d3-92a5-7c93-af29-af87455156a8 err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 118, in <module>\n    from orchestration.almeria import events_extractors\n  File \"/app/orchestration/almeria.py\", line 1, in <module>\n    from scraper.extractors.url_iterator.fical import Fical\n  File \"/app/scraper/extractors/url_iterator/fical.py\", line 6, in <module>\n    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor\n  File \"/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py\", line 5, in <module>\n    from scraper.extractors.abc_event_model_extractor import EventModelExtractor\n  File \"/app/scraper/extractors/abc_event_model_extractor.py\", line 5, in <module>\n    from titlecase import titlecase\nModuleNotFoundError: No module named 'titlecase'\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019c90d3-92a5-7c93-af29-af87455156a8): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 118, in <module>
+    from orchestration.almeria import events_extractors
+  File "/app/orchestration/almeria.py", line 1, in <module>
+    from scraper.extractors.url_iterator.fical import Fical
+  File "/app/scraper/extractors/url_iterator/fical.py", line 6, in <module>
+    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 5, in <module>
+    from scraper.extractors.abc_event_model_extractor import EventModelExtractor
+  File "/app/scraper/extractors/abc_event_model_extractor.py", line 5, in <module>
+    from titlecase import titlecase
+ModuleNotFoundError: No module named 'titlecase'
+
+time=2026-02-24T18:05:18.517Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c90d3-b133-7ad1-9a9d-ac01a845c67a params=""
+time=2026-02-24T18:05:18.526Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c90d3-b133-7ad1-9a9d-ac01a845c67a attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-b133-7ad1-9a9d-ac01a845c67a params="[TARGET_CITY=Almeria TARGET_SCRAPER=AlmeriaTurismo 3=DAGU_BASE_URL=]"
+time=2026-02-24T18:05:18.528Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c90d3-b133-7ad1-9a9d-ac01a845c67a attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-b133-7ad1-9a9d-ac01a845c67a step=tarea_1
+time=2026-02-24T18:05:24.341Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019c90d3-b133-7ad1-9a9d-ac01a845c67a attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-b133-7ad1-9a9d-ac01a845c67a status=failed started-at=2026-02-24T18:05:18Z finished-at=2026-02-24T18:05:24Z
+time=2026-02-24T18:05:24.378Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019c90d3-b133-7ad1-9a9d-ac01a845c67a err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 118, in <module>\n    from orchestration.almeria import events_extractors\n  File \"/app/orchestration/almeria.py\", line 1, in <module>\n    from scraper.extractors.url_iterator.fical import Fical\n  File \"/app/scraper/extractors/url_iterator/fical.py\", line 6, in <module>\n    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor\n  File \"/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py\", line 5, in <module>\n    from scraper.extractors.abc_event_model_extractor import EventModelExtractor\n  File \"/app/scraper/extractors/abc_event_model_extractor.py\", line 5, in <module>\n    from titlecase import titlecase\nModuleNotFoundError: No module named 'titlecase'\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019c90d3-b133-7ad1-9a9d-ac01a845c67a): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 118, in <module>
+    from orchestration.almeria import events_extractors
+  File "/app/orchestration/almeria.py", line 1, in <module>
+    from scraper.extractors.url_iterator.fical import Fical
+  File "/app/scraper/extractors/url_iterator/fical.py", line 6, in <module>
+    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 5, in <module>
+    from scraper.extractors.abc_event_model_extractor import EventModelExtractor
+  File "/app/scraper/extractors/abc_event_model_extractor.py", line 5, in <module>
+    from titlecase import titlecase
+ModuleNotFoundError: No module named 'titlecase'
+
+time=2026-02-24T18:05:24.414Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c90d3-c83c-7ab7-b2ab-3ea37997117a params=""
+time=2026-02-24T18:05:24.427Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c90d3-c83c-7ab7-b2ab-3ea37997117a attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-c83c-7ab7-b2ab-3ea37997117a params="[TARGET_CITY=Almeria TARGET_SCRAPER=JuntaAndaluciaAgenda 3=DAGU_BASE_URL=]"
+time=2026-02-24T18:05:24.430Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c90d3-c83c-7ab7-b2ab-3ea37997117a attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-c83c-7ab7-b2ab-3ea37997117a step=tarea_1
+time=2026-02-24T18:05:30.230Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019c90d3-c83c-7ab7-b2ab-3ea37997117a attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-c83c-7ab7-b2ab-3ea37997117a status=failed started-at=2026-02-24T18:05:24Z finished-at=2026-02-24T18:05:30Z
+time=2026-02-24T18:05:30.268Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019c90d3-c83c-7ab7-b2ab-3ea37997117a err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 118, in <module>\n    from orchestration.almeria import events_extractors\n  File \"/app/orchestration/almeria.py\", line 1, in <module>\n    from scraper.extractors.url_iterator.fical import Fical\n  File \"/app/scraper/extractors/url_iterator/fical.py\", line 6, in <module>\n    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor\n  File \"/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py\", line 5, in <module>\n    from scraper.extractors.abc_event_model_extractor import EventModelExtractor\n  File \"/app/scraper/extractors/abc_event_model_extractor.py\", line 5, in <module>\n    from titlecase import titlecase\nModuleNotFoundError: No module named 'titlecase'\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019c90d3-c83c-7ab7-b2ab-3ea37997117a): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 118, in <module>
+    from orchestration.almeria import events_extractors
+  File "/app/orchestration/almeria.py", line 1, in <module>
+    from scraper.extractors.url_iterator.fical import Fical
+  File "/app/scraper/extractors/url_iterator/fical.py", line 6, in <module>
+    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 5, in <module>
+    from scraper.extractors.abc_event_model_extractor import EventModelExtractor
+  File "/app/scraper/extractors/abc_event_model_extractor.py", line 5, in <module>
+    from titlecase import titlecase
+ModuleNotFoundError: No module named 'titlecase'
+
+time=2026-02-24T18:05:30.342Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c90d3-df63-7ad8-9706-ecb069c9a6a8 params=""
+time=2026-02-24T18:05:30.355Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c90d3-df63-7ad8-9706-ecb069c9a6a8 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-df63-7ad8-9706-ecb069c9a6a8 params="[TARGET_CITY=Almeria TARGET_SCRAPER=ClassicJazz 3=DAGU_BASE_URL=]"
+time=2026-02-24T18:05:30.358Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c90d3-df63-7ad8-9706-ecb069c9a6a8 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-df63-7ad8-9706-ecb069c9a6a8 step=tarea_1
+time=2026-02-24T18:05:35.924Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019c90d3-df63-7ad8-9706-ecb069c9a6a8 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-df63-7ad8-9706-ecb069c9a6a8 status=failed started-at=2026-02-24T18:05:30Z finished-at=2026-02-24T18:05:35Z
+time=2026-02-24T18:05:35.949Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019c90d3-df63-7ad8-9706-ecb069c9a6a8 err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 118, in <module>\n    from orchestration.almeria import events_extractors\n  File \"/app/orchestration/almeria.py\", line 1, in <module>\n    from scraper.extractors.url_iterator.fical import Fical\n  File \"/app/scraper/extractors/url_iterator/fical.py\", line 6, in <module>\n    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor\n  File \"/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py\", line 5, in <module>\n    from scraper.extractors.abc_event_model_extractor import EventModelExtractor\n  File \"/app/scraper/extractors/abc_event_model_extractor.py\", line 5, in <module>\n    from titlecase import titlecase\nModuleNotFoundError: No module named 'titlecase'\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019c90d3-df63-7ad8-9706-ecb069c9a6a8): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 118, in <module>
+    from orchestration.almeria import events_extractors
+  File "/app/orchestration/almeria.py", line 1, in <module>
+    from scraper.extractors.url_iterator.fical import Fical
+  File "/app/scraper/extractors/url_iterator/fical.py", line 6, in <module>
+    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 5, in <module>
+    from scraper.extractors.abc_event_model_extractor import EventModelExtractor
+  File "/app/scraper/extractors/abc_event_model_extractor.py", line 5, in <module>
+    from titlecase import titlecase
+ModuleNotFoundError: No module named 'titlecase'
+
+time=2026-02-24T18:05:35.979Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c90d3-f569-7d3f-931a-b195bbb6a937 params=""
+time=2026-02-24T18:05:35.992Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c90d3-f569-7d3f-931a-b195bbb6a937 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-f569-7d3f-931a-b195bbb6a937 params="[TARGET_CITY=Almeria TARGET_SCRAPER=FlowteTaquillaCultural 3=DAGU_BASE_URL=]"
+time=2026-02-24T18:05:35.995Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c90d3-f569-7d3f-931a-b195bbb6a937 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-f569-7d3f-931a-b195bbb6a937 step=tarea_1
+time=2026-02-24T18:05:41.741Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019c90d3-f569-7d3f-931a-b195bbb6a937 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d3-f569-7d3f-931a-b195bbb6a937 status=failed started-at=2026-02-24T18:05:35Z finished-at=2026-02-24T18:05:41Z
+time=2026-02-24T18:05:41.765Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019c90d3-f569-7d3f-931a-b195bbb6a937 err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 118, in <module>\n    from orchestration.almeria import events_extractors\n  File \"/app/orchestration/almeria.py\", line 1, in <module>\n    from scraper.extractors.url_iterator.fical import Fical\n  File \"/app/scraper/extractors/url_iterator/fical.py\", line 6, in <module>\n    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor\n  File \"/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py\", line 5, in <module>\n    from scraper.extractors.abc_event_model_extractor import EventModelExtractor\n  File \"/app/scraper/extractors/abc_event_model_extractor.py\", line 5, in <module>\n    from titlecase import titlecase\nModuleNotFoundError: No module named 'titlecase'\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019c90d3-f569-7d3f-931a-b195bbb6a937): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 118, in <module>
+    from orchestration.almeria import events_extractors
+  File "/app/orchestration/almeria.py", line 1, in <module>
+    from scraper.extractors.url_iterator.fical import Fical
+  File "/app/scraper/extractors/url_iterator/fical.py", line 6, in <module>
+    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 5, in <module>
+    from scraper.extractors.abc_event_model_extractor import EventModelExtractor
+  File "/app/scraper/extractors/abc_event_model_extractor.py", line 5, in <module>
+    from titlecase import titlecase
+ModuleNotFoundError: No module named 'titlecase'
+
+time=2026-02-24T18:05:41.795Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c90d4-0c22-72ac-9b1b-f920241bc45f params=""
+time=2026-02-24T18:05:41.808Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c90d4-0c22-72ac-9b1b-f920241bc45f attempt-id="" dag=FisgonTaskSelenium run-id=019c90d4-0c22-72ac-9b1b-f920241bc45f params="[TARGET_CITY=Almeria TARGET_SCRAPER=Entradium 3=DAGU_BASE_URL=]"
+time=2026-02-24T18:05:41.811Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c90d4-0c22-72ac-9b1b-f920241bc45f attempt-id="" dag=FisgonTaskSelenium run-id=019c90d4-0c22-72ac-9b1b-f920241bc45f step=tarea_1
+time=2026-02-24T18:05:46.340Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019c90d4-0c22-72ac-9b1b-f920241bc45f attempt-id="" dag=FisgonTaskSelenium run-id=019c90d4-0c22-72ac-9b1b-f920241bc45f status=failed started-at=2026-02-24T18:05:41Z finished-at=2026-02-24T18:05:46Z
+time=2026-02-24T18:05:46.365Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019c90d4-0c22-72ac-9b1b-f920241bc45f err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 118, in <module>\n    from orchestration.almeria import events_extractors\n  File \"/app/orchestration/almeria.py\", line 1, in <module>\n    from scraper.extractors.url_iterator.fical import Fical\n  File \"/app/scraper/extractors/url_iterator/fical.py\", line 6, in <module>\n    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor\n  File \"/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py\", line 5, in <module>\n    from scraper.extractors.abc_event_model_extractor import EventModelExtractor\n  File \"/app/scraper/extractors/abc_event_model_extractor.py\", line 5, in <module>\n    from titlecase import titlecase\nModuleNotFoundError: No module named 'titlecase'\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019c90d4-0c22-72ac-9b1b-f920241bc45f): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 118, in <module>
+    from orchestration.almeria import events_extractors
+  File "/app/orchestration/almeria.py", line 1, in <module>
+    from scraper.extractors.url_iterator.fical import Fical
+  File "/app/scraper/extractors/url_iterator/fical.py", line 6, in <module>
+    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 5, in <module>
+    from scraper.extractors.abc_event_model_extractor import EventModelExtractor
+  File "/app/scraper/extractors/abc_event_model_extractor.py", line 5, in <module>
+    from titlecase import titlecase
+ModuleNotFoundError: No module named 'titlecase'
+
+time=2026-02-24T18:05:46.393Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c90d4-1e17-7d74-8602-5329608a9435 params=""
+time=2026-02-24T18:05:46.405Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c90d4-1e17-7d74-8602-5329608a9435 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d4-1e17-7d74-8602-5329608a9435 params="[TARGET_CITY=Almeria TARGET_SCRAPER=TodasLasEntradas 3=DAGU_BASE_URL=]"
+time=2026-02-24T18:05:46.409Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c90d4-1e17-7d74-8602-5329608a9435 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d4-1e17-7d74-8602-5329608a9435 step=tarea_1
+time=2026-02-24T18:05:51.022Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019c90d4-1e17-7d74-8602-5329608a9435 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d4-1e17-7d74-8602-5329608a9435 status=failed started-at=2026-02-24T18:05:46Z finished-at=2026-02-24T18:05:51Z
+time=2026-02-24T18:05:51.047Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019c90d4-1e17-7d74-8602-5329608a9435 err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 118, in <module>\n    from orchestration.almeria import events_extractors\n  File \"/app/orchestration/almeria.py\", line 1, in <module>\n    from scraper.extractors.url_iterator.fical import Fical\n  File \"/app/scraper/extractors/url_iterator/fical.py\", line 6, in <module>\n    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor\n  File \"/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py\", line 5, in <module>\n    from scraper.extractors.abc_event_model_extractor import EventModelExtractor\n  File \"/app/scraper/extractors/abc_event_model_extractor.py\", line 5, in <module>\n    from titlecase import titlecase\nModuleNotFoundError: No module named 'titlecase'\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019c90d4-1e17-7d74-8602-5329608a9435): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 118, in <module>
+    from orchestration.almeria import events_extractors
+  File "/app/orchestration/almeria.py", line 1, in <module>
+    from scraper.extractors.url_iterator.fical import Fical
+  File "/app/scraper/extractors/url_iterator/fical.py", line 6, in <module>
+    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 5, in <module>
+    from scraper.extractors.abc_event_model_extractor import EventModelExtractor
+  File "/app/scraper/extractors/abc_event_model_extractor.py", line 5, in <module>
+    from titlecase import titlecase
+ModuleNotFoundError: No module named 'titlecase'
+
+time=2026-02-24T18:05:51.088Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c90d4-3068-7011-93ef-fc9150fc3b92 params=""
+time=2026-02-24T18:05:51.108Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c90d4-3068-7011-93ef-fc9150fc3b92 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d4-3068-7011-93ef-fc9150fc3b92 params="[TARGET_CITY=Almeria TARGET_SCRAPER=RedBibliotecas 3=DAGU_BASE_URL=]"
+time=2026-02-24T18:05:51.110Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c90d4-3068-7011-93ef-fc9150fc3b92 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d4-3068-7011-93ef-fc9150fc3b92 step=tarea_1
+time=2026-02-24T18:05:55.669Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019c90d4-3068-7011-93ef-fc9150fc3b92 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d4-3068-7011-93ef-fc9150fc3b92 status=failed started-at=2026-02-24T18:05:51Z finished-at=2026-02-24T18:05:55Z
+time=2026-02-24T18:05:55.693Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019c90d4-3068-7011-93ef-fc9150fc3b92 err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 118, in <module>\n    from orchestration.almeria import events_extractors\n  File \"/app/orchestration/almeria.py\", line 1, in <module>\n    from scraper.extractors.url_iterator.fical import Fical\n  File \"/app/scraper/extractors/url_iterator/fical.py\", line 6, in <module>\n    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor\n  File \"/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py\", line 5, in <module>\n    from scraper.extractors.abc_event_model_extractor import EventModelExtractor\n  File \"/app/scraper/extractors/abc_event_model_extractor.py\", line 5, in <module>\n    from titlecase import titlecase\nModuleNotFoundError: No module named 'titlecase'\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019c90d4-3068-7011-93ef-fc9150fc3b92): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 118, in <module>
+    from orchestration.almeria import events_extractors
+  File "/app/orchestration/almeria.py", line 1, in <module>
+    from scraper.extractors.url_iterator.fical import Fical
+  File "/app/scraper/extractors/url_iterator/fical.py", line 6, in <module>
+    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 5, in <module>
+    from scraper.extractors.abc_event_model_extractor import EventModelExtractor
+  File "/app/scraper/extractors/abc_event_model_extractor.py", line 5, in <module>
+    from titlecase import titlecase
+ModuleNotFoundError: No module named 'titlecase'
+
+time=2026-02-24T18:05:55.722Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c90d4-4288-7c72-bdbb-ea0440083593 params=""
+time=2026-02-24T18:05:55.735Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c90d4-4288-7c72-bdbb-ea0440083593 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d4-4288-7c72-bdbb-ea0440083593 params="[TARGET_CITY=Almeria TARGET_SCRAPER=SalaEmma 3=DAGU_BASE_URL=]"
+time=2026-02-24T18:05:55.738Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c90d4-4288-7c72-bdbb-ea0440083593 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d4-4288-7c72-bdbb-ea0440083593 step=tarea_1
+time=2026-02-24T18:06:00.240Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019c90d4-4288-7c72-bdbb-ea0440083593 attempt-id="" dag=FisgonTaskSelenium run-id=019c90d4-4288-7c72-bdbb-ea0440083593 status=failed started-at=2026-02-24T18:05:55Z finished-at=2026-02-24T18:06:00Z
+time=2026-02-24T18:06:00.262Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019c90d4-4288-7c72-bdbb-ea0440083593 err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 118, in <module>\n    from orchestration.almeria import events_extractors\n  File \"/app/orchestration/almeria.py\", line 1, in <module>\n    from scraper.extractors.url_iterator.fical import Fical\n  File \"/app/scraper/extractors/url_iterator/fical.py\", line 6, in <module>\n    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor\n  File \"/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py\", line 5, in <module>\n    from scraper.extractors.abc_event_model_extractor import EventModelExtractor\n  File \"/app/scraper/extractors/abc_event_model_extractor.py\", line 5, in <module>\n    from titlecase import titlecase\nModuleNotFoundError: No module named 'titlecase'\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019c90d4-4288-7c72-bdbb-ea0440083593): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 118, in <module>
+    from orchestration.almeria import events_extractors
+  File "/app/orchestration/almeria.py", line 1, in <module>
+    from scraper.extractors.url_iterator.fical import Fical
+  File "/app/scraper/extractors/url_iterator/fical.py", line 6, in <module>
+    from scraper.extractors.url_iterator.abc_url_iterator_extractor import UrlIteratorExtractor
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 5, in <module>
+    from scraper.extractors.abc_event_model_extractor import EventModelExtractor
+  File "/app/scraper/extractors/abc_event_model_extractor.py", line 5, in <module>
+    from titlecase import titlecase
+ModuleNotFoundError: No module named 'titlecase'
+

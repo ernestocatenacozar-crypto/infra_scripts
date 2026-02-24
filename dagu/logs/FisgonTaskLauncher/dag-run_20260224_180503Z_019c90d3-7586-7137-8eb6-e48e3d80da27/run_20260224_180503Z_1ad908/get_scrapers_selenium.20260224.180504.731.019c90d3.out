@@ -1,9 +1,9 @@
 Succeeded - 2026-02-24T18:05:04Z
 
-dag: FisgonGetScrapers (0s)
+dag: FisgonGetScrapers (1.0s)
 │
-└─get_scrapers (0s) [succeeded]
-  └─bash -lc 'case "Request" in Request)
+└─get_scrapers (1.0s) [succeeded]
+  └─bash -lc 'case "Selenium" in Request)
       OUTPUT_FILE="/tmp/fisgon_scrapers_request.txt" ;; Selenium)
       OUTPUT_FILE="/tmp/fisgon_scrapers_selenium.txt" ;; *)
       OUTPUT_FILE="/tmp/fisgon_scrapers_unknown.txt" ;; esac; docker run --rm
