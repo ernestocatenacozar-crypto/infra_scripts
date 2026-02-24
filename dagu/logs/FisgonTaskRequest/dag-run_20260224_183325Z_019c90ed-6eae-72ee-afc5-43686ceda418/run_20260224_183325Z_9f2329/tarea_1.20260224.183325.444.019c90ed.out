@@ -1,0 +1,24 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ConciertosClub
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019c90ed-6eae-72ee-afc5-43686ceda418
+
+Running for Almeria: ConciertosClub
+ConciertosClub
+RUNNING SESSION =  2026_02_24_18_31_Martes
+Getting https://conciertos.club/almeria
+Sleep 1
+*** SCRAPED 177 URLS WITH EVENTS **
+New url events = 59
+0 / 59
+Getting https://conciertos.club/almeria/conciertos/113424-dulze
+Sleep 4
