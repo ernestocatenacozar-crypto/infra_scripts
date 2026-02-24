@@ -1,0 +1,84 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=JuntaAndaluciaAgenda
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019c90f2-2b8e-7aaf-b6f0-1ec926184d04
+
+Running for Almeria: JuntaAndaluciaAgenda
+JuntaAndaluciaAgenda
+RUNNING SESSION =  2026_02_24_18_31_Martes
+Starting WebDriver...
+http://localhost:4444/wd/hub
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1) Not found
+Getting content
+*** SCRAPED 70 URLS WITH EVENTS **
+New url events = 70
+0 / 70
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/un-dios-salvaje-de-yasmina-reza-0
+Sleep 4
+--------------------
+{'id': 'd4e4ea65', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 1, 'event': '"Un Dios Salvaje", De Yasmina Reza', 'slug': 'un-dios-salvaje-de-yasmina-reza', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-02-25', 'start_time': '__NOT_FOUND__', 'end_date': '2026-02-25', 'end_time': '__NOT_DEFINIED__', 'description': '#clublecturatextosdramaticos en colaboración con la Biblioteca Pública Provincial Francisco Villaespesa . Coordinado por la reconocida profesional Gloria Zapata . Este mes se analiza Un dios salvaje , de Yasmina Reza , pieza que llevó a la gran pantalla el famoso director Roman Polanski con gran maestría. La obra nos narra en tiempo real el encuentro de dos matrimonios para dialogar sobre el daño que ha infringido el hijo de un matrimonio al otro con un bate de béisbol. Ese es el principio de un argumento que descubre, con gran talento, la barbarie que existe bajo la máscara de la civilización. La trama está focalizada en los dos matrimonios y en su encuentro para solucionar un conflicto infantil. Coordinado por Guy Bourbon y Sven Heed. Actividad #leeteatro en el marco de la programación cultural mensual del CIRAE #elcentroAescena.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-estado-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details': '25 de Febrero del 2026, De 18:00 a 19:30h\n', 'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260224T183841', 'session': '2026_02_24_18_31_Martes', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/external_images/CL%2520Almer%25C3%25ADa.jpg.webp?itok=wGU0SUYK', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/un-dios-salvaje-de-yasmina-reza-0'}
+1 / 70
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/el-hombre-en-llamas-de-paco-gamez
+Sleep 4
+--------------------
+{'id': '96bc05fe', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 1, 'event': '"El Hombre en Llamas", De Paco Gámez', 'slug': 'el-hombre-en-llamas-de-paco-gamez', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-03-25', 'start_time': '__NOT_FOUND__', 'end_date': '2026-03-25', 'end_time': '__NOT_DEFINIED__', 'description': '#clublecturatextosdramaticos en colaboración con la Biblioteca Pública Provincial “Francisco Villaespesa” . Coordinado por la reconocida profesional Gloria Zapata . Este mes se analiza El hombre en llamas , de Paco Gámez . Obra de teatro en tres actos galardonada con el Premio de Teatro correspondiente al XVI Certamen Literario de la Universidad de Sevilla 2010. Una obra de teatro de ciencia ficción y comedia dramática en la que Juan, un hombre común, un día comienza a arder espontáneamente sin motivo ni explicación médica, y las llamas nunca desaparecen. La obra usa esta situación absurda y fabulosa como metáfora existencial sobre la diferencia, la exclusión y cómo lidiamos con lo inexplicable en la vida humana. Actividad #leeteatro en el marco de la programación cultural mensual del CIRAE #elcentroAescena.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-estado-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details': '25 de Marzo del 2026, De 18:00 a 19:30h\n', 'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260224T183841', 'session': '2026_02_24_18_31_Martes', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/external_images/El%2520hombre%2520en%2520llamas%2520ALMER%25C3%25ADarrss.jpg.webp?itok=jguUXoLi', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/el-hombre-en-llamas-de-paco-gamez'}
+2 / 70
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/museo-de-almeria
+Sleep 4
+--------------------
+{'id': 'b9b4d741', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 1, 'event': 'Museo De Almería', 'slug': 'museo-de-almeria', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None, 'start_date': '__NOT_FOUND__', 'start_time': '__NOT_FOUND__', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_DEFINIED__', 'description': 'Martes a sábado de 09:00 a 21:00; domingos y festivos de 09:00 a 15:00. Lunes cerrado Excepto los lunes víspera de festivo, que abre con horario de festivo. Cerrado 1 y 6 de enero, 1 de mayo y 24, 25 y 31 de diciembre. Abierto los siguientes festivos : 28 de febrero, 28 y 29 de marzo, 15 de agosto, 12 de octubre, 1 de noviembre, 6 y 8 de diciembre y el lunes 9 de diciembre. Festivos locales abierto: 24 de de junio y 24 de agosto. .', 'others': {'location_url': '__NOT_FOUND__', 'location2': 'Carretera de Ronda, 91 Museo de Almería (PDF en nueva ventana 1,47Mb) Museum of Almeria (PDF en nueva ventana 1,43Mb) Musée d` Almeria (PDF en nueva ventana 1,50Mb) 950 016 256 museoalmeria.ccul@juntadeandalucia.es Visitar la pagina web', 'duration': '__NOT_FOUND__', 'datetime_details': '__NOT_FOUND__', 'town': '__NOT_FOUND__', 'location': 'Carretera de Ronda, 91, Almería, Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260224T183841', 'session': '2026_02_24_18_31_Martes', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2024-04/Fachada_Museo_Almer%C3%ADa.jpg.webp?itok=NDAMoQjO', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/museo-de-almeria'}
+3 / 70
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/manuela-0
+Sleep 4
