@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/app/run.py", line 120, in <module>
+    from orchestration.jaen import events_extractors
+  File "/app/orchestration/jaen.py", line 6, in <module>
+    from scraper.extractors.url_iterator.salalapaca import SalaLaPaca 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'scraper.extractors.url_iterator.salalapaca'

@@ -1,0 +1,45 @@
+time=2026-02-06T15:37:12.221Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c3399-a11c-746d-a1eb-3c2c662d588c params=""
+time=2026-02-06T15:37:12.234Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c3399-a11c-746d-a1eb-3c2c662d588c attempt-id="" dag=FisgonTaskSelenium run-id=019c3399-a11c-746d-a1eb-3c2c662d588c params="[TARGET_CITY=Jaen TARGET_SCRAPER=JuntaAndaluciaAgenda 3=DAGU_BASE_URL=]"
+time=2026-02-06T15:37:12.238Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c3399-a11c-746d-a1eb-3c2c662d588c attempt-id="" dag=FisgonTaskSelenium run-id=019c3399-a11c-746d-a1eb-3c2c662d588c step=tarea_1
+time=2026-02-06T15:37:18.905Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019c3399-a11c-746d-a1eb-3c2c662d588c attempt-id="" dag=FisgonTaskSelenium run-id=019c3399-a11c-746d-a1eb-3c2c662d588c status=failed started-at=2026-02-06T15:37:12Z finished-at=2026-02-06T15:37:18Z
+time=2026-02-06T15:37:18.931Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019c3399-a11c-746d-a1eb-3c2c662d588c err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 120, in <module>\n    from orchestration.jaen import events_extractors\n  File \"/app/orchestration/jaen.py\", line 6, in <module>\n    from scraper.extractors.url_iterator.salalapaca import SalaLaPaca \n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'scraper.extractors.url_iterator.salalapaca'\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019c3399-a11c-746d-a1eb-3c2c662d588c): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 120, in <module>
+    from orchestration.jaen import events_extractors
+  File "/app/orchestration/jaen.py", line 6, in <module>
+    from scraper.extractors.url_iterator.salalapaca import SalaLaPaca 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'scraper.extractors.url_iterator.salalapaca'
+
+time=2026-02-06T15:37:18.959Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c3399-bb6d-7a75-8515-3ea41739c6b5 params=""
+time=2026-02-06T15:37:18.972Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c3399-bb6d-7a75-8515-3ea41739c6b5 attempt-id="" dag=FisgonTaskSelenium run-id=019c3399-bb6d-7a75-8515-3ea41739c6b5 params="[TARGET_CITY=Jaen TARGET_SCRAPER=Entradium 3=DAGU_BASE_URL=]"
+time=2026-02-06T15:37:18.975Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c3399-bb6d-7a75-8515-3ea41739c6b5 attempt-id="" dag=FisgonTaskSelenium run-id=019c3399-bb6d-7a75-8515-3ea41739c6b5 step=tarea_1
+time=2026-02-06T15:37:23.443Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019c3399-bb6d-7a75-8515-3ea41739c6b5 attempt-id="" dag=FisgonTaskSelenium run-id=019c3399-bb6d-7a75-8515-3ea41739c6b5 status=failed started-at=2026-02-06T15:37:18Z finished-at=2026-02-06T15:37:23Z
+time=2026-02-06T15:37:23.460Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019c3399-bb6d-7a75-8515-3ea41739c6b5 err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 120, in <module>\n    from orchestration.jaen import events_extractors\n  File \"/app/orchestration/jaen.py\", line 6, in <module>\n    from scraper.extractors.url_iterator.salalapaca import SalaLaPaca \n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'scraper.extractors.url_iterator.salalapaca'\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019c3399-bb6d-7a75-8515-3ea41739c6b5): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 120, in <module>
+    from orchestration.jaen import events_extractors
+  File "/app/orchestration/jaen.py", line 6, in <module>
+    from scraper.extractors.url_iterator.salalapaca import SalaLaPaca 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'scraper.extractors.url_iterator.salalapaca'
+
+time=2026-02-06T15:37:23.486Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019c3399-cd1d-7342-b759-02a254106811 params=""
+time=2026-02-06T15:37:23.499Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019c3399-cd1d-7342-b759-02a254106811 attempt-id="" dag=FisgonTaskSelenium run-id=019c3399-cd1d-7342-b759-02a254106811 params="[TARGET_CITY=Jaen TARGET_SCRAPER=SalaLaPaca 3=DAGU_BASE_URL=]"
+time=2026-02-06T15:37:23.502Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019c3399-cd1d-7342-b759-02a254106811 attempt-id="" dag=FisgonTaskSelenium run-id=019c3399-cd1d-7342-b759-02a254106811 step=tarea_1
+time=2026-02-06T15:37:28.080Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019c3399-cd1d-7342-b759-02a254106811 attempt-id="" dag=FisgonTaskSelenium run-id=019c3399-cd1d-7342-b759-02a254106811 status=failed started-at=2026-02-06T15:37:23Z finished-at=2026-02-06T15:37:28Z
+time=2026-02-06T15:37:28.106Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019c3399-cd1d-7342-b759-02a254106811 err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nTraceback (most recent call last):\n  File \"/app/run.py\", line 120, in <module>\n    from orchestration.jaen import events_extractors\n  File \"/app/orchestration/jaen.py\", line 6, in <module>\n    from scraper.extractors.url_iterator.salalapaca import SalaLaPaca \n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'scraper.extractors.url_iterator.salalapaca'\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019c3399-cd1d-7342-b759-02a254106811): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+Traceback (most recent call last):
+  File "/app/run.py", line 120, in <module>
+    from orchestration.jaen import events_extractors
+  File "/app/orchestration/jaen.py", line 6, in <module>
+    from scraper.extractors.url_iterator.salalapaca import SalaLaPaca 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'scraper.extractors.url_iterator.salalapaca'
+

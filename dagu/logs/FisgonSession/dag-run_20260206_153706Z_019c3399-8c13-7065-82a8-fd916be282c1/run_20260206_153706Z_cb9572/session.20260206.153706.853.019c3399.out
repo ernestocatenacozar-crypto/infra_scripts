@@ -1,0 +1,15 @@
+
+RUNNING VARS → 
+        CITY=Jaen, 
+
+        OPERATION=1,
+            CREATE_SESSION=1,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=
+        DAG_RUN_URL=/dags/FisgonSession/log?remoteNode=local&step=session&dagRunId=019c3399-8c13-7065-82a8-fd916be282c1
+
+2026_02_06_15_37_Viernes

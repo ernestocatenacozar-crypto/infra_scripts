@@ -1,0 +1,19 @@
+
+RUNNING VARS → 
+        CITY=Jaen, 
+
+        OPERATION=1,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=1,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=
+        DAG_RUN_URL=/dags/FisgonSession/log?remoteNode=local&step=session&dagRunId=019c3399-df55-7819-a964-de95d9b5ac2a
+
+Executing final task with session: 2026_02_06_15_37_Viernes
+Creating rawfolder...
+Error: No such file or directory
+Saving 0 new events
+Saving in  /home/ubuntu/data_storage/Jaen/2026_02_06_15_37_Viernes/0_raw/Merged.json
