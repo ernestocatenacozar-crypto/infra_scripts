@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/app/run.py", line 137, in <module>
+    run_one(events_extractors, TARGET_SCRAPER, session_manager, TARGET_CITY)
+  File "/app/run.py", line 18, in run_one
+    ev.run()
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 42, in run
+    result_list = self.iterate_url_extract_events(filtered_url_events)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 85, in iterate_url_extract_events
+    result_dict = self.extract_cleaned_event(info_object=page_soup, url=url)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/abc_event_model_extractor.py", line 65, in extract_cleaned_event
+    d["image"] = self.try_get_image(d)
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/abc_event_model_extractor.py", line 193, in try_get_image
+    return self.get_image(d)
+           ^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/url_iterator/red_biblioteca.py", line 73, in get_image
+    return "https://www.bibliotecaspublicas.es" + quote(self.soup.find("img", class_="detalle")["src"])
+                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
