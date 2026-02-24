@@ -942,3 +942,471 @@ dag: FisgonTaskSelenium (42.0s)
 Result: Succeeded
 
 Launching scraper: JuntaAndaluciaAgenda
+Succeeded - 2026-02-24T18:38:35Z
+
+dag: FisgonTaskSelenium (8m 9s)
+│
+└─tarea_1 (8m 9s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  ├─stdout: ... (367 more lines)
+  │   61 / 70
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /un-mundo-perfecto
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'ded52bce', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Un Mundo Perfecto', 'slug':
+  │   'un-mundo-perfecto', 'category': '__NOT_DEFINIED__', 'id_venue': None,
+  │   'venue': 'Sala de la Filmoteca de Andalucía en Almería', 'std_venue':
+  │   None, 'start_date': '2026-03-02', 'start_time': '19:00:00', 'end_date':
+  │   '2026-03-02', 'end_time': '__NOT_DEFINIED__', 'description': '2 LUNES
+  │   19:00 h. Clint Eastwood UN MUNDO PERFECTO Clint Eastwood. EEUU. 1993.
+  │   138 min. Color. v.o.s.e. Texas, año 1963. Butch Haynes (Kevin Costner)
+  │   es un peligroso e inteligente asesino que se ha escapado de la cárcel
+  │   en compañía de otro preso. Durante la huida ambos se ven obligados a
+  │   tomar como rehén al joven Philip (T.J. Lowther), un niño de ocho años
+  │   que vive con su devota madre, Testigo de Jehová, y sus dos hermanas. El
+  │   Ranger Red Garnett (Clint Eastwood) y una criminóloga (Laura Dern)
+  │   irán sobre la pista de los fugados, al tiempo que el secuestro adquiere
+  │   para el niño cada vez más el carácter de una aventura.', 'others':
+  │   {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/sala-de-la-filmoteca-de-and
+  │   alucia-en-almeria', 'location2': 'Sala de la Filmoteca de Andalucía en
+  │   Almería', 'duration': '__NOT_FOUND__', 'datetime_details': '02 de Marzo
+  │   del 2026, 19:00', 'town': '__NOT_FOUND__', 'location': 'C/ Hermanos
+  │   Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'},
+  │   'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260224T183841',
+  │   'session': '2026_02_24_18_31_Martes', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-02/img_0290.jp
+  │   g.webp?itok=Zf75xsao', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/un-mundo-perfecto'}
+  │   62 / 70
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /idols-la-revolucion-k-pop-las-guerreras-del-ritmo
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '42f8c103', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Idols La Revolución K-Pop: Las
+  │   Guerreras Del Ritmo', 'slug':
+  │   'idols-la-revolucion-k-pop-las-guerreras-del-ritmo', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Auditorio de El Ejido',
+  │   'std_venue': None, 'start_date': '2026-03-22', 'start_time': '17:00:00',
+  │   'end_date': '2026-03-22', 'end_time': '__NOT_DEFINIED__', 'description':
+  │   'Inspirado en la estética vibrante de las grandes producciones
+  │   internacionales e incluyendo el universo visual del film, IDOLS - LA
+  │   REVOLUCIÓN K-POP “LAS GUERRERAS DEL RITMO” es un espectáculo que
+  │   fusiona música, narrativa, y poder escénico y visual en una
+  │   experiencia única. Tres protagonistas, 7 IDOLS, con las voces en
+  │   directo y excelentes interpretaciones, que nos transportarán a una
+  │   revolución escénica. Sólo en los principales Espacios Escénicos. El
+  │   futuro suena a K-POP. Y empieza aquí. Con la garantía artistica de
+  │   CTME , compañía referente del Teatro Musical (los creadores del
+  │   exitoso MUSICAL DE COCO “RECUÉRDAME” ), y de la mano de VOL MUSIC
+  │   EVENTS . Sinopsis: En un futuro donde el ritmo ha sido silenciado y la
+  │   música convertida en arma, tres jóvenes artistas se rebelan contra los
+  │   seres demoníacos. Unidas por el poder del K-POP, descubren que su
+  │   talento no solo puede emocionar... también puede liberar. En
+  │   definitiva, una historia de fuerza e identidad, y una verdadera
+  │   revolución sonora y visual.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/auditorio-de-el-ejido-0',
+  │   'location2': 'Auditorio de El Ejido', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '22 de Marzo del 2026, 17:00 horas', 'town':
+  │   '__NOT_FOUND__', 'location': 'Pl. Teniente Arturo Muñoz, 1, Ejido (El).
+  │   Almería', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260224T183841', 'session':
+  │   '2026_02_24_18_31_Martes', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2025-11/KPOP-1080X1
+  │   080-1-1.jpg.webp?itok=SyHHldai', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/idols-la-revolucion-k-pop-las-guerreras-del-ritmo'}
+  │   63 / 70
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /almeria-encuentro-con-victor-ferreres-con-motivo-de-la-publicacion-de-e
+  │   logio-del-derecho
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'ba9f2433', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': "Almería. Encuentro Con Víctor Ferreres
+  │   Con Motivo De La Publicación De 'Elogio Del Derecho'", 'slug':
+  │   'almeria-encuentro-con-victor-ferreres-con-motivo-de-la-publicacion-de-e
+  │   logio-del', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue':
+  │   'Colegio de la Abogacía de Almería', 'std_venue': None, 'start_date':
+  │   '2026-03-26', 'start_time': '18:30:00', 'end_date': '2026-03-26',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'El Centro Andaluz de las
+  │   Letras organiza en Almería un encuentro con el escritor Víctor
+  │   Ferreres con motivo de la publicación de su libro Elogio del Derecho
+  │   (Ed. Arpa) , en colaboración con el Colegio de la Abogacía de
+  │   Almería. Víctor Ferreres , catedrático de Derecho Constitucional en
+  │   la Universitat Pompeu Fabra y una de las voces más reconocidas en el
+  │   estudio de la justicia constitucional, conversará con Juan Luis de
+  │   Aynat , decano del Colegio de la Abogacía de Almería y con José
+  │   Ramón Cantalejo , director de la Revista colegial Sala de Togas , sobre
+  │   el Derecho como expresión de la razón práctica y factor indispensable
+  │   para el desarrollo de sociedades justas y prósperas. La cita es el
+  │   miércoles 26 de marz o a las 1 8 : 3 0 horas en el Colegio de la
+  │   Abogacía de Almería (c/ Limoneros, 22). Entrada libre hasta completar
+  │   aforo.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/colegio-de-la-abogacia-de-a
+  │   lmeria', 'location2': 'Colegio de la Abogacía de Almería', 'duration':
+  │   '__NOT_FOUND__', 'datetime_details': '26 de Marzo del 2026, 18:30
+  │   horas\n', 'town': '__NOT_FOUND__', 'location': 'Calle Álvarez de Castro
+  │   25, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260224T183841', 'session':
+  │   '2026_02_24_18_31_Martes', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/external_images/fot
+  │   o_bio_victor_ferreres.jpeg.webp?itok=sizkcoxE', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/almeria-encuentro-con-victor-ferreres-con-motivo-de-la-publicacion-de-
+  │   elogio-del-derecho'}
+  │   64 / 70
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /las-guerreras-k-pop-en-huercal-overa
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '28bdf20b', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 1, 'event': 'Las Guerreras K-Pop en Huércal-Overa',
+  │   'slug': 'las-guerreras-k-pop-en-huercal-overa', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Teatro Villa de
+  │   Huércal-Overa', 'std_venue': None, 'start_date': '2026-04-25',
+  │   'start_time': '__NOT_FOUND__', 'end_date': '2026-04-25', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'LAS GUERRERAS K-POP EN CONCIERTO -
+  │   HUÉRCAL-OVERA', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/teatro-villa-de-huercal-ove
+  │   ra', 'location2': 'Teatro Villa de Huércal-Overa', 'duration':
+  │   '__NOT_FOUND__', 'datetime_details': '25 de Abril del 2026, A las 17:00
+  │   horas', 'town': '__NOT_FOUND__', 'location': 'Avda. Guillermo Reyna, 9,
+  │   Huércal-Overa. Almería', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260224T183841', 'session':
+  │   '2026_02_24_18_31_Martes', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-01/3-83132x1-d
+  │   k2qj.jpg.webp?itok=4V2bPGBv', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/las-guerreras-k-pop-en-huercal-overa'}
+  │   65 / 70
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /yee-haw-8
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '84a9ac45', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Yee-Haw!', 'slug': 'yee-haw',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Teatro Casa
+  │   de la Música', 'std_venue': None, 'start_date': '2026-05-19',
+  │   'start_time': '10:00:00', 'end_date': '2026-05-19', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'COMPAÑÍA: La Banda de Otro
+  │   DURACIÓN: 50 YEE-HAW! es un grito de entusiasmo, una expresión de
+  │   alegría, pura onomatopeya de la felicidad que nos traslada al viejo
+  │   Oeste¿ de ¿Andaluisiana¿. Sumergidos por en un universo musical
+  │   inspirado por el Country, el Ragtime y el Bluegrass, La Banda del Otro
+  │   nos ofrece un (des)concierto tan especial como ellos mismos. Un
+  │   espectáculo de circo donde es imposible distinguir a los músicos de
+  │   los malabaristas, o de los payasos.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/teatro-casa-de-la-musica',
+  │   'location2': 'Teatro Casa de la Música', 'duration': '50',
+  │   'datetime_details': '19 de Mayo del 2026, 10:00\n', 'town':
+  │   '__NOT_FOUND__', 'location': 'Parque Andaluz s/n, Carboneras. Almería',
+  │   'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda',
+  │   'exec_time': '20260224T183841', 'session': '2026_02_24_18_31_Martes',
+  │   'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/external_images/YEE
+  │   HAW2ok.jpg.webp?itok=ciJKP7oE', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/yee-haw-8'}
+  │   66 / 70
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /flaming-shakers-beatles-tribute-en-vera
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '39cedd86', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'The Flaming Shakers, the Beatles Tribute
+  │   en Vera', 'slug': 'the-flaming-shakers-the-beatles-tribute-en-vera',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Auditorio
+  │   Ciudad de Vera', 'std_venue': None, 'start_date': '2026-05-02',
+  │   'start_time': '00:00:00', 'end_date': '2026-05-02', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'El gran concierto tributo a The
+  │   Beatles "The Flaming Shakers" tendrá lugar en el Auditorio de Vera, a
+  │   las 20.00hs, el sábado 2 de mayo de 2026.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/auditorio-ciudad-de-vera',
+  │   'location2': 'Auditorio Ciudad de Vera', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '02 de Mayo del 2026, 20.00 hs.', 'town':
+  │   '__NOT_FOUND__', 'location': 'Carretera de Cuevas 1, Vera. Almería',
+  │   'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda',
+  │   'exec_time': '20260224T183841', 'session': '2026_02_24_18_31_Martes',
+  │   'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-01/reibuto_bea
+  │   tles.jpg.webp?itok=ZH4nm7gS', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/flaming-shakers-beatles-tribute-en-vera'}
+  │   67 / 70
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /teatro-apolo-almeria
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'ec422e96', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 1, 'event': 'Teatro Apolo', 'slug': 'teatro-apolo',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue':
+  │   '__NOT_FOUND__', 'std_venue': None, 'start_date': '__NOT_FOUND__',
+  │   'start_time': '__NOT_FOUND__', 'end_date': '__NOT_FOUND__', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Se recomienda consultar horario de
+  │   cada evento.', 'others': {'location_url': '__NOT_FOUND__', 'location2':
+  │   'C. Rbla. Obispo Orberá, 25 950 269 268 cultura@aytoalmeria.es Visitar
+  │   la pagina web', 'duration': '__NOT_FOUND__', 'datetime_details':
+  │   '__NOT_FOUND__', 'town': '__NOT_FOUND__', 'location': 'C. Rbla. Obispo
+  │   Orberá, 25, Almería, Almería', 'duration_days': '__NOT_FOUND__'},
+  │   'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260224T183841',
+  │   'session': '2026_02_24_18_31_Martes', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_2xl/public/2023-11/teatro_apolo_al
+  │   meria_ext.jpg.webp?itok=wHN-p56S', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/teatro-apolo-almeria'}
+  │   68 / 70
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /programa-de-actividades-por-el-dia-de-andalucia-en-el-conjunto-monument
+  │   al-de-la-alcazaba
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'd9143e9d', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Programa De Actividades Por El Día De
+  │   Andalucía en El Conjunto Monumental De La Alcazaba', 'slug':
+  │   'programa-de-actividades-por-el-dia-de-andalucia-en-el-conjunto-monument
+  │   al-de-la', 'category': '__NOT_DEFINIED__', 'id_venue': 'q9Mp2j7p',
+  │   'venue': 'Conjunto Monumental de la Alcazaba de Almería', 'std_venue':
+  │   'Alcazaba', 'start_date': '2026-02-27', 'start_time': '__NOT_FOUND__',
+  │   'end_date': '2026-03-01', 'end_time': '__NOT_DEFINIED__', 'description':
+  │   'Programación de actividades con motivo de la celebración del Día de
+  │   Andalucía', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/evento/visitas-alcazaba-de-almeria',
+  │   'location2': 'Conjunto Monumental de la Alcazaba de Almería',
+  │   'duration': '__NOT_FOUND__', 'datetime_details': '27 de Febrero del 2026
+  │   - 01 de Marzo del 2026, Consultar programación', 'town':
+  │   '__NOT_FOUND__', 'location': 'Calle Almanzor, s/n, Almería. Almería',
+  │   'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda',
+  │   'exec_time': '20260224T183841', 'session': '2026_02_24_18_31_Martes',
+  │   'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-02/d%C3%ADa%20
+  │   andaluc%C3%ADa.jpeg.webp?itok=nUiEEgEt', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/programa-de-actividades-por-el-dia-de-andalucia-en-el-conjunto-monumen
+  │   tal-de-la-alcazaba'}
+  │   69 / 70
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /desembarco-pirata-en-san-jose-0
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'e5f8443f', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Desembarco Pirata en San José', 'slug':
+  │   'desembarco-pirata-en-san-jose', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': None, 'venue': 'Parque Natural Cabo de Gata-Níjar',
+  │   'std_venue': None, 'start_date': '2026-04-17', 'start_time':
+  │   '__NOT_FOUND__', 'end_date': '2026-04-19', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': '¡Un fin de semana repleto de
+  │   actividades con el ambiente más PIRATA!', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/parque-natural-cabo-de-gata
+  │   -nijar', 'location2': 'Parque Natural Cabo de Gata-Níjar', 'duration':
+  │   '__NOT_FOUND__', 'datetime_details': '17 de Abril del 2026 - 19 de Abril
+  │   del 2026, Todo el día', 'town': '__NOT_FOUND__', 'location': 'Parque
+  │   Natural Cabo de Gata-Níjar, Almería. Almería', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260224T183841', 'session': '2026_02_24_18_31_Martes', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2025-11/desembarco_
+  │   pirata_2026.png.webp?itok=X3nl7SIL', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/desembarco-pirata-en-san-jose-0'}
+  │   ****************************
+  │   Saving 70 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_02_24_18_31_Martes/0_raw/20260224
+  │   _1838_JuntaAndaluciaAgenda.json
+  │   Saving 70 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr: ... (90 more lines)
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: ClassicJazz
