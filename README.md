@@ -1,10 +1,10 @@
 # EC2 Service Endpoints
 
 ## Cronicle
-http://54.246.37.69:3012
+http://34.241.206.192:3012
 
 ## Selenium (noVNC)
-http://54.246.37.69:7900
+http://34.241.206.192:7900
 
 ## Flask API
-http://54.246.37.69:5002
+http://34.241.206.192:5002
