@@ -1,0 +1,48 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=AlmeriaCiudad
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019ca92f-2a69-7400-8839-aad14962ccda
+
+Running for Almeria: AlmeriaCiudad
+AlmeriaCiudad
+RUNNING SESSION =  2026_03_01_11_33_Domingo
+Starting WebDriver...
+http://localhost:4444/wd/hub
+sleeping 5
+Getting content
+page = 0 -----------https://almeriaciudad.es/cultura/agenda?page=0--------------- len 12
+sleeping 5
+Getting content
+page = 1 -----------https://almeriaciudad.es/cultura/agenda?page=1--------------- len 12
+sleeping 5
+Getting content
+page = 2 -----------https://almeriaciudad.es/cultura/agenda?page=2--------------- len 10
+sleeping 5
+Getting content
+page = 3 -----------https://almeriaciudad.es/cultura/agenda?page=3--------------- len 0
+*** SCRAPED 34 URLS WITH EVENTS **
+New url events = 2
+0 / 2
+Getting https://almeriaciudad.es//cultura/evento/diversity-performance
+Sleep 4
+--------------------
+{'id': '42fbc132', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Diversity: The Performance', 'slug': 'diversity-the-performance', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'PLAZA CAREAGA', 'std_venue': None, 'start_date': '2026-03-20', 'start_time': '20:00:00', 'end_date': '2026-03-20', 'end_time': '21:00:00', 'description': 'El colectivo artístico. Experiment-Art. , formado por alumnado de los IES. Celia Viñas, Alborán. y de. Movárea. tienen la intención de fusionar la cultura y educación mediante una performance que incorpore múltiples lenguajes artísticos (cuerpo, espacio, sonido, gesto, narrativas no convencionales), crando un terreno fértil para explorar cuestiones de identidad y diferencia, el próximo 20 de marzo de 2026, a las 20:00h en la Plaza Careaga.', 'others': {'organizer': 'PLAZA CAREAGA', 'price': 'ENTRADA LIBRE HASTA COMPLETAR AFORO', 'category': 'Exhibición|Varios', 'audience_age': 'Todas las edades'}, 'source': 'AlmeriaCiudad', 'exec_time': '20260301T113612', 'session': '2026_03_01_11_33_Domingo', 'image': 'https://almeriaciudad.es/uploads/styles/large/public/media/image/whatsapp-image-2026-02-25-at-11.41.19.jpeg?itok=6ZmvJt6K', 'url': 'https://almeriaciudad.es//cultura/evento/diversity-performance'}
+1 / 2
+Getting https://almeriaciudad.es//cultura/evento/quinteto-de-viento-oual
+Sleep 4
+--------------------
+{'id': '16639f58', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Quinteto De Viento Oual', 'slug': 'quinteto-de-viento-oual', 'category': '__NOT_DEFINIED__', 'id_venue': 'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo', 'start_date': '2026-03-16', 'start_time': '19:30:00', 'end_date': '2026-03-16', 'end_time': '20:30:00', 'description': '', 'others': {'organizer': 'Teatro Apolo', 'price': 'ENTRADA CON INVITACIÓN', 'category': 'Concierto|Música|Orquesta', 'audience_age': 'Todas las edades'}, 'source': 'AlmeriaCiudad', 'exec_time': '20260301T113612', 'session': '2026_03_01_11_33_Domingo', 'image': 'https://almeriaciudad.es/uploads/styles/large/public/media/image/10.-16-03-quin-oual-2025-26-a3.png?itok=ZjDQh__r', 'url': 'https://almeriaciudad.es//cultura/evento/quinteto-de-viento-oual'}
+****************************
+Saving 2 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_01_11_33_Domingo/0_raw/20260301_1136_AlmeriaCiudad.json
+Saving 2 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

@@ -1,0 +1,37 @@
+time=2026-03-01T11:36:06.507Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019ca92f-2a69-7400-8839-aad14962ccda params=""
+time=2026-03-01T11:36:06.523Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019ca92f-2a69-7400-8839-aad14962ccda attempt-id="" dag=FisgonTaskSelenium run-id=019ca92f-2a69-7400-8839-aad14962ccda params="[TARGET_CITY=Almeria TARGET_SCRAPER=AlmeriaCiudad 3=DAGU_BASE_URL=]"
+time=2026-03-01T11:36:06.526Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019ca92f-2a69-7400-8839-aad14962ccda attempt-id="" dag=FisgonTaskSelenium run-id=019ca92f-2a69-7400-8839-aad14962ccda step=tarea_1
+time=2026-03-01T11:36:53.635Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019ca92f-2a69-7400-8839-aad14962ccda attempt-id="" dag=FisgonTaskSelenium run-id=019ca92f-2a69-7400-8839-aad14962ccda status=succeeded started-at=2026-03-01T11:36:06Z finished-at=2026-03-01T11:36:53Z
+time=2026-03-01T11:36:53.692Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019ca92f-e2ba-75fc-87ca-1e1b0137ceae params=""
+time=2026-03-01T11:36:53.708Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019ca92f-e2ba-75fc-87ca-1e1b0137ceae attempt-id="" dag=FisgonTaskSelenium run-id=019ca92f-e2ba-75fc-87ca-1e1b0137ceae params="[TARGET_CITY=Almeria TARGET_SCRAPER=AlmeriaTurismo 3=DAGU_BASE_URL=]"
+time=2026-03-01T11:36:53.710Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019ca92f-e2ba-75fc-87ca-1e1b0137ceae attempt-id="" dag=FisgonTaskSelenium run-id=019ca92f-e2ba-75fc-87ca-1e1b0137ceae step=tarea_1
+time=2026-03-01T11:37:32.234Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019ca92f-e2ba-75fc-87ca-1e1b0137ceae attempt-id="" dag=FisgonTaskSelenium run-id=019ca92f-e2ba-75fc-87ca-1e1b0137ceae status=failed started-at=2026-03-01T11:36:53Z finished-at=2026-03-01T11:37:32Z
+time=2026-03-01T11:37:32.249Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskSelenium run-id=019ca92f-e2ba-75fc-87ca-1e1b0137ceae err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\ne 37, in iterate_pages_clean_events\n    events_cleaned = self.clean_main_page(main_page_soup)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/scraper/extractors/main_pages/abc_main_pages_extractor.py\", line 60, in clean_main_page\n    info_list = self.get_info_list(main_page_soup, tuple_url)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/scraper/extractors/main_pages/almeria_turismo.py\", line 50, in get_info_list\n    json.loads(\n  File \"/usr/local/lib/python3.11/json/__init__.py\", line 359, in loads\n    return cls(**kw).decode(s)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/json/decoder.py\", line 353, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Invalid \\escape: line 9 column 61 (char 507)\n"
+Error: failed to execute the dag-run FisgonTaskSelenium (dag-run ID: 019ca92f-e2ba-75fc-87ca-1e1b0137ceae): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+e 37, in iterate_pages_clean_events
+    events_cleaned = self.clean_main_page(main_page_soup)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/main_pages/abc_main_pages_extractor.py", line 60, in clean_main_page
+    info_list = self.get_info_list(main_page_soup, tuple_url)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/main_pages/almeria_turismo.py", line 50, in get_info_list
+    json.loads(
+  File "/usr/local/lib/python3.11/json/__init__.py", line 359, in loads
+    return cls(**kw).decode(s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Invalid \escape: line 9 column 61 (char 507)
+
+time=2026-03-01T11:37:32.309Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019ca930-7992-79c0-8be3-86976d777f75 params=""
+time=2026-03-01T11:37:32.318Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019ca930-7992-79c0-8be3-86976d777f75 attempt-id="" dag=FisgonTaskSelenium run-id=019ca930-7992-79c0-8be3-86976d777f75 params="[TARGET_CITY=Almeria TARGET_SCRAPER=JuntaAndaluciaAgenda 3=DAGU_BASE_URL=]"
+time=2026-03-01T11:37:32.319Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019ca930-7992-79c0-8be3-86976d777f75 attempt-id="" dag=FisgonTaskSelenium run-id=019ca930-7992-79c0-8be3-86976d777f75 step=tarea_1
+time=2026-03-01T11:39:54.646Z level=INFO msg="DAG run finished" name=FisgonTaskSelenium run-id=019ca930-7992-79c0-8be3-86976d777f75 attempt-id="" dag=FisgonTaskSelenium run-id=019ca930-7992-79c0-8be3-86976d777f75 status=succeeded started-at=2026-03-01T11:37:32Z finished-at=2026-03-01T11:39:54Z
+time=2026-03-01T11:39:54.687Z level=INFO msg="Executing root dag-run" dag=FisgonTaskSelenium run-id=019ca932-a5bd-752b-ad6e-b2ebf57036ea params=""
+time=2026-03-01T11:39:54.700Z level=INFO msg="DAG run started" name=FisgonTaskSelenium run-id=019ca932-a5bd-752b-ad6e-b2ebf57036ea attempt-id="" dag=FisgonTaskSelenium run-id=019ca932-a5bd-752b-ad6e-b2ebf57036ea params="[TARGET_CITY=Almeria TARGET_SCRAPER=ClassicJazz 3=DAGU_BASE_URL=]"
+time=2026-03-01T11:39:54.704Z level=INFO msg="Step started" name=FisgonTaskSelenium run-id=019ca932-a5bd-752b-ad6e-b2ebf57036ea attempt-id="" dag=FisgonTaskSelenium run-id=019ca932-a5bd-752b-ad6e-b2ebf57036ea step=tarea_1

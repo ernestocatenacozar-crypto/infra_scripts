@@ -27,3 +27,15 @@ Sleep 4
 1 / 3
 Getting https://conciertos.club/almeria/conciertos/113425-pia-tedesco-y-coni-lechner
 Sleep 4
+--------------------
+{'id': '372330b8', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Pía Tedesco Y Coni Lechner', 'slug': 'pia-tedesco-y-coni-lechner', 'category': 'conciertos', 'id_venue': 'Q6b6LRjT', 'venue': 'Clasijazz Café', 'std_venue': 'Clasijazz', 'start_date': '2026-04-25', 'start_time': '20:30:00', 'end_date': '2026-04-25', 'end_time': '__NOT_DEFINIED__', 'description': '\nPía Tedesco y Coni Lechner\nCHANSON FRANCESA; BERTOLT BRECHT+ KURT WEILL ', 'others': {'category': 'World Music', 'price': '20', 'place_url': 'https://conciertos.club/almeria/locales/clasijazz-cafe', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260301T113453', 'session': '2026_03_01_11_33_Domingo', 'image': '__NOT_FOUND__', 'url': 'https://conciertos.club/almeria/conciertos/113425-pia-tedesco-y-coni-lechner'}
+2 / 3
+Getting https://conciertos.club/almeria/conciertos/111922-metalmeria-fest
+Sleep 4
+--------------------
+{'id': '71fefd87', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Metalmería Fest', 'slug': 'metalmeria-fest', 'category': 'conciertos', 'id_venue': 'NmPqTrh6', 'venue': 'Berlín Social Club', 'std_venue': 'Berlin Social Club', 'start_date': '2026-04-25', 'start_time': '16:00:00', 'end_date': '2026-04-25', 'end_time': '__NOT_DEFINIED__', 'description': "\nXV METALMERIA FEST\nBandas confirmadas:\n- Kate's Acid (Bélgica)\n- DeathStorm (Austria)\n- Ecclesia (Francia)\n- Speed Queen (Bélgica)\n- Peace After Pain (Barcelona) ", 'others': {'category': 'Varios', 'price': '25,78', 'place_url': 'https://conciertos.club/almeria/locales/berlin-social-club', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260301T113453', 'session': '2026_03_01_11_33_Domingo', 'image': 'https://conciertos.club/doc/c/2026/c_1000477038_2026_21fa.jpg', 'url': 'https://conciertos.club/almeria/conciertos/111922-metalmeria-fest'}
+****************************
+Saving 3 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_01_11_33_Domingo/0_raw/20260301_1134_ConciertosClub.json
+Saving 3 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
