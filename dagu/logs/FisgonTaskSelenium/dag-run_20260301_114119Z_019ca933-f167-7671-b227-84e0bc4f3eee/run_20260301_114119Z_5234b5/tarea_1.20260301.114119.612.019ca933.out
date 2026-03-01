@@ -331,3 +331,75 @@ xpath
 /html/body/div[6]/div[4]/div[1]/div[3]/div/div[29]/div[3]/h5
 clicking
 sleeping 3
+sleeping 3
+Getting content
+sleeping 1
+b_str ='12 Jun 2026 20:30'
+{'id': 'f3294a6f', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Un Patético Amor Desconocido', 'slug': 'un-patetico-amor-desconocido', 'category': '__NOT_DEFINIED__', 'id_venue': 'tQfq78jF', 'venue': 'teatro apolo almeria', 'std_venue': 'Teatro Apolo', 'start_date': '2026-06-12', 'start_time': '20:30:00', 'end_date': '2026-06-12', 'end_time': '__NOT_DEFINIED__', 'description': 'CICLO TRASLADANZA 2026. En un escenario vibrante donde convergen danza contemporánea, teatro, acrobacias y danza española, tres personajes exploran un amor lleno de contradicciones y situaciones ridiculas, pero también conmovedoras. A través de una trama que combina la música en directo con toques de dramatismo y comedia, la obra invita al público a reflexionar sobre la naturaleza del amor y la identidad. LAS ENTRADAS PARA CADA EVENTO DE FORMA INDIVIDUAL ESTARÁN DISPONIBLES PARA LA VENTA A PARTIR DEL 01 DE ENERO DE 2026, HASTA ENTONCES SOLO SE PODRÁN ADQUIRIR ABONOS. PRECIO DE LAS ENTRADAS: ANTICIPADA: 12 EUROS. GENERAL: 15 EUROS. Debido a la normativa vigente, todos los asistentes deben adquirir entrada, incluidos niños y adultos, independientemente de la edad y de si ocupan butaca o no. Para cualquier incidencia derivada de la compra online puede contactar a través del correo electrónico: info@flowte.es', 'others': {'price': 'PRECIO DE LAS ENTRADAS:\xa0ANTICIPADA: 12 EUROSGENERAL: 15 EUROS'}, 'source': 'FlowteTaquillaCultural', 'exec_time': '20260301T114125', 'session': '2026_03_01_11_33_Domingo', 'image': 'https://www.flowte.me/cabinet/event/img/36823-1765281217.4386.png', 'url': 'https://www.flowte.me/storefront/almeria-cultura-401?cc'}
+-------------
+******
+xpath
+/html/body/div[6]/div[4]/div[1]/div[3]/div/div[30]/div[3]/h5
+clicking
+sleeping 3
+sleeping 3
+Getting content
+sleeping 1
+b_str ='15 Jul 2026 20:30'
+{'id': 'b37c00f7', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Casandra', 'slug': 'casandra', 'category': '__NOT_DEFINIED__', 'id_venue': 'tQfq78jF', 'venue': 'teatro apolo almeria', 'std_venue': 'Teatro Apolo', 'start_date': '2026-07-15', 'start_time': '20:30:00', 'end_date': '2026-07-15', 'end_time': '__NOT_DEFINIED__', 'description': 'En un escenario imaginado que varía según la narración, se suceden las acciones y reacciones que provoca la presencia de un feriante y una adivina. El autor desnuda emocionalmente al espectador haciéndole descubrir la frivolidad de la aristocracia y la sinrazón del poder o las motivaciones de un comerciante sin escrúpulos, pero también descubre la obstinación, la honestidad, la maldad banal y bondad adaptativa de los humanos a través de los distintos personajes. PRECIO DE LAS ENTRADAS: 10 EUROS. Debido a la normativa vigente, todos los asistentes deben adquirir entrada, incluidos niños y adultos, independientemente de la edad y de si ocupan butaca o no. Para cualquier incidencia derivada de la compra online puede contactar a través del correo electrónico: info@flowte.es', 'others': {'price': 'PRECIO\xa0DE LAS ENTRADAS: 10 EUROS'}, 'source': 'FlowteTaquillaCultural', 'exec_time': '20260301T114125', 'session': '2026_03_01_11_33_Domingo', 'image': 'https://www.flowte.me/cabinet/event/img/37080-1770894155.1782.png', 'url': 'https://www.flowte.me/storefront/almeria-cultura-401?cc'}
+-------------
+******
+xpath
+/html/body/div[6]/div[4]/div[1]/div[3]/div/div[31]/div[3]/h5
+clicking
+sleeping 3
+sleeping 3
+Getting content
+sleeping 1
+b_str ='17 Oct 2026 20:30'
+{'id': 'acfb34bc', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Revolver', 'slug': 'revolver', 'category': '__NOT_DEFINIED__', 'id_venue': '27qNP7DH', 'venue': 'auditorio municipal maestro padilla.', 'std_venue': 'Auditorio Municipal Maestro Padilla', 'start_date': '2026-10-17', 'start_time': '20:30:00', 'end_date': '2026-10-17', 'end_time': '__NOT_DEFINIED__', 'description': 'UN VIAJE AL ORIGEN. REVOLVER regresa a la carretera con LA 03010, un proyecto que representa mucho más que un nuevo álbum de estudio: es una coordenada emocional, un regreso al origen y una de las obras más complejas y personales en la trayectoria de Carlos Goñi, que continúa explorando nuevos territorios creativos. Bajo este enigmático código —el código postal del barrio alicantino de Los Ángeles donde vivió de niño— nace un repertorio que viaja a las historias que marcaron sus inicios. Según el propio Goñi: “Este álbum, junto con Argán, es de lo más complejo que he escrito en toda mi vida”. Este nuevo capítulo llega tras el éxito histórico de la gira aniversario de Eldorado, donde Revolver colgó el cartel de "Sold Out" en cada ciudad. En esta nueva cita, el artista no solo presentará sus nuevas composiciones, sino que el repertorio incluirá también esos éxitos de siempre que tantas alegrías nos han dado, logrando el equilibrio perfecto entre su presente creativo y el legado que le ha acompañado durante décadas. PRECIO DE LAS ENTRADAS: NIVEL A: 42 EUROS. NIVEL B: 38 EUROS. Debido a la normativa vigente, todos los asistentes deben adquirir entrada, incluidos niños y adultos, independientemente de la edad y de si ocupan butaca o no. Para cualquier incidencia derivada de la compra online puede contactar a través del correo electrónico: info@flowte.es', 'others': {'price': 'PRECIO\xa0DE LAS ENTRADAS:NIVEL A: 42\xa0EUROSNIVEL B: 38\xa0EUROS'}, 'source': 'FlowteTaquillaCultural', 'exec_time': '20260301T114125', 'session': '2026_03_01_11_33_Domingo', 'image': 'https://www.flowte.me/cabinet/event/img/37140-1771575524.045.png', 'url': 'https://www.flowte.me/storefront/almeria-cultura-401?cc'}
+-------------
+******
+xpath
+/html/body/div[6]/div[4]/div[1]/div[3]/div/div[32]/div[3]/h5
+/html/body/div[6]/div[4]/div[1]/div[3]/div/div[32]/div[3]/h5 Not found
+Checking unique event dict.
+Reading /home/ubuntu/data_storage/Almeria/00_master/master_events.json...
+*******
+[]
+('Unity Gospel Choir Con Clasijazz Big Band', 'auditorio municipal maestro padilla.', '2026-03-01', '12:30:00')
+('Sorda', 'teatro apolo almeria', '2026-03-04', '20:00:00')
+('Luz Casal', 'auditorio municipal maestro padilla.', '2026-03-07', '21:00:00')
+('Dinero Negro', 'teatro apolo almeria', '2026-03-11', '20:30:00')
+('Baile De Bestias', 'teatro apolo almeria', '2026-03-13', '20:30:00')
+('Orquesta Filarmónica De Málaga', 'auditorio municipal maestro padilla.', '2026-03-14', '20:30:00')
+('Marwán', 'teatro apolo almeria', '2026-03-15', '20:00:00')
+('Quinteto De Viento Oual', 'teatro apolo almeria', '2026-03-16', '19:30:00')
+('It Was Just an Accident', 'teatro apolo almeria', '2026-03-18', '20:00:00')
+('500 Noches - Tributo a Sabina', 'auditorio municipal maestro padilla.', '2026-03-20', '20:30:00')
+('Parejas Imperfectas', 'auditorio municipal maestro padilla.', '2026-03-21', '20:30:00')
+('Lorcas´indómita', 'teatro apolo almeria', '2026-03-26', '20:30:00')
+('Morricone Rock Experience', 'auditorio municipal maestro padilla.', '2026-03-27', '20:30:00')
+('Paco Candela', 'auditorio municipal maestro padilla.', '2026-03-28', '21:00:00')
+('Love Me Tender', 'teatro apolo almeria', '2026-04-08', '20:00:00')
+('Café Quijano', 'auditorio municipal maestro padilla.', '2026-04-10', '21:00:00')
+('Antonio Giménez Y Su Acompañamiento', 'teatro apolo almeria', '2026-04-15', '20:30:00')
+('Next to My Skin', 'teatro apolo almeria', '2026-04-17', '20:30:00')
+('Laura Gallego', 'auditorio municipal maestro padilla.', '2026-04-18', '20:30:00')
+('Sentimental Value', 'teatro apolo almeria', '2026-04-22', '20:00:00')
+('Campeones 2 en El Teatro', 'auditorio municipal maestro padilla.', '2026-04-25', '20:00:00')
+('El Fantástico Viaje De Jonás El Espermatozoide', 'teatro apolo almeria', '2026-04-30', '20:30:00')
+('Diana Navarro', 'auditorio municipal maestro padilla.', '2026-05-16', '20:30:00')
+('Zambrano', 'teatro apolo almeria', '2026-05-20', '20:30:00')
+('Ulises', 'teatro apolo almeria', '2026-05-21', '20:30:00')
+('Pleita', 'teatro apolo almeria', '2026-05-22', '20:30:00')
+('Real Orquesta Sinfónica De Sevilla', 'auditorio municipal maestro padilla.', '2026-05-23', '20:30:00')
+('Una Perla en Auschwitz', 'teatro apolo almeria', '2026-06-10', '20:30:00')
+('Un Patético Amor Desconocido', 'teatro apolo almeria', '2026-06-12', '20:30:00')
+('Casandra', 'teatro apolo almeria', '2026-07-15', '20:30:00')
+('Revolver', 'auditorio municipal maestro padilla.', '2026-10-17', '20:30:00')
+****************************
+Saving 31 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_01_11_33_Domingo/0_raw/20260301_1141_FlowteTaquillaCultural.json
+Saving 31 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

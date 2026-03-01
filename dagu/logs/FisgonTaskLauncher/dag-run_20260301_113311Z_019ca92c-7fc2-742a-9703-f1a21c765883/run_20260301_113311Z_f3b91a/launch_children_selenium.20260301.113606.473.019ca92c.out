@@ -1356,3 +1356,936 @@ dag: FisgonTaskSelenium (1m 25s)
 Result: Succeeded
 
 Launching scraper: FlowteTaquillaCultural
+Succeeded - 2026-03-01T11:41:19Z
+
+dag: FisgonTaskSelenium (4m 6s)
+│
+└─tarea_1 (4m 6s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout: ... (351 more lines)
+      sleeping 3
+      Getting content
+      sleeping 1
+      b_str ='17 Oct 2026 20:30'
+      {'id': 'acfb34bc', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Revolver', 'slug': 'revolver', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '27qNP7DH', 'venue': 'auditorio municipal
+      maestro padilla.', 'std_venue': 'Auditorio Municipal Maestro Padilla',
+      'start_date': '2026-10-17', 'start_time': '20:30:00', 'end_date':
+      '2026-10-17', 'end_time': '__NOT_DEFINIED__', 'description': 'UN VIAJE AL
+      ORIGEN. REVOLVER regresa a la carretera con LA 03010, un proyecto que
+      representa mucho más que un nuevo álbum de estudio: es una coordenada
+      emocional, un regreso al origen y una de las obras más complejas y
+      personales en la trayectoria de Carlos Goñi, que continúa explorando
+      nuevos territorios creativos. Bajo este enigmático código —el código
+      postal del barrio alicantino de Los Ángeles donde vivió de niño— nace
+      un repertorio que viaja a las historias que marcaron sus inicios. Según
+      el propio Goñi: “Este álbum, junto con Argán, es de lo más complejo
+      que he escrito en toda mi vida”. Este nuevo capítulo llega tras el
+      éxito histórico de la gira aniversario de Eldorado, donde Revolver
+      colgó el cartel de "Sold Out" en cada ciudad. En esta nueva cita, el
+      artista no solo presentará sus nuevas composiciones, sino que el
+      repertorio incluirá también esos éxitos de siempre que tantas alegrías
+      nos han dado, logrando el equilibrio perfecto entre su presente creativo y
+      el legado que le ha acompañado durante décadas. PRECIO DE LAS ENTRADAS:
+      NIVEL A: 42 EUROS. NIVEL B: 38 EUROS. Debido a la normativa vigente, todos
+      los asistentes deben adquirir entrada, incluidos niños y adultos,
+      independientemente de la edad y de si ocupan butaca o no. Para cualquier
+      incidencia derivada de la compra online puede contactar a través del
+      correo electrónico: info@flowte.es', 'others': {'price': 'PRECIO\xa0DE
+      LAS ENTRADAS:NIVEL A: 42\xa0EUROSNIVEL B: 38\xa0EUROS'}, 'source':
+      'FlowteTaquillaCultural', 'exec_time': '20260301T114125', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      'https://www.flowte.me/cabinet/event/img/37140-1771575524.045.png', 'url':
+      'https://www.flowte.me/storefront/almeria-cultura-401?cc'}
+      -------------
+      ******
+      xpath
+      /html/body/div[6]/div[4]/div[1]/div[3]/div/div[32]/div[3]/h5
+      /html/body/div[6]/div[4]/div[1]/div[3]/div/div[32]/div[3]/h5 Not found
+      Checking unique event dict.
+      Reading /home/ubuntu/data_storage/Almeria/00_master/master_events.json...
+      *******
+      []
+      ('Unity Gospel Choir Con Clasijazz Big Band', 'auditorio municipal maestro
+      padilla.', '2026-03-01', '12:30:00')
+      ('Sorda', 'teatro apolo almeria', '2026-03-04', '20:00:00')
+      ('Luz Casal', 'auditorio municipal maestro padilla.', '2026-03-07',
+      '21:00:00')
+      ('Dinero Negro', 'teatro apolo almeria', '2026-03-11', '20:30:00')
+      ('Baile De Bestias', 'teatro apolo almeria', '2026-03-13', '20:30:00')
+      ('Orquesta Filarmónica De Málaga', 'auditorio municipal maestro
+      padilla.', '2026-03-14', '20:30:00')
+      ('Marwán', 'teatro apolo almeria', '2026-03-15', '20:00:00')
+      ('Quinteto De Viento Oual', 'teatro apolo almeria', '2026-03-16',
+      '19:30:00')
+      ('It Was Just an Accident', 'teatro apolo almeria', '2026-03-18',
+      '20:00:00')
+      ('500 Noches - Tributo a Sabina', 'auditorio municipal maestro padilla.',
+      '2026-03-20', '20:30:00')
+      ('Parejas Imperfectas', 'auditorio municipal maestro padilla.',
+      '2026-03-21', '20:30:00')
+      ('Lorcas´indómita', 'teatro apolo almeria', '2026-03-26', '20:30:00')
+      ('Morricone Rock Experience', 'auditorio municipal maestro padilla.',
+      '2026-03-27', '20:30:00')
+      ('Paco Candela', 'auditorio municipal maestro padilla.', '2026-03-28',
+      '21:00:00')
+      ('Love Me Tender', 'teatro apolo almeria', '2026-04-08', '20:00:00')
+      ('Café Quijano', 'auditorio municipal maestro padilla.', '2026-04-10',
+      '21:00:00')
+      ('Antonio Giménez Y Su Acompañamiento', 'teatro apolo almeria',
+      '2026-04-15', '20:30:00')
+      ('Next to My Skin', 'teatro apolo almeria', '2026-04-17', '20:30:00')
+      ('Laura Gallego', 'auditorio municipal maestro padilla.', '2026-04-18',
+      '20:30:00')
+      ('Sentimental Value', 'teatro apolo almeria', '2026-04-22', '20:00:00')
+      ('Campeones 2 en El Teatro', 'auditorio municipal maestro padilla.',
+      '2026-04-25', '20:00:00')
+      ('El Fantástico Viaje De Jonás El Espermatozoide', 'teatro apolo
+      almeria', '2026-04-30', '20:30:00')
+      ('Diana Navarro', 'auditorio municipal maestro padilla.', '2026-05-16',
+      '20:30:00')
+      ('Zambrano', 'teatro apolo almeria', '2026-05-20', '20:30:00')
+      ('Ulises', 'teatro apolo almeria', '2026-05-21', '20:30:00')
+      ('Pleita', 'teatro apolo almeria', '2026-05-22', '20:30:00')
+      ('Real Orquesta Sinfónica De Sevilla', 'auditorio municipal maestro
+      padilla.', '2026-05-23', '20:30:00')
+      ('Una Perla en Auschwitz', 'teatro apolo almeria', '2026-06-10',
+      '20:30:00')
+      ('Un Patético Amor Desconocido', 'teatro apolo almeria', '2026-06-12',
+      '20:30:00')
+      ('Casandra', 'teatro apolo almeria', '2026-07-15', '20:30:00')
+      ('Revolver', 'auditorio municipal maestro padilla.', '2026-10-17',
+      '20:30:00')
+      ****************************
+      Saving 31 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_03_01_11_33_Domingo/0_raw/20260301_
+      1141_FlowteTaquillaCultural.json
+      Saving 31 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+
+Result: Succeeded
+
+Launching scraper: Entradium
+Succeeded - 2026-03-01T11:45:26Z
+
+dag: FisgonTaskSelenium (49.0s)
+│
+└─tarea_1 (49.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  ├─stdout: ... (2 more lines)
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=Entradium
+  │   DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&d
+  │   agRunId=019ca937-b40a-7f2a-937f-dc6c6da9ce4f
+  │   Running for Almeria: Entradium
+  │   Entradium
+  │   RUNNING SESSION =  2026_03_01_11_33_Domingo
+  │   Starting WebDriver...
+  │   http://localhost:4444/wd/hub
+  │   sleeping 5
+  │   clicking
+  │   sleeping 3
+  │   sleeping 1.5
+  │   sleeping 3
+  │   ******
+  │   xpath
+  │   /html/body/header/div[2]/div[1]/div/div/form/div/div/button/span/i
+  │   clicking
+  │   sleeping 3
+  │   sleeping 8
+  │   Getting content
+  │   *** SCRAPED 26 URLS WITH EVENTS **
+  │   New url events = 3
+  │   0 / 3
+  │   Getting
+  │   https://entradium.com/es/events/casting-el-musical-lo-eliges-tu-almeria
+  │   Sleep 4
+  │   ['12.04.2026', '17:00']
+  │   --------------------
+  │   {'id': '0ffcd581', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Casting - El Musical Lo Eliges Tú',
+  │   'slug': 'casting-el-musical-lo-eliges-tu', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala Emma',
+  │   'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date':
+  │   '2026-04-12', 'start_time': '17:00:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'CastingLumenia Teatro
+  │   llega con una propuesta diferente, divertida y participativa desde el
+  │   Teatro Musical.Un grupo de artistas tiene que decidir su próximo
+  │   montaje pero no logran ponerse de acuerdo, la solución está clara:
+  │   hacer un casting en directo y que el público decida que musical
+  │   ganará.Os esperamos a todos en esta obra en la que el nuevo musical
+  │   "¡LO ELIGES TÚ!"', 'others': {}, 'source': 'Entradium', 'exec_time':
+  │   '20260301T114531', 'session': '2026_03_01_11_33_Domingo', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/440834db10d2
+  │   3dc95753f95992884686c6c0d4ef/event_m_1000143383.png?v=1772138139',
+  │   'url':
+  │   'https://entradium.com/es/events/casting-el-musical-lo-eliges-tu-almeria
+  │   '}
+  │   1 / 3
+  │   Getting
+  │   https://entradium.com/es/events/sinergia-solidaria-noesso-en-la-guajira-
+  │   almeria
+  │   Sleep 4
+  │   ['22.03.2026', '12:00']
+  │   --------------------
+  │   {'id': '497f5b92', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Sinergia Solidaria Noesso en La
+  │   Guajira', 'slug': 'sinergia-solidaria-noesso-en-la-guajira', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'ASOCIACION
+  │   CULTURAL LA GUAJIRA', 'std_venue': 'La Guajira', 'start_date':
+  │   '2026-03-22', 'start_time': '12:00:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Esta sexta Sinergia
+  │   Solidaria la celebramos con la Asociación NOESSO, una entidad que
+  │   acompaña a personas y familias en momentos de especial vulnerabilidad,
+  │   trabajando en áreas como adicciones, menores e inserción
+  │   sociolaboral.En esta edición, nos convoca una pregunta urgente y
+  │   contemporánea: qué hacemos con las mentiras que se convierten en
+  │   violencia. Bajo el título «Mejor sin mentiras. Hablamos de personas
+  │   migrantes», dedicaremos la jornada a la reflexión y la
+  │   sensibilización en torno al discurso de odio: mensajes que
+  │   deslegitiman, estigmatizan o excluyen a personas y colectivos por su
+  │   origen, identidad cultural o situación migratoria.Contaremos con la
+  │   intervención de Fernando Plaza, delegado en Almería de la Asociación
+  │   Pro Derechos Humanos de Andalucía, para situar el debate con rigor y
+  │   derechos humanos. También habrá una actuación musical de Alba
+  │   Sorroche & Damián Sánchez, que pone cuerpo y emoción a lo que a veces
+  │   no sabemos nombrar.Viviremos un taller de Teatro del Oprimido con dos
+  │   actos de la obra «Moscas en el paraíso», dirigida por Adán Torres, y
+  │   cerraremos la jornada con la música en directo de Loudly.El despliegue
+  │   de actividades aquí:12.00 a 12.30 | Recepción y bienvenidaApertura del
+  │   evento por parte de la Asociación NOESSOPresentación del Proyecto ReTo
+  │   por parte de La Guajira12.30 a 13.00 | Charla sobre discurso de odio:
+  │   «Mejor sin mentiras. Hablamos de personas migrantes», con Fernando
+  │   Plaza.13.00 a 14.00 | Actuación Alba Sorroche y Damián Sánchez14.00 a
+  │   16.00 | Sesión DJ16.00 a 17.00 | Taller de Teatro del Oprimido17.00 a
+  │   18.00 | Concierto Loudly18.00 | Despedida y cierreLa entrada tiene un
+  │   coste de 10€ en beneficio de la Asociación NOESSO.', 'others': {},
+  │   'source': 'Entradium', 'exec_time': '20260301T114531', 'session':
+  │   '2026_03_01_11_33_Domingo', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/86bb036fcc36
+  │   52c126d02189e639f2891f2322fd/event_m_sinergia_solidaria_vertical.png?v=1
+  │   772095678', 'url':
+  │   'https://entradium.com/es/events/sinergia-solidaria-noesso-en-la-guajira
+  │   -almeria'}
+  │   2 / 3
+  │   Getting
+  │   https://entradium.com/es/events/stand-up-comedy-artenvacio-kikin-fernand
+  │   ez
+  │   Sleep 4
+  │   ['6.03.2026', '19:00']
+  │   --------------------
+  │   {'id': '50a4cf66', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Kikin Fernandez', 'slug':
+  │   'kikin-fernandez', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   '9B7gDFP7', 'venue': 'Sala Stand Up Artenvacio', 'std_venue': 'Sala
+  │   Artenvacio', 'start_date': '2026-03-06', 'start_time': '19:00:00',
+  │   'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__',
+  │   'description': 'STAND UP COMEDY ARTENVACIO - KIKIN FERNANDEZ“Kikín
+  │   Fernández es un cómico con un pasado muy prometedor. Casi 30 años de
+  │   escenarios han dado para mucho. Paramount Comedy, Comedy Central,
+  │   Teatro, televisión y cine. El mismísimo Broncano confesó tenerlo
+  │   entre sus cómicos favoritos. Ahora Kikín escribe para otros cómicos y
+  │   dirige espectáculos de comedia que se estrenan en la Gran vía
+  │   Madrileña.Pero a Kikín le gusta actuar en sitios pequeños. Y si puede
+  │   ser en Almería, mejor.“BUENOPOSYASTA” es una expresión que sirve
+  │   para casi todo, para hablar de lo que te da la gana y para no escuchar
+  │   lo que no te apetece. Lo importante es reírse.Apertura de puertas a
+  │   las: 18:30 h Espectáculo a las: 19:00 h Entradas en Entradium: 10€
+  │   Entradas en puerta: 12€', 'others': {}, 'source': 'Entradium',
+  │   'exec_time': '20260301T114531', 'session': '2026_03_01_11_33_Domingo',
+  │   'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/0bec0d8b5a45
+  │   9c9a3a446e7422b20a2f099067c2/event_m_dj_flyer_-_Hecho_con_PosterMyWall.j
+  │   pg?v=1772097436', 'url':
+  │   'https://entradium.com/es/events/stand-up-comedy-artenvacio-kikin-fernan
+  │   dez'}
+  │   ****************************
+  │   Saving 3 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_01_11_33_Domingo/0_raw/2026030
+  │   1_1145_Entradium.json
+  │   Saving 3 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: TodasLasEntradas
+Succeeded - 2026-03-01T11:46:15Z
+
+dag: FisgonTaskSelenium (8.0s)
+│
+└─tarea_1 (8.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=TodasLasEntradas
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019ca938-754a-782f-a8c8-5d463efac554
+      Running for Almeria: TodasLasEntradas
+      TodasLasEntradas
+      RUNNING SESSION =  2026_03_01_11_33_Domingo
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      Getting content
+      *** SCRAPED 23 URLS WITH EVENTS **
+      New url events = 0
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+
+Result: Succeeded
+
+Launching scraper: RedBibliotecas
+Succeeded - 2026-03-01T11:46:23Z
+
+dag: FisgonTaskSelenium (18.0s)
+│
+└─tarea_1 (18.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout: ... (78 more lines)
+      {'id': '592a16cd', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller Infantil "Mi Inicial Molona"',
+      'slug': 'taller-infantil-mi-inicial-molona', 'category':
+      '__NOT_DEFINIED__', 'id_venue': 'GQnp3h69', 'venue': 'Biblioteca Municipal
+      Los Ángeles', 'std_venue': 'Biblioteca Pública Municipal Los Ángeles',
+      'start_date': '2026-03-04', 'start_time': '18:00:00', 'end_date':
+      '__NOT_DEFINIED__', 'end_time': '19:30:00', 'description': 'Crearemos
+      letras en cartonaje que decoraremos con gran cantidad de material variado.
+      Dependiendo de si queremos personalizar la puerta de nuestra habitación o
+      usarlas para decorar un mueble o estantería, podrán elegir entre una
+      técnica u otra para que se queden en plano o en 3D. ATENCIÓN: La
+      inscripción al taller se abrirá una semana antes de su inicio. Solo
+      podrán asistir los usuarios con carné de biblioteca, que estén
+      previamente inscritos y dentro del cupo que el aforo permita. SE RUEGA
+      PUNTUALIDAD', 'others': '__NOT_DEFINIED__', 'source': 'RedBibliotecas',
+      'exec_time': '20260301T114627', 'session': '2026_03_01_11_33_Domingo',
+      'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/MARZO%2026%20BASICOS/03-TI-1.png/jcr%3Acontent/0
+      3-TI%25201.png', 'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-inic
+      ial.html'}
+      13 / 24
+      Getting content
+      --------------------
+      {'id': 'd6fc95a9', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller Infantil "Garabatos Emocionales"',
+      'slug': 'taller-infantil-garabatos-emocionales', 'category':
+      '__NOT_DEFINIED__', 'id_venue': 'GMqmFgD4', 'venue': 'Biblioteca El
+      Alquián', 'std_venue': 'Biblioteca Pública El Alquián', 'start_date':
+      '2026-03-24', 'start_time': '18:00:00', 'end_date': '__NOT_DEFINIED__',
+      'end_time': '19:30:00', 'description': 'Regalaremos una agenda a cada
+      participante y en esas mismas hojas iremos plasmando técnicas de
+      concentración, relajación e inteligencia emocional. Para el desarrollo
+      de la sesión regalaremos a cada asistente varias láminas de pegativas
+      también y un montón de material de papelería a través del cual
+      aprenderán a dejar volar su imaginación sin compararse con nadie y
+      disfrutando del arte de crear. ATENCIÓN: La inscripción al taller se
+      abrirá una semana antes de su inicio. Solo podrán asistir los usuarios
+      con carné de biblioteca, que estén previamente inscritos y dentro del
+      cupo que el aforo permita. SE RUEGA PUNTUALIDAD', 'others':
+      '__NOT_DEFINIED__', 'source': 'RedBibliotecas', 'exec_time':
+      '20260301T114627', 'session': '2026_03_01_11_33_Domingo', 'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/MARZO%2026%20BASICOS/13.png/jcr%3Acontent/13.png
+      ', 'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html'}
+      14 / 24
+      Getting content
+      --------------------
+      {'id': '2cc1f764', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller Infantil "Garabatos Emocionales"',
+      'slug': 'taller-infantil-garabatos-emocionales', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '1b66427d', 'venue': 'Biblioteca Municipal
+      Cabo de Gata', 'std_venue': 'Biblioteca Municipal Cabo de Gata',
+      'start_date': '2026-03-26', 'start_time': '17:30:00', 'end_date':
+      '__NOT_DEFINIED__', 'end_time': '19:00:00', 'description': 'Regalaremos
+      una agenda a cada participante y en esas mismas hojas iremos plasmando
+      técnicas de concentración, relajación e inteligencia emocional. Para el
+      desarrollo de la sesión regalaremos a cada asistente varias láminas de
+      pegativas también y un montón de material de papelería a través del
+      cual aprenderán a dejar volar su imaginación sin compararse con nadie y
+      disfrutando del arte de crear.. ATENCIÓN: Solo podrán asistir los
+      usuarios con carné de biblioteca, que estén previamente registrados y
+      dentro del cupo que el aforo permita. SE RUEGA PUNTUALIDAD', 'others':
+      '__NOT_DEFINIED__', 'source': 'RedBibliotecas', 'exec_time':
+      '20260301T114627', 'session': '2026_03_01_11_33_Domingo', 'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/MARZO%2026%20BASICOS/13.png/jcr%3Acontent/13.png
+      ', 'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html'}
+      15 / 24
+      Getting content
+      --------------------
+      {'id': '721cf304', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Bebecuentos "Triángulo, Cuadrado"',
+      'slug': 'bebecuentos-triangulo-cuadrado', 'category': '__NOT_DEFINIED__',
+      'id_venue': '3mrLgtRB', 'venue': 'Biblioteca Central José María Artero',
+      'std_venue': 'Biblioteca Central José María Artero', 'start_date':
+      '2026-03-03', 'start_time': '18:00:00', 'end_date': '__NOT_DEFINIED__',
+      'end_time': '19:00:00', 'description': 'Cuadrado saca bloques de una cueva
+      y los sube por la montaña hasta colocarlos en la cima. Es su trabajo. Su
+      amiga Círculo lo visita, le dice que es un gran escultor, ¡un genio! Y
+      le pide que haga una escultura de ella. ¿Pero es Cuadrado un gran
+      artista? Él piensa que no, pero aún así… lo intenta. Los dos
+      creadores de libros infantiles con más talento de la actualidad, juntos
+      en este sorprendentemente sencillo y divertido álbum ilustrado que invita
+      a la reflexión. ATENCIÓN: Es muy importante que tenga en cuenta las
+      pautas para los bebecuentos. La inscripción al bebecuentos se abrirá una
+      semana antes de su inicio. Solo podrán asistir los usuarios con carné de
+      biblioteca, que estén previamente inscritos y dentro del cupo que el
+      aforo permita. SE RUEGA PUNTUALIDAD', 'others': '__NOT_DEFINIED__',
+      'source': 'RedBibliotecas', 'exec_time': '20260301T114627', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/MARZO%2026%20BASICOS/03-BBC.png/jcr%3Acontent/03
+      -BBC.png', 'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/bbc-bc-tria
+      ngulo.html'}
+      16 / 24
+      Getting content
+      --------------------
+      {'id': '535e6cf1', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Presentación Del Libro "Carambolo Perdió
+      Su Corona"', 'slug': 'presentacion-del-libro-carambolo-perdio-su-corona',
+      'category': '__NOT_DEFINIED__', 'id_venue': '3mrLgtRB', 'venue':
+      'Biblioteca Central José María Artero', 'std_venue': 'Biblioteca Central
+      José María Artero', 'start_date': '2026-03-19', 'start_time':
+      '18:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '19:00:00',
+      'description': 'Teresa Flores Martínez, autora y Marta Flores Nieto,
+      ilustradora nos presentan su nuevo libro "Carambolo perdió su corona" y
+      tras las presentación habrá un cuentacuentos para los asistentes.
+      Carambolo es un niño cariñoso y despistado que pierde la preciosa corona
+      de papel de periódico que le ha hecho su madre para su cumpleaños. Muy
+      triste sale en su busca por todos los rincones por donde juega
+      habitualmente, allí localiza a cada uno de sus amigos y les pregunta si
+      han visto su corona. La corona no aparece, pero va encontrando otros
+      objetos muy queridos para él que perdió en sus paseos y que le son
+      devueltos…. ¿Logrará por fin Carambolo recuperar su corona? ENTRADA
+      LIBRE HASTA COMPLETAR AFORO SE RUEGA PUNTUALIDAD', 'others':
+      '__NOT_DEFINIED__', 'source': 'RedBibliotecas', 'exec_time':
+      '20260301T114627', 'session': '2026_03_01_11_33_Domingo', 'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/MARZO%2026%20BASICOS/14.png/jcr%3Acontent/14.png
+      ', 'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l'}
+      17 / 24
+      Getting content
+      --------------------
+      {'id': '3c3a9a67', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller Infantil "Garabatos Emocionales"',
+      'slug': 'taller-infantil-garabatos-emocionales', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '3mrLgtRB', 'venue': 'Biblioteca Central
+      José María Artero', 'std_venue': 'Biblioteca Central José María
+      Artero', 'start_date': '2026-03-23', 'start_time': '18:00:00', 'end_date':
+      '__NOT_DEFINIED__', 'end_time': '19:30:00', 'description': 'Regalaremos
+      una agenda a cada participante y en esas mismas hojas iremos plasmando
+      técnicas de concentración, relajación e inteligencia emocional. Para el
+      desarrollo de la sesión regalaremos a cada asistente varias láminas de
+      pegativas también y un montón de material de papelería a través del
+      cual aprenderán a dejar volar su imaginación sin compararse con nadie y
+      disfrutando del arte de crear. ATENCIÓN: La inscripción al taller se
+      abrirá una semana antes de su inicio. Solo podrán asistir los usuarios
+      con carné de biblioteca, que estén previamente inscritos y dentro del
+      cupo que el aforo permita. SE RUEGA PUNTUALIDAD', 'others':
+      '__NOT_DEFINIED__', 'source': 'RedBibliotecas', 'exec_time':
+      '20260301T114627', 'session': '2026_03_01_11_33_Domingo', 'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/MARZO%2026%20BASICOS/13.png/jcr%3Acontent/13.png
+      ', 'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html'}
+      18 / 24
+      Getting content
+      --------------------
+      {'id': '47182bee', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Club De Lectura en El Alquián', 'slug':
+      'club-de-lectura-en-el-alquian', 'category': '__NOT_DEFINIED__',
+      'id_venue': 'GMqmFgD4', 'venue': 'Biblioteca El Alquián', 'std_venue':
+      'Biblioteca Pública El Alquián', 'start_date': '2026-03-06',
+      'start_time': '10:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time':
+      '11:30:00', 'description': 'Si te gusta leer anímate a participar en
+      nuestro club de lectura. Celebramos dos sesiones al mes. Descubre cada mes
+      un nuevo libro, comparte lectura y conversación. No te lo pierdas.',
+      'others': '__NOT_DEFINIED__', 'source': 'RedBibliotecas', 'exec_time':
+      '20260301T114627', 'session': '2026_03_01_11_33_Domingo', 'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/CLUBES/CL-141--1-.png/jcr%3Acontent/CL%2520141%2
+      520%281%29.png', 'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian.
+      html'}
+      19 / 24
+      Getting content
+      --------------------
+      {'id': 'e6fbc50e', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller Infantil "Mi Inicial Molona"',
+      'slug': 'taller-infantil-mi-inicial-molona', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '1b66427d', 'venue': 'Biblioteca Municipal
+      Cabo de Gata', 'std_venue': 'Biblioteca Municipal Cabo de Gata',
+      'start_date': '2026-03-05', 'start_time': '17:30:00', 'end_date':
+      '__NOT_DEFINIED__', 'end_time': '19:00:00', 'description': 'Crearemos
+      letras en cartonaje que decoraremos con gran cantidad de material variado.
+      Dependiendo de si queremos personalizar la puerta de nuestra habitación o
+      usarlas para decorar un mueble o estantería, podrán elegir entre una
+      técnica u otra para que se queden en plano o en 3D. ATENCIÓN: La
+      inscripción al taller se abrirá una semana antes de su inicio. Solo
+      podrán asistir los usuarios con carné de biblioteca, que estén
+      previamente inscritos y dentro del cupo que el aforo permita. SE RUEGA
+      PUNTUALIDAD', 'others': '__NOT_DEFINIED__', 'source': 'RedBibliotecas',
+      'exec_time': '20260301T114627', 'session': '2026_03_01_11_33_Domingo',
+      'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/MARZO%2026%20BASICOS/03-TI-1.png/jcr%3Acontent/0
+      3-TI%25201.png', 'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-inic
+      ial.html'}
+      20 / 24
+      Getting content
+      --------------------
+      {'id': '6a93b4bb', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Presentación Del Libro "Willy No Busca
+      Trufas"', 'slug': 'presentacion-del-libro-willy-no-busca-trufas',
+      'category': '__NOT_DEFINIED__', 'id_venue': '3mrLgtRB', 'venue':
+      'Biblioteca Central José María Artero', 'std_venue': 'Biblioteca Central
+      José María Artero', 'start_date': '2026-03-02', 'start_time':
+      '18:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '19:00:00',
+      'description': 'Estefanía Sanjuán presentará su libro y a continuación
+      habrá un cuentacuentos para todos los asistentes. Willy no busca trufas
+      es un cuento mágico sobre un cerdito muy especial: tiene cresta de fuego,
+      una cola con poderes… ¡y ningún interés por buscar trufas! Mientras
+      todos esperan que sea como los demás, Willy se lanza a una aventura para
+      descubrir su verdadero don. En el camino, conoce amigos únicos y aprende
+      que ser diferente no solo está bien…, sino que ¡es maravilloso! Willy
+      no busca trufas transmite valores como la autoaceptación, la valentía de
+      ser uno mismo, la importancia de la diversidad y el respeto a las
+      diferencias. Fomenta la empatía, la inclusión y la libertad de elegir el
+      propio camino, desafiando expectativas y estereotipos. Invita a los niños
+      a descubrir sus talentos únicos y a valorar lo que les hace especiales.
+      ENTRADA LIBRE HASTA COMPLETAR AFORO', 'others': '__NOT_DEFINIED__',
+      'source': 'RedBibliotecas', 'exec_time': '20260301T114627', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/MARZO%2026%20BASICOS/1.png/jcr%3Acontent/1.png',
+      'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172-1.ht
+      ml'}
+      21 / 24
+      Getting content
+      --------------------
+      {'id': '181d9522', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Club De Lectura "La Central"', 'slug':
+      'club-de-lectura-la-central', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '3mrLgtRB', 'venue': 'Biblioteca Central José María Artero',
+      'std_venue': 'Biblioteca Central José María Artero', 'start_date':
+      '2026-03-04', 'start_time': '11:00:00', 'end_date': '__NOT_DEFINIED__',
+      'end_time': '12:30:00', 'description': 'Este mes de enero el club de
+      lectura abordará la lectura de "Ese lugar llamado casa" de Marta Orriols.
+      Si quieres participar y aún no estás inscrito, hazlo ahora. Si tienes
+      más dudas sobre el club puedes escribirnos a
+      bibliotecasmunicipales@aytoalmeria.es con el asunto: "Club de Lectura"',
+      'others': '__NOT_DEFINIED__', 'source': 'RedBibliotecas', 'exec_time':
+      '20260301T114627', 'session': '2026_03_01_11_33_Domingo', 'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/CLUBES/LOGO-CL-CENTRAL.png/jcr%3Acontent/LOGO%25
+      20CL%2520CENTRAL.png', 'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-172.html
+      '}
+      22 / 24
+      Getting content
+      --------------------
+      {'id': 'f742ceb4', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Cuentacuentos Infantil "Un Tractor Muy,
+      Muy Ruidoso"', 'slug':
+      'cuentacuentos-infantil-un-tractor-muy-muy-ruidoso', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '3mrLgtRB', 'venue': 'Biblioteca Central
+      José María Artero', 'std_venue': 'Biblioteca Central José María
+      Artero', 'start_date': '2026-03-10', 'start_time': '18:30:00', 'end_date':
+      '__NOT_DEFINIED__', 'end_time': '19:30:00', 'description': "Ganador de los
+      Moonbeam Children's Book Awards en 2013. Un cuento divertido y original
+      que nos invita a abrir la mente y a ser libres, viendo las cosas como las
+      ve un niño: como realmente son. Un tractor avanzaba por la carretera. Su
+      ruido atronador impedía a la conductora oír las exclamaciones y los
+      comentarios negativos de las personas que salían a su paso. Claro que, a
+      veces, para lo que hay que oír, es mejor así: que el ruido sea muy, pero
+      que muy fuerte… Esta divertida mujer, agricultora de profesión, se
+      paseaba arriba y abajo con su vehículo de confianza, muy segura de sí
+      misma y orgullosa de su profesión: la agricultura. A su paso, muchos
+      ciudadanos adultos no comprenden la extravagancia de esta especial y
+      original conductora. Sin embargo, cuando un niño gritó: “¡Hola,
+      señora del tractor!”, nuestra conductora detuvo su tractor y se
+      maravilló de esa frescura, esa espíritu libre que solo transmiten los
+      niños. SE RUEGA PUNTUALIDAD", 'others': '__NOT_DEFINIED__', 'source':
+      'RedBibliotecas', 'exec_time': '20260301T114627', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/MARZO%2026%20BASICOS/8.png/jcr%3Acontent/8.png',
+      'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-172-tra
+      ctor.html'}
+      23 / 24
+      Getting content
+      --------------------
+      {'id': 'e63a9114', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Tertulia Literaria en Cabo De Gata.',
+      'slug': 'tertulia-literaria-en-cabo-de-gata', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '1b66427d', 'venue': 'Biblioteca Municipal
+      Cabo de Gata', 'std_venue': 'Biblioteca Municipal Cabo de Gata',
+      'start_date': '2026-03-26', 'start_time': '17:30:00', 'end_date':
+      '__NOT_DEFINIED__', 'end_time': '18:30:00', 'description': 'Manuel Vázq
+      Si te gusta leer y la gastronomía..ven a la Biblioteca Cabo de Gata a las
+      17:30 el próximo día 20 de febrero', 'others': '__NOT_DEFINIED__',
+      'source': 'RedBibliotecas', 'exec_time': '20260301T114627', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/CLUBES/CL-CABO.png/jcr%3Acontent/CL%2520CABO.png
+      ', 'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo0.ht
+      ml'}
+      ****************************
+      Saving 24 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_03_01_11_33_Domingo/0_raw/20260301_
+      1146_RedBibliotecas.json
+      Saving 24 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+
+Result: Succeeded
+
+Launching scraper: SalaEmma
+Succeeded - 2026-03-01T11:46:41Z
+
+dag: FisgonTaskSelenium (19.0s)
+│
+└─tarea_1 (19.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout: ... (24 more lines)
+      {'id': 'df25fdbc', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Menos Es Más', 'slug': 'menos-es-mas',
+      'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala
+      EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes',
+      'start_date': '2026-05-22', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Viernes, 22
+      de Mayo, 2026 8:00 PM "Menos es Mas" es un formato diferente para amenizar
+      tu evento. Este proyecto combina rock, jazz, pop...y su finalidad es
+      transmitir emociones a través del instrumento. Juanmi Viñolo ha
+      preparado una selección de temas de grandes clásicos de artistas como
+      Frank Sinatra, Carlos\nSantana, Luis Salinas...\nSi te gusta la guitarra
+      eléctrica, no te lo puedes perder 10.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260301T114645', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/13b2ef2d.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'd889f644', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'EDÉN SERRANO El Show', 'slug':
+      'eden-serrano-el-show', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-03-06', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Viernes, 6 de Marzo, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260301T114645', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/f8c1d160.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '93bf94fe', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller Más Allá De La Voz', 'slug':
+      'taller-mas-alla-de-la-voz', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-03-21', 'start_time': '09:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 21 de Marzo, 2026 9:00 AM Más allá de la voz es un taller
+      intensivo dirigido a cantantes que desean profundizar en la
+      interpretación emocional y la presencia escénica, transformando sus
+      canciones en experiencias auténticas para el público.\nA lo largo del
+      taller se trabaja la canción desde dentro: la letra, la intención y la
+      emoción, integrando la técnica vocal con recursos expresivos y
+      escénicos. El objetivo es que el cantante no solo cante correctamente,
+      sino que comunique, emocione y conecte desde un lugar verdadero y
+      consciente sobre el escenario. 45.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260301T114645', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/6bc51da0.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'd46647e6', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Menos Es Más (Alumnos Emma)', 'slug':
+      'menos-es-mas-alumnos-emma', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-05-22', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Viernes, 22 de Mayo, 2026 8:00 PM 8.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260301T114645', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/4cd2e31d.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'f8949cc6', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Pepe El Caja', 'slug': 'pepe-el-caja',
+      'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala
+      EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes',
+      'start_date': '2026-05-23', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 23
+      de Mayo, 2026 8:00 PM 15.00 €', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260301T114645', 'session': '2026_03_01_11_33_Domingo',
+      'image': '/home/ubuntu/work/event_flask_app/static/img/e918a5a5.jpg',
+      'url': 'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '8ad1beb0', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Manolo Lera', 'slug': 'manolo-lera',
+      'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala
+      EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes',
+      'start_date': '2026-04-11', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 11
+      de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260301T114645', 'session': '2026_03_01_11_33_Domingo',
+      'image': '/home/ubuntu/work/event_flask_app/static/img/c4ff0b09.jpg',
+      'url': 'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'ce70f159', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Melocotón en Almíbar', 'slug':
+      'melocoton-en-almibar', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-05-09', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 9 de Mayo, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260301T114645', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/80836c9f.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '7662a7b1', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Rafa Tornado Punkústico', 'slug':
+      'rafa-tornado-punkustico', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-03-15', 'start_time': '17:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Domingo, 15 de Marzo, 2026 5:00 PM ENTRADA+CONSUMICIÓN 6.00 €',
+      'others': {}, 'source': 'SalaEmma', 'exec_time': '20260301T114645',
+      'session': '2026_03_01_11_33_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/f7ec8af7.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '4a3a3c98', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': '¡corten! Una Comedia De Cine', 'slug':
+      'corten-una-comedia-de-cine', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-04-25', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 25 de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260301T114645', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/3741842c.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'b934db49', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Alvarito', 'slug': 'alvarito', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA',
+      'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date':
+      '2026-06-06', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__',
+      'end_time': '__NOT_FOUND__', 'description': 'Sábado, 6 de Junio, 2026
+      8:00 PM 12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time':
+      '20260301T114645', 'session': '2026_03_01_11_33_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/02185143.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'a726368d', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Victor Castigao Descontrolao', 'slug':
+      'victor-castigao-descontrolao', 'category': '__NOT_DEFINIED__',
+      'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela
+      Municipal de Música & Artes', 'start_date': '2026-04-18', 'start_time':
+      '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+      'description': 'Sábado, 18 de Abril, 2026 8:00 PM 12.00 €', 'others':
+      {}, 'source': 'SalaEmma', 'exec_time': '20260301T114645', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/5277175b.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '832cbb2f', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': '¡comedia! “Malas Y Maldecías Tocata Y
+      Fuga”', 'slug': 'comedia-malas-y-maldecias-tocata-y-fuga', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA',
+      'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date':
+      '2026-03-07', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__',
+      'end_time': '__NOT_FOUND__', 'description': 'Sábado, 7 de Marzo, 2026
+      8:00 PM 12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time':
+      '20260301T114645', 'session': '2026_03_01_11_33_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/72e63318.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '36a08053', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'El Mentalista Canalla', 'slug':
+      'el-mentalista-canalla', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-04-24', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Viernes, 24 de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260301T114645', 'session':
+      '2026_03_01_11_33_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/dc95ffaf.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      Checking unique event dict.
+      Reading /home/ubuntu/data_storage/Almeria/00_master/master_events.json...
+      *******
+      [('Manolo Lera', 'Sala EMMA', '2026-04-11', '20:00:00'), ('Victor Castigao
+      Descontrolao', 'Sala EMMA', '2026-04-18', '20:00:00'), ('El Mentalista
+      Canalla', 'Sala EMMA', '2026-04-24', '20:00:00'), ('¡corten! Una Comedia
+      De Cine', 'Sala EMMA', '2026-04-25', '20:00:00'), ('Melocotón en
+      Almíbar', 'Sala EMMA', '2026-05-09', '20:00:00'), ('Kikín Fernández Y
+      Fernando Labordeta', 'Sala EMMA', '2026-05-16', '20:00:00'), ('Pepe El
+      Caja', 'Sala EMMA', '2026-05-23', '20:00:00'), ('Alvarito', 'Sala EMMA',
+      '2026-06-06', '20:00:00'), ('Humor De Casados (Mariano Ypunto Y La Nena)',
+      'Sala EMMA', '2026-06-13', '20:00:00')]
+      ('Humor De Casados (Mariano Ypunto Y La Nena)', 'Sala EMMA', '2026-06-13',
+      '20:00:00')
+      ('Christian Garcia (10 Años Dando Guerra)', 'Sala EMMA', '2026-03-14',
+      '20:00:00')
+      ('Kikín Fernández Y Fernando Labordeta', 'Sala EMMA', '2026-05-16',
+      '20:00:00')
+      ('Menos Es Más', 'Sala EMMA', '2026-05-22', '20:00:00')
+      ('EDÉN SERRANO El Show', 'Sala EMMA', '2026-03-06', '20:00:00')
+      ('Taller Más Allá De La Voz', 'Sala EMMA', '2026-03-21', '09:00:00')
+      ('Menos Es Más (Alumnos Emma)', 'Sala EMMA', '2026-05-22', '20:00:00')
+      ('Pepe El Caja', 'Sala EMMA', '2026-05-23', '20:00:00')
+      ('Manolo Lera', 'Sala EMMA', '2026-04-11', '20:00:00')
+      ('Melocotón en Almíbar', 'Sala EMMA', '2026-05-09', '20:00:00')
+      ('Rafa Tornado Punkústico', 'Sala EMMA', '2026-03-15', '17:00:00')
+      ('¡corten! Una Comedia De Cine', 'Sala EMMA', '2026-04-25', '20:00:00')
+      ('Alvarito', 'Sala EMMA', '2026-06-06', '20:00:00')
+      ('Victor Castigao Descontrolao', 'Sala EMMA', '2026-04-18', '20:00:00')
+      ('¡comedia! “Malas Y Maldecías Tocata Y Fuga”', 'Sala EMMA',
+      '2026-03-07', '20:00:00')
+      ('El Mentalista Canalla', 'Sala EMMA', '2026-04-24', '20:00:00')
+      ****************************
+      Saving 7 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_03_01_11_33_Domingo/0_raw/20260301_
+      1146_SalaEmma.json
+      Saving 7 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+
+Result: Succeeded
+
