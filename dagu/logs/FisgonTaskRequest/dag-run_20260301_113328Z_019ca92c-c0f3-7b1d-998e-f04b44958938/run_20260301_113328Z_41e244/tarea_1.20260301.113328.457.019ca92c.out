@@ -1,0 +1,46 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=SalaBerlin
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019ca92c-c0f3-7b1d-998e-f04b44958938
+
+Running for Almeria: SalaBerlin
+SalaBerlin
+RUNNING SESSION =  2026_03_01_11_33_Domingo
+Getting https://berlinalmeria.com/eventos/
+Sleep 1
+*** SCRAPED 12 URLS WITH EVENTS **
+New url events = 4
+0 / 4
+Getting https://berlinalmeria.com/producto/11-abril-linkoln-park/
+Sleep 4
+--------------------
+{'id': '15244430', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Linkoln Park', 'slug': 'linkoln-park', 'category': '__NOT_DEFINIED__', 'id_venue': 'NmPqTrh6', 'venue': 'Sala Berlin', 'std_venue': 'Berlin Social Club', 'start_date': '2026-04-11', 'start_time': '22:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Linkoln Park nace en 2015 a raíz del amor de los miembros de la banda madrileña Kitsune Art por la música de Linkin Park. Después de la pérdida de Chester Bennington, vocalista de la banda Californiana, en Enero de 2018 deciden organizar un concierto benéfico en Madrid en memoria del mismo, juntando a más de 25 músicos de la escena nacional, y consiguiendo donar 3890€ a Confederación Salud Mental España y One More Light Foundation (fundación creada por Linkin Park tras la muerte de Chester). Tras ello, la formación adquiere nuevas incorporaciones procedentes de las bandas Nadye, Thornskill y Lakedada lanzándose a la carretera de forma ininterrumpida para mantener viva la música de Linkin Park a lo largo de todo el territorio nacional.', 'others': {'price': '19,80\xa0€', 'ticket': 'https://entradas.crashmusic.es/event/concierto-linkoln-park-tributo-a-linkin-park-almeria-berlin-social-club-sabado-11-de-abril'}, 'source': 'SalaBerlin', 'exec_time': '20260301T113329', 'session': '2026_03_01_11_33_Domingo', 'image': 'https://berlinalmeria.com/wp-content/uploads/2025/08/LINKOLN-PARK.jpg', 'url': 'https://berlinalmeria.com/producto/11-abril-linkoln-park/'}
+1 / 4
+Getting https://berlinalmeria.com/producto/18-abril-barry-b/
+Sleep 4
+--------------------
+{'id': '443250e1', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Barry B', 'slug': 'barry-b', 'category': '__NOT_DEFINIED__', 'id_venue': 'NmPqTrh6', 'venue': 'Sala Berlin', 'std_venue': 'Berlin Social Club', 'start_date': '2026-04-18', 'start_time': '20:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Barry B presenta su gira “Infancia Mal Calibrada”, con la que recorrerá más de 20 ciudades del país y pondrá rumbo por primera vez a México.', 'others': {'price': '22,00\xa0€', 'ticket': 'https://entradas.crashmusic.es/event/concierto-barry-b-almeria-sala-berlin-social-club-sabado-18-de-abril'}, 'source': 'SalaBerlin', 'exec_time': '20260301T113329', 'session': '2026_03_01_11_33_Domingo', 'image': 'https://berlinalmeria.com/wp-content/uploads/2025/10/bbb.jpg', 'url': 'https://berlinalmeria.com/producto/18-abril-barry-b/'}
+2 / 4
+Getting https://berlinalmeria.com/producto/24-abril-profesor-popsnuggle/
+Sleep 4
+--------------------
+{'id': '5b3140a7', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 1, 'event': 'Profesor Popsnuggle', 'slug': 'profesor-popsnuggle', 'category': '__NOT_DEFINIED__', 'id_venue': 'NmPqTrh6', 'venue': 'Sala Berlin', 'std_venue': 'Berlin Social Club', 'start_date': '__NOT_FOUND__', 'start_time': '__NOT_FOUND__', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Profesor Popsnuggle son Germán, Jose, Álvaro y Laureano.', 'others': {'price': '13,20\xa0€', 'ticket': 'https://entradas.crashmusic.es/event/concierto-profesor-popsnuggle-almeria-sala-berlin-social-club-viernes-24-de-abril'}, 'source': 'SalaBerlin', 'exec_time': '20260301T113329', 'session': '2026_03_01_11_33_Domingo', 'image': 'https://berlinalmeria.com/wp-content/uploads/2026/02/KvmiPWttfQJs.jpg', 'url': 'https://berlinalmeria.com/producto/24-abril-profesor-popsnuggle/'}
+3 / 4
+Getting https://berlinalmeria.com/producto/23-mayo-cuervo-blanco-fest/
+Sleep 4
+--------------------
+{'id': '53121df9', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 1, 'event': 'Cuervo Blanco Fest', 'slug': 'cuervo-blanco-fest', 'category': '__NOT_DEFINIED__', 'id_venue': 'NmPqTrh6', 'venue': 'Sala Berlin', 'std_venue': 'Berlin Social Club', 'start_date': '__NOT_FOUND__', 'start_time': '__NOT_FOUND__', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Cuervo Blanco Fest II llega a Almería con Armenian, el mejor tributo de España de Sistem of a Down.', 'others': {'price': '19,80\xa0€', 'ticket': 'https://entradas.crashmusic.es/event/cuervo-blanco-fest-almeria-sala-berlin-social-club-sabado-23-de-mayo'}, 'source': 'SalaBerlin', 'exec_time': '20260301T113329', 'session': '2026_03_01_11_33_Domingo', 'image': 'https://berlinalmeria.com/wp-content/uploads/2026/02/zI2UYfSZbpkv.jpg', 'url': 'https://berlinalmeria.com/producto/23-mayo-cuervo-blanco-fest/'}
+****************************
+Saving 4 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_01_11_33_Domingo/0_raw/20260301_1133_SalaBerlin.json
+Saving 4 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

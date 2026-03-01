@@ -1,0 +1,707 @@
+Launching scraper: KuverProducciones
+Succeeded - 2026-03-01T11:33:14Z
+
+dag: FisgonTaskRequest (14.0s)
+│
+└─tarea_1 (14.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=KuverProducciones
+  │   DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&da
+  │   gRunId=019ca92c-8904-7823-9374-11848e0be0de
+  │   Running for Almeria: KuverProducciones
+  │   KuverProducciones
+  │   Creating rawfolder...
+  │   RUNNING SESSION =  2026_03_01_11_33_Domingo
+  │   Getting https://kuverproducciones.com/proximos-eventos/
+  │   Sleep 1
+  │   *** SCRAPED 87 URLS WITH EVENTS **
+  │   New url events = 1
+  │   0 / 1
+  │   Getting
+  │   https://kuverproducciones.com/evento/supergrupo-kpop-poderes-secretos-ca
+  │   zadoras-demonios/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '39e5937a', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'K-Pop', 'slug': 'k-pop', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Huércal Overa',
+  │   'std_venue': None, 'start_date': '2026-04-25', 'start_time': '17:00:00',
+  │   'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__',
+  │   'description': 'Un supergrupo de k-pop usa sus poderes secretos para
+  │   proteger a sus fans de amenazas sobrenaturales y de una banda rival de
+  │   chicos decididos a robar corazones y mentes. A través de la música, el
+  │   grupo Huntrix, las cazadoras, protegen el HofMund de los demonios,
+  │   quienes forman un grupo musical los “Saja Boys”, liderado por el
+  │   tenor Jinu, para conquistar a los fans y devorarle sus almas, con el fin
+  │   de conquistar el HofMund para que pertenezca al tenebroso Wimax. Una
+  │   lucha de bandas, cazadoras vs demonios, que usan la música para
+  │   combatir por el HofMund. 2 Pases: a las 17:00 y a las 19:30', 'others':
+  │   '__NOT_DEFINIED__', 'source': 'KuverProducciones', 'exec_time':
+  │   '20260301T113314', 'session': '2026_03_01_11_33_Domingo', 'image':
+  │   '__NOT_FOUND__', 'url':
+  │   'https://kuverproducciones.com/evento/supergrupo-kpop-poderes-secretos-c
+  │   azadoras-demonios/'}
+  │   ****************************
+  │   Saving 1 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_01_11_33_Domingo/0_raw/2026030
+  │   1_1133_KuverProducciones.json
+  │   Saving 1 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'kuverproducciones.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'kuverproducciones.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: SalaBerlin
+Succeeded - 2026-03-01T11:33:28Z
+
+dag: FisgonTaskRequest (25.0s)
+│
+└─tarea_1 (25.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=SalaBerlin
+  │   DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&da
+  │   gRunId=019ca92c-c0f3-7b1d-998e-f04b44958938
+  │   Running for Almeria: SalaBerlin
+  │   SalaBerlin
+  │   RUNNING SESSION =  2026_03_01_11_33_Domingo
+  │   Getting https://berlinalmeria.com/eventos/
+  │   Sleep 1
+  │   *** SCRAPED 12 URLS WITH EVENTS **
+  │   New url events = 4
+  │   0 / 4
+  │   Getting https://berlinalmeria.com/producto/11-abril-linkoln-park/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '15244430', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Linkoln Park', 'slug': 'linkoln-park',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NmPqTrh6', 'venue': 'Sala
+  │   Berlin', 'std_venue': 'Berlin Social Club', 'start_date': '2026-04-11',
+  │   'start_time': '22:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Linkoln Park nace en 2015 a raíz
+  │   del amor de los miembros de la banda madrileña Kitsune Art por la
+  │   música de Linkin Park. Después de la pérdida de Chester Bennington,
+  │   vocalista de la banda Californiana, en Enero de 2018 deciden organizar
+  │   un concierto benéfico en Madrid en memoria del mismo, juntando a más
+  │   de 25 músicos de la escena nacional, y consiguiendo donar 3890€ a
+  │   Confederación Salud Mental España y One More Light Foundation
+  │   (fundación creada por Linkin Park tras la muerte de Chester). Tras
+  │   ello, la formación adquiere nuevas incorporaciones procedentes de las
+  │   bandas Nadye, Thornskill y Lakedada lanzándose a la carretera de forma
+  │   ininterrumpida para mantener viva la música de Linkin Park a lo largo
+  │   de todo el territorio nacional.', 'others': {'price': '19,80\xa0€',
+  │   'ticket':
+  │   'https://entradas.crashmusic.es/event/concierto-linkoln-park-tributo-a-l
+  │   inkin-park-almeria-berlin-social-club-sabado-11-de-abril'}, 'source':
+  │   'SalaBerlin', 'exec_time': '20260301T113329', 'session':
+  │   '2026_03_01_11_33_Domingo', 'image':
+  │   'https://berlinalmeria.com/wp-content/uploads/2025/08/LINKOLN-PARK.jpg',
+  │   'url': 'https://berlinalmeria.com/producto/11-abril-linkoln-park/'}
+  │   1 / 4
+  │   Getting https://berlinalmeria.com/producto/18-abril-barry-b/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '443250e1', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Barry B', 'slug': 'barry-b', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NmPqTrh6', 'venue': 'Sala Berlin',
+  │   'std_venue': 'Berlin Social Club', 'start_date': '2026-04-18',
+  │   'start_time': '20:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Barry B presenta su gira “Infancia
+  │   Mal Calibrada”, con la que recorrerá más de 20 ciudades del país y
+  │   pondrá rumbo por primera vez a México.', 'others': {'price':
+  │   '22,00\xa0€', 'ticket':
+  │   'https://entradas.crashmusic.es/event/concierto-barry-b-almeria-sala-ber
+  │   lin-social-club-sabado-18-de-abril'}, 'source': 'SalaBerlin',
+  │   'exec_time': '20260301T113329', 'session': '2026_03_01_11_33_Domingo',
+  │   'image': 'https://berlinalmeria.com/wp-content/uploads/2025/10/bbb.jpg',
+  │   'url': 'https://berlinalmeria.com/producto/18-abril-barry-b/'}
+  │   2 / 4
+  │   Getting https://berlinalmeria.com/producto/24-abril-profesor-popsnuggle/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '5b3140a7', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 1, 'event': 'Profesor Popsnuggle', 'slug':
+  │   'profesor-popsnuggle', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'NmPqTrh6', 'venue': 'Sala Berlin', 'std_venue': 'Berlin Social Club',
+  │   'start_date': '__NOT_FOUND__', 'start_time': '__NOT_FOUND__',
+  │   'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__',
+  │   'description': 'Profesor Popsnuggle son Germán, Jose, Álvaro y
+  │   Laureano.', 'others': {'price': '13,20\xa0€', 'ticket':
+  │   'https://entradas.crashmusic.es/event/concierto-profesor-popsnuggle-alme
+  │   ria-sala-berlin-social-club-viernes-24-de-abril'}, 'source':
+  │   'SalaBerlin', 'exec_time': '20260301T113329', 'session':
+  │   '2026_03_01_11_33_Domingo', 'image':
+  │   'https://berlinalmeria.com/wp-content/uploads/2026/02/KvmiPWttfQJs.jpg',
+  │   'url':
+  │   'https://berlinalmeria.com/producto/24-abril-profesor-popsnuggle/'}
+  │   3 / 4
+  │   Getting https://berlinalmeria.com/producto/23-mayo-cuervo-blanco-fest/
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '53121df9', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 1, 'event': 'Cuervo Blanco Fest', 'slug':
+  │   'cuervo-blanco-fest', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'NmPqTrh6', 'venue': 'Sala Berlin', 'std_venue': 'Berlin Social Club',
+  │   'start_date': '__NOT_FOUND__', 'start_time': '__NOT_FOUND__',
+  │   'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__',
+  │   'description': 'Cuervo Blanco Fest II llega a Almería con Armenian, el
+  │   mejor tributo de España de Sistem of a Down.', 'others': {'price':
+  │   '19,80\xa0€', 'ticket':
+  │   'https://entradas.crashmusic.es/event/cuervo-blanco-fest-almeria-sala-be
+  │   rlin-social-club-sabado-23-de-mayo'}, 'source': 'SalaBerlin',
+  │   'exec_time': '20260301T113329', 'session': '2026_03_01_11_33_Domingo',
+  │   'image':
+  │   'https://berlinalmeria.com/wp-content/uploads/2026/02/zI2UYfSZbpkv.jpg',
+  │   'url': 'https://berlinalmeria.com/producto/23-mayo-cuervo-blanco-fest/'}
+  │   ****************************
+  │   Saving 4 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_01_11_33_Domingo/0_raw/2026030
+  │   1_1133_SalaBerlin.json
+  │   Saving 4 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'berlinalmeria.com'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'berlinalmeria.com'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'berlinalmeria.com'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'berlinalmeria.com'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'berlinalmeria.com'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: LaGuajira
+Succeeded - 2026-03-01T11:33:53Z
+
+dag: FisgonTaskRequest (59.0s)
+│
+└─tarea_1 (59.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout: ... (36 more lines)
+  │   Sleep 16
+  │   --------------------
+  │   {'id': '69fece09', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio De Idiomas',
+  │   'slug': 'meetup-intercambio-de-idiomas', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-03-13', 'start_time': '20:30:00',
+  │   'end_date': '2026-03-13', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260301T113354', 'session': '2026_03_01_11_33_Domingo', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-03-13/'}
+  │   --------------------
+  │   {'id': '69e68879', 'show': 1, 'in_city': '__NOT_FOUND__', 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Escuela De Flamenco De Chelo Ruiz',
+  │   'slug': 'escuela-de-flamenco-de-chelo-ruiz', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': None, 'venue': '__NOT_FOUND__',
+  │   'std_venue': None, 'start_date': '2026-03-12', 'start_time': '21:00:00',
+  │   'end_date': '2026-03-12', 'end_time': '22:30:00', 'description': 'Los
+  │   jóvenes talentos que se están formando con Chelo Ruiz se suben una vez
+  │   al escenario. Una noche para conocer el flamenco que viene y disfrutar
+  │   de la emoción y la ilusión de estos jóvenes bailaores. ¡No te
+  │   pierdas esta oportunidad de dejarte cautivar por la magia y el
+  │   entusiasmo de estos jóvenes artistas que ...', 'others': {'ticket':
+  │   'https://laguajiradealmeria.com/evento/escuela-de-flamenco-de-chelo-ruiz
+  │   /#tribe-tickets__tickets-form', 'price': '4,00€ – 8,00€',
+  │   'location': '__NOT_FOUND__'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260301T113354', 'session': '2026_03_01_11_33_Domingo', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/NF.-CHELO-RUI
+  │   Z-1.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/escuela-de-flamenco-de-chelo-ruiz
+  │   /'}
+  │   --------------------
+  │   {'id': 'a306afe4', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo De La Guajira Con Julián
+  │   Sánchez', 'slug': 'coro-combo-de-la-guajira-con-julian-sanchez',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-03-10',
+  │   'start_time': '20:00:00', 'end_date': '2026-03-10', 'end_time':
+  │   '21:30:00', 'description': '¡Llega el Coro-Combo de La Guajira! Si te
+  │   gusta cantar, tocar un instrumento o simplemente compartir la música
+  │   como experiencia colectiva, este proyecto es para ti. El Coro-Combo de
+  │   La Guajira nace con la idea de crear un espacio artístico estable,
+  │   intercultural e intergeneracional, abierto a todas las personas que
+  │   quieran sumarse. La propuesta es ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260301T113354', 'session': '2026_03_01_11_33_Domingo',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-03-10/'}
+  │   --------------------
+  │   {'id': 'fc185572', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Taller De Ritmo Con Señas Con Tren
+  │   Espacial', 'slug': 'taller-de-ritmo-con-senas-con-tren-espacial',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-03-13',
+  │   'start_time': '21:00:00', 'end_date': '2026-03-13', 'end_time':
+  │   '22:00:00', 'description': 'Y te preguntarás... ¿Qué es eso del ritmo
+  │   con señas? Lo mejor es que vengas y lo vivas, pero vamos a intentar
+  │   explicarlo. El ritmo con señas es un método que se utiliza para
+  │   conducir la musica sin necesidad de batuta, se utilizan unos gestos o
+  │   señas para crear atmósferas musicales que no dejan a ...', 'others':
+  │   {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260301T113354', 'session': '2026_03_01_11_33_Domingo',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/Tren-Especial
+  │   .png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-ritmo-con-senas-con-tre
+  │   n-espacial/'}
+  │   --------------------
+  │   {'id': '86b655b6', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Sinergia Solidaria Día De La Mujer
+  │   (8M)', 'slug': 'sinergia-solidaria-dia-de-la-mujer-8m', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-03-08', 'start_time':
+  │   '12:00:00', 'end_date': '2026-03-08', 'end_time': '18:00:00',
+  │   'description': 'Esta nueva Sinergia Solidaria la celebramos con la
+  │   Asociación Mujeres en Zona de Conflicto (MZC) y la Asamblea Feminista
+  │   8M de Almería. Podremos disfrutar de una jornada dedicada a la
+  │   reflexión, el análisis y la sensibilización en torno a los delitos de
+  │   odio desde una perspectiva interseccional y un enfoque feminista, con el
+  │   objetivo de generar ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260301T113354',
+  │   'session': '2026_03_01_11_33_Domingo', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/Sinergia-Soli
+  │   daria-8M-1.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/sinergia-solidaria-dia-de-la-muje
+  │   r-8m/'}
+  │   --------------------
+  │   {'id': 'de6cfdbc', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Terraceo Con Love Warrior DJ', 'slug':
+  │   'terraceo-con-love-warrior-dj', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-03-07', 'start_time': '16:00:00',
+  │   'end_date': '2026-03-07', 'end_time': '19:00:00', 'description': 'El
+  │   Tardeo Guajiro de esta semana se hace con Dj LoveWarrior y su esencia
+  │   tribalera que te adentrarás en una experiencia mágica. Downtempo, trip
+  │   hop, ethno deep, nu Jazz, balkan, dub, electronic Easy. Ven a gozar y
+  │   disfrutar de nuestro tardeo guajiro: terraza, la música de LoveWarrior,
+  │   café, copa o lo que gustes, la Alcazaba ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260301T113354', 'session': '2026_03_01_11_33_Domingo',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/Love-Warrior-
+  │   DJ.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/terraceo-con-love-warrior-dj-3/'}
+  │   --------------------
+  │   {'id': '419fb15c', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Presentación Documental «La Duna De
+  │   Chinguetti»', 'slug': 'presentacion-documental-la-duna-de-chinguetti',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-03-13',
+  │   'start_time': '19:00:00', 'end_date': '2026-03-13', 'end_time':
+  │   '20:30:00', 'description': '"La duna de Chinguetti" es un proyecto
+  │   colaborativo que busca poner en valor el inmenso patrimonio cultural de
+  │   Mauritania, en especial sus bibliotecas y los manuscritos centenarios
+  │   que albergan, a través del viaje de dos amigos saharauis en el exilio
+  │   que tratan de encontrar una identidad compartida. A comienzos de 2025
+  │   llevaron a cabo la ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260301T113354',
+  │   'session': '2026_03_01_11_33_Domingo', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/LA-DUNA-DE-CH
+  │   INGUETTi.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/presentacion-documental-la-duna-d
+  │   e-chinguetti/'}
+  │   --------------------
+  │   {'id': '3b808030', 'show': 1, 'in_city': '__NOT_FOUND__', 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Jam Hip-Hop Con Enlace Urbano', 'slug':
+  │   'jam-hip-hop-con-enlace-urbano', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None,
+  │   'start_date': '2026-03-13', 'start_time': '22:30:00', 'end_date':
+  │   '2026-03-14', 'end_time': '01:30:00', 'description': '¡Enlace Urbano
+  │   Almería está en la casa! Vuelve el Hip-hop a La Guajira de la mano de
+  │   una nueva generación que viene pisando fuerte. Ojalá sea la primera de
+  │   muchas. La jam estará protagonizada por todo aquel que quiera rimar en
+  │   el escenario y estará coordinada por Tren Espacial que es un colectivo
+  │   que trabaja ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': '__NOT_FOUND__'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260301T113354', 'session': '2026_03_01_11_33_Domingo',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/Enlace-Urbano
+  │   -1.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/jam-hip-hop-con-enlace-urbano/'}
+  │   --------------------
+  │   {'id': '2142fbaa', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso De Teatro Con Julio Béjar',
+  │   'slug': 'curso-de-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-03-09', 'start_time':
+  │   '19:30:00', 'end_date': '2026-03-09', 'end_time': '21:30:00',
+  │   'description': 'De noviembre de 2025 a junio de 2026, el dramaturgo y
+  │   director Julio Béjar impartirá en La Guajira un curso regular de
+  │   creación escénica pensado para quienes quieran explorar los distintos
+  │   oficios del teatro y desarrollar su propia pieza. Durante ocho meses, el
+  │   grupo —de entre 10 y 20 participantes— recorrerá todos los aspectos
+  │   del ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260301T113354',
+  │   'session': '2026_03_01_11_33_Domingo', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-03-09/'}
+  │   --------------------
+  │   {'id': '6af4dcfe', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Carmen Velázquez & Ana Guerrero
+  │   #NocheAzul', 'slug': 'carmen-velazquez-ana-guerrero-nocheazul',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-03-11',
+  │   'start_time': '22:00:00', 'end_date': '2026-03-11', 'end_time':
+  │   '23:00:00', 'description': 'A sus 20 años, Carmen Velázquez ha
+  │   demostrado que el flamenco es su forma de vida. Tras finalizar el año
+  │   pasado el Conservatorio Profesional de Danza Flamenca con sobresaliente,
+  │   ha culminado una etapa de formación marcada por la disciplina y una
+  │   profunda dedicación. En 2025 fue seleccionada por la Junta de
+  │   Andalucía para el Circuito ...', 'others': {'ticket':
+  │   'https://laguajiradealmeria.com/evento/carmen-velazquez-ana-guerrero-noc
+  │   heazul/#tribe-tickets__tickets-form', 'price': '6,00€ – 12,00€',
+  │   'location': 'La Guajira, C/ Cruces Bajas, 1, Almería, España'},
+  │   'source': 'LaGuajira', 'exec_time': '20260301T113354', 'session':
+  │   '2026_03_01_11_33_Domingo', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/Carmen-Velazq
+  │   uez-y-Ana-Guerrero-1.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/carmen-velazquez-ana-guerrero-noc
+  │   heazul/'}
+  │   Getting https://laguajiradealmeria.com/programacion/lista/página/3/
+  │   Sleep 16
+  │   --------------------
+  │   {'id': 'd4f3c0b9', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Zaira Chacón & Ana Gázquez', 'slug':
+  │   'zaira-chacon-ana-gazquez', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La Guajira',
+  │   'start_date': '2026-03-18', 'start_time': '22:00:00', 'end_date':
+  │   '2026-03-18', 'end_time': '23:00:00', 'description': 'Zaira Chacón,
+  │   nació en Almería en el 2003, es bailaora profesional de baile flamenco
+  │   y terminó sus estudios en el Conservatorio Profesional de Danza Kina
+  │   Jiménez en el año 2021. Ha bailado en distintos tablaos como Amor de
+  │   Dios y El morato. Ha realizado cursos con diferentes bailaores actuales
+  │   del flamenco, como Farruquito, Pedro Córdoba, ...', 'others':
+  │   {'ticket':
+  │   'https://laguajiradealmeria.com/evento/zaira-chacon-ana-gazquez/#tribe-t
+  │   ickets__tickets-form', 'price': '6,00€ – 12,00€', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260301T113354', 'session': '2026_03_01_11_33_Domingo',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/Zaira-Chacon-
+  │   Ana-Gazquez-1.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/zaira-chacon-ana-gazquez/'}
+  │   --------------------
+  │   {'id': '24913e05', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Contexto Teatro Con Julio Béjar',
+  │   'slug': 'contexto-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-03-19', 'start_time':
+  │   '20:30:00', 'end_date': '2026-03-19', 'end_time': '23:00:00',
+  │   'description': 'Encuentros escénicos de experimentación y desarrollo.
+  │   Muestra abierta a público de piezas de teatro exprés creadas por el
+  │   alumnado del curso coordinado por Julio Béjar. Participantes: Celia
+  │   Cañabate, Pedro Cazorla, Gloria Para, Fran Moncada, Ángeles García,
+  │   Loreto Gómez, Mar de los Ríos, Andrea Rendon, Ángela Artero, Carlos
+  │   García, Iván Molina y Nico Limongelli.', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260301T113354', 'session': '2026_03_01_11_33_Domingo',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/Julio-Bejar.p
+  │   ng', 'url':
+  │   'https://laguajiradealmeria.com/evento/contexto-teatro-con-julio-bejar-2
+  │   /'}
+  │   --------------------
+  │   {'id': 'c23df93a', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso De Teatro Con Julio Béjar',
+  │   'slug': 'curso-de-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-03-16', 'start_time':
+  │   '19:30:00', 'end_date': '2026-03-16', 'end_time': '21:30:00',
+  │   'description': 'De noviembre de 2025 a junio de 2026, el dramaturgo y
+  │   director Julio Béjar impartirá en La Guajira un curso regular de
+  │   creación escénica pensado para quienes quieran explorar los distintos
+  │   oficios del teatro y desarrollar su propia pieza. Durante ocho meses, el
+  │   grupo —de entre 10 y 20 participantes— recorrerá todos los aspectos
+  │   del ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260301T113354',
+  │   'session': '2026_03_01_11_33_Domingo', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-03-16/'}
+  │   --------------------
+  │   {'id': '374ad747', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo De La Guajira Con Julián
+  │   Sánchez', 'slug': 'coro-combo-de-la-guajira-con-julian-sanchez',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-03-17',
+  │   'start_time': '20:00:00', 'end_date': '2026-03-17', 'end_time':
+  │   '21:30:00', 'description': '¡Llega el Coro-Combo de La Guajira! Si te
+  │   gusta cantar, tocar un instrumento o simplemente compartir la música
+  │   como experiencia colectiva, este proyecto es para ti. El Coro-Combo de
+  │   La Guajira nace con la idea de crear un espacio artístico estable,
+  │   intercultural e intergeneracional, abierto a todas las personas que
+  │   quieran sumarse. La propuesta es ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260301T113354', 'session': '2026_03_01_11_33_Domingo',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-03-17/'}
+  │   --------------------
+  │   {'id': 'c3b42f3c', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Terraceo Con Simon Vun De Wúst DJ',
+  │   'slug': 'terraceo-con-simon-vun-de-wust-dj', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-03-14', 'start_time':
+  │   '16:00:00', 'end_date': '2026-03-14', 'end_time': '19:00:00',
+  │   'description': 'El polifacético Germán Guirado nos traerá una
+  │   suculenta y especial selección musical. ¿Qué tipo de música
+  │   pinchará un poeta?', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260301T113354',
+  │   'session': '2026_03_01_11_33_Domingo', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/Simon-Vun-de-
+  │   Wust-DJ-1.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/terraceo-con-simon-vun-de-wust-dj
+  │   /'}
+  │   --------------------
+  │   {'id': '382314ce', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio De Idiomas',
+  │   'slug': 'meetup-intercambio-de-idiomas', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-03-20', 'start_time': '20:30:00',
+  │   'end_date': '2026-03-20', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260301T113354', 'session': '2026_03_01_11_33_Domingo', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-03-20/'}
+  │   --------------------
+  │   {'id': '827defb3', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': '«Luchas, Nostalgias Y Desvaríos» Por
+  │   El Ratón Y La Ratonera', 'slug':
+  │   'luchas-nostalgias-y-desvarios-por-el-raton-y-la-ratonera', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-03-14', 'start_time':
+  │   '21:00:00', 'end_date': '2026-03-14', 'end_time': '22:30:00',
+  │   'description': '"Luchas, Nostalgias y Desvaríos" se presentó en
+  │   Almería como una propuesta híbrida que mezcla poesía, música y
+  │   teatro. Es un collage escénico que integra textos poéticos, obras
+  │   instrumentales y canciones desde una mirada próxima a lo íntimo y a la
+  │   rebeldía: “Cuando todo se derrumbe, quedará el rock & roll”. El
+  │   Ratón y la Ratonera ...', 'others': {'ticket':
+  │   'https://laguajiradealmeria.com/evento/luchas-nostalgias-y-desvarios-por
+  │   -el-raton-y-la-ratonera/#tribe-tickets__tickets-form', 'price': '6,00€
+  │   – 12,00€', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260301T113354',
+  │   'session': '2026_03_01_11_33_Domingo', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/el-raton-y-la
+  │   -ratonera.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/luchas-nostalgias-y-desvarios-por
+  │   -el-raton-y-la-ratonera/'}
+  │   --------------------
+  │   {'id': 'adfeeebd', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': '«Kapokadas»: Exposición Y
+  │   Presentación Del Libro De Alessandro «Kapok»', 'slug':
+  │   'kapokadas-exposicion-y-presentacion-del-libro-de-alessandro-kapok',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-03-20',
+  │   'start_time': '19:00:00', 'end_date': '2026-03-20', 'end_time':
+  │   '20:30:00', 'description': 'Kapokadas no es solo un libro. Es el mapa de
+  │   un viaje que duró 40.000 kilómetros, una crónica escrita a dedo desde
+  │   Australia hasta Europa, y ahora también una exposición que captura los
+  │   instantes robados al camino y las señales que hablan inevitablemente de
+  │   fronteras visibles e invisibles. En las páginas, no estamos en frente
+  │   al enésimo libro de aventuras. ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260301T113354', 'session': '2026_03_01_11_33_Domingo',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/Kapok.png',
+  │   'url':
+  │   'https://laguajiradealmeria.com/evento/kapokadas-exposicion-y-presentaci
+  │   on-del-libro-de-alessandro-kapok/'}
+  │   --------------------
+  │   {'id': '4c4c855f', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'La Hora Del Vermú Con Las Quintetas',
+  │   'slug': 'la-hora-del-vermu-con-las-quintetas', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-03-14', 'start_time':
+  │   '13:00:00', 'end_date': '2026-03-14', 'end_time': '16:00:00',
+  │   'description': '¡Por fin tenemos a Las Quintetas en un Vermú! Este
+  │   quinteto femenino hace un repaso por los años dorados del jazz con
+  │   mucho gusto. Nos apetecía mucho tenerlas en nuestra terraza y por fin
+  │   se va a hacer realidad. No creo que te lo quieras perder.', 'others':
+  │   {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260301T113354', 'session': '2026_03_01_11_33_Domingo',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/Vermu-Las-Qui
+  │   ntetas.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/la-hora-del-vermu-con-las-quintet
+  │   as/'}
+  │   --------------------
+  │   {'id': 'de66f700', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Ciclo De Nóveles Flamencos Con La
+  │   Academia De Chelo Ruiz', 'slug':
+  │   'ciclo-de-noveles-flamencos-con-la-academia-de-chelo-ruiz', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-03-18', 'start_time':
+  │   '19:00:00', 'end_date': '2026-03-18', 'end_time': '20:30:00',
+  │   'description': 'Desde el corazón de la Academia de Chelo Ruiz nace una
+  │   nueva hornada de jóvenes bailaores que suben al escenario para mostrar
+  │   su arte. Una velada única para descubrir el flamenco del mañana,
+  │   sentir la fuerza del compás y dejarse llevar por la pasión, la entrega
+  │   y los sueños de estos jóvenes talentos. Una noche ...', 'others':
+  │   {'ticket':
+  │   'https://laguajiradealmeria.com/evento/ciclo-de-noveles-flamencos-con-la
+  │   -academia-de-chelo-ruiz/#tribe-tickets__tickets-form', 'price': '4,00€
+  │   – 8,00€', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260301T113354',
+  │   'session': '2026_03_01_11_33_Domingo', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/NF.-CHELO-RUI
+  │   Z.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/ciclo-de-noveles-flamencos-con-la
+  │   -academia-de-chelo-ruiz/'}
+  │   Checking unique event url.
+  │   New url events = 9
+  │   ****************************
+  │   Saving 9 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_01_11_33_Domingo/0_raw/2026030
+  │   1_1133_LaGuajira.json
+  │   Saving 9 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: ConciertosClub
