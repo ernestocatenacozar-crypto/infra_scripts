@@ -1,24 +1,40 @@
 
 name: "FixTaskRequest"
 params:
-  - CIUDAD: ""
-  - SCRAPER: ""
+  - TARGET_CITY: "Almeria"
+    SCRAPERS_REQUEST: "KuverProducciones"
 
 env:
-  CIUDAD: ${CIUDAD}
-  SCRAPER: ${SCRAPER}
+  TARGET_CITY: ${TARGET_CITY}
+  DAGU_BASE_URL: ${DAGU_BASE_URL}
 
 steps:
-  - name: "crear_sesion"
+
+  - name: "open_session"
     command: >
-      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- CIUDAD="$CIUDAD" CREATE_SESSION="1" CLOSE_SESSION=""'
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
+      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="1" CLOSE_SESSION="" DAGU_BASE_URL="$DAGU_BASE_URL"'
 
   - name: "lanzar_scraper"
     command: >
-      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/${SCRAPER}.yml -- CIUDAD="$CIUDAD" SESSION_OPENED="1"'
+      bash -lc 'docker run --rm
+      --network host
+      -v /home/ubuntu/work/fisgon:/app
+      -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
+      -v /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_flask_app/static/img
+      -w /app
+      -e OPERATION=0
+      -e DOCKER_CONFIG=/tmp/.docker
+      -e HOME=/tmp
+      -e TARGET_CITY
+      -e TARGET_SCRAPER
+      -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+      -e DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&step=tarea_1&dagRunId=${DAG_RUN_ID}"
+      fisgon_scraper:1.0;
+      rc=$?;
+      exit $rc'
 
-  - name: "cerrar_scraper"
+  - name: "close_session"
     command: >
-      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- CIUDAD="$CIUDAD" CLOSE_SESSION="1"'
-    continueOn:
-      failure: true
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
+      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="" CLOSE_SESSION="1" DAGU_BASE_URL="$DAGU_BASE_URL"'
