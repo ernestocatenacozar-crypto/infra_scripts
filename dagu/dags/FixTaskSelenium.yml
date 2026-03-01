@@ -1,17 +1,17 @@
 
 name: "FixTaskSelenium"
 params:
-  - CIUDAD: ""
-  - SCRAPER: ""
+  - TARGET_CITY: "Almeria"
+    TARGET_SCRAPER: "AlmeriaTurismo"
 
 env:
-  CIUDAD: ${CIUDAD}
-  SCRAPER: ${SCRAPER}
+  DAGU_BASE_URL: ${DAGU_BASE_URL}
 
 steps:
-  - name: "crear_sesion"
+  - name: "open_session"
     command: >
-      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- CIUDAD="$CIUDAD" CREATE_SESSION="1" CLOSE_SESSION=""'
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
+      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="1" CLOSE_SESSION="" DAGU_BASE_URL="$DAGU_BASE_URL"'
 
   - name: "lanzar_scraper_selenium"
     command: >
@@ -25,7 +25,7 @@ steps:
       -e SE_NODE_MAX_SESSIONS=1
       -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
       selenium/standalone-chrome:latest >/dev/null;
-      docker exec "$SELENIUM_NAME" bash -c "for i in $(seq 1 60); do (echo > /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit 1";
+      docker exec "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo > /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit 1";
       docker run --rm
       --network container:"$SELENIUM_NAME"
       -v /home/ubuntu/work/fisgon:/app
@@ -35,14 +35,14 @@ steps:
       -e OPERATION=0
       -e DOCKER_CONFIG=/tmp/.docker
       -e HOME=/tmp
-      -e TARGET_CITY="$CIUDAD"
-      -e TARGET_SCRAPER="$SCRAPER"
-      -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
-      -e DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&step=lanzar_scraper_selenium&dagRunId=${DAG_RUN_ID}"
+      -e TARGET_CITY
+      -e TARGET_SCRAPER
+      -e DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+      -e DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=local&step=tarea_1&dagRunId=${DAG_RUN_ID}"
       fisgon_scraper:1.0'
 
-  - name: "cerrar_scraper"
+  - name: "close_session"
     command: >
-      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- CIUDAD="$CIUDAD" CLOSE_SESSION="1"'
-    continueOn:
-      failure: true
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
+      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="" CLOSE_SESSION="1" DAGU_BASE_URL="$DAGU_BASE_URL"'
+
