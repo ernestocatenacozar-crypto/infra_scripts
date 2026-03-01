@@ -1,0 +1,24 @@
+
+name: "FixTaskSelenium"
+params:
+  - CIUDAD: ""
+  - SCRAPER: ""
+
+env:
+  CIUDAD: ${CIUDAD}
+  SCRAPER: ${SCRAPER}
+
+steps:
+  - name: "crear_sesion"
+    command: >
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- CIUDAD="$CIUDAD" CREATE_SESSION="1" CLOSE_SESSION=""'
+
+  - name: "lanzar_scraper_selenium"
+    command: >
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/${SCRAPER}.yml -- CIUDAD="$CIUDAD" SESSION_OPENED="1" SELENIUM="1"'
+
+  - name: "cerrar_scraper"
+    command: >
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- CIUDAD="$CIUDAD" CLOSE_SESSION="1"'
+    continueOn:
+      failure: true
