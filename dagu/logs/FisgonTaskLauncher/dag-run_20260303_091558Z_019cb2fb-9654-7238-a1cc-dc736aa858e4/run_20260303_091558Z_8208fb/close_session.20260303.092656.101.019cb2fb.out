@@ -1,0 +1,57 @@
+Succeeded - 2026-03-03T09:26:56Z
+
+dag: FisgonSession (0s)
+│
+└─session (0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=1 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   CREATE_SESSION -e CLOSE_SESSION -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=session&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=1,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=1,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=
+      DAG_RUN_URL=/dags/FisgonSession/log?remoteNode=local&step=session&dagRunId
+      =019cb305-9f87-7712-b448-b8ae259ed984
+      Executing final task with session: 2026_03_03_09_15_Martes
+      Reading
+      /home/ubuntu/data_storage/Almeria/2026_03_03_09_15_Martes/0_raw/20260303_0
+      926_SalaEmma.json...
+      Reading
+      /home/ubuntu/data_storage/Almeria/2026_03_03_09_15_Martes/0_raw/20260303_0
+      918_AlmeriaTurismo.json...
+      Reading
+      /home/ubuntu/data_storage/Almeria/2026_03_03_09_15_Martes/0_raw/20260303_0
+      917_BibliotecaAgenda.json...
+      Reading
+      /home/ubuntu/data_storage/Almeria/2026_03_03_09_15_Martes/0_raw/20260303_0
+      919_JuntaAndaluciaAgenda.json...
+      Reading
+      /home/ubuntu/data_storage/Almeria/2026_03_03_09_15_Martes/0_raw/20260303_0
+      920_ClassicJazz.json...
+      Reading
+      /home/ubuntu/data_storage/Almeria/2026_03_03_09_15_Martes/0_raw/20260303_0
+      916_LaGuajira.json...
+      Reading
+      /home/ubuntu/data_storage/Almeria/2026_03_03_09_15_Martes/0_raw/20260303_0
+      921_FlowteTaquillaCultural.json...
+      Saving 79 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_03_03_09_15_Martes/0_raw/Merged.jso
+      n
+
+Result: Succeeded
+
