@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/app/run.py", line 124, in <module>
+    raise ValueError(
+ValueError: Scraper 'LaPlaza' not found. Available: ['AlmeriaCiudad', 'AlmeriaTurismo', 'JuntaAndaluciaAgenda', 'KuverProducciones', 'SalaBerlin', 'LaGuajira', 'ClassicJazz', 'ConciertosClub', 'FlowteTaquillaCultural', 'Entradium', 'TodasLasEntradas', 'RedBibliotecas', 'SalaEmma', 'JacksonLive', 'BibliotecaAgenda']

@@ -1,0 +1,563 @@
+Launching scraper: AlmeriaCiudad
+Succeeded - 2026-03-03T09:17:57Z
+
+dag: FisgonTaskSelenium (38.0s)
+│
+└─tarea_1 (38.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=AlmeriaCiudad
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019cb2fd-65f3-7b0c-9b01-4b279a2a7bae
+      Running for Almeria: AlmeriaCiudad
+      AlmeriaCiudad
+      RUNNING SESSION =  2026_03_03_09_15_Martes
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      sleeping 5
+      Getting content
+      page = 0
+      -----------https://almeriaciudad.es/cultura/agenda?page=0---------------
+      len 12
+      sleeping 5
+      Getting content
+      page = 1
+      -----------https://almeriaciudad.es/cultura/agenda?page=1---------------
+      len 12
+      sleeping 5
+      Getting content
+      page = 2
+      -----------https://almeriaciudad.es/cultura/agenda?page=2---------------
+      len 9
+      sleeping 5
+      Getting content
+      page = 3
+      -----------https://almeriaciudad.es/cultura/agenda?page=3---------------
+      len 0
+      *** SCRAPED 33 URLS WITH EVENTS **
+      New url events = 0
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+
+Result: Succeeded
+
+Launching scraper: AlmeriaTurismo
+Succeeded - 2026-03-03T09:18:35Z
+
+dag: FisgonTaskSelenium (39.0s)
+│
+└─tarea_1 (39.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout: ... (411 more lines)
+      {'id': 'af83d16f', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-20', 'start_time': '09:00:00',
+      'end_date': '2026-04-20', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-20T09:00+2:00', 'endDate':
+      '2026-4-20T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-1.l-L1'}
+      --------------------
+      {'id': '12f6006a', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-21', 'start_time': '09:00:00',
+      'end_date': '2026-04-21', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-21T09:00+2:00', 'endDate':
+      '2026-4-21T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-2.l-L1'}
+      --------------------
+      {'id': 'b2483f37', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Por ELLAS, Por TODAS Beijing +30', 'slug':
+      'por-ellas-por-todas-beijing-30', 'category': '__NOT_DEFINIED__',
+      'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None,
+      'start_date': '2026-04-21', 'start_time': '11:00:00', 'end_date':
+      '2026-04-21', 'end_time': '13:00:00', 'description': 'Exposición sobre la
+      influencia del evento Beijing +30, centrada en la reivindicación de los
+      derechos de las mujeres. Se llevará a cabo en el Paraninfo, Sala de
+      exposiciones de la Universidad de Almería del 6 al 27 de abril de 2026.',
+      'others': {'category': 'Exposición y divulgación científica', 'hour':
+      '(Martes) 11:00 am - 13:00 pm', 'startDate': '2026-4-21T11:00+2:00',
+      'endDate': '2026-4-21T13:00+2:00', 'duration_days': 0, 'location':
+      '__NOT_FOUND__'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260303T091841', 'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/03/Por-ELLAS-por
+      -TODAS-Beijing-30.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/por-ellas-por-todas-beijing-30/va
+      r/ri-5.l-L1'}
+      --------------------
+      {'id': '6b821b30', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-22', 'start_time': '09:00:00',
+      'end_date': '2026-04-22', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-22T09:00+2:00', 'endDate':
+      '2026-4-22T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-3.l-L1'}
+      --------------------
+      {'id': '256c058f', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Sentimental Value', 'slug':
+      'sentimental-value', 'category': '__NOT_DEFINIED__', 'id_venue':
+      'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo',
+      'start_date': '2026-04-22', 'start_time': '20:00:00', 'end_date':
+      '2026-04-22', 'end_time': '22:00:00', 'description': 'Las hermanas Nora y
+      Agnes se reencuentran con su distanciado padre, el carismático Gustav, un
+      antiguo director de renombre que le ofrece a su hija Nora, actriz de
+      teatro, un papel en su próxima película. Nora lo rechaza y pronto
+      descubre que le ha dado su papel a una joven y entusiasta estrella de
+      Hollywood. De repente, las dos hermanas deben sortear su complicada
+      relación con su padre y lidiar con una estrella estadounidense que se
+      encuentra en medio de su compleja dinámica familiar.. Duración:. 2 horas
+      15 mins', 'others': {'category': 'Teatro Apolo Almería', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-22T20:00+2:00', 'endDate':
+      '2026-4-22T22:00+2:00', 'duration_days': 0, 'location': 'Rambla Obispo
+      Orbera, 25,04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260303T091841', 'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Captura-de-pa
+      ntalla-2026-02-24-134540.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/sentimental-value/'}
+      --------------------
+      {'id': '5f428477', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-23', 'start_time': '09:00:00',
+      'end_date': '2026-04-23', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-23T09:00+2:00', 'endDate':
+      '2026-4-23T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-4.l-L1'}
+      --------------------
+      {'id': '0215bbd0', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Por ELLAS, Por TODAS Beijing +30', 'slug':
+      'por-ellas-por-todas-beijing-30', 'category': '__NOT_DEFINIED__',
+      'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None,
+      'start_date': '2026-04-23', 'start_time': '11:00:00', 'end_date':
+      '2026-04-23', 'end_time': '13:00:00', 'description': 'Exposición sobre la
+      influencia del evento Beijing +30, centrada en la reivindicación de los
+      derechos de las mujeres. Se llevará a cabo en el Paraninfo, Sala de
+      exposiciones de la Universidad de Almería del 6 al 27 de abril de 2026.',
+      'others': {'category': 'Exposición y divulgación científica', 'hour':
+      '(Jueves) 11:00 am - 13:00 pm', 'startDate': '2026-4-23T11:00+2:00',
+      'endDate': '2026-4-23T13:00+2:00', 'duration_days': 0, 'location':
+      '__NOT_FOUND__'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260303T091841', 'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/03/Por-ELLAS-por
+      -TODAS-Beijing-30.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/por-ellas-por-todas-beijing-30/va
+      r/ri-6.l-L1'}
+      --------------------
+      {'id': '9050ca3c', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Actualidad Astronómica Con Jorge
+      Iglesias', 'slug': 'actualidad-astronomica-con-jorge-iglesias',
+      'category': '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue':
+      'Universidad de Almería (UAL)', 'std_venue': 'Paraninfo de la Universidad
+      de Almería', 'start_date': '2026-04-23', 'start_time': '12:00:00',
+      'end_date': '2026-04-23', 'end_time': '13:30:00', 'description': 'El ciclo
+      de tertulias sobre astronomía vuelve este año con Jorge Iglesias, quien
+      presentará y debatirá sobre las novedades más importantes en el ámbito
+      astronómico. Las sesiones se llevarán a cabo en el Edificio de
+      Psicología, Sala de Grados, a las 12:00h. Fechas: 19 de febrero, 19 de
+      marzo, 23 de abril y 21 de mayo.', 'others': {'category': 'Edificio de
+      Psicología, Sala de Grados, Universidad de Almería', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-23T12:00+2:00', 'endDate':
+      '2026-4-23T13:30+2:00', 'duration_days': 0, 'location': 'Carr. Sacramento,
+      s/n, 04120 La Cañada, Almería'}, 'source': 'AlmeriaTurismo',
+      'exec_time': '20260303T091841', 'session': '2026_03_03_09_15_Martes',
+      'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Actualidad-as
+      tronomica-con-Jorge-Iglesias.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/actualidad-astronomica-con-jorge-
+      iglesias/var/ri-2.l-L1'}
+      --------------------
+      {'id': '8c55c0a2', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Cuentacuentos: Un Amigo Como Tú', 'slug':
+      'cuentacuentos-un-amigo-como-tu', 'category': '__NOT_DEFINIED__',
+      'id_venue': 'J8tbTLH7', 'venue': 'Librería Picasso', 'std_venue':
+      'Librería Picasso', 'start_date': '2026-04-23', 'start_time': '17:00:00',
+      'end_date': '2026-04-23', 'end_time': '19:00:00', 'description':
+      'Participa en el cuentacuentos para niños a partir de 3 años basado en
+      el libro ‘Un Amigo Como Tú’ de Andrea Schomburg y Barbara Röttgen.
+      Te esperamos en Librerías Picasso, Almería.', 'others': {'category': 'Un
+      Amigo Como Tú', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-23T17:00+2:00', 'endDate': '2026-4-23T19:00+2:00',
+      'duration_days': 0, 'location': 'Calle Reyes Católicos, 18, 04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Cuentacuentos
+      -Un-Amigo-Como-Tu.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/cuentacuentos-un-amigo-como-tu/'}
+      --------------------
+      {'id': '969799c9', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-24', 'start_time': '09:00:00',
+      'end_date': '2026-04-24', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-24T09:00+2:00', 'endDate':
+      '2026-4-24T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-5.l-L1'}
+      --------------------
+      {'id': '729522f3', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 1, 'event': 'Visita Guiada a La Casa Del Cine', 'slug':
+      'visita-guiada-a-la-casa-del-cine', 'category': '__NOT_DEFINIED__',
+      'id_venue': 'df8rMnjt', 'venue': 'Casa del Cine de Almería', 'std_venue':
+      'Casa del Cine', 'start_date': '2026-04-24', 'start_time':
+      '__NOT_FOUND__', 'end_date': '2026-04-24', 'end_time': '__NOT_FOUND__',
+      'description': 'Si buscas planazo para el viernes… aquí lo tienes. A
+      partir del 12 de diciembre, gran oportunidad para conocer la Casa del
+      Cine, su legado y la historia cinematográfica de Almería.. Únete a
+      nuestra visita guiada por la Finca Santa Isabel y descubre los secretos,
+      anécdotas y rincones que guarda.. Asegura tu plaza llamando al 950 21 00
+      30 (En horario de Casa del Cine). ¡Te esperamos!', 'others': {'category':
+      'Todos los viernes', 'hour': '__NOT_FOUND__', 'startDate': '2026-4-24',
+      'endDate': '2026-4-24', 'duration_days': 0, 'location': 'Camino Romero, 1,
+      04009 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260303T091841', 'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2025/12/visita-guiada
+      .jpg', 'url':
+      'https://www.turismodealmeria.org/evento/visita-guiada-a-la-casa-del-cine/
+      var/ri-19.l-L1'}
+      --------------------
+      {'id': '74e57a93', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'El Mentalista Canalla', 'slug':
+      'el-mentalista-canalla', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-04-24', 'start_time': '20:00:00',
+      'end_date': '2026-04-24', 'end_time': '22:00:00', 'description': 'No te
+      pierdas el impactante show de Abraham Gallego, ‘El Mentalista
+      Canalla’, un espectáculo de magia y mentalismo para toda la familia.
+      Vive una experiencia divertida y desafiante, donde la magia y la mente se
+      unen para sorprenderte en cada momento. ¡Ven a disfrutarlo el 24 de abril
+      en la Sala EMMA de Almería!', 'others': {'category': 'Abraham Gallego
+      presenta un espectáculo de magia y mentalismo', 'hour': '__NOT_FOUND__',
+      'startDate': '2026-4-24T20:00+2:00', 'endDate': '2026-4-24T22:00+2:00',
+      'duration_days': 0, 'location': 'C. Rbla. Obispo Orberá, 23, 04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/elmentalista.
+      jpg', 'url':
+      'https://www.turismodealmeria.org/evento/el-mentalista-canalla/'}
+      --------------------
+      {'id': 'aee94765', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Profesor Poopsnuggle', 'slug':
+      'profesor-poopsnuggle', 'category': '__NOT_DEFINIED__', 'id_venue':
+      'NmPqTrh6', 'venue': 'Berlin Social Club', 'std_venue': 'Berlin Social
+      Club', 'start_date': '2026-04-24', 'start_time': '21:30:00', 'end_date':
+      '2026-04-24', 'end_time': '23:00:00', 'description': 'Profesor Popsnuggle
+      llega a la Sala Berlin Social Club en Almería el 24 de abril de 2026 para
+      ofrecer una noche de pop retrofuturista. Germán, José, Álvaro y
+      Laureano forman este cuarteto que se inspira en el pop español de los
+      años sesenta, la movida madrileña, los sintetizadores analógicos y la
+      bossa nova. Desde su irrupción en 2004 con el álbum “El Turismo”, su
+      música ha prestado una mirada divertida y crítica al pasado musical
+      español. En 2008 reafirmaron su propuesta con el lanzamiento de “El Fin
+      de las Colonias Africanas”. Una cita imperdible para los amantes del pop
+      con sabor nostálgico y visionario.', 'others': {'category':
+      '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-24T21:30+2:00', 'endDate': '2026-4-24T23:00+2:00',
+      'duration_days': 0, 'location': 'Parque de Nicolás Salmerón, 9, Bajo 2,
+      04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260303T091841', 'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/profesorpopnu
+      ggle.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/profesor-poopsnuggle/'}
+      --------------------
+      {'id': 'b7459cd7', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Cuentacuentos: Te Quiero Tanto - Saeko
+      Inui', 'slug': 'cuentacuentos-te-quiero-tanto-saeko-inui', 'category':
+      '__NOT_DEFINIED__', 'id_venue': 'J8tbTLH7', 'venue': 'Librería Picasso',
+      'std_venue': 'Librería Picasso', 'start_date': '2026-04-25',
+      'start_time': '11:00:00', 'end_date': '2026-04-25', 'end_time':
+      '13:00:00', 'description': 'Evento de cuentacuentos para niños a partir
+      de 3 años basado en el libro ‘Te quiero tanto’ de Saeko Inui. Se
+      realizará en Librerías Picasso, Almería.', 'others': {'category':
+      'Lectura para niños', 'hour': '(Sábado) 11:00 am - 13:00 pm',
+      'startDate': '2026-4-25T11:00+2:00', 'endDate': '2026-4-25T13:00+2:00',
+      'duration_days': 0, 'location': 'Calle Reyes Católicos, 18, 04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Cuentacuentos
+      -Te-quiero-tanto-Saeko-Inui.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/cuentacuentos-te-quiero-tanto-sae
+      ko-inui/'}
+      --------------------
+      {'id': 'ee8d97a8', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'XV METALMERIA FEST - 25 Abril', 'slug':
+      'xv-metalmeria-fest-25-abril', 'category': '__NOT_DEFINIED__', 'id_venue':
+      'NmPqTrh6', 'venue': 'Berlin Social Club', 'std_venue': 'Berlin Social
+      Club', 'start_date': '2026-04-25', 'start_time': '16:00:00', 'end_date':
+      '2026-04-25', 'end_time': '19:00:00', 'description': 'El 25 de abril de
+      2026 se celebrará la decimoquinta edición del METALMERIA FEST en la Sala
+      Berlin Social Club de Almería, con apertura de puertas a las 26:00h. El
+      festival contará con una potente alineación internacional de bandas de
+      metal como Kate’s Acid (Speed Metal – Bélgica), DeathStorm (Thrash
+      Metal – Austria), Ecclesia (Heavy/Doom Metal – Francia), Speed Queen
+      (Speed Metal – Bélgica) y Peace After Pain (Crossover/Thrash Metal –
+      Barcelona). Las entradas anticipadas tienen un coste de 25 €, mientras
+      que en taquilla costarán 30 €. Los socios pueden adquirir su entrada
+      por 15 €, y los poseedores del carnet Interclub por 22 €. Las entradas
+      compradas online serán canjeadas físicamente en taquilla.', 'others':
+      {'category': '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-25T16:00+2:00', 'endDate': '2026-4-25T19:00+2:00',
+      'duration_days': 0, 'location': 'Parque de Nicolás Salmerón, 9, Bajo 2,
+      04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260303T091841', 'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/xv-metalalmer
+      ia.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/xv-metalmeria-fest-25-abril/'}
+      --------------------
+      {'id': '10292c9e', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Campeones 2 en El Teatro', 'slug':
+      'campeones-2-en-el-teatro', 'category': '__NOT_DEFINIED__', 'id_venue':
+      None, 'venue': '__NOT_FOUND__', 'std_venue': None, 'start_date':
+      '2026-04-25', 'start_time': '20:00:00', 'end_date': '2026-04-25',
+      'end_time': '22:00:00', 'description': 'La exitosa y entrañable obra
+      ‘Campeones 2 en el Teatro: Si Lorca levantara la cabeza’ llega a
+      Almería. Con un elenco formado por Alberto Nieto, Emilio Gavira, Luis
+      Mottola, Daniel Pico García, Claudia Fesser y Gloria Ramos, y dirigida
+      por Juan Manuel Montilla El Langui, esta comedia teatral continúa la
+      inspiración de la aclamada película. ¡Una experiencia divertida,
+      emotiva y cargada de mensajes positivos sobre la superación y la
+      inclusión! No te lo pierdas el sábado 25 de abril a las 20:00h en el
+      Auditorio Maestro Padilla. Las entradas están disponibles desde 22€ en
+      la taquilla del Teatro Apolo.', 'others': {'category': 'Auditorio Maestro
+      Padilla', 'hour': '__NOT_FOUND__', 'startDate': '2026-4-25T20:00+2:00',
+      'endDate': '2026-4-25T22:00+2:00', 'duration_days': 0, 'location':
+      '__NOT_FOUND__'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260303T091841', 'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/campeones2.jp
+      g', 'url':
+      'https://www.turismodealmeria.org/evento/campeones-2-en-el-teatro/'}
+      --------------------
+      {'id': '9673af55', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-27', 'start_time': '09:00:00',
+      'end_date': '2026-04-27', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-27T09:00+2:00', 'endDate':
+      '2026-4-27T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-6.l-L1'}
+      --------------------
+      {'id': '5a546f81', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-28', 'start_time': '09:00:00',
+      'end_date': '2026-04-28', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-28T09:00+2:00', 'endDate':
+      '2026-4-28T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-7.l-L1'}
+      --------------------
+      {'id': '5e650f46', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller De Escritura Creativa "Emoción en
+      El Escritor, Emoción en El Lector"', 'slug':
+      'taller-de-escritura-creativa-emocion-en-el-escritor-emocion-en-el-lector'
+      , 'category': '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue':
+      'Universidad de Almería (UAL)', 'std_venue': 'Paraninfo de la Universidad
+      de Almería', 'start_date': '2026-04-28', 'start_time': '16:00:00',
+      'end_date': '2026-04-28', 'end_time': '18:00:00', 'description': 'Descubre
+      los secretos para atrapar a tus lectores y asombrar a los editores. Bruno
+      Nievas nos guiará en este emocionante taller donde aprenderemos a crear
+      ideas poderosas, superar el reto del primer borrador, desarrollar
+      personajes conmovedores, idear situaciones impactantes, incorporar el
+      viaje del héroe, editar sin piedad, publicar y autopublicar, y vender con
+      éxito: ¿comprarías tu propio libro?', 'others': {'category':
+      '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-28T16:00+2:00', 'endDate': '2026-4-28T18:00+2:00',
+      'duration_days': 0, 'location': 'Carr. Sacramento, s/n, 04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/03/taller-escrit
+      ura.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/taller-de-escritura-creativa-emoc
+      ion-en-el-escritor-emocion-en-el-lector/'}
+      --------------------
+      {'id': 'e80a69dd', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-29', 'start_time': '09:00:00',
+      'end_date': '2026-04-29', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-29T09:00+2:00', 'endDate':
+      '2026-4-29T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-8.l-L1'}
+      --------------------
+      {'id': '838fffda', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-30', 'start_time': '09:00:00',
+      'end_date': '2026-04-30', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-30T09:00+2:00', 'endDate':
+      '2026-4-30T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-9.l-L1'}
+      --------------------
+      {'id': '708e6732', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'El Fantástico Viaje De Jonás El
+      Espermatozoide', 'slug': 'el-fantastico-viaje-de-jonas-el-espermatozoide',
+      'category': '__NOT_DEFINIED__', 'id_venue': 'tQfq78jF', 'venue': 'Teatro
+      Apolo', 'std_venue': 'Teatro Apolo', 'start_date': '2026-04-30',
+      'start_time': '20:30:00', 'end_date': '2026-04-30', 'end_time':
+      '22:00:00', 'description': 'Un espectáculo familiar, para niños y niñas
+      a partir de 6 años. Disfruta de las aventuras de Jonás en su fantástico
+      viaje.', 'others': {'category': '__NOT_FOUND__', 'hour': '__NOT_FOUND__',
+      'startDate': '2026-4-30T20:30+2:00', 'endDate': '2026-4-30T22:00+2:00',
+      'duration_days': 0, 'location': 'Rambla Obispo Orbera, 25,04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260303T091841',
+      'session': '2026_03_03_09_15_Martes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Captura-de-pa
+      ntalla-2026-02-24-135009.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/el-fantastico-viaje-de-jonas-el-e
+      spermatozoide/'}
+      Checking unique event url.
+      New url events = 29
+      ****************************
+      Saving 29 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_03_03_09_15_Martes/0_raw/20260303_0
+      918_AlmeriaTurismo.json
+      Saving 29 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+
+Result: Succeeded
+
+Launching scraper: JuntaAndaluciaAgenda
