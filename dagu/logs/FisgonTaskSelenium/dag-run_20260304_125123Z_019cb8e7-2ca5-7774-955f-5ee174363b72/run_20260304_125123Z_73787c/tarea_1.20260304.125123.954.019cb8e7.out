@@ -1,0 +1,106 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=JuntaAndaluciaAgenda
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019cb8e7-2ca5-7774-955f-5ee174363b72
+
+Running for Almeria: JuntaAndaluciaAgenda
+JuntaAndaluciaAgenda
+RUNNING SESSION =  2026_03_04_12_48_Miercoles
+Starting WebDriver...
+http://localhost:4444/wd/hub
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1) Not found
+Getting content
+*** SCRAPED 71 URLS WITH EVENTS **
+New url events = 7
+0 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/v-ciclo-de-lecturas-dramatizadas-dramaturgas-escena-lo-unico-que-verdaderamente-quise-toda
+Sleep 4
+--------------------
+{'id': '0e7d73dc', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'V Ciclo De Lecturas Dramatizadas Dramaturgas a Escena: “Lo Único Que Verdaderamente Quise Toda La Vida Es Ser Delgada”, De Esther Carrodeguas', 'slug': 'v-ciclo-de-lecturas-dramatizadas-dramaturgas-a-escena-lo-unico-que-verdaderament', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-03-04', 'start_time': '00:00:00', 'end_date': '2026-03-04', 'end_time': '__NOT_DEFINIED__', 'description': 'V Ciclo de Lecturas Dramatizadas Dramaturgas a Escena : “Lo único que verdaderamente quise toda la vida es ser delgada”, de Esther Carrodeguas Iniciamos el V Ciclo de Lecturas Dramatizadas Dramaturgas a Escena con la obra “Lo único que verdaderamente quise toda la vida es ser delgada”, de Esther Carrodeguas. Con una sinceridad cruda, en este texto de auto[NO]ficción, Carrodeguas aborda la relación con su cuerpo, marcada por la gordofobia que se respira en cualquier pequeña esquinita de esta nuestra apasionante sociedad de la hermosura. Porque por mucho que te escondas, la gordofobia sigue siempre a tu lado. Sobre todo porque está en ti. Dirección e interpretación Eva López. Coloquio al terminar la lectura con la intervención de Esther Carrodeguas. Miércoles 4 de marzo 19:00 h., Salón de actos Entrada libre hasta completar aforo.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-estado-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa Evento al que pertenece:\n              ', 'duration': '__NOT_FOUND__', 'datetime_details': '04 de Marzo del 2026, 19 h.', 'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260304T125129', 'session': '2026_03_04_12_48_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-03/CARTEL.png.webp?itok=j3TdaRrj', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/v-ciclo-de-lecturas-dramatizadas-dramaturgas-escena-lo-unico-que-verdaderamente-quise-toda'}
+1 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/crece-con-la-villaespesa-encuentro-con-helena-moreno-padilla-con-su-obra-mas-alla-de-la-1
+Sleep 4
+--------------------
+{'id': '16fa2f75', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Crece Con La Villaespesa. Encuentro Con Helena Moreno Padilla Con Su Obra "Más Allá De La Muralla".', 'slug': 'crece-con-la-villaespesa-encuentro-con-helena-moreno-padilla-con-su-obra-mas-all', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-03-05', 'start_time': '00:00:00', 'end_date': '2026-03-05', 'end_time': '__NOT_DEFINIED__', 'description': 'Crece con la Villaespesa. Encuentro con Helena Moreno Padilla con su obra "Más allá de la muralla". La joven escritora almeriense Helena Moreno Padilla ha ganado el XX Premio Jordi Sierra i Fabra para jóvenes de la editorial SM con una obra de fantasía "Más allá de la muralla", una historia de aventuras mitológicas. Helena ha escrito varias novelas y relatos. Es una notable dibujante. En su futuro se ve como ilustradora, escritora y cineasta. Jueves 5 de marzo 11:00h. Salón de actos. Actividad concertada con centros educativos.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-estado-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details': '05 de Marzo del 2026, 11 h.', 'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260304T125129', 'session': '2026_03_04_12_48_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-03/CARTEL.jpg.webp?itok=lGdHEYsy', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/crece-con-la-villaespesa-encuentro-con-helena-moreno-padilla-con-su-obra-mas-alla-de-la-1'}
+2 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/dia-internacional-de-la-mujer-en-el-enclave-arqueologico-de-villaricos-0
+Sleep 4
+--------------------
+{'id': '63d2eeb4', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Día Internacional De La Mujer en El Enclave Arqueológico De Villaricos', 'slug': 'dia-internacional-de-la-mujer-en-el-enclave-arqueologico-de-villaricos', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Enclave Arqueológico de Villaricos', 'std_venue': None, 'start_date': '2026-03-05', 'start_time': '10:00:00', 'end_date': '2026-03-05', 'end_time': '__NOT_DEFINIED__', 'description': 'Programación de actividades en conmemoración del Día Internacional de la Mujer. 8 de Marzo de 2026', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/evento/enclave-arqueologico-de-villaricos-cuevas-del-almanzora', 'location2': 'Enclave Arqueológico de Villaricos', 'duration': '__NOT_FOUND__', 'datetime_details': '05 de Marzo del 2026, 10:00 horas', 'town': '__NOT_FOUND__', 'location': 'Carretera de Garrucha a Águilas, Cuevas del Almanzora. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260304T125129', 'session': '2026_03_04_12_48_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-03/8M_cultural_1920x1080.jpg.webp?itok=Za9yYsJ4', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/dia-internacional-de-la-mujer-en-el-enclave-arqueologico-de-villaricos-0'}
+3 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/dia-internacional-de-la-mujer-en-el-museo-de-almeria-0
+Sleep 4
+--------------------
+{'id': '7bbfe5e5', 'show': 1, 'in_city': 1, 'one_day': 0, 'wrong_date_time': 1, 'event': 'Día Internacional De La Mujer en El Museo De Almería', 'slug': 'dia-internacional-de-la-mujer-en-el-museo-de-almeria', 'category': '__NOT_DEFINIED__', 'id_venue': '4J64FLmD', 'venue': 'Museo de Almería', 'std_venue': 'Museo de Almería', 'start_date': '2026-03-04', 'start_time': '__NOT_FOUND__', 'end_date': '2026-03-07', 'end_time': '__NOT_DEFINIED__', 'description': 'Programación de actividades en conmemoración del Día Internacional de la Mujer. 8 de Marzo de 2026', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/evento/museo-de-almeria', 'location2': 'Museo de Almería', 'duration': '__NOT_FOUND__', 'datetime_details': '04 de Marzo del 2026 - 07 de Marzo del 2026, Consultar programación', 'town': '__NOT_FOUND__', 'location': 'Carretera de Ronda, 91, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260304T125129', 'session': '2026_03_04_12_48_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-03/8M_cultural_1920x1080.jpg.webp?itok=Za9yYsJ4', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/dia-internacional-de-la-mujer-en-el-museo-de-almeria-0'}
+4 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/dia-internacional-de-la-mujer-en-el-archivo-historico-provincial-de-almeria
+Sleep 4
+--------------------
+{'id': '21fdc459', 'show': 1, 'in_city': 1, 'one_day': 0, 'wrong_date_time': 1, 'event': 'Día Internacional De La Mujer en El Archivo Histórico Provincial De Almería', 'slug': 'dia-internacional-de-la-mujer-en-el-archivo-historico-provincial-de-almeria', 'category': '__NOT_DEFINIED__', 'id_venue': '211e885a', 'venue': 'Archivo Histórico Provincial de Almería', 'std_venue': 'Archivo Histórico Provincial de Almería', 'start_date': '2026-03-09', 'start_time': '__NOT_FOUND__', 'end_date': '2026-03-31', 'end_time': '__NOT_DEFINIED__', 'description': 'Programación de actividades en conmemoración del Día Internacional de la Mujer. 8 de Marzo de 2026', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/archivo-historico-provincial-de-almeria', 'location2': 'Archivo Histórico Provincial de Almería', 'duration': '__NOT_FOUND__', 'datetime_details': '09 de Marzo del 2026 - 31 de Marzo del 2026, Consultar programación', 'town': '__NOT_FOUND__', 'location': 'Calle Campomanes, 11, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260304T125129', 'session': '2026_03_04_12_48_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-03/banner_dia_mujer.jpg.webp?itok=FQAG5rPb', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/dia-internacional-de-la-mujer-en-el-archivo-historico-provincial-de-almeria'}
+5 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/dia-internacional-de-la-mujer-en-la-biblioteca-provincial-del-estado-de-almeria
+Sleep 4
+--------------------
+{'id': 'f1c81a06', 'show': 1, 'in_city': 1, 'one_day': 0, 'wrong_date_time': 1, 'event': 'Día Internacional De La Mujer en La Biblioteca Provincial Del Estado De Almería', 'slug': 'dia-internacional-de-la-mujer-en-la-biblioteca-provincial-del-estado-de-almeria', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-03-04', 'start_time': '__NOT_FOUND__', 'end_date': '2026-03-06', 'end_time': '__NOT_DEFINIED__', 'description': 'Programación de actividades en conmemoración del Día Internacional de la Mujer. 8 de Marzo de 2026', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-estado-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details': '04 de Marzo del 2026 - 06 de Marzo del 2026, Consultar programación', 'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260304T125129', 'session': '2026_03_04_12_48_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-03/banner_dia_mujer.jpg.webp?itok=FQAG5rPb', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/dia-internacional-de-la-mujer-en-la-biblioteca-provincial-del-estado-de-almeria'}
+6 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/dia-internacional-de-la-mujer-en-el-conjunto-monumental-alcazaba-de-almeria
+Sleep 4
+--------------------
+{'id': 'e18acbae', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 1, 'event': 'Día Internacional De La Mujer en El Conjunto Monumental Alcazaba De Almería', 'slug': 'dia-internacional-de-la-mujer-en-el-conjunto-monumental-alcazaba-de-almeria', 'category': '__NOT_DEFINIED__', 'id_venue': 'q9Mp2j7p', 'venue': 'Conjunto Monumental de la Alcazaba de Almería', 'std_venue': 'Alcazaba', 'start_date': '2026-03-08', 'start_time': '__NOT_FOUND__', 'end_date': '2026-03-08', 'end_time': '__NOT_DEFINIED__', 'description': 'Programación de actividades en conmemoración del Día Internacional de la Mujer. 8 de Marzo de 2026', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/evento/visitas-alcazaba-de-almeria', 'location2': 'Conjunto Monumental de la Alcazaba de Almería', 'duration': '__NOT_FOUND__', 'datetime_details': '08 de Marzo del 2026, De 11:00h y 12:30h', 'town': '__NOT_FOUND__', 'location': 'Calle Almanzor, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260304T125129', 'session': '2026_03_04_12_48_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-03/banner_dia_mujer.jpg.webp?itok=FQAG5rPb', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/dia-internacional-de-la-mujer-en-el-conjunto-monumental-alcazaba-de-almeria'}
+****************************
+Saving 7 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_04_12_48_Miercoles/0_raw/20260304_1251_JuntaAndaluciaAgenda.json
+Saving 7 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

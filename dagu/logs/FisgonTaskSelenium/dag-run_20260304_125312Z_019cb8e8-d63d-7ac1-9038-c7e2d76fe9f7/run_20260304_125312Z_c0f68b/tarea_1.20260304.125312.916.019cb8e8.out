@@ -1,0 +1,66 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ClassicJazz
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019cb8e8-d63d-7ac1-9038-c7e2d76fe9f7
+
+Running for Almeria: ClassicJazz
+ClassicJazz
+RUNNING SESSION =  2026_03_04_12_48_Miercoles
+Starting WebDriver...
+http://localhost:4444/wd/hub
+*********************times =1
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*********************times =2
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*** SCRAPED 117 URLS WITH EVENTS **
+New url events = 4
+0 / 4
+Getting https://clasijazz.com/evento/greetings-rock-folk-port-of-spain/
+Sleep 4
+2026-03-06T21:00:00 2026-03-06T22:30:00
+--------------------
+{'id': '2c9a8d6b', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Greetings Rock & Folk!', 'slug': 'greetings-rock-folk', 'category': '__NOT_DEFINIED__', 'id_venue': 'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain', 'start_date': '2026-03-06', 'start_time': '21:00:00', 'end_date': '2026-03-06', 'end_time': '22:30:00', 'description': '5€ ns / 2€ S | Port of Spain Entradas Disfruta con los almerienses «Greetings» de toda la energía y pasión de la música Rock y Folk. Una banda en directo que nos invita a cantar y bailar, recorriendo las canciones populares de nuestros grupos favoritos, compartiendo el pop-rock en castellano, la música americana y el Folk irlandés. Desde nuestro único «Port Of Spain» al mundo!', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/port-of-spain/', 'location': 'Parque Nicolás Salmeron 20, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260304T125318', 'session': '2026_03_04_12_48_Miercoles', 'image': 'https://clasijazz.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-03-at-17.03.33.jpeg', 'url': 'https://clasijazz.com/evento/greetings-rock-folk-port-of-spain/'}
+1 / 4
+Getting https://clasijazz.com/evento/arro-con-mango-digo-fest/
+Sleep 4
+2026-03-19T21:30:00 2026-03-19T23:00:00
+--------------------
+{'id': 'c0aaeed4', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Arró Con Mango – Digo! Fest', 'slug': 'arro-con-mango-digo-fest', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-03-19', 'start_time': '21:30:00', 'end_date': '2026-03-19', 'end_time': '23:00:00', 'description': 'Sala Industrial | 10€ NS / 3€ S', 'others': {'price': '3,00€ – 10,00€', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260304T125318', 'session': '2026_03_04_12_48_Miercoles', 'image': 'https://clasijazz.com/wp-content/uploads/2026/03/ibrahima-164.jpg-scaled.jpeg', 'url': 'https://clasijazz.com/evento/arro-con-mango-digo-fest/'}
+2 / 4
+Getting https://clasijazz.com/evento/match-de-impro-2/2026-03-06/
+Sleep 4
+2026-03-06T20:00:00 2026-03-06T21:15:00
+--------------------
+{'id': '64ce6a3f', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Match De Impro', 'slug': 'match-de-impro', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sala Industrial Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-03-06', 'start_time': '20:00:00', 'end_date': '2026-03-06', 'end_time': '21:15:00', 'description': '3 € NS / GS Sala Industrial MATCH DE IMPRO Esta temporada, los alumnos de improvisación de la escuela Las Cruces Teatro / Clasijazz se enfrentarán una vez al mes en dos equipos por el favor del público creando historias delirantes improvisadas en el acto. No te las pierdas, la participación del público es clave en este show.', 'others': {'price': 'Free – 3,00€', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sala-industrial-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260304T125318', 'session': '2026_03_04_12_48_Miercoles', 'image': 'https://clasijazz.com/wp-content/uploads/2026/01/Match-Impro-generico.png', 'url': 'https://clasijazz.com/evento/match-de-impro-2/2026-03-06/'}
+3 / 4
+Getting https://clasijazz.com/evento/match-de-impro-2/2026-04-10/
+Sleep 4
+2026-04-10T20:00:00 2026-04-10T21:15:00
+--------------------
+{'id': '5613da9e', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Match De Impro', 'slug': 'match-de-impro', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sala Industrial Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-04-10', 'start_time': '20:00:00', 'end_date': '2026-04-10', 'end_time': '21:15:00', 'description': '3 € NS / GS Sala Industrial MATCH DE IMPRO Esta temporada, los alumnos de improvisación de la escuela Las Cruces Teatro / Clasijazz se enfrentarán una vez al mes en dos equipos por el favor del público creando historias delirantes improvisadas en el acto. No te las pierdas, la participación del público es clave en este show.', 'others': {'price': 'Free – €3', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sala-industrial-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260304T125318', 'session': '2026_03_04_12_48_Miercoles', 'image': 'https://clasijazz.com/wp-content/uploads/2026/01/Match-Impro-generico.png', 'url': 'https://clasijazz.com/evento/match-de-impro-2/2026-04-10/'}
+****************************
+Saving 4 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_04_12_48_Miercoles/0_raw/20260304_1253_ClassicJazz.json
+Saving 4 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

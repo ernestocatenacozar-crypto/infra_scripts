@@ -1,1 +1,1127 @@
 Launching scraper: AlmeriaCiudad
+Succeeded - 2026-03-04T12:49:56Z
+
+dag: FisgonTaskSelenium (50.0s)
+│
+└─tarea_1 (50.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=AlmeriaCiudad
+  │   DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&d
+  │   agRunId=019cb8e5-d5d5-756b-8adf-4944acf983d3
+  │   Running for Almeria: AlmeriaCiudad
+  │   AlmeriaCiudad
+  │   RUNNING SESSION =  2026_03_04_12_48_Miercoles
+  │   Starting WebDriver...
+  │   http://localhost:4444/wd/hub
+  │   sleeping 5
+  │   Getting content
+  │   page = 0
+  │   -----------https://almeriaciudad.es/cultura/agenda?page=0---------------
+  │   len 12
+  │   sleeping 5
+  │   Getting content
+  │   page = 1
+  │   -----------https://almeriaciudad.es/cultura/agenda?page=1---------------
+  │   len 12
+  │   sleeping 5
+  │   Getting content
+  │   page = 2
+  │   -----------https://almeriaciudad.es/cultura/agenda?page=2---------------
+  │   len 11
+  │   sleeping 5
+  │   Getting content
+  │   page = 3
+  │   -----------https://almeriaciudad.es/cultura/agenda?page=3---------------
+  │   len 0
+  │   *** SCRAPED 35 URLS WITH EVENTS **
+  │   New url events = 2
+  │   0 / 2
+  │   Getting
+  │   https://almeriaciudad.es//cultura/evento/ocal-escuchar-crecer-la-hierba
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '76a24868', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Ocal - Escuchar Crecer La Hierba',
+  │   'slug': 'ocal-escuchar-crecer-la-hierba', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': '27qNP7DH', 'venue': 'Auditorio
+  │   Municipal Maestro Padilla', 'std_venue': 'Auditorio Municipal Maestro
+  │   Padilla', 'start_date': '2026-04-26', 'start_time': '12:30:00',
+  │   'end_date': '2026-04-26', 'end_time': '14:00:00', 'description': '',
+  │   'others': {'organizer': 'Auditorio Municipal Maestro Padilla', 'price':
+  │   'NIVEL A: 12 EUROS | NIVEL B: 10 EUROS | DTO. CONSERVATORIO: 5 EUROS',
+  │   'category': 'Concierto|Música|Orquesta', 'audience_age': 'Todas las
+  │   edades'}, 'source': 'AlmeriaCiudad', 'exec_time': '20260304T125003',
+  │   'session': '2026_03_04_12_48_Miercoles', 'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/web__c
+  │   artel_ocal_concierto-26abril_page-0001.jpg?itok=PtItY_IM', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/ocal-escuchar-crecer-la-hierba
+  │   '}
+  │   1 / 2
+  │   Getting
+  │   https://almeriaciudad.es//cultura/evento/concierto-benefico-fundacion-ni
+  │   no-feliz
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '55ef59a2', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Concierto Benéfico Fundación "Niño
+  │   Feliz"', 'slug': 'concierto-benefico-fundacion-nino-feliz', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': None, 'venue': '__NOT_FOUND__',
+  │   'std_venue': None, 'start_date': '2026-03-08', 'start_time': '19:30:00',
+  │   'end_date': '2026-03-08', 'end_time': '20:30:00', 'description':
+  │   'Archivo de vídeo. El 8 de marzo a las 19:30 en el Teatro Apolo
+  │   (Almería) tendrá lugar una velada creativa benéfica de Yevhenii
+  │   Hulak: «Hablemos de lo más importante...». Será una noche llena de
+  │   música, poesía y emociones sinceras dedicadas a los padres, a los
+  │   hijos y al amor. Una noche para sentir, para compartir y para ayudar.
+  │   💙💛 Todo lo recaudado será destinado al apoyo de niños enfermos
+  │   en Ucrania a través de la Fundación “Niño Feliz”. Cada entrada no
+  │   es solo un asiento en el teatro. Es esperanza. Es solidaridad. Es una
+  │   oportunidad de cambiar la vida de un niño. 🎟 Entrada: 8 €. Niños
+  │   hasta 8 años — gratis. Les invitamos a venir con familia y amigos.
+  │   Unidos podemos hacer más. Unidos podemos dar luz y esperanza.',
+  │   'others': {'organizer': '__NOT_FOUND__', 'price': 'GENERAL: 8 EUROS |
+  │   MENORES DE 8 AÑOS GRATIS', 'category': 'Benéfico', 'audience_age':
+  │   'Todas las edades'}, 'source': 'AlmeriaCiudad', 'exec_time':
+  │   '20260304T125003', 'session': '2026_03_04_12_48_Miercoles', 'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/whatsa
+  │   pp-image-2026-03-03-at-11.31.27.jpeg?itok=pRzgk1Fc', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/concierto-benefico-fundacion-n
+  │   ino-feliz'}
+  │   ****************************
+  │   Saving 2 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_04_12_48_Miercoles/0_raw/20260
+  │   304_1250_AlmeriaCiudad.json
+  │   Saving 2 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: AlmeriaTurismo
+Succeeded - 2026-03-04T12:50:46Z
+
+dag: FisgonTaskSelenium (37.0s)
+│
+└─tarea_1 (37.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout: ... (421 more lines)
+      {'id': '5c20b6c5', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-20', 'start_time': '09:00:00',
+      'end_date': '2026-04-20', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-20T09:00+2:00', 'endDate':
+      '2026-4-20T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-1.l-L1'}
+      --------------------
+      {'id': 'd95cb9fc', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-21', 'start_time': '09:00:00',
+      'end_date': '2026-04-21', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-21T09:00+2:00', 'endDate':
+      '2026-4-21T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-2.l-L1'}
+      --------------------
+      {'id': 'cda18e6e', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Por ELLAS, Por TODAS Beijing +30', 'slug':
+      'por-ellas-por-todas-beijing-30', 'category': '__NOT_DEFINIED__',
+      'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None,
+      'start_date': '2026-04-21', 'start_time': '11:00:00', 'end_date':
+      '2026-04-21', 'end_time': '13:00:00', 'description': 'Exposición sobre la
+      influencia del evento Beijing +30, centrada en la reivindicación de los
+      derechos de las mujeres. Se llevará a cabo en el Paraninfo, Sala de
+      exposiciones de la Universidad de Almería del 6 al 27 de abril de 2026.',
+      'others': {'category': 'Exposición y divulgación científica', 'hour':
+      '(Martes) 11:00 am - 13:00 pm', 'startDate': '2026-4-21T11:00+2:00',
+      'endDate': '2026-4-21T13:00+2:00', 'duration_days': 0, 'location':
+      '__NOT_FOUND__'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260304T125051', 'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/03/Por-ELLAS-por
+      -TODAS-Beijing-30.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/por-ellas-por-todas-beijing-30/va
+      r/ri-5.l-L1'}
+      --------------------
+      {'id': '515380a3', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-22', 'start_time': '09:00:00',
+      'end_date': '2026-04-22', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-22T09:00+2:00', 'endDate':
+      '2026-4-22T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-3.l-L1'}
+      --------------------
+      {'id': 'b268f335', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Sentimental Value', 'slug':
+      'sentimental-value', 'category': '__NOT_DEFINIED__', 'id_venue':
+      'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo',
+      'start_date': '2026-04-22', 'start_time': '20:00:00', 'end_date':
+      '2026-04-22', 'end_time': '22:00:00', 'description': 'Las hermanas Nora y
+      Agnes se reencuentran con su distanciado padre, el carismático Gustav, un
+      antiguo director de renombre que le ofrece a su hija Nora, actriz de
+      teatro, un papel en su próxima película. Nora lo rechaza y pronto
+      descubre que le ha dado su papel a una joven y entusiasta estrella de
+      Hollywood. De repente, las dos hermanas deben sortear su complicada
+      relación con su padre y lidiar con una estrella estadounidense que se
+      encuentra en medio de su compleja dinámica familiar.. Duración:. 2 horas
+      15 mins', 'others': {'category': 'Teatro Apolo Almería', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-22T20:00+2:00', 'endDate':
+      '2026-4-22T22:00+2:00', 'duration_days': 0, 'location': 'Rambla Obispo
+      Orbera, 25,04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260304T125051', 'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Captura-de-pa
+      ntalla-2026-02-24-134540.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/sentimental-value/'}
+      --------------------
+      {'id': '13490176', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-23', 'start_time': '09:00:00',
+      'end_date': '2026-04-23', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-23T09:00+2:00', 'endDate':
+      '2026-4-23T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-4.l-L1'}
+      --------------------
+      {'id': '4f6cad75', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Por ELLAS, Por TODAS Beijing +30', 'slug':
+      'por-ellas-por-todas-beijing-30', 'category': '__NOT_DEFINIED__',
+      'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None,
+      'start_date': '2026-04-23', 'start_time': '11:00:00', 'end_date':
+      '2026-04-23', 'end_time': '13:00:00', 'description': 'Exposición sobre la
+      influencia del evento Beijing +30, centrada en la reivindicación de los
+      derechos de las mujeres. Se llevará a cabo en el Paraninfo, Sala de
+      exposiciones de la Universidad de Almería del 6 al 27 de abril de 2026.',
+      'others': {'category': 'Exposición y divulgación científica', 'hour':
+      '(Jueves) 11:00 am - 13:00 pm', 'startDate': '2026-4-23T11:00+2:00',
+      'endDate': '2026-4-23T13:00+2:00', 'duration_days': 0, 'location':
+      '__NOT_FOUND__'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260304T125051', 'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/03/Por-ELLAS-por
+      -TODAS-Beijing-30.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/por-ellas-por-todas-beijing-30/va
+      r/ri-6.l-L1'}
+      --------------------
+      {'id': 'ba41b3ad', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Actualidad Astronómica Con Jorge
+      Iglesias', 'slug': 'actualidad-astronomica-con-jorge-iglesias',
+      'category': '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue':
+      'Universidad de Almería (UAL)', 'std_venue': 'Paraninfo de la Universidad
+      de Almería', 'start_date': '2026-04-23', 'start_time': '12:00:00',
+      'end_date': '2026-04-23', 'end_time': '13:30:00', 'description': 'El ciclo
+      de tertulias sobre astronomía vuelve este año con Jorge Iglesias, quien
+      presentará y debatirá sobre las novedades más importantes en el ámbito
+      astronómico. Las sesiones se llevarán a cabo en el Edificio de
+      Psicología, Sala de Grados, a las 12:00h. Fechas: 19 de febrero, 19 de
+      marzo, 23 de abril y 21 de mayo.', 'others': {'category': 'Edificio de
+      Psicología, Sala de Grados, Universidad de Almería', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-23T12:00+2:00', 'endDate':
+      '2026-4-23T13:30+2:00', 'duration_days': 0, 'location': 'Carr. Sacramento,
+      s/n, 04120 La Cañada, Almería'}, 'source': 'AlmeriaTurismo',
+      'exec_time': '20260304T125051', 'session': '2026_03_04_12_48_Miercoles',
+      'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Actualidad-as
+      tronomica-con-Jorge-Iglesias.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/actualidad-astronomica-con-jorge-
+      iglesias/var/ri-2.l-L1'}
+      --------------------
+      {'id': '4961e900', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Cuentacuentos: Un Amigo Como Tú', 'slug':
+      'cuentacuentos-un-amigo-como-tu', 'category': '__NOT_DEFINIED__',
+      'id_venue': 'J8tbTLH7', 'venue': 'Librería Picasso', 'std_venue':
+      'Librería Picasso', 'start_date': '2026-04-23', 'start_time': '17:00:00',
+      'end_date': '2026-04-23', 'end_time': '19:00:00', 'description':
+      'Participa en el cuentacuentos para niños a partir de 3 años basado en
+      el libro ‘Un Amigo Como Tú’ de Andrea Schomburg y Barbara Röttgen.
+      Te esperamos en Librerías Picasso, Almería.', 'others': {'category': 'Un
+      Amigo Como Tú', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-23T17:00+2:00', 'endDate': '2026-4-23T19:00+2:00',
+      'duration_days': 0, 'location': 'Calle Reyes Católicos, 18, 04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Cuentacuentos
+      -Un-Amigo-Como-Tu.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/cuentacuentos-un-amigo-como-tu/'}
+      --------------------
+      {'id': '1b255fea', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-24', 'start_time': '09:00:00',
+      'end_date': '2026-04-24', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-24T09:00+2:00', 'endDate':
+      '2026-4-24T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-5.l-L1'}
+      --------------------
+      {'id': '7a1f5b5f', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 1, 'event': 'Visita Guiada a La Casa Del Cine', 'slug':
+      'visita-guiada-a-la-casa-del-cine', 'category': '__NOT_DEFINIED__',
+      'id_venue': 'df8rMnjt', 'venue': 'Casa del Cine de Almería', 'std_venue':
+      'Casa del Cine', 'start_date': '2026-04-24', 'start_time':
+      '__NOT_FOUND__', 'end_date': '2026-04-24', 'end_time': '__NOT_FOUND__',
+      'description': 'Si buscas planazo para el viernes… aquí lo tienes. A
+      partir del 12 de diciembre, gran oportunidad para conocer la Casa del
+      Cine, su legado y la historia cinematográfica de Almería.. Únete a
+      nuestra visita guiada por la Finca Santa Isabel y descubre los secretos,
+      anécdotas y rincones que guarda.. Asegura tu plaza llamando al 950 21 00
+      30 (En horario de Casa del Cine). ¡Te esperamos!', 'others': {'category':
+      'Todos los viernes', 'hour': '__NOT_FOUND__', 'startDate': '2026-4-24',
+      'endDate': '2026-4-24', 'duration_days': 0, 'location': 'Camino Romero, 1,
+      04009 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260304T125051', 'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2025/12/visita-guiada
+      .jpg', 'url':
+      'https://www.turismodealmeria.org/evento/visita-guiada-a-la-casa-del-cine/
+      var/ri-19.l-L1'}
+      --------------------
+      {'id': '7a53e7bc', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'El Mentalista Canalla', 'slug':
+      'el-mentalista-canalla', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-04-24', 'start_time': '20:00:00',
+      'end_date': '2026-04-24', 'end_time': '22:00:00', 'description': 'No te
+      pierdas el impactante show de Abraham Gallego, ‘El Mentalista
+      Canalla’, un espectáculo de magia y mentalismo para toda la familia.
+      Vive una experiencia divertida y desafiante, donde la magia y la mente se
+      unen para sorprenderte en cada momento. ¡Ven a disfrutarlo el 24 de abril
+      en la Sala EMMA de Almería!', 'others': {'category': 'Abraham Gallego
+      presenta un espectáculo de magia y mentalismo', 'hour': '__NOT_FOUND__',
+      'startDate': '2026-4-24T20:00+2:00', 'endDate': '2026-4-24T22:00+2:00',
+      'duration_days': 0, 'location': 'C. Rbla. Obispo Orberá, 23, 04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/elmentalista.
+      jpg', 'url':
+      'https://www.turismodealmeria.org/evento/el-mentalista-canalla/'}
+      --------------------
+      {'id': '2cb6e954', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Profesor Poopsnuggle', 'slug':
+      'profesor-poopsnuggle', 'category': '__NOT_DEFINIED__', 'id_venue':
+      'NmPqTrh6', 'venue': 'Berlin Social Club', 'std_venue': 'Berlin Social
+      Club', 'start_date': '2026-04-24', 'start_time': '21:30:00', 'end_date':
+      '2026-04-24', 'end_time': '23:00:00', 'description': 'Profesor Popsnuggle
+      llega a la Sala Berlin Social Club en Almería el 24 de abril de 2026 para
+      ofrecer una noche de pop retrofuturista. Germán, José, Álvaro y
+      Laureano forman este cuarteto que se inspira en el pop español de los
+      años sesenta, la movida madrileña, los sintetizadores analógicos y la
+      bossa nova. Desde su irrupción en 2004 con el álbum “El Turismo”, su
+      música ha prestado una mirada divertida y crítica al pasado musical
+      español. En 2008 reafirmaron su propuesta con el lanzamiento de “El Fin
+      de las Colonias Africanas”. Una cita imperdible para los amantes del pop
+      con sabor nostálgico y visionario.', 'others': {'category':
+      '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-24T21:30+2:00', 'endDate': '2026-4-24T23:00+2:00',
+      'duration_days': 0, 'location': 'Parque de Nicolás Salmerón, 9, Bajo 2,
+      04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260304T125051', 'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/profesorpopnu
+      ggle.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/profesor-poopsnuggle/'}
+      --------------------
+      {'id': 'afa1dcf2', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Cuentacuentos: Te Quiero Tanto - Saeko
+      Inui', 'slug': 'cuentacuentos-te-quiero-tanto-saeko-inui', 'category':
+      '__NOT_DEFINIED__', 'id_venue': 'J8tbTLH7', 'venue': 'Librería Picasso',
+      'std_venue': 'Librería Picasso', 'start_date': '2026-04-25',
+      'start_time': '11:00:00', 'end_date': '2026-04-25', 'end_time':
+      '13:00:00', 'description': 'Evento de cuentacuentos para niños a partir
+      de 3 años basado en el libro ‘Te quiero tanto’ de Saeko Inui. Se
+      realizará en Librerías Picasso, Almería.', 'others': {'category':
+      'Lectura para niños', 'hour': '(Sábado) 11:00 am - 13:00 pm',
+      'startDate': '2026-4-25T11:00+2:00', 'endDate': '2026-4-25T13:00+2:00',
+      'duration_days': 0, 'location': 'Calle Reyes Católicos, 18, 04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Cuentacuentos
+      -Te-quiero-tanto-Saeko-Inui.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/cuentacuentos-te-quiero-tanto-sae
+      ko-inui/'}
+      --------------------
+      {'id': '7c47bc61', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'XV METALMERIA FEST - 25 Abril', 'slug':
+      'xv-metalmeria-fest-25-abril', 'category': '__NOT_DEFINIED__', 'id_venue':
+      'NmPqTrh6', 'venue': 'Berlin Social Club', 'std_venue': 'Berlin Social
+      Club', 'start_date': '2026-04-25', 'start_time': '16:00:00', 'end_date':
+      '2026-04-25', 'end_time': '19:00:00', 'description': 'El 25 de abril de
+      2026 se celebrará la decimoquinta edición del METALMERIA FEST en la Sala
+      Berlin Social Club de Almería, con apertura de puertas a las 26:00h. El
+      festival contará con una potente alineación internacional de bandas de
+      metal como Kate’s Acid (Speed Metal – Bélgica), DeathStorm (Thrash
+      Metal – Austria), Ecclesia (Heavy/Doom Metal – Francia), Speed Queen
+      (Speed Metal – Bélgica) y Peace After Pain (Crossover/Thrash Metal –
+      Barcelona). Las entradas anticipadas tienen un coste de 25 €, mientras
+      que en taquilla costarán 30 €. Los socios pueden adquirir su entrada
+      por 15 €, y los poseedores del carnet Interclub por 22 €. Las entradas
+      compradas online serán canjeadas físicamente en taquilla.', 'others':
+      {'category': '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-25T16:00+2:00', 'endDate': '2026-4-25T19:00+2:00',
+      'duration_days': 0, 'location': 'Parque de Nicolás Salmerón, 9, Bajo 2,
+      04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260304T125051', 'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/xv-metalalmer
+      ia.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/xv-metalmeria-fest-25-abril/'}
+      --------------------
+      {'id': '7ee94055', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Campeones 2 en El Teatro', 'slug':
+      'campeones-2-en-el-teatro', 'category': '__NOT_DEFINIED__', 'id_venue':
+      None, 'venue': '__NOT_FOUND__', 'std_venue': None, 'start_date':
+      '2026-04-25', 'start_time': '20:00:00', 'end_date': '2026-04-25',
+      'end_time': '22:00:00', 'description': 'La exitosa y entrañable obra
+      ‘Campeones 2 en el Teatro: Si Lorca levantara la cabeza’ llega a
+      Almería. Con un elenco formado por Alberto Nieto, Emilio Gavira, Luis
+      Mottola, Daniel Pico García, Claudia Fesser y Gloria Ramos, y dirigida
+      por Juan Manuel Montilla El Langui, esta comedia teatral continúa la
+      inspiración de la aclamada película. ¡Una experiencia divertida,
+      emotiva y cargada de mensajes positivos sobre la superación y la
+      inclusión! No te lo pierdas el sábado 25 de abril a las 20:00h en el
+      Auditorio Maestro Padilla. Las entradas están disponibles desde 22€ en
+      la taquilla del Teatro Apolo.', 'others': {'category': 'Auditorio Maestro
+      Padilla', 'hour': '__NOT_FOUND__', 'startDate': '2026-4-25T20:00+2:00',
+      'endDate': '2026-4-25T22:00+2:00', 'duration_days': 0, 'location':
+      '__NOT_FOUND__'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260304T125051', 'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/campeones2.jp
+      g', 'url':
+      'https://www.turismodealmeria.org/evento/campeones-2-en-el-teatro/'}
+      --------------------
+      {'id': 'cfe82641', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-27', 'start_time': '09:00:00',
+      'end_date': '2026-04-27', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-27T09:00+2:00', 'endDate':
+      '2026-4-27T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-6.l-L1'}
+      --------------------
+      {'id': '9de7ecc2', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-28', 'start_time': '09:00:00',
+      'end_date': '2026-04-28', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-28T09:00+2:00', 'endDate':
+      '2026-4-28T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-7.l-L1'}
+      --------------------
+      {'id': '3b1b5231', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller De Escritura Creativa "Emoción en
+      El Escritor, Emoción en El Lector"', 'slug':
+      'taller-de-escritura-creativa-emocion-en-el-escritor-emocion-en-el-lector'
+      , 'category': '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue':
+      'Universidad de Almería (UAL)', 'std_venue': 'Paraninfo de la Universidad
+      de Almería', 'start_date': '2026-04-28', 'start_time': '16:00:00',
+      'end_date': '2026-04-28', 'end_time': '18:00:00', 'description': 'Descubre
+      los secretos para atrapar a tus lectores y asombrar a los editores. Bruno
+      Nievas nos guiará en este emocionante taller donde aprenderemos a crear
+      ideas poderosas, superar el reto del primer borrador, desarrollar
+      personajes conmovedores, idear situaciones impactantes, incorporar el
+      viaje del héroe, editar sin piedad, publicar y autopublicar, y vender con
+      éxito: ¿comprarías tu propio libro?', 'others': {'category':
+      '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-28T16:00+2:00', 'endDate': '2026-4-28T18:00+2:00',
+      'duration_days': 0, 'location': 'Carr. Sacramento, s/n, 04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/03/taller-escrit
+      ura.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/taller-de-escritura-creativa-emoc
+      ion-en-el-escritor-emocion-en-el-lector/'}
+      --------------------
+      {'id': 'dacef84a', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-29', 'start_time': '09:00:00',
+      'end_date': '2026-04-29', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-29T09:00+2:00', 'endDate':
+      '2026-4-29T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-8.l-L1'}
+      --------------------
+      {'id': '2a7de19d', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Leonardo Torres Quevedo: El Ingeniero
+      Total', 'slug': 'leonardo-torres-quevedo-el-ingeniero-total', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue': 'Aulario IV de la
+      Universidad de Almería', 'std_venue': 'Paraninfo de la Universidad de
+      Almería', 'start_date': '2026-04-30', 'start_time': '09:00:00',
+      'end_date': '2026-04-30', 'end_time': '21:00:00', 'description':
+      'Exposición sobre Leonardo Torres Quevedo, destacando su contribución a
+      la ingeniería. Presentada por Francisco A. González Redondo, se llevará
+      a cabo en el Hall Aulario IV de la Universidad de Almería.', 'others':
+      {'category': 'Exposición Divulgación Científica', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-30T09:00+2:00', 'endDate':
+      '2026-4-30T21:00+2:00', 'duration_days': 0, 'location': '04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Leonardo-Torr
+      es-Quevedo-El-ingeniero-total.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/leonardo-torres-quevedo-el-ingeni
+      ero-total/var/ri-9.l-L1'}
+      --------------------
+      {'id': '627d4ae5', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'El Fantástico Viaje De Jonás El
+      Espermatozoide', 'slug': 'el-fantastico-viaje-de-jonas-el-espermatozoide',
+      'category': '__NOT_DEFINIED__', 'id_venue': 'tQfq78jF', 'venue': 'Teatro
+      Apolo', 'std_venue': 'Teatro Apolo', 'start_date': '2026-04-30',
+      'start_time': '20:30:00', 'end_date': '2026-04-30', 'end_time':
+      '22:00:00', 'description': 'Un espectáculo familiar, para niños y niñas
+      a partir de 6 años. Disfruta de las aventuras de Jonás en su fantástico
+      viaje.', 'others': {'category': '__NOT_FOUND__', 'hour': '__NOT_FOUND__',
+      'startDate': '2026-4-30T20:30+2:00', 'endDate': '2026-4-30T22:00+2:00',
+      'duration_days': 0, 'location': 'Rambla Obispo Orbera, 25,04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260304T125051',
+      'session': '2026_03_04_12_48_Miercoles', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Captura-de-pa
+      ntalla-2026-02-24-135009.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/el-fantastico-viaje-de-jonas-el-e
+      spermatozoide/'}
+      Checking unique event url.
+      New url events = 5
+      ****************************
+      Saving 5 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_03_04_12_48_Miercoles/0_raw/2026030
+      4_1250_AlmeriaTurismo.json
+      Saving 5 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+
+Result: Succeeded
+
+Launching scraper: JuntaAndaluciaAgenda
+Succeeded - 2026-03-04T12:51:23Z
+
+dag: FisgonTaskSelenium (1m 49s)
+│
+└─tarea_1 (1m 49s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  ├─stdout: ... (52 more lines)
+  │   Scrolling...
+  │   sleeping 1
+  │   sleeping 7
+  │   ******
+  │   css selector
+  │   .view-display-id-page_search_activities > ul:nth-child(3) >
+  │   li:nth-child(1) > a:nth-child(1)
+  │   .view-display-id-page_search_activities > ul:nth-child(3) >
+  │   li:nth-child(1) > a:nth-child(1) Not found
+  │   Getting content
+  │   *** SCRAPED 71 URLS WITH EVENTS **
+  │   New url events = 7
+  │   0 / 7
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /v-ciclo-de-lecturas-dramatizadas-dramaturgas-escena-lo-unico-que-verdad
+  │   eramente-quise-toda
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '0e7d73dc', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'V Ciclo De Lecturas Dramatizadas
+  │   Dramaturgas a Escena: “Lo Único Que Verdaderamente Quise Toda La Vida
+  │   Es Ser Delgada”, De Esther Carrodeguas', 'slug':
+  │   'v-ciclo-de-lecturas-dramatizadas-dramaturgas-a-escena-lo-unico-que-verd
+  │   aderament', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD',
+  │   'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de
+  │   Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública
+  │   Francisco Villaespesa', 'start_date': '2026-03-04', 'start_time':
+  │   '00:00:00', 'end_date': '2026-03-04', 'end_time': '__NOT_DEFINIED__',
+  │   'description': 'V Ciclo de Lecturas Dramatizadas Dramaturgas a Escena :
+  │   “Lo único que verdaderamente quise toda la vida es ser delgada”, de
+  │   Esther Carrodeguas Iniciamos el V Ciclo de Lecturas Dramatizadas
+  │   Dramaturgas a Escena con la obra “Lo único que verdaderamente quise
+  │   toda la vida es ser delgada”, de Esther Carrodeguas. Con una
+  │   sinceridad cruda, en este texto de auto[NO]ficción, Carrodeguas aborda
+  │   la relación con su cuerpo, marcada por la gordofobia que se respira en
+  │   cualquier pequeña esquinita de esta nuestra apasionante sociedad de la
+  │   hermosura. Porque por mucho que te escondas, la gordofobia sigue siempre
+  │   a tu lado. Sobre todo porque está en ti. Dirección e interpretación
+  │   Eva López. Coloquio al terminar la lectura con la intervención de
+  │   Esther Carrodeguas. Miércoles 4 de marzo 19:00 h., Salón de actos
+  │   Entrada libre hasta completar aforo.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-esta
+  │   do-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2':
+  │   'Biblioteca Pública del Estado-Biblioteca Provincial de Almería
+  │   Francisco Villaespesa Evento al que pertenece:\n ', 'duration':
+  │   '__NOT_FOUND__', 'datetime_details': '04 de Marzo del 2026, 19 h.',
+  │   'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n,
+  │   Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260304T125129', 'session':
+  │   '2026_03_04_12_48_Miercoles', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/CARTEL.png.
+  │   webp?itok=j3TdaRrj', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/v-ciclo-de-lecturas-dramatizadas-dramaturgas-escena-lo-unico-que-verda
+  │   deramente-quise-toda'}
+  │   1 / 7
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /crece-con-la-villaespesa-encuentro-con-helena-moreno-padilla-con-su-obr
+  │   a-mas-alla-de-la-1
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '16fa2f75', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Crece Con La Villaespesa. Encuentro Con
+  │   Helena Moreno Padilla Con Su Obra "Más Allá De La Muralla".', 'slug':
+  │   'crece-con-la-villaespesa-encuentro-con-helena-moreno-padilla-con-su-obr
+  │   a-mas-all', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD',
+  │   'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de
+  │   Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública
+  │   Francisco Villaespesa', 'start_date': '2026-03-05', 'start_time':
+  │   '00:00:00', 'end_date': '2026-03-05', 'end_time': '__NOT_DEFINIED__',
+  │   'description': 'Crece con la Villaespesa. Encuentro con Helena Moreno
+  │   Padilla con su obra "Más allá de la muralla". La joven escritora
+  │   almeriense Helena Moreno Padilla ha ganado el XX Premio Jordi Sierra i
+  │   Fabra para jóvenes de la editorial SM con una obra de fantasía "Más
+  │   allá de la muralla", una historia de aventuras mitológicas. Helena ha
+  │   escrito varias novelas y relatos. Es una notable dibujante. En su futuro
+  │   se ve como ilustradora, escritora y cineasta. Jueves 5 de marzo 11:00h.
+  │   Salón de actos. Actividad concertada con centros educativos.',
+  │   'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-esta
+  │   do-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2':
+  │   'Biblioteca Pública del Estado-Biblioteca Provincial de Almería
+  │   Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details':
+  │   '05 de Marzo del 2026, 11 h.', 'town': '__NOT_FOUND__', 'location':
+  │   'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260304T125129', 'session': '2026_03_04_12_48_Miercoles', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/CARTEL.jpg.
+  │   webp?itok=lGdHEYsy', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/crece-con-la-villaespesa-encuentro-con-helena-moreno-padilla-con-su-ob
+  │   ra-mas-alla-de-la-1'}
+  │   2 / 7
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /dia-internacional-de-la-mujer-en-el-enclave-arqueologico-de-villaricos-
+  │   0
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '63d2eeb4', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Día Internacional De La Mujer en El
+  │   Enclave Arqueológico De Villaricos', 'slug':
+  │   'dia-internacional-de-la-mujer-en-el-enclave-arqueologico-de-villaricos'
+  │   , 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Enclave
+  │   Arqueológico de Villaricos', 'std_venue': None, 'start_date':
+  │   '2026-03-05', 'start_time': '10:00:00', 'end_date': '2026-03-05',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Programación de
+  │   actividades en conmemoración del Día Internacional de la Mujer. 8 de
+  │   Marzo de 2026', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/evento/enclave-arqueologico-de-villa
+  │   ricos-cuevas-del-almanzora', 'location2': 'Enclave Arqueológico de
+  │   Villaricos', 'duration': '__NOT_FOUND__', 'datetime_details': '05 de
+  │   Marzo del 2026, 10:00 horas', 'town': '__NOT_FOUND__', 'location':
+  │   'Carretera de Garrucha a Águilas, Cuevas del Almanzora. Almería',
+  │   'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda',
+  │   'exec_time': '20260304T125129', 'session': '2026_03_04_12_48_Miercoles',
+  │   'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/8M_cultural
+  │   _1920x1080.jpg.webp?itok=Za9yYsJ4', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/dia-internacional-de-la-mujer-en-el-enclave-arqueologico-de-villaricos
+  │   -0'}
+  │   3 / 7
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /dia-internacional-de-la-mujer-en-el-museo-de-almeria-0
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '7bbfe5e5', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Día Internacional De La Mujer en El
+  │   Museo De Almería', 'slug':
+  │   'dia-internacional-de-la-mujer-en-el-museo-de-almeria', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': '4J64FLmD', 'venue': 'Museo de
+  │   Almería', 'std_venue': 'Museo de Almería', 'start_date': '2026-03-04',
+  │   'start_time': '__NOT_FOUND__', 'end_date': '2026-03-07', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Programación de actividades en
+  │   conmemoración del Día Internacional de la Mujer. 8 de Marzo de 2026',
+  │   'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/evento/museo-de-almeria',
+  │   'location2': 'Museo de Almería', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '04 de Marzo del 2026 - 07 de Marzo del 2026,
+  │   Consultar programación', 'town': '__NOT_FOUND__', 'location':
+  │   'Carretera de Ronda, 91, Almería. Almería', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260304T125129', 'session': '2026_03_04_12_48_Miercoles', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/8M_cultural
+  │   _1920x1080.jpg.webp?itok=Za9yYsJ4', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/dia-internacional-de-la-mujer-en-el-museo-de-almeria-0'}
+  │   4 / 7
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /dia-internacional-de-la-mujer-en-el-archivo-historico-provincial-de-alm
+  │   eria
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '21fdc459', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Día Internacional De La Mujer en El
+  │   Archivo Histórico Provincial De Almería', 'slug':
+  │   'dia-internacional-de-la-mujer-en-el-archivo-historico-provincial-de-alm
+  │   eria', 'category': '__NOT_DEFINIED__', 'id_venue': '211e885a', 'venue':
+  │   'Archivo Histórico Provincial de Almería', 'std_venue': 'Archivo
+  │   Histórico Provincial de Almería', 'start_date': '2026-03-09',
+  │   'start_time': '__NOT_FOUND__', 'end_date': '2026-03-31', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Programación de actividades en
+  │   conmemoración del Día Internacional de la Mujer. 8 de Marzo de 2026',
+  │   'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/archivo-historico-provincia
+  │   l-de-almeria', 'location2': 'Archivo Histórico Provincial de Almería',
+  │   'duration': '__NOT_FOUND__', 'datetime_details': '09 de Marzo del 2026 -
+  │   31 de Marzo del 2026, Consultar programación', 'town': '__NOT_FOUND__',
+  │   'location': 'Calle Campomanes, 11, Almería. Almería', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260304T125129', 'session': '2026_03_04_12_48_Miercoles', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/banner_dia_
+  │   mujer.jpg.webp?itok=FQAG5rPb', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/dia-internacional-de-la-mujer-en-el-archivo-historico-provincial-de-al
+  │   meria'}
+  │   5 / 7
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /dia-internacional-de-la-mujer-en-la-biblioteca-provincial-del-estado-de
+  │   -almeria
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'f1c81a06', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Día Internacional De La Mujer en La
+  │   Biblioteca Provincial Del Estado De Almería', 'slug':
+  │   'dia-internacional-de-la-mujer-en-la-biblioteca-provincial-del-estado-de
+  │   -almeria', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD',
+  │   'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de
+  │   Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública
+  │   Francisco Villaespesa', 'start_date': '2026-03-04', 'start_time':
+  │   '__NOT_FOUND__', 'end_date': '2026-03-06', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Programación de actividades en
+  │   conmemoración del Día Internacional de la Mujer. 8 de Marzo de 2026',
+  │   'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-esta
+  │   do-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2':
+  │   'Biblioteca Pública del Estado-Biblioteca Provincial de Almería
+  │   Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details':
+  │   '04 de Marzo del 2026 - 06 de Marzo del 2026, Consultar programación',
+  │   'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n,
+  │   Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260304T125129', 'session':
+  │   '2026_03_04_12_48_Miercoles', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/banner_dia_
+  │   mujer.jpg.webp?itok=FQAG5rPb', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/dia-internacional-de-la-mujer-en-la-biblioteca-provincial-del-estado-d
+  │   e-almeria'}
+  │   6 / 7
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /dia-internacional-de-la-mujer-en-el-conjunto-monumental-alcazaba-de-alm
+  │   eria
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'e18acbae', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 1, 'event': 'Día Internacional De La Mujer en El
+  │   Conjunto Monumental Alcazaba De Almería', 'slug':
+  │   'dia-internacional-de-la-mujer-en-el-conjunto-monumental-alcazaba-de-alm
+  │   eria', 'category': '__NOT_DEFINIED__', 'id_venue': 'q9Mp2j7p', 'venue':
+  │   'Conjunto Monumental de la Alcazaba de Almería', 'std_venue':
+  │   'Alcazaba', 'start_date': '2026-03-08', 'start_time': '__NOT_FOUND__',
+  │   'end_date': '2026-03-08', 'end_time': '__NOT_DEFINIED__', 'description':
+  │   'Programación de actividades en conmemoración del Día Internacional
+  │   de la Mujer. 8 de Marzo de 2026', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/evento/visitas-alcazaba-de-almeria',
+  │   'location2': 'Conjunto Monumental de la Alcazaba de Almería',
+  │   'duration': '__NOT_FOUND__', 'datetime_details': '08 de Marzo del 2026,
+  │   De 11:00h y 12:30h', 'town': '__NOT_FOUND__', 'location': 'Calle
+  │   Almanzor, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'},
+  │   'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260304T125129',
+  │   'session': '2026_03_04_12_48_Miercoles', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/banner_dia_
+  │   mujer.jpg.webp?itok=FQAG5rPb', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/dia-internacional-de-la-mujer-en-el-conjunto-monumental-alcazaba-de-al
+  │   meria'}
+  │   ****************************
+  │   Saving 7 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_04_12_48_Miercoles/0_raw/20260
+  │   304_1251_JuntaAndaluciaAgenda.json
+  │   Saving 7 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: ClassicJazz
+Succeeded - 2026-03-04T12:53:12Z
+
+dag: FisgonTaskSelenium (1m 7s)
+│
+└─tarea_1 (1m 7s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  ├─stdout: ... (12 more lines)
+  │   RUNNING SESSION =  2026_03_04_12_48_Miercoles
+  │   Starting WebDriver...
+  │   http://localhost:4444/wd/hub
+  │   *********************times =1
+  │   sleeping 7
+  │   Scrolling...
+  │   sleeping 1
+  │   Getting content
+  │   clicking
+  │   sleeping 3
+  │   sleeping 7
+  │   *********************times =2
+  │   sleeping 7
+  │   Scrolling...
+  │   sleeping 1
+  │   Getting content
+  │   clicking
+  │   sleeping 3
+  │   sleeping 7
+  │   *** SCRAPED 117 URLS WITH EVENTS **
+  │   New url events = 4
+  │   0 / 4
+  │   Getting https://clasijazz.com/evento/greetings-rock-folk-port-of-spain/
+  │   Sleep 4
+  │   2026-03-06T21:00:00 2026-03-06T22:30:00
+  │   --------------------
+  │   {'id': '2c9a8d6b', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Greetings Rock & Folk!', 'slug':
+  │   'greetings-rock-folk', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain',
+  │   'start_date': '2026-03-06', 'start_time': '21:00:00', 'end_date':
+  │   '2026-03-06', 'end_time': '22:30:00', 'description': '5€ ns / 2€ S |
+  │   Port of Spain Entradas Disfruta con los almerienses «Greetings» de
+  │   toda la energía y pasión de la música Rock y Folk. Una banda en
+  │   directo que nos invita a cantar y bailar, recorriendo las canciones
+  │   populares de nuestros grupos favoritos, compartiendo el pop-rock en
+  │   castellano, la música americana y el Folk irlandés. Desde nuestro
+  │   único «Port Of Spain» al mundo!', 'others': {'price':
+  │   '__NOT_DEFINIED__', 'category': 'Programación', 'location_url':
+  │   'https://clasijazz.com/local/port-of-spain/', 'location': 'Parque
+  │   Nicolás Salmeron 20, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260304T125318', 'session': '2026_03_04_12_48_Miercoles', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03
+  │   -03-at-17.03.33.jpeg', 'url':
+  │   'https://clasijazz.com/evento/greetings-rock-folk-port-of-spain/'}
+  │   1 / 4
+  │   Getting https://clasijazz.com/evento/arro-con-mango-digo-fest/
+  │   Sleep 4
+  │   2026-03-19T21:30:00 2026-03-19T23:00:00
+  │   --------------------
+  │   {'id': 'c0aaeed4', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Arró Con Mango – Digo! Fest', 'slug':
+  │   'arro-con-mango-digo-fest', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz',
+  │   'start_date': '2026-03-19', 'start_time': '21:30:00', 'end_date':
+  │   '2026-03-19', 'end_time': '23:00:00', 'description': 'Sala Industrial |
+  │   10€ NS / 3€ S', 'others': {'price': '3,00€ – 10,00€',
+  │   'category': 'Programación', 'location_url':
+  │   'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro
+  │   Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260304T125318', 'session': '2026_03_04_12_48_Miercoles', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/03/ibrahima-164.jpg-scale
+  │   d.jpeg', 'url':
+  │   'https://clasijazz.com/evento/arro-con-mango-digo-fest/'}
+  │   2 / 4
+  │   Getting https://clasijazz.com/evento/match-de-impro-2/2026-03-06/
+  │   Sleep 4
+  │   2026-03-06T20:00:00 2026-03-06T21:15:00
+  │   --------------------
+  │   {'id': '64ce6a3f', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Match De Impro', 'slug':
+  │   'match-de-impro', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'Q6b6LRjT', 'venue': 'Sala Industrial Clasijazz', 'std_venue':
+  │   'Clasijazz', 'start_date': '2026-03-06', 'start_time': '20:00:00',
+  │   'end_date': '2026-03-06', 'end_time': '21:15:00', 'description': '3 €
+  │   NS / GS Sala Industrial MATCH DE IMPRO Esta temporada, los alumnos de
+  │   improvisación de la escuela Las Cruces Teatro / Clasijazz se
+  │   enfrentarán una vez al mes en dos equipos por el favor del público
+  │   creando historias delirantes improvisadas en el acto. No te las pierdas,
+  │   la participación del público es clave en este show.', 'others':
+  │   {'price': 'Free – 3,00€', 'category': 'Programación',
+  │   'location_url':
+  │   'https://clasijazz.com/local/sala-industrial-clasijazz/', 'location':
+  │   'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260304T125318', 'session': '2026_03_04_12_48_Miercoles', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/01/Match-Impro-generico.p
+  │   ng', 'url': 'https://clasijazz.com/evento/match-de-impro-2/2026-03-06/'}
+  │   3 / 4
+  │   Getting https://clasijazz.com/evento/match-de-impro-2/2026-04-10/
+  │   Sleep 4
+  │   2026-04-10T20:00:00 2026-04-10T21:15:00
+  │   --------------------
+  │   {'id': '5613da9e', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Match De Impro', 'slug':
+  │   'match-de-impro', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'Q6b6LRjT', 'venue': 'Sala Industrial Clasijazz', 'std_venue':
+  │   'Clasijazz', 'start_date': '2026-04-10', 'start_time': '20:00:00',
+  │   'end_date': '2026-04-10', 'end_time': '21:15:00', 'description': '3 €
+  │   NS / GS Sala Industrial MATCH DE IMPRO Esta temporada, los alumnos de
+  │   improvisación de la escuela Las Cruces Teatro / Clasijazz se
+  │   enfrentarán una vez al mes en dos equipos por el favor del público
+  │   creando historias delirantes improvisadas en el acto. No te las pierdas,
+  │   la participación del público es clave en este show.', 'others':
+  │   {'price': 'Free – €3', 'category': 'Programación', 'location_url':
+  │   'https://clasijazz.com/local/sala-industrial-clasijazz/', 'location':
+  │   'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260304T125318', 'session': '2026_03_04_12_48_Miercoles', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/01/Match-Impro-generico.p
+  │   ng', 'url': 'https://clasijazz.com/evento/match-de-impro-2/2026-04-10/'}
+  │   ****************************
+  │   Saving 4 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_04_12_48_Miercoles/0_raw/20260
+  │   304_1253_ClassicJazz.json
+  │   Saving 4 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: Entradium
