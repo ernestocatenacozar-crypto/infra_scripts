@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "/app/run.py", line 137, in <module>
+    run_one(events_extractors, TARGET_SCRAPER, session_manager, TARGET_CITY)
+  File "/app/run.py", line 18, in run_one
+    ev.run()
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 42, in run
+    result_list = self.iterate_url_extract_events(filtered_url_events)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/url_iterator/abc_url_iterator_extractor.py", line 84, in iterate_url_extract_events
+    page_soup = self.get_html_object(url)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/abc_base_extractor.py", line 146, in get_html_object
+    self.wd.driver.get(url)
+  File "/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 466, in get
+    self.execute(Command.GET, {"url": url})
+  File "/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: -0.006
+  (Session info: chrome=143.0.7499.169)
+Stacktrace:
+#0 0x5ae1101ac61a <unknown>
+#1 0x5ae10fc2920b <unknown>
+#2 0x5ae10fc112aa <unknown>
+#3 0x5ae10fc10f8d <unknown>
+#4 0x5ae10fc0ee47 <unknown>
+#5 0x5ae10fc0f75f <unknown>
+#6 0x5ae10fc1df20 <unknown>
+#7 0x5ae10fc375e7 <unknown>
+#8 0x5ae10fc3dc9b <unknown>
+#9 0x5ae10fc0fe88 <unknown>
+#10 0x5ae10fc37356 <unknown>
+#11 0x5ae10fcc60de <unknown>
+#12 0x5ae10fc6d232 <unknown>
+#13 0x5ae10fc6dee1 <unknown>
+#14 0x5ae1101753f9 <unknown>
+#15 0x5ae11017834d <unknown>
+#16 0x5ae11015e122 <unknown>
+#17 0x5ae110178f2b <unknown>
+#18 0x5ae110144c30 <unknown>
+#19 0x5ae110199d78 <unknown>
+#20 0x5ae110199f4c <unknown>
+#21 0x5ae1101ab973 <unknown>
+#22 0x71a397f30aa4 <unknown>
+#23 0x71a397fbda64 __clone
+
