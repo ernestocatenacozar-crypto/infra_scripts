@@ -1,0 +1,19 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=AlmeriaCiudad
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019cb8e5-d5d5-756b-8adf-4944acf983d3
+
+Running for Almeria: AlmeriaCiudad
+AlmeriaCiudad
+RUNNING SESSION =  2026_03_04_12_48_Miercoles
+Starting WebDriver...
+http://localhost:4444/wd/hub

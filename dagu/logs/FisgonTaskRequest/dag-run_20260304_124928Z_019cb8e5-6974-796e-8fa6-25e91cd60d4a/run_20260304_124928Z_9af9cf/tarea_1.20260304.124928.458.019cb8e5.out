@@ -1,0 +1,77 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=BibliotecaAgenda
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019cb8e5-6974-796e-8fa6-25e91cd60d4a
+
+Running for Almeria: BibliotecaAgenda
+BibliotecaAgenda
+RUNNING SESSION =  2026_03_04_12_48_Miercoles
+*** SCRAPED 31 URLS WITH EVENTS **
+New url events = 17
+0 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=22/03/26&action=showDay
+Sleep 1
+1 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=14/03/26&action=showDay
+Sleep 1
+2 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=28/03/26&action=showDay
+Sleep 1
+3 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=10/03/26&action=showDay
+Sleep 1
+4 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=15/03/26&action=showDay
+Sleep 1
+5 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=30/03/26&action=showDay
+Sleep 1
+6 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=11/03/26&action=showDay
+Sleep 1
+7 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=17/03/26&action=showDay
+Sleep 1
+8 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=25/03/26&action=showDay
+Sleep 1
+--------------------
+{'id': 'e8d5aaa1', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Nueva Lectura en El Club De Lectura De Textos Dramáticos: Sentencia Dictada Contra P. Y J., De Agustín Gómez Arcos', 'slug': 'nueva-lectura-en-el-club-de-lectura-de-textos-dramaticos-sentencia-dictada-contr', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Publica Provincial Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-03-25', 'start_time': '18:00:00', 'end_date': '2026-03-25', 'end_time': '__NOT_DEFINIED__', 'description': 'Nueva lectura en el Club de lectura de textos dramáticos: Sentencia dictada contra P. y J., de Agustín Gómez Arcos. En colaboración con el Centro de Investigación y Recursos de las Artes Escénicas de Andalucía (CIRAE).Miércoles 25 de marzoHorario: 18:00 h.Información en la dirección de correo electrónico: informacion.bp.al.ccul@juntadeandalucia.es', 'others': {'duration': '__NOT_DEFINIED__'}, 'source': 'BibliotecaAgenda', 'exec_time': '20260304T124929', 'session': '2026_03_04_12_48_Miercoles', 'image': 'https://www.bibliotecasdeandalucia.es/image/journal/article?img_id=504045313&t=1772553235850', 'url': 'https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=25/03/26&action=showDay'}
+9 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=31/03/26&action=showDay
+Sleep 1
+10 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=29/03/26&action=showDay
+Sleep 1
+11 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=19/03/26&action=showDay
+Sleep 1
+12 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=24/03/26&action=showDay
+Sleep 1
+13 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=08/03/26&action=showDay
+Sleep 1
+14 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=12/03/26&action=showDay
+Sleep 1
+15 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=07/03/26&action=showDay
+Sleep 1
+16 / 17
+Getting https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_culturaportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=01/03/26&action=showDay
+Sleep 1
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_04_12_48_Miercoles/0_raw/20260304_1249_BibliotecaAgenda.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
