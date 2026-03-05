@@ -1,0 +1,86 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=JuntaAndaluciaAgenda
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019cc020-3288-748c-ba74-76924b09f6b7
+
+Running for Almeria: JuntaAndaluciaAgenda
+JuntaAndaluciaAgenda
+RUNNING SESSION =  2026_03_05_22_27_Jueves
+Starting WebDriver...
+http://localhost:4444/wd/hub
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1) Not found
+Getting content
+*** SCRAPED 72 URLS WITH EVENTS **
+New url events = 3
+0 / 3
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/cartas-desde-iwo-jima-0
+Sleep 4
+--------------------
+{'id': '8c3a7e0f', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Cartas Desde Iwo Jima', 'slug': 'cartas-desde-iwo-jima', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Sala de la Filmoteca de Andalucía en Almería', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-04-13', 'start_time': '00:00:00', 'end_date': '2026-04-13', 'end_time': '__NOT_DEFINIED__', 'description': "Clint Eastwood. EEUU, 2006. 141 min. v.o.s.e. Segunda Guerra Mundial (1939-1945). Rodada íntegramente en japonés, la película ofrece la versión nipona de la batalla de Iwo Jima, el episodio más cruento de la guerra del Pacífico, en el que murieron más de 20.000 japoneses y 7.000 estadounidenses. El objetivo de la batalla para los japoneses era conservar un islote insignificante, pero de gran valor estratégico, pues desde allí defendían la integridad de su territorio. El mismo año, Eastwood dirigió también ''Banderas de nuestros padres'', que narra la misma batalla desde el punto de vista norteamericano. La versión japonesa muestra cómo el general Tadamichi Kuribayashi (Ken Watanabe) organizó la resistencia a través de un sistema de túneles.", 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/sala-de-la-filmoteca-de-andalucia-en-almeria', 'location2': 'Sala de la Filmoteca de Andalucía en Almería', 'duration': '__NOT_FOUND__', 'datetime_details': '13 de Abril del 2026, 19.00', 'town': '__NOT_FOUND__', 'location': 'C/ Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260305T223107', 'session': '2026_03_05_22_27_Jueves', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-03/iwojima.jpg.webp?itok=wKpWExB7', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/cartas-desde-iwo-jima-0'}
+1 / 3
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/banderas-de-nuestros-padres-0
+Sleep 4
+--------------------
+{'id': '7c6c1e2c', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Banderas De Nuestros Padres', 'slug': 'banderas-de-nuestros-padres', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Sala de la Filmoteca de Andalucía en Almería', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-04-06', 'start_time': '00:00:00', 'end_date': '2026-04-06', 'end_time': '__NOT_DEFINIED__', 'description': "Clint Eastwood. EEUU, 2006. 132 min. Segunda Guerra Mundial (1939-1945). La batalla de Iwo Jima (1945), el episodio más cruento de la guerra del Pacífico, quedó inmortalizada en la foto de unos soldados que izaban una bandera norteamericana. El objetivo de esta batalla era la toma de un islote insignificante, pero de gran valor estratégico, pues desde allí los japoneses defendían su territorio. En la contienda cayeron más de 20.000 japoneses y 7.000 estadounidenses. Mientras tanto, en los Estados Unidos la célebre foto en la que seis soldados izaban la bandera americana fue un instrumento propagandístico para conseguir fondos que permitieran seguir sufragando los gastos de la guerra. El mismo año el propio Eastwood dirigió ''Cartas desde Iwo Jima'', que narra la misma batalla desde el punto de vista japonés", 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/sala-de-la-filmoteca-de-andalucia-en-almeria', 'location2': 'Sala de la Filmoteca de Andalucía en Almería', 'duration': '__NOT_FOUND__', 'datetime_details': '06 de Abril del 2026, 19.00', 'town': '__NOT_FOUND__', 'location': 'C/ Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260305T223107', 'session': '2026_03_05_22_27_Jueves', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-03/banderas%20de%20nuestros%20padres.jpg.webp?itok=5vdFcEMp', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/banderas-de-nuestros-padres-0'}
+2 / 3
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/celebracion-del-dia-internacional-de-la-mujer-crece-con-la-villaespesa-taller-la-mujer-en-el
+Sleep 4
+--------------------
+{'id': '62344daa', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Celebración Del Día Internacional De La Mujer. Crece Con La Villaespesa. Taller "La Mujer en El Sector Aeroespacial", Con Aulasputnik', 'slug': 'celebracion-del-dia-internacional-de-la-mujer-crece-con-la-villaespesa-taller-la', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-03-06', 'start_time': '09:30:00', 'end_date': '2026-03-06', 'end_time': '__NOT_DEFINIED__', 'description': 'Celebración del Día Internacional de la Mujer. Crece con la Villaespesa. Taller "La mujer en el sector aeroespacial", con Aulasputnik El objetivo principal de esta actividad es reflexionar sobre los estereotipos en las profesiones STEM y dar visibilidad a la mujer dentro de la ciencia y la tecnología aeroespacial. El propósito es inspirar y motivar a niñas a seguir sus sueños y acompañar a los niños a romper con sus creencias limitantes y hacerles partícipes de ese mensaje. Se realizarán dos actividades principales en este taller. La primera se centrará en reflexionar y detectar conductas y prejuicios inconscientes sobre el papel de la mujer en el sector aeroespacial. La segunda actividad se propondrá realizar un juego de cartas para conocer la trayectoria y vida profesional de algunas mujeres importantes del sector, y así, crear referentes. Viernes 6 de marzo 9:30h. Sala de exposiciones. Actividad concertada con centros educativos', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-estado-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details': '06 de Marzo del 2026, 9:30 h.', 'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260305T223107', 'session': '2026_03_05_22_27_Jueves', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-03/CARTEL%203.jpg.webp?itok=EJLH3UNE', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/celebracion-del-dia-internacional-de-la-mujer-crece-con-la-villaespesa-taller-la-mujer-en-el'}
+****************************
+Saving 3 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_05_22_27_Jueves/0_raw/20260305_2231_JuntaAndaluciaAgenda.json
+Saving 3 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

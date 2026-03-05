@@ -24,3 +24,20 @@ sleeping 5
 Getting content
 page = 1 -----------https://almeriaciudad.es/cultura/agenda?page=1--------------- len 12
 sleeping 5
+Getting content
+page = 2 -----------https://almeriaciudad.es/cultura/agenda?page=2--------------- len 11
+sleeping 5
+Getting content
+page = 3 -----------https://almeriaciudad.es/cultura/agenda?page=3--------------- len 0
+*** SCRAPED 35 URLS WITH EVENTS **
+New url events = 1
+0 / 1
+Getting https://almeriaciudad.es//cultura/evento/el-circo-de-la-luz
+Sleep 4
+--------------------
+{'id': 'e42b0726', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 1, 'event': 'El Circo De La Luz', 'slug': 'el-circo-de-la-luz', 'category': '__NOT_DEFINIED__', 'id_venue': 'Dmb6Gmtr', 'venue': 'RECINTO FERIAL DE ALMERIA', 'std_venue': 'Recinto Ferial de Almería', 'start_date': '__NOT_FOUND__', 'start_time': '__NOT_FOUND__', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'El Circo de la Luz reúne a artistas internacionales en un show que fusiona tradición y vanguardia. Los mejores acróbatas junto a animales biomecánicos luminosos, efectos tecnológicos inmersivos y coreografías con láseres. Un universo sensorial jamás visto en Europa. Inspirado en los espectáculos lumínicos más bellos del mundo, “El Circo de la Luz” es un paseo por lo imposible.', 'others': {'organizer': 'Recinto Ferial Almería', 'price': '__NOT_FOUND__', 'category': 'Circo', 'audience_age': 'Todas las edades'}, 'source': 'AlmeriaCiudad', 'exec_time': '20260305T222946', 'session': '2026_03_05_22_27_Jueves', 'image': 'https://almeriaciudad.es/uploads/styles/large/public/media/image/cartel-circo-alegria.jpeg?itok=ABqP9hpK', 'url': 'https://almeriaciudad.es//cultura/evento/el-circo-de-la-luz'}
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_05_22_27_Jueves/0_raw/20260305_2229_AlmeriaCiudad.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
