@@ -1,4 +1,0 @@
-time=2026-02-03T15:53:00.440Z level=INFO msg="Executing root dag-run" dag=FisgonGetScrapers run-id=019c2435-0517-787e-a21e-118d86cbd91f params=""
-time=2026-02-03T15:53:00.450Z level=INFO msg="DAG run started" name=FisgonGetScrapers run-id=019c2435-0517-787e-a21e-118d86cbd91f attempt-id="" dag=FisgonGetScrapers run-id=019c2435-0517-787e-a21e-118d86cbd91f params="[TARGET_CITY=Almeria GET_SCRAPERS=Request 3=DAGU_BASE_URL=]"
-time=2026-02-03T15:53:00.451Z level=INFO msg="Step started" name=FisgonGetScrapers run-id=019c2435-0517-787e-a21e-118d86cbd91f attempt-id="" dag=FisgonGetScrapers run-id=019c2435-0517-787e-a21e-118d86cbd91f step=get_scrapers
-time=2026-02-03T15:53:01.069Z level=INFO msg="DAG run finished" name=FisgonGetScrapers run-id=019c2435-0517-787e-a21e-118d86cbd91f attempt-id="" dag=FisgonGetScrapers run-id=019c2435-0517-787e-a21e-118d86cbd91f status=succeeded started-at=2026-02-03T15:53:00Z finished-at=2026-02-03T15:53:01Z

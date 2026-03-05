@@ -1,0 +1,26 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=AlmeriaCiudad
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019cc01e-f59a-7dce-b929-61cb09706489
+
+Running for Almeria: AlmeriaCiudad
+AlmeriaCiudad
+RUNNING SESSION =  2026_03_05_22_27_Jueves
+Starting WebDriver...
+http://localhost:4444/wd/hub
+sleeping 5
+Getting content
+page = 0 -----------https://almeriaciudad.es/cultura/agenda?page=0--------------- len 12
+sleeping 5
+Getting content
+page = 1 -----------https://almeriaciudad.es/cultura/agenda?page=1--------------- len 12
+sleeping 5

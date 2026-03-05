@@ -1,0 +1,51 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ConciertosClub
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019cc01e-0a01-7f02-9eed-cf6aa97b8de7
+
+Running for Almeria: ConciertosClub
+ConciertosClub
+RUNNING SESSION =  2026_03_05_22_27_Jueves
+Getting https://conciertos.club/almeria
+Sleep 1
+*** SCRAPED 162 URLS WITH EVENTS **
+New url events = 5
+0 / 5
+Getting https://conciertos.club/almeria/conciertos/113401-jueves-flamencos
+Sleep 4
+--------------------
+{'id': 'fe817704', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Jueves Flamencos', 'slug': 'jueves-flamencos', 'category': 'conciertos', 'id_venue': 'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain', 'start_date': '2026-04-30', 'start_time': '22:00:00', 'end_date': '2026-04-30', 'end_time': '__NOT_DEFINIED__', 'description': '__NOT_FOUND__', 'others': {'category': 'Mestizaje', 'price': 'Entrada libre', 'place_url': 'https://conciertos.club/almeria/locales/port-of-spain', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260305T222840', 'session': '2026_03_05_22_27_Jueves', 'image': 'https://conciertos.club/doc/c/2026/c_portofspainflamenco.jpg', 'url': 'https://conciertos.club/almeria/conciertos/113401-jueves-flamencos'}
+1 / 5
+Getting https://conciertos.club/almeria/conciertos/115435-tributo-a-abba-y-mas-candlelight
+Sleep 4
+--------------------
+{'id': '2208418d', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Tributo a ABBA Y Más', 'slug': 'tributo-a-abba-y-mas', 'category': 'conciertos', 'id_venue': 'PgT9B4RF', 'venue': 'Círculo Mercantil de Almería', 'std_venue': 'Círculo Mercantil de Almería', 'start_date': '2026-03-08', 'start_time': '17:00:00', 'end_date': '2026-03-08', 'end_time': '__NOT_DEFINIED__', 'description': "\nDos sesiones: 17h y 19h.\nPrograma\n\nDancing Queen - ABBA\nSOS - ABBA\nMoney, Money, Money - ABBA\nVoulez Vous - ABBA\nBohemian Rhapsody - Queen\nI Want to Break Free - Queen\nKiller Queen - Queen\nWaterloo - ABBA\nSuper Trouper - ABBA\nMamma Mia - ABBA\nDon't Stop Me Now - Queen\nWe Will Rock You - Queen\nWe Are the Champions - Queen\nGimme Gimme Gimme - ABBA\n\nIntérpretes\n\nCuarteto de cuerda - Cuarteto Indalion\n\n\n\xa0\n ", 'others': {'category': 'Clásica', 'price': '31-46', 'place_url': 'https://conciertos.club/almeria/locales/circulo-mercantil-de-almeria', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260305T222840', 'session': '2026_03_05_22_27_Jueves', 'image': 'https://conciertos.club/doc/a/2025/a_candlelight.jpg', 'url': 'https://conciertos.club/almeria/conciertos/115435-tributo-a-abba-y-mas-candlelight'}
+2 / 5
+Getting https://conciertos.club/almeria/conciertos/115437-coldplay-e-imagine-dragons-candlelight
+Sleep 4
+--------------------
+{'id': '2ef20048', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Coldplay E Imagine Dragons', 'slug': 'coldplay-e-imagine-dragons', 'category': 'conciertos', 'id_venue': 'PgT9B4RF', 'venue': 'Círculo Mercantil de Almería', 'std_venue': 'Círculo Mercantil de Almería', 'start_date': '2026-03-28', 'start_time': '17:00:00', 'end_date': '2026-03-28', 'end_time': '__NOT_DEFINIED__', 'description': '\nDos sesiones: 17h y 21h.\nPrograma Candlelight: Coldplay e Imagine Dragons\n\nColdplay - Clocks\nImagine Dragons - Radioactive\nColdplay - Adventure of a Lifetime\nColdplay - Fix You\nImagine Dragons - Eyes Closed\nImagine Dragons - Nice to Meet You\nColdplay - The Scientist\nColdplay - feelslikeimfallinginlove\nImagine Dragons - Follow You\nImagine Dragons - Bad Liar\nImagine Dragons - Believer\nColdplay - Sky Full of Stars\nColdplay - Viva la Vida\n\nIntérpretes\n\nCuarteto de cuerda - Cuarteto Indalion\n ', 'others': {'category': 'Clásica', 'price': '32-42', 'place_url': 'https://conciertos.club/almeria/locales/circulo-mercantil-de-almeria', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260305T222840', 'session': '2026_03_05_22_27_Jueves', 'image': 'https://conciertos.club/doc/a/2025/a_candlelight.jpg', 'url': 'https://conciertos.club/almeria/conciertos/115437-coldplay-e-imagine-dragons-candlelight'}
+3 / 5
+Getting https://conciertos.club/almeria/conciertos/115436-tributo-a-abba-y-mas-candlelight
+Sleep 4
+--------------------
+{'id': 'a71c98c7', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Tributo a ABBA Y Más', 'slug': 'tributo-a-abba-y-mas', 'category': 'conciertos', 'id_venue': 'PgT9B4RF', 'venue': 'Círculo Mercantil de Almería', 'std_venue': 'Círculo Mercantil de Almería', 'start_date': '2026-03-08', 'start_time': '19:00:00', 'end_date': '2026-03-08', 'end_time': '__NOT_DEFINIED__', 'description': "\nDos sesiones: 17h y 19h.\nPrograma\n\nDancing Queen - ABBA\nSOS - ABBA\nMoney, Money, Money - ABBA\nVoulez Vous - ABBA\nBohemian Rhapsody - Queen\nI Want to Break Free - Queen\nKiller Queen - Queen\nWaterloo - ABBA\nSuper Trouper - ABBA\nMamma Mia - ABBA\nDon't Stop Me Now - Queen\nWe Will Rock You - Queen\nWe Are the Champions - Queen\nGimme Gimme Gimme - ABBA\n\nIntérpretes\n\nCuarteto de cuerda - Cuarteto Indalion\n\n\n\xa0\n ", 'others': {'category': 'Clásica', 'price': '31-46', 'place_url': 'https://conciertos.club/almeria/locales/circulo-mercantil-de-almeria', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260305T222840', 'session': '2026_03_05_22_27_Jueves', 'image': 'https://conciertos.club/doc/a/2025/a_candlelight.jpg', 'url': 'https://conciertos.club/almeria/conciertos/115436-tributo-a-abba-y-mas-candlelight'}
+4 / 5
+Getting https://conciertos.club/almeria/conciertos/115438-la-banda-sonora-de-los-60-candlelight
+Sleep 4
+--------------------
+{'id': '6b620593', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'La Banda Sonora De Los 60', 'slug': 'la-banda-sonora-de-los-60', 'category': 'conciertos', 'id_venue': 'PgT9B4RF', 'venue': 'Círculo Mercantil de Almería', 'std_venue': 'Círculo Mercantil de Almería', 'start_date': '2026-03-28', 'start_time': '19:00:00', 'end_date': '2026-03-28', 'end_time': '__NOT_DEFINIED__', 'description': '\nPrograma\n\nI Want To Hold Your Hand\nPenny Lane\nStrawberry Fields\nCome Together\nHere Comes the Sun\nWith A Little Help From My Friends\nHelp!\nEleanor Rigby\nWhile My Guitar Gently Weeps\nHelter Skelter\nBlackbird\nA Day in the Life\nYesterday\nLet It Be\n\nIntérpretes\n\nCuarteto de cuerdas - Cuarteto Indalion\n ', 'others': {'category': 'Clásica', 'price': '28-39', 'place_url': 'https://conciertos.club/almeria/locales/circulo-mercantil-de-almeria', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260305T222840', 'session': '2026_03_05_22_27_Jueves', 'image': 'https://conciertos.club/doc/a/2025/a_candlelight.jpg', 'url': 'https://conciertos.club/almeria/conciertos/115438-la-banda-sonora-de-los-60-candlelight'}
+****************************
+Saving 5 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_05_22_27_Jueves/0_raw/20260305_2228_ConciertosClub.json
+Saving 5 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
