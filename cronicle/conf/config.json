@@ -1,5 +1,5 @@
 {
-  "base_app_url": "http://54.75.65.183:3012",
+  "base_app_url": "http://108.129.249.2:3012",
   "email_from": "admin@localhost",
   "smtp_hostname": "localhost",
   "smtp_port": 25,
@@ -39,7 +39,7 @@
   "server_comm_use_hostnames": false,
   "web_direct_connect": false,
   "web_socket_use_hostnames": false,
-  "custom_live_log_socket_url": "http://54.75.65.183:3012",
+  "custom_live_log_socket_url": "http://108.129.249.2:3012",
   "job_memory_max": 1073741824,
   "job_memory_sustain": 0,
   "job_cpu_max": 0,
