@@ -1,0 +1,36 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ConciertosClub
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019ccf77-0a9b-78f1-b615-28fa3c70b1e7
+
+Running for Almeria: ConciertosClub
+ConciertosClub
+RUNNING SESSION =  2026_03_08_21_58_Domingo
+Getting https://conciertos.club/almeria
+Sleep 1
+*** SCRAPED 147 URLS WITH EVENTS **
+New url events = 2
+0 / 2
+Getting https://conciertos.club/almeria/conciertos/113471-miguel-rios
+Sleep 4
+--------------------
+{'id': '68e11a3b', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Miguel Ríos', 'slug': 'miguel-rios', 'category': 'conciertos', 'id_venue': None, 'venue': 'Auditorio de El Ejido', 'std_venue': None, 'start_date': '2026-05-02', 'start_time': '21:00:00', 'end_date': '2026-05-02', 'end_time': '__NOT_DEFINIED__', 'description': "\nMiguel RíosQuince años después de su primera gira de despedida definitiva de los escenarios, con aquel Bye Bye Ríos con el que recorrió todo el país y más allá en 2010, MIguel Ríos ha anunciado que vuelve a la carretera en 2025 y 2026 con la gira El Último Vals, que irá además acompañada de un nuevo disco.\nSu pasión inquebrantable con la música lleva al granadino una vez más a emprender este nuevo proyecto con el que recorrerá grandes teatros nacionales. La gira comenzará en octubre de 2025 en Burgos y visitará escenarios emblemáticos del país como el\xa0Liceu de Barcelona,\xa0El Teatro Cervantes de Málaga, el\xa0Teatro Colón de La Coruña, su querido\xa0Circo Price de Madrid, y tendrá\xa0su colofón en La\xa0Maestranza de Sevilla\xa0en Mayo de 2026.\nA finales de mayo de 2025 se presenta el primer adelanto, y tras el verano el disco completo verá la luz, El está compuesto por el propio\xa0Miguel Ríos\xa0y el productor\xa0José Nortes\xa0y grabado íntegramente en el madrileño Black Betty Studios.\nMIguel ríos ha escogido a cuatro músicos de altura para acompañarle en su gira, que ofrecerán un formato electroacústico donde el rock y el country se encuentran: Luis Prado: teclados, batería y coros Jorge Ruiz: bajo, guitarra y coros Samuel Terroso: batería, guitarra y coros Jose Nortes: Guitarras y coros.\nLa anterior gira de MIguel Ríos fue en 2023, cuando el granadino volvió a los escenarios con la gira Rock & Ríos, al cumplirse (en 2022) el 40 aniversario de la grabación de su famoso disco en directo.\nLa carrera de Miguel Ríos va ligada a la historia del rock en español y de los grandes hitos del siglo XX. Nacido en 1944, comenzó su trayectoria musical a principios de los años 60, cuando el rock era un fenómeno anglosajón por descubrir en España.\nEn 1969, el año en que el hombre pisaba por primera vez la luna, las radios de medio mundo (incluido Estados Unidos) emitían el 'Himno a la alegría', adaptación publicada por Miguel Ríos de la famosa pieza de la “Novena Sinfonía” de Beethoven. Fue un salto a la fama de un joven granadino que, con tan sólo 25 años, pasó a dominar la escena española del rock and roll. Después llegarían innumerables éxitos durante décadas de carrera, “Bienvenidos”, “El rock de la cárcel”, “El río”, o “Santa Lucía”.\nSu carrera discográfica suma más de 30 discos editados y 7 millones de discos vendidos en todo el mundo, entrando en los primeros puestos de las listas de éxitos de Estados Unidos, Reino Unido, Alemania, Japón, Suecia, Italia, Austria, Holanda ó Canadá.\nSu anterior disco fue\xa0Un largo tiempo (2021), un disco que toma el título de un poema de Ángel González y lo devuelve a la actividad, certero, valiente y emotivo, también austero y sobrio como nuestro Johnny Cash que es.\nEn 2018 ‘Symphonic Ríos’ fue el título de su anterior disco y del espectáculo con el que el estandarte del rock español se lanzó a recorrer España, junto a los ‘Black betty boys’ y una orquesta sinfónica de 50 músicos dirigida por Carlos Checa, para reinterpretar sus temas más emblemáticos: ‘Memorias de la carretera’, ‘Bienvenidos’, ‘Todo a pulmón’, ‘Santa Lucía’, ‘El rock de una noche de verano’, ‘Antinuclear’… El disco fue grabado en su Granada natal en 2017.\xa0\nEl artista granadino ha recibido numerosos reconocimientos a lo largo de su extensa carrera, entre ellos, destaca la Medalla de Oro al mérito en las Bellas Artes (1993), Hijo Predilecto de Granada, varios Premios Ondas y de la Academia de Música española, el Grammy Latino a la Excelencia Musical. Más información sobre Miguel Ríos \n", 'others': {'category': 'Rock', 'price': '__NOT_FOUND__', 'place_url': 'https://conciertos.club/almeria/locales/auditorio-de-el-ejido', 'town': 'El Ejido (Almería)'}, 'source': 'ConciertosClub', 'exec_time': '20260308T220011', 'session': '2026_03_08_21_58_Domingo', 'image': 'https://conciertos.club/doc/a/2025/a_miguelrios.jpg', 'url': 'https://conciertos.club/almeria/conciertos/113471-miguel-rios'}
+1 / 2
+Getting https://conciertos.club/almeria/conciertos/113472-the-flaming-shakers-tributo-a-the-beatles
+Sleep 4
+--------------------
+{'id': 'e159485a', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 0, 'event': 'The Flaming Shakers. Tributo a the Beatles', 'slug': 'the-flaming-shakers-tributo-a-the-beatles', 'category': 'conciertos', 'id_venue': None, 'venue': 'Auditorio Ciudad de Vera', 'std_venue': None, 'start_date': '2026-05-02', 'start_time': '20:00:00', 'end_date': '2026-05-02', 'end_time': '__NOT_DEFINIED__', 'description': 'The Flaming Shakers. Tributo a The Beatles. Concierto en Auditorio Ciudad de Vera, Vera (Almería) el Sábado 2 de Mayo de 2026. Es una actuación de estilo Versiones/Tributos.', 'others': {'category': 'Versiones', 'price': '__NOT_FOUND__', 'place_url': 'https://conciertos.club/almeria/locales/auditorio-ciudad-de-vera', 'town': 'Vera (Almería)'}, 'source': 'ConciertosClub', 'exec_time': '20260308T220011', 'session': '2026_03_08_21_58_Domingo', 'image': '__NOT_FOUND__', 'url': 'https://conciertos.club/almeria/conciertos/113472-the-flaming-shakers-tributo-a-the-beatles'}
+****************************
+Saving 2 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_08_21_58_Domingo/0_raw/20260308_2200_ConciertosClub.json
+Saving 2 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

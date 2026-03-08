@@ -1,0 +1,42 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=Entradium
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019ccf7a-e6e7-7d68-af3b-39602a09264c
+
+Running for Almeria: Entradium
+Entradium
+RUNNING SESSION =  2026_03_08_21_58_Domingo
+Starting WebDriver...
+http://localhost:4444/wd/hub
+sleeping 5
+clicking
+sleeping 3
+sleeping 1.5
+sleeping 3
+******
+xpath
+/html/body/header/div[2]/div[1]/div/div/form/div/div/button/span/i
+clicking
+sleeping 3
+sleeping 8
+Getting content
+*** SCRAPED 27 URLS WITH EVENTS **
+New url events = 2
+0 / 2
+Getting https://entradium.com/es/events/pure-dance-sounds-almeria
+Sleep 4
+['25.04.2026', '16:00']
+--------------------
+{'id': 'd3a417a0', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 0, 'event': 'PURE Dance & Sounds Almería', 'slug': 'pure-dance-sounds-almeria', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Zapillo', 'std_venue': None, 'start_date': '2026-04-25', 'start_time': '16:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': "PURE Dance & Sound Almería is one-of-a-kind. It is a substance-free, music-led dance experience to move, connect, and reset. We make it easy to drop into and let loose. No substances, no scrolling, no pretending. Just a room of like-minded people who want to feel good, enjoy the music, and be fully present.PURE Dance & Sound es una experiencia sin sustancias de baile y sound healing en Almería. Un plan divertido para moverte, conectar y recargar energía. Sin alcohol, sin drogas, sin móviles. What to bring Wear comfortable clothes and your favorite deodorant — let's dance hard and smell nice Bring a reusable water bottle (refills are on us) We recommend to bring a warm layer for the sound healing Feel free to bring your own mat or blanket to get cozy, though we have a few to borrow. Most importantly: bring an open mind and your playful energy. Trae ropa cómoda y tu desodorante favorito, tu botella de agua reutilizable, algo de abrigo y tu energía más auténtica.What to expectA stylish, substance-free space to move freely and let loose without the drama or the hangover. The event is beginner friendly (no dance experience needed) and mostly held in English with a Spanish-friendly atmosphere. ✦ 16:00 — Doors Open (chill-out area)✦ Fun warm-up games and connection activities✦ Free dance journey ✦ Grounding and energy downshift✦ One hour live sound healing✦ 21:00 — EndWhen & where is the event?Our space is divided into two areas you can move between freely. The Main Room is the heart of the event for music, movement, and presence. Here, you can dance your own way or take a breather anytime. The Chill-out Room is our social hub to relax, chat, play, and enjoy some water and snacks.Dos espacios: sala de baile y zona chill para socializar. Instagram: https://www.instagram.com/pure.dance.sounds/", 'others': {}, 'source': 'Entradium', 'exec_time': '20260308T220429', 'session': '2026_03_08_21_58_Domingo', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/81550496cbe1489437edd6d7fc705ccad7744cfd/event_m_PURE_dace_and_sounds_almeria.png?v=1772992505', 'url': 'https://entradium.com/es/events/pure-dance-sounds-almeria'}
+1 / 2
+Getting https://entradium.com/es/events/la-caguamaconda-en-el-zaguan
+Sleep 4
