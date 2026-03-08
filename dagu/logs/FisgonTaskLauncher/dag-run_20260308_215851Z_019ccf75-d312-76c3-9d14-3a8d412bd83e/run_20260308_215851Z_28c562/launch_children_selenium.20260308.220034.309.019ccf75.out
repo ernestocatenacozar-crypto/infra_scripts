@@ -1136,3 +1136,697 @@ dag: FisgonTaskSelenium (1m 7s)
 Result: Succeeded
 
 Launching scraper: Entradium
+Succeeded - 2026-03-08T22:04:24Z
+
+dag: FisgonTaskSelenium (44.0s)
+│
+└─tarea_1 (44.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=Entradium
+  │   DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&d
+  │   agRunId=019ccf7a-e6e7-7d68-af3b-39602a09264c
+  │   Running for Almeria: Entradium
+  │   Entradium
+  │   RUNNING SESSION =  2026_03_08_21_58_Domingo
+  │   Starting WebDriver...
+  │   http://localhost:4444/wd/hub
+  │   sleeping 5
+  │   clicking
+  │   sleeping 3
+  │   sleeping 1.5
+  │   sleeping 3
+  │   ******
+  │   xpath
+  │   /html/body/header/div[2]/div[1]/div/div/form/div/div/button/span/i
+  │   clicking
+  │   sleeping 3
+  │   sleeping 8
+  │   Getting content
+  │   *** SCRAPED 27 URLS WITH EVENTS **
+  │   New url events = 2
+  │   0 / 2
+  │   Getting https://entradium.com/es/events/pure-dance-sounds-almeria
+  │   Sleep 4
+  │   ['25.04.2026', '16:00']
+  │   --------------------
+  │   {'id': 'd3a417a0', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'PURE Dance & Sounds Almería', 'slug':
+  │   'pure-dance-sounds-almeria', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   None, 'venue': 'Zapillo', 'std_venue': None, 'start_date': '2026-04-25',
+  │   'start_time': '16:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': "PURE Dance & Sound Almería is
+  │   one-of-a-kind. It is a substance-free, music-led dance experience to
+  │   move, connect, and reset. We make it easy to drop into and let loose. No
+  │   substances, no scrolling, no pretending. Just a room of like-minded
+  │   people who want to feel good, enjoy the music, and be fully present.PURE
+  │   Dance & Sound es una experiencia sin sustancias de baile y sound healing
+  │   en Almería. Un plan divertido para moverte, conectar y recargar
+  │   energía. Sin alcohol, sin drogas, sin móviles. What to bring Wear
+  │   comfortable clothes and your favorite deodorant — let's dance hard and
+  │   smell nice Bring a reusable water bottle (refills are on us) We
+  │   recommend to bring a warm layer for the sound healing Feel free to bring
+  │   your own mat or blanket to get cozy, though we have a few to borrow.
+  │   Most importantly: bring an open mind and your playful energy. Trae ropa
+  │   cómoda y tu desodorante favorito, tu botella de agua reutilizable, algo
+  │   de abrigo y tu energía más auténtica.What to expectA stylish,
+  │   substance-free space to move freely and let loose without the drama or
+  │   the hangover. The event is beginner friendly (no dance experience
+  │   needed) and mostly held in English with a Spanish-friendly atmosphere.
+  │   ✦ 16:00 — Doors Open (chill-out area)✦ Fun warm-up games and
+  │   connection activities✦ Free dance journey ✦ Grounding and energy
+  │   downshift✦ One hour live sound healing✦ 21:00 — EndWhen & where is
+  │   the event?Our space is divided into two areas you can move between
+  │   freely. The Main Room is the heart of the event for music, movement, and
+  │   presence. Here, you can dance your own way or take a breather anytime.
+  │   The Chill-out Room is our social hub to relax, chat, play, and enjoy
+  │   some water and snacks.Dos espacios: sala de baile y zona chill para
+  │   socializar. Instagram: https://www.instagram.com/pure.dance.sounds/",
+  │   'others': {}, 'source': 'Entradium', 'exec_time': '20260308T220429',
+  │   'session': '2026_03_08_21_58_Domingo', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/81550496cbe1
+  │   489437edd6d7fc705ccad7744cfd/event_m_PURE_dace_and_sounds_almeria.png?v=
+  │   1772992505', 'url':
+  │   'https://entradium.com/es/events/pure-dance-sounds-almeria'}
+  │   1 / 2
+  │   Getting https://entradium.com/es/events/la-caguamaconda-en-el-zaguan
+  │   Sleep 4
+  │   ['20.03.2026', '22:00']
+  │   --------------------
+  │   {'id': '8246743c', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'La Caguamaconda en El Zaguán', 'slug':
+  │   'la-caguamaconda-en-el-zaguan', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'trpmPB62', 'venue': 'Cervecería Internacional El Zaguán',
+  │   'std_venue': 'Zaguán', 'start_date': '2026-03-20', 'start_time':
+  │   '22:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Canción de autor contempóranea,
+  │   una nueva forma de asumir y representar la canción en Cuba. Podrás
+  │   disfrutar de una mirada musical cubana diferente donde se mezclan
+  │   teatro, poesía y música. OSCAR SÁNCHEZ (1986, Cuba). Figura destacada
+  │   en el panorama de la canción de autor contemporánea cubana. Ejecuta la
+  │   guitarra, el tres y la marímbula, e incursiona en diversos géneros de
+  │   la música cubana (son, bolero, changüí, nengón), no solo en sus
+  │   formas puras, sino también a través de su hibridación. Su más
+  │   reciente disco, Acqua di Oscaretto (2023) (https://lc.cx/f58fTv),
+  │   producido de forma independiente y con el apoyo de Silvio Rodríguez,
+  │   fue nominado al premio Cubadisco y ha recibido destacadas críticas en
+  │   medios de prensa especializados. Fue seleccionado por la revista
+  │   Magazine AMPM como uno de los diez mejores fonogramas cubanos de 2023.
+  │   Ha compuesto música para obras de teatro e integró la agrupación
+  │   Habana Roots Ensemble, bajo la dirección de Andrés Levín. En
+  │   septiembre de 2019 fue invitado por Silvio Rodríguez a participar en el
+  │   concierto 104 de la Gira Interminable por los Barrios. De julio a
+  │   noviembre de 2022, tras recibir una beca de movilidad de Ibermúsicas,
+  │   realizó su primera gira internacional en México. Allí recibió la
+  │   residencia artística Zyanya, que finalizó con «Caguamacondeo
+  │   pictórico», su primera exposición personal. Tiene, además, tres
+  │   fonogramas producidos de manera independiente –Unknown artist (2015),
+  │   Ojos que te vieron Go, Never te verán Come Back (2017), en
+  │   colaboración con Marbis Manzanet, y Crowdfunding criollo (2020).
+  │   Realizadores audiovisuales de importante trayectoria se han inspirado en
+  │   su creación (http://lc.cx/PYj4Mv).', 'others': {}, 'source':
+  │   'Entradium', 'exec_time': '20260308T220429', 'session':
+  │   '2026_03_08_21_58_Domingo', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/43f570bb28a2
+  │   06383f3c842209c301b531f0a139/event_m_Concierto_Caguamaconda_en_el_Zagu%C
+  │   3%A1n_20_de_marzo_Entradium.jpg?v=1772899851', 'url':
+  │   'https://entradium.com/es/events/la-caguamaconda-en-el-zaguan'}
+  │   ****************************
+  │   Saving 2 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_08_21_58_Domingo/0_raw/2026030
+  │   8_2204_Entradium.json
+  │   Saving 2 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: TodasLasEntradas
+Succeeded - 2026-03-08T22:05:08Z
+
+dag: FisgonTaskSelenium (11.0s)
+│
+└─tarea_1 (11.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=TodasLasEntradas
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019ccf7b-9416-76dc-bc9f-16e3a0bc2950
+      Running for Almeria: TodasLasEntradas
+      TodasLasEntradas
+      RUNNING SESSION =  2026_03_08_21_58_Domingo
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      Getting content
+      *** SCRAPED 17 URLS WITH EVENTS **
+      New url events = 0
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+
+Result: Succeeded
+
+Launching scraper: RedBibliotecas
+Succeeded - 2026-03-08T22:05:19Z
+
+dag: FisgonTaskSelenium (8.0s)
+│
+└─tarea_1 (8.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=RedBibliotecas
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019ccf7b-bd60-7c9f-9f97-03c2934ae1f9
+      Running for Almeria: RedBibliotecas
+      RedBibliotecas
+      RUNNING SESSION =  2026_03_08_21_58_Domingo
+      START
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      page=1
+      Getting content
+      ['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tej
+      iendo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cca-todas.h
+      tml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-172-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-172.html
+      ',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-140-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-141-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy
+      0.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1
+      .html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.ht
+      ml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.htm
+      l']
+      page=2
+      Getting content
+      ['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tej
+      iendo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cca-todas.h
+      tml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-172-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-172.html
+      ',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-140-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-141-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy
+      0.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1
+      .html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.ht
+      ml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-teji
+      endo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cca-todas.h
+      tml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-172-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-172.html
+      ',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-140-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-141-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy
+      0.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1
+      .html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.ht
+      ml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.htm
+      l']
+      page=3
+      Getting content
+      ['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tej
+      iendo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cca-todas.h
+      tml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-172-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-172.html
+      ',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-140-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-141-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy
+      0.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1
+      .html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.ht
+      ml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-teji
+      endo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cca-todas.h
+      tml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-172-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-172.html
+      ',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-140-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-141-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy
+      0.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1
+      .html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.ht
+      ml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-teji
+      endo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cca-todas.h
+      tml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-172-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-172.html
+      ',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-140-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-141-tra
+      ctor.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy
+      0.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1
+      .html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.ht
+      ml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.htm
+      l']
+      *** SCRAPED 48 URLS WITH EVENTS **
+      New url events = 0
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+
+Result: Succeeded
+
+Launching scraper: SalaEmma
+Succeeded - 2026-03-08T22:05:27Z
+
+dag: FisgonTaskSelenium (18.0s)
+│
+└─tarea_1 (18.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout: ... (21 more lines)
+      --------------------
+      {'id': 'fb448336', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Rafa Tornado Punkústico', 'slug':
+      'rafa-tornado-punkustico', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-03-15', 'start_time': '17:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Domingo, 15 de Marzo, 2026 5:00 PM ENTRADA+CONSUMICIÓN 6.00 €',
+      'others': {}, 'source': 'SalaEmma', 'exec_time': '20260308T220531',
+      'session': '2026_03_08_21_58_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/e3be7d69.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '7c34489e', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': '¡corten! Una Comedia De Cine', 'slug':
+      'corten-una-comedia-de-cine', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-04-25', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 25 de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260308T220531', 'session':
+      '2026_03_08_21_58_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/4ea69add.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '113ec8fb', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Menos Es Más (Alumnos Emma)', 'slug':
+      'menos-es-mas-alumnos-emma', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-05-22', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Viernes, 22 de Mayo, 2026 8:00 PM 8.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260308T220531', 'session':
+      '2026_03_08_21_58_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/51c8d2a0.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'dd058614', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Alvarito', 'slug': 'alvarito', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA',
+      'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date':
+      '2026-06-06', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__',
+      'end_time': '__NOT_FOUND__', 'description': 'Sábado, 6 de Junio, 2026
+      8:00 PM 12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time':
+      '20260308T220531', 'session': '2026_03_08_21_58_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/e304fab8.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '9e7951a7', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Humor De Casados (Mariano Ypunto Y La
+      Nena)', 'slug': 'humor-de-casados-mariano-ypunto-y-la-nena', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA',
+      'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date':
+      '2026-06-13', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__',
+      'end_time': '__NOT_FOUND__', 'description': 'Sábado, 13 de Junio, 2026
+      8:00 PM 15.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time':
+      '20260308T220531', 'session': '2026_03_08_21_58_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/ff71f250.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'c718e0ae', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Menos Es Más', 'slug': 'menos-es-mas',
+      'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala
+      EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes',
+      'start_date': '2026-05-22', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Viernes, 22
+      de Mayo, 2026 8:00 PM "Menos es Mas" es un formato diferente para amenizar
+      tu evento. Este proyecto combina rock, jazz, pop...y su finalidad es
+      transmitir emociones a través del instrumento. Juanmi Viñolo ha
+      preparado una selección de temas de grandes clásicos de artistas como
+      Frank Sinatra, Carlos\nSantana, Luis Salinas...\nSi te gusta la guitarra
+      eléctrica, no te lo puedes perder 10.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260308T220531', 'session':
+      '2026_03_08_21_58_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/60dda35a.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '9fd3729b', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Pepe El Caja', 'slug': 'pepe-el-caja',
+      'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala
+      EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes',
+      'start_date': '2026-05-23', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 23
+      de Mayo, 2026 8:00 PM 15.00 €', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260308T220531', 'session': '2026_03_08_21_58_Domingo',
+      'image': '/home/ubuntu/work/event_flask_app/static/img/70782889.jpg',
+      'url': 'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '184d0a93', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Melocotón en Almíbar', 'slug':
+      'melocoton-en-almibar', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-05-09', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 9 de Mayo, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260308T220531', 'session':
+      '2026_03_08_21_58_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/6aff5ceb.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '1aded8cb', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Una De Impro! Dela Mujer', 'slug':
+      'una-de-impro-dela-mujer', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-03-26', 'start_time': '21:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Jueves, 26 de Marzo, 2026 9:00 PM 10.00 € Anticipada: 8.00 € hasta el
+      Miércoles, 25 de Marzo, 2026', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260308T220531', 'session': '2026_03_08_21_58_Domingo',
+      'image': '/home/ubuntu/work/event_flask_app/static/img/39b1c683.jpg',
+      'url': 'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '7fbcb904', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Victor Castigao Descontrolao', 'slug':
+      'victor-castigao-descontrolao', 'category': '__NOT_DEFINIED__',
+      'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela
+      Municipal de Música & Artes', 'start_date': '2026-04-18', 'start_time':
+      '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+      'description': 'Sábado, 18 de Abril, 2026 8:00 PM 12.00 €', 'others':
+      {}, 'source': 'SalaEmma', 'exec_time': '20260308T220531', 'session':
+      '2026_03_08_21_58_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/0edcfa94.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '2e0a11dc', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Manolo Lera', 'slug': 'manolo-lera',
+      'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala
+      EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes',
+      'start_date': '2026-04-11', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 11
+      de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260308T220531', 'session': '2026_03_08_21_58_Domingo',
+      'image': '/home/ubuntu/work/event_flask_app/static/img/db67b001.jpg',
+      'url': 'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'f2faaab0', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'El Mentalista Canalla', 'slug':
+      'el-mentalista-canalla', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-04-24', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Viernes, 24 de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260308T220531', 'session':
+      '2026_03_08_21_58_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/fb91a09e.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'ede99702', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller Más Allá De La Voz', 'slug':
+      'taller-mas-alla-de-la-voz', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-03-21', 'start_time': '09:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 21 de Marzo, 2026 9:00 AM Más allá de la voz es un taller
+      intensivo dirigido a cantantes que desean profundizar en la
+      interpretación emocional y la presencia escénica, transformando sus
+      canciones en experiencias auténticas para el público.\nA lo largo del
+      taller se trabaja la canción desde dentro: la letra, la intención y la
+      emoción, integrando la técnica vocal con recursos expresivos y
+      escénicos. El objetivo es que el cantante no solo cante correctamente,
+      sino que comunique, emocione y conecte desde un lugar verdadero y
+      consciente sobre el escenario. 45.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260308T220531', 'session':
+      '2026_03_08_21_58_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/4a226960.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      Checking unique event dict.
+      Reading /home/ubuntu/data_storage/Almeria/00_master/master_events.json...
+      *******
+      [('Rafa Tornado Punkústico', 'Sala EMMA', '2026-03-15', '17:00:00'),
+      ('¡corten! Una Comedia De Cine', 'Sala EMMA', '2026-04-25', '20:00:00'),
+      ('Melocotón en Almíbar', 'Sala EMMA', '2026-05-09', '20:00:00'),
+      ('Kikín Fernández Y Fernando Labordeta', 'Sala EMMA', '2026-05-16',
+      '20:00:00'), ('Menos Es Más', 'Sala EMMA', '2026-05-22', '20:00:00'),
+      ('Pepe El Caja', 'Sala EMMA', '2026-05-23', '20:00:00'), ('Alvarito',
+      'Sala EMMA', '2026-06-06', '20:00:00'), ('Humor De Casados (Mariano Ypunto
+      Y La Nena)', 'Sala EMMA', '2026-06-13', '20:00:00'), ('Una De Imrpo! Dela
+      Mujer', 'Sala EMMA', '2026-03-26', '21:00:00')]
+      ('Kikín Fernández Y Fernando Labordeta', 'Sala EMMA', '2026-05-16',
+      '20:00:00')
+      ('Christian Garcia (10 Años Dando Guerra)', 'Sala EMMA', '2026-03-14',
+      '20:00:00')
+      ('Rafa Tornado Punkústico', 'Sala EMMA', '2026-03-15', '17:00:00')
+      ('¡corten! Una Comedia De Cine', 'Sala EMMA', '2026-04-25', '20:00:00')
+      ('Menos Es Más (Alumnos Emma)', 'Sala EMMA', '2026-05-22', '20:00:00')
+      ('Alvarito', 'Sala EMMA', '2026-06-06', '20:00:00')
+      ('Humor De Casados (Mariano Ypunto Y La Nena)', 'Sala EMMA', '2026-06-13',
+      '20:00:00')
+      ('Menos Es Más', 'Sala EMMA', '2026-05-22', '20:00:00')
+      ('Pepe El Caja', 'Sala EMMA', '2026-05-23', '20:00:00')
+      ('Melocotón en Almíbar', 'Sala EMMA', '2026-05-09', '20:00:00')
+      ('Una De Impro! Dela Mujer', 'Sala EMMA', '2026-03-26', '21:00:00')
+      ('Victor Castigao Descontrolao', 'Sala EMMA', '2026-04-18', '20:00:00')
+      ('Manolo Lera', 'Sala EMMA', '2026-04-11', '20:00:00')
+      ('El Mentalista Canalla', 'Sala EMMA', '2026-04-24', '20:00:00')
+      ('Taller Más Allá De La Voz', 'Sala EMMA', '2026-03-21', '09:00:00')
+      ****************************
+      Saving 7 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_03_08_21_58_Domingo/0_raw/20260308_
+      2205_SalaEmma.json
+      Saving 7 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+
+Result: Succeeded
+
