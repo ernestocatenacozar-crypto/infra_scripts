@@ -1,4 +1,0 @@
-time=2026-02-04T09:04:24.704Z level=INFO msg="Executing root dag-run" dag=FisgonGetScrapers run-id=019c27e5-4c7e-7d53-bdbf-49d27fe3cffc params=""
-time=2026-02-04T09:04:24.716Z level=INFO msg="DAG run started" name=FisgonGetScrapers run-id=019c27e5-4c7e-7d53-bdbf-49d27fe3cffc attempt-id="" dag=FisgonGetScrapers run-id=019c27e5-4c7e-7d53-bdbf-49d27fe3cffc params="[TARGET_CITY=Jaen GET_SCRAPERS=Selenium 3=DAGU_BASE_URL=]"
-time=2026-02-04T09:04:24.719Z level=INFO msg="Step started" name=FisgonGetScrapers run-id=019c27e5-4c7e-7d53-bdbf-49d27fe3cffc attempt-id="" dag=FisgonGetScrapers run-id=019c27e5-4c7e-7d53-bdbf-49d27fe3cffc step=get_scrapers
-time=2026-02-04T09:04:25.197Z level=INFO msg="DAG run finished" name=FisgonGetScrapers run-id=019c27e5-4c7e-7d53-bdbf-49d27fe3cffc attempt-id="" dag=FisgonGetScrapers run-id=019c27e5-4c7e-7d53-bdbf-49d27fe3cffc status=succeeded started-at=2026-02-04T09:04:24Z finished-at=2026-02-04T09:04:25Z

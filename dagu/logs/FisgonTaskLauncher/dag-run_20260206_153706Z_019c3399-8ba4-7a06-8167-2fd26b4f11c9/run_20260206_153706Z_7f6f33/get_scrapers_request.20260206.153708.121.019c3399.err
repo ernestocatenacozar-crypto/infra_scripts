@@ -1,4 +1,0 @@
-time=2026-02-06T15:37:08.150Z level=INFO msg="Executing root dag-run" dag=FisgonGetScrapers run-id=019c3399-9134-7ebb-bf1a-787f23fa8221 params=""
-time=2026-02-06T15:37:08.162Z level=INFO msg="DAG run started" name=FisgonGetScrapers run-id=019c3399-9134-7ebb-bf1a-787f23fa8221 attempt-id="" dag=FisgonGetScrapers run-id=019c3399-9134-7ebb-bf1a-787f23fa8221 params="[TARGET_CITY=Jaen GET_SCRAPERS=Request 3=DAGU_BASE_URL=]"
-time=2026-02-06T15:37:08.166Z level=INFO msg="Step started" name=FisgonGetScrapers run-id=019c3399-9134-7ebb-bf1a-787f23fa8221 attempt-id="" dag=FisgonGetScrapers run-id=019c3399-9134-7ebb-bf1a-787f23fa8221 step=get_scrapers
-time=2026-02-06T15:37:08.643Z level=INFO msg="DAG run finished" name=FisgonGetScrapers run-id=019c3399-9134-7ebb-bf1a-787f23fa8221 attempt-id="" dag=FisgonGetScrapers run-id=019c3399-9134-7ebb-bf1a-787f23fa8221 status=succeeded started-at=2026-02-06T15:37:08Z finished-at=2026-02-06T15:37:08Z
