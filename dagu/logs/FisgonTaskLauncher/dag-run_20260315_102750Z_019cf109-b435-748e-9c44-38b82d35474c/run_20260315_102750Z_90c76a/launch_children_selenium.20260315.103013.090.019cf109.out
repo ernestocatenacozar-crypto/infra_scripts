@@ -745,3 +745,1361 @@ dag: FisgonTaskSelenium (39.0s)
 Result: Succeeded
 
 Launching scraper: JuntaAndaluciaAgenda
+Succeeded - 2026-03-15T10:32:03Z
+
+dag: FisgonTaskSelenium (3m 21s)
+│
+└─tarea_1 (3m 21s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  ├─stdout: ... (125 more lines)
+  │   11 / 20
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /semana-santa-huercal-overa
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '58a572cd', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Semana Santa Huércal-Overa', 'slug':
+  │   'semana-santa-huercal-overa', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': None, 'venue': 'Varios lugares en el municipio,
+  │   Huércal-Overa, Almería', 'std_venue': None, 'start_date':
+  │   '2026-03-29', 'start_time': '__NOT_FOUND__', 'end_date': '2026-04-05',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'Semana Santa, tiempo de
+  │   fervor que marca incluso la idiosincrasia de los propios habitantes de
+  │   Huércal-Overa, declarada de Interés Turístico Nacional desde 1983, su
+  │   escenificación sobrepasa cualquier frontera de la imaginación.',
+  │   'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/varios-lugares-en-el-munici
+  │   pio-huercal-overa-almeria', 'location2': 'Varios lugares en el
+  │   municipio, Huércal-Overa, Almería', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '29 de Marzo del 2026 - 05 de Abril del 2026,
+  │   Horarios e itinerarios sujetos a cambios, se recomienda consultar
+  │   fuentes locales.', 'town': '__NOT_FOUND__', 'location': ',
+  │   Huércal-Overa. Almería', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260315T103208', 'session':
+  │   '2026_03_15_10_27_Domingo', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/Semana%20Sa
+  │   nta%20Hu%C3%A9rcal-Overa%202026.jpg.webp?itok=BNlEHDy0', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/semana-santa-huercal-overa'}
+  │   12 / 20
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /el-fantastico-viaje-de-jonas-el-espermatozoide-5
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'f0b5b090', 'show': 1, 'in_city': 0, 'one_day': 1,
+  │   'wrong_date_time': 1, 'event': 'El Fantástico Viaje De Jonás El
+  │   Espermatozoide', 'slug':
+  │   'el-fantastico-viaje-de-jonas-el-espermatozoide', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Teatro Municipal de El
+  │   Ejido', 'std_venue': None, 'start_date': '2026-05-02', 'start_time':
+  │   '__NOT_FOUND__', 'end_date': '2026-05-02', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'COMPAÑÍA: El Espejo Negro
+  │   DURACIÓN: 65 minutos Está es la historia de Jonás, un diminuto y
+  │   pequeño espermatozoide que se negaba a concursar en la gran carrera de
+  │   la fecundación. Prefería dormir y vaguear plácidamente en el interior
+  │   del testículo donde vivía. Pero el tiempo se acababa, y nuestro vago y
+  │   dormilón espermatozoide tenía que emprender el viaje más fantástico
+  │   y alucinante de toda su vida. Un viaje sin retorno, lleno de peligros y
+  │   aventuras, en busca del óvulo perdido...', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/teatro-municipal-de-el-ejid
+  │   o', 'location2': 'Teatro Municipal de El Ejido', 'duration': '65',
+  │   'datetime_details': '02 de Mayo del 2026, A las 12:00', 'town':
+  │   '__NOT_FOUND__', 'location': 'Pl. Teniente Arturo Muñoz, 1, Ejido (El).
+  │   Almería', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260315T103208', 'session':
+  │   '2026_03_15_10_27_Domingo', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/external_images/IMG
+  │   0200.JPG.webp?itok=4i-zMh0F', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/el-fantastico-viaje-de-jonas-el-espermatozoide-5'}
+  │   13 / 20
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /semana-santa-de-adra
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '9a194d2b', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Semana Santa De Adra', 'slug':
+  │   'semana-santa-de-adra', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   None, 'venue': 'Varios lugares en el municipio, Adra, Almería',
+  │   'std_venue': None, 'start_date': '2026-03-29', 'start_time':
+  │   '__NOT_FOUND__', 'end_date': '2026-04-05', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'La ciudad de Adra ya lo tiene todo
+  │   preparado para dar comienzo a la Semana Santa del año 2026, que se
+  │   iniciará el Sábado de Pasión y se prolongará hasta el próximo
+  │   Domingo de Resurrección. Una intensa semana de devoción y fervor de
+  │   abderitanos y visitantes tendrán la oportunidad de disfrutar de las
+  │   procesiones promovidas por las tres Hermandades y Cofradías de la
+  │   ciudad, así como de los diferentes actos lúdicos organizados durante
+  │   estos días.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/varios-lugares-en-el-munici
+  │   pio-adra-almeria', 'location2': 'Varios lugares en el municipio, Adra,
+  │   Almería', 'duration': '__NOT_FOUND__', 'datetime_details': '29 de Marzo
+  │   del 2026 - 05 de Abril del 2026, Horarios e itinerarios sujetos a
+  │   cambios, se recomienda consultar fuentes locales.', 'town':
+  │   '__NOT_FOUND__', 'location': ', Adra. Almería', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260315T103208', 'session': '2026_03_15_10_27_Domingo', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/adra.jpg.we
+  │   bp?itok=9VlJT2d3', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/semana-santa-de-adra'}
+  │   14 / 20
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /lawrence-de-arabia
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'd917cec3', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Lawrence De Arabia', 'slug':
+  │   'lawrence-de-arabia', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'TjmFnJdD', 'venue': 'Sala de la Filmoteca de Andalucía en Almería',
+  │   'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date':
+  │   '2026-04-20', 'start_time': '19:00:00', 'end_date': '2026-04-20',
+  │   'end_time': '__NOT_DEFINIED__', 'description': "20 LUNES 19:00 h.
+  │   Paisajes andaluces de cine LAWRENCE DE ARABIA David Lean. Reino Unido.
+  │   1962. 222 min. Color. v.o.s.e. El Cairo, 1917. Durante la Gran Guerra
+  │   (1914-1918), T.E. Lawrence (Peter O'Toole), un conflictivo y enigmático
+  │   oficial británico, es enviado al desierto para participar en una
+  │   campaña de apoyo a los árabes contra Turquía. Él y su amigo Sherif
+  │   Alí (Omar Sharif) pondrán en esta misión toda su alma. Los nativos
+  │   adoran a Lawrence porque ha demostrado sobradamente ser un amante del
+  │   desierto y del pueblo árabe. En cambio, sus superiores británicos
+  │   creen que se ha vuelto loco.", 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/sala-de-la-filmoteca-de-and
+  │   alucia-en-almeria', 'location2': 'Sala de la Filmoteca de Andalucía en
+  │   Almería', 'duration': '__NOT_FOUND__', 'datetime_details': '20 de Abril
+  │   del 2026, 19:00 horas', 'town': '__NOT_FOUND__', 'location': 'C/
+  │   Hermanos Machado, s/n, Almería. Almería', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260315T103208', 'session': '2026_03_15_10_27_Domingo', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/Lawrence-of
+  │   -Arabia.jpg.webp?itok=QQ_4Iw0U', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/lawrence-de-arabia'}
+  │   15 / 20
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /semana-santa-de-albox
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'e367d3e9', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Semana Santa De Albox', 'slug':
+  │   'semana-santa-de-albox', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   None, 'venue': 'Varios lugares en el municipio, Albox, Almería',
+  │   'std_venue': None, 'start_date': '2026-03-29', 'start_time':
+  │   '__NOT_FOUND__', 'end_date': '2026-04-05', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'La Semana Santa de Albox fue
+  │   declarada de interés turístico, y en dicha semana procesionan multitud
+  │   de hermandades por sus calles. Es característica por su Semana Santa
+  │   Infantil.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/varios-lugares-en-el-munici
+  │   pio-albox-almeria', 'location2': 'Varios lugares en el municipio, Albox,
+  │   Almería', 'duration': '__NOT_FOUND__', 'datetime_details': '29 de Marzo
+  │   del 2026 - 05 de Abril del 2026, Horarios e itinerarios sujetos a
+  │   cambios, se recomienda consultar fuentes locales.', 'town':
+  │   '__NOT_FOUND__', 'location': ', Albox. Almería', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260315T103208', 'session': '2026_03_15_10_27_Domingo', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/semana%20sa
+  │   nta%20albox%202026.jpg.webp?itok=aREfEnNT', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/semana-santa-de-albox'}
+  │   16 / 20
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /tablao-de-arcangel-en-almeria
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '28a101d5', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': '"Tablao", De Arcángel, en Almería',
+  │   'slug': 'tablao-de-arcangel-en-almeria', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'q9Mp2j7p', 'venue': 'Conjunto Monumental de la Alcazaba de
+  │   Almería', 'std_venue': 'Alcazaba', 'start_date': '2026-06-05',
+  │   'start_time': '21:15:00', 'end_date': '2026-06-05', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': '"TABLAO", DE ARCÁNGEL, EN ALMERÍA
+  │   La programación del ciclo ‘Andalucía·Flamenco’ se amplía a
+  │   espacios patrimoniales de las ocho provincias andaluzas con la
+  │   incorporación de la gira ‘Tablao’, del cantaor onubense Arcángel.
+  │   Esta propuesta conmemora el décimo aniversario de uno de los proyectos
+  │   más singulares del cantaor y compositor Arcángel: el disco grabado
+  │   hace una década en tablaos de Madrid, Sevilla y Barcelona. Concebido
+  │   como un homenaje a los tablaos flamencos tradicionales, esta producción
+  │   reivindicaba estos espacios como lugares fundamentales para la
+  │   transmisión del flamenco, planteando una experiencia artística basada
+  │   en la cercanía, la autenticidad y la escucha compartida. En esta gira
+  │   especial de aniversario, Arcángel mantiene el espíritu original de
+  │   ‘Tablao’, acompañado por artistas con los que comparte un lenguaje
+  │   artístico común: los guitarristas Francis Gómez y Benito Bernal,
+  │   Antonio y Manuel Montes Saavedra, Los Mellis, en palmas y coros, la
+  │   bailaora Macarena López y el artista invitado El Peca. En Almería, la
+  │   actuación se celebra el día 5 de junio en el Conjunto Monumental de La
+  │   Alcazaba.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/evento/visitas-alcazaba-de-almeria',
+  │   'location2': 'Conjunto Monumental de la Alcazaba de Almería',
+  │   'duration': '__NOT_FOUND__', 'datetime_details': '05 de Junio del 2026,
+  │   21:15 horas.', 'town': '__NOT_FOUND__', 'location': 'Calle Almanzor,
+  │   s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source':
+  │   'JuntaAndaluciaAgenda', 'exec_time': '20260315T103208', 'session':
+  │   '2026_03_15_10_27_Domingo', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/TABLAO.jpg.
+  │   webp?itok=BRdKY_d3', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/tablao-de-arcangel-en-almeria'}
+  │   17 / 20
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /gira-tablao-de-arcangel
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'b4dce39d', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Gira "Tablao", De Arcángel', 'slug':
+  │   'gira-tablao-de-arcangel', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   None, 'venue': 'Fundación Cajasol', 'std_venue': None, 'start_date':
+  │   '2026-03-19', 'start_time': '__NOT_FOUND__', 'end_date': '2026-09-26',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'GIRA "TABLAO", DE
+  │   ARCÁNGEL La programación del ciclo ‘Andalucía·Flamenco’ se
+  │   amplía a espacios patrimoniales de las ocho provincias andaluzas con la
+  │   incorporación de la gira ‘Tablao’, del cantaor onubense Arcángel.
+  │   Esta propuesta conmemora el décimo aniversario de uno de los proyectos
+  │   más singulares del cantaor y compositor Arcángel: el disco grabado
+  │   hace una década en tablaos de Madrid, Sevilla y Barcelona. Concebido
+  │   como un homenaje a los tablaos flamencos tradicionales, esta producción
+  │   reivindicaba estos espacios como lugares fundamentales para la
+  │   transmisión del flamenco, planteando una experiencia artística basada
+  │   en la cercanía, la autenticidad y la escucha compartida. En esta gira
+  │   especial de aniversario, Arcángel mantiene el espíritu original de
+  │   ‘Tablao’, acompañado por artistas con los que comparte un lenguaje
+  │   artístico común: los guitarristas Francis Gómez y Benito Bernal,
+  │   Antonio y Manuel Montes Saavedra, Los Mellis, en palmas y coros, la
+  │   bailaora Macarena López y el artista invitado El Peca. Este es el
+  │   calendario de la gira: 19 de marzo : Patio de la sede de la Fundación
+  │   Cajasol en Sevilla , en la antigua Real Audiencia de Grados. En
+  │   colaboración con la Fundación Cajasol. Entradas en este enlace . 22 de
+  │   mayo : Museo de Málaga - Palacio de la Aduana. Entradas en este enlace
+  │   28 de mayo : Corral del Carbón. Granada . 29 de mayo : Plaza de los
+  │   Pueblos del Campus de Las Lagunillas, en Jaén . En colaboración con la
+  │   Universidad de Jaén. 5 de junio : Alcazaba de Almería . Entradas en
+  │   este enlace 13 de junio : sede de las Casas Consistoriales de Huelva .
+  │   En colaboración con el Ayuntamiento onubense. 19 de junio : Casa
+  │   Pemán, en Cádiz . Con la colaboración de la Fundación Cajasol.
+  │   Entradas en este enlace. 26 de septiembre : Las Salinas de Huelva . En
+  │   colaboración con el Ayuntamiento onubense.', 'others': {'location_url':
+  │   '__NOT_FOUND__', 'location2': 'Fundación Cajasol Museo de Málaga.
+  │   Palacio de la Aduana Corral del Carbón Campus "Las Lagunillas" Conjunto
+  │   Monumental de la Alcazaba de Almería', 'duration': '__NOT_FOUND__',
+  │   'datetime_details': '19 de Marzo del 2026 - 26 de Septiembre del 2026',
+  │   'town': '__NOT_FOUND__', 'location': 'Múltiples espacios',
+  │   'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda',
+  │   'exec_time': '20260315T103208', 'session': '2026_03_15_10_27_Domingo',
+  │   'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/TABLAO_1080
+  │   .jpg.webp?itok=zHhvqIRW', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/gira-tablao-de-arcangel'}
+  │   18 / 20
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /semana-santa-de-cuevas-de-almanzora
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '8e4f58f5', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Semana Santa De Cuevas De Almanzora',
+  │   'slug': 'semana-santa-de-cuevas-de-almanzora', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Añadir a Google
+  │   Calendar', 'std_venue': None, 'start_date': '2026-03-29', 'start_time':
+  │   '__NOT_FOUND__', 'end_date': '2026-04-05', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'La Semana Santa es una de las
+  │   celebraciones religiosas más importantes en España y, en Cuevas del
+  │   Almanzora, no es la excepción. Esta localidad situada en la provincia
+  │   de Almería, en la región de Andalucía, se caracteriza por su profundo
+  │   arraigo a las tradiciones y su fervor religioso durante esta época del
+  │   año.', 'others': {'location_url': '__NOT_FOUND__', 'location2': '',
+  │   'duration': '__NOT_FOUND__', 'datetime_details': '29 de Marzo del 2026 -
+  │   05 de Abril del 2026, Horarios e itinerarios sujetos a cambios, se
+  │   recomienda consultar fuentes locales.', 'town': '__NOT_FOUND__',
+  │   'location': 'agenda.aaiicc@juntadeandalucia.es', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260315T103208', 'session': '2026_03_15_10_27_Domingo', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/semana%20sn
+  │   ta%20cuevas%20almanzora%202026.png.webp?itok=4ilBkq35', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/semana-santa-de-cuevas-de-almanzora'}
+  │   19 / 20
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /semana-santa-velez-rubio
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '76f2c2a1', 'show': 1, 'in_city': 0, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Semana Santa Vélez Rubio', 'slug':
+  │   'semana-santa-velez-rubio', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   None, 'venue': 'Varios lugares en el municipio, Vélez-Rubio, Almería',
+  │   'std_venue': None, 'start_date': '2026-03-29', 'start_time':
+  │   '__NOT_FOUND__', 'end_date': '2026-04-05', 'end_time':
+  │   '__NOT_DEFINIED__', 'description': 'Los días de Semana Santa, se viven
+  │   intensamente en Vélez-Rubio, desde la mañana a la noche, sin
+  │   interrupción ni tregua, en una desbordante sucesión de acontecimientos
+  │   en los que el espectador no es ajeno, sino, por el contrario, actor
+  │   principal de todo cuanto se desarrolla en su alrededor.', 'others':
+  │   {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/espacios/varios-lugares-en-el-munici
+  │   pio-velez-rubio-almeria', 'location2': 'Enlace para consultar horarios e
+  │   itinerarios Varios lugares en el municipio, Vélez-Rubio, Almería',
+  │   'duration': '__NOT_FOUND__', 'datetime_details': '29 de Marzo del 2026 -
+  │   05 de Abril del 2026, Horarios e itinerarios sujetos a cambios, se
+  │   recomienda consultar fuentes locales.', 'town': '__NOT_FOUND__',
+  │   'location': ', Vélez-Rubio. Almería', 'duration_days':
+  │   '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time':
+  │   '20260315T103208', 'session': '2026_03_15_10_27_Domingo', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/2026-03/velez_rubio
+  │   _0.jpg.webp?itok=h-VjfirD', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/semana-santa-velez-rubio'}
+  │   ****************************
+  │   Saving 20 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_15_10_27_Domingo/0_raw/2026031
+  │   5_1032_JuntaAndaluciaAgenda.json
+  │   Saving 20 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: ClassicJazz
+Succeeded - 2026-03-15T10:35:25Z
+
+dag: FisgonTaskSelenium (1m 22s)
+│
+└─tarea_1 (1m 22s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  ├─stdout: ... (36 more lines)
+  │   2026-03-20T18:00:00 2026-03-20T20:30:00
+  │   --------------------
+  │   {'id': '0fc89900', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'St. Patrick Day', 'slug':
+  │   'st-patrick-day', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain',
+  │   'start_date': '2026-03-20', 'start_time': '18:00:00', 'end_date':
+  │   '2026-03-20', 'end_time': '20:30:00', 'description': 'Port of Spain |
+  │   Entrada Libre St. Patrick’s Day en Port of Spain Ven a disfrutar de un
+  │   rato de buena música, ambiente festivo y espíritu irlandés en Port of
+  │   Spain. Celebra con nosotros el St. Patrick’s Day con ritmo, energía y
+  │   buen rollo. Una noche perfecta para reunirse con amigos, brindar y
+  │   dejarse llevar por la música.', 'others': {'price': '__NOT_DEFINIED__',
+  │   'category': 'Programación', 'location_url':
+  │   'https://clasijazz.com/local/port-of-spain/', 'location': 'Parque
+  │   Nicolás Salmeron 20, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260315T103530', 'session': '2026_03_15_10_27_Domingo', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/03/festa-di-san-patrizio.
+  │   jpg', 'url':
+  │   'https://clasijazz.com/evento/st-patrick-day-port-of-spain/'}
+  │   1 / 8
+  │   Getting https://clasijazz.com/evento/festival-de-primavera/
+  │   Sleep 4
+  │   2026-03-26T19:00:00 2026-03-26T21:00:00
+  │   --------------------
+  │   {'id': 'cfc2f8bb', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Festival De Primavera', 'slug':
+  │   'festival-de-primavera', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz',
+  │   'start_date': '2026-03-26', 'start_time': '19:00:00', 'end_date':
+  │   '2026-03-26', 'end_time': '21:00:00', 'description': 'Sala Principal |
+  │   Entrada Libre', 'others': {'price': '__NOT_DEFINIED__', 'category':
+  │   'Programación', 'location_url':
+  │   'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro
+  │   Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260315T103530', 'session': '2026_03_15_10_27_Domingo', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/03/4.jpg', 'url':
+  │   'https://clasijazz.com/evento/festival-de-primavera/'}
+  │   2 / 8
+  │   Getting
+  │   https://clasijazz.com/evento/magia-de-cerca-muy-de-cerca-port-of-spain-2
+  │   /
+  │   Sleep 4
+  │   2026-03-14T18:00:00 2026-03-14T20:00:00
+  │   --------------------
+  │   {'id': 'a8c2efbc', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Magia De Cerca, Muy De Cerca', 'slug':
+  │   'magia-de-cerca-muy-de-cerca', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of
+  │   Spain', 'start_date': '2026-03-14', 'start_time': '18:00:00',
+  │   'end_date': '2026-03-14', 'end_time': '20:00:00', 'description': 'Port
+  │   of Spain | 7€ NS / 3€ S ENtradas', 'others': {'price':
+  │   '__NOT_DEFINIED__', 'category': 'Programación', 'location_url':
+  │   'https://clasijazz.com/local/port-of-spain/', 'location': 'Parque
+  │   Nicolás Salmeron 20, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260315T103530', 'session': '2026_03_15_10_27_Domingo', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03
+  │   -10-at-14.26.50.jpeg', 'url':
+  │   'https://clasijazz.com/evento/magia-de-cerca-muy-de-cerca-port-of-spain-
+  │   2/'}
+  │   3 / 8
+  │   Getting
+  │   https://clasijazz.com/evento/ii-show-literario-entre-libros-y-risas/
+  │   Sleep 4
+  │   2026-04-22T20:00:00 2026-04-22T21:30:00
+  │   --------------------
+  │   {'id': '695f2482', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'II Show Literario – Entre Libros Y
+  │   Risas', 'slug': 'ii-show-literario-entre-libros-y-risas', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz',
+  │   'std_venue': 'Clasijazz', 'start_date': '2026-04-22', 'start_time':
+  │   '20:00:00', 'end_date': '2026-04-22', 'end_time': '21:30:00',
+  │   'description': 'Sala Principal | Entrada Libre ¡Vuelve la magia de las
+  │   letras a Almería! ✍️✨ Te invitamos al II Show Literario: Entre
+  │   libros y risas, una noche donde la literatura se quita la corbata para
+  │   disfrutar de un ambiente único. Tendremos de todo: •\u2060 \u2060
+  │   Entrega de premios del segundo certamen literario. •\u2060 \u2060
+  │   Encuentro con escritores almerienses de ayer y hoy. •\u2060 \u2060
+  │   Stand de nuestra librería colaboradora. ¿Dónde? En Clasijazz
+  │   (@clasijazz). ¿Cuándo? 22 de abril. Hora: 20:00 h. Organizado por
+  │   USTEA Enseñanza Almería. ¡No dejes que te lo cuenten, ven a vivirlo!
+  │   #CulturaAlmeria #Literatura #Clasijazz #USTEA #ShowLiterario
+  │   #AlmeriaEventos', 'others': {'price': '__NOT_DEFINIED__', 'category':
+  │   'Programación', 'location_url':
+  │   'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro
+  │   Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260315T103530', 'session': '2026_03_15_10_27_Domingo', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/03/IMG-20260311-WA0006.jp
+  │   g', 'url':
+  │   'https://clasijazz.com/evento/ii-show-literario-entre-libros-y-risas/'}
+  │   4 / 8
+  │   Getting https://clasijazz.com/evento/pepe-cespedes-y-alvarito-2/
+  │   Sleep 4
+  │   2026-04-17T20:00:00 2026-04-17T21:30:00
+  │   --------------------
+  │   {'id': '3b98cc57', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Pepe Céspedes Y Alvarito', 'slug':
+  │   'pepe-cespedes-y-alvarito', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz',
+  │   'start_date': '2026-04-17', 'start_time': '20:00:00', 'end_date':
+  │   '2026-04-17', 'end_time': '21:30:00', 'description': '12 € NS / 5 €
+  │   S Sala Principal Pepe Céspedes y Alvarito regresan al Clasijazz para
+  │   volver a llenar la sala de carcajadas con sus hilarantes sketches y
+  │   monólogos. Si la última vez te lo perdiste… Esta es tu ocasión!',
+  │   'others': {'price': '5,00€ – 12,00€', 'category': 'Programación',
+  │   'location_url': 'https://clasijazz.com/local/sede-clasijazz/',
+  │   'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz',
+  │   'exec_time': '20260315T103530', 'session': '2026_03_15_10_27_Domingo',
+  │   'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/03/e2ca425d-fd83-40f5-8e8
+  │   1-60a51507faf8.jpg', 'url':
+  │   'https://clasijazz.com/evento/pepe-cespedes-y-alvarito-2/'}
+  │   5 / 8
+  │   Getting https://clasijazz.com/evento/anaut/
+  │   Sleep 4
+  │   2026-05-01T22:00:00 2026-05-01T23:30:00
+  │   --------------------
+  │   {'id': '454016fe', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Anaut', 'slug': 'anaut', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz',
+  │   'std_venue': 'Clasijazz', 'start_date': '2026-05-01', 'start_time':
+  │   '22:00:00', 'end_date': '2026-05-01', 'end_time': '23:30:00',
+  │   'description': 'Sala Principal | 15€ NS / 7€ S Biografía ANAUT nace
+  │   en 2013 en Ámsterdam durante los estudios de Alberto Anaut en el
+  │   Conservatorium van Amsterdam. Ese mismo año publica su primer disco,
+  │   “140”, que logra financiarse mediante micro-mecenazgo. El título
+  │   hace referencia al número de personas que hicieron posible el proyecto.
+  │   Acompañado por otros siete músicos procedentes de Ámsterdam, Palermo,
+  │   Pamplona, Barcelona y Toledo, la banda presenta el disco en la Sala
+  │   Caracol, agotando todas las entradas. Posteriormente realizan una gira
+  │   por España durante los dos años siguientes. Antes de lanzar su segundo
+  │   disco, publican un single en vinilo de siete pulgadas que incluye su
+  │   tema más popular, “When Your Days Grow Long”, que acumula más de
+  │   1,6 millones de reproducciones en Spotify. En la cara B se incluye una
+  │   versión del tema Black Is Black, interpretado originalmente por Los
+  │   Bravos. Su segundo LP, “Time Goes On” (2016), se presenta en la Sala
+  │   Joy Eslava, agotando también todas las localidades para esa noche.
+  │   “Time Goes On” obtiene varios reconocimientos: Premio Pop Eye al
+  │   Mejor Artista de Música Negra. Premios MIN al Mejor Disco de Músicas
+  │   del Mundo. Premio Franklin de la revista Enlace Funk al mejor cantante
+  │   masculino para Alberto Anaut. La banda participa además en el programa
+  │   Girando Por Salas, realizando una extensa gira durante los dos años
+  │   siguientes. En este LP colaboran artistas como el armonicista Antonio
+  │   Serrano y el cantante y multiinstrumentista residente en Nueva Orleans,
+  │   Jon Cleary. El tercer LP, titulado “Hello There”, llega en 2018. Se
+  │   presenta en el Teatro Barceló y la gira por España se prolonga durante
+  │   los tres años siguientes. La banda es además seleccionada para el
+  │   programa Artistas en Ruta AIE. En estos álbumes —“140”, “Time
+  │   Goes On” y “Hello There”— ANAUT explora la conexión entre la
+  │   música soul, la americana y el pop, desarrollando un sonido propio
+  │   influenciado por la tradición de la música negra y el rock de raíz.
+  │   https://www.rtve.es/play/videos/los-conciertos-de-radio-3-en-la-2/anaut/
+  │   16642421/', 'others': {'price': '7,00€ – 15,00€', 'category':
+  │   'Programación', 'location_url':
+  │   'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro
+  │   Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260315T103530', 'session': '2026_03_15_10_27_Domingo', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/03/Foto-de-Jaime-Lahoz-Ho
+  │   rizontal.jpg-scaled.jpeg', 'url': 'https://clasijazz.com/evento/anaut/'}
+  │   6 / 8
+  │   Getting
+  │   https://clasijazz.com/evento/st-patrick-los-catopuma-port-of-spain/
+  │   Sleep 4
+  │   2026-03-20T18:00:00 2026-03-20T22:00:00
+  │   --------------------
+  │   {'id': '8d014a58', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Los Catopuma', 'slug': 'los-catopuma',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'ddgm4gQP', 'venue': 'Port
+  │   Of Spain', 'std_venue': 'Port Of Spain', 'start_date': '2026-03-20',
+  │   'start_time': '18:00:00', 'end_date': '2026-03-20', 'end_time':
+  │   '22:00:00', 'description': '10€ NS / 3€ S | Port of Spain Entradas
+  │   Celebra St Patrick, con música irlandesa y actuación de Los Catopuma.
+  │   Los Catopuma. Desde 2013, está banda almeriense recorre algunos de los
+  │   mejores clásicos de la música anglosajona desde Johnny Cash, Elvis,
+  │   Dylan, The Band o Rolling Stones; en su mayoría canciones de gente
+  │   muerta. Al mismo tiempo incorporan un porcentaje variable de temas
+  │   propios muy en la línea de los anteriores. Los Catopuma serán:
+  │   Abelardo, guitarra y voz; Ignacio Carasa, bajo; Miguel Ángel
+  │   Fernández, teclados; José Luis Gayo, batería.', 'others': {'price':
+  │   '__NOT_DEFINIED__', 'category': 'Programación', 'location_url':
+  │   'https://clasijazz.com/local/port-of-spain/', 'location': 'Parque
+  │   Nicolás Salmeron 20, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260315T103530', 'session': '2026_03_15_10_27_Domingo', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03
+  │   -10-at-17.20.58.jpeg', 'url':
+  │   'https://clasijazz.com/evento/st-patrick-los-catopuma-port-of-spain/'}
+  │   7 / 8
+  │   Getting
+  │   https://clasijazz.com/evento/combo-park-jazztabien-port-of-spain/
+  │   Sleep 4
+  │   2026-03-27T21:30:00 2026-03-27T23:00:00
+  │   --------------------
+  │   {'id': '6f5570c3', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Combo Park+ Jazztabien!', 'slug':
+  │   'combo-park-jazztabien', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain',
+  │   'start_date': '2026-03-27', 'start_time': '21:30:00', 'end_date':
+  │   '2026-03-27', 'end_time': '23:00:00', 'description': 'Port of Spain |
+  │   Entrada Libre', 'others': {'price': '__NOT_DEFINIED__', 'category':
+  │   'Programación', 'location_url':
+  │   'https://clasijazz.com/local/port-of-spain/', 'location': 'Parque
+  │   Nicolás Salmeron 20, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260315T103530', 'session': '2026_03_15_10_27_Domingo', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/03/5c499731-278a-45bd-a61
+  │   f-766c40a54ac8.jpg', 'url':
+  │   'https://clasijazz.com/evento/combo-park-jazztabien-port-of-spain/'}
+  │   ****************************
+  │   Saving 8 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_15_10_27_Domingo/0_raw/2026031
+  │   5_1035_ClassicJazz.json
+  │   Saving 8 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: Entradium
+Succeeded - 2026-03-15T10:36:47Z
+
+dag: FisgonTaskSelenium (42.0s)
+│
+└─tarea_1 (42.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=Entradium
+  │   DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&d
+  │   agRunId=019cf111-e50f-7df0-b4ce-794bd3c09d24
+  │   Running for Almeria: Entradium
+  │   Entradium
+  │   RUNNING SESSION =  2026_03_15_10_27_Domingo
+  │   Starting WebDriver...
+  │   http://localhost:4444/wd/hub
+  │   sleeping 5
+  │   clicking
+  │   sleeping 3
+  │   sleeping 1.5
+  │   sleeping 3
+  │   ******
+  │   xpath
+  │   /html/body/header/div[2]/div[1]/div/div/form/div/div/button/span/i
+  │   clicking
+  │   sleeping 3
+  │   sleeping 8
+  │   Getting content
+  │   *** SCRAPED 25 URLS WITH EVENTS **
+  │   New url events = 1
+  │   0 / 1
+  │   Getting
+  │   https://entradium.com/es/events/puroindie-en-berlin-social-club-almeria
+  │   Sleep 4
+  │   ['12.06.2026', '21:30']
+  │   --------------------
+  │   {'id': '90e8c89b', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'PuroIndie en Berlín Social Club
+  │   Almería', 'slug': 'puroindie-en-berlin-social-club-almeria',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NmPqTrh6', 'venue':
+  │   'Berlín social Club', 'std_venue': 'Berlin Social Club', 'start_date':
+  │   '2026-06-12', 'start_time': '21:30:00', 'end_date': '__NOT_DEFINIED__',
+  │   'end_time': '__NOT_DEFINIED__', 'description': 'De nuevo en Almería ,
+  │   PuroIndie el mejor tributo indie nacional repasando los mejores himnos
+  │   de siempre y los éxitos recientes de bandas como Arde Bogotá, Viva
+  │   Suecia, Los Planetas o Supersubmarina entre otros .', 'others': {},
+  │   'source': 'Entradium', 'exec_time': '20260315T103653', 'session':
+  │   '2026_03_15_10_27_Domingo', 'image':
+  │   'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/d021dd418a39
+  │   2e6fa64ffe2b9bd659f69e2ee4a0/event_m_1773058475806.jpg?v=1773225042',
+  │   'url':
+  │   'https://entradium.com/es/events/puroindie-en-berlin-social-club-almeria
+  │   '}
+  │   ****************************
+  │   Saving 1 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_15_10_27_Domingo/0_raw/2026031
+  │   5_1036_Entradium.json
+  │   Saving 1 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'entradium.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: TodasLasEntradas
+Succeeded - 2026-03-15T10:37:29Z
+
+dag: FisgonTaskSelenium (8.0s)
+│
+└─tarea_1 (8.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=TodasLasEntradas
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019cf112-86cc-7d15-bb89-27916795a52d
+      Running for Almeria: TodasLasEntradas
+      TodasLasEntradas
+      RUNNING SESSION =  2026_03_15_10_27_Domingo
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      Getting content
+      *** SCRAPED 15 URLS WITH EVENTS **
+      New url events = 0
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+
+Result: Succeeded
+
+Launching scraper: RedBibliotecas
+Succeeded - 2026-03-15T10:37:37Z
+
+dag: FisgonTaskSelenium (9.0s)
+│
+└─tarea_1 (9.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=RedBibliotecas
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019cf112-a6af-77de-8b56-6eeeac2301dd
+      Running for Almeria: RedBibliotecas
+      RedBibliotecas
+      RUNNING SESSION =  2026_03_15_10_27_Domingo
+      START
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      page=1
+      Getting content
+      ['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tej
+      iendo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimn
+      asia.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy
+      0.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1
+      .html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.ht
+      ml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.htm
+      l']
+      page=2
+      Getting content
+      ['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tej
+      iendo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimn
+      asia.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy
+      0.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1
+      .html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.ht
+      ml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-teji
+      endo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimn
+      asia.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy
+      0.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1
+      .html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.ht
+      ml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.htm
+      l']
+      page=3
+      Getting content
+      ['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tej
+      iendo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimn
+      asia.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy
+      0.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1
+      .html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.ht
+      ml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-teji
+      endo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimn
+      asia.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy
+      0.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1
+      .html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.ht
+      ml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-teji
+      endo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimn
+      asia.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy
+      0.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.htm
+      l',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1
+      .html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.ht
+      ml',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-gara
+      batos.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.htm
+      l']
+      *** SCRAPED 33 URLS WITH EVENTS **
+      New url events = 1
+      0 / 1
+      Getting content
+      --------------------
+      {'id': 'efa4f552', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller Para Adultos "Gimnasia Cerebral"',
+      'slug': 'taller-para-adultos-gimnasia-cerebral', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '3mrLgtRB', 'venue': 'Biblioteca Central
+      José María Artero', 'std_venue': 'Biblioteca Central José María
+      Artero', 'start_date': '2026-03-18', 'start_time': '11:30:00', 'end_date':
+      '__NOT_DEFINIED__', 'end_time': '13:00:00', 'description': 'Mantén activo
+      tu cerebro de una forma fácil y sencilla. Te contaremos ejercicios
+      básicos y rutinas para que tu cerebro tenga un buen rendimiento.
+      ATENCIÓN: La inscripción al taller se abrirá una semana antes de su
+      inicio. Solo podrán asistir los usuarios con carné de biblioteca, que
+      estén previamente inscritos y dentro del cupo que el aforo permita. SE
+      RUEGA PUNTUALIDAD', 'others': '__NOT_DEFINIED__', 'source':
+      'RedBibliotecas', 'exec_time': '20260315T103741', 'session':
+      '2026_03_15_10_27_Domingo', 'image':
+      'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/24
+      0/dam/almeria/ACTIVIDADES/MARZO%2026%20BASICOS/11.png/jcr%3Acontent/11.png
+      ', 'url':
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimn
+      asia.html'}
+      ****************************
+      Saving 1 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_03_15_10_27_Domingo/0_raw/20260315_
+      1037_RedBibliotecas.json
+      Saving 1 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+
+Result: Succeeded
+
+Launching scraper: SalaEmma
+Succeeded - 2026-03-15T10:37:46Z
+
+dag: FisgonTaskSelenium (18.0s)
+│
+└─tarea_1 (18.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout: ... (18 more lines)
+      {'id': 'be4d3a5b', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Humor De Casados (Mariano Ypunto Y La
+      Nena)', 'slug': 'humor-de-casados-mariano-ypunto-y-la-nena', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA',
+      'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date':
+      '2026-06-13', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__',
+      'end_time': '__NOT_FOUND__', 'description': 'Sábado, 13 de Junio, 2026
+      8:00 PM 15.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time':
+      '20260315T103750', 'session': '2026_03_15_10_27_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/f17bfc24.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'c7e31f18', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Una De Impro! Dela Mujer', 'slug':
+      'una-de-impro-dela-mujer', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-03-26', 'start_time': '21:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Jueves, 26 de Marzo, 2026 9:00 PM 10.00 € Anticipada: 8.00 € hasta el
+      Miércoles, 25 de Marzo, 2026', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260315T103750', 'session': '2026_03_15_10_27_Domingo',
+      'image': '/home/ubuntu/work/event_flask_app/static/img/f800cb88.jpg',
+      'url': 'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '3df582ee', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': '¡corten! Una Comedia De Cine', 'slug':
+      'corten-una-comedia-de-cine', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-04-25', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 25 de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260315T103750', 'session':
+      '2026_03_15_10_27_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/b95908e0.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '09c11f2d', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Victor Castigao Descontrolao', 'slug':
+      'victor-castigao-descontrolao', 'category': '__NOT_DEFINIED__',
+      'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela
+      Municipal de Música & Artes', 'start_date': '2026-04-18', 'start_time':
+      '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+      'description': 'Sábado, 18 de Abril, 2026 8:00 PM 12.00 €', 'others':
+      {}, 'source': 'SalaEmma', 'exec_time': '20260315T103750', 'session':
+      '2026_03_15_10_27_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/1079fdf3.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '4762c6d6', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Melocotón en Almíbar', 'slug':
+      'melocoton-en-almibar', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-05-09', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 9 de Mayo, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260315T103750', 'session':
+      '2026_03_15_10_27_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/573db396.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'd52ef575', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Alvarito', 'slug': 'alvarito', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA',
+      'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date':
+      '2026-06-06', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__',
+      'end_time': '__NOT_FOUND__', 'description': 'Sábado, 6 de Junio, 2026
+      8:00 PM 12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time':
+      '20260315T103750', 'session': '2026_03_15_10_27_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/0859d629.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'fe601412', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller Más Allá De La Voz', 'slug':
+      'taller-mas-alla-de-la-voz', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-03-21', 'start_time': '09:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 21 de Marzo, 2026 9:00 AM Más allá de la voz es un taller
+      intensivo dirigido a cantantes que desean profundizar en la
+      interpretación emocional y la presencia escénica, transformando sus
+      canciones en experiencias auténticas para el público.\nA lo largo del
+      taller se trabaja la canción desde dentro: la letra, la intención y la
+      emoción, integrando la técnica vocal con recursos expresivos y
+      escénicos. El objetivo es que el cantante no solo cante correctamente,
+      sino que comunique, emocione y conecte desde un lugar verdadero y
+      consciente sobre el escenario. 45.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260315T103750', 'session':
+      '2026_03_15_10_27_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/9413a9d6.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'a973934a', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Pepe El Caja', 'slug': 'pepe-el-caja',
+      'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala
+      EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes',
+      'start_date': '2026-05-23', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 23
+      de Mayo, 2026 8:00 PM 15.00 €', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260315T103750', 'session': '2026_03_15_10_27_Domingo',
+      'image': '/home/ubuntu/work/event_flask_app/static/img/dca75ede.jpg',
+      'url': 'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '9fe262cc', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Kikín Fernández Y Fernando Labordeta',
+      'slug': 'kikin-fernandez-y-fernando-labordeta', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA',
+      'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date':
+      '2026-05-16', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__',
+      'end_time': '__NOT_FOUND__', 'description': 'Sábado, 16 de Mayo, 2026
+      8:00 PM 12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time':
+      '20260315T103750', 'session': '2026_03_15_10_27_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/0f469474.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'ee4dff47', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Menos Es Más (Alumnos Emma)', 'slug':
+      'menos-es-mas-alumnos-emma', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-05-22', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Viernes, 22 de Mayo, 2026 8:00 PM 8.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260315T103750', 'session':
+      '2026_03_15_10_27_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/bc82bc13.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '48e14c3c', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'El Mentalista Canalla', 'slug':
+      'el-mentalista-canalla', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-04-24', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Viernes, 24 de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260315T103750', 'session':
+      '2026_03_15_10_27_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/80af9543.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'c2c565d9', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Menos Es Más', 'slug': 'menos-es-mas',
+      'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala
+      EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes',
+      'start_date': '2026-05-22', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Viernes, 22
+      de Mayo, 2026 8:00 PM "Menos es Mas" es un formato diferente para amenizar
+      tu evento. Este proyecto combina rock, jazz, pop...y su finalidad es
+      transmitir emociones a través del instrumento. Juanmi Viñolo ha
+      preparado una selección de temas de grandes clásicos de artistas como
+      Frank Sinatra, Carlos\nSantana, Luis Salinas...\nSi te gusta la guitarra
+      eléctrica, no te lo puedes perder 10.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260315T103750', 'session':
+      '2026_03_15_10_27_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/2474cb48.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'c224c763', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Rafa Tornado Punkústico', 'slug':
+      'rafa-tornado-punkustico', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-03-15', 'start_time': '17:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Domingo, 15 de Marzo, 2026 5:00 PM ENTRADA+CONSUMICIÓN 6.00 €',
+      'others': {}, 'source': 'SalaEmma', 'exec_time': '20260315T103750',
+      'session': '2026_03_15_10_27_Domingo', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/99a87710.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'ec23e7f2', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Manolo Lera', 'slug': 'manolo-lera',
+      'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala
+      EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes',
+      'start_date': '2026-04-11', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 11
+      de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260315T103750', 'session': '2026_03_15_10_27_Domingo',
+      'image': '/home/ubuntu/work/event_flask_app/static/img/46b80817.jpg',
+      'url': 'https://entradasemma.azurewebsites.net/'}
+      Checking unique event dict.
+      Reading /home/ubuntu/data_storage/Almeria/00_master/master_events.json...
+      *******
+      [('Rafa Tornado Punkústico', 'Sala EMMA', '2026-03-15', '17:00:00'),
+      ('Una De Imrpo! Dela Mujer', 'Sala EMMA', '2026-03-26', '21:00:00'),
+      ('Victor Castigao Descontrolao', 'Sala EMMA', '2026-04-18', '20:00:00'),
+      ('¡corten! Una Comedia De Cine', 'Sala EMMA', '2026-04-25', '20:00:00'),
+      ('Melocotón en Almíbar', 'Sala EMMA', '2026-05-09', '20:00:00'),
+      ('Kikín Fernández Y Fernando Labordeta', 'Sala EMMA', '2026-05-16',
+      '20:00:00'), ('Menos Es Más', 'Sala EMMA', '2026-05-22', '20:00:00'),
+      ('Pepe El Caja', 'Sala EMMA', '2026-05-23', '20:00:00'), ('Alvarito',
+      'Sala EMMA', '2026-06-06', '20:00:00'), ('Humor De Casados (Mariano Ypunto
+      Y La Nena)', 'Sala EMMA', '2026-06-13', '20:00:00')]
+      ('Humor De Casados (Mariano Ypunto Y La Nena)', 'Sala EMMA', '2026-06-13',
+      '20:00:00')
+      ('Una De Impro! Dela Mujer', 'Sala EMMA', '2026-03-26', '21:00:00')
+      ('¡corten! Una Comedia De Cine', 'Sala EMMA', '2026-04-25', '20:00:00')
+      ('Victor Castigao Descontrolao', 'Sala EMMA', '2026-04-18', '20:00:00')
+      ('Melocotón en Almíbar', 'Sala EMMA', '2026-05-09', '20:00:00')
+      ('Alvarito', 'Sala EMMA', '2026-06-06', '20:00:00')
+      ('Taller Más Allá De La Voz', 'Sala EMMA', '2026-03-21', '09:00:00')
+      ('Pepe El Caja', 'Sala EMMA', '2026-05-23', '20:00:00')
+      ('Kikín Fernández Y Fernando Labordeta', 'Sala EMMA', '2026-05-16',
+      '20:00:00')
+      ('Menos Es Más (Alumnos Emma)', 'Sala EMMA', '2026-05-22', '20:00:00')
+      ('El Mentalista Canalla', 'Sala EMMA', '2026-04-24', '20:00:00')
+      ('Menos Es Más', 'Sala EMMA', '2026-05-22', '20:00:00')
+      ('Rafa Tornado Punkústico', 'Sala EMMA', '2026-03-15', '17:00:00')
+      ('Manolo Lera', 'Sala EMMA', '2026-04-11', '20:00:00')
+      ****************************
+      Saving 5 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_03_15_10_27_Domingo/0_raw/20260315_
+      1037_SalaEmma.json
+      Saving 5 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+
+Result: Succeeded
+

@@ -1,0 +1,40 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=RedBibliotecas
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019cf112-a6af-77de-8b56-6eeeac2301dd
+
+Running for Almeria: RedBibliotecas
+RedBibliotecas
+RUNNING SESSION =  2026_03_15_10_27_Domingo
+START
+Starting WebDriver...
+http://localhost:4444/wd/hub
+page=1
+Getting content
+['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tejiendo.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimnasia.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy0.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.html']
+page=2
+Getting content
+['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tejiendo.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimnasia.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy0.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tejiendo.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimnasia.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy0.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.html']
+page=3
+Getting content
+['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tejiendo.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimnasia.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy0.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tejiendo.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimnasia.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy0.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tejiendo.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimnasia.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cci-143-hoy0.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-172a.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-alquian1.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/pl-arias.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-172-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-141-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-143-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ti-140-garabatos.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/cl-cabo.html']
+*** SCRAPED 33 URLS WITH EVENTS **
+New url events = 1
+0 / 1
+Getting content
+--------------------
+{'id': 'efa4f552', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Taller Para Adultos "Gimnasia Cerebral"', 'slug': 'taller-para-adultos-gimnasia-cerebral', 'category': '__NOT_DEFINIED__', 'id_venue': '3mrLgtRB', 'venue': 'Biblioteca Central José María Artero', 'std_venue': 'Biblioteca Central José María Artero', 'start_date': '2026-03-18', 'start_time': '11:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '13:00:00', 'description': 'Mantén activo tu cerebro de una forma fácil y sencilla. Te contaremos ejercicios básicos y rutinas para que tu cerebro tenga un buen rendimiento. ATENCIÓN: La inscripción al taller se abrirá una semana antes de su inicio. Solo podrán asistir los usuarios con carné de biblioteca, que estén previamente inscritos y dentro del cupo que el aforo permita. SE RUEGA PUNTUALIDAD', 'others': '__NOT_DEFINIED__', 'source': 'RedBibliotecas', 'exec_time': '20260315T103741', 'session': '2026_03_15_10_27_Domingo', 'image': 'https://www.bibliotecaspublicas.es/.imaging/mte/site-bibliotecas-theme/240/dam/almeria/ACTIVIDADES/MARZO%2026%20BASICOS/11.png/jcr%3Acontent/11.png', 'url': 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-gimnasia.html'}
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_15_10_27_Domingo/0_raw/20260315_1037_RedBibliotecas.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
