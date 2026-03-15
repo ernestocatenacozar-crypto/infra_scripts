@@ -1627,3 +1627,240 @@ dag: FisgonTaskRequest (3.0s)
 Result: Succeeded
 
 Launching scraper: BibliotecaAgenda
+Succeeded - 2026-03-15T10:29:48Z
+
+dag: FisgonTaskRequest (25.0s)
+│
+└─tarea_1 (25.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout: ... (12 more lines)
+  │   RUNNING SESSION =  2026_03_15_10_27_Domingo
+  │   *** SCRAPED 31 URLS WITH EVENTS **
+  │   New url events = 15
+  │   0 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=30/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   1 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=07/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   2 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=31/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   3 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=11/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   4 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=17/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   5 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=08/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   6 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=01/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   7 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=28/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   8 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=22/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   9 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=29/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   10 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=12/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   11 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=10/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   12 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=14/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   13 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=24/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   14 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=15/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   No new events to save
+  │   **************************
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
