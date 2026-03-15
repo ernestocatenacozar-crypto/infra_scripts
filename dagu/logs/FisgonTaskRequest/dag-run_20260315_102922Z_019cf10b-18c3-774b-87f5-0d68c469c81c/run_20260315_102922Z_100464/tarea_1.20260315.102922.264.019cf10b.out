@@ -1,0 +1,46 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ConciertosClub
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019cf10b-18c3-774b-87f5-0d68c469c81c
+
+Running for Almeria: ConciertosClub
+ConciertosClub
+RUNNING SESSION =  2026_03_15_10_27_Domingo
+Getting https://conciertos.club/almeria
+Sleep 1
+*** SCRAPED 135 URLS WITH EVENTS **
+New url events = 4
+0 / 4
+Getting https://conciertos.club/almeria/conciertos/113409-jam-session-funk
+Sleep 4
+--------------------
+{'id': '0001c256', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Jam Session Funk', 'slug': 'jam-session-funk', 'category': 'conciertos', 'id_venue': 'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain', 'start_date': '2026-05-07', 'start_time': '22:00:00', 'end_date': '2026-05-07', 'end_time': '__NOT_DEFINIED__', 'description': 'Jam session Funk. Concierto en Port Of Spain, Almería (Almería) el Jueves 7 de Mayo de 2026. Es una actuación de estilo Soul/Funk.', 'others': {'category': 'Soul', 'price': 'Entrada libre', 'place_url': 'https://conciertos.club/almeria/locales/port-of-spain', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260315T102922', 'session': '2026_03_15_10_27_Domingo', 'image': '__NOT_FOUND__', 'url': 'https://conciertos.club/almeria/conciertos/113409-jam-session-funk'}
+1 / 4
+Getting https://conciertos.club/almeria/conciertos/113426-tigre-ulli-bonaerense
+Sleep 4
+--------------------
+{'id': 'be953916', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Tigre Ulli + Bonaerense', 'slug': 'tigre-ulli-bonaerense', 'category': 'conciertos', 'id_venue': 'Q6b6LRjT', 'venue': 'Clasijazz Café', 'std_venue': 'Clasijazz', 'start_date': '2026-05-07', 'start_time': '22:00:00', 'end_date': '2026-05-07', 'end_time': '__NOT_DEFINIED__', 'description': '\nTigre UlliTifre Ulli\xa0es el proyecto musical de\xa0MARÍA ZAMTLEJFER, una de las fundadoras de Las Ligas Menores, banda de la cual formó parte hasta marzo del 2019. Durante ese mismo año compuso un grupo de canciones que luego produjo, arregló y grabó junto a\xa0Tom Quintans\xa0(Bestia Bebé, baterista en este proyecto), las cuales formaron parte de un primer EP publicado en marzo de 2020.\nLuego de varios años de desarrollar el proyecto, con presentaciones en vivo dentro de Argentina, Chile, Uruguay, México y Perú, además de algunos simples editados, finalmente la banda se consolidó gracias a la incorporación de\xa0Mora Sanchez Viamonte\xa0(107 Faunos) y\xa0Marcoa Canosa\xa0(Cabeza Flotante / Bestia Bebé). Esta mutación se ve reflejada en un sonido mucho más alejado de sus proyectos de origen, combinando influencias del indie clásico de Galaxie 500 y Pavement, el rock alternativo de Pixies y Sonic Youth pero con un perfil máspersonal, tratando de despegarse de las etiquetas de género.\nSOMBRA DE TIBURÓN\xa0es el título de su primer LP lanzado en Agosto de 2024. El álbum contó con dos adelantos, Entre los ríos y El buen fantasma. La producción inauguró una etapa más oscura de la banda, un abrazo a las sombras y un sonido más consolidado. Fue grabado entre Febrero y Mayo de 2024 por Felipe Quintans (ganador de un Grammy Latino y un Gardel) en Buenos Aires, Argentina y editado en vinilo por Inhumano Records.\n', 'others': {'category': 'Pop-rock', 'price': '10', 'place_url': 'https://conciertos.club/almeria/locales/clasijazz-cafe', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260315T102922', 'session': '2026_03_15_10_27_Domingo', 'image': '__NOT_FOUND__', 'url': 'https://conciertos.club/almeria/conciertos/113426-tigre-ulli-bonaerense'}
+2 / 4
+Getting https://conciertos.club/almeria/conciertos/111217-aitana
+Sleep 4
+--------------------
+{'id': '117acc7d', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Aitana', 'slug': 'aitana', 'category': 'conciertos', 'id_venue': None, 'venue': 'Estadio Municipal Antonio Peroles', 'std_venue': None, 'start_date': '2026-05-09', 'start_time': '21:00:00', 'end_date': '2026-05-09', 'end_time': '__NOT_DEFINIED__', 'description': '\nAitana \n\n\nCon 18 años recién cumplidos fue una de las ganadoras del programa líder de la Televisión Española, Operación Triunfo. Su manera de transmitir emociones y su carisma le granjearon el cariño del público, y su voz le ha hecho ganar millones de fans en España y en el mundo.\nA su salida de la Academia de OT emprendió una meteórica carrera de logros y reconocimientos, que a lo largo de los últimos meses le han hecho batir récords digitales y acumular cifras nunca vistas hasta la fecha en un artista nuevo en España.\nAitana pasó el año 2018 inmersa en sesiones de composición y canto, y hace ya meses presentó su primer EP, Tráiler, que ha sido reconocido con el favor del público y disco de platino. Poco después salió su primer LP, ‘Spoiler’, que fue nominado a mejor álbum en los premios Grammy Latino, \xa0y la gira Play Tour la llevó en verano de 2019 a todos los rincones de la península.\n“Estoy aprendiendo, estoy disfrutando a cada paso. Play Tour es el espectáculo que llevo meses trabajando para compartir con el público, ese público que siento tan cercano, que me apoya, con quien estoy creciendo y que me empuja a intentar cada día ser mejor”, explicó entonces.\nEn diciembre de 2020 llegó su continuación, ‘’11 razones’, también publicado por la multinacional Universal. Su estilo sigue siendo el de siempre, el pop con aires latinos y potenciado con ritmos electrónicos. Una fórmula que le ha seguido dando frutos y que se ha visto ayudada, además, por su frecuente presencia televisiva como asesora de David Bisbal –otro artista surgido de la cantera de OT- en el programa La Voz.\nEse disco, además, le sirvió para abrirse al mercado hispanoamericano, una tarea en la que ha contado con ayudas decisivas como la de Sebastián Yatra, el famoso autor de ‘Tacones rojos’. El álbum entró en la lista de más vendidos en países latinos como Argentina o México y también puso una pica en otros mercados, como el de Italia.\nEn 2022, Aitana ha adelantado tres singles de su nuevo álbum y ha seguido cultivando su afición por las colaboraciones con otros artistas. Entre los que han grabado con ellas están, entre otros muchos: Morat, David Bisbal, Pablo Alborán, Amaia, Moderatto, Cepeda, Alfred García...\n', 'others': {'category': 'Música ligera', 'price': '__NOT_FOUND__', 'place_url': 'https://conciertos.club/almeria/locales/estadio-municipal-antonio-peroles', 'town': 'Roquetas de Mar (Almería)'}, 'source': 'ConciertosClub', 'exec_time': '20260315T102922', 'session': '2026_03_15_10_27_Domingo', 'image': 'https://conciertos.club/doc/a/2020/a_aitana.jpg', 'url': 'https://conciertos.club/almeria/conciertos/111217-aitana'}
+3 / 4
+Getting https://conciertos.club/almeria/conciertos/113427-carsten-dahl-trio
+Sleep 4
+--------------------
+{'id': '40e062f7', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Carsten Dahl Trio', 'slug': 'carsten-dahl-trio', 'category': 'conciertos', 'id_venue': 'Q6b6LRjT', 'venue': 'Clasijazz Café', 'std_venue': 'Clasijazz', 'start_date': '2026-05-09', 'start_time': '22:00:00', 'end_date': '2026-05-09', 'end_time': '__NOT_DEFINIED__', 'description': '__NOT_FOUND__', 'others': {'category': 'Jazz', 'price': '30', 'place_url': 'https://conciertos.club/almeria/locales/clasijazz-cafe', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260315T102922', 'session': '2026_03_15_10_27_Domingo', 'image': '__NOT_FOUND__', 'url': 'https://conciertos.club/almeria/conciertos/113427-carsten-dahl-trio'}
+****************************
+Saving 4 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_15_10_27_Domingo/0_raw/20260315_1029_ConciertosClub.json
+Saving 4 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

@@ -1,0 +1,37 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=KuverProducciones
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019cf109-bdd6-7e7c-a4e9-3c36149edbd6
+
+Running for Almeria: KuverProducciones
+KuverProducciones
+Creating rawfolder...
+RUNNING SESSION =  2026_03_15_10_27_Domingo
+Getting https://kuverproducciones.com/proximos-eventos/
+Sleep 1
+*** SCRAPED 66 URLS WITH EVENTS **
+New url events = 2
+0 / 2
+Getting https://kuverproducciones.com/evento/k-pop-almeria-huntrix-teatro-cervantes-abril/
+Sleep 4
+--------------------
+{'id': '0ad5ea7d', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'K-Pop', 'slug': 'k-pop', 'category': '__NOT_DEFINIED__', 'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes de Almería', 'std_venue': 'Teatro Cervantes', 'start_date': '2026-04-12', 'start_time': '17:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'El K-POP en Almería sigue imparable. Tras el éxito rotundo y varios sold out, el espectáculo regresa con una nueva fecha el domingo 12 de abril en el Teatro Cervantes, a las 17:00h En esta nueva cita, el público podrá volver a disfrutar de una batalla épica cargada de música, emoción y energía K-POP. El supergrupo Huntrix, formado por intrépidas cazadoras, se enfrenta una vez más a los temibles Saja Boys, en un espectáculo visual y musical que no deja indiferente. Este show K-POP en el Teatro Cervantes combina coreografías espectaculares, una historia emocionante y una puesta en escena vibrante, convirtiéndose en una experiencia única para fans del género y para quienes quieran descubrir el fenómeno K-POP en directo. Una nueva oportunidad para vivir el K-POP en Almería, en uno de los escenarios más emblemáticos de la ciudad.', 'others': '__NOT_DEFINIED__', 'source': 'KuverProducciones', 'exec_time': '20260315T102754', 'session': '2026_03_15_10_27_Domingo', 'image': '__NOT_FOUND__', 'url': 'https://kuverproducciones.com/evento/k-pop-almeria-huntrix-teatro-cervantes-abril/'}
+1 / 2
+Getting https://kuverproducciones.com/evento/jose-luis-calero-humorista-de-guardia-espectaculo-humor/
+Sleep 4
+--------------------
+{'id': '5daec41b', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Jose Luis Calero – Humosrista De Guardia', 'slug': 'jose-luis-calero-humosrista-de-guardia', 'category': '__NOT_DEFINIED__', 'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes de Almería', 'std_venue': 'Teatro Cervantes', 'start_date': '2026-04-11', 'start_time': '21:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Con más de 1 millón y medio de seguidores en todas sus redes sociales y tras el éxito cosechado con sus dos giras anteriores, el humorista José Luis Calero vuelve a los escenarios con su 3º gira nacional… ¡HUMORISTA DE GUARDIA!. En nuestros días, los problemas son protagonistas en nuestras vidas. Problemas de trabajo, problemas familiares, problemas económicos y, lo que es peor, problemas de salud. Por todo esto, el joven humorista andaluz piensa que hoy más que nunca, el público necesita un humorista de guardia. Un José Luis Calero que, a través de situaciones cotidianas e historias que harán sentirse reflejado al espectador, recetará la RISA como mejor medicamento posible en nuestros días. Un espectáculo que te hará olvidarte de todos tus problemas y que con la pastilla del HUMOR (una toma después de cada frase del show) te harán salir más feliz del teatro y habiendo conseguido tener… ¡un orgasmo humorístico!.', 'others': '__NOT_DEFINIED__', 'source': 'KuverProducciones', 'exec_time': '20260315T102754', 'session': '2026_03_15_10_27_Domingo', 'image': '__NOT_FOUND__', 'url': 'https://kuverproducciones.com/evento/jose-luis-calero-humorista-de-guardia-espectaculo-humor/'}
+****************************
+Saving 2 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_15_10_27_Domingo/0_raw/20260315_1027_KuverProducciones.json
+Saving 2 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
