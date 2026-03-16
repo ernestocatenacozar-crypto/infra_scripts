@@ -1,0 +1,48 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=AlmeriaCiudad
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019cf8ab-5c45-716e-b737-6ec7dcc7a940
+
+Running for Almeria: AlmeriaCiudad
+AlmeriaCiudad
+RUNNING SESSION =  2026_03_16_21_59_Lunes
+Starting WebDriver...
+http://localhost:4444/wd/hub
+sleeping 5
+Getting content
+page = 0 -----------https://almeriaciudad.es/cultura/agenda?page=0--------------- len 12
+sleeping 5
+Getting content
+page = 1 -----------https://almeriaciudad.es/cultura/agenda?page=1--------------- len 12
+sleeping 5
+Getting content
+page = 2 -----------https://almeriaciudad.es/cultura/agenda?page=2--------------- len 12
+sleeping 5
+Getting content
+page = 3 -----------https://almeriaciudad.es/cultura/agenda?page=3--------------- len 0
+*** SCRAPED 36 URLS WITH EVENTS **
+New url events = 2
+0 / 2
+Getting https://almeriaciudad.es//cultura/evento/lorcas-indomitas
+Sleep 4
+--------------------
+{'id': '2d4e312b', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': "Lorca's Indómitas", 'slug': 'lorca-s-indomitas', 'category': '__NOT_DEFINIED__', 'id_venue': 'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo', 'start_date': '2026-03-26', 'start_time': '20:30:00', 'end_date': '2026-03-26', 'end_time': '22:00:00', 'description': 'DELICATESSEN INVIERNO 2026. “Cállate”. primera palabra de La zapatera prodigiosa; Bodas de sangre: el Padre de la Novia. elogia a su hija que no habla nunca. ; a Yerma su marido le aconseja que cuando le den conversación, cierre la boca, pues. la palabra pertenece a los hombres. ; y, por supuesto, en La casa de Bernarda Alba. la palabra que más se repite es “silencio”. que resultaría ser una premonición de lo que sucedería en España poco después. A ese silencio se oponen las mujeres indómitas de García Lorca, mujeres lorquianas que. no fueron creadas para permanecer mudas. , ni para resignarse. Premios de la compañía: -Premio Nacional de Teatro 2008. -Premio Lorca de Honor. -97 galardones internacionales. PULSE AQUÍ PARA ACCEDER A LA COMPRA DEL ABONO DELICATESSEN INVIERNO 2026', 'others': {'organizer': 'Teatro Apolo', 'price': 'GENERAL: 14 EUROS | ABONO: 33 EUROS', 'category': 'Delicatessen', 'audience_age': 'Todas las edades'}, 'source': 'AlmeriaCiudad', 'exec_time': '20260316T220151', 'session': '2026_03_16_21_59_Lunes', 'image': 'https://almeriaciudad.es/uploads/styles/large/public/media/image/lorca.atalaya.-cartel.jpeg?itok=bXJQZMsY', 'url': 'https://almeriaciudad.es//cultura/evento/lorcas-indomitas'}
+1 / 2
+Getting https://almeriaciudad.es//cultura/evento/lo-que-ni-se-ve-ni-se-dice
+Sleep 4
+--------------------
+{'id': 'ceb37285', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Lo Que Ni Se Ve Ni Se Dice', 'slug': 'lo-que-ni-se-ve-ni-se-dice', 'category': '__NOT_DEFINIED__', 'id_venue': 'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo', 'start_date': '2026-03-23', 'start_time': '20:30:00', 'end_date': '2026-03-23', 'end_time': '22:00:00', 'description': 'TEATRO BENÉFICO DESTINADO A LA ASOCIACIÓN DE LA ESCLEROSIS MÚLTIPLE DE ALMERÍA. LO QUE NI SE VE NI SE DICE. es una obra que pretende sacar a la luz los dolorosos secretos que guarda el ser humano y que a veces condicionan su vida irremisiblemente. Versiones diferentes de cómo el silencio corroe el día a día creando a veces una frontera infranqueable entre la razón y la realidad. Tres ejemplos de personas que se encuentran atrapadas en sus propios sentimientos. Tres familias que sucumben ante una realidad con la que no contaban, entrelazando estos dramas con vecinas que frivolizan, haciendo de estos dolorosos pasajes su entretenimiento.', 'others': {'organizer': 'Teatro Apolo', 'price': 'GENERAL: 10 EUROS', 'category': 'Teatro', 'audience_age': 'Todas las edades'}, 'source': 'AlmeriaCiudad', 'exec_time': '20260316T220151', 'session': '2026_03_16_21_59_Lunes', 'image': 'https://almeriaciudad.es/uploads/styles/large/public/media/image/whatsapp-image-2026-03-09-at-10.27.13.jpeg?itok=DecCvfRK', 'url': 'https://almeriaciudad.es//cultura/evento/lo-que-ni-se-ve-ni-se-dice'}
+****************************
+Saving 2 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_16_21_59_Lunes/0_raw/20260316_2201_AlmeriaCiudad.json
+Saving 2 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

@@ -22,3 +22,11 @@ Sleep 1
 New url events = 1
 0 / 1
 Getting https://kuverproducciones.com/evento/obra-teatro-amor-memoria-ignasi-vidal/
+Sleep 4
+--------------------
+{'id': 'f5e651f9', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Si Alguna Vez Hubo Un Nosotros', 'slug': 'si-alguna-vez-hubo-un-nosotros', 'category': '__NOT_DEFINIED__', 'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes de Almería', 'std_venue': 'Teatro Cervantes', 'start_date': '2026-04-25', 'start_time': '20:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Un viaje emocional donde el amor y la memoria se enfrentan. Jaime y Marla fueron «nosotros». Ahora solo quedan dos voces que se buscan entre recuerdos, reproches, y silencios. En un escenario desnudo, sus monólogos se entrelazan para desvelar una historia universal: la de dos personas que se amaron profundamente, pero no supieron salvarse. La nueva obra de Ignasi Vidal -autor de éxitos como EL PLAN, DIGINIGNIDAD, o DRIBBLING, es un retrato íntimo de la fragilidad humana que nos confronta con una pregunta que todos, alguna vez, hemos temido: ¿Qué queda cuando el amor ya no basta? ESCRITO Y DIRIGIDO POR IGNASI VIDAL. INTERPRETADO POR NOEMÍ RUIZ Y FÉLIX GÓMEZ. PRODUCIDO POR PEDRO MACARRO.', 'others': '__NOT_DEFINIED__', 'source': 'KuverProducciones', 'exec_time': '20260316T215956', 'session': '2026_03_16_21_59_Lunes', 'image': '__NOT_FOUND__', 'url': 'https://kuverproducciones.com/evento/obra-teatro-amor-memoria-ignasi-vidal/'}
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_16_21_59_Lunes/0_raw/20260316_2159_KuverProducciones.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

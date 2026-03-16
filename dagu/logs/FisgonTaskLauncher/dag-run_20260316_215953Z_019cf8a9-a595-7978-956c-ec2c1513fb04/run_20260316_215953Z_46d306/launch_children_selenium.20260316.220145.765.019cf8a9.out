@@ -1,0 +1,773 @@
+Launching scraper: AlmeriaCiudad
+Succeeded - 2026-03-16T22:01:45Z
+
+dag: FisgonTaskSelenium (45.0s)
+│
+└─tarea_1 (45.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=AlmeriaCiudad
+  │   DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&d
+  │   agRunId=019cf8ab-5c45-716e-b737-6ec7dcc7a940
+  │   Running for Almeria: AlmeriaCiudad
+  │   AlmeriaCiudad
+  │   RUNNING SESSION =  2026_03_16_21_59_Lunes
+  │   Starting WebDriver...
+  │   http://localhost:4444/wd/hub
+  │   sleeping 5
+  │   Getting content
+  │   page = 0
+  │   -----------https://almeriaciudad.es/cultura/agenda?page=0---------------
+  │   len 12
+  │   sleeping 5
+  │   Getting content
+  │   page = 1
+  │   -----------https://almeriaciudad.es/cultura/agenda?page=1---------------
+  │   len 12
+  │   sleeping 5
+  │   Getting content
+  │   page = 2
+  │   -----------https://almeriaciudad.es/cultura/agenda?page=2---------------
+  │   len 12
+  │   sleeping 5
+  │   Getting content
+  │   page = 3
+  │   -----------https://almeriaciudad.es/cultura/agenda?page=3---------------
+  │   len 0
+  │   *** SCRAPED 36 URLS WITH EVENTS **
+  │   New url events = 2
+  │   0 / 2
+  │   Getting https://almeriaciudad.es//cultura/evento/lorcas-indomitas
+  │   Sleep 4
+  │   --------------------
+  │   {'id': '2d4e312b', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': "Lorca's Indómitas", 'slug':
+  │   'lorca-s-indomitas', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo',
+  │   'start_date': '2026-03-26', 'start_time': '20:30:00', 'end_date':
+  │   '2026-03-26', 'end_time': '22:00:00', 'description': 'DELICATESSEN
+  │   INVIERNO 2026. “Cállate”. primera palabra de La zapatera
+  │   prodigiosa; Bodas de sangre: el Padre de la Novia. elogia a su hija que
+  │   no habla nunca. ; a Yerma su marido le aconseja que cuando le den
+  │   conversación, cierre la boca, pues. la palabra pertenece a los hombres.
+  │   ; y, por supuesto, en La casa de Bernarda Alba. la palabra que más se
+  │   repite es “silencio”. que resultaría ser una premonición de lo que
+  │   sucedería en España poco después. A ese silencio se oponen las
+  │   mujeres indómitas de García Lorca, mujeres lorquianas que. no fueron
+  │   creadas para permanecer mudas. , ni para resignarse. Premios de la
+  │   compañía: -Premio Nacional de Teatro 2008. -Premio Lorca de Honor. -97
+  │   galardones internacionales. PULSE AQUÍ PARA ACCEDER A LA COMPRA DEL
+  │   ABONO DELICATESSEN INVIERNO 2026', 'others': {'organizer': 'Teatro
+  │   Apolo', 'price': 'GENERAL: 14 EUROS | ABONO: 33 EUROS', 'category':
+  │   'Delicatessen', 'audience_age': 'Todas las edades'}, 'source':
+  │   'AlmeriaCiudad', 'exec_time': '20260316T220151', 'session':
+  │   '2026_03_16_21_59_Lunes', 'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/lorca.
+  │   atalaya.-cartel.jpeg?itok=bXJQZMsY', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/lorcas-indomitas'}
+  │   1 / 2
+  │   Getting
+  │   https://almeriaciudad.es//cultura/evento/lo-que-ni-se-ve-ni-se-dice
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'ceb37285', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Lo Que Ni Se Ve Ni Se Dice', 'slug':
+  │   'lo-que-ni-se-ve-ni-se-dice', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue': 'Teatro
+  │   Apolo', 'start_date': '2026-03-23', 'start_time': '20:30:00',
+  │   'end_date': '2026-03-23', 'end_time': '22:00:00', 'description': 'TEATRO
+  │   BENÉFICO DESTINADO A LA ASOCIACIÓN DE LA ESCLEROSIS MÚLTIPLE DE
+  │   ALMERÍA. LO QUE NI SE VE NI SE DICE. es una obra que pretende sacar a
+  │   la luz los dolorosos secretos que guarda el ser humano y que a veces
+  │   condicionan su vida irremisiblemente. Versiones diferentes de cómo el
+  │   silencio corroe el día a día creando a veces una frontera
+  │   infranqueable entre la razón y la realidad. Tres ejemplos de personas
+  │   que se encuentran atrapadas en sus propios sentimientos. Tres familias
+  │   que sucumben ante una realidad con la que no contaban, entrelazando
+  │   estos dramas con vecinas que frivolizan, haciendo de estos dolorosos
+  │   pasajes su entretenimiento.', 'others': {'organizer': 'Teatro Apolo',
+  │   'price': 'GENERAL: 10 EUROS', 'category': 'Teatro', 'audience_age':
+  │   'Todas las edades'}, 'source': 'AlmeriaCiudad', 'exec_time':
+  │   '20260316T220151', 'session': '2026_03_16_21_59_Lunes', 'image':
+  │   'https://almeriaciudad.es/uploads/styles/large/public/media/image/whatsa
+  │   pp-image-2026-03-09-at-10.27.13.jpeg?itok=DecCvfRK', 'url':
+  │   'https://almeriaciudad.es//cultura/evento/lo-que-ni-se-ve-ni-se-dice'}
+  │   ****************************
+  │   Saving 2 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_16_21_59_Lunes/0_raw/20260316_
+  │   2201_AlmeriaCiudad.json
+  │   Saving 2 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'almeriaciudad.es'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: AlmeriaTurismo
+Succeeded - 2026-03-16T22:02:30Z
+
+dag: FisgonTaskSelenium (39.0s)
+│
+└─tarea_1 (39.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout: ... (509 more lines)
+      {'id': '26767ec3', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'BARRY B - Infancia Mal Calibrada', 'slug':
+      'barry-b-infancia-mal-calibrada', 'category': '__NOT_DEFINIED__',
+      'id_venue': 'NmPqTrh6', 'venue': 'Berlin Social Club', 'std_venue':
+      'Berlin Social Club', 'start_date': '2026-04-18', 'start_time':
+      '20:30:00', 'end_date': '2026-04-18', 'end_time': '22:30:00',
+      'description': 'Barry B presenta su gira “Infancia Mal Calibrada”, con
+      la que recorrerá más de 20 ciudades del país y pondrá rumbo por
+      primera vez a México. El tour viene impulsado por su nuevo EP, disponible
+      desde el 26 de septiembre, que abre una nueva etapa en la carrera del
+      artista, después de haber conquistado los principales escenarios y haber
+      crecido exponencialmente durante los últimos meses. Tras el éxito de su
+      primer disco Chato, que lo consolidó como una de las voces
+      imprescindibles del panorama, Barry B regresa con canciones cargadas de
+      guitarras, estribillos demoledores y la crudeza que caracteriza sus letras
+      y que ya son marca de la casa.', 'others': {'category': 'Berlin Social
+      Club, Almería', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-18T20:30+2:00', 'endDate': '2026-4-18T22:30+2:00',
+      'duration_days': 0, 'location': 'Parque de Nicolás Salmerón, 9, Bajo 2,
+      04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260316T220236', 'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/bbb.jpg',
+      'url':
+      'https://www.turismodealmeria.org/evento/barry-b-infancia-mal-calibrada/'}
+      --------------------
+      {'id': '42386be0', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': "El Selu Presenta 'Universo Cádi'",
+      'slug': 'el-selu-presenta-universo-cadi', 'category': '__NOT_DEFINIED__',
+      'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes', 'std_venue': 'Teatro
+      Cervantes', 'start_date': '2026-04-18', 'start_time': '21:30:00',
+      'end_date': '2026-04-18', 'end_time': '23:30:00', 'description': 'El Selu
+      presenta ‘Universo Cádi’, un espectáculo de la reconocida chirigota
+      de El Selu. Un viaje cómico y musical al particular universo gaditano,
+      lleno de sátira, humor y talento carnavalesco. Una cita imprescindible
+      para los amantes del carnaval y del buen humor, que tendrá lugar el 18 de
+      abril a las 21:30h en el Teatro Cervantes de Almería.', 'others':
+      {'category': 'Teatro Cervantes - 18 de abril a las 21:30h', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-18T21:30+2:00', 'endDate':
+      '2026-4-18T23:30+2:00', 'duration_days': 0, 'location': 'Calle Poeta
+      Villaespesa, 1, 04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260316T220236', 'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Universo-Cadi
+      z-Chirigota-de-El-Selu.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/el-selu-presenta-universo-cadi/'}
+      --------------------
+      {'id': '4f2b2693', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 1, 'event': 'UD Almería vs Málaga CF', 'slug':
+      'ud-almeria-vs-malaga-cf', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '34nM8jpg', 'venue': 'UD Almería Stadium', 'std_venue': 'Estadio de los
+      Juegos Mediterráneos', 'start_date': '2026-04-19', 'start_time':
+      '__NOT_FOUND__', 'end_date': '2026-04-19', 'end_time': '__NOT_FOUND__',
+      'description': 'Partido de fútbol entre UD Almería y Málaga CF.',
+      'others': {'category': 'Domingo, 19 de abril', 'hour': '__NOT_FOUND__',
+      'startDate': '2026-4-19', 'endDate': '2026-4-19', 'duration_days': 0,
+      'location': 'C. Alcalde Santiago Martínez Cabrejas, 5, 04007 Almería'},
+      'source': 'AlmeriaTurismo', 'exec_time': '20260316T220236', 'session':
+      '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/UD-Almeria-vs
+      -Malaga-CF.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/ud-almeria-vs-malaga-cf/'}
+      --------------------
+      {'id': '086b5c92', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Yo Sobreviví a La EGB - Jordi Merca',
+      'slug': 'yo-sobrevivi-a-la-egb-jordi-merca', 'category':
+      '__NOT_DEFINIED__', 'id_venue': 'DgpfFbPt', 'venue': 'Teatro Cervantes',
+      'std_venue': 'Teatro Cervantes', 'start_date': '2026-04-19', 'start_time':
+      '19:00:00', 'end_date': '2026-04-19', 'end_time': '21:00:00',
+      'description': 'Disfruta del espectáculo de humor ‘Yo sobreviví a la
+      EGB’ con Jordi Merca en el Teatro Cervantes. Un viaje nostálgico lleno
+      de risas que revive la época escolar con música en directo. La cita es
+      el domingo 19 de abril de 2026 a las 19:00 h. Las entradas están
+      disponibles en la taquilla del teatro de lunes a viernes de 10:00 a 13:00
+      h y de 17:00 a 19:00 h, y los sábados de 11:00 a 13:00 h, además de una
+      hora antes del espectáculo. Precio: 15€.', 'others': {'category':
+      'Teatro Cervantes, 19 de abril de 2026 - 19:00 h', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-19T19:00+2:00', 'endDate':
+      '2026-4-19T21:00+2:00', 'duration_days': 0, 'location': 'Calle Poeta
+      Villaespesa, 1, 04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260316T220236', 'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/sobreviviegb.
+      jpg', 'url':
+      'https://www.turismodealmeria.org/evento/yo-sobrevivi-a-la-egb-jordi-merca
+      /'}
+      --------------------
+      {'id': '407a890e', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Paisajes Musicales De América Latina',
+      'slug': 'paisajes-musicales-de-america-latina', 'category':
+      '__NOT_DEFINIED__', 'id_venue': None, 'venue': '__NOT_FOUND__',
+      'std_venue': None, 'start_date': '2026-04-19', 'start_time': '19:00:00',
+      'end_date': '2026-04-19', 'end_time': '21:00:00', 'description':
+      'Concierto de UAL Music Youth dirigido por el invitado Juan Irianni en el
+      Paraninfo de la Universidad de Almería.', 'others': {'category':
+      'Concierto de UAL Music Youth', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-19T19:00+2:00', 'endDate': '2026-4-19T21:00+2:00',
+      'duration_days': 0, 'location': '__NOT_FOUND__'}, 'source':
+      'AlmeriaTurismo', 'exec_time': '20260316T220236', 'session':
+      '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Paisajes-musi
+      cales-de-America-Latina.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/paisajes-musicales-de-america-lat
+      ina/'}
+      --------------------
+      {'id': '28408fb9', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Presentación De El Último Paraíso',
+      'slug': 'presentacion-de-el-ultimo-paraiso', 'category':
+      '__NOT_DEFINIED__', 'id_venue': 'J8tbTLH7', 'venue': 'Librería Picasso',
+      'std_venue': 'Librería Picasso', 'start_date': '2026-04-21',
+      'start_time': '19:00:00', 'end_date': '2026-04-21', 'end_time':
+      '20:00:00', 'description': 'Acompañado por José Luis Martínez Vidal,
+      Catedrático de la Ual. Fecha: Martes 21 de abril, 19:00 h. Lugar:
+      Librerías Picasso, c/Reyes Católicos, 18, Almería.', 'others':
+      {'category': 'José Jaime Capel Molina', 'hour': '__NOT_FOUND__',
+      'startDate': '2026-4-21T19:00+2:00', 'endDate': '2026-4-21T20:00+2:00',
+      'duration_days': 0, 'location': 'Calle Reyes Católicos, 18, 04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260316T220236',
+      'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/03/Presentacion-
+      de-El-Ultimo-Paraiso.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/presentacion-de-el-ultimo-paraiso
+      /'}
+      --------------------
+      {'id': '879ec7b6', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'II Show Literario: Entre Libros Y Risas',
+      'slug': 'ii-show-literario-entre-libros-y-risas', 'category':
+      '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Clasijazz',
+      'std_venue': 'Clasijazz', 'start_date': '2026-04-22', 'start_time':
+      '20:00:00', 'end_date': '2026-04-22', 'end_time': '21:00:00',
+      'description': 'Únete al II Show Literario ‘Entre Libros y Risas’
+      donde se realizará la entrega de premios del segundo certamen literario.
+      Nos acompañarán escritores almerienses de ayer y hoy. Habrá un stand de
+      librería colaborador.', 'others': {'category': 'Entrega de premios y
+      escritores almerienses', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-22T20:00+2:00', 'endDate': '2026-4-22T21:00+2:00',
+      'duration_days': 0, 'location': 'C. Maestro Serrano, 9, 04004 Almería'},
+      'source': 'AlmeriaTurismo', 'exec_time': '20260316T220236', 'session':
+      '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/03/II-Show-Liter
+      ario-Entre-Libros-y-Risas.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/ii-show-literario-entre-libros-y-
+      risas/'}
+      --------------------
+      {'id': '701580ad', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Sentimental Value', 'slug':
+      'sentimental-value', 'category': '__NOT_DEFINIED__', 'id_venue':
+      'tQfq78jF', 'venue': 'Teatro Apolo', 'std_venue': 'Teatro Apolo',
+      'start_date': '2026-04-22', 'start_time': '20:00:00', 'end_date':
+      '2026-04-22', 'end_time': '22:00:00', 'description': 'Las hermanas Nora y
+      Agnes se reencuentran con su distanciado padre, el carismático Gustav, un
+      antiguo director de renombre que le ofrece a su hija Nora, actriz de
+      teatro, un papel en su próxima película. Nora lo rechaza y pronto
+      descubre que le ha dado su papel a una joven y entusiasta estrella de
+      Hollywood. De repente, las dos hermanas deben sortear su complicada
+      relación con su padre y lidiar con una estrella estadounidense que se
+      encuentra en medio de su compleja dinámica familiar.. Duración:. 2 horas
+      15 mins', 'others': {'category': 'Teatro Apolo Almería', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-22T20:00+2:00', 'endDate':
+      '2026-4-22T22:00+2:00', 'duration_days': 0, 'location': 'Rambla Obispo
+      Orbera, 25,04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260316T220236', 'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Captura-de-pa
+      ntalla-2026-02-24-134540.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/sentimental-value/'}
+      --------------------
+      {'id': 'ab38707d', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Actualidad Astronómica Con Jorge
+      Iglesias', 'slug': 'actualidad-astronomica-con-jorge-iglesias',
+      'category': '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue':
+      'Universidad de Almería (UAL)', 'std_venue': 'Paraninfo de la Universidad
+      de Almería', 'start_date': '2026-04-23', 'start_time': '12:00:00',
+      'end_date': '2026-04-23', 'end_time': '13:30:00', 'description': 'El ciclo
+      de tertulias sobre astronomía vuelve este año con Jorge Iglesias, quien
+      presentará y debatirá sobre las novedades más importantes en el ámbito
+      astronómico. Las sesiones se llevarán a cabo en el Edificio de
+      Psicología, Sala de Grados, a las 12:00h. Fechas: 19 de febrero, 19 de
+      marzo, 23 de abril y 21 de mayo.', 'others': {'category': 'Edificio de
+      Psicología, Sala de Grados, Universidad de Almería', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-23T12:00+2:00', 'endDate':
+      '2026-4-23T13:30+2:00', 'duration_days': 0, 'location': 'Carr. Sacramento,
+      s/n, 04120 La Cañada, Almería'}, 'source': 'AlmeriaTurismo',
+      'exec_time': '20260316T220236', 'session': '2026_03_16_21_59_Lunes',
+      'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Actualidad-as
+      tronomica-con-Jorge-Iglesias.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/actualidad-astronomica-con-jorge-
+      iglesias/var/ri-2.l-L1'}
+      --------------------
+      {'id': '1a31df71', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Cuentacuentos: Un Amigo Como Tú', 'slug':
+      'cuentacuentos-un-amigo-como-tu', 'category': '__NOT_DEFINIED__',
+      'id_venue': 'J8tbTLH7', 'venue': 'Librería Picasso', 'std_venue':
+      'Librería Picasso', 'start_date': '2026-04-23', 'start_time': '18:00:00',
+      'end_date': '2026-04-23', 'end_time': '19:00:00', 'description':
+      'Participa en el cuentacuentos para niños a partir de 3 años basado en
+      el libro ‘Un Amigo Como Tú’ de Andrea Schomburg y Barbara Röttgen.
+      Te esperamos en Librerías Picasso, Almería.', 'others': {'category': 'Un
+      Amigo Como Tú', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-23T18:00+2:00', 'endDate': '2026-4-23T19:00+2:00',
+      'duration_days': 0, 'location': 'Calle Reyes Católicos, 18, 04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260316T220236',
+      'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Cuentacuentos
+      -Un-Amigo-Como-Tu.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/cuentacuentos-un-amigo-como-tu/'}
+      --------------------
+      {'id': 'eaf6416d', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Visita Las Casas Consistoriales', 'slug':
+      'visita-las-casas-consistoriales', 'category': '__NOT_DEFINIED__',
+      'id_venue': '7RhD7QqG', 'venue': 'Plaza Vieja', 'std_venue': 'Plaza de la
+      Constitución', 'start_date': '2026-04-24', 'start_time': '10:00:00',
+      'end_date': '2026-04-24', 'end_time': '12:00:00', 'description': 'El
+      Ayuntamiento de Almería organiza visitas guiadas a las Casas
+      Consistoriales, con personal municipal experto en la Historia y Patrimonio
+      de Almería, quienes explicarán la reciente restauración del edificio..
+      Las visitas están dirigidas al público general y se realizan los viernes
+      a las 10:00h y 12:00h, con un máximo de 30 personas por pase.. El punto
+      de encuentro es la Plaza Vieja. La inscripción es gratuita a través de
+      la web. https://reservas.turismodealmeria.org/visitas-casa-consistorial.
+      .. Recorrido:. Inicio de la visita:. entrada por las Casas Consistoriales.
+      Visita a la primitiva biblioteca. Subida por las escaleras de mármol con
+      barandas de balaustradas. Hall de entrada al Salón Noble para contemplar
+      los altorrelieves del Sagrado Corazón de Jesús, Virgen del Mar y San
+      Indalecio. Salón Noble. Visita al muro primitivo del siglo XVII
+      descubierto durante la restauración. Visita del lienzo de la Casa Pratas.
+      Arcos apuntados y escalera con baranda de forja recuperados de la Casa
+      Lledó. Salida de las Casas Consistoriales. y visita final a la Oficina
+      Municipal de Turismo. Más información en la Oficina de Turismo ubicada
+      en la calle Juez, 6 o a través del teléfono 950 210 035 y el correo
+      oficinaturismo@aytoalmeria.es.', 'others': {'category': 'Visita guiada por
+      el patrimonio histórico de las Casas Consistoriales', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-24T10:00+2:00', 'endDate':
+      '2026-4-24T12:00+2:00', 'duration_days': 0, 'location': 'Convento de Santa
+      Clara, Plaza de la Constitución, 04071 Almería, España'}, 'source':
+      'AlmeriaTurismo', 'exec_time': '20260316T220236', 'session':
+      '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/01/1200x1500-Vis
+      itas-Consistorio-Almeria-Ciudad-01-2.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/visita-las-casas-consistoriales/v
+      ar/ri-12.l-L1'}
+      --------------------
+      {'id': 'da5eb238', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 1, 'event': 'Visita Guiada a La Casa Del Cine', 'slug':
+      'visita-guiada-a-la-casa-del-cine', 'category': '__NOT_DEFINIED__',
+      'id_venue': 'df8rMnjt', 'venue': 'Casa del Cine de Almería', 'std_venue':
+      'Casa del Cine', 'start_date': '2026-04-24', 'start_time':
+      '__NOT_FOUND__', 'end_date': '2026-04-24', 'end_time': '__NOT_FOUND__',
+      'description': 'Si buscas planazo para el viernes… aquí lo tienes. A
+      partir del 12 de diciembre, gran oportunidad para conocer la Casa del
+      Cine, su legado y la historia cinematográfica de Almería.. Únete a
+      nuestra visita guiada por la Finca Santa Isabel y descubre los secretos,
+      anécdotas y rincones que guarda.. Asegura tu plaza llamando al 950 21 00
+      30 (En horario de Casa del Cine). ¡Te esperamos!', 'others': {'category':
+      'Todos los viernes', 'hour': '__NOT_FOUND__', 'startDate': '2026-4-24',
+      'endDate': '2026-4-24', 'duration_days': 0, 'location': 'Camino Romero, 1,
+      04009 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260316T220236', 'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2025/12/visita-guiada
+      .jpg', 'url':
+      'https://www.turismodealmeria.org/evento/visita-guiada-a-la-casa-del-cine/
+      var/ri-19.l-L1'}
+      --------------------
+      {'id': '3a123779', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'El Mentalista Canalla', 'slug':
+      'el-mentalista-canalla', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-04-24', 'start_time': '20:00:00',
+      'end_date': '2026-04-24', 'end_time': '22:00:00', 'description': 'No te
+      pierdas el impactante show de Abraham Gallego, ‘El Mentalista
+      Canalla’, un espectáculo de magia y mentalismo para toda la familia.
+      Vive una experiencia divertida y desafiante, donde la magia y la mente se
+      unen para sorprenderte en cada momento. ¡Ven a disfrutarlo el 24 de abril
+      en la Sala EMMA de Almería!', 'others': {'category': 'Abraham Gallego
+      presenta un espectáculo de magia y mentalismo', 'hour': '__NOT_FOUND__',
+      'startDate': '2026-4-24T20:00+2:00', 'endDate': '2026-4-24T22:00+2:00',
+      'duration_days': 0, 'location': 'C. Rbla. Obispo Orberá, 23, 04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260316T220236',
+      'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/elmentalista.
+      jpg', 'url':
+      'https://www.turismodealmeria.org/evento/el-mentalista-canalla/'}
+      --------------------
+      {'id': '1a1277c2', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': '¿Nos Damos Un Viaje?', 'slug':
+      'nos-damos-un-viaje', 'category': '__NOT_DEFINIED__', 'id_venue':
+      'DgpfFbPt', 'venue': 'Teatro Cervantes', 'std_venue': 'Teatro Cervantes',
+      'start_date': '2026-04-24', 'start_time': '20:30:00', 'end_date':
+      '2026-04-24', 'end_time': '22:30:00', 'description': 'Santi Rodríguez
+      presenta su nuevo espectáculo ‘¿Nos damos un viaje?’ en el Teatro
+      Cervantes de Almería el viernes 24 de abril del 2026. ¡No te lo
+      pierdas!', 'others': {'category': 'Santi Rodríguez presenta', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-24T20:30+2:00', 'endDate':
+      '2026-4-24T22:30+2:00', 'duration_days': 0, 'location': 'Calle Poeta
+      Villaespesa, 1, 04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260316T220236', 'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/03/nos-damos-un-
+      viaje.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/nos-damos-un-viaje/'}
+      --------------------
+      {'id': '0920d79a', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Profesor Poopsnuggle', 'slug':
+      'profesor-poopsnuggle', 'category': '__NOT_DEFINIED__', 'id_venue':
+      'NmPqTrh6', 'venue': 'Berlin Social Club', 'std_venue': 'Berlin Social
+      Club', 'start_date': '2026-04-24', 'start_time': '21:30:00', 'end_date':
+      '2026-04-24', 'end_time': '23:00:00', 'description': 'Profesor Popsnuggle
+      llega a la Sala Berlin Social Club en Almería el 24 de abril de 2026 para
+      ofrecer una noche de pop retrofuturista. Germán, José, Álvaro y
+      Laureano forman este cuarteto que se inspira en el pop español de los
+      años sesenta, la movida madrileña, los sintetizadores analógicos y la
+      bossa nova. Desde su irrupción en 2004 con el álbum “El Turismo”, su
+      música ha prestado una mirada divertida y crítica al pasado musical
+      español. En 2008 reafirmaron su propuesta con el lanzamiento de “El Fin
+      de las Colonias Africanas”. Una cita imperdible para los amantes del pop
+      con sabor nostálgico y visionario.', 'others': {'category':
+      '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-24T21:30+2:00', 'endDate': '2026-4-24T23:00+2:00',
+      'duration_days': 0, 'location': 'Parque de Nicolás Salmerón, 9, Bajo 2,
+      04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260316T220236', 'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/profesorpopnu
+      ggle.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/profesor-poopsnuggle/'}
+      --------------------
+      {'id': '59a7af52', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Cuentacuentos: Te Quiero Tanto - Saeko
+      Inui', 'slug': 'cuentacuentos-te-quiero-tanto-saeko-inui', 'category':
+      '__NOT_DEFINIED__', 'id_venue': 'J8tbTLH7', 'venue': 'Librería Picasso',
+      'std_venue': 'Librería Picasso', 'start_date': '2026-04-25',
+      'start_time': '11:00:00', 'end_date': '2026-04-25', 'end_time':
+      '13:00:00', 'description': 'Evento de cuentacuentos para niños a partir
+      de 3 años basado en el libro ‘Te quiero tanto’ de Saeko Inui. Se
+      realizará en Librerías Picasso, Almería.', 'others': {'category':
+      'Lectura para niños', 'hour': '(Sábado) 11:00 am - 13:00 pm',
+      'startDate': '2026-4-25T11:00+2:00', 'endDate': '2026-4-25T13:00+2:00',
+      'duration_days': 0, 'location': 'Calle Reyes Católicos, 18, 04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260316T220236',
+      'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Cuentacuentos
+      -Te-quiero-tanto-Saeko-Inui.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/cuentacuentos-te-quiero-tanto-sae
+      ko-inui/'}
+      --------------------
+      {'id': '8acfc1b4', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'XV METALMERIA FEST - 25 Abril', 'slug':
+      'xv-metalmeria-fest-25-abril', 'category': '__NOT_DEFINIED__', 'id_venue':
+      'NmPqTrh6', 'venue': 'Berlin Social Club', 'std_venue': 'Berlin Social
+      Club', 'start_date': '2026-04-25', 'start_time': '16:00:00', 'end_date':
+      '2026-04-25', 'end_time': '19:00:00', 'description': 'El 25 de abril de
+      2026 se celebrará la decimoquinta edición del METALMERIA FEST en la Sala
+      Berlin Social Club de Almería, con apertura de puertas a las 26:00h. El
+      festival contará con una potente alineación internacional de bandas de
+      metal como Kate’s Acid (Speed Metal – Bélgica), DeathStorm (Thrash
+      Metal – Austria), Ecclesia (Heavy/Doom Metal – Francia), Speed Queen
+      (Speed Metal – Bélgica) y Peace After Pain (Crossover/Thrash Metal –
+      Barcelona). Las entradas anticipadas tienen un coste de 25 €, mientras
+      que en taquilla costarán 30 €. Los socios pueden adquirir su entrada
+      por 15 €, y los poseedores del carnet Interclub por 22 €. Las entradas
+      compradas online serán canjeadas físicamente en taquilla.', 'others':
+      {'category': '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-25T16:00+2:00', 'endDate': '2026-4-25T19:00+2:00',
+      'duration_days': 0, 'location': 'Parque de Nicolás Salmerón, 9, Bajo 2,
+      04001 Almería'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260316T220236', 'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/xv-metalalmer
+      ia.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/xv-metalmeria-fest-25-abril/'}
+      --------------------
+      {'id': '7ea43c30', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Campeones 2 en El Teatro', 'slug':
+      'campeones-2-en-el-teatro', 'category': '__NOT_DEFINIED__', 'id_venue':
+      None, 'venue': '__NOT_FOUND__', 'std_venue': None, 'start_date':
+      '2026-04-25', 'start_time': '20:00:00', 'end_date': '2026-04-25',
+      'end_time': '22:00:00', 'description': 'La exitosa y entrañable obra
+      ‘Campeones 2 en el Teatro: Si Lorca levantara la cabeza’ llega a
+      Almería. Con un elenco formado por Alberto Nieto, Emilio Gavira, Luis
+      Mottola, Daniel Pico García, Claudia Fesser y Gloria Ramos, y dirigida
+      por Juan Manuel Montilla El Langui, esta comedia teatral continúa la
+      inspiración de la aclamada película. ¡Una experiencia divertida,
+      emotiva y cargada de mensajes positivos sobre la superación y la
+      inclusión! No te lo pierdas el sábado 25 de abril a las 20:00h en el
+      Auditorio Maestro Padilla. Las entradas están disponibles desde 22€ en
+      la taquilla del Teatro Apolo.', 'others': {'category': 'Auditorio Maestro
+      Padilla', 'hour': '__NOT_FOUND__', 'startDate': '2026-4-25T20:00+2:00',
+      'endDate': '2026-4-25T22:00+2:00', 'duration_days': 0, 'location':
+      '__NOT_FOUND__'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260316T220236', 'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/campeones2.jp
+      g', 'url':
+      'https://www.turismodealmeria.org/evento/campeones-2-en-el-teatro/'}
+      --------------------
+      {'id': '366d52f2', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'XIX Triatlón Ciudad De Almería. Jairo
+      Ruiz', 'slug': 'xix-triatlon-ciudad-de-almeria-jairo-ruiz', 'category':
+      '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Playa del Palmeral',
+      'std_venue': None, 'start_date': '2026-04-26', 'start_time': '09:00:00',
+      'end_date': '2026-04-26', 'end_time': '14:00:00', 'description': 'El XIX
+      Triatlón Ciudad de Almería se llevará a cabo el 26 de abril de 2026 en
+      la Playa de El Palmeral. Ven y participa en este emocionante evento
+      deportivo.', 'others': {'category': 'Triatlón en Almería', 'hour':
+      '__NOT_FOUND__', 'startDate': '2026-4-26T09:00+2:00', 'endDate':
+      '2026-4-26T14:00+2:00', 'duration_days': 0, 'location': 'Playa Ciudad
+      Luminosa, Almería, 04007'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260316T220236', 'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/03/xix-triatlon.
+      jpg', 'url':
+      'https://www.turismodealmeria.org/evento/xix-triatlon-ciudad-de-almeria-ja
+      iro-ruiz/'}
+      --------------------
+      {'id': 'c5a0ac7b', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'OCAL - Escuchar Crecer La Hierba', 'slug':
+      'ocal-escuchar-crecer-la-hierba', 'category': '__NOT_DEFINIED__',
+      'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None,
+      'start_date': '2026-04-26', 'start_time': '12:30:00', 'end_date':
+      '2026-04-26', 'end_time': '14:30:00', 'description': 'Concierto de la
+      Orquesta Ciudad de Almería dirigido por Michael Thomas con la solista
+      Susana Gómez Vázquez. El programa incluye la obra de M. Thomas
+      ‘Concierto para piano y orquesta’ y la ‘Sinfonía n.2 en re mayor,
+      Op.73’ de J. Brahms.', 'others': {'category': 'Orquesta Ciudad de
+      Almería', 'hour': '__NOT_FOUND__', 'startDate': '2026-4-26T12:30+2:00',
+      'endDate': '2026-4-26T14:30+2:00', 'duration_days': 0, 'location':
+      '__NOT_FOUND__'}, 'source': 'AlmeriaTurismo', 'exec_time':
+      '20260316T220236', 'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/03/Escuchar-Crec
+      er-la-Hierba.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/ocal-escuchar-crecer-la-hierba/'}
+      --------------------
+      {'id': 'e1d33563', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Taller De Escritura Creativa "Emoción en
+      El Escritor, Emoción en El Lector"', 'slug':
+      'taller-de-escritura-creativa-emocion-en-el-escritor-emocion-en-el-lector'
+      , 'category': '__NOT_DEFINIED__', 'id_venue': '8g4nLPqF', 'venue':
+      'Universidad de Almería (UAL)', 'std_venue': 'Paraninfo de la Universidad
+      de Almería', 'start_date': '2026-04-28', 'start_time': '16:00:00',
+      'end_date': '2026-04-28', 'end_time': '18:00:00', 'description': 'Descubre
+      los secretos para atrapar a tus lectores y asombrar a los editores. Bruno
+      Nievas nos guiará en este emocionante taller donde aprenderemos a crear
+      ideas poderosas, superar el reto del primer borrador, desarrollar
+      personajes conmovedores, idear situaciones impactantes, incorporar el
+      viaje del héroe, editar sin piedad, publicar y autopublicar, y vender con
+      éxito: ¿comprarías tu propio libro?', 'others': {'category':
+      '__NOT_FOUND__', 'hour': '__NOT_FOUND__', 'startDate':
+      '2026-4-28T16:00+2:00', 'endDate': '2026-4-28T18:00+2:00',
+      'duration_days': 0, 'location': 'Carr. Sacramento, s/n, 04120 La Cañada,
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260316T220236',
+      'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/03/taller-escrit
+      ura.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/taller-de-escritura-creativa-emoc
+      ion-en-el-escritor-emocion-en-el-lector/'}
+      --------------------
+      {'id': '0edba964', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'El Fantástico Viaje De Jonás El
+      Espermatozoide', 'slug': 'el-fantastico-viaje-de-jonas-el-espermatozoide',
+      'category': '__NOT_DEFINIED__', 'id_venue': 'tQfq78jF', 'venue': 'Teatro
+      Apolo', 'std_venue': 'Teatro Apolo', 'start_date': '2026-04-30',
+      'start_time': '20:30:00', 'end_date': '2026-04-30', 'end_time':
+      '22:00:00', 'description': 'Un espectáculo familiar, para niños y niñas
+      a partir de 6 años. Disfruta de las aventuras de Jonás en su fantástico
+      viaje.', 'others': {'category': '__NOT_FOUND__', 'hour': '__NOT_FOUND__',
+      'startDate': '2026-4-30T20:30+2:00', 'endDate': '2026-4-30T22:00+2:00',
+      'duration_days': 0, 'location': 'Rambla Obispo Orbera, 25,04001
+      Almería'}, 'source': 'AlmeriaTurismo', 'exec_time': '20260316T220236',
+      'session': '2026_03_16_21_59_Lunes', 'image':
+      'https://www.turismodealmeria.org/wp-content/uploads/2026/02/Captura-de-pa
+      ntalla-2026-02-24-135009.jpg', 'url':
+      'https://www.turismodealmeria.org/evento/el-fantastico-viaje-de-jonas-el-e
+      spermatozoide/'}
+      Checking unique event url.
+      New url events = 16
+      ****************************
+      Saving 16 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_03_16_21_59_Lunes/0_raw/20260316_22
+      02_AlmeriaTurismo.json
+      Saving 16 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+
+Result: Succeeded
+
+Launching scraper: JuntaAndaluciaAgenda
+Succeeded - 2026-03-16T22:03:09Z
+
+dag: FisgonTaskSelenium (1m 13s)
+│
+└─tarea_1 (1m 13s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  ├─stdout: ... (22 more lines)
+  │   sleeping 7
+  │   ******
+  │   css selector
+  │   .view-display-id-page_search_activities > ul:nth-child(3) >
+  │   li:nth-child(1) > a:nth-child(1)
+  │   clicking
+  │   sleeping 3
+  │   Scrolling...
+  │   sleeping 1
+  │   sleeping 7
+  │   ******
+  │   css selector
+  │   .view-display-id-page_search_activities > ul:nth-child(3) >
+  │   li:nth-child(1) > a:nth-child(1)
+  │   clicking
+  │   sleeping 3
+  │   Scrolling...
+  │   sleeping 1
+  │   sleeping 7
+  │   ******
+  │   css selector
+  │   .view-display-id-page_search_activities > ul:nth-child(3) >
+  │   li:nth-child(1) > a:nth-child(1)
+  │   clicking
+  │   sleeping 3
+  │   Scrolling...
+  │   sleeping 1
+  │   sleeping 7
+  │   ******
+  │   css selector
+  │   .view-display-id-page_search_activities > ul:nth-child(3) >
+  │   li:nth-child(1) > a:nth-child(1)
+  │   clicking
+  │   sleeping 3
+  │   Scrolling...
+  │   sleeping 1
+  │   sleeping 7
+  │   ******
+  │   css selector
+  │   .view-display-id-page_search_activities > ul:nth-child(3) >
+  │   li:nth-child(1) > a:nth-child(1)
+  │   .view-display-id-page_search_activities > ul:nth-child(3) >
+  │   li:nth-child(1) > a:nth-child(1) Not found
+  │   Getting content
+  │   *** SCRAPED 78 URLS WITH EVENTS **
+  │   New url events = 1
+  │   0 / 1
+  │   Getting
+  │   https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento
+  │   /ciclo-de-conferencias-charlas-con-historia
+  │   Sleep 4
+  │   --------------------
+  │   {'id': 'f646e905', 'show': 1, 'in_city': 1, 'one_day': 0,
+  │   'wrong_date_time': 1, 'event': 'Ciclo De Conferencias "Charlas Con
+  │   Historia"', 'slug': 'ciclo-de-conferencias-charlas-con-historia',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'q9Mp2j7p', 'venue':
+  │   'Conjunto Monumental de la Alcazaba de Almería', 'std_venue':
+  │   'Alcazaba', 'start_date': '2026-02-21', 'start_time': '__NOT_FOUND__',
+  │   'end_date': '2026-12-19', 'end_time': '__NOT_DEFINIED__', 'description':
+  │   'En la Alcazaba de Almería estamos comprometidos con la Historia, la
+  │   Arqueología y el Patrimonio. Es por ello que inauguramos, a partir de
+  │   febrero de 2026, un ciclo de conferencias que tendrá lugar en la Ermita
+  │   de San Juan del segundo recinto (sala de usos múltiples), destinado a
+  │   dar a conocer las últimas investigaciones en torno a nuestro pasado, un
+  │   pasado común que nos une como sociedad. Este ciclo de conferencias
+  │   anual estará dedicado mensualmente a una temática concreta, por lo que
+  │   contaremos con un/una ponente especialista en la materia que nos
+  │   ofrecerá una conferencia especializada. Este mes de febrero está
+  │   dedicada a las técnicas constructivas, por lo que, además, todo
+  │   nuestro contenido generado en Redes Sociales girará en torno a dicha
+  │   temática.', 'others': {'location_url':
+  │   '/cultura/agendaculturaldeandalucia/evento/visitas-alcazaba-de-almeria',
+  │   'location2': 'Conjunto Monumental de la Alcazaba de Almería',
+  │   'duration': '__NOT_FOUND__', 'datetime_details': '21 de Febrero del 2026
+  │   - 19 de Diciembre del 2026', 'town': '__NOT_FOUND__', 'location': 'Calle
+  │   Almanzor, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'},
+  │   'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260316T220314',
+  │   'session': '2026_03_16_21_59_Lunes', 'image':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites
+  │   /default/files/styles/header_activity_ext_2xl/public/image/2023/11/almer
+  │   ia_-_alcazaba.jpg.webp?itok=gC4euQ7q', 'url':
+  │   'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/event
+  │   o/ciclo-de-conferencias-charlas-con-historia'}
+  │   ****************************
+  │   Saving 1 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_16_21_59_Lunes/0_raw/20260316_
+  │   2203_JuntaAndaluciaAgenda.json
+  │   Saving 1 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.juntadeandalucia.es'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: ClassicJazz
