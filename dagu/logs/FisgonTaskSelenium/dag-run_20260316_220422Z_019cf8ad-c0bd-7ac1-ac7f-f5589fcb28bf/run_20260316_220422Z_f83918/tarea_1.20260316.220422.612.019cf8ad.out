@@ -33,3 +33,16 @@ Getting content
 clicking
 sleeping 3
 sleeping 7
+*** SCRAPED 156 URLS WITH EVENTS **
+New url events = 1
+0 / 1
+Getting https://clasijazz.com/evento/versolera/
+Sleep 4
+2026-04-18T22:00:00 2026-04-18T23:30:00
+--------------------
+{'id': '3e1b13c5', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Versolera', 'slug': 'versolera', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-04-18', 'start_time': '22:00:00', 'end_date': '2026-04-18', 'end_time': '23:30:00', 'description': '10€ NS / 5€ S | Sala Principal «Con Cabo y con verso» Cóncavo y convexo es la misma realidad mirada con prismas diferentes. Si observamos una cara, lo de dentro va hacia fuera. Si nos centramos en la otra, lo de fuera invade el espacio interno y el entorno, lo mires como lo mires, no queda indiferente. Como el litoral, el verso interno se nutre del mar y convierte la bahía en cabo para mostrar la interpretación del sonido del agua al mundo marino. Nosotros, «Versolera», os invitamos a nuestra orilla para que podáis situaros en esa línea delgada donde mirar ambas caras, uniendo cabos con versos, caminando con versos por el cabo. Os invitamos a una experiencia donde se mezclarán distintos lenguajes para llegar a uno solo: el vuestro. Versolera es un grupo multidisciplinar que cuenta historias a través de música y poesía, combinando versiones de melodías conocidas con sus propias composiciones. Sus integrantes son Mamen Puertas (voz, piano), Jesús Ayala (guitarra, arreglos), Miguel Olivar (flauta, arreglos).', 'others': {'price': '5,00€ – 10,00€', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260316T220426', 'session': '2026_03_16_21_59_Lunes', 'image': 'https://clasijazz.com/wp-content/uploads/2026/03/IMG-20260307-WA0092-Mamen-Puertas-Velarde.jpg', 'url': 'https://clasijazz.com/evento/versolera/'}
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_16_21_59_Lunes/0_raw/20260316_2204_ClassicJazz.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
