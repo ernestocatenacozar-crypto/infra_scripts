@@ -1,4 +1,4 @@
-name: "TestFrontendBuild"
+name: "FrontendBuild"
 params:
   - TARGET_CITY: "almeria"
   - BASE_URL: ""
