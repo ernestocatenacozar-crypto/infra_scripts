@@ -1,9 +1,9 @@
 name: "FrontendBuild"
 params:
-  - TARGET_CITY: "almeria"
-  - BASE_URL: ""
+  - TARGET_CITY: "Almeria"
+  - BASE_URL: "https://orbitatest.b-cdn.net/"
   - OUT_DIR: "dist"
-  - NO_DOWNLOAD_IMAGES: "0"
+  - NO_DOWNLOAD_IMAGES: "1"
 
 env:
   TARGET_CITY: ${TARGET_CITY}
@@ -16,24 +16,31 @@ steps:
     command: >
       env HOME=/tmp bash -lc 'set -eu;
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
-      SRC_DIR="";
-      for d in /home/ubuntu/data_storage/*; do
-        [ -d "$d" ] || continue;
-        if [ "$(basename "$d" | tr "[:upper:]" "[:lower:]")" = "$CITY_SLUG" ]; then
-          SRC_DIR="$d";
+      docker run --rm
+      -v /home/ubuntu/data_storage:/src_data:ro
+      -v /home/ubuntu/work/frontend_build/test_frontend:/repo
+      alpine:3.20
+      sh -lc "
+      set -eu;
+      SRC_DIR=\"\";
+      for d in /src_data/*; do
+        [ -d \"\$d\" ] || continue;
+        if [ \"\$(basename \"\$d\" | tr \"[:upper:]\" \"[:lower:]\")\" = \"$CITY_SLUG\" ]; then
+          SRC_DIR=\"\$d\";
           break;
         fi;
       done;
-      if [ -z "$SRC_DIR" ]; then
-        echo "City data folder not found in /home/ubuntu/data_storage for $TARGET_CITY";
+      if [ -z \"\$SRC_DIR\" ]; then
+        echo \"City data folder not found in /home/ubuntu/data_storage for $TARGET_CITY\";
         exit 1;
       fi;
-      SRC_FILE="$SRC_DIR/00_master/master_events.json";
-      DEST_FILE="/home/ubuntu/work/frontend_build/test_frontend/data/$CITY_SLUG/master_events.json";
-      [ -f "$SRC_FILE" ] || { echo "Missing source file: $SRC_FILE"; exit 1; };
-      mkdir -p "$(dirname "$DEST_FILE")";
-      cp "$SRC_FILE" "$DEST_FILE";
-      echo "Snapshot copied to $DEST_FILE"'
+      SRC_FILE=\"\$SRC_DIR/00_master/master_events.json\";
+      DEST_FILE=\"/repo/data/$CITY_SLUG/master_events.json\";
+      [ -f \"\$SRC_FILE\" ] || { echo \"Missing source file: \$SRC_FILE\"; exit 1; };
+      mkdir -p \"\$(dirname \"\$DEST_FILE\")\";
+      cp \"\$SRC_FILE\" \"\$DEST_FILE\";
+      echo \"Snapshot copied to \$DEST_FILE\"
+      "'
 
   - name: "commit_and_push_snapshot"
     command: >
