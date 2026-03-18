@@ -1,0 +1,44 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=Entradium
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d029a-0510-747c-879a-54bd15ef07b5
+
+Running for Almeria: Entradium
+Entradium
+RUNNING SESSION =  2026_03_18_20_12_Miercoles
+Starting WebDriver...
+http://localhost:4444/wd/hub
+sleeping 5
+clicking
+sleeping 3
+sleeping 1.5
+sleeping 3
+******
+xpath
+/html/body/header/div[2]/div[1]/div/div/form/div/div/button/span/i
+clicking
+sleeping 3
+sleeping 8
+Getting content
+*** SCRAPED 26 URLS WITH EVENTS **
+New url events = 1
+0 / 1
+Getting https://entradium.com/es/events/lu-cia-en-concierto-almeria
+Sleep 4
+['4.04.2026', '21:30']
+--------------------
+{'id': '3b7b5383', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Lu&Cía en Concierto', 'slug': 'lu-cia-en-concierto', 'category': '__NOT_DEFINIED__', 'id_venue': 'trpmPB62', 'venue': 'El Zaguán (Sala ZH2ON)', 'std_venue': 'Zaguán', 'start_date': '2026-04-04', 'start_time': '21:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Concierto LU&CÍA el sábado 4 de abril a las 21:30 h. en la sala El Zaguán de Almería.', 'others': {}, 'source': 'Entradium', 'exec_time': '20260318T201907', 'session': '2026_03_18_20_12_Miercoles', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/8d6dcb3bff0f0efce3f744e4249ab8436d3c179f/event_m_cartel_luycia_zaguan04042026c2.jpg?v=1773852136', 'url': 'https://entradium.com/es/events/lu-cia-en-concierto-almeria'}
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_18_20_12_Miercoles/0_raw/20260318_2019_Entradium.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
