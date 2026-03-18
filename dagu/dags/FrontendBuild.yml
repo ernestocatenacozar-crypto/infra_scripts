@@ -48,12 +48,14 @@ steps:
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
       SNAPSHOT_PATH="data/$CITY_SLUG/master_events.json";
       docker run --rm
+      --entrypoint sh
       -v /home/ubuntu/work/frontend_build/test_frontend:/repo
       -v /home/ubuntu/.ssh:/root/.ssh:ro
       -w /repo
       alpine/git:latest
-      sh -lc "
+      -lc "
       set -eu;
+      git config --global --add safe.directory /repo;
       git add \"$SNAPSHOT_PATH\";
       if git diff --cached --quiet -- \"$SNAPSHOT_PATH\"; then
         echo \"No snapshot changes to commit for $SNAPSHOT_PATH\";
