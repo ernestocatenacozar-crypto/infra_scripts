@@ -1,0 +1,7 @@
+
+> build:css
+> tailwindcss -i ./src/tailwind.css -o ./static/css/tailwind.css --minify
+
+Static prefix: /dist
+HTML: rendering 401 pages
+HTML: 1/401

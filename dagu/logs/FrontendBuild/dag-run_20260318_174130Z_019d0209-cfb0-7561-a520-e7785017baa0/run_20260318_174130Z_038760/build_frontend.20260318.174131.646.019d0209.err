@@ -1,0 +1,55 @@
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+Rebuilding...
+
+Done in 1985ms.
+[2026-03-18 17:41:37,086] ERROR in app: Exception on /almeria/proximamente/ [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 1488, in upcoming
+    return render_template(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/proximamente.html", line 1, in top-level template code
+    {% extends 'base_template.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/templates/base_template.html", line 40, in top-level template code
+    {% block extra_head %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/templates/proximamente.html", line 17, in block 'extra_head'
+    } | tojson
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/runtime.py", line 85, in markup_join
+    return concat(buf)
+           ^^^^^^^^^^^
+TypeError: sequence item 1: expected str instance, LocalProxy found
+Traceback (most recent call last):
+  File "/app/scripts/build_creation.py", line 490, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/app/scripts/build_creation.py", line 460, in main
+    render_to_disk(path)
+  File "/app/scripts/build_creation.py", line 403, in render_to_disk
+    raise RuntimeError(f"Failed to render {url_path}: {resp.status_code}")
+RuntimeError: Failed to render /almeria/proximamente/: 500
