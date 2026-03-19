@@ -16,6 +16,7 @@ env:
   BUNNY_STORAGE_API_KEY: ${BUNNY_STORAGE_API_KEY}
 
 steps:
+
   - name: "snapshot_master_events"
     command: >
       env HOME=/tmp bash -lc 'set -eu;
@@ -98,26 +99,3 @@ steps:
       --base-url "$BASE_URL"
       $EXTRA_ARGS'
 
-  - name: "upload_to_bunny"
-    command: >
-      env HOME=/tmp bash -lc 'set -eu;
-      CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
-      [ -n "$BUNNY_STORAGE_API_KEY" ] || { echo "Missing BUNNY_STORAGE_API_KEY"; exit 1; };
-      LOCAL_DIST="/home/ubuntu/work/frontend_build/test_frontend/dist";
-      [ -d "$LOCAL_DIST/$CITY_SLUG" ] || { echo "Missing local build dir: $LOCAL_DIST/$CITY_SLUG"; exit 1; };
-      docker run --rm
-      --entrypoint sh
-      -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE"
-      -e BUNNY_STORAGE_API_KEY="$BUNNY_STORAGE_API_KEY"
-      -e CITY_SLUG="$CITY_SLUG"
-      -v /home/ubuntu/work/frontend_build/test_frontend/dist:/dist
-      infra_scripts-test_frontend:latest
-      -lc "
-      set -eu;
-      cd /dist/\$CITY_SLUG;
-      lftp -u \"\$BUNNY_STORAGE_ZONE,\$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"
-      cd \$CITY_SLUG;
-      mirror -R --delete --parallel=25 . .;
-      bye
-      \"
-      "'
