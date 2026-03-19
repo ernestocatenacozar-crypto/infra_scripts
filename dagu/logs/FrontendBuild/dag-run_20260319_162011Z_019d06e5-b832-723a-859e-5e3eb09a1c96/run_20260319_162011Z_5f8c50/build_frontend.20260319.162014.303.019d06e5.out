@@ -1,0 +1,26 @@
+
+> build:css
+> tailwindcss -i ./src/tailwind.css -o ./static/css/tailwind.css --minify
+
+HTML: rendering 403 pages
+HTML: 1/403
+HTML: 25/403
+HTML: 50/403
+HTML: 75/403
+HTML: 100/403
+HTML: 125/403
+HTML: 150/403
+HTML: 175/403
+HTML: 200/403
+HTML: 225/403
+HTML: 250/403
+HTML: 275/403
+HTML: 300/403
+HTML: 325/403
+HTML: 350/403
+HTML: 375/403
+HTML: 400/403
+HTML: 403/403
+Built 2 month pages + 401 other pages into /app/dist/almeria
+Wrote /app/dist/almeria/sitemap.xml
+Wrote /app/dist/almeria/robots.txt
