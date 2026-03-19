@@ -3,7 +3,7 @@ params:
   - TARGET_CITY: "Almeria"
   - BASE_URL: "https://orbitatest.b-cdn.net/"
   - OUT_DIR: "dist"
-  - NO_DOWNLOAD_IMAGES: "1"
+  - SKIP_DOWNLOAD_IMAGES: "0"
   - BUNNY_STORAGE_ZONE: "orbitastorage"
   - BUNNY_STORAGE_API_KEY: ""
   - CLEAN_UP: "0"
@@ -12,7 +12,7 @@ env:
   TARGET_CITY: ${TARGET_CITY}
   BASE_URL: ${BASE_URL}
   OUT_DIR: ${OUT_DIR}
-  NO_DOWNLOAD_IMAGES: ${NO_DOWNLOAD_IMAGES}
+  SKIP_DOWNLOAD_IMAGES: ${SKIP_DOWNLOAD_IMAGES}
   BUNNY_STORAGE_ZONE: ${BUNNY_STORAGE_ZONE}
   BUNNY_STORAGE_API_KEY: ${BUNNY_STORAGE_API_KEY}
   CLEAN_UP: ${CLEAN_UP}
@@ -84,7 +84,7 @@ steps:
         exit 1;
       fi;
       EXTRA_ARGS="";
-      if [ "${NO_DOWNLOAD_IMAGES}" = "1" ]; then
+      if [ "${SKIP_DOWNLOAD_IMAGES}" = "1" ]; then
         EXTRA_ARGS="--no-download-images";
       fi;
       docker run --rm
