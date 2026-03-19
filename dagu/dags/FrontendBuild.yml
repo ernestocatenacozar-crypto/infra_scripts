@@ -101,6 +101,9 @@ steps:
   - name: "upload_to_bunny"
     command: >
       env HOME=/tmp bash -lc 'set -eu;
+      echo "[upload_to_bunny] USER: $(whoami)";
+      echo "[upload_to_bunny] PWD: $(pwd)";
+      echo "[upload_to_bunny] ENV HOME: $HOME";
       echo "[upload_to_bunny] TARGET_CITY: $TARGET_CITY";
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
       echo "[upload_to_bunny] CITY_SLUG: $CITY_SLUG";
