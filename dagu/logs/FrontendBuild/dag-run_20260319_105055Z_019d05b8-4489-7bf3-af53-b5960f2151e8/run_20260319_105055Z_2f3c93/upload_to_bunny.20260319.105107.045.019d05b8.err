@@ -1,0 +1,6 @@
+WARNING: Error loading config file: open /root/.docker/config.json: permission denied
+docker: 'docker run' requires at least 1 argument
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+See 'docker run --help' for more information

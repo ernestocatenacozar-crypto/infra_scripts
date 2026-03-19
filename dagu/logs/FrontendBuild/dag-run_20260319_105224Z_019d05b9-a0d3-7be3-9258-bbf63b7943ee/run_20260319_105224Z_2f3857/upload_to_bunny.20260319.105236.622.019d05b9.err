@@ -1,0 +1,6 @@
+WARNING: Error loading config file: open /root/.docker/config.json: permission denied
+rm: Access failed: 550 File Not Found (./orbita_overrides.css)
+rm: Access failed: 550 Directory Not Found (./actualidad-astronomica-con-jorge-iglesias-2026-04-23)
+rm: Access failed: 550 Directory Not Found (./puroindie-en-almeria-sala-berlin-social-club)
+rm: Access failed: 550 Directory Not Found (./img)
+rm: Access failed: 550 Directory Not Found (./bunnycdn_errors)
