@@ -1,0 +1,6 @@
+[upload_to_bunny] TARGET_CITY: Almeria
+[upload_to_bunny] CITY_SLUG: almeria
+[upload_to_bunny] BUNNY_STORAGE_API_KEY: a5ebdb10-e74d-45d6-8934617053f9-5f56-4b14
+[upload_to_bunny] LOCAL_DIST: /home/ubuntu/work/frontend_build/test_frontend/dist
+[upload_to_bunny] Check dir: /home/ubuntu/work/frontend_build/test_frontend/dist/almeria
+[upload_to_bunny] Directory missing: /home/ubuntu/work/frontend_build/test_frontend/dist/almeria

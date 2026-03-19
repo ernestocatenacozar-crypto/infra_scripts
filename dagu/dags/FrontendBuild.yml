@@ -101,10 +101,20 @@ steps:
   - name: "upload_to_bunny"
     command: >
       env HOME=/tmp bash -lc 'set -eu;
+      echo "[upload_to_bunny] TARGET_CITY: $TARGET_CITY";
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
-      [ -n "$BUNNY_STORAGE_API_KEY" ] || { echo "Missing BUNNY_STORAGE_API_KEY"; exit 1; };
+      echo "[upload_to_bunny] CITY_SLUG: $CITY_SLUG";
+      echo "[upload_to_bunny] BUNNY_STORAGE_API_KEY: $BUNNY_STORAGE_API_KEY";
       LOCAL_DIST="/home/ubuntu/work/frontend_build/test_frontend/dist";
-      [ -d "$LOCAL_DIST/$CITY_SLUG" ] || { echo "Missing local build dir: $LOCAL_DIST/$CITY_SLUG"; exit 1; };
+      echo "[upload_to_bunny] LOCAL_DIST: $LOCAL_DIST";
+      echo "[upload_to_bunny] Check dir: $LOCAL_DIST/$CITY_SLUG";
+      if [ -d "$LOCAL_DIST/$CITY_SLUG" ]; then
+        echo "[upload_to_bunny] Directory exists: $LOCAL_DIST/$CITY_SLUG";
+      else
+        echo "[upload_to_bunny] Directory missing: $LOCAL_DIST/$CITY_SLUG";
+        ls -l "$LOCAL_DIST"
+        exit 1;
+      fi;
       docker run --rm
       --entrypoint sh
       -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE"
