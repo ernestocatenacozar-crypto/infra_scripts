@@ -115,6 +115,9 @@ steps:
       -c "set +e; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --delete --parallel=1 . .; bye\" || true"
 
   - name: "upload_to_bunny"
+    depends:
+      - "cleanup_bunny"
+      - "build_frontend"
     command: >
       docker run --rm --entrypoint sh
       -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE"
