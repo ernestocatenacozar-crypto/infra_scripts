@@ -2,7 +2,7 @@ name: "FrontendBuild"
 params:
   - TARGET_CITY: "Almeria"
   - BASE_URL: "https://orbitatest.b-cdn.net/"
-  - OUT_DIR: "dist"
+  - OUT_DIR: ""
   - NO_DOWNLOAD_IMAGES: "1"
   - BUNNY_STORAGE_ZONE: "orbitastorage"
   - BUNNY_STORAGE_API_KEY: ""
