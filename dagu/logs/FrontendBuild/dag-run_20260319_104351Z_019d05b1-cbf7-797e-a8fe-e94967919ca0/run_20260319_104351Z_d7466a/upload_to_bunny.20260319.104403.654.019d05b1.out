@@ -1,0 +1,9 @@
+[upload_to_bunny] USER: dagu
+[upload_to_bunny] PWD: /var/lib/dagu/dags
+[upload_to_bunny] ENV HOME: /tmp
+[upload_to_bunny] TARGET_CITY: Almeria
+[upload_to_bunny] CITY_SLUG: almeria
+[upload_to_bunny] BUNNY_STORAGE_API_KEY: a5ebdb10-e74d-45d6-8934617053f9-5f56-4b14
+[upload_to_bunny] DIST_PATH: /dist/almeria
+[upload_to_bunny] Check dir: /dist/almeria
+[upload_to_bunny] Directory missing: /dist/almeria

@@ -27,6 +27,7 @@ services:
       - ./dagu/suspend:/var/lib/dagu/suspend
       - /var/run/docker.sock:/var/run/docker.sock
       - /home/ubuntu/work/fisgon:/deps/fisgon
+      - /home/ubuntu/work/frontend_build/test_frontend/dist:/dist
     environment:
       - DAGU_HOST=0.0.0.0
       - DAGU_PORT=6806

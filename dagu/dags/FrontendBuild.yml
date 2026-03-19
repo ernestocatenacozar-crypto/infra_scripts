@@ -108,14 +108,14 @@ steps:
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
       echo "[upload_to_bunny] CITY_SLUG: $CITY_SLUG";
       echo "[upload_to_bunny] BUNNY_STORAGE_API_KEY: $BUNNY_STORAGE_API_KEY";
-      LOCAL_DIST="/home/ubuntu/work/frontend_build/test_frontend/dist";
-      echo "[upload_to_bunny] LOCAL_DIST: $LOCAL_DIST";
-      echo "[upload_to_bunny] Check dir: $LOCAL_DIST/$CITY_SLUG";
-      if [ -d "$LOCAL_DIST/$CITY_SLUG" ]; then
-        echo "[upload_to_bunny] Directory exists: $LOCAL_DIST/$CITY_SLUG";
+      DIST_PATH="/dist/$CITY_SLUG";
+      echo "[upload_to_bunny] DIST_PATH: $DIST_PATH";
+      echo "[upload_to_bunny] Check dir: $DIST_PATH";
+      if [ -d "$DIST_PATH" ]; then
+        echo "[upload_to_bunny] Directory exists: $DIST_PATH";
       else
-        echo "[upload_to_bunny] Directory missing: $LOCAL_DIST/$CITY_SLUG";
-        ls -l "$LOCAL_DIST"
+        echo "[upload_to_bunny] Directory missing: $DIST_PATH";
+        ls -l "/dist"
         exit 1;
       fi;
       docker run --rm
