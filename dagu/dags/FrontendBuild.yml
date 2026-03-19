@@ -6,6 +6,7 @@ params:
   - NO_DOWNLOAD_IMAGES: "1"
   - BUNNY_STORAGE_ZONE: "orbitastorage"
   - BUNNY_STORAGE_API_KEY: ""
+  - CLEAN_UP: "0"
 
 env:
   TARGET_CITY: ${TARGET_CITY}
@@ -14,6 +15,7 @@ env:
   NO_DOWNLOAD_IMAGES: ${NO_DOWNLOAD_IMAGES}
   BUNNY_STORAGE_ZONE: ${BUNNY_STORAGE_ZONE}
   BUNNY_STORAGE_API_KEY: ${BUNNY_STORAGE_API_KEY}
+  CLEAN_UP: ${CLEAN_UP}
 
 steps:
   - name: "snapshot_master_events"
@@ -60,15 +62,16 @@ steps:
       -lc "
       set -eu;
       git config --global --add safe.directory /repo;
+      git checkout main;
+      git pull origin main;
       git add \"$SNAPSHOT_PATH\";
       if git diff --cached --quiet -- \"$SNAPSHOT_PATH\"; then
         echo \"No snapshot changes to commit for $SNAPSHOT_PATH\";
         exit 0;
       fi;
-      BRANCH=\$(git rev-parse --abbrev-ref HEAD);
       COMMIT_MSG=\"chore(snapshot): update master_events for $CITY_SLUG \$(date -u +%Y-%m-%dT%H:%M:%SZ)\";
       git -c user.name=\"Dagu Snapshot Bot\" -c user.email=\"dagu-snapshot@example.com\" commit -m \"\$COMMIT_MSG\" -- \"$SNAPSHOT_PATH\";
-      git push origin \"\$BRANCH\"
+      git push origin main
       "'
 
   - name: "build_frontend"
@@ -99,23 +102,24 @@ steps:
       $EXTRA_ARGS'
 
   - name: "cleanup_bunny"
+    preconditions:
+      - condition: "${CLEAN_UP}"
+        expected: "1"
     command: >
-      echo "[cleanup_bunny] Limpiando remoto...";
-      docker run --rm --entrypoint sh \
-        -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE" \
-        -e BUNNY_STORAGE_API_KEY="$BUNNY_STORAGE_API_KEY" \
-        -e CITY_SLUG="$CITY_SLUG" \
-        -v /home/ubuntu/work/frontend_build/test_frontend/dist:/app/dist \
-        infra_scripts-test_frontend:latest \
-        -c "set +e; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --delete --parallel=1 . .; bye\" || true"
-        
+      docker run --rm --entrypoint sh
+      -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE"
+      -e BUNNY_STORAGE_API_KEY="$BUNNY_STORAGE_API_KEY"
+      -e CITY_SLUG="$CITY_SLUG"
+      -v /home/ubuntu/work/frontend_build/test_frontend/dist:/app/dist
+      infra_scripts-test_frontend:latest
+      -c "set +e; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --delete --parallel=1 . .; bye\" || true"
+
   - name: "upload_to_bunny"
     command: >
-      echo "[upload_to_bunny] Ejecutando docker run...";
-      docker run --rm --entrypoint sh \
-        -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE" \
-        -e BUNNY_STORAGE_API_KEY="$BUNNY_STORAGE_API_KEY" \
-        -e CITY_SLUG="$CITY_SLUG" \
-        -v /home/ubuntu/work/frontend_build/test_frontend/dist:/app/dist \
-        infra_scripts-test_frontend:latest \
-        -c "set -eu; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --parallel=25 . .; bye\""
+      docker run --rm --entrypoint sh
+      -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE"
+      -e BUNNY_STORAGE_API_KEY="$BUNNY_STORAGE_API_KEY"
+      -e CITY_SLUG="$CITY_SLUG"
+      -v /home/ubuntu/work/frontend_build/test_frontend/dist:/app/dist
+      infra_scripts-test_frontend:latest
+      -c "set -eu; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --parallel=25 . .; bye\""
