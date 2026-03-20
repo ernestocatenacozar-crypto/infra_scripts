@@ -1,0 +1,60 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ClassicJazz
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d0ad6-8dad-7ef6-a730-6a8cffa91b5d
+
+Running for Almeria: ClassicJazz
+ClassicJazz
+RUNNING SESSION =  2026_03_20_10_37_Viernes
+Starting WebDriver...
+http://localhost:4444/wd/hub
+*********************times =1
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*********************times =2
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*** SCRAPED 162 URLS WITH EVENTS **
+New url events = 3
+0 / 3
+Getting https://clasijazz.com/evento/taller-de-murales-con-esgrafiado-de-cal_belen-sierra-el-molino-clasijazz-rural/
+Sleep 4
+2026-04-03T09:00:00 2026-04-04T19:00:00
+--------------------
+{'id': 'd9ef7b69', 'show': 1, 'in_city': 1, 'one_day': 0, 'wrong_date_time': 0, 'event': 'Taller De Murales Con Esgrafiado De Cal_Belén Sierra – «El Molino» Clasijazz Rural', 'slug': 'taller-de-murales-con-esgrafiado-de-cal-belen-sierra-el-molino-clasijazz-rural', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'El Molino – Clasijazz rural', 'std_venue': 'Clasijazz', 'start_date': '2026-04-03', 'start_time': '09:00:00', 'end_date': '2026-04-04', 'end_time': '19:00:00', 'description': '«El Molino» Clasijazz Rural Taller de Murales con Esgrafiado de Cal. Imparte: Belén Sierra (Estudio Sustenta Arquitectura, Madrid) Taller introductorio de trabajo con morteros de cal, pigmentos naturales y técnicas tradicionales de esgrafiado segoviano. Trabajaremos con un diseño relacionado con el sitio y el entorno, y que nos permita experimentar con diferentes herramientas y texturas. No es necesario tener experiencia previa. Taller: 3 y 4 de abril, de 9h a 19h, materiales incluidos. Alimentación no incluida. Hay bares cercanos y una cocina disponible para quien prefiera preparar su almuerzo. Alojamiento: gratuito para las primeras 4 inscripciones. ¡Vente con nosotras a esgrafiar un precioso mural en el Molino Clasijazz Rural! 8 plazas disponibles 😉 https://sustentarquitectura.com/portafolio-muralismos-y-esgrafiados/', 'others': {'price': '50,00€ – 70,00€', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/el-molino/', 'location': 'X9MW+8V, Terque'}, 'source': 'ClassicJazz', 'exec_time': '20260320T104212', 'session': '2026_03_20_10_37_Viernes', 'image': 'https://clasijazz.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-12-at-16.33.02.jpeg', 'url': 'https://clasijazz.com/evento/taller-de-murales-con-esgrafiado-de-cal_belen-sierra-el-molino-clasijazz-rural/'}
+1 / 3
+Getting https://clasijazz.com/evento/intercambio-de-idiomas-5/2026-05-07/
+Sleep 4
+2026-05-07T21:00:00 2026-05-07T23:00:00
+--------------------
+{'id': '003f785a', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Intercambio De Idiomas', 'slug': 'intercambio-de-idiomas', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-05-07', 'start_time': '21:00:00', 'end_date': '2026-05-07', 'end_time': '23:00:00', 'description': 'Sala Industrial Clasijazz Entrada Libre ¿Quieres conocer gente nueva y compartir ideas, experiencias y opiniones mientras practicas tus habilidades lingüísticas? ¡Hablaremos de todo: culturas, profesiones, arte y música! ¿Nivel avanzado? ¿Intermedio? ¿Principiante? ¡Hay espacio para todos! Únete a la comunidad del Intercambio de Idiomas y deja que la magia deja que la magia de los idiomas te atrape. Desde Octubre y todos los jueves 21:00-23:00', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/clasijazz/', 'location': 'C/Maestro Serrano nº9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260320T104212', 'session': '2026_03_20_10_37_Viernes', 'image': 'https://clasijazz.com/wp-content/uploads/2025/09/Intercambio-de-Idiomas.jpg', 'url': 'https://clasijazz.com/evento/intercambio-de-idiomas-5/2026-05-07/'}
+2 / 3
+Getting https://clasijazz.com/evento/korooke-spring-edition-port-of-spain/
+Sleep 4
+2026-04-02T20:00:00 2026-04-02T23:00:00
+--------------------
+{'id': '98958531', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'KOROOKE – Spring Edition', 'slug': 'korooke-spring-edition', 'category': '__NOT_DEFINIED__', 'id_venue': 'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain', 'start_date': '2026-04-02', 'start_time': '20:00:00', 'end_date': '2026-04-02', 'end_time': '23:00:00', 'description': 'Port of Spain | Entrada Libre Una experiencia musical donde el público deja de ser espectador… y se convierte en protagonista. Karaoke internacional DJ en vivo Open Jam Session Un ambiente cuidado, dinámico y lleno de energía. Port of Spain Jueves 2 de Abril Desde las 20:00 Live the experience. Be the music. @KorookeOfficial www.korookeofficial.com Powered by Chévere Music Group #Korooke #AlmeriaEvents #LiveExperience #MusicLovers #NightVibes', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/port-of-spain/', 'location': 'Parque Nicolás Salmeron 20, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260320T104212', 'session': '2026_03_20_10_37_Viernes', 'image': 'https://clasijazz.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-19-at-12.05.26.jpeg', 'url': 'https://clasijazz.com/evento/korooke-spring-edition-port-of-spain/'}
+****************************
+Saving 3 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_20_10_37_Viernes/0_raw/20260320_1042_ClassicJazz.json
+Saving 3 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
