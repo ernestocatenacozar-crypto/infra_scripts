@@ -115,7 +115,7 @@ steps:
       -e CITY_SLUG="$CITY_SLUG"
       -v /home/ubuntu/work/frontend_build/test_frontend/dist:/app/dist
       infra_scripts-test_frontend:latest
-      -c "set +e; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --delete --parallel=1 . .; bye\" || true"'
+      -c "set +e; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --delete --parallel=10 . .; bye\" || true"'
 
   - name: "upload_to_bunny"
     depends:
