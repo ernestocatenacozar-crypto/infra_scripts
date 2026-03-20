@@ -1,0 +1,63 @@
+name: "0_AlmeriaTaskLauncher"
+
+env:
+  TARGET_CITY: "Almeria"
+  DAGU_BASE_URL: ${DAGU_BASE_URL}
+
+steps:
+
+  - name: "open_session"
+    command: >
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
+      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="1" CLOSE_SESSION="" DAGU_BASE_URL="$DAGU_BASE_URL"'
+      
+  - name: "get_scrapers_request"
+    command: >
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonGetScrapers.yml -- \
+      TARGET_CITY="$TARGET_CITY" GET_SCRAPERS="Request" DAGU_BASE_URL="$DAGU_BASE_URL"'
+
+  - name: "get_scrapers_selenium"
+    command: >
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonGetScrapers.yml -- \
+      TARGET_CITY="$TARGET_CITY" GET_SCRAPERS="Selenium" DAGU_BASE_URL="$DAGU_BASE_URL"'
+
+  - name: "launch_children_request"
+    command: >
+      env HOME=/tmp bash -lc 'SCRAPERS_REQUEST_FILE="/tmp/fisgon_scrapers_request.txt";
+      SCRAPERS_REQUEST="";
+      if [ -s "$SCRAPERS_REQUEST_FILE" ]; then
+      SCRAPERS_REQUEST="$(cat "$SCRAPERS_REQUEST_FILE")";
+      fi;
+      IFS="," read -ra SCRAPERS <<< "$SCRAPERS_REQUEST";
+      for s in "${SCRAPERS[@]}"; do
+      s="$(echo "$s" | xargs)";
+      [ -z "$s" ] && continue;
+      echo "Launching scraper: $s";
+      /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonTaskRequest.yml -- \
+      TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL" || true;
+      done'
+    continueOn:
+      failure: true
+
+  - name: "launch_children_selenium"
+    command: >
+      env HOME=/tmp bash -lc 'SCRAPERS_SELENIUM_FILE="/tmp/fisgon_scrapers_selenium.txt";
+      SCRAPERS_SELENIUM="";
+      if [ -s "$SCRAPERS_SELENIUM_FILE" ]; then
+      SCRAPERS_SELENIUM="$(cat "$SCRAPERS_SELENIUM_FILE")";
+      fi;
+      IFS="," read -ra SCRAPERS <<< "$SCRAPERS_SELENIUM";
+      for s in "${SCRAPERS[@]}"; do
+      s="$(echo "$s" | xargs)";
+      [ -z "$s" ] && continue;
+      echo "Launching scraper: $s";
+      /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonTaskSelenium.yml -- \
+      TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL" || true;
+      done'
+    continueOn:
+      failure: true
+
+  - name: "close_session"
+    command: >
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
+      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="" CLOSE_SESSION="1" DAGU_BASE_URL="$DAGU_BASE_URL"'

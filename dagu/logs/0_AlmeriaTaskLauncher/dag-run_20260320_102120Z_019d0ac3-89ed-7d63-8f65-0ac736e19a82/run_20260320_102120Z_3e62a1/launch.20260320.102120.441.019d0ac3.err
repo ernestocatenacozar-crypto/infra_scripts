@@ -1,0 +1,11 @@
+time=2026-03-20T10:21:20.546Z level=INFO msg="Executing root dag-run" dag=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f params=""
+time=2026-03-20T10:21:20.566Z level=INFO msg="DAG run started" name=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f attempt-id="" dag=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f params="[TARGET_CITY=Almeria 2=DAGU_BASE_URL=]"
+time=2026-03-20T10:21:20.570Z level=INFO msg="Step started" name=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f attempt-id="" dag=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f step=open_session
+time=2026-03-20T10:21:23.184Z level=INFO msg="Step started" name=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f attempt-id="" dag=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f step=get_scrapers_request
+time=2026-03-20T10:21:24.087Z level=INFO msg="Step started" name=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f attempt-id="" dag=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f step=get_scrapers_selenium
+time=2026-03-20T10:21:24.776Z level=INFO msg="Step started" name=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f attempt-id="" dag=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f step=launch_children_request
+time=2026-03-20T10:22:08.284Z level=INFO msg="Sending signal to running child processes" signal=terminated allow-override=false max-cleanup-time=5s
+time=2026-03-20T10:22:08.288Z level=INFO msg="Sending signal" signal=terminated step=launch_children_request
+time=2026-03-20T10:22:13.288Z level=INFO msg="Resending signal to processes that haven't terminated" signal=terminated
+time=2026-03-20T10:22:13.292Z level=INFO msg="Max cleanup time reached, sending SIGKILL to force termination"
+time=2026-03-20T10:22:42.242Z level=INFO msg="DAG run finished" name=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f attempt-id="" dag=FisgonTaskLauncher run-id=019d0ac3-8b20-7931-9e61-e021b71ede7f status=aborted started-at=2026-03-20T10:21:20Z finished-at=2026-03-20T10:22:42Z

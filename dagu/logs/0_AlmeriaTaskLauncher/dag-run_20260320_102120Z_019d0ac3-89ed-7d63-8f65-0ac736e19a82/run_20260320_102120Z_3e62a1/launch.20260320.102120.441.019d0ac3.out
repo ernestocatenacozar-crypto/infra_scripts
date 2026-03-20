@@ -1,0 +1,165 @@
+Aborted - 2026-03-20T10:21:20Z
+
+dag: FisgonTaskLauncher (1m 22s)
+│
+├─open_session (3.0s) [succeeded]
+│ ├─env HOME=/tmp bash -lc '/usr/local/bin/dagu start
+│ │   /var/lib/dagu/dags/FisgonSession.yml -- \ TARGET_CITY="Almeria"
+│ │   CREATE_SESSION="1" CLOSE_SESSION="" DAGU_BASE_URL="$DAGU_BASE_URL"'
+│ │
+│ ├─stdout:
+│ │   Succeeded - 2026-03-20T10:21:20Z
+│ │   dag: FisgonSession (3.0s)
+│ │   │
+│ │   └─session (3.0s) [succeeded]
+│ │   ├─bash -lc 'docker run --rm --network host -v
+│ │   │   /home/ubuntu/work/fisgon:/app -v
+│ │   │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+│ │   │ OPERATION=1 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e
+│ │   TARGET_CITY -e
+│ │   │   CREATE_SESSION -e CLOSE_SESSION -e
+│ │   │
+│ │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+│ │   │   -e
+│ │   │
+│ │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=loca
+│ │   l&
+│ │   │ step=session&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?;
+│ │   exit
+│ │   │   $rc'
+│ │   │
+│ │   └─stdout:
+│ │   RUNNING VARS →
+│ │   CITY=Almeria,
+│ │   OPERATION=1,
+│ │   CREATE_SESSION=1,
+│ │   CLOSE_SESSION=0,
+│ │   SESSION=None,
+│ │   IMAGES=0,
+│ │   GET_SCRAPERS=
+│ │   SCRAPER=
+│ │   DAG_RUN_URL=/dags/FisgonSession/log?remoteNode=local&step=session&dagR
+│ │   unId
+│ │   =019d0ac3-8b5b-7163-b5f6-57e8e4c3e7de
+│ │   2026_03_20_10_21_Viernes
+│ │   Result: Succeeded
+│ └─stderr:
+│     time=2026-03-20T10:21:20.605Z level=INFO msg="Executing root dag-run"
+│     dag=FisgonSession run-id=019d0ac3-8b5b-7163-b5f6-57e8e4c3e7de params=""
+│     time=2026-03-20T10:21:20.618Z level=INFO msg="DAG run started"
+│     name=FisgonSession run-id=019d0ac3-8b5b-7163-b5f6-57e8e4c3e7de
+│     attempt-id="" dag=FisgonSession
+│     run-id=019d0ac3-8b5b-7163-b5f6-57e8e4c3e7de params="[TARGET_CITY=Almeria
+│     CREATE_SESSION=1 CLOSE_SESSION=0 3=CLOSE_SESSION= 4=DAGU_BASE_URL=]"
+│     time=2026-03-20T10:21:20.622Z level=INFO msg="Step started"
+│     name=FisgonSession run-id=019d0ac3-8b5b-7163-b5f6-57e8e4c3e7de
+│     attempt-id="" dag=FisgonSession
+│     run-id=019d0ac3-8b5b-7163-b5f6-57e8e4c3e7de step=session
+│     time=2026-03-20T10:21:23.157Z level=INFO msg="DAG run finished"
+│     name=FisgonSession run-id=019d0ac3-8b5b-7163-b5f6-57e8e4c3e7de
+│     attempt-id="" dag=FisgonSession
+│     run-id=019d0ac3-8b5b-7163-b5f6-57e8e4c3e7de status=succeeded
+│     started-at=2026-03-20T10:21:20Z finished-at=2026-03-20T10:21:23Z
+│ 
+├─get_scrapers_request (1.0s) [succeeded]
+│ ├─env HOME=/tmp bash -lc '/usr/local/bin/dagu start
+│ │   /var/lib/dagu/dags/FisgonGetScrapers.yml -- \ TARGET_CITY="Almeria"
+│ │   GET_SCRAPERS="Request" DAGU_BASE_URL="$DAGU_BASE_URL"'
+│ │
+│ ├─stdout:
+│ │   Succeeded - 2026-03-20T10:21:23Z
+│ │   dag: FisgonGetScrapers (1.0s)
+│ │   │
+│ │   └─get_scrapers (1.0s) [succeeded]
+│ │   └─bash -lc 'case "Request" in Request)
+│ │   OUTPUT_FILE="/tmp/fisgon_scrapers_request.txt" ;; Selenium)
+│ │   OUTPUT_FILE="/tmp/fisgon_scrapers_selenium.txt" ;; *)
+│ │   OUTPUT_FILE="/tmp/fisgon_scrapers_unknown.txt" ;; esac; docker run
+│ │   --rm
+│ │   --network host -v /home/ubuntu/work/fisgon:/app -v
+│ │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+│ │   OPERATION=1 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY
+│ │   -e
+│ │   GET_SCRAPERS -e
+│ │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+│ │   -e
+│ │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=loca
+│ │   l&
+│ │   step=get_scrapers&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0 | tail -n
+│ │   1
+│ │   > "$OUTPUT_FILE"; rc=$?; exit $rc'
+│ │   Result: Succeeded
+│ └─stderr:
+│     time=2026-03-20T10:21:23.217Z level=INFO msg="Executing root dag-run"
+│     dag=FisgonGetScrapers run-id=019d0ac3-958f-7e7a-a5ae-2779fb759363
+│     params=""
+│     time=2026-03-20T10:21:23.231Z level=INFO msg="DAG run started"
+│     name=FisgonGetScrapers run-id=019d0ac3-958f-7e7a-a5ae-2779fb759363
+│     attempt-id="" dag=FisgonGetScrapers
+│     run-id=019d0ac3-958f-7e7a-a5ae-2779fb759363 params="[TARGET_CITY=Almeria
+│     GET_SCRAPERS=Request 3=DAGU_BASE_URL=]"
+│     time=2026-03-20T10:21:23.234Z level=INFO msg="Step started"
+│     name=FisgonGetScrapers run-id=019d0ac3-958f-7e7a-a5ae-2779fb759363
+│     attempt-id="" dag=FisgonGetScrapers
+│     run-id=019d0ac3-958f-7e7a-a5ae-2779fb759363 step=get_scrapers
+│     time=2026-03-20T10:21:24.065Z level=INFO msg="DAG run finished"
+│     name=FisgonGetScrapers run-id=019d0ac3-958f-7e7a-a5ae-2779fb759363
+│     attempt-id="" dag=FisgonGetScrapers
+│     run-id=019d0ac3-958f-7e7a-a5ae-2779fb759363 status=succeeded
+│     started-at=2026-03-20T10:21:23Z finished-at=2026-03-20T10:21:24Z
+│ 
+├─get_scrapers_selenium (0s) [succeeded]
+│ ├─env HOME=/tmp bash -lc '/usr/local/bin/dagu start
+│ │   /var/lib/dagu/dags/FisgonGetScrapers.yml -- \ TARGET_CITY="Almeria"
+│ │   GET_SCRAPERS="Selenium" DAGU_BASE_URL="$DAGU_BASE_URL"'
+│ │
+│ ├─stdout:
+│ │   Succeeded - 2026-03-20T10:21:24Z
+│ │   dag: FisgonGetScrapers (0s)
+│ │   │
+│ │   └─get_scrapers (0s) [succeeded]
+│ │   └─bash -lc 'case "Selenium" in Request)
+│ │   OUTPUT_FILE="/tmp/fisgon_scrapers_request.txt" ;; Selenium)
+│ │   OUTPUT_FILE="/tmp/fisgon_scrapers_selenium.txt" ;; *)
+│ │   OUTPUT_FILE="/tmp/fisgon_scrapers_unknown.txt" ;; esac; docker run
+│ │   --rm
+│ │   --network host -v /home/ubuntu/work/fisgon:/app -v
+│ │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+│ │   OPERATION=1 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY
+│ │   -e
+│ │   GET_SCRAPERS -e
+│ │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+│ │   -e
+│ │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=loca
+│ │   l&
+│ │   step=get_scrapers&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0 | tail -n
+│ │   1
+│ │   > "$OUTPUT_FILE"; rc=$?; exit $rc'
+│ │   Result: Succeeded
+│ └─stderr:
+│     time=2026-03-20T10:21:24.120Z level=INFO msg="Executing root dag-run"
+│     dag=FisgonGetScrapers run-id=019d0ac3-9917-725a-9d44-c1ec576bf50a
+│     params=""
+│     time=2026-03-20T10:21:24.134Z level=INFO msg="DAG run started"
+│     name=FisgonGetScrapers run-id=019d0ac3-9917-725a-9d44-c1ec576bf50a
+│     attempt-id="" dag=FisgonGetScrapers
+│     run-id=019d0ac3-9917-725a-9d44-c1ec576bf50a params="[TARGET_CITY=Almeria
+│     GET_SCRAPERS=Selenium 3=DAGU_BASE_URL=]"
+│     time=2026-03-20T10:21:24.137Z level=INFO msg="Step started"
+│     name=FisgonGetScrapers run-id=019d0ac3-9917-725a-9d44-c1ec576bf50a
+│     attempt-id="" dag=FisgonGetScrapers
+│     run-id=019d0ac3-9917-725a-9d44-c1ec576bf50a step=get_scrapers
+│     time=2026-03-20T10:21:24.753Z level=INFO msg="DAG run finished"
+│     name=FisgonGetScrapers run-id=019d0ac3-9917-725a-9d44-c1ec576bf50a
+│     attempt-id="" dag=FisgonGetScrapers
+│     run-id=019d0ac3-9917-725a-9d44-c1ec576bf50a status=succeeded
+│     started-at=2026-03-20T10:21:24Z finished-at=2026-03-20T10:21:24Z
+│ 
+├─launch_children_request [aborted]
+│ 
+├─launch_children_selenium
+│ 
+└─close_session
+
+Result: Aborted
+

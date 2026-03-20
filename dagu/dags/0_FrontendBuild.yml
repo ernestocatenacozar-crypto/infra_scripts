@@ -1,4 +1,4 @@
-name: "FrontendBuild"
+name: "0_FrontendBuild"
 params:
   - TARGET_CITY: "Almeria"
   - BASE_URL: "https://orbitatest.b-cdn.net/"
