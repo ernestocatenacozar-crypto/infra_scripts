@@ -1,0 +1,37 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ConciertosClub
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019d0ac7-1ffb-7b48-95f6-c3ced292d79a
+
+Running for Almeria: ConciertosClub
+ConciertosClub
+Creating rawfolder...
+RUNNING SESSION =  2026_03_20_10_25_Viernes
+Getting https://conciertos.club/almeria
+Sleep 1
+*** SCRAPED 135 URLS WITH EVENTS **
+New url events = 2
+0 / 2
+Getting https://conciertos.club/almeria/conciertos/113441-una-y-carne
+Sleep 4
+--------------------
+{'id': '245307ad', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Uña Y Carne', 'slug': 'una-y-carne', 'category': 'conciertos', 'id_venue': 'NmPqTrh6', 'venue': 'Berlín Social Club', 'std_venue': 'Berlin Social Club', 'start_date': '2026-05-15', 'start_time': '21:00:00', 'end_date': '2026-05-15', 'end_time': '__NOT_DEFINIED__', 'description': '\nCONCIERTO UÑA Y CARNE - ALMERÍA - SALA BERLIN SOCIAL CLUB - VIERNES 15 DE MAYO ', 'others': {'category': 'Mestizaje', 'price': '22', 'place_url': 'https://conciertos.club/almeria/locales/berlin-social-club', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260320T102516', 'session': '2026_03_20_10_25_Viernes', 'image': '__NOT_FOUND__', 'url': 'https://conciertos.club/almeria/conciertos/113441-una-y-carne'}
+1 / 2
+Getting https://conciertos.club/almeria/conciertos/113414-salsa-latin-jam
+Sleep 4
+--------------------
+{'id': '73a7d22d', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Salsa & Latín Jam', 'slug': 'salsa-latin-jam', 'category': 'conciertos', 'id_venue': 'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain', 'start_date': '2026-05-14', 'start_time': '22:00:00', 'end_date': '2026-05-14', 'end_time': '__NOT_DEFINIED__', 'description': '__NOT_FOUND__', 'others': {'category': 'Música Latina', 'price': 'Entrada libre', 'place_url': 'https://conciertos.club/almeria/locales/port-of-spain', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260320T102516', 'session': '2026_03_20_10_25_Viernes', 'image': '__NOT_FOUND__', 'url': 'https://conciertos.club/almeria/conciertos/113414-salsa-latin-jam'}
+****************************
+Saving 2 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_20_10_25_Viernes/0_raw/20260320_1025_ConciertosClub.json
+Saving 2 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
