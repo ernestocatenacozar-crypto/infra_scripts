@@ -1,0 +1,56 @@
+Failed - 2026-03-20T10:31:50Z
+
+dag: FisgonSession (1.0s)
+│
+└─session (1.0s) [failed]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=1 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   CREATE_SESSION -e CLOSE_SESSION -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=session&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=1,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=1,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=
+  │   DAG_RUN_URL=/dags/FisgonSession/log?remoteNode=local&step=session&dagRun
+  │   Id=019d0acd-2729-7554-bf22-c803a9b568ef
+  ├─stderr:
+  │   Traceback (most recent call last):
+  │   File "/app/run.py", line 93, in <module>
+  │   session_id = close_session(TARGET_CITY, session_id=SESSION,
+  │   dag_run_url=DAG_RUN_URL)
+  │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  │   File "/app/run.py", line 64, in close_session
+  │   return SessionManager.close_session(city=city, session_id=session_id,
+  │   dag_run_url=dag_run_url)
+  │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  │   ^^^^^^^^^^^^^^^
+  │   File "/app/operations/session_manager.py", line 113, in close_session
+  │   session_id = cls.get_single_open_session(city)
+  │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  │   File "/app/operations/session_manager.py", line 93, in
+  │   get_single_open_session
+  │   raise ValueError(
+  │   ValueError: More than one open session found for city 'Almeria':
+  │   ['2026_03_20_10_31_Viernes', '2026_03_20_10_29_Viernes',
+  │   '2026_03_20_10_24_Viernes', '2026_03_20_10_30_Viernes',
+  │   '2026_03_20_10_25_Viernes', '2026_03_20_10_23_Viernes',
+  │   '2026_03_20_10_21_Viernes', '2026_03_20_10_26_Viernes',
+  │   '2026_03_20_10_28_Viernes', '2026_03_20_10_27_Viernes']
+  │
+  └─error: failed to execute step "session": exit status 1
+
+Result: Failed
+
