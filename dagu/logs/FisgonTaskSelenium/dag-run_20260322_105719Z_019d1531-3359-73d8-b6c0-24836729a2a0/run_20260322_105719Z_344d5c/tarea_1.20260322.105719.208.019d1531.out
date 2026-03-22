@@ -1,0 +1,44 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=Entradium
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d1531-3359-73d8-b6c0-24836729a2a0
+
+Running for Almeria: Entradium
+Entradium
+RUNNING SESSION =  2026_03_22_10_51_Domingo
+Starting WebDriver...
+http://localhost:4444/wd/hub
+sleeping 5
+clicking
+sleeping 3
+sleeping 1.5
+sleeping 3
+******
+xpath
+/html/body/header/div[2]/div[1]/div/div/form/div/div/button/span/i
+clicking
+sleeping 3
+sleeping 8
+Getting content
+*** SCRAPED 22 URLS WITH EVENTS **
+New url events = 1
+0 / 1
+Getting https://entradium.com/es/events/coreografia-del-caos-almeria
+Sleep 4
+['11.04.2026', '20:30']
+--------------------
+{'id': 'b92118ea', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Coreografía Del Caos', 'slug': 'coreografia-del-caos', 'category': '__NOT_DEFINIED__', 'id_venue': 'BpNJrbgb', 'venue': 'Sala Abba', 'std_venue': 'Sala Abba', 'start_date': '2026-04-11', 'start_time': '20:30:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'COREOGRAFÍA DEL CAOS Un show de teatro improvisado que no se escribe.Se mueve.Cuerpos, miradas, música y emoción abren un espacio donde lo real y lo imaginario se entremezclan.Fragmentos poéticos, verdades compartidas y silencios que vosotras termináis de completar.Nada está decidido.Todo puede suceder.', 'others': {}, 'source': 'Entradium', 'exec_time': '20260322T105724', 'session': '2026_03_22_10_51_Domingo', 'image': 'https://d2il8hfach02z9.cloudfront.net/uploads/event/poster/c4a7f8378bc5330091ecccc48a3fbc0656b80d90/event_m_1000153365.png?v=1774029576', 'url': 'https://entradium.com/es/events/coreografia-del-caos-almeria'}
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_22_10_51_Domingo/0_raw/20260322_1057_Entradium.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
