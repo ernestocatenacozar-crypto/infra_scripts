@@ -1,0 +1,6 @@
+M	data/almeria/master_events.json
+M	static/css/tailwind.css
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[main 772433b] chore(snapshot): update master_events for almeria 2026-03-23T18:21:26Z
+ 1 file changed, 167 insertions(+), 68 deletions(-)

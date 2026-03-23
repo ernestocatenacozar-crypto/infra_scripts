@@ -1,0 +1,3 @@
+WARNING: Error loading config file: open /root/.docker/config.json: permission denied
+cd: Login failed: 530 Not logged in
+mirror: Login failed: 530 Not logged in
