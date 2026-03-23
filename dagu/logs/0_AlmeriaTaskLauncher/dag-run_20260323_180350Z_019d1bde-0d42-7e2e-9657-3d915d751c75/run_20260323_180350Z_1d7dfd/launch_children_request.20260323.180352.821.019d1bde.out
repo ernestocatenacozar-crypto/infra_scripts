@@ -1,0 +1,559 @@
+Launching scraper: KuverProducciones
+Succeeded - 2026-03-23T18:03:52Z
+
+dag: FisgonTaskRequest (6.0s)
+│
+└─tarea_1 (6.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=KuverProducciones
+  │   DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&da
+  │   gRunId=019d1bde-1697-74f9-acb2-7dcdb3a99318
+  │   Running for Almeria: KuverProducciones
+  │   KuverProducciones
+  │   Creating rawfolder...
+  │   RUNNING SESSION =  2026_03_23_18_03_Lunes
+  │   Getting https://kuverproducciones.com/proximos-eventos/
+  │   Sleep 1
+  │   *** SCRAPED 57 URLS WITH EVENTS **
+  │   New url events = 0
+  │   #######################
+  │   No new urls/events extracted. No new events to save
+  │   #######################
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'kuverproducciones.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: SalaBerlin
+Succeeded - 2026-03-23T18:03:58Z
+
+dag: FisgonTaskRequest (4.0s)
+│
+└─tarea_1 (4.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=SalaBerlin
+  │   DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&da
+  │   gRunId=019d1bde-2df0-7d7b-9039-6e10765bbc25
+  │   Running for Almeria: SalaBerlin
+  │   SalaBerlin
+  │   RUNNING SESSION =  2026_03_23_18_03_Lunes
+  │   Getting https://berlinalmeria.com/eventos/
+  │   Sleep 1
+  │   *** SCRAPED 12 URLS WITH EVENTS **
+  │   New url events = 0
+  │   #######################
+  │   No new urls/events extracted. No new events to save
+  │   #######################
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'berlinalmeria.com'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: LaGuajira
+Succeeded - 2026-03-23T18:04:02Z
+
+dag: FisgonTaskRequest (1m 1s)
+│
+└─tarea_1 (1m 1s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout: ... (36 more lines)
+  │   Sleep 16
+  │   --------------------
+  │   {'id': 'f5e248d9', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo De La Guajira Con Julián
+  │   Sánchez', 'slug': 'coro-combo-de-la-guajira-con-julian-sanchez',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-04-14',
+  │   'start_time': '20:00:00', 'end_date': '2026-04-14', 'end_time':
+  │   '21:30:00', 'description': '¡Llega el Coro-Combo de La Guajira! Si te
+  │   gusta cantar, tocar un instrumento o simplemente compartir la música
+  │   como experiencia colectiva, este proyecto es para ti. El Coro-Combo de
+  │   La Guajira nace con la idea de crear un espacio artístico estable,
+  │   intercultural e intergeneracional, abierto a todas las personas que
+  │   quieran sumarse. La propuesta es ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260323T180403', 'session': '2026_03_23_18_03_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-04-14/'}
+  │   --------------------
+  │   {'id': 'dc3f5dd4', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo De La Guajira Con Julián
+  │   Sánchez', 'slug': 'coro-combo-de-la-guajira-con-julian-sanchez',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-03-31',
+  │   'start_time': '20:00:00', 'end_date': '2026-03-31', 'end_time':
+  │   '21:30:00', 'description': '¡Llega el Coro-Combo de La Guajira! Si te
+  │   gusta cantar, tocar un instrumento o simplemente compartir la música
+  │   como experiencia colectiva, este proyecto es para ti. El Coro-Combo de
+  │   La Guajira nace con la idea de crear un espacio artístico estable,
+  │   intercultural e intergeneracional, abierto a todas las personas que
+  │   quieran sumarse. La propuesta es ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260323T180403', 'session': '2026_03_23_18_03_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-03-31/'}
+  │   --------------------
+  │   {'id': '9503b4d5', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio De Idiomas',
+  │   'slug': 'meetup-intercambio-de-idiomas', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-04-10', 'start_time': '20:30:00',
+  │   'end_date': '2026-04-10', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260323T180403', 'session': '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-04-10/'}
+  │   --------------------
+  │   {'id': '1b07315f', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo De La Guajira Con Julián
+  │   Sánchez', 'slug': 'coro-combo-de-la-guajira-con-julian-sanchez',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-04-07',
+  │   'start_time': '20:00:00', 'end_date': '2026-04-07', 'end_time':
+  │   '21:30:00', 'description': '¡Llega el Coro-Combo de La Guajira! Si te
+  │   gusta cantar, tocar un instrumento o simplemente compartir la música
+  │   como experiencia colectiva, este proyecto es para ti. El Coro-Combo de
+  │   La Guajira nace con la idea de crear un espacio artístico estable,
+  │   intercultural e intergeneracional, abierto a todas las personas que
+  │   quieran sumarse. La propuesta es ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260323T180403', 'session': '2026_03_23_18_03_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-04-07/'}
+  │   --------------------
+  │   {'id': '9e19d9d6', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Charla Y Presentación De Libro:
+  │   ‘Manual De Emergencia Para Mujeres Maltratadas’', 'slug':
+  │   'charla-y-presentacion-de-libro-manual-de-emergencia-para-mujeres-maltra
+  │   tadas', 'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue':
+  │   'La Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-04-03',
+  │   'start_time': '19:00:00', 'end_date': '2026-04-03', 'end_time':
+  │   '20:30:00', 'description': 'El maltrato hacia la mujer tiene que ver con
+  │   muchos factores. Uno de ellos es la educación que niños y niñas
+  │   reciben y que configura un “libro de instrucciones” interno que
+  │   vulnerabiliza a muchas mujeres frente al maltrato. En esta charla vamos
+  │   a hablar de esos factores educativos y exponer la conexión entre ellos
+  │   y ...', 'others': {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__',
+  │   'location': 'La Guajira, C/ Cruces Bajas, 1, Almería, España'},
+  │   'source': 'LaGuajira', 'exec_time': '20260323T180403', 'session':
+  │   '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/03/presentacion-
+  │   manual.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/charla-y-presentacion-de-libro-ma
+  │   nual-de-emergencia-para-mujeres-maltratadas/'}
+  │   --------------------
+  │   {'id': '083afa9c', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio De Idiomas',
+  │   'slug': 'meetup-intercambio-de-idiomas', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-04-03', 'start_time': '20:30:00',
+  │   'end_date': '2026-04-03', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260323T180403', 'session': '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-04-03/'}
+  │   --------------------
+  │   {'id': '82fb59a0', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso De Teatro Con Julio Béjar',
+  │   'slug': 'curso-de-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-04-06', 'start_time':
+  │   '19:30:00', 'end_date': '2026-04-06', 'end_time': '21:30:00',
+  │   'description': 'De noviembre de 2025 a junio de 2026, el dramaturgo y
+  │   director Julio Béjar impartirá en La Guajira un curso regular de
+  │   creación escénica pensado para quienes quieran explorar los distintos
+  │   oficios del teatro y desarrollar su propia pieza. Durante ocho meses, el
+  │   grupo —de entre 10 y 20 participantes— recorrerá todos los aspectos
+  │   del ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260323T180403',
+  │   'session': '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-04-06/'}
+  │   --------------------
+  │   {'id': '35cf7244', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso De Teatro Con Julio Béjar',
+  │   'slug': 'curso-de-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-04-13', 'start_time':
+  │   '19:30:00', 'end_date': '2026-04-13', 'end_time': '21:30:00',
+  │   'description': 'De noviembre de 2025 a junio de 2026, el dramaturgo y
+  │   director Julio Béjar impartirá en La Guajira un curso regular de
+  │   creación escénica pensado para quienes quieran explorar los distintos
+  │   oficios del teatro y desarrollar su propia pieza. Durante ocho meses, el
+  │   grupo —de entre 10 y 20 participantes— recorrerá todos los aspectos
+  │   del ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260323T180403',
+  │   'session': '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-04-13/'}
+  │   --------------------
+  │   {'id': 'b57650a8', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Inés Rodríguez & Elena Durbán
+  │   #NocheAzul', 'slug': 'ines-rodriguez-elena-durban-nocheazul',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-04-01',
+  │   'start_time': '22:00:00', 'end_date': '2026-04-01', 'end_time':
+  │   '23:30:00', 'description': 'Inés Rodríguez ha completado su formación
+  │   en el Conservatorio Profesional de Almería, donde se especializó en
+  │   flamenco y obtuvo el título profesional con sobresaliente. Durante esta
+  │   etapa, formó parte de un proyecto coreográfico dirigido por el
+  │   reconocido Marcos Flores. Además, fue seleccionada por Rubén Olmo para
+  │   disfrutar de una beca formativa en el Conservatorio de ...', 'others':
+  │   {'ticket':
+  │   'https://laguajiradealmeria.com/evento/ines-rodriguez-elena-durban-noche
+  │   azul/#tribe-tickets__tickets-form', 'price': 'Gratuito – 12,00€',
+  │   'location': 'La Guajira, C/ Cruces Bajas, 1, Almería, España'},
+  │   'source': 'LaGuajira', 'exec_time': '20260323T180403', 'session':
+  │   '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/06/ElenaInes.jpg
+  │   ', 'url':
+  │   'https://laguajiradealmeria.com/evento/ines-rodriguez-elena-durban-noche
+  │   azul/'}
+  │   --------------------
+  │   {'id': '6d394e39', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso De Teatro Con Julio Béjar',
+  │   'slug': 'curso-de-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-03-30', 'start_time':
+  │   '19:30:00', 'end_date': '2026-03-30', 'end_time': '21:30:00',
+  │   'description': 'De noviembre de 2025 a junio de 2026, el dramaturgo y
+  │   director Julio Béjar impartirá en La Guajira un curso regular de
+  │   creación escénica pensado para quienes quieran explorar los distintos
+  │   oficios del teatro y desarrollar su propia pieza. Durante ocho meses, el
+  │   grupo —de entre 10 y 20 participantes— recorrerá todos los aspectos
+  │   del ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260323T180403',
+  │   'session': '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-03-30/'}
+  │   Getting https://laguajiradealmeria.com/programacion/lista/página/3/
+  │   Sleep 16
+  │   --------------------
+  │   {'id': '2ebaa1d7', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso De Teatro Con Julio Béjar',
+  │   'slug': 'curso-de-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-04-27', 'start_time':
+  │   '19:30:00', 'end_date': '2026-04-27', 'end_time': '21:30:00',
+  │   'description': 'De noviembre de 2025 a junio de 2026, el dramaturgo y
+  │   director Julio Béjar impartirá en La Guajira un curso regular de
+  │   creación escénica pensado para quienes quieran explorar los distintos
+  │   oficios del teatro y desarrollar su propia pieza. Durante ocho meses, el
+  │   grupo —de entre 10 y 20 participantes— recorrerá todos los aspectos
+  │   del ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260323T180403',
+  │   'session': '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-04-27/'}
+  │   --------------------
+  │   {'id': '8a4cfa18', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio De Idiomas',
+  │   'slug': 'meetup-intercambio-de-idiomas', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-04-17', 'start_time': '20:30:00',
+  │   'end_date': '2026-04-17', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260323T180403', 'session': '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-04-17/'}
+  │   --------------------
+  │   {'id': '6301af3e', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio De Idiomas',
+  │   'slug': 'meetup-intercambio-de-idiomas', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-04-24', 'start_time': '20:30:00',
+  │   'end_date': '2026-04-24', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260323T180403', 'session': '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-04-24/'}
+  │   --------------------
+  │   {'id': '9d50fb5a', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo De La Guajira Con Julián
+  │   Sánchez', 'slug': 'coro-combo-de-la-guajira-con-julian-sanchez',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-05-05',
+  │   'start_time': '20:00:00', 'end_date': '2026-05-05', 'end_time':
+  │   '21:30:00', 'description': '¡Llega el Coro-Combo de La Guajira! Si te
+  │   gusta cantar, tocar un instrumento o simplemente compartir la música
+  │   como experiencia colectiva, este proyecto es para ti. El Coro-Combo de
+  │   La Guajira nace con la idea de crear un espacio artístico estable,
+  │   intercultural e intergeneracional, abierto a todas las personas que
+  │   quieran sumarse. La propuesta es ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260323T180403', 'session': '2026_03_23_18_03_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-05-05/'}
+  │   --------------------
+  │   {'id': '157dc281', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo De La Guajira Con Julián
+  │   Sánchez', 'slug': 'coro-combo-de-la-guajira-con-julian-sanchez',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-04-28',
+  │   'start_time': '20:00:00', 'end_date': '2026-04-28', 'end_time':
+  │   '21:30:00', 'description': '¡Llega el Coro-Combo de La Guajira! Si te
+  │   gusta cantar, tocar un instrumento o simplemente compartir la música
+  │   como experiencia colectiva, este proyecto es para ti. El Coro-Combo de
+  │   La Guajira nace con la idea de crear un espacio artístico estable,
+  │   intercultural e intergeneracional, abierto a todas las personas que
+  │   quieran sumarse. La propuesta es ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260323T180403', 'session': '2026_03_23_18_03_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-04-28/'}
+  │   --------------------
+  │   {'id': 'ccc7c71c', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio De Idiomas',
+  │   'slug': 'meetup-intercambio-de-idiomas', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-05-01', 'start_time': '20:30:00',
+  │   'end_date': '2026-05-01', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260323T180403', 'session': '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-05-01/'}
+  │   --------------------
+  │   {'id': '96284adf', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso De Teatro Con Julio Béjar',
+  │   'slug': 'curso-de-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-04-20', 'start_time':
+  │   '19:30:00', 'end_date': '2026-04-20', 'end_time': '21:30:00',
+  │   'description': 'De noviembre de 2025 a junio de 2026, el dramaturgo y
+  │   director Julio Béjar impartirá en La Guajira un curso regular de
+  │   creación escénica pensado para quienes quieran explorar los distintos
+  │   oficios del teatro y desarrollar su propia pieza. Durante ocho meses, el
+  │   grupo —de entre 10 y 20 participantes— recorrerá todos los aspectos
+  │   del ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260323T180403',
+  │   'session': '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-04-20/'}
+  │   --------------------
+  │   {'id': 'e75cff4e', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo De La Guajira Con Julián
+  │   Sánchez', 'slug': 'coro-combo-de-la-guajira-con-julian-sanchez',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-04-21',
+  │   'start_time': '20:00:00', 'end_date': '2026-04-21', 'end_time':
+  │   '21:30:00', 'description': '¡Llega el Coro-Combo de La Guajira! Si te
+  │   gusta cantar, tocar un instrumento o simplemente compartir la música
+  │   como experiencia colectiva, este proyecto es para ti. El Coro-Combo de
+  │   La Guajira nace con la idea de crear un espacio artístico estable,
+  │   intercultural e intergeneracional, abierto a todas las personas que
+  │   quieran sumarse. La propuesta es ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260323T180403', 'session': '2026_03_23_18_03_Lunes',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-04-21/'}
+  │   --------------------
+  │   {'id': 'ace6dd0f', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso De Teatro Con Julio Béjar',
+  │   'slug': 'curso-de-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-05-04', 'start_time':
+  │   '19:30:00', 'end_date': '2026-05-04', 'end_time': '21:30:00',
+  │   'description': 'De noviembre de 2025 a junio de 2026, el dramaturgo y
+  │   director Julio Béjar impartirá en La Guajira un curso regular de
+  │   creación escénica pensado para quienes quieran explorar los distintos
+  │   oficios del teatro y desarrollar su propia pieza. Durante ocho meses, el
+  │   grupo —de entre 10 y 20 participantes— recorrerá todos los aspectos
+  │   del ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260323T180403',
+  │   'session': '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-05-04/'}
+  │   --------------------
+  │   {'id': '2cbb64c5', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio De Idiomas',
+  │   'slug': 'meetup-intercambio-de-idiomas', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-05-08', 'start_time': '20:30:00',
+  │   'end_date': '2026-05-08', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260323T180403', 'session': '2026_03_23_18_03_Lunes', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-05-08/'}
+  │   Checking unique event url.
+  │   New url events = 1
+  │   ****************************
+  │   Saving 1 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_23_18_03_Lunes/0_raw/20260323_
+  │   1804_LaGuajira.json
+  │   Saving 1 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: ConciertosClub

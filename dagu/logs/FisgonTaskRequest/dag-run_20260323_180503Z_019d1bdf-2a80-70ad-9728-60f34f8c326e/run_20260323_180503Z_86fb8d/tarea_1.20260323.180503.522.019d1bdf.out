@@ -1,0 +1,14 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ConciertosClub
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019d1bdf-2a80-70ad-9728-60f34f8c326e
+

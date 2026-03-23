@@ -1,0 +1,32 @@
+Succeeded - 2026-03-23T18:03:50Z
+
+dag: FisgonSession (1.0s)
+│
+└─session (1.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -w /app -e
+  │   OPERATION=1 -e DOCKER_CONFIG=/tmp/.docker -e HOME=/tmp -e TARGET_CITY -e
+  │   CREATE_SESSION -e CLOSE_SESSION -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=session&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=1,
+      CREATE_SESSION=1,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=
+      DAG_RUN_URL=/dags/FisgonSession/log?remoteNode=local&step=session&dagRunId
+      =019d1bde-0d96-7865-942b-3a1d36078297
+      2026_03_23_18_03_Lunes
+
+Result: Succeeded
+
