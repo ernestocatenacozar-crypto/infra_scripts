@@ -1,0 +1,4 @@
+time=2026-03-23T18:11:34.885Z level=INFO msg="Executing root dag-run" dag=FisgonSession run-id=019d1be5-2363-7b42-8cfa-6ff1d649ca02 params=""
+time=2026-03-23T18:11:34.898Z level=INFO msg="DAG run started" name=FisgonSession run-id=019d1be5-2363-7b42-8cfa-6ff1d649ca02 attempt-id="" dag=FisgonSession run-id=019d1be5-2363-7b42-8cfa-6ff1d649ca02 params="[TARGET_CITY=Almeria CREATE_SESSION=0 CLOSE_SESSION=1 2=CREATE_SESSION= 4=DAGU_BASE_URL=]"
+time=2026-03-23T18:11:34.901Z level=INFO msg="Step started" name=FisgonSession run-id=019d1be5-2363-7b42-8cfa-6ff1d649ca02 attempt-id="" dag=FisgonSession run-id=019d1be5-2363-7b42-8cfa-6ff1d649ca02 step=session
+time=2026-03-23T18:11:35.637Z level=INFO msg="DAG run finished" name=FisgonSession run-id=019d1be5-2363-7b42-8cfa-6ff1d649ca02 attempt-id="" dag=FisgonSession run-id=019d1be5-2363-7b42-8cfa-6ff1d649ca02 status=succeeded started-at=2026-03-23T18:11:34Z finished-at=2026-03-23T18:11:35Z
