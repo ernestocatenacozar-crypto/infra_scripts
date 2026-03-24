@@ -144,11 +144,12 @@ steps:
         exit 0;
       fi;
       echo "Purging BunnyCDN cache for pull zone ${BUNNY_PULL_ZONE_ID}...";
-      HTTP_STATUS=$(curl -s -o /tmp/bunny_purge_response.txt -w "%{http_code}"
-        -X POST "https://api.bunny.net/pullzone/${BUNNY_PULL_ZONE_ID}/purgeCache"
-        -H "AccessKey: ${BUNNY_ACCOUNT_API_KEY}"
-        -H "Content-Type: application/json");
-      echo "Response: $(cat /tmp/bunny_purge_response.txt)";
+      HTTP_STATUS=$(docker run --rm curlimages/curl:latest
+      -s -o /dev/null -w "%{http_code}"
+      -X POST "https://api.bunny.net/pullzone/${BUNNY_PULL_ZONE_ID}/purgeCache"
+      -H "AccessKey: ${BUNNY_ACCOUNT_API_KEY}"
+      -H "Content-Type: application/json");
+      echo "HTTP status: $HTTP_STATUS";
       if [ "$HTTP_STATUS" != "204" ]; then
         echo "Cache purge failed with HTTP status $HTTP_STATUS";
         exit 1;
