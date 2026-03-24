@@ -1,0 +1,18 @@
+Unable to find image 'curlimages/curl:latest' locally
+latest: Pulling from curlimages/curl
+bd9ddc54bea9: Pulling fs layer
+014e56e61396: Pulling fs layer
+1297ab07a740: Pulling fs layer
+bd9ddc54bea9: Download complete
+014e56e61396: Download complete
+1297ab07a740: Download complete
+014e56e61396: Pull complete
+1297ab07a740: Pull complete
+bd9ddc54bea9: Pull complete
+Digest: sha256:d94d07ba9e7d6de898b6d96c1a072f6f8266c687af78a74f380087a0addf5d17
+Status: Downloaded newer image for curlimages/curl:latest
+curl: try 'curl --help' or 'curl --manual' for more information
+bash: line 9: -s: command not found
+bash: line 10: -X: command not found
+bash: line 11: -H: command not found
+bash: line 12: -H: command not found
