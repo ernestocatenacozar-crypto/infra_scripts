@@ -33,6 +33,8 @@ services:
       - DAGU_PORT=6806
       - TZ=Europe/Madrid
       - BUNNY_STORAGE_API_KEY=${BUNNY_STORAGE_API_KEY}
+      - BUNNY_PULL_ZONE_ID=${BUNNY_PULL_ZONE_ID}
+      - BUNNY_ACCOUNT_API_KEY=${BUNNY_ACCOUNT_API_KEY}
 
   fisgon_api:
     build:
