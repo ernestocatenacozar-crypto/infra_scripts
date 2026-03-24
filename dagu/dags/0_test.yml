@@ -1,4 +1,6 @@
 name: "0_test"
+dotenv:
+  - /home/ubuntu/work/infra_scripts/.env
 params:
   - BUNNY_PULL_ZONE_ID: ""
   - BUNNY_ACCOUNT_API_KEY: ""
