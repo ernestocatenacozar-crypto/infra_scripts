@@ -1,25 +1,18 @@
 name: "0_FrontendBuild"
 params:
   - TARGET_CITY: "Almeria"
-  - BASE_URL: "https://www.orbitando.es/"
-  - OUT_DIR: "dist"
   - SKIP_DOWNLOAD_IMAGES: "0"
-  - BUNNY_STORAGE_ZONE: "orbitastorage"
-  - BUNNY_STORAGE_API_KEY: ""
-  - BUNNY_PULL_ZONE_ID: ""
-  - BUNNY_ACCOUNT_API_KEY: ""
   - CLEAN_UP: "0"
 
 env:
   TARGET_CITY: ${TARGET_CITY}
-  BASE_URL: ${BASE_URL}
-  OUT_DIR: ${OUT_DIR}
   SKIP_DOWNLOAD_IMAGES: ${SKIP_DOWNLOAD_IMAGES}
+  CLEAN_UP: ${CLEAN_UP}
+  BASE_URL: ${BASE_URL}
   BUNNY_STORAGE_ZONE: ${BUNNY_STORAGE_ZONE}
   BUNNY_STORAGE_API_KEY: ${BUNNY_STORAGE_API_KEY}
   BUNNY_PULL_ZONE_ID: ${BUNNY_PULL_ZONE_ID}
   BUNNY_ACCOUNT_API_KEY: ${BUNNY_ACCOUNT_API_KEY}
-  CLEAN_UP: ${CLEAN_UP}
 
 steps:
   - name: "snapshot_master_events"
@@ -101,7 +94,7 @@ steps:
       "$IMAGE"
       scripts/docker_static_entrypoint.sh
       --city "$TARGET_CITY"
-      --out "$OUT_DIR"
+      --out "dist"
       --base-url "$BASE_URL"
       $EXTRA_ARGS'
 
