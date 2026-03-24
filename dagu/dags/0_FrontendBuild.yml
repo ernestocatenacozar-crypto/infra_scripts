@@ -6,6 +6,8 @@ params:
   - SKIP_DOWNLOAD_IMAGES: "0"
   - BUNNY_STORAGE_ZONE: "orbitastorage"
   - BUNNY_STORAGE_API_KEY: ""
+  - BUNNY_PULL_ZONE_ID: ""
+  - BUNNY_ACCOUNT_API_KEY: ""
   - CLEAN_UP: "0"
 
 env:
@@ -15,6 +17,8 @@ env:
   SKIP_DOWNLOAD_IMAGES: ${SKIP_DOWNLOAD_IMAGES}
   BUNNY_STORAGE_ZONE: ${BUNNY_STORAGE_ZONE}
   BUNNY_STORAGE_API_KEY: ${BUNNY_STORAGE_API_KEY}
+  BUNNY_PULL_ZONE_ID: ${BUNNY_PULL_ZONE_ID}
+  BUNNY_ACCOUNT_API_KEY: ${BUNNY_ACCOUNT_API_KEY}
   CLEAN_UP: ${CLEAN_UP}
 
 steps:
@@ -129,3 +133,24 @@ steps:
       -v /home/ubuntu/work/frontend_build/test_frontend/dist:/app/dist
       infra_scripts-test_frontend:latest
       -c "set -eu; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --parallel=25 . .; bye\""
+
+  - name: "purge_bunny_cache"
+    depends:
+      - "upload_to_bunny"
+    command: >
+      env HOME=/tmp bash -lc 'set -eu;
+      if [ -z "${BUNNY_PULL_ZONE_ID}" ]; then
+        echo "BUNNY_PULL_ZONE_ID is not set, skipping cache purge";
+        exit 0;
+      fi;
+      echo "Purging BunnyCDN cache for pull zone ${BUNNY_PULL_ZONE_ID}...";
+      HTTP_STATUS=$(curl -s -o /tmp/bunny_purge_response.txt -w "%{http_code}"
+        -X POST "https://api.bunny.net/pullzone/${BUNNY_PULL_ZONE_ID}/purgeCache"
+        -H "AccessKey: ${BUNNY_ACCOUNT_API_KEY}"
+        -H "Content-Type: application/json");
+      echo "Response: $(cat /tmp/bunny_purge_response.txt)";
+      if [ "$HTTP_STATUS" != "204" ]; then
+        echo "Cache purge failed with HTTP status $HTTP_STATUS";
+        exit 1;
+      fi;
+      echo "Cache purged successfully"'
