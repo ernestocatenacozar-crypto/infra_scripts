@@ -1,0 +1,4 @@
+env HOME=/tmp bash -lc 'set -eu; if [ "1" != "1" ]; then
+  echo "CLEAN_UP != 1, skipping cleanup";
+  exit 0;
+fi; CITY_SLUG="$(printf "%s" "Almeria" | tr "[:upper:]" "[:lower:]")"; docker run --rm --entrypoint sh -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE" -e BUNNY_STORAGE_API_KEY="$BUNNY_STORAGE_API_KEY" -e CITY_SLUG="$CITY_SLUG" -v /home/ubuntu/work/frontend_build/test_frontend/dist:/app/dist infra_scripts-test_frontend:latest -c "set +e; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --delete --parallel=10 . .; bye\" || true"'
