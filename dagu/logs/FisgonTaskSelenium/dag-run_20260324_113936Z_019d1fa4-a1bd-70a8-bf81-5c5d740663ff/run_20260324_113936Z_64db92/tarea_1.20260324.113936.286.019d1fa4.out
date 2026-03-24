@@ -24,3 +24,13 @@ sleeping 5
 Getting content
 page = 1 -----------https://almeriaciudad.es/cultura/agenda?page=1--------------- len 12
 sleeping 5
+Getting content
+page = 2 -----------https://almeriaciudad.es/cultura/agenda?page=2--------------- len 4
+sleeping 5
+Getting content
+page = 3 -----------https://almeriaciudad.es/cultura/agenda?page=3--------------- len 0
+*** SCRAPED 28 URLS WITH EVENTS **
+New url events = 0
+#######################
+No new urls/events extracted. No new events to save
+#######################

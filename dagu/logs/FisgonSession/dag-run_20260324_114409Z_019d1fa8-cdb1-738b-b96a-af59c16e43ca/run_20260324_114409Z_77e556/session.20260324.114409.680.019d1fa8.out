@@ -1,0 +1,20 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=1,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=1,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=
+        DAG_RUN_URL=/dags/FisgonSession/log?remoteNode=local&step=session&dagRunId=019d1fa8-cdb1-738b-b96a-af59c16e43ca
+
+Executing final task with session: 2026_03_24_11_37_Martes
+Reading /home/ubuntu/data_storage/Almeria/2026_03_24_11_37_Martes/0_raw/20260324_1137_SalaBerlin.json...
+Reading /home/ubuntu/data_storage/Almeria/2026_03_24_11_37_Martes/0_raw/20260324_1137_LaGuajira.json...
+Reading /home/ubuntu/data_storage/Almeria/2026_03_24_11_37_Martes/0_raw/20260324_1143_SalaEmma.json...
+Saving 10 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_24_11_37_Martes/0_raw/Merged.json
