@@ -1,7 +1,7 @@
 name: "0_FrontendBuild"
 params:
   - TARGET_CITY: "Almeria"
-  - BASE_URL: "https://orbitatest.b-cdn.net/"
+  - BASE_URL: "https://www.orbitando.es/"
   - OUT_DIR: "dist"
   - SKIP_DOWNLOAD_IMAGES: "0"
   - BUNNY_STORAGE_ZONE: "orbitastorage"
