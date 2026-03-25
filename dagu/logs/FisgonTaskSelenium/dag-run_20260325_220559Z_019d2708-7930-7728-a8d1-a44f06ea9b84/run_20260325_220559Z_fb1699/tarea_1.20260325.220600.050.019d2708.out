@@ -1,0 +1,114 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=JuntaAndaluciaAgenda
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d2708-7930-7728-a8d1-a44f06ea9b84
+
+Running for Almeria: JuntaAndaluciaAgenda
+JuntaAndaluciaAgenda
+RUNNING SESSION =  2026_03_25_22_02_Miercoles
+Starting WebDriver...
+http://localhost:4444/wd/hub
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1) Not found
+Getting content
+*** SCRAPED 79 URLS WITH EVENTS **
+New url events = 7
+0 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/la-ceremonia-de-la-despedida-13
+Sleep 4
+--------------------
+{'id': '80cfd2c3', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 1, 'event': 'La Ceremonia De La Despedida', 'slug': 'la-ceremonia-de-la-despedida', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Plaza Mayor de El Ejido', 'std_venue': None, 'start_date': '2026-04-29', 'start_time': '__NOT_FOUND__', 'end_date': '2026-04-29', 'end_time': '__NOT_DEFINIED__', 'description': 'COMPAÑÍA: SilencioDanza + RaulDuran Cía. Danza DURACIÓN: 45 min El montaje se inspira en la imagen para ir más allá de ella, trascenderla a través de la danza ydarle entidad propia. ¿Quién podría negarnos emprender el camino? ... La ceremonia de ladespedida es una mirada al corazón por la que se escapa la vida contenida en el arte. Unapareja, sentada frente a frente, sin cruzar palabra. Testigos involuntarios, a veces se nosantoja preferible que griten, o discutan: aun en la pelea puede haber un signo de interés por elotro. La indiferencia, en cambio, es letal. Ya lo decía el poeta: de la mesa, como del amor, hayque saber retirarse a tiempo, para no ver las sobras.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/plaza-mayor-de-el-ejido', 'location2': 'Plaza Mayor de El Ejido', 'duration': '45', 'datetime_details': '29 de Abril del 2026, A las 20:30\n', 'town': '__NOT_FOUND__', 'location': ', Ejido (El). Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260325T220607', 'session': '2026_03_25_22_02_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/external_images/nofoto.jpg.webp?itok=mRRQb91u', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/la-ceremonia-de-la-despedida-13'}
+1 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/cabo-verde-jazz-brasil
+Sleep 4
+--------------------
+{'id': '59d0d7a6', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 1, 'event': 'Cabo Verde Jazz Brasil', 'slug': 'cabo-verde-jazz-brasil', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Espacio Escénico de Pulpí', 'std_venue': None, 'start_date': '2026-04-10', 'start_time': '__NOT_FOUND__', 'end_date': '2026-04-10', 'end_time': '__NOT_DEFINIED__', 'description': 'COMPAÑÍA: Minha Lua DURACIÓN: 90 min Minha Lua Jazz Quintet presenta el proyecto “Cabo Verde Jazz Brasil”. Una travesía musical que recorre estos géneros musicales como medios de expresión de las emociones y de la propia identidad de sus respectivos pueblos. La música de Cabo Verde y la de Brasil comparten una conexión interesante debido a la historia de la diáspora africana. Durante la colonización y el comercio transatlántico de esclavos, muchas personas africanas fueron llevadas a Brasil, y sus tradiciones musicales se mezclaron con las locales. En Cabo Verde, se puede notar la influencia de ritmos y estilos africanos que también se encuentran en la música brasileña, como el uso de percusión y la estructura rítmica. La morna y la coladeira de Cabo Verde tienen paralelismos con algunos géneros brasileños como la samba y la bossa nova, aunque cada uno tiene su propia identidad única. La música brasileña contiene en su amplio repertorio canciones de enorme riqueza armónica, alegría, belleza, melancolía, además de un conmovedor contenido poético en sus letras que cantan a la vida y a sus emociones. Compositores como Tom Jobim, Chico Buarque, Vinicius de Moraes, Caetano Veloso, y nos hace sumergirnos en ellas. La música de Cabo Verde es muy rica y diversa, y está influenciada por una mezcla de culturas africanas, portuguesas y brasileñas. Un género muy conocido es la morna, que es una música melancólica y emotiva, a menudo comparada con el blues. Otro género popular es la coladeira, que es más alegre y rítmica, ideal para bailar. Artistas famosos como Cesária Évora, conocida como la "reina de la morna", han llevado la música de Cabo Verde al reconocimiento internacional. En Cabo Verde, los ritmos musicales reflejan una rica herencia cultural. La coladeira, por otro lado, es más animada y rítmica, ideal para el baile. Tiene un ritmo más rápido y alegre, y es muy popular en las festividades. También está el funaná, un género de música más enérgico y vibrante, con influencias africanas, que se toca tradicionalmente con un acordeón. Este ritmo es muy enérgico y se asocia con la danza y la celebración. Cada uno de estos ritmos aporta algo único a la vibrante cultura musical de Cabo Verde. PROGRAMA (Abierto a pequeñas modificaciones): 1. Petit pays (Cabo Verde) 2. Passei (Brasil) 3. Lua nha testemunda (Cabo Verde) 4. Badiu si (Cabo Verde) 5. Tchapeu de Padja (Cabo Verde) 6. Regra 3(Brasil) 7. Dispidida (Cabo Verde) 8. Samba em preludio. (Brasil) 9. Canto de Osanha. (Brasil) 10. Lamento no morro. (Brasil) 11. Um calo de estimaçao (Brasil) 12. Incompatibilidade de gênios (Brasil) 13. Pescador (Brasil) 14. Mais que nada (Brasil)', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/espacio-escenico-de-pulpi', 'location2': 'Espacio Escénico de Pulpí', 'duration': '90', 'datetime_details': '10 de Abril del 2026, A las 21:00\n', 'town': '__NOT_FOUND__', 'location': 'Plaza Espacio Escénico, nº 1, Pulpí. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260325T220607', 'session': '2026_03_25_22_02_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/external_images/nofoto.jpg.webp?itok=mRRQb91u', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/cabo-verde-jazz-brasil'}
+2 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/raiz-sureste
+Sleep 4
+--------------------
+{'id': 'a63eb750', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 1, 'event': 'Raíz Sureste', 'slug': 'raiz-sureste', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Auditorio Ciudad de Adra', 'std_venue': None, 'start_date': '2026-04-11', 'start_time': '__NOT_FOUND__', 'end_date': '2026-04-11', 'end_time': '__NOT_DEFINIED__', 'description': 'COMPAÑÍA: Trinidad Jiménez DURACIÓN: 75min Raíz Sureste es una mirada al sureste del flamenco, a las sonoridades, cantes y espacios compartidos que hunden su raíz en memorias pasadas. Del Levante a Málaga, del mar a lo hondo, de la raíz a nuestros días. Todo un viaje urdido desde lo profundo, donde la búsqueda y la expresividad serán las señas de identidad. La flautista y compositora almeriense se rodea en esta ocasión de un elenco muy especial para recrear músicas populares que estaban ligadas a lo colectivo y al territorio, resignificándolas y celebrándolas desde un concepto actual.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/auditorio-ciudad-de-adra-0', 'location2': 'Auditorio Ciudad de Adra', 'duration': '75min', 'datetime_details': '11 de Abril del 2026, A las 20:00\n', 'town': '__NOT_FOUND__', 'location': 'Calle Carril de Cuenca, Adra. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260325T220607', 'session': '2026_03_25_22_02_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/external_images/nofoto.jpg.webp?itok=mRRQb91u', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/raiz-sureste'}
+3 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/divinas-palabras-2
+Sleep 4
+--------------------
+{'id': '8a6f1596', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 1, 'event': 'Divinas Palabras', 'slug': 'divinas-palabras', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Espacio Escénico de Pulpí', 'std_venue': None, 'start_date': '2026-04-17', 'start_time': '__NOT_FOUND__', 'end_date': '2026-04-17', 'end_time': '__NOT_DEFINIED__', 'description': 'COMPAÑÍA: Atalaya DURACIÓN: 1 h 25 minutos En Divinas Palabras Atalaya visita de nuevo la gran obra del teatro del siglo XX que muchos críticos literarios consideran la más excelsa obra dramática escrita en castellano a lo largo del siglo XX. El tema central no es otro que la avaricia, la lujuria y la muerte, que Valle describiera como nadie y que muestra con tremenda crueldad -pero también en clave grotesca- la miseria humana encarnada en la familia de un sacristán de aldea que bien puede extrapolarse a nuestra realidad más cercana. Valle-Inclán utiliza un lenguaje poético y simbólico, sus personajes son representativos de la decadencia moral y social. Atalaya imprime un tono muy contemporáneo apostando por un diseño escenográfico y de luces muy potente. La energía, las imágenes, los cánticos y la coralidad están muy presentes. La magia va a abundar', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/espacio-escenico-de-pulpi', 'location2': 'Espacio Escénico de Pulpí', 'duration': '1', 'datetime_details': '17 de Abril del 2026, A las 21:00\n', 'town': '__NOT_FOUND__', 'location': 'Plaza Espacio Escénico, nº 1, Pulpí. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260325T220607', 'session': '2026_03_25_22_02_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/external_images/Jose-Luis-Navarro-Divinas-Palabras-01-1-scaled.jpg.webp?itok=7RFumWXf', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/divinas-palabras-2'}
+4 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/ikun-la-princesa-del-agua-9
+Sleep 4
+--------------------
+{'id': '4381d423', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 1, 'event': 'Ikun La Princesa Del Agua', 'slug': 'ikun-la-princesa-del-agua', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Teatro Casa de la Música', 'std_venue': None, 'start_date': '2026-04-18', 'start_time': '__NOT_FOUND__', 'end_date': '2026-04-18', 'end_time': '__NOT_DEFINIED__', 'description': 'COMPAÑÍA: Petit Teatro DURACIÓN: 55 IKUN, es una historia inventada, podría haber ocurrido en el Kalahari, el pueblo indígena de los bosquimanos. IKUN, es una historia de agua, de huida, de búsqueda, de encuentro con lo desconocido. Es una historia de vida, de riqueza y de pobreza. Unos acontecimientos inesperados harán que IKUN, la princesa del agua, tenga que realizar un viaje en busca de ayuda. El camino no siempre será fácil en la vieja tierra.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/teatro-casa-de-la-musica', 'location2': 'Teatro Casa de la Música', 'duration': '55', 'datetime_details': '18 de Abril del 2026, A las 20:00\n', 'town': '__NOT_FOUND__', 'location': 'Parque Andaluz s/n, Carboneras. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260325T220607', 'session': '2026_03_25_22_02_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/external_images/CartelIKUNA3.jpg.webp?itok=Q87vr2hX', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/ikun-la-princesa-del-agua-9'}
+5 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/debajo-del-tejado-23
+Sleep 4
+--------------------
+{'id': '8d0215e2', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 1, 'event': 'Debajo Del Tejado', 'slug': 'debajo-del-tejado', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Teatro Casa de la Música', 'std_venue': None, 'start_date': '2026-04-11', 'start_time': '__NOT_FOUND__', 'end_date': '2026-04-11', 'end_time': '__NOT_DEFINIED__', 'description': 'COMPAÑÍA: Pata Teatro DURACIÓN: 60 min. Este espectáculo ha obtenido el Premio FETEN 2020 a la Mejor Autoría, el Premio Alcides Moreno 2020 a la Obra Mejor Contada, el Premio Ateneo de Teatro 2018 al Mejor Espectáculo Infantil, tres nominaciones a los Premios Lorca de Teatro Andaluz 2019 (Mejor Espectáculo para la Infancia, Mejor Diseño de Iluminación y Mejor Escenografía), y la calificación de Espectáculo Recomendado por la Red Española de Teatros y Auditorios. Debajo del tejado hay un bloque. En el bloque hay varias casas. Cada casa tiene una puerta y detrás de cada puerta hay una historia. Una obra en la que dos actores nos muestran, a través de distintos lenguajes escénicos, cómo sucede la vida entre vecinos. Una apasionante comedia que nace para recordarnos que lo cotidiano, lo que nos sucede día a día, puede ser realmente extraordinario.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/teatro-casa-de-la-musica', 'location2': 'Teatro Casa de la Música', 'duration': '60', 'datetime_details': '11 de Abril del 2026, A las 20:00\n', 'town': '__NOT_FOUND__', 'location': 'Parque Andaluz s/n, Carboneras. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260325T220607', 'session': '2026_03_25_22_02_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/external_images/DebajodelTejado-PATATEATRO-DSC9845380x230.jpg.webp?itok=GoC5SGTw', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/debajo-del-tejado-23'}
+6 / 7
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/un-trocito-de-luna-35
+Sleep 4
+--------------------
+{'id': '6153acd1', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 1, 'event': 'Un Trocito De Luna', 'slug': 'un-trocito-de-luna', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': 'Teatro Casa de la Música', 'std_venue': None, 'start_date': '2026-04-25', 'start_time': '__NOT_FOUND__', 'end_date': '2026-04-25', 'end_time': '__NOT_DEFINIED__', 'description': 'COMPAÑÍA: A la Sombrita DURACIÓN: 45 minutos Sinopsis argumental ¿Quién no soñó alguna vez con darle un mordisco a la luna? Este fue precisamente el deseo de los animales de este cuento. Tan solo querían probar un trocito pero, por más que se estiraban, no eran capaces de tocarla. Esta es una historia de deseos que parecen –a primera vista- inalcanzables, como la luna, pero que consiguen hacerse realidad gracias a la colaboración. Una ayuda mutua de la que son partícipes los más variados animales. A medio camino entre la fábula y la leyenda, este relato le ofrece una poética moraleja que habla de generosidad, solidaridad y sueños compartidos.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/teatro-casa-de-la-musica', 'location2': 'Teatro Casa de la Música', 'duration': '45', 'datetime_details': '25 de Abril del 2026, A las 20:00\n', 'town': '__NOT_FOUND__', 'location': 'Parque Andaluz s/n, Carboneras. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260325T220607', 'session': '2026_03_25_22_02_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/external_images/AlaSombrita-UnTrocitoDeLuna-11.jpg.webp?itok=M2wB5KIk', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/un-trocito-de-luna-35'}
+****************************
+Saving 7 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_25_22_02_Miercoles/0_raw/20260325_2206_JuntaAndaluciaAgenda.json
+Saving 7 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

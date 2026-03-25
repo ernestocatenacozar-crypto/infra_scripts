@@ -24,3 +24,20 @@ sleeping 5
 Getting content
 page = 1 -----------https://almeriaciudad.es/cultura/agenda?page=1--------------- len 12
 sleeping 5
+Getting content
+page = 2 -----------https://almeriaciudad.es/cultura/agenda?page=2--------------- len 5
+sleeping 5
+Getting content
+page = 3 -----------https://almeriaciudad.es/cultura/agenda?page=3--------------- len 0
+*** SCRAPED 29 URLS WITH EVENTS **
+New url events = 1
+0 / 1
+Getting https://almeriaciudad.es//cultura/evento/exaltacion-de-la-saeta
+Sleep 4
+--------------------
+{'id': '1e467dd5', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Exaltación De La Saeta', 'slug': 'exaltacion-de-la-saeta', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None, 'start_date': '2026-03-26', 'start_time': '20:30:00', 'end_date': '2026-03-26', 'end_time': '22:00:00', 'description': '', 'others': {'organizer': 'EXCMO. AYUNTAMIENTO DE ALMERÍA', 'price': 'ENTRADA GRATUITA HASTA COMPLETAR AFORO', 'category': 'BMA|Concierto', 'audience_age': 'Todas las edades'}, 'source': 'AlmeriaCiudad', 'exec_time': '20260325T220444', 'session': '2026_03_25_22_02_Miercoles', 'image': 'https://almeriaciudad.es/uploads/styles/large/public/media/image/saeta_mesa-de-trabajo-1.jpg?itok=h4VSVprc', 'url': 'https://almeriaciudad.es//cultura/evento/exaltacion-de-la-saeta'}
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_25_22_02_Miercoles/0_raw/20260325_2204_AlmeriaCiudad.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
