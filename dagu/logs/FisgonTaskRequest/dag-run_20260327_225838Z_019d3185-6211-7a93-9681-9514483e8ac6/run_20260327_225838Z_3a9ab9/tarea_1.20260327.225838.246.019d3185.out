@@ -1,0 +1,31 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ConciertosClub
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019d3185-6211-7a93-9681-9514483e8ac6
+
+Running for Almeria: ConciertosClub
+ConciertosClub
+RUNNING SESSION =  2026_03_27_22_57_Viernes
+Getting https://conciertos.club/almeria
+Sleep 1
+*** SCRAPED 120 URLS WITH EVENTS **
+New url events = 1
+0 / 1
+Getting https://conciertos.club/almeria/conciertos/110663-mescalina
+Sleep 4
+--------------------
+{'id': '86a4e565', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Mescalina', 'slug': 'mescalina', 'category': 'conciertos', 'id_venue': 'NmPqTrh6', 'venue': 'Berlín Social Club', 'std_venue': 'Berlin Social Club', 'start_date': '2026-05-22', 'start_time': '22:00:00', 'end_date': '2026-05-22', 'end_time': '__NOT_DEFINIED__', 'description': '\nMescalinaEl grupo Mescalina se define como "una compañía de tributos" en español. Iniciaron su repertorio con homenajes a Radio Futura, El Último de la Fila y Héroes del Silencio, y con su último show, “Raíz Latina” rinden tributo al rock latino de Los Rodríguez,\xa0Jarabe De Palo\xa0y\xa0Maná.\n', 'others': {'category': 'Versiones', 'price': '16,83', 'place_url': 'https://conciertos.club/almeria/locales/berlin-social-club', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260327T225838', 'session': '2026_03_27_22_57_Viernes', 'image': 'https://conciertos.club/doc/a/2025/a_mescalina.jpg', 'url': 'https://conciertos.club/almeria/conciertos/110663-mescalina'}
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_27_22_57_Viernes/0_raw/20260327_2258_ConciertosClub.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
