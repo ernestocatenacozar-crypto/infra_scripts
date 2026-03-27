@@ -1,0 +1,76 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=JuntaAndaluciaAgenda
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d3187-93b6-70bf-a371-91747bcc6c2f
+
+Running for Almeria: JuntaAndaluciaAgenda
+JuntaAndaluciaAgenda
+RUNNING SESSION =  2026_03_27_22_57_Viernes
+Starting WebDriver...
+http://localhost:4444/wd/hub
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1) Not found
+Getting content
+*** SCRAPED 71 URLS WITH EVENTS **
+New url events = 1
+0 / 1
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/el-teatro-de-agustin-gomez-arcos
+Sleep 4
+--------------------
+{'id': '6a5ccf0d', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 1, 'event': 'El Teatro De Agustín Gómez Arcos', 'slug': 'el-teatro-de-agustin-gomez-arcos', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-04-29', 'start_time': '__NOT_FOUND__', 'end_date': '2026-04-29', 'end_time': '__NOT_DEFINIED__', 'description': '#clublecturatextosdramaticos en colaboración con la Biblioteca Pública Provincial “Francisco Villaespesa ”. Coordinado por la reconocida profesional Gloria Zapata . Este mes se analizan algunas obras del escritor almeriense Agustin Gómez Arcos . Agustin Gómez Arcos (1933–1998) fue un escritor y dramaturgo español. Censurado durante el franquismo, se exilió en París en 1966, donde escribió en francés. Obtuvo reconocimiento internacional por sus novelas críticas con la represión y la injusticia. Actividad #leeteatro en el marco de la programación cultural mensual del CIRAE, #elcentroAescena.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-estado-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details': '29 de Abril del 2026, De 18:00 a 19:30h\n', 'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260327T230107', 'session': '2026_03_27_22_57_Viernes', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/external_images/CL%2520Almer%25C3%25ADa_0.jpg.webp?itok=9RNUJcEv', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/el-teatro-de-agustin-gomez-arcos'}
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_27_22_57_Viernes/0_raw/20260327_2301_JuntaAndaluciaAgenda.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

@@ -1,0 +1,34 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=RedBibliotecas
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d318b-178b-7db4-854b-ceb66f9bb319
+
+Running for Almeria: RedBibliotecas
+RedBibliotecas
+RUNNING SESSION =  2026_03_27_22_57_Viernes
+START
+Starting WebDriver...
+http://localhost:4444/wd/hub
+page=1
+Getting content
+['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tejiendo.html']
+page=2
+Getting content
+['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tejiendo.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tejiendo.html']
+page=3
+Getting content
+['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tejiendo.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tejiendo.html', 'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tejiendo.html']
+*** SCRAPED 3 URLS WITH EVENTS **
+New url events = 0
+#######################
+No new urls/events extracted. No new events to save
+#######################

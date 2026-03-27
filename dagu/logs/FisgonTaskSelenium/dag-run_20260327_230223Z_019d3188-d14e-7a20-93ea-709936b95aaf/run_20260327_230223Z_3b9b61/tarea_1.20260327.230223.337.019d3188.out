@@ -1,0 +1,90 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ClassicJazz
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d3188-d14e-7a20-93ea-709936b95aaf
+
+Running for Almeria: ClassicJazz
+ClassicJazz
+RUNNING SESSION =  2026_03_27_22_57_Viernes
+Starting WebDriver...
+http://localhost:4444/wd/hub
+*********************times =1
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*********************times =2
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*** SCRAPED 180 URLS WITH EVENTS **
+New url events = 8
+0 / 8
+Getting https://clasijazz.com/evento/taller-baile-celta/
+Sleep 4
+2026-05-16T19:00:00 2026-05-16T20:30:00
+--------------------
+{'id': '568e8a9c', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Taller Baile Celta', 'slug': 'taller-baile-celta', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-05-16', 'start_time': '19:00:00', 'end_date': '2026-05-16', 'end_time': '20:30:00', 'description': '25 € NS / 15 € S Con entrada incluida al concierto . Impresionante oportunidad ! Y si quieres meterte de lleno en el ambiente, a las 19:00h tendrá lugar un taller de danzas celtas y baile social irlandés impartido por las bailarinas de Irish Treble.', 'others': {'price': '15,00€ – 25,00€', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260327T230228', 'session': '2026_03_27_22_57_Viernes', 'image': 'https://clasijazz.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-21-at-13.16.46.jpeg', 'url': 'https://clasijazz.com/evento/taller-baile-celta/'}
+1 / 8
+Getting https://clasijazz.com/evento/chey-jurado-ciclo-de-danza/
+Sleep 4
+2026-05-16T19:00:00 2026-05-16T20:00:00
+--------------------
+{'id': 'ca90ba5d', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Chey Jurado – Ciclo De Danza', 'slug': 'chey-jurado-ciclo-de-danza', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-05-16', 'start_time': '19:00:00', 'end_date': '2026-05-16', 'end_time': '20:00:00', 'description': '20 € NS / 10 € S Sala Principal El grandísimo Chey Jurado en Clasijazz. Qué emoción más grande. Uno de los más reconocidos bailarines internacionalmente en Clasijazz. No os lo perdáis. – Sinopsis Un ermitaño que se aísla para encontrarse, sin percatarse de que, cuanto más se adentra en sí mismo, más visible se vuelve, y que al aceptar esta atención, más se aleja de su propósito. Como el peregrino que se aleja del ruido en una búsqueda introspectiva, la obra nos invita a mirar hacia dentro, mientras no dejamos de avanzar, paso a paso, por el propio Camino.', 'others': {'price': '10,00€ – 20,00€', 'category': 'Ciclo Danza, Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260327T230228', 'session': '2026_03_27_22_57_Viernes', 'image': 'https://clasijazz.com/wp-content/uploads/2026/01/6-1.jpg', 'url': 'https://clasijazz.com/evento/chey-jurado-ciclo-de-danza/'}
+2 / 8
+Getting https://clasijazz.com/evento/conversaciones-sobre-la-musica/
+Sleep 4
+2026-04-23T20:00:00 2026-04-23T21:30:00
+--------------------
+{'id': 'afdaacdb', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Conversaciones Sobre La Música', 'slug': 'conversaciones-sobre-la-musica', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-04-23', 'start_time': '20:00:00', 'end_date': '2026-04-23', 'end_time': '21:30:00', 'description': 'Sala Principal | Entrada Libre Conversar sobre la música no es sólo un asunto de expertos. Todos nos sentimos afectados por ella. Pero, escasean los espacios donde poder compartir la experiencia que tenemos de la música reuniendo a creadores, intérpretes y oyentes. Para cubrir este hueco surgen nuestras «Conversaciones sobre la música» como una oportunidad para reflexionar entre todos en qué consiste, qué nos aporta, por qué nos resulta indispensable, etc., mediante el diálogo de unos con otros. Cada sesión de nuestras «Conversaciones sobre la música» irá anunciada con un lema para abrir el diálogo. Y a partir de esa propuesta inicial, la conversación discurrirá siguiendo la pauta que marquen las intervenciones de los asistentes.I SESIÓN ¿Qué nos dice la música?»En nuestra primera cita pensaremos en lo que nos dice la música, si es que nos dice algo, porque tal vez sólo habla de sí misma y de nada más. La música nos conmueve, pero lo hace ¿porque no se refiere a nada?, ¿porque al no referirse a nada se convierte en un mero medio de evasión?, ¿porque todo en ella se vuelca sólo a nuestras emociones y a nada más?, ¿porque la música al no decir revela nuestra constitución más profunda?, ¿porque…»', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260327T230228', 'session': '2026_03_27_22_57_Viernes', 'image': 'https://clasijazz.com/wp-content/uploads/2026/03/conversaciones_sobre_la_musica_abril-1.png', 'url': 'https://clasijazz.com/evento/conversaciones-sobre-la-musica/'}
+3 / 8
+Getting https://clasijazz.com/evento/intercambio-de-idiomas-5/2026-05-21/
+Sleep 4
+2026-05-21T21:00:00 2026-05-21T23:00:00
+--------------------
+{'id': '108ede22', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Intercambio De Idiomas', 'slug': 'intercambio-de-idiomas', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-05-21', 'start_time': '21:00:00', 'end_date': '2026-05-21', 'end_time': '23:00:00', 'description': 'Sala Industrial Clasijazz Entrada Libre ¿Quieres conocer gente nueva y compartir ideas, experiencias y opiniones mientras practicas tus habilidades lingüísticas? ¡Hablaremos de todo: culturas, profesiones, arte y música! ¿Nivel avanzado? ¿Intermedio? ¿Principiante? ¡Hay espacio para todos! Únete a la comunidad del Intercambio de Idiomas y deja que la magia deja que la magia de los idiomas te atrape. Desde Octubre y todos los jueves 21:00-23:00', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/clasijazz/', 'location': 'C/Maestro Serrano nº9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260327T230228', 'session': '2026_03_27_22_57_Viernes', 'image': 'https://clasijazz.com/wp-content/uploads/2025/09/Intercambio-de-Idiomas.jpg', 'url': 'https://clasijazz.com/evento/intercambio-de-idiomas-5/2026-05-21/'}
+4 / 8
+Getting https://clasijazz.com/evento/jam-session-4/2026-05-20/
+Sleep 4
+2026-05-20T22:00:00 2026-05-20T23:30:00
+--------------------
+{'id': 'ff8f931b', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Jam Session', 'slug': 'jam-session', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-05-20', 'start_time': '22:00:00', 'end_date': '2026-05-20', 'end_time': '23:30:00', 'description': '3 € No Soci@ / gratuito Soci@ Sala Principal Cada miércoles puedes disfrutar de una Jam Session. Uno de los eventos más seguidos en Almería y por el que han pasado muchísimos músicos y público. ¡Disfruta de esta maravilla de Jam Session!', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260327T230228', 'session': '2026_03_27_22_57_Viernes', 'image': 'https://clasijazz.com/wp-content/uploads/2025/09/PANA5800-scaled.jpg', 'url': 'https://clasijazz.com/evento/jam-session-4/2026-05-20/'}
+5 / 8
+Getting https://clasijazz.com/evento/the-rooster-quintet-jam-session-port-of-spain/
+Sleep 4
+2026-04-01T22:00:00 2026-04-01T23:30:00
+--------------------
+{'id': '727b184c', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'The Rooster Quintet Jam Session', 'slug': 'the-rooster-quintet-jam-session', 'category': '__NOT_DEFINIED__', 'id_venue': 'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain', 'start_date': '2026-04-01', 'start_time': '22:00:00', 'end_date': '2026-04-01', 'end_time': '23:30:00', 'description': 'Entrada Libre | Port of Spain', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/port-of-spain/', 'location': 'Parque Nicolás Salmeron 20, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260327T230228', 'session': '2026_03_27_22_57_Viernes', 'image': 'https://clasijazz.com/wp-content/uploads/2026/03/teen.jpg', 'url': 'https://clasijazz.com/evento/the-rooster-quintet-jam-session-port-of-spain/'}
+6 / 8
+Getting https://clasijazz.com/evento/masterclass-danza-con-chey-jurado/
+Sleep 4
+2026-05-17T10:00:00 2026-05-17T13:00:00
+--------------------
+{'id': '58e89fb3', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Masterclass Danza Con Chey Jurado', 'slug': 'masterclass-danza-con-chey-jurado', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-05-17', 'start_time': '10:00:00', 'end_date': '2026-05-17', 'end_time': '13:00:00', 'description': '40 € NS / 30 € S Sala Principal Uno de los más grandes coreógráfos y bailarines del momento en Clasijazz para dar una clase de 3 horas para bailarines. No os lo perdáis. Es impresionante lo que vais a aprender. Aire fresco con Chey Jurado .', 'others': {'price': '30,00€ – 40,00€', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260327T230228', 'session': '2026_03_27_22_57_Viernes', 'image': 'https://clasijazz.com/wp-content/uploads/2026/01/i.jpeg', 'url': 'https://clasijazz.com/evento/masterclass-danza-con-chey-jurado/'}
+7 / 8
+Getting https://clasijazz.com/evento/noche-celta-en-clasijazz-ceili-band-irish-treble/
+Sleep 4
+2026-05-16T22:00:00 2026-05-16T23:30:00
+--------------------
+{'id': '0353128d', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Noche Celta en Clasijazz – Ceili Band + Irish Treble', 'slug': 'noche-celta-en-clasijazz-ceili-band-irish-treble', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-05-16', 'start_time': '22:00:00', 'end_date': '2026-05-16', 'end_time': '23:30:00', 'description': '15 € NS / 7 € S Sala Principal Noche Celta en Clasijazz En esta edición del Ciclo Atlántico queremos celebrar la esencia de las tradiciones celtas: la música, el encuentro y, por supuesto, el baile. Por eso, en Clasijazz viviremos una auténtica Noche Celta, una celebración para disfrutar y dejarse llevar. Podremos disfrutar de una muestra de danza a cargo de las maravillosas bailarinas de Irish Treble, intercalada con momentos de baile social. Todo ello estará acompañado por una Ceili Band, una orquesta de música tradicional creada especialmente para la ocasión con músicos locales e invitados. Aunque las bailarinas están especializadas en danza irlandesa, el espectáculo recorrerá también repertorio de las distintas naciones celtas: Galicia, Asturias, Bretaña, Escocia e Irlanda, en una velada que será toda una celebración al son de violines, whistles y otros instrumentos tradicionales. Y si quieres meterte de lleno en el ambiente, a las 19:00h tendrá lugar un taller de danzas celtas y baile social irlandés impartido por las bailarinas de Irish Treble. Vídeo:', 'others': {'price': '7,00€ – 15,00€', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260327T230228', 'session': '2026_03_27_22_57_Viernes', 'image': 'https://clasijazz.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-21-at-13.16.45-scaled.jpeg', 'url': 'https://clasijazz.com/evento/noche-celta-en-clasijazz-ceili-band-irish-treble/'}
+****************************
+Saving 8 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_27_22_57_Viernes/0_raw/20260327_2302_ClassicJazz.json
+Saving 8 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
