@@ -1,0 +1,25 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=TodasLasEntradas
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d3652-c9ca-7f0d-96f0-a4c534dfb92d
+
+Running for Almeria: TodasLasEntradas
+TodasLasEntradas
+RUNNING SESSION =  2026_03_28_21_15_Sabado
+Starting WebDriver...
+http://localhost:4444/wd/hub
+Getting content
+*** SCRAPED 12 URLS WITH EVENTS **
+New url events = 0
+#######################
+No new urls/events extracted. No new events to save
+#######################

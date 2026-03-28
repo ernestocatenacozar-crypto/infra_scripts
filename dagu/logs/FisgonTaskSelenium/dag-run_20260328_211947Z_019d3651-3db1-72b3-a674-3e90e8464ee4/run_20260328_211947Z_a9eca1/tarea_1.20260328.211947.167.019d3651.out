@@ -24,3 +24,37 @@ sleeping 1
 Getting content
 clicking
 sleeping 3
+sleeping 7
+*********************times =2
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*** SCRAPED 184 URLS WITH EVENTS **
+New url events = 3
+0 / 3
+Getting https://clasijazz.com/evento/spicy-sessions-no-9/
+Sleep 4
+2026-05-21T22:00:00 2026-05-21T23:30:00
+--------------------
+{'id': 'cf135129', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Spicy Sessions No.9', 'slug': 'spicy-sessions-no-9', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-05-21', 'start_time': '22:00:00', 'end_date': '2026-05-21', 'end_time': '23:30:00', 'description': '12€ NS / 5€ S | Sala Principal SPICY SESSION, el punto de encuentro donde los estilos se mezclan, las voces se cruzan y la energía se desborda. Seguimos fieles a la esencia con la que nació este proyecto: reunir a los músicos más talentosos y vanguardistas de la escena almeriense y abrir un escenario sin etiquetas, donde todo tiene cabida, del flamenco al latin-jazz, del soul a la música urbana. Tras una primera temporada llena de sold outs, y una segunda que sigue creciendo con cada edición, regresamos con más ritmo, más elegancia y más chispa que nunca. Porque cada SPICY SESSION es un viaje distinto. Cada noche, una historia nueva. Y cada público… lo convierte en algo irrepetible. Aquí no vienes solo a escuchar música. Vienes a vivirla, a sentirla, a ser parte de la magia Spicy.', 'others': {'price': '5,00€ – 12,00€', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260328T211952', 'session': '2026_03_28_21_15_Sabado', 'image': 'https://clasijazz.com/wp-content/uploads/2026/02/spicy9.png', 'url': 'https://clasijazz.com/evento/spicy-sessions-no-9/'}
+1 / 3
+Getting https://clasijazz.com/evento/mini-jam/2026-05-22/
+Sleep 4
+2026-05-22T18:00:00 2026-05-22T19:00:00
+--------------------
+{'id': '90253b28', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Mini Jam', 'slug': 'mini-jam', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-05-22', 'start_time': '18:00:00', 'end_date': '2026-05-22', 'end_time': '19:00:00', 'description': 'Entrada Libre | Sala Industrial Que importantes son las Mini Jams en Clasijazz. Generaciones se han criado con música y cantando desde chicos . Aquí tenéis todas las de este curso . Son gratuitas pero si quieres hacerte socio nos ayudarás a seguir con la ilusión por predicar la música para todas las edades.', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260328T211952', 'session': '2026_03_28_21_15_Sabado', 'image': 'https://clasijazz.com/wp-content/uploads/2026/01/PANA3644-scaled.jpg', 'url': 'https://clasijazz.com/evento/mini-jam/2026-05-22/'}
+2 / 3
+Getting https://clasijazz.com/evento/ray-gelato-enric-peidro-quintet-texas-tenors-revisited/
+Sleep 4
+2026-05-26T22:00:00 2026-05-26T23:30:00
+--------------------
+{'id': '3ecb01f0', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Ray Gelato & Enric Peidro Quintet «Texas Tenors Revisited»', 'slug': 'ray-gelato-enric-peidro-quintet-texas-tenors-revisited', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-05-26', 'start_time': '22:00:00', 'end_date': '2026-05-26', 'end_time': '23:30:00', 'description': '25 € NS /15 € S Sala Principal A todos los entusiastas del Jazz y del saxo tenor y muy en particular a los amantes de los sonidos tórridos, cargados de Swing e impregnados con la esencia del Blues que este inst r u m e n t o e s capaz de producir, va dirigido este nuevo y apasionante proyecto de los saxofonistas tenores Ray Gelato y Enric Peidro que unen fuerzas junto a una sección rítmica de lujo, para revisitar la tradición y el lenguaje de los «Texas Tenors»: Los saxofonistas tenores provenientes del estado norteamericano de Texas cuyo estilo ha dejado una huella imborrable en la historia del Jazz y una influencia en generaciones posteriores tanto en el ámbito del Jazz como del Rock y el Pop, que se extiende hasta hoy día. El llamado «Estilo tejano» al tenor tiene su origen en el saxofonista Hershel Evans, que desde las filas de la orquesta de Count Basie a finales de los años treinta del pasado siglo, sentó las bases de este estilo: Una sonoridad robusta y plena en todos los registros, un fraseo melódico donde prevalece un Swing irresistible y una predilección por la paleta expresiva del Blues en sus aspectos más desgarrados y directos. Tras el prematuro fallecimiento de Evans a principio de los años 40, algunos de sus más avezados discípulostodos originarios del estado de Texas e influidos por elestilo saxofonista, desarrollaron y enriquecieron este lenguaje a lo largo de sus respectivas carreras conformando lo que viene a llamarse hoy «Texas tenorstyle» o estilo de tenor tejano, una manera de entender la interpretación en el saxo tenor jazzístico que ha cautivado a generaciones enteras. Entra los grandes nombres que este estilo tenorístico ha dado al Jazz, encontramos músicos del calibre de: Buddy Tate, Arnett Cobb, Budd Johnson y quizá el máximo exponente de este lenguaje en el mundo del Jazz: Illinois Jacquet. En la actualidad, no son muchos los saxofonistas que hayan profundizado en esta tradición y este hecho fue el que decidió a Gelato y Peidro a unir fuerzas para perpetuar y difundir un lenguaje tenoristico del que ambos se han nutrido estilísticamente y son muy buenos conocedores. Un proyecto que apasiona a ambos interpretes y en el que han trabajado con gran ilusión para ofrecer un espectáculo difícil de olvidar. A lo largo de hora y media de concierto, el espectador va a poder disfrutar de los sónidos exuberantes que hicieron del saxo tenor el instrumento rey en la década de los años 40 del pasado siglo. Interpretaciones dinámicas, alegres y plenas de Swing que comprenden una paleta expresiva que va desde el susurro al paroxismo, todo expresado en un lenguaje vital y extrovertido, festivo y creativo a partes iguales: El Texas Tenor Style!', 'others': {'price': '15,00€ – 25,00€', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260328T211952', 'session': '2026_03_28_21_15_Sabado', 'image': 'https://clasijazz.com/wp-content/uploads/2026/02/Captura-de-pantalla-2026-02-20-a-las-9.43.30.png', 'url': 'https://clasijazz.com/evento/ray-gelato-enric-peidro-quintet-texas-tenors-revisited/'}
+****************************
+Saving 3 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_28_21_15_Sabado/0_raw/20260328_2119_ClassicJazz.json
+Saving 3 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

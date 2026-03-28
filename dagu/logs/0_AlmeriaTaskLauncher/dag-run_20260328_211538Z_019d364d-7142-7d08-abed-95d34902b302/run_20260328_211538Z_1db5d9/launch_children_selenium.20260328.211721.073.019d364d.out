@@ -668,3 +668,581 @@ dag: FisgonTaskSelenium (1m 9s)
 Result: Succeeded
 
 Launching scraper: ClassicJazz
+Succeeded - 2026-03-28T21:19:47Z
+
+dag: FisgonTaskSelenium (1m 4s)
+│
+└─tarea_1 (1m 4s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  ├─stdout: ... (6 more lines)
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=ClassicJazz
+  │   DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&d
+  │   agRunId=019d3651-3db1-72b3-a674-3e90e8464ee4
+  │   Running for Almeria: ClassicJazz
+  │   ClassicJazz
+  │   RUNNING SESSION =  2026_03_28_21_15_Sabado
+  │   Starting WebDriver...
+  │   http://localhost:4444/wd/hub
+  │   *********************times =1
+  │   sleeping 7
+  │   Scrolling...
+  │   sleeping 1
+  │   Getting content
+  │   clicking
+  │   sleeping 3
+  │   sleeping 7
+  │   *********************times =2
+  │   sleeping 7
+  │   Scrolling...
+  │   sleeping 1
+  │   Getting content
+  │   clicking
+  │   sleeping 3
+  │   sleeping 7
+  │   *** SCRAPED 184 URLS WITH EVENTS **
+  │   New url events = 3
+  │   0 / 3
+  │   Getting https://clasijazz.com/evento/spicy-sessions-no-9/
+  │   Sleep 4
+  │   2026-05-21T22:00:00 2026-05-21T23:30:00
+  │   --------------------
+  │   {'id': 'cf135129', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Spicy Sessions No.9', 'slug':
+  │   'spicy-sessions-no-9', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz',
+  │   'start_date': '2026-05-21', 'start_time': '22:00:00', 'end_date':
+  │   '2026-05-21', 'end_time': '23:30:00', 'description': '12€ NS / 5€ S
+  │   | Sala Principal SPICY SESSION, el punto de encuentro donde los estilos
+  │   se mezclan, las voces se cruzan y la energía se desborda. Seguimos
+  │   fieles a la esencia con la que nació este proyecto: reunir a los
+  │   músicos más talentosos y vanguardistas de la escena almeriense y abrir
+  │   un escenario sin etiquetas, donde todo tiene cabida, del flamenco al
+  │   latin-jazz, del soul a la música urbana. Tras una primera temporada
+  │   llena de sold outs, y una segunda que sigue creciendo con cada edición,
+  │   regresamos con más ritmo, más elegancia y más chispa que nunca.
+  │   Porque cada SPICY SESSION es un viaje distinto. Cada noche, una historia
+  │   nueva. Y cada público… lo convierte en algo irrepetible. Aquí no
+  │   vienes solo a escuchar música. Vienes a vivirla, a sentirla, a ser
+  │   parte de la magia Spicy.', 'others': {'price': '5,00€ – 12,00€',
+  │   'category': 'Programación', 'location_url':
+  │   'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro
+  │   Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260328T211952', 'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/02/spicy9.png', 'url':
+  │   'https://clasijazz.com/evento/spicy-sessions-no-9/'}
+  │   1 / 3
+  │   Getting https://clasijazz.com/evento/mini-jam/2026-05-22/
+  │   Sleep 4
+  │   2026-05-22T18:00:00 2026-05-22T19:00:00
+  │   --------------------
+  │   {'id': '90253b28', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Mini Jam', 'slug': 'mini-jam',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede
+  │   Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-05-22',
+  │   'start_time': '18:00:00', 'end_date': '2026-05-22', 'end_time':
+  │   '19:00:00', 'description': 'Entrada Libre | Sala Industrial Que
+  │   importantes son las Mini Jams en Clasijazz. Generaciones se han criado
+  │   con música y cantando desde chicos . Aquí tenéis todas las de este
+  │   curso . Son gratuitas pero si quieres hacerte socio nos ayudarás a
+  │   seguir con la ilusión por predicar la música para todas las edades.',
+  │   'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación',
+  │   'location_url': 'https://clasijazz.com/local/sede-clasijazz/',
+  │   'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz',
+  │   'exec_time': '20260328T211952', 'session': '2026_03_28_21_15_Sabado',
+  │   'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/01/PANA3644-scaled.jpg',
+  │   'url': 'https://clasijazz.com/evento/mini-jam/2026-05-22/'}
+  │   2 / 3
+  │   Getting
+  │   https://clasijazz.com/evento/ray-gelato-enric-peidro-quintet-texas-tenor
+  │   s-revisited/
+  │   Sleep 4
+  │   2026-05-26T22:00:00 2026-05-26T23:30:00
+  │   --------------------
+  │   {'id': '3ecb01f0', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Ray Gelato & Enric Peidro Quintet
+  │   «Texas Tenors Revisited»', 'slug':
+  │   'ray-gelato-enric-peidro-quintet-texas-tenors-revisited', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz',
+  │   'std_venue': 'Clasijazz', 'start_date': '2026-05-26', 'start_time':
+  │   '22:00:00', 'end_date': '2026-05-26', 'end_time': '23:30:00',
+  │   'description': '25 € NS /15 € S Sala Principal A todos los
+  │   entusiastas del Jazz y del saxo tenor y muy en particular a los amantes
+  │   de los sonidos tórridos, cargados de Swing e impregnados con la esencia
+  │   del Blues que este inst r u m e n t o e s capaz de producir, va dirigido
+  │   este nuevo y apasionante proyecto de los saxofonistas tenores Ray Gelato
+  │   y Enric Peidro que unen fuerzas junto a una sección rítmica de lujo,
+  │   para revisitar la tradición y el lenguaje de los «Texas Tenors»: Los
+  │   saxofonistas tenores provenientes del estado norteamericano de Texas
+  │   cuyo estilo ha dejado una huella imborrable en la historia del Jazz y
+  │   una influencia en generaciones posteriores tanto en el ámbito del Jazz
+  │   como del Rock y el Pop, que se extiende hasta hoy día. El llamado
+  │   «Estilo tejano» al tenor tiene su origen en el saxofonista Hershel
+  │   Evans, que desde las filas de la orquesta de Count Basie a finales de
+  │   los años treinta del pasado siglo, sentó las bases de este estilo: Una
+  │   sonoridad robusta y plena en todos los registros, un fraseo melódico
+  │   donde prevalece un Swing irresistible y una predilección por la paleta
+  │   expresiva del Blues en sus aspectos más desgarrados y directos. Tras el
+  │   prematuro fallecimiento de Evans a principio de los años 40, algunos de
+  │   sus más avezados discípulostodos originarios del estado de Texas e
+  │   influidos por elestilo saxofonista, desarrollaron y enriquecieron este
+  │   lenguaje a lo largo de sus respectivas carreras conformando lo que viene
+  │   a llamarse hoy «Texas tenorstyle» o estilo de tenor tejano, una manera
+  │   de entender la interpretación en el saxo tenor jazzístico que ha
+  │   cautivado a generaciones enteras. Entra los grandes nombres que este
+  │   estilo tenorístico ha dado al Jazz, encontramos músicos del calibre
+  │   de: Buddy Tate, Arnett Cobb, Budd Johnson y quizá el máximo exponente
+  │   de este lenguaje en el mundo del Jazz: Illinois Jacquet. En la
+  │   actualidad, no son muchos los saxofonistas que hayan profundizado en
+  │   esta tradición y este hecho fue el que decidió a Gelato y Peidro a
+  │   unir fuerzas para perpetuar y difundir un lenguaje tenoristico del que
+  │   ambos se han nutrido estilísticamente y son muy buenos conocedores. Un
+  │   proyecto que apasiona a ambos interpretes y en el que han trabajado con
+  │   gran ilusión para ofrecer un espectáculo difícil de olvidar. A lo
+  │   largo de hora y media de concierto, el espectador va a poder disfrutar
+  │   de los sónidos exuberantes que hicieron del saxo tenor el instrumento
+  │   rey en la década de los años 40 del pasado siglo. Interpretaciones
+  │   dinámicas, alegres y plenas de Swing que comprenden una paleta
+  │   expresiva que va desde el susurro al paroxismo, todo expresado en un
+  │   lenguaje vital y extrovertido, festivo y creativo a partes iguales: El
+  │   Texas Tenor Style!', 'others': {'price': '15,00€ – 25,00€',
+  │   'category': 'Programación', 'location_url':
+  │   'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro
+  │   Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time':
+  │   '20260328T211952', 'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://clasijazz.com/wp-content/uploads/2026/02/Captura-de-pantalla-20
+  │   26-02-20-a-las-9.43.30.png', 'url':
+  │   'https://clasijazz.com/evento/ray-gelato-enric-peidro-quintet-texas-teno
+  │   rs-revisited/'}
+  │   ****************************
+  │   Saving 3 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_28_21_15_Sabado/0_raw/20260328
+  │   _2119_ClassicJazz.json
+  │   Saving 3 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'clasijazz.com'. Adding certificate verification is strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: Entradium
+Succeeded - 2026-03-28T21:20:51Z
+
+dag: FisgonTaskSelenium (37.0s)
+│
+└─tarea_1 (37.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=Entradium
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019d3652-388b-7959-bb91-46b63ececcd2
+      Running for Almeria: Entradium
+      Entradium
+      RUNNING SESSION =  2026_03_28_21_15_Sabado
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      sleeping 5
+      clicking
+      sleeping 3
+      sleeping 1.5
+      sleeping 3
+      ******
+      xpath
+      /html/body/header/div[2]/div[1]/div/div/form/div/div/button/span/i
+      clicking
+      sleeping 3
+      sleeping 8
+      Getting content
+      *** SCRAPED 21 URLS WITH EVENTS **
+      New url events = 0
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+
+Result: Succeeded
+
+Launching scraper: TodasLasEntradas
+Succeeded - 2026-03-28T21:21:28Z
+
+dag: FisgonTaskSelenium (10.0s)
+│
+└─tarea_1 (10.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=TodasLasEntradas
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019d3652-c9ca-7f0d-96f0-a4c534dfb92d
+      Running for Almeria: TodasLasEntradas
+      TodasLasEntradas
+      RUNNING SESSION =  2026_03_28_21_15_Sabado
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      Getting content
+      *** SCRAPED 12 URLS WITH EVENTS **
+      New url events = 0
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+
+Result: Succeeded
+
+Launching scraper: RedBibliotecas
+Succeeded - 2026-03-28T21:21:38Z
+
+dag: FisgonTaskSelenium (8.0s)
+│
+└─tarea_1 (8.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout:
+      RUNNING VARS →
+      CITY=Almeria,
+      OPERATION=0,
+      CREATE_SESSION=0,
+      CLOSE_SESSION=0,
+      SESSION=None,
+      IMAGES=0,
+      GET_SCRAPERS=
+      SCRAPER=RedBibliotecas
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019d3652-f269-76f4-af27-a77b6803c59e
+      Running for Almeria: RedBibliotecas
+      RedBibliotecas
+      RUNNING SESSION =  2026_03_28_21_15_Sabado
+      START
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      page=1
+      Getting content
+      ['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tej
+      iendo.html']
+      page=2
+      Getting content
+      ['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tej
+      iendo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-teji
+      endo.html']
+      page=3
+      Getting content
+      ['https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-tej
+      iendo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-teji
+      endo.html',
+      'https://www.bibliotecaspublicas.es/almeria/actividades/Agenda/ta-172-teji
+      endo.html']
+      *** SCRAPED 3 URLS WITH EVENTS **
+      New url events = 0
+      #######################
+      No new urls/events extracted. No new events to save
+      #######################
+
+Result: Succeeded
+
+Launching scraper: SalaEmma
+Succeeded - 2026-03-28T21:21:46Z
+
+dag: FisgonTaskSelenium (19.0s)
+│
+└─tarea_1 (19.0s) [succeeded]
+  ├─bash -lc 'set -eo pipefail; export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
+  │   SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)"; cleanup() {
+  │   docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; }; trap cleanup
+  │   EXIT; docker run -d --rm --name "$SELENIUM_NAME" --shm-size=2g -e
+  │   SE_NODE_MAX_SESSIONS=1 -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
+  │   selenium/standalone-chrome:latest >/dev/null; docker exec
+  │   "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo >
+  │   /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit
+  │   1"; docker run --rm --network container:"$SELENIUM_NAME" -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=loca
+  │   l&step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0'
+  │
+  └─stdout: ... (9 more lines)
+      DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dag
+      RunId=019d3653-115b-7ada-9848-bb4d834b0568
+      Running for Almeria: SalaEmma
+      SalaEmma
+      RUNNING SESSION =  2026_03_28_21_15_Sabado
+      Starting WebDriver...
+      http://localhost:4444/wd/hub
+      sleeping 10
+      Getting content
+      --------------------
+      {'id': '23f4817f', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Manolo Lera', 'slug': 'manolo-lera',
+      'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala
+      EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes',
+      'start_date': '2026-04-11', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 11
+      de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260328T212151', 'session': '2026_03_28_21_15_Sabado',
+      'image': '/home/ubuntu/work/event_flask_app/static/img/10e0d96a.jpg',
+      'url': 'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'bc4c2f3a', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'El Mentalista Canalla', 'slug':
+      'el-mentalista-canalla', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-04-24', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Viernes, 24 de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260328T212151', 'session':
+      '2026_03_28_21_15_Sabado', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/56ea4399.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '0eb892c8', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Menos Es Más', 'slug': 'menos-es-mas',
+      'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala
+      EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes',
+      'start_date': '2026-05-22', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Viernes, 22
+      de Mayo, 2026 8:00 PM "Menos es Mas" es un formato diferente para amenizar
+      tu evento. Este proyecto combina rock, jazz, pop...y su finalidad es
+      transmitir emociones a través del instrumento. Juanmi Viñolo ha
+      preparado una selección de temas de grandes clásicos de artistas como
+      Frank Sinatra, Carlos\nSantana, Luis Salinas...\nSi te gusta la guitarra
+      eléctrica, no te lo puedes perder 10.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260328T212151', 'session':
+      '2026_03_28_21_15_Sabado', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/000b6f13.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '1b89e5ff', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Kikín Fernández Y Fernando Labordeta',
+      'slug': 'kikin-fernandez-y-fernando-labordeta', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA',
+      'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date':
+      '2026-05-16', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__',
+      'end_time': '__NOT_FOUND__', 'description': 'Sábado, 16 de Mayo, 2026
+      8:00 PM 12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time':
+      '20260328T212151', 'session': '2026_03_28_21_15_Sabado', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/3acf7009.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'b0fff044', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Menos Es Más (Alumnos Emma)', 'slug':
+      'menos-es-mas-alumnos-emma', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-05-22', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Viernes, 22 de Mayo, 2026 8:00 PM 8.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260328T212151', 'session':
+      '2026_03_28_21_15_Sabado', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/0178582c.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '4c74f99d', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Humor De Casados (Mariano Ypunto Y La
+      Nena)', 'slug': 'humor-de-casados-mariano-ypunto-y-la-nena', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA',
+      'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date':
+      '2026-06-13', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__',
+      'end_time': '__NOT_FOUND__', 'description': 'Sábado, 13 de Junio, 2026
+      8:00 PM 15.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time':
+      '20260328T212151', 'session': '2026_03_28_21_15_Sabado', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/b6d2b55c.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'b6ce2419', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Victor Castigao Descontrolao', 'slug':
+      'victor-castigao-descontrolao', 'category': '__NOT_DEFINIED__',
+      'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela
+      Municipal de Música & Artes', 'start_date': '2026-04-18', 'start_time':
+      '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__',
+      'description': 'Sábado, 18 de Abril, 2026 8:00 PM 12.00 €', 'others':
+      {}, 'source': 'SalaEmma', 'exec_time': '20260328T212151', 'session':
+      '2026_03_28_21_15_Sabado', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/963409fe.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '3dc09e0b', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Alvarito', 'slug': 'alvarito', 'category':
+      '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA',
+      'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date':
+      '2026-06-06', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__',
+      'end_time': '__NOT_FOUND__', 'description': 'Sábado, 6 de Junio, 2026
+      8:00 PM 12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time':
+      '20260328T212151', 'session': '2026_03_28_21_15_Sabado', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/78fc9c75.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '72659a2b', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Melocotón en Almíbar', 'slug':
+      'melocoton-en-almibar', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-05-09', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 9 de Mayo, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260328T212151', 'session':
+      '2026_03_28_21_15_Sabado', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/7a7775f0.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': '0dd77118', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': 'Pepe El Caja', 'slug': 'pepe-el-caja',
+      'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala
+      EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes',
+      'start_date': '2026-05-23', 'start_time': '20:00:00', 'end_date':
+      '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 23
+      de Mayo, 2026 8:00 PM 15.00 €', 'others': {}, 'source': 'SalaEmma',
+      'exec_time': '20260328T212151', 'session': '2026_03_28_21_15_Sabado',
+      'image': '/home/ubuntu/work/event_flask_app/static/img/2ddfbdd0.jpg',
+      'url': 'https://entradasemma.azurewebsites.net/'}
+      --------------------
+      {'id': 'fdef6a77', 'show': 1, 'in_city': 1, 'one_day': 1,
+      'wrong_date_time': 0, 'event': '¡corten! Una Comedia De Cine', 'slug':
+      'corten-una-comedia-de-cine', 'category': '__NOT_DEFINIED__', 'id_venue':
+      '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de
+      Música & Artes', 'start_date': '2026-04-25', 'start_time': '20:00:00',
+      'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description':
+      'Sábado, 25 de Abril, 2026 8:00 PM 12.00 €', 'others': {}, 'source':
+      'SalaEmma', 'exec_time': '20260328T212151', 'session':
+      '2026_03_28_21_15_Sabado', 'image':
+      '/home/ubuntu/work/event_flask_app/static/img/bac22921.jpg', 'url':
+      'https://entradasemma.azurewebsites.net/'}
+      Checking unique event dict.
+      Reading /home/ubuntu/data_storage/Almeria/00_master/master_events.json...
+      *******
+      [('Rafa Tornado Punkústico', 'Sala EMMA', '2026-03-15', '17:00:00'),
+      ('Una De Imrpo! Dela Mujer', 'Sala EMMA', '2026-03-26', '21:00:00'),
+      ('¡corten! Una Comedia De Cine', 'Sala EMMA', '2026-04-25', '20:00:00'),
+      ('Melocotón en Almíbar', 'Sala EMMA', '2026-05-09', '20:00:00'),
+      ('Kikín Fernández Y Fernando Labordeta', 'Sala EMMA', '2026-05-16',
+      '20:00:00'), ('Menos Es Más', 'Sala EMMA', '2026-05-22', '20:00:00'),
+      ('Pepe El Caja', 'Sala EMMA', '2026-05-23', '20:00:00'), ('Alvarito',
+      'Sala EMMA', '2026-06-06', '20:00:00'), ('Humor De Casados (Mariano Ypunto
+      Y La Nena)', 'Sala EMMA', '2026-06-13', '20:00:00')]
+      ('Manolo Lera', 'Sala EMMA', '2026-04-11', '20:00:00')
+      ('El Mentalista Canalla', 'Sala EMMA', '2026-04-24', '20:00:00')
+      ('Menos Es Más', 'Sala EMMA', '2026-05-22', '20:00:00')
+      ('Kikín Fernández Y Fernando Labordeta', 'Sala EMMA', '2026-05-16',
+      '20:00:00')
+      ('Menos Es Más (Alumnos Emma)', 'Sala EMMA', '2026-05-22', '20:00:00')
+      ('Humor De Casados (Mariano Ypunto Y La Nena)', 'Sala EMMA', '2026-06-13',
+      '20:00:00')
+      ('Victor Castigao Descontrolao', 'Sala EMMA', '2026-04-18', '20:00:00')
+      ('Alvarito', 'Sala EMMA', '2026-06-06', '20:00:00')
+      ('Melocotón en Almíbar', 'Sala EMMA', '2026-05-09', '20:00:00')
+      ('Pepe El Caja', 'Sala EMMA', '2026-05-23', '20:00:00')
+      ('¡corten! Una Comedia De Cine', 'Sala EMMA', '2026-04-25', '20:00:00')
+      ****************************
+      Saving 4 new events
+      Saving in
+      /home/ubuntu/data_storage/Almeria/2026_03_28_21_15_Sabado/0_raw/20260328_2
+      121_SalaEmma.json
+      Saving 4 master url
+      Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+
+Result: Succeeded
+
