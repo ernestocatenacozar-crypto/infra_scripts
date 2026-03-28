@@ -1,0 +1,24 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ConciertosClub
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019d364e-8f2b-7619-8811-f8dcc4ef71a7
+
+Running for Almeria: ConciertosClub
+ConciertosClub
+RUNNING SESSION =  2026_03_28_21_15_Sabado
+Getting https://conciertos.club/almeria
+Sleep 1
+*** SCRAPED 108 URLS WITH EVENTS **
+New url events = 0
+#######################
+No new urls/events extracted. No new events to save
+#######################

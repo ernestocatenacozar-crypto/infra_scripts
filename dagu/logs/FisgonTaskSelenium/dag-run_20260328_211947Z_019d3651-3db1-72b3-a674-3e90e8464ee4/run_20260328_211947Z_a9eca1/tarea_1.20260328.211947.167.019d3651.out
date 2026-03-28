@@ -1,0 +1,26 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ClassicJazz
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d3651-3db1-72b3-a674-3e90e8464ee4
+
+Running for Almeria: ClassicJazz
+ClassicJazz
+RUNNING SESSION =  2026_03_28_21_15_Sabado
+Starting WebDriver...
+http://localhost:4444/wd/hub
+*********************times =1
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3

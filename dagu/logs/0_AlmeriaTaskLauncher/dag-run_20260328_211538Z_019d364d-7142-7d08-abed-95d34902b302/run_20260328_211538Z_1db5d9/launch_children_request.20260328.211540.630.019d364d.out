@@ -1,0 +1,914 @@
+Launching scraper: KuverProducciones
+Succeeded - 2026-03-28T21:15:40Z
+
+dag: FisgonTaskRequest (6.0s)
+│
+└─tarea_1 (6.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=KuverProducciones
+  │   DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&da
+  │   gRunId=019d364d-7af8-7c68-97a2-2b68f818261b
+  │   Running for Almeria: KuverProducciones
+  │   KuverProducciones
+  │   Creating rawfolder...
+  │   RUNNING SESSION =  2026_03_28_21_15_Sabado
+  │   Getting https://kuverproducciones.com/proximos-eventos/
+  │   Sleep 1
+  │   *** SCRAPED 57 URLS WITH EVENTS **
+  │   New url events = 0
+  │   #######################
+  │   No new urls/events extracted. No new events to save
+  │   #######################
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'kuverproducciones.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: SalaBerlin
+Succeeded - 2026-03-28T21:15:46Z
+
+dag: FisgonTaskRequest (5.0s)
+│
+└─tarea_1 (5.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=SalaBerlin
+  │   DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&da
+  │   gRunId=019d364d-931f-7eba-8e8f-bcb1bfed1243
+  │   Running for Almeria: SalaBerlin
+  │   SalaBerlin
+  │   RUNNING SESSION =  2026_03_28_21_15_Sabado
+  │   Getting https://berlinalmeria.com/eventos/
+  │   Sleep 1
+  │   *** SCRAPED 12 URLS WITH EVENTS **
+  │   New url events = 0
+  │   #######################
+  │   No new urls/events extracted. No new events to save
+  │   #######################
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'berlinalmeria.com'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: LaGuajira
+Succeeded - 2026-03-28T21:15:51Z
+
+dag: FisgonTaskRequest (1m 0s)
+│
+└─tarea_1 (1m 0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout: ... (36 more lines)
+  │   Sleep 16
+  │   --------------------
+  │   {'id': 'd539f53b', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio De Idiomas',
+  │   'slug': 'meetup-intercambio-de-idiomas', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-04-10', 'start_time': '20:30:00',
+  │   'end_date': '2026-04-10', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260328T211551', 'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-04-10/'}
+  │   --------------------
+  │   {'id': '95e0f20c', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Taller De Baile Flamenco Con Lucía
+  │   Ufarte', 'slug': 'taller-de-baile-flamenco-con-lucia-ufarte',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-04-10',
+  │   'start_time': '21:00:00', 'end_date': '2026-04-10', 'end_time':
+  │   '22:00:00', 'description': 'Lucía Ufarte es una joven bailaora
+  │   almeriense que, a pesar de su corta edad, ya destaca sobre el escenario
+  │   por su fuerza, su desparpajo y su gran precisión rítmica. Su baile,
+  │   lleno de energía y personalidad, combina la frescura de su juventud con
+  │   una profunda conexión con las raíces del flamenco, reflejando una
+  │   artista auténtica ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260328T211551',
+  │   'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/03/Lucia-Ufarte.
+  │   png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-baile-flamenco-con-luci
+  │   a-ufarte/'}
+  │   --------------------
+  │   {'id': '6f19d56e', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso De Teatro Con Julio Béjar',
+  │   'slug': 'curso-de-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-04-06', 'start_time':
+  │   '19:30:00', 'end_date': '2026-04-06', 'end_time': '21:30:00',
+  │   'description': 'De noviembre de 2025 a junio de 2026, el dramaturgo y
+  │   director Julio Béjar impartirá en La Guajira un curso regular de
+  │   creación escénica pensado para quienes quieran explorar los distintos
+  │   oficios del teatro y desarrollar su propia pieza. Durante ocho meses, el
+  │   grupo —de entre 10 y 20 participantes— recorrerá todos los aspectos
+  │   del ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260328T211551',
+  │   'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-04-06/'}
+  │   --------------------
+  │   {'id': 'e59963d1', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'World Music Jam Con Carlos Cortés &
+  │   Cía', 'slug': 'world-music-jam-con-carlos-cortes-cia', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-04-10', 'start_time':
+  │   '22:30:00', 'end_date': '2026-04-11', 'end_time': '01:30:00',
+  │   'description': 'Jam Jazz World propone un viaje musical único donde
+  │   Carlos Cortés Bustamante, junto a Fernando Brox, Pablo Guzmán y
+  │   Fernando Maya, fusiona jazz e improvisación con sonidos de todo el
+  │   mundo. Con flauta, guitarra, bajo y percusiones, esta jam abraza desde
+  │   la música latina y brasileña hasta el flamenco, el jazz y las raíces
+  │   afroamericanas, ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260328T211551',
+  │   'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/03/Jam-con-Carli
+  │   tos-Cortes-Quartet.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/world-music-jam-con-carlos-cortes
+  │   -cia/'}
+  │   --------------------
+  │   {'id': '14f4c31e', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Manuel Daif & Alba Segura', 'slug':
+  │   'manuel-daif-alba-segura', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La Guajira',
+  │   'start_date': '2026-04-08', 'start_time': '22:00:00', 'end_date':
+  │   '2026-04-08', 'end_time': '23:30:00', 'description': 'Bailaora
+  │   almeriense de 16 años, Alba Segura crecida entre compases y bata de
+  │   cola. Comenzó a bailar con solo 2 años en Liñánademia de su prima
+  │   Ana Alonso y, a los 6, ya pisaba escenarios con el espectáculo familiar
+  │   Entre Carrillos y Carretas. Desde los 8 años estudia en el
+  │   Conservatorio Profesional de Danza "Kina ...', 'others': {'ticket':
+  │   'https://laguajiradealmeria.com/evento/manuel-daif-alba-segura/#tribe-ti
+  │   ckets__tickets-form', 'price': '6,00€ – 12,00€', 'location': 'La
+  │   Guajira, C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260328T211551', 'session': '2026_03_28_21_15_Sabado',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/02/MANUEL-DAIF-A
+  │   LBA-SEGURA.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/manuel-daif-alba-segura/'}
+  │   --------------------
+  │   {'id': '662d0da3', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'La Causa Swing', 'slug':
+  │   'la-causa-swing', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La Guajira',
+  │   'start_date': '2026-04-09', 'start_time': '22:00:00', 'end_date':
+  │   '2026-04-09', 'end_time': '23:30:00', 'description': 'La Causa Swing
+  │   (formato reducido) ¿Os acordais de cuando la causa swing estaban hasta
+  │   en la sopa? Que pesados.... no paraban de tocar.....pues bien...ahora
+  │   les echamos de menos, porque desde que tocaron en el festival de jazz de
+  │   la ciudad, estaban desaparecidos...(con la excepcion del Mardi Gras que
+  │   son muy carnavaleros ellos...). Han estado componiendo ...', 'others':
+  │   {'ticket':
+  │   'https://laguajiradealmeria.com/evento/la-causa-swing/#tribe-tickets__ti
+  │   ckets-form', 'price': '5,00€ – 10,00€', 'location': 'La Guajira,
+  │   C/ Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260328T211551', 'session': '2026_03_28_21_15_Sabado',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/03/La-casa-del-s
+  │   wing.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/la-causa-swing/'}
+  │   --------------------
+  │   {'id': 'a53efcda', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Atardece Que No Es Poco Con Mostacho
+  │   Manouche', 'slug': 'atardece-que-no-es-poco-con-mostacho-manouche',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-04-04',
+  │   'start_time': '20:00:00', 'end_date': '2026-04-04', 'end_time':
+  │   '22:00:00', 'description': '¿Pero qué sin dios es este? Vuelven los
+  │   atardeceres con concierto de entrada libre de los sábados y lo
+  │   inaguramos con Mostacho Manouche, un cuarteto de Jazz manouche, el
+  │   único dentro de los generos del jazz creado en Europa, mas
+  │   concretamente por el nómada y creativo pueblo gitano. Mezclarán temas
+  │   clásicos del género con algunos ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260328T211551', 'session': '2026_03_28_21_15_Sabado',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/03/Atardece-con-
+  │   MOSTACHO-MANOUCHE.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/atardece-que-no-es-poco-con-mosta
+  │   cho-manouche/'}
+  │   --------------------
+  │   {'id': 'a1d10717', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Sinergia Solidaria Con ACCEM', 'slug':
+  │   'sinergia-solidaria-con-accem', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-04-12', 'start_time': '12:00:00',
+  │   'end_date': '2026-04-12', 'end_time': '18:00:00', 'description':
+  │   'Celebramos la temporada de primavera con la Sinergia Solidaria
+  │   impulsada por Accem, la organización para el desarrollo social que
+  │   protege los derechos y dignidad de cada persona en situación de
+  │   vulnerabilidad, acompañándolas en su camino, paso a paso. Te ofrecemos
+  │   un espacio de encuentro intercultural el domingo 12 de abril de 12:00 a
+  │   18:00 en ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260328T211551',
+  │   'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/03/Sinergia-Soli
+  │   daria-ACCEM-2.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/sinergia-solidaria-con-accem/'}
+  │   --------------------
+  │   {'id': '61068162', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'La Gran Sabiduría Que Nos Ofrece La
+  │   Muerte Por Ysa Marín', 'slug':
+  │   'la-gran-sabiduria-que-nos-ofrece-la-muerte-por-ysa-marin', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-04-10', 'start_time':
+  │   '19:00:00', 'end_date': '2026-04-10', 'end_time': '20:30:00',
+  │   'description': 'Por segunda vez, una invitación a contemplar la vida
+  │   desde su final. Ysa Marín inicia esta ponencia expresando su profundo
+  │   agradecimiento a quienes considera sus grandes maestros: las personas a
+  │   las que acompaña en el proceso de morir. A través de su humanidad y
+  │   autenticidad, ellos le enseñan que cuando nos atrevemos a mirar de
+  │   ...', 'others': {'ticket': '__NOT_FOUND__', 'price': '__NOT_FOUND__',
+  │   'location': 'La Guajira, C/ Cruces Bajas, 1, Almería, España'},
+  │   'source': 'LaGuajira', 'exec_time': '20260328T211551', 'session':
+  │   '2026_03_28_21_15_Sabado', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/12/Ysa-Marin.png
+  │   ', 'url':
+  │   'https://laguajiradealmeria.com/evento/la-gran-sabiduria-que-nos-ofrece-
+  │   la-muerte-por-ysa-marin-2/'}
+  │   --------------------
+  │   {'id': 'a7b51a7c', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo De La Guajira Con Julián
+  │   Sánchez', 'slug': 'coro-combo-de-la-guajira-con-julian-sanchez',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-04-07',
+  │   'start_time': '20:00:00', 'end_date': '2026-04-07', 'end_time':
+  │   '21:30:00', 'description': '¡Llega el Coro-Combo de La Guajira! Si te
+  │   gusta cantar, tocar un instrumento o simplemente compartir la música
+  │   como experiencia colectiva, este proyecto es para ti. El Coro-Combo de
+  │   La Guajira nace con la idea de crear un espacio artístico estable,
+  │   intercultural e intergeneracional, abierto a todas las personas que
+  │   quieran sumarse. La propuesta es ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260328T211551', 'session': '2026_03_28_21_15_Sabado',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-04-07/'}
+  │   Getting https://laguajiradealmeria.com/programacion/lista/página/3/
+  │   Sleep 16
+  │   --------------------
+  │   {'id': '2196e59a', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo De La Guajira Con Julián
+  │   Sánchez', 'slug': 'coro-combo-de-la-guajira-con-julian-sanchez',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-04-28',
+  │   'start_time': '20:00:00', 'end_date': '2026-04-28', 'end_time':
+  │   '21:30:00', 'description': '¡Llega el Coro-Combo de La Guajira! Si te
+  │   gusta cantar, tocar un instrumento o simplemente compartir la música
+  │   como experiencia colectiva, este proyecto es para ti. El Coro-Combo de
+  │   La Guajira nace con la idea de crear un espacio artístico estable,
+  │   intercultural e intergeneracional, abierto a todas las personas que
+  │   quieran sumarse. La propuesta es ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260328T211551', 'session': '2026_03_28_21_15_Sabado',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-04-28/'}
+  │   --------------------
+  │   {'id': 'cfb63511', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio De Idiomas',
+  │   'slug': 'meetup-intercambio-de-idiomas', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-05-01', 'start_time': '20:30:00',
+  │   'end_date': '2026-05-01', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260328T211551', 'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-05-01/'}
+  │   --------------------
+  │   {'id': 'dd99b5ab', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso De Teatro Con Julio Béjar',
+  │   'slug': 'curso-de-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-04-13', 'start_time':
+  │   '19:30:00', 'end_date': '2026-04-13', 'end_time': '21:30:00',
+  │   'description': 'De noviembre de 2025 a junio de 2026, el dramaturgo y
+  │   director Julio Béjar impartirá en La Guajira un curso regular de
+  │   creación escénica pensado para quienes quieran explorar los distintos
+  │   oficios del teatro y desarrollar su propia pieza. Durante ocho meses, el
+  │   grupo —de entre 10 y 20 participantes— recorrerá todos los aspectos
+  │   del ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260328T211551',
+  │   'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-04-13/'}
+  │   --------------------
+  │   {'id': 'e166027d', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio De Idiomas',
+  │   'slug': 'meetup-intercambio-de-idiomas', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-04-24', 'start_time': '20:30:00',
+  │   'end_date': '2026-04-24', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260328T211551', 'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-04-24/'}
+  │   --------------------
+  │   {'id': '05ce50a4', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo De La Guajira Con Julián
+  │   Sánchez', 'slug': 'coro-combo-de-la-guajira-con-julian-sanchez',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-04-21',
+  │   'start_time': '20:00:00', 'end_date': '2026-04-21', 'end_time':
+  │   '21:30:00', 'description': '¡Llega el Coro-Combo de La Guajira! Si te
+  │   gusta cantar, tocar un instrumento o simplemente compartir la música
+  │   como experiencia colectiva, este proyecto es para ti. El Coro-Combo de
+  │   La Guajira nace con la idea de crear un espacio artístico estable,
+  │   intercultural e intergeneracional, abierto a todas las personas que
+  │   quieran sumarse. La propuesta es ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260328T211551', 'session': '2026_03_28_21_15_Sabado',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-04-21/'}
+  │   --------------------
+  │   {'id': 'd1c14363', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Ángel Peñalver', 'slug':
+  │   'angel-penalver', 'category': '__NOT_DEFINIED__', 'id_venue':
+  │   'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La Guajira',
+  │   'start_date': '2026-04-30', 'start_time': '22:00:00', 'end_date':
+  │   '2026-04-30', 'end_time': '23:30:00', 'description': 'Arión es un viaje
+  │   interior, una experiencia inmersiva donde música, narración e
+  │   imágenes se entrelazan para crear un espacio fuera del tiempo. Más que
+  │   un concierto, es una invitación a detenerse, a escuchar de otra manera
+  │   y a dejarse llevar por un hilo de melodías que acompaña una búsqueda
+  │   artística y personal. Ángel Peñalver comenzó su ...', 'others':
+  │   {'ticket':
+  │   'https://laguajiradealmeria.com/evento/angel-penalver/#tribe-tickets__ti
+  │   ckets-form', 'price': '4,00€ – 8,00€', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260328T211551', 'session': '2026_03_28_21_15_Sabado',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2026/03/angel-penalve
+  │   r.png', 'url': 'https://laguajiradealmeria.com/evento/angel-penalver/'}
+  │   --------------------
+  │   {'id': 'c5366494', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso De Teatro Con Julio Béjar',
+  │   'slug': 'curso-de-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-04-27', 'start_time':
+  │   '19:30:00', 'end_date': '2026-04-27', 'end_time': '21:30:00',
+  │   'description': 'De noviembre de 2025 a junio de 2026, el dramaturgo y
+  │   director Julio Béjar impartirá en La Guajira un curso regular de
+  │   creación escénica pensado para quienes quieran explorar los distintos
+  │   oficios del teatro y desarrollar su propia pieza. Durante ocho meses, el
+  │   grupo —de entre 10 y 20 participantes— recorrerá todos los aspectos
+  │   del ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260328T211551',
+  │   'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-04-27/'}
+  │   --------------------
+  │   {'id': '8b59d3b7', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Meetup – Intercambio De Idiomas',
+  │   'slug': 'meetup-intercambio-de-idiomas', 'category': '__NOT_DEFINIED__',
+  │   'id_venue': 'NhNQFPQh', 'venue': 'La Guajira', 'std_venue': 'La
+  │   Guajira', 'start_date': '2026-04-17', 'start_time': '20:30:00',
+  │   'end_date': '2026-04-17', 'end_time': '22:30:00', 'description':
+  │   '🇪🇸Cada viernes a las 20:30h en la terraza de La Guajira para
+  │   practicar idiomas en un ambiente relajado y abierto a todo el mundo. No
+  │   hace falta venir acompañado ni tener un nivel perfecto: solo ganas de
+  │   charlar, conocer gente nueva y pasar un buen rato. Busca un sitio libre,
+  │   pide algo en la barra… ...', 'others': {'ticket': '__NOT_FOUND__',
+  │   'price': '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1,
+  │   Almería, España'}, 'source': 'LaGuajira', 'exec_time':
+  │   '20260328T211551', 'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2024/05/meetup-meet-u
+  │   p-intercambio-de-idiomas-web.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/meetup-intercambio-de-idiomas-2/2
+  │   026-04-17/'}
+  │   --------------------
+  │   {'id': '8a404123', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Coro Combo De La Guajira Con Julián
+  │   Sánchez', 'slug': 'coro-combo-de-la-guajira-con-julian-sanchez',
+  │   'category': '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La
+  │   Guajira', 'std_venue': 'La Guajira', 'start_date': '2026-04-14',
+  │   'start_time': '20:00:00', 'end_date': '2026-04-14', 'end_time':
+  │   '21:30:00', 'description': '¡Llega el Coro-Combo de La Guajira! Si te
+  │   gusta cantar, tocar un instrumento o simplemente compartir la música
+  │   como experiencia colectiva, este proyecto es para ti. El Coro-Combo de
+  │   La Guajira nace con la idea de crear un espacio artístico estable,
+  │   intercultural e intergeneracional, abierto a todas las personas que
+  │   quieran sumarse. La propuesta es ...', 'others': {'ticket':
+  │   '__NOT_FOUND__', 'price': '__NOT_FOUND__', 'location': 'La Guajira, C/
+  │   Cruces Bajas, 1, Almería, España'}, 'source': 'LaGuajira',
+  │   'exec_time': '20260328T211551', 'session': '2026_03_28_21_15_Sabado',
+  │   'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/CORO-COMBO.pn
+  │   g', 'url':
+  │   'https://laguajiradealmeria.com/evento/coro-combo-de-la-guajira-con-juli
+  │   an-sanchez/2026-04-14/'}
+  │   --------------------
+  │   {'id': '24ba8a21', 'show': 1, 'in_city': 1, 'one_day': 1,
+  │   'wrong_date_time': 0, 'event': 'Curso De Teatro Con Julio Béjar',
+  │   'slug': 'curso-de-teatro-con-julio-bejar', 'category':
+  │   '__NOT_DEFINIED__', 'id_venue': 'NhNQFPQh', 'venue': 'La Guajira',
+  │   'std_venue': 'La Guajira', 'start_date': '2026-04-20', 'start_time':
+  │   '19:30:00', 'end_date': '2026-04-20', 'end_time': '21:30:00',
+  │   'description': 'De noviembre de 2025 a junio de 2026, el dramaturgo y
+  │   director Julio Béjar impartirá en La Guajira un curso regular de
+  │   creación escénica pensado para quienes quieran explorar los distintos
+  │   oficios del teatro y desarrollar su propia pieza. Durante ocho meses, el
+  │   grupo —de entre 10 y 20 participantes— recorrerá todos los aspectos
+  │   del ...', 'others': {'ticket': '__NOT_FOUND__', 'price':
+  │   '__NOT_FOUND__', 'location': 'La Guajira, C/ Cruces Bajas, 1, Almería,
+  │   España'}, 'source': 'LaGuajira', 'exec_time': '20260328T211551',
+  │   'session': '2026_03_28_21_15_Sabado', 'image':
+  │   'https://laguajiradealmeria.com/wp-content/uploads/2025/10/Taller-de-cre
+  │   acion-escenica-con-Julio-Bejar.png', 'url':
+  │   'https://laguajiradealmeria.com/evento/taller-de-creacion-escenica-con-j
+  │   ulio-bejar/2026-04-20/'}
+  │   Checking unique event url.
+  │   New url events = 1
+  │   ****************************
+  │   Saving 1 new events
+  │   Saving in
+  │   /home/ubuntu/data_storage/Almeria/2026_03_28_21_15_Sabado/0_raw/20260328
+  │   _2115_LaGuajira.json
+  │   Saving 1 master url
+  │   Appending to /home/ubuntu/data_storage/Almeria/00_master/master_url.json
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'laguajiradealmeria.com'. Adding certificate verification is strongly
+      advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: ConciertosClub
+Succeeded - 2026-03-28T21:16:51Z
+
+dag: FisgonTaskRequest (2.0s)
+│
+└─tarea_1 (2.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=ConciertosClub
+  │   DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&da
+  │   gRunId=019d364e-8f2b-7619-8811-f8dcc4ef71a7
+  │   Running for Almeria: ConciertosClub
+  │   ConciertosClub
+  │   RUNNING SESSION =  2026_03_28_21_15_Sabado
+  │   Getting https://conciertos.club/almeria
+  │   Sleep 1
+  │   *** SCRAPED 108 URLS WITH EVENTS **
+  │   New url events = 0
+  │   #######################
+  │   No new urls/events extracted. No new events to save
+  │   #######################
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'conciertos.club'. Adding certificate verification is strongly advised.
+      See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
+Launching scraper: JacksonLive
+Failed - 2026-03-28T21:16:53Z
+
+dag: FisgonTaskRequest (3.0s)
+│
+└─tarea_1 (3.0s) [failed]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout:
+  │   RUNNING VARS →
+  │   CITY=Almeria,
+  │   OPERATION=0,
+  │   CREATE_SESSION=0,
+  │   CLOSE_SESSION=0,
+  │   SESSION=None,
+  │   IMAGES=0,
+  │   GET_SCRAPERS=
+  │   SCRAPER=JacksonLive
+  │   DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&da
+  │   gRunId=019d364e-97c5-76e2-96d1-5993ac6973d2
+  │   Running for Almeria: JacksonLive
+  │   JacksonLive
+  │   RUNNING SESSION =  2026_03_28_21_15_Sabado
+  │   Getting https://www.jacksonlive.es/almeria
+  │   Sleep 1
+  ├─stderr:
+  │   /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+  │   InsecureRequestWarning: Unverified HTTPS request is being made to host
+  │   'www.jacksonlive.es'. Adding certificate verification is strongly
+  │   advised. See:
+  │   https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warning
+  │   s
+  │   warnings.warn(
+  │   Traceback (most recent call last):
+  │   File "/app/run.py", line 137, in <module>
+  │   run_one(events_extractors, TARGET_SCRAPER, session_manager, TARGET_CITY)
+  │   File "/app/run.py", line 18, in run_one
+  │   ev.run()
+  │   File "/app/scraper/extractors/main_pages/abc_main_pages_extractor.py",
+  │   line 17, in run
+  │   result = self.iterate_pages_clean_events()
+  │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  │   File "/app/scraper/extractors/main_pages/jackson_live.py", line 19, in
+  │   iterate_pages_clean_events
+  │   events_cleaned = self.clean_main_page(main_page_soup)
+  │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  │   File "/app/scraper/extractors/main_pages/abc_main_pages_extractor.py",
+  │   line 60, in clean_main_page
+  │   info_list = self.get_info_list(main_page_soup, tuple_url)
+  │   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  │   File "/app/scraper/extractors/main_pages/jackson_live.py", line 24, in
+  │   get_info_list
+  │   data_page = main_page_soup.find('div', {'data-page': True})['data-page']
+  │   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  │   TypeError: 'NoneType' object is not subscriptable
+  │
+  └─error: failed to execute step "tarea_1": exit status 1
+
+Result: Failed
+
+Launching scraper: BibliotecaAgenda
+Succeeded - 2026-03-28T21:16:56Z
+
+dag: FisgonTaskRequest (25.0s)
+│
+└─tarea_1 (25.0s) [succeeded]
+  ├─bash -lc 'docker run --rm --network host -v
+  │   /home/ubuntu/work/fisgon:/app -v
+  │   /home/ubuntu/data_storage:/home/ubuntu/data_storage -v
+  │   /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_fla
+  │   sk_app/static/img -w /app -e OPERATION=0 -e DOCKER_CONFIG=/tmp/.docker
+  │   -e HOME=/tmp -e TARGET_CITY -e TARGET_SCRAPER -e
+  │   DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+  │   -e
+  │   DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&
+  │   step=tarea_1&dagRunId=${DAG_RUN_ID}" fisgon_scraper:1.0; rc=$?; exit
+  │   $rc'
+  │
+  ├─stdout: ... (12 more lines)
+  │   RUNNING SESSION =  2026_03_28_21_15_Sabado
+  │   *** SCRAPED 31 URLS WITH EVENTS **
+  │   New url events = 15
+  │   0 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=08/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   1 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=17/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   2 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=10/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   3 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=28/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   4 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=11/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   5 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=22/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   6 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=01/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   7 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=07/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   8 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=31/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   9 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=15/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   10 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=30/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   11 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=12/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   12 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=14/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   13 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=24/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   14 / 15
+  │   Getting
+  │   https://www.bibliotecasdeandalucia.es/web/biblioteca-del-estado-publica-
+  │   provincial-de-almeria/actividades/agenda?p_p_id=eventosportlet_WAR_cultu
+  │   raportlet_INSTANCE_rPywOIojLvBh&p_p_lifecycle=0&p_p_state=normal&p_p_mod
+  │   e=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&date=29/03/26&a
+  │   ction=showDay
+  │   Sleep 1
+  │   No new events to save
+  │   **************************
+  └─stderr:
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+      /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097:
+      InsecureRequestWarning: Unverified HTTPS request is being made to host
+      'www.bibliotecasdeandalucia.es'. Adding certificate verification is
+      strongly advised. See:
+      https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+      warnings.warn(
+
+Result: Succeeded
+
