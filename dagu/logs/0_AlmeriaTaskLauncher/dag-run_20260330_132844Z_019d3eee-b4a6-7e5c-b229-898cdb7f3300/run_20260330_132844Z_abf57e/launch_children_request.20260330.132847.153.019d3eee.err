@@ -9,3 +9,36 @@ time=2026-03-30T13:29:04.745Z level=INFO msg="DAG run finished" name=FisgonTaskR
 time=2026-03-30T13:29:04.785Z level=INFO msg="Executing root dag-run" dag=FisgonTaskRequest run-id=019d3eef-040f-70bc-a793-0225be3e8cd0 params=""
 time=2026-03-30T13:29:04.800Z level=INFO msg="DAG run started" name=FisgonTaskRequest run-id=019d3eef-040f-70bc-a793-0225be3e8cd0 attempt-id="" dag=FisgonTaskRequest run-id=019d3eef-040f-70bc-a793-0225be3e8cd0 params="[TARGET_CITY=Almeria TARGET_SCRAPER=LaGuajira 3=DAGU_BASE_URL=]"
 time=2026-03-30T13:29:04.805Z level=INFO msg="Step started" name=FisgonTaskRequest run-id=019d3eef-040f-70bc-a793-0225be3e8cd0 attempt-id="" dag=FisgonTaskRequest run-id=019d3eef-040f-70bc-a793-0225be3e8cd0 step=tarea_1
+time=2026-03-30T13:30:04.867Z level=INFO msg="DAG run finished" name=FisgonTaskRequest run-id=019d3eef-040f-70bc-a793-0225be3e8cd0 attempt-id="" dag=FisgonTaskRequest run-id=019d3eef-040f-70bc-a793-0225be3e8cd0 status=succeeded started-at=2026-03-30T13:29:04Z finished-at=2026-03-30T13:30:04Z
+time=2026-03-30T13:30:04.917Z level=INFO msg="Executing root dag-run" dag=FisgonTaskRequest run-id=019d3eef-eef3-78b1-8b2f-21510b7290d7 params=""
+time=2026-03-30T13:30:04.932Z level=INFO msg="DAG run started" name=FisgonTaskRequest run-id=019d3eef-eef3-78b1-8b2f-21510b7290d7 attempt-id="" dag=FisgonTaskRequest run-id=019d3eef-eef3-78b1-8b2f-21510b7290d7 params="[TARGET_CITY=Almeria TARGET_SCRAPER=ConciertosClub 3=DAGU_BASE_URL=]"
+time=2026-03-30T13:30:04.936Z level=INFO msg="Step started" name=FisgonTaskRequest run-id=019d3eef-eef3-78b1-8b2f-21510b7290d7 attempt-id="" dag=FisgonTaskRequest run-id=019d3eef-eef3-78b1-8b2f-21510b7290d7 step=tarea_1
+time=2026-03-30T13:30:07.277Z level=INFO msg="DAG run finished" name=FisgonTaskRequest run-id=019d3eef-eef3-78b1-8b2f-21510b7290d7 attempt-id="" dag=FisgonTaskRequest run-id=019d3eef-eef3-78b1-8b2f-21510b7290d7 status=succeeded started-at=2026-03-30T13:30:04Z finished-at=2026-03-30T13:30:07Z
+time=2026-03-30T13:30:07.315Z level=INFO msg="Executing root dag-run" dag=FisgonTaskRequest run-id=019d3eef-f851-73b0-880f-116fe4b39e23 params=""
+time=2026-03-30T13:30:07.329Z level=INFO msg="DAG run started" name=FisgonTaskRequest run-id=019d3eef-f851-73b0-880f-116fe4b39e23 attempt-id="" dag=FisgonTaskRequest run-id=019d3eef-f851-73b0-880f-116fe4b39e23 params="[TARGET_CITY=Almeria TARGET_SCRAPER=JacksonLive 3=DAGU_BASE_URL=]"
+time=2026-03-30T13:30:07.333Z level=INFO msg="Step started" name=FisgonTaskRequest run-id=019d3eef-f851-73b0-880f-116fe4b39e23 attempt-id="" dag=FisgonTaskRequest run-id=019d3eef-f851-73b0-880f-116fe4b39e23 step=tarea_1
+time=2026-03-30T13:30:10.203Z level=INFO msg="DAG run finished" name=FisgonTaskRequest run-id=019d3eef-f851-73b0-880f-116fe4b39e23 attempt-id="" dag=FisgonTaskRequest run-id=019d3eef-f851-73b0-880f-116fe4b39e23 status=failed started-at=2026-03-30T13:30:07Z finished-at=2026-03-30T13:30:10Z
+time=2026-03-30T13:30:10.217Z level=ERROR msg="Failed to execute dag-run" dag=FisgonTaskRequest run-id=019d3eef-f851-73b0-880f-116fe4b39e23 err="failed to execute step \"tarea_1\": exit status 1\nrecent stderr (tail):\nactors, TARGET_SCRAPER, session_manager, TARGET_CITY)\n  File \"/app/run.py\", line 18, in run_one\n    ev.run()\n  File \"/app/scraper/extractors/main_pages/abc_main_pages_extractor.py\", line 17, in run\n    result = self.iterate_pages_clean_events()\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/scraper/extractors/main_pages/jackson_live.py\", line 19, in iterate_pages_clean_events\n    events_cleaned = self.clean_main_page(main_page_soup)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/scraper/extractors/main_pages/abc_main_pages_extractor.py\", line 60, in clean_main_page\n    info_list = self.get_info_list(main_page_soup, tuple_url)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/scraper/extractors/main_pages/jackson_live.py\", line 24, in get_info_list\n    data_page = main_page_soup.find('div', {'data-page': True})['data-page']\n                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\nTypeError: 'NoneType' object is not subscriptable\n"
+Error: failed to execute the dag-run FisgonTaskRequest (dag-run ID: 019d3eef-f851-73b0-880f-116fe4b39e23): failed to execute step "tarea_1": exit status 1
+recent stderr (tail):
+actors, TARGET_SCRAPER, session_manager, TARGET_CITY)
+  File "/app/run.py", line 18, in run_one
+    ev.run()
+  File "/app/scraper/extractors/main_pages/abc_main_pages_extractor.py", line 17, in run
+    result = self.iterate_pages_clean_events()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/main_pages/jackson_live.py", line 19, in iterate_pages_clean_events
+    events_cleaned = self.clean_main_page(main_page_soup)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/main_pages/abc_main_pages_extractor.py", line 60, in clean_main_page
+    info_list = self.get_info_list(main_page_soup, tuple_url)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/main_pages/jackson_live.py", line 24, in get_info_list
+    data_page = main_page_soup.find('div', {'data-page': True})['data-page']
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+time=2026-03-30T13:30:10.246Z level=INFO msg="Executing root dag-run" dag=FisgonTaskRequest run-id=019d3ef0-03c4-7171-b49f-a99be03e1c90 params=""
+time=2026-03-30T13:30:10.259Z level=INFO msg="DAG run started" name=FisgonTaskRequest run-id=019d3ef0-03c4-7171-b49f-a99be03e1c90 attempt-id="" dag=FisgonTaskRequest run-id=019d3ef0-03c4-7171-b49f-a99be03e1c90 params="[TARGET_CITY=Almeria TARGET_SCRAPER=BibliotecaAgenda 3=DAGU_BASE_URL=]"
+time=2026-03-30T13:30:10.262Z level=INFO msg="Step started" name=FisgonTaskRequest run-id=019d3ef0-03c4-7171-b49f-a99be03e1c90 attempt-id="" dag=FisgonTaskRequest run-id=019d3ef0-03c4-7171-b49f-a99be03e1c90 step=tarea_1
+time=2026-03-30T13:30:35.445Z level=INFO msg="DAG run finished" name=FisgonTaskRequest run-id=019d3ef0-03c4-7171-b49f-a99be03e1c90 attempt-id="" dag=FisgonTaskRequest run-id=019d3ef0-03c4-7171-b49f-a99be03e1c90 status=succeeded started-at=2026-03-30T13:30:10Z finished-at=2026-03-30T13:30:35Z

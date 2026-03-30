@@ -1,0 +1,48 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ClassicJazz
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d3ef2-bd82-7b26-add7-32bcfb7f2739
+
+Running for Almeria: ClassicJazz
+ClassicJazz
+RUNNING SESSION =  2026_03_30_13_28_Lunes
+Starting WebDriver...
+http://localhost:4444/wd/hub
+*********************times =1
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*********************times =2
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*** SCRAPED 185 URLS WITH EVENTS **
+New url events = 1
+0 / 1
+Getting https://clasijazz.com/evento/korooke-live-karaoke-battle-experience-port-of-spain/
+Sleep 4
+2026-04-24T18:00:00 2026-04-24T22:00:00
+--------------------
+{'id': 'fbdfbd35', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Korooke Live – Karaoke Battle Experience', 'slug': 'korooke-live-karaoke-battle-experience', 'category': '__NOT_DEFINIED__', 'id_venue': 'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain', 'start_date': '2026-04-24', 'start_time': '18:00:00', 'end_date': '2026-04-24', 'end_time': '22:00:00', 'description': 'Port of Spain | Entrada Libre KOROOKE LIVE – Karaoke Battle Experience ¿Listo para algo MUCHO más que un karaoke? Este viernes 24 de abril llega a Port of Spain una experiencia única donde el escenario es tuyo… Canta Improvisa Vibra con el DJ Súmate al LIVE con músicos en directo KOROOKE no es karaoke… es un SHOW en vivo Un formato explosivo entre concierto, jam session y espectáculo participativo donde tú eres el protagonista ⚡ Y esta vez… subimos el nivel: KARAOKE BATTLE / CHALLENGE Demuestra lo que tienes y enfréntate al público… o conquístalo Además: Casting en vivo – All Stars Talent Festival Buscamos talento REAL: cantantes, bailarines, músicos, performers, modelos… incluso magia Una noche donde TODO puede pasar Port of Spain – Almería Viernes 24 de abril Desde las 18:00 ️ ENTRADA LIBRE Más público, más energía, más show Ven con amigos… o ven a brillar Sube al escenario… o disfruta del espectáculo KOROOKE LIVE No es un evento más… es una experiencia que se vive.', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/port-of-spain/', 'location': 'Parque Nicolás Salmeron 20, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260330T133314', 'session': '2026_03_30_13_28_Lunes', 'image': 'https://clasijazz.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-29-at-22.01.22.jpeg', 'url': 'https://clasijazz.com/evento/korooke-live-karaoke-battle-experience-port-of-spain/'}
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_03_30_13_28_Lunes/0_raw/20260330_1333_ClassicJazz.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

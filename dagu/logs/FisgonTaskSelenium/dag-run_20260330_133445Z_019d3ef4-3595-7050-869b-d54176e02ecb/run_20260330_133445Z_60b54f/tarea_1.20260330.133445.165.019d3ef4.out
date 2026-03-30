@@ -9,15 +9,16 @@ RUNNING VARS →
             IMAGES=0,
             GET_SCRAPERS=
 
-        SCRAPER=ConciertosClub
-        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019d3eef-eef3-78b1-8b2f-21510b7290d7
+        SCRAPER=TodasLasEntradas
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d3ef4-3595-7050-869b-d54176e02ecb
 
-Running for Almeria: ConciertosClub
-ConciertosClub
+Running for Almeria: TodasLasEntradas
+TodasLasEntradas
 RUNNING SESSION =  2026_03_30_13_28_Lunes
-Getting https://conciertos.club/almeria
-Sleep 1
-*** SCRAPED 93 URLS WITH EVENTS **
+Starting WebDriver...
+http://localhost:4444/wd/hub
+Getting content
+*** SCRAPED 11 URLS WITH EVENTS **
 New url events = 0
 #######################
 No new urls/events extracted. No new events to save
