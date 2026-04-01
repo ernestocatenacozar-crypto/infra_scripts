@@ -1,0 +1,5 @@
+M	data/almeria/master_events.json
+Your branch is up to date with 'origin/main'.
+Already up to date.
+[main 472356c] chore(snapshot): update master_events for almeria 2026-04-01T21:47:03Z
+ 1 file changed, 1445 insertions(+), 655 deletions(-)
