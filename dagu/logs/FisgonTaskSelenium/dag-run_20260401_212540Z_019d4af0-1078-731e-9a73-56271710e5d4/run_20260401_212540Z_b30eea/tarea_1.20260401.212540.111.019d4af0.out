@@ -1,0 +1,96 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=JuntaAndaluciaAgenda
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d4af0-1078-731e-9a73-56271710e5d4
+
+Running for Almeria: JuntaAndaluciaAgenda
+JuntaAndaluciaAgenda
+RUNNING SESSION =  2026_04_01_21_21_Miercoles
+Starting WebDriver...
+http://localhost:4444/wd/hub
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+clicking
+sleeping 3
+Scrolling...
+sleeping 1
+sleeping 7
+******
+css selector
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1)
+.view-display-id-page_search_activities > ul:nth-child(3) > li:nth-child(1) > a:nth-child(1) Not found
+Getting content
+*** SCRAPED 73 URLS WITH EVENTS **
+New url events = 5
+0 / 5
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/crece-con-la-villaespesa-taller-la-biologia-en-el-espacio-como-son-los-aliens-con
+Sleep 4
+--------------------
+{'id': 'db12c4e4', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Crece Con La Villaespesa. Taller "La Biología en El Espacio: ¿Cómo Son Los Aliens?", Con Aulasputnik', 'slug': 'crece-con-la-villaespesa-taller-la-biologia-en-el-espacio-como-son-los-aliens-co', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-04-10', 'start_time': '09:30:00', 'end_date': '2026-04-10', 'end_time': '__NOT_DEFINIED__', 'description': 'Crece con la Villaespesa. Taller "La biología en el espacio: ¿Cómo son los aliens?", con Aulasputnik El objetivo principal de esta actividad es explorar la astrobiología y comprender cómo podría ser la vida en otros planetas en función de su entorno. A través de una introducción teórica y una actividad práctica, los participantes descubrirán los conceptos clave de la búsqueda de vida extraterrestre y cómo las condiciones ambientales determinan la evolución de los seres vivos. El taller combina explicaciones interactivas sobre cómo buscamos vida fuera de la Tierra y cómo se representan los alienígenas en la cultura popular, con una dinámica práctica en la que los alumnos trabajarán en grupos para imaginar y diseñar un ser alienígena basado en las características de un planeta ficticio. Esta estructura permite adaptarse a diferentes niveles educativos, fomentando el pensamiento crítico, la creatividad y el trabajo en equipo. Viernes 13 de marzo 9:30h. Sala de exposiciones. Actividad concertada con centros educativos.', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-estado-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details': '10 de Abril del 2026, 9:30 h.', 'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260401T212545', 'session': '2026_04_01_21_21_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-04/CARTEL_0.png.webp?itok=t2Oo5yfb', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/crece-con-la-villaespesa-taller-la-biologia-en-el-espacio-como-son-los-aliens-con'}
+1 / 5
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/conferencia-nutricion-y-habitos-saludables-en-procesos-oncologicos-de-la-doctora-odile
+Sleep 4
+--------------------
+{'id': '251d45e8', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Conferencia "Nutrición Y Hábitos Saludables en Procesos Oncológicos" De La Doctora Odile Fernández Con Proyecto Mariposa', 'slug': 'conferencia-nutricion-y-habitos-saludables-en-procesos-oncologicos-de-la-doctora', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-04-09', 'start_time': '18:00:00', 'end_date': '2026-04-09', 'end_time': '__NOT_DEFINIED__', 'description': 'Conferencia "Nutrición y hábitos saludables en procesos oncológicos" de la Doctora Odile Fernández con Proyecto Mariposa. La doctora Odile Fernández es reconocida internacionalmente como experta en hábitos nutricionales y de vida, que afectan a la salud de la población y con especial afectación en la generación de procesos oncológicos. Nuestra Asociación como entidad cuyo fin es la ayuda, información y acompañamiento en terapias complementarias al tratamiento del cáncer, contamos con el Doctora Fernández para informar y dar a conocer hábitos saludables para tratamiento y prevención del cáncer. Jueves 9 de abril 18:00h. Salón de actos. Entrada libre hasta completar aforo (200 personas).', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-estado-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details': '09 de Abril del 2026, 18:00 h.', 'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260401T212545', 'session': '2026_04_01_21_21_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-04/CARTEL.png.webp?itok=n50yHHYB', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/conferencia-nutricion-y-habitos-saludables-en-procesos-oncologicos-de-la-doctora-odile'}
+2 / 5
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/presentacion-de-la-novela-cae-la-noche-en-monsul-de-fernando-martinez-lopez
+Sleep 4
+--------------------
+{'id': 'c7885097', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Presentación De La Novela "Cae La Noche en Mónsul", De Fernando Martínez López', 'slug': 'presentacion-de-la-novela-cae-la-noche-en-monsul-de-fernando-martinez-lopez', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-04-08', 'start_time': '19:00:00', 'end_date': '2026-04-08', 'end_time': '__NOT_DEFINIED__', 'description': 'Presentación de la novela "Cae la noche en Mónsul", de Fernando Martínez López. Encuentro con Fernando Martínez López a propósito de su última novela "Cae la noche en Mónsul", publicada por Extravertida Editorial. Le acompañará M.a Carmen López Saracho. La novela se concibe como un relato metaliterario donde dos hilos narrativos se entretejen hasta conformar un todo común, una historia en la que se muestra cómo la ausencia de amor esculpe con el cincel equivocado al ser humano conduciéndolo por los caminos que se abisman en el infierno. Miércoles 8 de abril 19:00h. Salón de actos. Entrada libre hasta completar aforo (200 personas).', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-estado-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details': '08 de Abril del 2026, 19:00 h.', 'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260401T212545', 'session': '2026_04_01_21_21_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-03/CARTEL_7.png.webp?itok=sb_9eGsf', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/presentacion-de-la-novela-cae-la-noche-en-monsul-de-fernando-martinez-lopez'}
+3 / 5
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/enclave-arqueologico-puerta-de-almeria-visitas-guiadas
+Sleep 4
+--------------------
+{'id': 'b9737eed', 'show': 1, 'in_city': 0, 'one_day': 1, 'wrong_date_time': 1, 'event': 'Enclave Arqueológico Puerta De Almería', 'slug': 'enclave-arqueologico-puerta-de-almeria', 'category': '__NOT_DEFINIED__', 'id_venue': None, 'venue': '__NOT_FOUND__', 'std_venue': None, 'start_date': '__NOT_FOUND__', 'start_time': '__NOT_FOUND__', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_DEFINIED__', 'description': 'De miércoles a domingo de 10:00 a 14:00 horas. Visita guiada con reserva previa mediante el correo electrónico puertalmeria.aaiicc@juntadeandalucia.es . Jueves: Reservado a centros educativos en horario de 10:00 a 13:00 h. Sábados: Visitas para público en general a las 12:00 h. Cerrado: 1 y 6 de enero, 1 de mayo, 24, 25 y 31 de diciembre. En otros festivos nacionales, autonómicos y/o locales, consultar apertura por correo electrónico. Aforo limitado a 25 personas. No se permitirá el acceso al enclave en los 15 minutos previos al cierre.', 'others': {'location_url': '__NOT_FOUND__', 'location2': 'Calle Parque Nicolás Salmerón, 27 Folleto E. A. Puerta de Almería (pdf en nueva ventana) Normas de obligado cumplimiento (pdf en nueva ventana) 697 953 445 puertalmeria.aaiicc@juntadeandalucia.es Visitar la pagina web', 'duration': '__NOT_FOUND__', 'datetime_details': '__NOT_FOUND__', 'town': '__NOT_FOUND__', 'location': 'Calle Parque Nicolás Salmerón, 27, Almería, Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260401T212545', 'session': '2026_04_01_21_21_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2023-12/PuertaAlmeria_Balsassalazon_MartinHaro.jpg.webp?itok=zaNlhloo', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/enclave-arqueologico-puerta-de-almeria-visitas-guiadas'}
+4 / 5
+Getting https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/la-biblioteca-humana-llega-la-villaespesa-con-paula-mandarina
+Sleep 4
+--------------------
+{'id': '8e072904', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'La Biblioteca Humana Llega a La Villaespesa, Con Paula Mandarina', 'slug': 'la-biblioteca-humana-llega-a-la-villaespesa-con-paula-mandarina', 'category': '__NOT_DEFINIED__', 'id_venue': 'TjmFnJdD', 'venue': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'std_venue': 'Biblioteca Pública Francisco Villaespesa', 'start_date': '2026-04-08', 'start_time': '10:30:00', 'end_date': '2026-04-08', 'end_time': '__NOT_DEFINIED__', 'description': 'La Biblioteca Humana llega a la Villaespesa, con Paula Mandarina La Biblioteca Humana llega a la Biblioteca Villaespesa como un espacio único de encuentro donde las personas se convierten en libros y las historias se leen escuchando. En esta experiencia, voluntarios y voluntarias compartirán vivencias reales, abriendo conversaciones cercanas, respetuosas y sin juicios. El tema de esta edición es “Abuelos, portadores de historias”, un homenaje vivo a la memoria, la experiencia y las anécdotas que solo los años saben guardar. Quienes participen podrán traer esa historia curiosa, emocionante o divertida que hayan vivido con sus abuelos y darle forma para narrarla ante lectores que deseen escuchar. Las personas participantes recibirán orientación previa para comunicar su historia de forma clara, respetuosa y segura, aprendiendo a gestionar emociones, establecer límites personales y fortalecer su confianza. La actividad fomenta la empatía, el diálogo abierto y la comprensión de otras realidades, creando un entorno seguro donde cada voz cuenta. Edad mínima: 16 años Aforo: máximo 10 participantes Si te gusta hablar, recordar y conectar con otras personas, esta es tu oportunidad: ven y conviértete en un libro humano. Miércoles 8 de abril 10:30 h. Sala de exposiciones Inscripción previa', 'others': {'location_url': '/cultura/agendaculturaldeandalucia/espacios/biblioteca-publica-del-estado-biblioteca-provincial-de-almeria-francisco-villaespesa', 'location2': 'Biblioteca Pública del Estado-Biblioteca Provincial de Almería Francisco Villaespesa', 'duration': '__NOT_FOUND__', 'datetime_details': '08 de Abril del 2026, 10:30 h.', 'town': '__NOT_FOUND__', 'location': 'Calle Hermanos Machado, s/n, Almería. Almería', 'duration_days': '__NOT_FOUND__'}, 'source': 'JuntaAndaluciaAgenda', 'exec_time': '20260401T212545', 'session': '2026_04_01_21_21_Miercoles', 'image': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/sites/default/files/styles/header_activity_ext_2xl/public/2026-03/cartel%208%20abr.png.webp?itok=QTiXXMpK', 'url': 'https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/evento/la-biblioteca-humana-llega-la-villaespesa-con-paula-mandarina'}
+****************************
+Saving 5 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_04_01_21_21_Miercoles/0_raw/20260401_2125_JuntaAndaluciaAgenda.json
+Saving 5 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
