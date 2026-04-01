@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/app/run.py", line 82, in <module>
-    raise ValueError(f"Unknown TARGET_CITY: {TARGET_CITY}")
-ValueError: Unknown TARGET_CITY: 
