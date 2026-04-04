@@ -1,0 +1,72 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ClassicJazz
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d5983-f91f-71a8-b175-c35364336328
+
+Running for Almeria: ClassicJazz
+ClassicJazz
+RUNNING SESSION =  2026_04_04_17_17_Sabado
+Starting WebDriver...
+http://localhost:4444/wd/hub
+*********************times =1
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*********************times =2
+sleeping 7
+Scrolling...
+sleeping 1
+Getting content
+clicking
+sleeping 3
+sleeping 7
+*** SCRAPED 112 URLS WITH EVENTS **
+New url events = 5
+0 / 5
+Getting https://clasijazz.com/evento/alvarito-manley/
+Sleep 4
+2026-04-17T20:00:00 2026-04-17T21:30:00
+--------------------
+{'id': 'cdc62f64', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Alvarito Y El Gran Manley', 'slug': 'alvarito-y-el-gran-manley', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'Sede Clasijazz', 'std_venue': 'Clasijazz', 'start_date': '2026-04-17', 'start_time': '20:00:00', 'end_date': '2026-04-17', 'end_time': '21:30:00', 'description': '12 € NS / 5 € S Sala Principal Alvarito y el Gran Manley regresan al Clasijazz para volver a llenar la sala de carcajadas con sus hilarantes sketches y monólogos. Si la última vez te lo perdiste… Esta es tu ocasión!', 'others': {'price': '5,00€ – 12,00€', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/sede-clasijazz/', 'location': 'Maestro Serrano 9, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260404T172159', 'session': '2026_04_04_17_17_Sabado', 'image': 'https://clasijazz.com/wp-content/uploads/2026/03/8a9f6c71-5ea3-4900-a4d0-34f73ee81609.jpg', 'url': 'https://clasijazz.com/evento/alvarito-manley/'}
+1 / 5
+Getting https://clasijazz.com/evento/cienciajazz-rural-un-viaje-por-los-cuadernos-escolares-de-la-alpujarra-dr-christian-roith-el-molino-clasijazz-rural/
+Sleep 4
+2026-04-18T10:30:00 2026-04-18T14:00:00
+--------------------
+{'id': 'f912efa7', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Cienciajazz Rural: «Un Viaje Por Los Cuadernos Escolares De La Alpujarra». Dr. Christian Roith – EL MOLINO Clasijazz Rural', 'slug': 'cienciajazz-rural-un-viaje-por-los-cuadernos-escolares-de-la-alpujarra-dr-christ', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'El Molino – Clasijazz rural', 'std_venue': 'Clasijazz', 'start_date': '2026-04-18', 'start_time': '10:30:00', 'end_date': '2026-04-18', 'end_time': '14:00:00', 'description': 'EL MOLINO Clasijazz Rural Cienciajazz Rural Una edición especial del Cienciajazz en el Molino Clasijazz Rural. Programación: 10:30. Visita guiada al Museo de la Escritura. Fundación Museos de Terque. 11:30. Charla: «Un viaje por los cuadernos escolares de La Alpujarra». Dr. Christian Roith. 13:00. Concierto del grupo Atrezzo: Grace Annis (voz, guitarra, batería), León (voz, batería y guitarra), Pablo Aranda (saxos soprano y tenor )', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/el-molino/', 'location': 'X9MW+8V, Terque'}, 'source': 'ClassicJazz', 'exec_time': '20260404T172159', 'session': '2026_04_04_17_17_Sabado', 'image': 'https://clasijazz.com/wp-content/uploads/2026/04/descarga.jpg', 'url': 'https://clasijazz.com/evento/cienciajazz-rural-un-viaje-por-los-cuadernos-escolares-de-la-alpujarra-dr-christian-roith-el-molino-clasijazz-rural/'}
+2 / 5
+Getting https://clasijazz.com/evento/luchas-nostalgias-y-desvarios-port-of-spain/
+Sleep 4
+2026-04-25T22:00:00 2026-04-25T23:30:00
+--------------------
+{'id': '31c33161', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Luchas, Nostalgias Y Desvaríos', 'slug': 'luchas-nostalgias-y-desvarios', 'category': '__NOT_DEFINIED__', 'id_venue': 'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain', 'start_date': '2026-04-25', 'start_time': '22:00:00', 'end_date': '2026-04-25', 'end_time': '23:30:00', 'description': '12€ NS /5€ S | Port of Spain Entradas Rock. Críticas cinematográficas. Revolución. Poesía. Música culta. Comedia. Indie. Una maleta con partituras. Cristina Peri Rossi. Shakespeare. Mimo. Nostalgia. Erik Satie. Lorca. Astor Piazzolla. Buskowsky. Rosendo. Teatro. Luchas, Nostalgias y Desvaríos se presentó en Clasijazz (Almería) como una propuesta híbrida que mezcla poesía, música y teatro. El Ratón y la Ratonera es una compañía almeriense de artes escénicas dedicada a la fusión de lenguajes: teatro, poesía, música en directo y performance. Tras una primera etapa que les dio visibilidad —y en la que se les relaciona con la escena local y premios como el Acteón (años 2006–2008)— la compañía retomó la actividad en 2025 con Luchas, Nostalgias y Desvaríos.', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/port-of-spain/', 'location': 'Parque Nicolás Salmeron 20, Almería'}, 'source': 'ClassicJazz', 'exec_time': '20260404T172159', 'session': '2026_04_04_17_17_Sabado', 'image': 'https://clasijazz.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-03-at-19.53.18.jpeg', 'url': 'https://clasijazz.com/evento/luchas-nostalgias-y-desvarios-port-of-spain/'}
+3 / 5
+Getting https://clasijazz.com/evento/concierto-de-leonardo-garcia-el-molino-clasijazz-rural/
+Sleep 4
+2026-04-16T19:00:00 2026-04-16T20:30:00
+--------------------
+{'id': '8637fce0', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Concierto De Leonardo García – EL MOLINO Clasijazz Rural', 'slug': 'concierto-de-leonardo-garcia-el-molino-clasijazz-rural', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'El Molino – Clasijazz rural', 'std_venue': 'Clasijazz', 'start_date': '2026-04-16', 'start_time': '19:00:00', 'end_date': '2026-04-16', 'end_time': '20:30:00', 'description': '10€ NS / 7 € S EL MOLINO Clasijazz Rural (Terque) Concierto de Leonardo García_Cantautor de la Trovuntivitis de Santa Clara, Cuba Uno de los lores que regentan el territorio de la trova reciente es Leo García. Integra La Trovuntivitis, grupo de cantautores y cantautoras que desde hace una veintena de años defienden a la capital de la provincia como plaza segura para esa manera de interpretar al país. Él es cantante e instrumentista notable con estudios de guitarra clásica, e inspirado compositor. Como trovador, todas esas dimensiones se imbrican en el acto creativo para construir piezas de imaginativas líneas melódicas y estimulantes letras, defendidas por su autor en el escenario con ejemplar dedicación. Concierto imperdible.', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/el-molino/', 'location': 'X9MW+8V, Terque'}, 'source': 'ClassicJazz', 'exec_time': '20260404T172159', 'session': '2026_04_04_17_17_Sabado', 'image': 'https://clasijazz.com/wp-content/uploads/2026/04/leonardo-garcia-tregua-yuzin-1.jpg', 'url': 'https://clasijazz.com/evento/concierto-de-leonardo-garcia-el-molino-clasijazz-rural/'}
+4 / 5
+Getting https://clasijazz.com/evento/concierto-de-carlos-cortes-bustamante-vinculos/
+Sleep 4
+2026-04-11T13:00:00 2026-04-11T14:00:00
+--------------------
+{'id': '835f0807', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Concierto De Carlos Cortés Bustamante «Vínculos» – EL MOLINO Clasijazz Rural', 'slug': 'concierto-de-carlos-cortes-bustamante-vinculos-el-molino-clasijazz-rural', 'category': '__NOT_DEFINIED__', 'id_venue': 'Q6b6LRjT', 'venue': 'El Molino – Clasijazz rural', 'std_venue': 'Clasijazz', 'start_date': '2026-04-11', 'start_time': '13:00:00', 'end_date': '2026-04-11', 'end_time': '14:00:00', 'description': '10 € NS / 7 € S EL MOLINO Clasijazz Rural – Terque «Vínculos» es el proyecto en solitario del artista, compositor y productor gaditano Carlos Cortés Bustamante. Un trabajo de música andaluza y jazz en el que conviven la búsqueda creativa y la ortodoxia. Carlos Cortés Bustamante es un creador completo, un viajero incansable, perseguidor de ritmos, siempre en la sombra acompañando y produciendo a ilustres de nuestra música en los últimos años, da un paso adelante para dar vida con su guitarra flamenca a este trabajo ecléctico y coherente, donde resuenan los ecos andalusíes, africanos, caribeños, sefardíes o mediterráneos de sus vivencias y que emanan a través del más legítimo flamenco gaditano, ese que al mismo tiempo que bebe de las enseñanzas de Falla, es inevitablemente cosmopolita, creativo y libre. Arreglos cuidados, melodías con fuerza y propuestas rítmicas completamente nuevas donde el flamenco, el jazz, la música latina, el groove afroamericano, la raíz andalusí y la música mediterránea se unen con asombrosa naturalidad. Espectaculares solos que arrancan aplausos en cada canción. Una propuesta llena de nuevas formas musicales que han sido creadas al detalle usando la libertad que Carlos profesa. Guitarra flamenca, laúd ibérico, flauta travesera, trombón, cajón, congas, bongós y más. Añadiendo a esto un lenguaje rítmico rigurosamente elaborado y una riqueza arreglística asombrosa. Duración: 60 minutos. Para todos los públicos. Género: worldmusic, flamenco, mediterránea, jazz. https://www.youtube.com/watch?v=A2v5FFpbtHY', 'others': {'price': '__NOT_DEFINIED__', 'category': 'Programación', 'location_url': 'https://clasijazz.com/local/el-molino/', 'location': 'X9MW+8V, Terque'}, 'source': 'ClassicJazz', 'exec_time': '20260404T172159', 'session': '2026_04_04_17_17_Sabado', 'image': 'https://clasijazz.com/wp-content/uploads/2026/04/0023291908_71.jpg', 'url': 'https://clasijazz.com/evento/concierto-de-carlos-cortes-bustamante-vinculos/'}
+****************************
+Saving 5 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_04_04_17_17_Sabado/0_raw/20260404_1721_ClassicJazz.json
+Saving 5 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
