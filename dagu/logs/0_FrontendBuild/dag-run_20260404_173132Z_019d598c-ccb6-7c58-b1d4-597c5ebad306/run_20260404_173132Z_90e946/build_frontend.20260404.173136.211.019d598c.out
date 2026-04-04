@@ -1,0 +1,36 @@
+
+> build:css
+> tailwindcss -i ./src/tailwind.css -o ./static/css/tailwind.css --minify
+
+Images: need download 42 (skipped=429)
+Images: 1/42 (downloaded=0 failed=0)
+Images: 25/42 (downloaded=1 failed=23)
+Images: 42/42 (downloaded=6 failed=35)
+Images: {'events_total': 471, 'events_with_remote': 42, 'skipped_already_present': 429, 'to_download': 42, 'downloaded': 6, 'failed_download': 36, 'failed_decode': 0, 'written': 12} -> /app/dist/almeria/static/img/events
+HTML: rendering 502 pages
+HTML: 1/502
+HTML: 25/502
+HTML: 50/502
+HTML: 75/502
+HTML: 100/502
+HTML: 125/502
+HTML: 150/502
+HTML: 175/502
+HTML: 200/502
+HTML: 225/502
+HTML: 250/502
+HTML: 275/502
+HTML: 300/502
+HTML: 325/502
+HTML: 350/502
+HTML: 375/502
+HTML: 400/502
+HTML: 425/502
+HTML: 450/502
+HTML: 475/502
+HTML: 500/502
+HTML: 502/502
+Built 2 month pages + 500 other pages into /app/dist/almeria
+Wrote /app/dist/almeria/sitemap.xml
+Wrote /app/dist/almeria/robots.txt
+Wrote /app/dist/almeria/version.json
