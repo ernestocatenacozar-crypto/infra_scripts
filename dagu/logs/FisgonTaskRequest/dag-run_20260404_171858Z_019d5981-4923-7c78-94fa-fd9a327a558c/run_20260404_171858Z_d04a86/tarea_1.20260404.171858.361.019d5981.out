@@ -1,0 +1,19 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=JacksonLive
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019d5981-4923-7c78-94fa-fd9a327a558c
+
+Running for Almeria: JacksonLive
+JacksonLive
+RUNNING SESSION =  2026_04_04_17_17_Sabado
+Getting https://www.jacksonlive.es/almeria
+Sleep 1

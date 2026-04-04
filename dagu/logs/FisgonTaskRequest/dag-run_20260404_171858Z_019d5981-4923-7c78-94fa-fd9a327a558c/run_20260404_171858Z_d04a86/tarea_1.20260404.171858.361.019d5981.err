@@ -1,0 +1,20 @@
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'www.jacksonlive.es'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+Traceback (most recent call last):
+  File "/app/run.py", line 137, in <module>
+    run_one(events_extractors, TARGET_SCRAPER, session_manager, TARGET_CITY)
+  File "/app/run.py", line 18, in run_one
+    ev.run()
+  File "/app/scraper/extractors/main_pages/abc_main_pages_extractor.py", line 17, in run
+    result = self.iterate_pages_clean_events()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/main_pages/jackson_live.py", line 19, in iterate_pages_clean_events
+    events_cleaned = self.clean_main_page(main_page_soup)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/main_pages/abc_main_pages_extractor.py", line 60, in clean_main_page
+    info_list = self.get_info_list(main_page_soup, tuple_url)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/scraper/extractors/main_pages/jackson_live.py", line 24, in get_info_list
+    data_page = main_page_soup.find('div', {'data-page': True})['data-page']
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable

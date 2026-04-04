@@ -1,0 +1,46 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=ConciertosClub
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019d5980-edec-7dea-b68a-bb3a990169d1
+
+Running for Almeria: ConciertosClub
+ConciertosClub
+RUNNING SESSION =  2026_04_04_17_17_Sabado
+Getting https://conciertos.club/almeria
+Sleep 1
+*** SCRAPED 102 URLS WITH EVENTS **
+New url events = 4
+0 / 4
+Getting https://conciertos.club/almeria/conciertos/114177-lero
+Sleep 4
+--------------------
+{'id': '8b98e208', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Lero', 'slug': 'lero', 'category': 'conciertos', 'id_venue': 'Q6b6LRjT', 'venue': 'Clasijazz Café', 'std_venue': 'Clasijazz', 'start_date': '2026-05-30', 'start_time': '22:00:00', 'end_date': '2026-05-30', 'end_time': '__NOT_DEFINIED__', 'description': '__NOT_FOUND__', 'others': {'category': 'Urbana', 'price': '8', 'place_url': 'https://conciertos.club/almeria/locales/clasijazz-cafe', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260404T171835', 'session': '2026_04_04_17_17_Sabado', 'image': '__NOT_FOUND__', 'url': 'https://conciertos.club/almeria/conciertos/114177-lero'}
+1 / 4
+Getting https://conciertos.club/almeria/conciertos/113429-gorka-benitez-quartet
+Sleep 4
+--------------------
+{'id': 'dc2859d4', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Gorka Benítez Quartet', 'slug': 'gorka-benitez-quartet', 'category': 'conciertos', 'id_venue': 'Q6b6LRjT', 'venue': 'Clasijazz Café', 'std_venue': 'Clasijazz', 'start_date': '2026-05-29', 'start_time': '22:00:00', 'end_date': '2026-05-29', 'end_time': '__NOT_DEFINIED__', 'description': 'Gorka Benítez Quartet. Concierto en Clasijazz Café, Almería (Almería) el Viernes 29 de Mayo de 2026. Es una actuación de estilo Jazz/Swing.', 'others': {'category': 'Jazz', 'price': '20', 'place_url': 'https://conciertos.club/almeria/locales/clasijazz-cafe', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260404T171835', 'session': '2026_04_04_17_17_Sabado', 'image': '__NOT_FOUND__', 'url': 'https://conciertos.club/almeria/conciertos/113429-gorka-benitez-quartet'}
+2 / 4
+Getting https://conciertos.club/almeria/conciertos/113402-jueves-flamencos
+Sleep 4
+--------------------
+{'id': '4176f29e', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Jueves Flamencos', 'slug': 'jueves-flamencos', 'category': 'conciertos', 'id_venue': 'ddgm4gQP', 'venue': 'Port Of Spain', 'std_venue': 'Port Of Spain', 'start_date': '2026-05-28', 'start_time': '22:00:00', 'end_date': '2026-05-28', 'end_time': '__NOT_DEFINIED__', 'description': '__NOT_FOUND__', 'others': {'category': 'Mestizaje', 'price': 'Entrada libre', 'place_url': 'https://conciertos.club/almeria/locales/port-of-spain', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260404T171835', 'session': '2026_04_04_17_17_Sabado', 'image': 'https://conciertos.club/doc/c/2026/c_portofspainflamenco.jpg', 'url': 'https://conciertos.club/almeria/conciertos/113402-jueves-flamencos'}
+3 / 4
+Getting https://conciertos.club/almeria/conciertos/112717-paula-koops
+Sleep 4
+--------------------
+{'id': 'd227b182', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Paula Koops', 'slug': 'paula-koops', 'category': 'conciertos', 'id_venue': 'NmPqTrh6', 'venue': 'Berlín Social Club', 'std_venue': 'Berlin Social Club', 'start_date': '2026-05-29', 'start_time': '22:00:00', 'end_date': '2026-05-29', 'end_time': '__NOT_DEFINIED__', 'description': '\nCONCIERTO PAULA KOOPS (GPS) - ALMERÍA - SALA BERLIN SOCIAL CLUB - VIERNES 29 DE MAYO ', 'others': {'category': 'Urbana', 'price': '12', 'place_url': 'https://conciertos.club/almeria/locales/berlin-social-club', 'town': 'Almería'}, 'source': 'ConciertosClub', 'exec_time': '20260404T171835', 'session': '2026_04_04_17_17_Sabado', 'image': 'https://conciertos.club/doc/a/2023/a_paulakoops.jpg', 'url': 'https://conciertos.club/almeria/conciertos/112717-paula-koops'}
+****************************
+Saving 4 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_04_04_17_17_Sabado/0_raw/20260404_1718_ConciertosClub.json
+Saving 4 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
