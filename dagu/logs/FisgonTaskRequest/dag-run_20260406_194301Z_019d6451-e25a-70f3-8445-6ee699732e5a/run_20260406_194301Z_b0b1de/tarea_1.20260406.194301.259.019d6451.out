@@ -1,0 +1,31 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=SalaBerlin
+        DAG_RUN_URL=/dags/FisgonTaskRequest/log?remoteNode=local&step=tarea_1&dagRunId=019d6451-e25a-70f3-8445-6ee699732e5a
+
+Running for Almeria: SalaBerlin
+SalaBerlin
+RUNNING SESSION =  2026_04_06_19_42_Lunes
+Getting https://berlinalmeria.com/eventos/
+Sleep 1
+*** SCRAPED 12 URLS WITH EVENTS **
+New url events = 1
+0 / 1
+Getting https://berlinalmeria.com/producto/30-mayo-desert-sound-almeria/
+Sleep 4
+--------------------
+{'id': '808557ab', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Desert Sound Almería', 'slug': 'desert-sound-almeria', 'category': '__NOT_DEFINIED__', 'id_venue': 'NmPqTrh6', 'venue': 'Sala Berlin', 'std_venue': 'Berlin Social Club', 'start_date': '2026-05-30', 'start_time': '22:00:00', 'end_date': '__NOT_DEFINIED__', 'end_time': '__NOT_DEFINIED__', 'description': 'Llega a Almería la Primera Fiesta del Recuerdo', 'others': {'price': '21,00\xa0€', 'ticket': 'https://entradium.com/events/desert-sound-almeria'}, 'source': 'SalaBerlin', 'exec_time': '20260406T194303', 'session': '2026_04_06_19_42_Lunes', 'image': 'https://berlinalmeria.com/wp-content/uploads/2026/03/PHOTO-2026-03-25-15-59-25.jpg', 'url': 'https://berlinalmeria.com/producto/30-mayo-desert-sound-almeria/'}
+****************************
+Saving 1 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_04_06_19_42_Lunes/0_raw/20260406_1943_SalaBerlin.json
+Saving 1 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json

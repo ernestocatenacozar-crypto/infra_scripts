@@ -1,0 +1,15 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=1,
+            CREATE_SESSION=1,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=
+        DAG_RUN_URL=/dags/FisgonSession/log?remoteNode=local&step=session&dagRunId=019d6451-c55d-7b80-b138-075ce54818a7
+
+2026_04_06_19_42_Lunes
