@@ -1,0 +1,63 @@
+
+RUNNING VARS → 
+        CITY=Almeria, 
+
+        OPERATION=0,
+            CREATE_SESSION=0,
+            CLOSE_SESSION=0,
+            SESSION=None,
+            IMAGES=0,
+            GET_SCRAPERS=
+
+        SCRAPER=SalaEmma
+        DAG_RUN_URL=/dags/FisgonTaskSelenium/log?remoteNode=local&step=tarea_1&dagRunId=019d6457-2b6f-7652-b562-5387c7c32fa8
+
+Running for Almeria: SalaEmma
+SalaEmma
+RUNNING SESSION =  2026_04_06_19_42_Lunes
+Starting WebDriver...
+http://localhost:4444/wd/hub
+sleeping 10
+Getting content
+--------------------
+{'id': '0dd1960c', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Melocotón en Almíbar', 'slug': 'melocoton-en-almibar', 'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date': '2026-05-09', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 9 de Mayo, 2026 8:00 PM  12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260406T194851', 'session': '2026_04_06_19_42_Lunes', 'image': '/home/ubuntu/work/event_flask_app/static/img/bb26078c.jpg', 'url': 'https://entradasemma.azurewebsites.net/'}
+--------------------
+{'id': 'd3d76790', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'El Mentalista Canalla', 'slug': 'el-mentalista-canalla', 'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date': '2026-04-24', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Viernes, 24 de Abril, 2026 8:00 PM  12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260406T194851', 'session': '2026_04_06_19_42_Lunes', 'image': '/home/ubuntu/work/event_flask_app/static/img/34c4b2ae.jpg', 'url': 'https://entradasemma.azurewebsites.net/'}
+--------------------
+{'id': '67932833', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Kikín Fernández Y Fernando Labordeta', 'slug': 'kikin-fernandez-y-fernando-labordeta', 'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date': '2026-05-16', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 16 de Mayo, 2026 8:00 PM  12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260406T194851', 'session': '2026_04_06_19_42_Lunes', 'image': '/home/ubuntu/work/event_flask_app/static/img/2fc83be2.jpg', 'url': 'https://entradasemma.azurewebsites.net/'}
+--------------------
+{'id': 'f873e176', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Menos Es Más (Alumnos Emma)', 'slug': 'menos-es-mas-alumnos-emma', 'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date': '2026-05-22', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Viernes, 22 de Mayo, 2026 8:00 PM  8.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260406T194851', 'session': '2026_04_06_19_42_Lunes', 'image': '/home/ubuntu/work/event_flask_app/static/img/2a9fa259.jpg', 'url': 'https://entradasemma.azurewebsites.net/'}
+--------------------
+{'id': 'b2e67f98', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Menos Es Más', 'slug': 'menos-es-mas', 'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date': '2026-05-22', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Viernes, 22 de Mayo, 2026 8:00 PM "Menos es Mas" es un formato diferente para amenizar tu evento. Este proyecto combina rock, jazz, pop...y su finalidad es transmitir emociones a través del instrumento. Juanmi Viñolo ha preparado una selección de temas de grandes clásicos de artistas como Frank Sinatra, Carlos\nSantana, Luis Salinas...\nSi te gusta la guitarra eléctrica, no te lo puedes perder 10.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260406T194851', 'session': '2026_04_06_19_42_Lunes', 'image': '/home/ubuntu/work/event_flask_app/static/img/9bbcda4e.jpg', 'url': 'https://entradasemma.azurewebsites.net/'}
+--------------------
+{'id': '73e2542e', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Humor De Casados (Mariano Ypunto Y La Nena)', 'slug': 'humor-de-casados-mariano-ypunto-y-la-nena', 'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date': '2026-06-13', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 13 de Junio, 2026 8:00 PM  15.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260406T194851', 'session': '2026_04_06_19_42_Lunes', 'image': '/home/ubuntu/work/event_flask_app/static/img/7ff41646.jpg', 'url': 'https://entradasemma.azurewebsites.net/'}
+--------------------
+{'id': 'bd6bbed4', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Victor Castigao Descontrolao', 'slug': 'victor-castigao-descontrolao', 'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date': '2026-04-18', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 18 de Abril, 2026 8:00 PM  12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260406T194851', 'session': '2026_04_06_19_42_Lunes', 'image': '/home/ubuntu/work/event_flask_app/static/img/121d3133.jpg', 'url': 'https://entradasemma.azurewebsites.net/'}
+--------------------
+{'id': '2aca57ab', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': '¡corten! Una Comedia De Cine', 'slug': 'corten-una-comedia-de-cine', 'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date': '2026-04-25', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 25 de Abril, 2026 8:00 PM  12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260406T194851', 'session': '2026_04_06_19_42_Lunes', 'image': '/home/ubuntu/work/event_flask_app/static/img/d6c2985f.jpg', 'url': 'https://entradasemma.azurewebsites.net/'}
+--------------------
+{'id': '7dd44536', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Manolo Lera', 'slug': 'manolo-lera', 'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date': '2026-04-11', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 11 de Abril, 2026 8:00 PM  12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260406T194851', 'session': '2026_04_06_19_42_Lunes', 'image': '/home/ubuntu/work/event_flask_app/static/img/872e3676.jpg', 'url': 'https://entradasemma.azurewebsites.net/'}
+--------------------
+{'id': '1d66e66d', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Alvarito', 'slug': 'alvarito', 'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date': '2026-06-06', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 6 de Junio, 2026 8:00 PM  12.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260406T194851', 'session': '2026_04_06_19_42_Lunes', 'image': '/home/ubuntu/work/event_flask_app/static/img/f8efa86c.jpg', 'url': 'https://entradasemma.azurewebsites.net/'}
+--------------------
+{'id': '0081e43b', 'show': 1, 'in_city': 1, 'one_day': 1, 'wrong_date_time': 0, 'event': 'Pepe El Caja', 'slug': 'pepe-el-caja', 'category': '__NOT_DEFINIED__', 'id_venue': '7qHRF9LM', 'venue': 'Sala EMMA', 'std_venue': 'Sala Escuela Municipal de Música & Artes', 'start_date': '2026-05-23', 'start_time': '20:00:00', 'end_date': '__NOT_FOUND__', 'end_time': '__NOT_FOUND__', 'description': 'Sábado, 23 de Mayo, 2026 8:00 PM  15.00 €', 'others': {}, 'source': 'SalaEmma', 'exec_time': '20260406T194851', 'session': '2026_04_06_19_42_Lunes', 'image': '/home/ubuntu/work/event_flask_app/static/img/57baa74f.jpg', 'url': 'https://entradasemma.azurewebsites.net/'}
+Checking unique event dict.
+Reading /home/ubuntu/data_storage/Almeria/00_master/master_events.json...
+*******
+[('Rafa Tornado Punkústico', 'Sala EMMA', '2026-03-15', '17:00:00'), ('Una De Imrpo! Dela Mujer', 'Sala EMMA', '2026-03-26', '21:00:00'), ('¡corten! Una Comedia De Cine', 'Sala EMMA', '2026-04-25', '20:00:00'), ('Melocotón en Almíbar', 'Sala EMMA', '2026-05-09', '20:00:00'), ('Kikín Fernández Y Fernando Labordeta', 'Sala EMMA', '2026-05-16', '20:00:00'), ('Menos Es Más', 'Sala EMMA', '2026-05-22', '20:00:00'), ('Pepe El Caja', 'Sala EMMA', '2026-05-23', '20:00:00'), ('Alvarito', 'Sala EMMA', '2026-06-06', '20:00:00'), ('Humor De Casados (Mariano Ypunto Y La Nena)', 'Sala EMMA', '2026-06-13', '20:00:00')]
+('Melocotón en Almíbar', 'Sala EMMA', '2026-05-09', '20:00:00')
+('El Mentalista Canalla', 'Sala EMMA', '2026-04-24', '20:00:00')
+('Kikín Fernández Y Fernando Labordeta', 'Sala EMMA', '2026-05-16', '20:00:00')
+('Menos Es Más (Alumnos Emma)', 'Sala EMMA', '2026-05-22', '20:00:00')
+('Menos Es Más', 'Sala EMMA', '2026-05-22', '20:00:00')
+('Humor De Casados (Mariano Ypunto Y La Nena)', 'Sala EMMA', '2026-06-13', '20:00:00')
+('Victor Castigao Descontrolao', 'Sala EMMA', '2026-04-18', '20:00:00')
+('¡corten! Una Comedia De Cine', 'Sala EMMA', '2026-04-25', '20:00:00')
+('Manolo Lera', 'Sala EMMA', '2026-04-11', '20:00:00')
+('Alvarito', 'Sala EMMA', '2026-06-06', '20:00:00')
+('Pepe El Caja', 'Sala EMMA', '2026-05-23', '20:00:00')
+****************************
+Saving 4 new events
+Saving in  /home/ubuntu/data_storage/Almeria/2026_04_06_19_42_Lunes/0_raw/20260406_1948_SalaEmma.json
+Saving 4 master url
+Appending to  /home/ubuntu/data_storage/Almeria/00_master/master_url.json
