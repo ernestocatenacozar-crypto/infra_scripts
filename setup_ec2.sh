@@ -56,3 +56,9 @@ echo "Luego verifica GitHub con: ssh -T git@github.com"
 
 git config --global user.name "Ernesto Catena"
 git config --global user.email "ernestocatenacozar@gmail.com"
+
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
