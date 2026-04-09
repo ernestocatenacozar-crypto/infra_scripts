@@ -53,3 +53,6 @@ echo "Git: $(git --version)"
 echo ""
 echo "IMPORTANTE: Cierra sesión y vuelve a entrar para que el grupo docker aplique."
 echo "Luego verifica GitHub con: ssh -T git@github.com"
+
+git config --global user.name "Ernesto Catena"
+git config --global user.email "ernestocatenacozar@gmail.com"

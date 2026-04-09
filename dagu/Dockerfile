@@ -1,13 +1,37 @@
-FROM ghcr.io/dagu-org/dagu:latest
+FROM debian:bookworm-slim
 
-USER root
+ENV DAGU_VERSION=2.4.3
+ENV DAGU_HOME=/var/lib/dagu
 
-# Install docker CLI for running ephemeral containers from DAG steps.
-# Also align docker group id with host docker.sock group (typically 988).
+# Create dagu user and group
+RUN groupadd -r dagu && useradd -r -g dagu -d ${DAGU_HOME} -s /bin/sh dagu
+
+# Install dependencies + docker CLI, align docker group GID with host (988)
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends docker.io \
+  && apt-get install -y --no-install-recommends \
+       curl ca-certificates docker.io \
   && rm -rf /var/lib/apt/lists/* \
   && if getent group docker >/dev/null; then groupmod -g 988 docker; else groupadd -g 988 docker; fi \
   && usermod -aG docker dagu
 
-# Leave user as root so entrypoint can manage users/groups.
+# Download and install dagu binary
+RUN curl -fsSL "https://github.com/dagu-org/dagu/releases/download/v${DAGU_VERSION}/dagu_${DAGU_VERSION}_linux_amd64.tar.gz" \
+    | tar -xz -C /usr/local/bin dagu \
+  && chmod +x /usr/local/bin/dagu
+
+# Create data directories
+RUN mkdir -p \
+      ${DAGU_HOME}/dags \
+      ${DAGU_HOME}/configs \
+      ${DAGU_HOME}/data \
+      ${DAGU_HOME}/logs \
+      ${DAGU_HOME}/suspend \
+  && chown -R dagu:dagu ${DAGU_HOME}
+
+EXPOSE 6806
+
+# Run as root so the entrypoint can write to host-mounted volumes
+USER root
+
+ENTRYPOINT ["/usr/local/bin/dagu"]
+CMD ["start-all"]
