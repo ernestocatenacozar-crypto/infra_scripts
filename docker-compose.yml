@@ -47,6 +47,8 @@ services:
       TZ: Europe/Madrid
       PYTHONPATH: /app:/deps/fisgon
       DATA_STORAGE_PATH: /home/ubuntu/data_storage/
+      FLASK_APP_ENV: ec2
+      DATA_STORAGE_PATH_EC2: /home/ubuntu/data_storage/
     ports:
       - "5002:5002"
     volumes:
