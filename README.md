@@ -1,13 +1,13 @@
 # EC2 Service Endpoints
 
 ## Dagu
-http://34.251.251.161:3012
+http://108.129.244.84:3012
 
 ## Selenium (noVNC)
-http://34.251.251.161:7900
+http://108.129.244.84:7900
 
 ## FlaskRefinement
-http://34.251.251.161:5002
+http://108.129.244.84:5002
 
 ## FlaskFrontend
-http://34.251.251.161:5000
+http://108.129.244.84:5000
