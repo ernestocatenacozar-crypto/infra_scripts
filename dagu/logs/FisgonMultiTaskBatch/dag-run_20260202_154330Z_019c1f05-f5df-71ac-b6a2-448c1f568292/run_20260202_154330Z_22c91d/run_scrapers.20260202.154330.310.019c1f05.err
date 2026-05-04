@@ -1,6 +1,0 @@
-bash: /root/.bash_profile: Permission denied
-WARNING: Error loading config file: open /root/.docker/config.json: permission denied
-Traceback (most recent call last):
-  File "/app/run.py", line 109, in <module>
-    raise ValueError(
-ValueError: Scraper 'LaGuajira,ClassicJazz' not found. Available: ['AlmeriaCiudad', 'AlmeriaTurismo', 'JuntaAndaluciaAgenda', 'KuverProducciones', 'LaVozAgenda', 'SalaBerlin', 'LaGuajira', 'ClassicJazz', 'ConciertosClub', 'FlowteCineClub', 'FlowteTaquillaCultural', 'LaPlaza', 'Entradium', 'TodasLasEntradas', 'RedBibliotecas', 'SalaEmma', 'JacksonLive', 'Giglon']

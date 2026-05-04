@@ -20,6 +20,7 @@ services:
     ports:
       - "3012:6806"
     volumes:
+      - ./dagu/base.yaml:/var/lib/dagu/base.yaml
       - ./dagu/dags:/var/lib/dagu/dags
       - ./dagu/configs:/var/lib/dagu/configs
       - ./dagu/data:/var/lib/dagu/data
@@ -31,6 +32,7 @@ services:
     environment:
       - DAGU_HOST=0.0.0.0
       - DAGU_PORT=6806
+      - DAGU_AUTH_MODE=none
       - TZ=Europe/Madrid
       - BUNNY_STORAGE_API_KEY=${BUNNY_STORAGE_API_KEY}
       - BUNNY_STORAGE_ZONE=${BUNNY_STORAGE_ZONE}
