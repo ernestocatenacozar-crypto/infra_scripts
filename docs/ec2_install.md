@@ -24,6 +24,14 @@ Crea un Security Group dedicado para la instancia, por ejemplo `orbitando-ec2`, 
 | `-` | `IPv4` | `TCP personalizado` | `TCP` | `7900` | `0.0.0.0/0` | `Selenium` |
 | `-` | `IPv4` | `TCP personalizado` | `TCP` | `5000` | `0.0.0.0/0` | `FlaskFront` |
 
+Captura de reglas de entrada:
+
+![Reglas de entrada del Security Group](./images/security_group_inbound.png)
+
+Captura de reglas de salida:
+
+![Reglas de salida del Security Group](./images/security_group_outbound.png)
+
 Notas:
 
 - Esta tabla refleja literalmente la configuracion de tu captura y sirve como checklist de lo que tienes que meter en AWS.
