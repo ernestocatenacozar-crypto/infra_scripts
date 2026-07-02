@@ -3,6 +3,14 @@ params:
   - TARGET_CITY: ""
   - TARGET_SCRAPER: ""
 
+env:
+  - HOST_FISGON_PATH: ${HOST_FISGON_PATH}
+  - HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
+  - DATABASE_PATH: ${DATABASE_PATH}
+  - HOST_REFINEMENT_PORTAL_PATH: ${HOST_REFINEMENT_PORTAL_PATH}
+  - FISGON_SCRAPER_IMAGE: ${FISGON_SCRAPER_IMAGE}
+  - DAGU_BASE_URL: ${DAGU_BASE_URL}
+
 steps:
   - name: "tarea_1"
     command: >
@@ -12,6 +20,8 @@ steps:
       cleanup() { docker rm -f "$SELENIUM_NAME" >/dev/null 2>&1 || true; };
       trap cleanup EXIT;
       docker run -d --rm --name "$SELENIUM_NAME"
+      -p 4444:4444
+      -p 7900:7900
       --shm-size=2g
       -e SE_NODE_MAX_SESSIONS=1
       -e SE_NODE_OVERRIDE_MAX_SESSIONS=true
@@ -19,18 +29,22 @@ steps:
       docker exec "$SELENIUM_NAME" bash -c "for i in \$(seq 1 60); do (echo > /dev/tcp/127.0.0.1/4444) >/dev/null 2>&1 && exit 0; sleep 1; done; exit 1";
       docker run --rm
       --network container:"$SELENIUM_NAME"
-      -v /home/ubuntu/work/fisgon:/app
-      -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
-      -v /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_flask_app/static/img
+      -v "$HOST_FISGON_PATH:/app"
+      -v "$HOST_DATA_STORAGE_PATH:$HOST_DATA_STORAGE_PATH"
+      -v "$HOST_REFINEMENT_PORTAL_PATH:$HOST_REFINEMENT_PORTAL_PATH"
       -w /app
       -e OPERATION=0
       -e DOCKER_CONFIG=/tmp/.docker
       -e HOME=/tmp
+      -e HOST_DATA_STORAGE_PATH
+      -e DATABASE_PATH
+      -e HOST_REFINEMENT_PORTAL_PATH
+      -e SELENIUM_URL="http://127.0.0.1:4444/wd/hub"
       -e TARGET_CITY
       -e TARGET_SCRAPER
       -e DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
       -e DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=local&step=tarea_1&dagRunId=${DAG_RUN_ID}"
-      fisgon_scraper:1.0'
+      "$FISGON_SCRAPER_IMAGE"'
 
 
 

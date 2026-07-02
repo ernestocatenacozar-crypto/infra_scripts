@@ -6,35 +6,48 @@ params:
 
 env:
   TARGET_CITY: ${TARGET_CITY}
+  HOST_FISGON_PATH: ${HOST_FISGON_PATH}
+  HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
+  DATABASE_PATH: ${DATABASE_PATH}
+  HOST_REFINEMENT_PORTAL_PATH: ${HOST_REFINEMENT_PORTAL_PATH}
+  FISGON_SCRAPER_IMAGE: ${FISGON_SCRAPER_IMAGE}
   DAGU_BASE_URL: ${DAGU_BASE_URL}
 
 steps:
 
   - name: "open_session"
+    id: open_session
     command: >
       env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
-      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="1" CLOSE_SESSION="" DAGU_BASE_URL="$DAGU_BASE_URL"'
+      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="1" CLOSE_SESSION="0"'
 
   - name: "lanzar_scraper"
+    id: lanzar_scraper
+    depends: open_session
     command: >
       bash -lc 'docker run --rm
       --network host
-      -v /home/ubuntu/work/fisgon:/app
-      -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
-      -v /home/ubuntu/work/event_flask_app/static/img:/home/ubuntu/work/event_flask_app/static/img
+      -v "$HOST_FISGON_PATH:/app"
+      -v "$HOST_DATA_STORAGE_PATH:$HOST_DATA_STORAGE_PATH"
+      -v "$HOST_REFINEMENT_PORTAL_PATH:$HOST_REFINEMENT_PORTAL_PATH"
       -w /app
       -e OPERATION=0
       -e DOCKER_CONFIG=/tmp/.docker
       -e HOME=/tmp
+      -e HOST_DATA_STORAGE_PATH
+      -e DATABASE_PATH
+      -e HOST_REFINEMENT_PORTAL_PATH
       -e TARGET_CITY
       -e TARGET_SCRAPER
       -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
       -e DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&step=tarea_1&dagRunId=${DAG_RUN_ID}"
-      fisgon_scraper:1.0;
+      "$FISGON_SCRAPER_IMAGE";
       rc=$?;
       exit $rc'
 
   - name: "close_session"
+    id: close_session
+    depends: lanzar_scraper
     command: >
       env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
-      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="" CLOSE_SESSION="1" DAGU_BASE_URL="$DAGU_BASE_URL"'
+      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="0" CLOSE_SESSION="1"'

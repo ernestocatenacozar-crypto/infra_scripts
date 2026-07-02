@@ -8,16 +8,24 @@ env:
   TARGET_CITY: ${TARGET_CITY}
   SCRAPERS_REQUEST: ${SCRAPERS_REQUEST}
   SCRAPERS_SELENIUM: ${SCRAPERS_SELENIUM}
+  HOST_FISGON_PATH: ${HOST_FISGON_PATH}
+  HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
+  DATABASE_PATH: ${DATABASE_PATH}
+  HOST_REFINEMENT_PORTAL_PATH: ${HOST_REFINEMENT_PORTAL_PATH}
+  FISGON_SCRAPER_IMAGE: ${FISGON_SCRAPER_IMAGE}
   DAGU_BASE_URL: ${DAGU_BASE_URL}
 
 steps:
 
   - name: "open_session"
+    id: open_session
     command: >
       env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
-      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="1" CLOSE_SESSION="" DAGU_BASE_URL="$DAGU_BASE_URL"'
+      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="1" CLOSE_SESSION="0"'
 
   - name: "launch_children_request"
+    id: launch_children_request
+    depends: open_session
     command: >
       env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$SCRAPERS_REQUEST";
       for s in "${SCRAPERS[@]}"; do
@@ -25,12 +33,14 @@ steps:
       [ -z "$s" ] && continue;
       echo "Launching scraper: $s";
       /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonTaskRequest.yml -- \
-      TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL" || true;
+      TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" || true;
       done'
-    continueOn:
+    continue_on:
       failure: true
 
   - name: "launch_children_selenium"
+    id: launch_children_selenium
+    depends: launch_children_request
     command: >
       env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$SCRAPERS_SELENIUM";
       for s in "${SCRAPERS[@]}"; do
@@ -38,12 +48,14 @@ steps:
       [ -z "$s" ] && continue;
       echo "Launching scraper: $s";
       /usr/local/bin/dagu start /var/lib/dagu/dags/FisgonTaskSelenium.yml -- \
-      TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" DAGU_BASE_URL="$DAGU_BASE_URL" || true;
+      TARGET_CITY="$TARGET_CITY" TARGET_SCRAPER="$s" || true;
       done'
-    continueOn:
+    continue_on:
       failure: true
 
   - name: "close_session"
+    id: close_session
+    depends: launch_children_selenium
     command: >
       env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
-      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="" CLOSE_SESSION="1" DAGU_BASE_URL="$DAGU_BASE_URL"'
+      TARGET_CITY="$TARGET_CITY" CREATE_SESSION="0" CLOSE_SESSION="1"'

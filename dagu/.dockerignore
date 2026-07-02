@@ -1,0 +1,11 @@
+# Dagu runtime/state
+data/
+logs/
+suspend/
+
+# Dagu UI/generated content
+dags/.dag.index
+dags/docs/
+dags/memory/
+dags/skills/
+dags/souls/.examples-created
