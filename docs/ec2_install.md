@@ -73,7 +73,12 @@ cp .env.example .env
 Despues:
 
 1. Anade la clave publica generada en GitHub.
-2. Clona este repo y los repos que usa el stack.
+2. Verifica la conexion SSH con GitHub:
+
+```bash
+ssh -T git@github.com
+```
+
 3. Clona los repos dependientes del stack:
 
 ```bash
