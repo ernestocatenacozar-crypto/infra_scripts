@@ -19,7 +19,7 @@ REPO_CLONES=(
   "git@github.com:ernestocatenacozar-crypto/fisgon.git|${HOST_FISGON_PATH}"
   "git@github.com:ernestocatenacozar-crypto/refinement_portal.git|${HOST_REFINEMENT_PORTAL_PATH}"
   "git@github.com:ernestocatenacozar-crypto/frontend_build_orbitando.git|${HOST_FRONTEND_PATH}"
-  "git@github.com:ernestocatenacozar-crypto/frontend_build_orbitando.git|${HOST_INFRA_PATH}"
+  "git@github.com:ernestocatenacozar-crypto/infra_sccript.git|${HOST_INFRA_PATH}"
 )
 
 
