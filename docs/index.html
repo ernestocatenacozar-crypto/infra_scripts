@@ -6,6 +6,7 @@
   <title>Orbitando Infra Endpoints</title>
   <style>
     :root {
+      color-scheme: light;
       --bg: #f4f1ea;
       --panel: #fffdf8;
       --ink: #1f2937;
@@ -16,9 +17,7 @@
       --shadow: 0 18px 40px rgba(31, 41, 55, 0.12);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -36,6 +35,10 @@
       padding: 48px 20px 64px;
     }
 
+    .hero {
+      margin-bottom: 28px;
+    }
+
     h1 {
       margin: 0 0 10px;
       font-size: clamp(2rem, 5vw, 3.4rem);
@@ -43,10 +46,10 @@
     }
 
     .subtitle {
-      margin: 0 0 28px;
+      margin: 0;
+      max-width: 56ch;
       color: var(--muted);
       font-size: 1.05rem;
-      max-width: 56ch;
     }
 
     .grid {
@@ -82,46 +85,65 @@
       text-align: center;
       text-decoration: none;
       font-weight: 700;
-      color: #fff;
+      color: #ffffff;
       background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
       box-shadow: 0 10px 24px rgba(15, 118, 110, 0.22);
     }
 
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     code {
-      font-family: Consolas, monospace;
+      font-family: "SFMono-Regular", Consolas, monospace;
     }
   </style>
 </head>
 <body>
   <main>
-    <h1>Orbitando Infra</h1>
-    <p class="subtitle">Accesos directos a los servicios publicados en la instancia actual.</p>
+    <section class="hero">
+      <h1>Orbitando Infra</h1>
+      <p class="subtitle">
+        Accesos directos a los servicios publicados en la instancia EC2 actual.
+      </p>
+    </section>
 
     <section class="grid">
       <article class="card">
         <h2>Dagu</h2>
-        <p><code>http://54.246.4.182:3013</code></p>
-        <a class="button" href="http://54.246.4.182:3013" target="_blank" rel="noreferrer">Abrir Dagu</a>
+        <p><code>http://108.129.116.18:3013</code></p>
+        <a class="button" href="http://108.129.116.18:3013" target="_blank" rel="noreferrer">Abrir Dagu</a>
       </article>
 
       <article class="card">
         <h2>Selenium (noVNC)</h2>
-        <p><code>http://54.246.4.182:7900</code></p>
-        <a class="button" href="http://54.246.4.182:7900" target="_blank" rel="noreferrer">Abrir noVNC</a>
+        <p><code>http://108.129.116.18:7900</code></p>
+        <a class="button" href="http://108.129.116.18:7900" target="_blank" rel="noreferrer">Abrir noVNC</a>
       </article>
 
       <article class="card">
         <h2>Refinement Portal</h2>
-        <p><code>http://54.246.4.182:5002</code></p>
-        <a class="button" href="http://54.246.4.182:5002" target="_blank" rel="noreferrer">Abrir Portal</a>
+        <p><code>http://108.129.116.18:5002</code></p>
+        <a class="button" href="http://108.129.116.18:5002" target="_blank" rel="noreferrer">Abrir Portal</a>
       </article>
 
       <article class="card">
         <h2>Frontend</h2>
-        <p><code>http://54.246.4.182:5000</code></p>
-        <a class="button" href="http://54.246.4.182:5000" target="_blank" rel="noreferrer">Abrir Frontend</a>
+        <p><code>http://108.129.116.18:5000</code></p>
+        <a class="button" href="http://108.129.116.18:5000" target="_blank" rel="noreferrer">Abrir Frontend</a>
       </article>
     </section>
+
+    <footer>
+      Esta pagina se genera automaticamente desde <code>update_endpoints.sh</code>.
+    </footer>
   </main>
 </body>
 </html>

@@ -1,13 +1,13 @@
 # EC2 Service Endpoints
 
-## Frontend
-http://54.246.4.182:5002
-
-## DAGU
-http://54.246.4.182:3012
+## Dagu
+http://108.129.116.18:3013
 
 ## Selenium (noVNC)
-http://54.246.4.182:7900
+http://108.129.116.18:7900
 
 ## RefinementPortal
-http://54.246.4.182:5002
+http://108.129.116.18:5002
+
+## Frontend
+http://108.129.116.18:5000
