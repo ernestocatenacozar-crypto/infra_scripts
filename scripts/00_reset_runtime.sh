@@ -30,8 +30,13 @@ log() {
 clear_dir() {
   local target_dir="$1"
 
-  mkdir -p "${target_dir}"
-  find "${target_dir}" -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +
+  if ! mkdir -p "${target_dir}" 2>/dev/null; then
+    sudo mkdir -p "${target_dir}"
+  fi
+
+  if ! find "${target_dir}" -mindepth 1 -maxdepth 1 -exec rm -rf -- {} + 2>/dev/null; then
+    sudo find "${target_dir}" -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +
+  fi
 }
 
 remove_image_if_present() {
