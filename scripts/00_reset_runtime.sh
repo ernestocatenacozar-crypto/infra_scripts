@@ -49,6 +49,22 @@ remove_image_if_present() {
   fi
 }
 
+check_http_endpoint() {
+  local service_name="$1"
+  local url="$2"
+  local expected_pattern="$3"
+  local http_code=""
+
+  http_code="$(curl -L -sS -o /dev/null -w "%{http_code}" "${url}" || true)"
+  if printf '%s\n' "${http_code}" | grep -Eq "${expected_pattern}"; then
+    printf '[OK] %s -> %s (%s)\n' "${service_name}" "${url}" "${http_code}"
+    return 0
+  fi
+
+  printf '[FAIL] %s -> %s (codigo=%s)\n' "${service_name}" "${url}" "${http_code:-000}" >&2
+  return 1
+}
+
 reset_stack() {
   log "1. PARANDO STACK"
   docker compose -f "${REPO_ROOT}/docker-compose.yml" down --remove-orphans
@@ -82,8 +98,23 @@ rebuild_and_start() {
   docker compose -f "${REPO_ROOT}/docker-compose.yml" up -d
 }
 
+verify_exposed_endpoints() {
+  local failures=0
+
+  log "6. COMPROBANDO ENDPOINTS"
+
+  check_http_endpoint "frontend" "http://localhost:${FRONTEND_PORT}/${ORBITA_CITY}/" '^200$' || failures=1
+  check_http_endpoint "refinement_portal" "http://localhost:${REFINEMENT_PORTAL_PORT}/health" '^200$' || failures=1
+  check_http_endpoint "dagu" "http://localhost:${DAGU_HOST_PORT}/" '^(200|301|302|303|307|308)$' || failures=1
+
+  if [ "${failures}" -ne 0 ]; then
+    echo "Uno o mas endpoints expuestos no han pasado la comprobacion." >&2
+    return 1
+  fi
+}
+
 print_summary() {
-  log "6. RESET COMPLETADO"
+  log "7. RESET COMPLETADO"
   docker compose -f "${REPO_ROOT}/docker-compose.yml" ps
 }
 
@@ -92,6 +123,7 @@ main() {
   reset_docker_state
   reset_storage
   rebuild_and_start
+  verify_exposed_endpoints
   print_summary
 }
 
