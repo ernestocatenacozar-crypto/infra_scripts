@@ -37,7 +37,7 @@ Notas:
 - Esta tabla refleja literalmente la configuracion de tu captura y sirve como checklist de lo que tienes que meter en AWS.
 - Evita `0.0.0.0/0` en `22`, `7900` y `3012` salvo que sea imprescindible.
 - Si vas a usar Selenium remoto por WebDriver desde fuera de la EC2, tendras que abrir tambien el puerto `4444/TCP`.
-- El puerto externo de Dagu depende de `DAGU_HOST_PORT` en `.env`. En `.env.example` aparece `3013`, pero en tu despliegue actual la referencia visible es `3012`. El Security Group y `.env` tienen que usar el mismo valor.
+- El puerto externo de Dagu debe mantenerse alineado entre `.env`, `docker compose` y el Security Group. En esta configuracion se usa `3012`.
 
 ## Mapeo de puertos del stack
 
@@ -47,7 +47,7 @@ Este es el mapeo relevante del `docker-compose.yml`:
 | --- | --- | --- | --- |
 | `frontend` | `5000` | `5000` | `FRONTEND_PORT` |
 | `refinement_portal` | `5002` | `5002` | `REFINEMENT_PORTAL_PORT` |
-| `dagu` | `3012` o `3013` | `6806` | `DAGU_HOST_PORT` |
+| `dagu` | `3012` | `6806` | `DAGU_HOST_PORT` |
 | `selenium` | `7900` | `7900` | `SELENIUM_VNC_PORT` |
 | `selenium` | `4444` | `4444` | `SELENIUM_PORT` |
 
