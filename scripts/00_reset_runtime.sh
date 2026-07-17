@@ -27,6 +27,21 @@ log() {
   printf '=========================================\n'
 }
 
+require_doppler() {
+  if ! command -v doppler >/dev/null 2>&1; then
+    echo "Doppler CLI no esta instalado. Ejecuta ./scripts/01_setup_docker_doppler.sh primero." >&2
+    exit 1
+  fi
+
+  if ! doppler configure get token >/dev/null 2>&1; then
+    echo "No hay token de Doppler configurado." >&2
+    echo 'Configuralo antes de levantar compose:' >&2
+    echo '  export DOPPLER_TOKEN="dp.st.xxxxx"' >&2
+    echo '  doppler configure set token "$DOPPLER_TOKEN"' >&2
+    exit 1
+  fi
+}
+
 clear_dir() {
   local target_dir="$1"
 
@@ -67,7 +82,7 @@ check_http_endpoint() {
 
 reset_stack() {
   log "1. PARANDO STACK"
-  docker compose -f "${REPO_ROOT}/docker-compose.yml" down --remove-orphans
+  doppler run -- docker compose -f "${REPO_ROOT}/docker-compose.yml" down --remove-orphans
 }
 
 reset_docker_state() {
@@ -95,7 +110,7 @@ rebuild_and_start() {
   "${REPO_ROOT}/scripts/06_setup_docker_images.sh"
 
   log "5. LEVANTANDO STACK"
-  docker compose -f "${REPO_ROOT}/docker-compose.yml" up -d
+  doppler run -- docker compose -f "${REPO_ROOT}/docker-compose.yml" up -d
 }
 
 verify_exposed_endpoints() {
@@ -115,10 +130,11 @@ verify_exposed_endpoints() {
 
 print_summary() {
   log "7. RESET COMPLETADO"
-  docker compose -f "${REPO_ROOT}/docker-compose.yml" ps
+  doppler run -- docker compose -f "${REPO_ROOT}/docker-compose.yml" ps
 }
 
 main() {
+  require_doppler
   reset_stack
   reset_docker_state
   reset_storage
