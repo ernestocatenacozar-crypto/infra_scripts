@@ -62,14 +62,34 @@ install_docker_packages() {
   sudo usermod -aG docker "${TARGET_USER}"
 }
 
+install_doppler_cli() {
+  log "4. INSTALANDO DOPPLER CLI"
+  sudo install -m 0755 -d /etc/apt/keyrings
+
+  curl -sLf --retry 3 --tlsv1.2 --proto "=https" \
+    "https://packages.doppler.com/public/cli/gpg.DE2A7741A397C129.key" \
+    | sudo gpg --dearmor -o /etc/apt/keyrings/doppler.gpg
+
+  echo "deb [signed-by=/etc/apt/keyrings/doppler.gpg] https://packages.doppler.com/public/cli/deb/debian any-version main" \
+    | sudo tee /etc/apt/sources.list.d/doppler-cli.list >/dev/null
+
+  sudo apt-get update
+  sudo apt-get install -y doppler
+}
+
 print_summary() {
-  log "4. VERIFICACION"
+  log "5. VERIFICACION"
   echo "Docker: $(docker --version)"
   echo "Docker Compose: $(docker compose version)"
+  echo "Doppler: $(doppler --version)"
   echo "Git: $(git --version)"
   echo
   echo "Usuario objetivo para el grupo docker: ${TARGET_USER}"
   echo "Home detectado: ${TARGET_HOME}"
+  echo
+  echo "Configurar token de Doppler antes de lanzar compose:"
+  echo '  export DOPPLER_TOKEN="dp.st.xxxxx"'
+  echo '  doppler configure set token "$DOPPLER_TOKEN"'
   echo
   echo "Siguiente paso:"
   echo "  1. Cierra sesion y vuelve a entrar para aplicar el grupo docker."
@@ -83,6 +103,7 @@ main() {
   install_base_packages
   install_docker_repo
   install_docker_packages
+  install_doppler_cli
   print_summary
 }
 
