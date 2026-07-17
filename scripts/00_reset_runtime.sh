@@ -134,6 +134,7 @@ print_summary() {
 }
 
 main() {
+  cd "${REPO_ROOT}"
   require_doppler
   reset_stack
   reset_docker_state

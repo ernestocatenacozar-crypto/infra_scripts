@@ -56,6 +56,7 @@ print_summary() {
 }
 
 main() {
+  cd "${REPO_ROOT}"
   require_env_file
   require_doppler
   check_doppler_token
