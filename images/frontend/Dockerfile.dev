@@ -18,4 +18,5 @@ RUN python3 -m pip install --no-cache-dir --break-system-packages -r requirement
 
 EXPOSE 5000
 
+# The repo is mounted at runtime (docker-compose). Keep a shell CMD so it works with the bind mount.
 CMD ["sh", "scripts/docker_dev_entrypoint.sh"]

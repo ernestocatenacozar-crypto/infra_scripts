@@ -16,6 +16,8 @@ services:
 
   dagu:
     image: ${DAGU_IMAGE}
+    env_file:
+      - .env
     restart: unless-stopped
     ports:
       - "${DAGU_HOST_PORT}:6806"
@@ -38,7 +40,9 @@ services:
       BUNNY_STORAGE_ZONE: ${BUNNY_STORAGE_ZONE}
       BUNNY_PULL_ZONE_ID: ${BUNNY_PULL_ZONE_ID}
       BUNNY_ACCOUNT_API_KEY: ${BUNNY_ACCOUNT_API_KEY}
-      BREVO_API_KEY: ${BREVO_API_KEY}
+      BREVO_API_KEY: ${BREVO_API_KEY:-}
+      BREVO_SENDER_EMAIL: ${BREVO_SENDER_EMAIL:-}
+      BREVO_SENDER_NAME: ${BREVO_SENDER_NAME:-}
       BASE_URL: ${BASE_URL}
       DAGU_BASE_URL: ${DAGU_BASE_URL}
       HOST_FISGON_PATH: ${HOST_FISGON_PATH}
@@ -76,6 +80,10 @@ services:
 
   frontend:
     image: ${FRONTEND_IMAGE}
+    build:
+      context: ${HOST_FRONTEND_PATH}
+      dockerfile: ${HOST_INFRA_PATH}/images/frontend/Dockerfile.dev
+    user: "${UID:-1000}:${GID:-1000}"
     restart: unless-stopped
     environment:
       ORBITA_CITY: ${ORBITA_CITY}
@@ -94,6 +102,10 @@ services:
 
   frontend_build:
     image: ${FRONTEND_BUILD_IMAGE}
+    build:
+      context: ${HOST_FRONTEND_PATH}
+      dockerfile: ${HOST_INFRA_PATH}/images/frontend/Dockerfile.static
+    user: "${UID:-1000}:${GID:-1000}"
     profiles:
       - build
     restart: "no"
@@ -107,6 +119,61 @@ services:
       - frontend_node_modules:${CONTAINER_FRONTEND_NODE_MODULES_PATH}
       - ${HOST_FRONTEND_DIST_PATH}:${CONTAINER_APP_ROOT_BUILD}
       - ${HOST_DATA_STORAGE_PATH}:${HOST_DATA_STORAGE_PATH}
+
+  newsletter_sync:
+    image: ${FRONTEND_IMAGE}
+    build:
+      context: ${HOST_FRONTEND_PATH}
+      dockerfile: ${HOST_INFRA_PATH}/images/frontend/Dockerfile.dev
+    user: "${UID:-1000}:${GID:-1000}"
+    profiles:
+      - newsletter
+    restart: "no"
+    environment:
+      ORBITA_CITY: ${ORBITA_CITY}
+      HOST_FRONTEND_PATH: ${HOST_FRONTEND_PATH}
+      HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
+      BREVO_API_KEY: ${BREVO_API_KEY:-}
+      BREVO_LIST_ID: ${BREVO_LIST_ID:-}
+      BREVO_MODIFIED_SINCE: ${BREVO_MODIFIED_SINCE:-}
+    volumes:
+      - ${HOST_FRONTEND_PATH}:${CONTAINER_APP_ROOT_FRONTEND}
+      - ${HOST_FRONTEND_PATH}:${HOST_FRONTEND_PATH}
+      - frontend_node_modules:${CONTAINER_FRONTEND_NODE_MODULES_PATH}
+      - ${HOST_DATA_STORAGE_PATH}:${HOST_DATA_STORAGE_PATH}
+    entrypoint: ["python3", "scripts/newsletter/sync_timeline_variants.py"]
+
+  newsletter_push:
+    image: ${FRONTEND_IMAGE}
+    build:
+      context: ${HOST_FRONTEND_PATH}
+      dockerfile: ${HOST_INFRA_PATH}/images/frontend/Dockerfile.dev
+    user: "${UID:-1000}:${GID:-1000}"
+    profiles:
+      - newsletter
+    restart: "no"
+    environment:
+      ORBITA_CITY: ${ORBITA_CITY}
+      HOST_FRONTEND_PATH: ${HOST_FRONTEND_PATH}
+      HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
+      BREVO_API_KEY: ${BREVO_API_KEY:-}
+      BREVO_SENDER_ID: ${BREVO_SENDER_ID:-}
+      BREVO_SENDER_EMAIL: ${BREVO_SENDER_EMAIL:-}
+      BREVO_SENDER_NAME: ${BREVO_SENDER_NAME:-}
+      BREVO_SUBJECT: ${BREVO_SUBJECT:-}
+      BREVO_CAMPAIGN_NAME: ${BREVO_CAMPAIGN_NAME:-}
+      BREVO_CAMPAIGN_ID: ${BREVO_CAMPAIGN_ID:-}
+      BREVO_PREVIEW_TEXT: ${BREVO_PREVIEW_TEXT:-}
+      BREVO_REPLY_TO: ${BREVO_REPLY_TO:-}
+      BREVO_LIST_ID: ${BREVO_LIST_ID:-}
+      BREVO_SEGMENT_IDS: ${BREVO_SEGMENT_IDS:-}
+      HTML_FILE: ${HTML_FILE:-}
+    volumes:
+      - ${HOST_FRONTEND_PATH}:${CONTAINER_APP_ROOT_FRONTEND}
+      - ${HOST_FRONTEND_PATH}:${HOST_FRONTEND_PATH}
+      - frontend_node_modules:${CONTAINER_FRONTEND_NODE_MODULES_PATH}
+      - ${HOST_DATA_STORAGE_PATH}:${HOST_DATA_STORAGE_PATH}
+    entrypoint: ["python3", "scripts/newsletter/push_to_brevo.py"]
 
 volumes:
   frontend_node_modules:

@@ -5,13 +5,5 @@
 		}
 	],
 	"settings": {
-		"workbench.colorCustomizations": {
-			"editorError.foreground": "#FF0000",
-			"editorWarning.foreground": "#FFA500",
-			"editorInfo.foreground": "#00FF00",
-			"activityBar.background": "#0A3601",
-			"titleBar.activeBackground": "#0E4B01",
-			"titleBar.activeForeground": "#EFFFEC"
-		}
 	}
 }

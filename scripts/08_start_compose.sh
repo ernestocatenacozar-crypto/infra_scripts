@@ -38,6 +38,7 @@ check_doppler_token() {
   echo '  export DOPPLER_TOKEN="dp.st.xxxxx"' >&2
   echo '  doppler configure set token "$DOPPLER_TOKEN"' >&2
   exit 1
+# doppler setup --project orbitando --config prd
 }
 
 validate_compose() {
