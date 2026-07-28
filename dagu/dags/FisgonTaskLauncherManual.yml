@@ -1,8 +1,8 @@
-name: "FisgonTaskLauncherManual"
+type: graph
 params:
-  - TARGET_CITY: "Almeria"
-    SCRAPERS_REQUEST: "KuverProducciones,SalaBerlin"
-    SCRAPERS_SELENIUM: "SalaEmma,ClassicJazz"
+  TARGET_CITY: "Almeria"
+  SCRAPERS_REQUEST: "KuverProducciones,SalaBerlin"
+  SCRAPERS_SELENIUM: "SalaEmma,ClassicJazz"
 
 env:
   TARGET_CITY: ${TARGET_CITY}
@@ -13,20 +13,19 @@ env:
   DATABASE_PATH: ${DATABASE_PATH}
   HOST_REFINEMENT_PORTAL_PATH: ${HOST_REFINEMENT_PORTAL_PATH}
   FISGON_SCRAPER_IMAGE: ${FISGON_SCRAPER_IMAGE}
-  DAGU_BASE_URL: ${DAGU_BASE_URL}
 
 steps:
 
   - name: "open_session"
     id: open_session
-    command: >
+    run: >
       env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
       TARGET_CITY="$TARGET_CITY" CREATE_SESSION="1" CLOSE_SESSION="0"'
 
   - name: "launch_children_request"
     id: launch_children_request
-    depends: open_session
-    command: >
+    depends: [open_session]
+    run: >
       env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$SCRAPERS_REQUEST";
       for s in "${SCRAPERS[@]}"; do
       s="$(echo "$s" | xargs)";
@@ -40,8 +39,8 @@ steps:
 
   - name: "launch_children_selenium"
     id: launch_children_selenium
-    depends: launch_children_request
-    command: >
+    depends: [launch_children_request]
+    run: >
       env HOME=/tmp bash -lc 'IFS="," read -ra SCRAPERS <<< "$SCRAPERS_SELENIUM";
       for s in "${SCRAPERS[@]}"; do
       s="$(echo "$s" | xargs)";
@@ -55,7 +54,7 @@ steps:
 
   - name: "close_session"
     id: close_session
-    depends: launch_children_selenium
-    command: >
+    depends: [launch_children_selenium]
+    run: >
       env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FisgonSession.yml -- \
       TARGET_CITY="$TARGET_CITY" CREATE_SESSION="0" CLOSE_SESSION="1"'

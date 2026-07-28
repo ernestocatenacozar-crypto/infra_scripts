@@ -1,22 +1,13 @@
-name: "0_NewsletterBrevo"
+type: graph
 params:
-  - TARGET_CITY: "Almeria"
-
-env:
-  TARGET_CITY: ${TARGET_CITY}
-  BREVO_API_KEY: ${BREVO_API_KEY}
-  BREVO_SENDER_EMAIL: ${BREVO_SENDER_EMAIL}
-  BREVO_SENDER_NAME: ${BREVO_SENDER_NAME}
-  HOST_FRONTEND_PATH: ${HOST_FRONTEND_PATH}
-  HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
-  FRONTEND_IMAGE: ${FRONTEND_IMAGE}
-  FRONTEND_NODE_MODULES_VOLUME: ${FRONTEND_NODE_MODULES_VOLUME}
+  TARGET_CITY: "Almeria"
 
 steps:
   - name: "generate_newsletter_html"
     id: generate_newsletter_html
-    command: >
-      env HOME=/tmp bash -lc 'set -eu;
+    run: >
+      env HOME=/tmp bash -lc 'while IFS= read -r -d "" ENV_ENTRY; do export "$ENV_ENTRY"; done < /proc/1/environ;
+      set -eu;
       IMAGE="${FRONTEND_IMAGE}";
       if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
         echo "Missing image: $IMAGE";
@@ -35,9 +26,10 @@ steps:
 
   - name: "sync_contacts"
     id: sync_contacts
-    depends: generate_newsletter_html
-    command: >
-      env HOME=/tmp bash -lc 'set -eu;
+    depends: [generate_newsletter_html]
+    run: >
+      env HOME=/tmp bash -lc 'while IFS= read -r -d "" ENV_ENTRY; do export "$ENV_ENTRY"; done < /proc/1/environ;
+      set -eu;
       IMAGE="${FRONTEND_IMAGE}";
       if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
         echo "Missing image: $IMAGE";
@@ -60,9 +52,10 @@ steps:
 
   - name: "push_to_brevo"
     id: push_to_brevo
-    depends: sync_contacts
-    command: >
-      env HOME=/tmp bash -lc 'set -eu;
+    depends: [sync_contacts]
+    run: >
+      env HOME=/tmp bash -lc 'while IFS= read -r -d "" ENV_ENTRY; do export "$ENV_ENTRY"; done < /proc/1/environ;
+      set -eu;
       IMAGE="${FRONTEND_IMAGE}";
       if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
         echo "Missing image: $IMAGE";

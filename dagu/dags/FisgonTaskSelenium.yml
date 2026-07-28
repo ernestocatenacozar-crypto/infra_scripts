@@ -1,7 +1,6 @@
-name: "FisgonTaskSelenium"
 params:
-  - TARGET_CITY: ""
-  - TARGET_SCRAPER: ""
+  TARGET_CITY: ""
+  TARGET_SCRAPER: ""
 
 env:
   - HOST_FISGON_PATH: ${HOST_FISGON_PATH}
@@ -9,11 +8,11 @@ env:
   - DATABASE_PATH: ${DATABASE_PATH}
   - HOST_REFINEMENT_PORTAL_PATH: ${HOST_REFINEMENT_PORTAL_PATH}
   - FISGON_SCRAPER_IMAGE: ${FISGON_SCRAPER_IMAGE}
-  - DAGU_BASE_URL: ${DAGU_BASE_URL}
 
 steps:
   - name: "tarea_1"
-    command: >
+    id: tarea_1
+    run: >
       bash -lc 'set -eo pipefail;
       export DOCKER_CONFIG=/tmp/.docker HOME=/tmp;
       SELENIUM_NAME="selenium_${DAG_RUN_ID:-$$}_$(date +%s)";
@@ -42,8 +41,8 @@ steps:
       -e SELENIUM_URL="http://127.0.0.1:4444/wd/hub"
       -e TARGET_CITY
       -e TARGET_SCRAPER
-      -e DAG_RUN_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
-      -e DAG_RUN_LOG_URL="${DAGU_BASE_URL:-}/dags/${DAG_NAME}/log?remoteNode=local&step=tarea_1&dagRunId=${DAG_RUN_ID}"
+      -e DAG_RUN_URL="http://localhost:3013/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+      -e DAG_RUN_LOG_URL="http://localhost:3013/dags/${DAG_NAME}/log?remoteNode=local&step=tarea_1&dagRunId=${DAG_RUN_ID}"
       "$FISGON_SCRAPER_IMAGE"'
 
 

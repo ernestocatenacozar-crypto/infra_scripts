@@ -1,13 +1,11 @@
-name: "0_FrontendBuild"
+type: graph
 params:
-  - TARGET_CITY: "Almeria"
-  - SKIP_DOWNLOAD_IMAGES: "0"
-  - CLEAN_UP: "0"
+  TARGET_CITY: "Almeria"
+  SKIP_DOWNLOAD_IMAGES: "0"
 
 env:
   TARGET_CITY: ${TARGET_CITY}
   SKIP_DOWNLOAD_IMAGES: ${SKIP_DOWNLOAD_IMAGES}
-  CLEAN_UP: ${CLEAN_UP}
   BASE_URL: ${BASE_URL}
   BUNNY_STORAGE_ZONE: ${BUNNY_STORAGE_ZONE}
   BUNNY_STORAGE_API_KEY: ${BUNNY_STORAGE_API_KEY}
@@ -24,7 +22,7 @@ env:
 steps:
   - name: "snapshot_master_events"
     id: snapshot_master_events
-    command: >
+    run: >
       env HOME=/tmp bash -lc 'set -eu;
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
       docker run --rm
@@ -55,8 +53,8 @@ steps:
 
   - name: "commit_and_push_snapshot"
     id: commit_and_push_snapshot
-    depends: snapshot_master_events
-    command: >
+    depends: [snapshot_master_events]
+    run: >
       env HOME=/tmp bash -lc 'set -eu;
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
       SNAPSHOT_PATH="data/$CITY_SLUG/master_events.json";
@@ -83,8 +81,8 @@ steps:
 
   - name: "build_frontend"
     id: build_frontend
-    depends: commit_and_push_snapshot
-    command: >
+    depends: [commit_and_push_snapshot]
+    run: >
       env HOME=/tmp bash -lc 'set -eu;
       IMAGE="${FRONTEND_BUILD_IMAGE}";
       if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
@@ -113,28 +111,10 @@ steps:
       --base-url "$BASE_URL"
       $EXTRA_ARGS'
 
-  - name: "cleanup_bunny"
-    id: cleanup_bunny
-    depends: build_frontend
-    command: >
-      env HOME=/tmp bash -lc 'set -eu;
-      if [ "${CLEAN_UP}" != "1" ]; then
-        echo "CLEAN_UP != 1, skipping cleanup";
-        exit 0;
-      fi;
-      CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
-      docker run --rm --entrypoint sh
-      -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE"
-      -e BUNNY_STORAGE_API_KEY="$BUNNY_STORAGE_API_KEY"
-      -e CITY_SLUG="$CITY_SLUG"
-      -v "$HOST_FRONTEND_DIST_PATH:/app/dist"
-      "$FRONTEND_IMAGE"
-      -c "set +e; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --delete --parallel=10 . .; bye\" || true"'
-
   - name: "upload_to_bunny"
     id: upload_to_bunny
-    depends: cleanup_bunny
-    command: >
+    depends: [build_frontend]
+    run: >
       env HOME=/tmp bash -lc 'set -eu;
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
       docker run --rm --entrypoint sh
@@ -147,8 +127,8 @@ steps:
 
   - name: "purge_bunny_cache"
     id: purge_bunny_cache
-    depends: upload_to_bunny
-    command: >
+    depends: [upload_to_bunny]
+    run: >
       env HOME=/tmp bash -lc 'set -eu;
       if [ -z "${BUNNY_PULL_ZONE_ID}" ]; then
         echo "BUNNY_PULL_ZONE_ID is not set, skipping cache purge";
