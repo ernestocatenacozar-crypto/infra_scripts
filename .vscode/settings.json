@@ -3,8 +3,8 @@
         "editorError.foreground": "#FF0000",
         "editorWarning.foreground": "#FFA500",
         "editorInfo.foreground": "#00FF00",
-        "activityBar.background": "#1A3229",
-        "titleBar.activeBackground": "#244639",
-        "titleBar.activeForeground": "#F7FBFA"
+        "activityBar.background": "#0A3601",
+        "titleBar.activeBackground": "#0E4B01",
+        "titleBar.activeForeground": "#EFFFEC"
     }
 }

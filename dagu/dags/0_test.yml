@@ -1,11 +1,11 @@
-name: "0_test"
 env:
   BUNNY_PULL_ZONE_ID: ${BUNNY_PULL_ZONE_ID}
   BUNNY_ACCOUNT_API_KEY: ${BUNNY_ACCOUNT_API_KEY}
 
 steps:
   - name: "purge_bunny_cache"
-    command: >
+    id: purge_bunny_cache
+    run: >
       env HOME=/tmp bash -lc 'set -eu;
       if [ -z "${BUNNY_PULL_ZONE_ID}" ]; then
         echo "BUNNY_PULL_ZONE_ID is not set, skipping cache purge";

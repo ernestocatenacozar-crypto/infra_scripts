@@ -1,0 +1,11 @@
+type: graph
+
+env:
+  TARGET_CITY: "Almeria"
+
+steps:
+  - name: "newsletter_brevo"
+    id: newsletter_brevo
+    run: >
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/NewsletterBrevo.yml -- \
+      TARGET_CITY="$TARGET_CITY"'

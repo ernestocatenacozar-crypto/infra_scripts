@@ -1,28 +1,40 @@
-name: "FisgonGetScrapers"
 params:
-  - TARGET_CITY: ""
-  - GET_SCRAPERS: "Request"
+  TARGET_CITY: ""
+  GET_SCRAPERS: "Request"
+
+env:
+  - HOST_FISGON_PATH: ${HOST_FISGON_PATH}
+  - HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
+  - DATABASE_PATH: ${DATABASE_PATH}
+  - FISGON_SCRAPER_IMAGE: ${FISGON_SCRAPER_IMAGE}
 
 steps:
   - name: "get_scrapers"
-    command: >
-      bash -lc 'case "$GET_SCRAPERS" in
+    id: get_scrapers
+    run: >
+      bash -lc 'set -euo pipefail;
+      case "$GET_SCRAPERS" in
       Request) OUTPUT_FILE="/tmp/fisgon_scrapers_request.txt" ;;
       Selenium) OUTPUT_FILE="/tmp/fisgon_scrapers_selenium.txt" ;;
       *) OUTPUT_FILE="/tmp/fisgon_scrapers_unknown.txt" ;;
       esac;
+      TMP_LOG="$(mktemp)";
       docker run --rm
       --network host
-      -v /home/ubuntu/work/fisgon:/app
-      -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
+      -v "$HOST_FISGON_PATH:/app"
+      -v "$HOST_DATA_STORAGE_PATH:$HOST_DATA_STORAGE_PATH"
       -w /app
       -e OPERATION=1
       -e DOCKER_CONFIG=/tmp/.docker
       -e HOME=/tmp
+      -e HOST_DATA_STORAGE_PATH
+      -e DATABASE_PATH
       -e TARGET_CITY
       -e GET_SCRAPERS
-      -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
-      -e DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&step=get_scrapers&dagRunId=${DAG_RUN_ID}"
-      fisgon_scraper:1.0 | tail -n 1 > "$OUTPUT_FILE";
-      rc=$?;
+      -e DAG_RUN_URL="http://localhost:3013/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+      -e DAG_RUN_LOG_URL="http://localhost:3013/dags/${DAG_NAME}/log?remoteNode=local&step=get_scrapers&dagRunId=${DAG_RUN_ID}"
+      "$FISGON_SCRAPER_IMAGE" | tee "$TMP_LOG";
+      rc=${PIPESTATUS[0]};
+      tail -n 1 "$TMP_LOG" > "$OUTPUT_FILE";
+      rm -f "$TMP_LOG";
       exit $rc'

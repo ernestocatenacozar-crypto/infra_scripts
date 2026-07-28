@@ -1,62 +1,214 @@
 # Coding Agent Integration
 
-Use AI coding agent CLIs (Claude Code, Codex, Gemini, etc.) as DAG steps for non-interactive, prompt-driven automation.
+Use `action: harness.run` to run AI coding agents as DAG steps. A harness step can run Dagu's in-process agent, an external CLI on the host, an external CLI in a step-level container, or an external CLI in the DAG-level shared container.
 
-## Agent CLI Quick Reference
+## Supported Providers
 
-| Agent | Non-interactive command | Stdin | Model flag | API key env var |
-|-------|------------------------|-------|------------|-----------------|
-| Claude Code | `claude -p "prompt"` | `\| claude -p "prompt"` | `--model` | `ANTHROPIC_API_KEY` |
-| Codex | `codex exec "prompt"` | `\| codex exec -` | `-m` / `--model` | `CODEX_API_KEY` |
-| Gemini CLI | `gemini -p "prompt"` | `\| gemini -p "prompt"` | `-m` / `--model` | `GEMINI_API_KEY` |
-| OpenCode | `opencode run "prompt"` | `\| opencode -p "prompt"` | `-m` / `--model` | Provider-specific |
-| Aider | `aider -m "prompt" --yes-always` | `--message-file /dev/stdin` | `--model` | Provider-specific |
-| Kiro CLI | `kiro-cli chat --no-interactive --trust-all-tools "prompt"` | N/A | Settings-based | `kiro-cli login` |
+| Provider | Runtime | Invocation |
+|----------|---------|------------|
+| `builtin` | In-process Dagu agent | Uses Dagu's agent executor. It is not a CLI process. |
+| `claude` | `claude` | `claude -p "<prompt>" [flags]` |
+| `codex` | `codex` | `codex exec "<prompt>" [flags]` |
+| `copilot` | `copilot` | `copilot -p "<prompt>" [flags]` |
+| `opencode` | `opencode` | `opencode run "<prompt>" [flags]` |
+| `pi` | `pi` | `pi -p "<prompt>" [flags]` |
 
-## Critical: Nested Session Prevention (Claude Code only)
+The selected CLI provider's binary must be resolvable when it runs. Dagu CLI providers use `PATH`. Custom harnesses can use a binary name or an explicit path resolved from the step working directory.
 
-When Dagu is launched from inside Claude Code, environment variables leak into child steps and cause `claude -p` to hang. **Unset these right before every `claude -p` call:**
+## Feature Reference
+
+- `with.prompt` is required. In `action: harness.run`, it becomes the step command and is preserved as prompt text, including multiline text.
+- `with.stdin` becomes the step script. `provider: builtin` appends it to the user message after a blank line. Host subprocess runs pass it to stdin. Containerized harness runs reject stdin.
+- `provider: builtin` runs Dagu's in-process agent. It accepts builtin agent fields such as `model`, `max_iterations`, `safe_mode`, `skills`, `tools`, `memory`, and `web_search`. It rejects pass-through CLI flags.
+- Dagu CLI providers are `claude`, `codex`, `copilot`, `opencode`, and `pi`. Non-reserved `with` keys become CLI flags.
+- Custom providers must be declared under top-level `harnesses:`. Custom names cannot collide with built-in provider names.
+- `fallback` is an ordered list of provider configs. Dagu tries the next config only when the previous attempt fails and the run context is still active. Fallback configs cannot contain another `fallback`.
+- `provider` may use value references only if they resolve to a concrete provider string before executor creation. If `${...}` remains unresolved at runtime, the harness fails with an unresolved provider template error.
+- `provider` and `fallback` are harness control keys. They are not passed as CLI flags.
+
+## How `with` Works
+
+Harness supports Dagu providers and named custom harness definitions:
+
+- `with.provider` selects `builtin`, a Dagu CLI provider, or a custom `harnesses:` entry
+- top-level `harnesses.<name>` defines how to invoke a custom harness CLI
+
+For Dagu CLI providers and custom providers, non-reserved `with` keys are passed directly as CLI flags:
+
+- `key: "value"` → `--key value`
+- `key: true` → `--key`
+- `key: false` → omitted
+- `key: 123` → `--key 123`
+- Dagu CLI providers also normalize `snake_case` keys to kebab-case flags, so `max_turns` becomes `--max-turns`
+
+Reserved keys are `prompt`, `stdin`, `provider`, and `fallback`.
+
+## Custom Harness Registry
+
+Define reusable custom harness adapters once at the DAG level:
 
 ```yaml
-script: |
-  unset CLAUDECODE
-  unset ANTHROPIC_API_KEY
-  claude -p "your prompt"
+harnesses:
+  gemini:
+    binary: gemini
+    prefix_args: ["run"]
+    prompt_mode: flag
+    prompt_flag: --prompt
+    option_flags:
+      model: --model
+
+steps:
+  - id: review
+    action: harness.run
+    with:
+      prompt: "Review the current branch"
+      provider: gemini
+      model: gemini-2.5-pro
 ```
 
-- `CLAUDECODE` — If inherited, `claude -p` detects a "nested session" and **hangs indefinitely**.
-- `ANTHROPIC_API_KEY` — The parent session may inject a session-scoped key invalid for standalone calls. Unsetting lets `claude -p` use its own auth.
+Custom harness definition fields:
 
-**Only needed for `claude -p` steps.** Other agents are unaffected.
+- `binary` — CLI binary or path
+- `prefix_args` — args that always appear before prompt placement and runtime flags
+- `prompt_mode` — `arg`, `flag`, or `stdin`
+- `prompt_flag` — required when `prompt_mode: flag`
+- `prompt_position` — `before_flags` or `after_flags`
+- `flag_style` — `gnu_long` or `single_dash`
+- `option_flags` — per-option override from `with` key to exact flag token
+
+## DAG-Level Defaults and Fallback
+
+Use top-level `harness:` to define shared defaults for every harness step in the DAG.
+
+```yaml
+harness:
+  provider: claude
+  model: sonnet
+  bare: true
+  fallback:
+    - provider: codex
+      full-auto: true
+    - provider: copilot
+      yolo: true
+      silent: true
+
+steps:
+  - id: step1
+    action: harness.run
+    with:
+      prompt: "Write tests"
+
+  - id: step2
+    action: harness.run
+    with:
+      prompt: "Fix bugs"
+      model: opus
+      effort: high
+
+  - id: step3
+    action: harness.run
+    with:
+      prompt: "Generate docs"
+      provider: copilot
+      fallback:
+        - provider: claude
+          model: haiku
+```
+
+Merge rules:
+
+- DAG-level primary harness config is the base
+- Step-level `with` overlays it
+- Step-level `with.fallback` replaces DAG-level `fallback`
+- Step-level `with.fallback: []` disables inherited fallback
+- New DAGs should use `action: harness.run`; legacy `type: harness` inference exists only for backward compatibility.
+
+## Containerized Harness Steps
+
+`container:` is optional for `harness.run`. It can be defined at the DAG root or on a specific harness step.
+
+Use root-level `container:` when all compatible steps should run in the same DAG-level container. Dagu starts or attaches to that container for the run. A harness step without its own `container:` executes the provider CLI inside that shared container.
+
+```yaml
+container:
+  image: my-codex-runner:latest
+  pull_policy: always
+  working_dir: /workspace
+  volumes:
+    - .:/workspace:rw
+
+steps:
+  - id: fix_tests
+    action: harness.run
+    with:
+      provider: codex
+      prompt: "Fix the failing tests in this repository"
+      sandbox: workspace-write
+      skip-git-repo-check: true
+    timeout_sec: 600
+```
+
+Use step-level `container:` when only that harness step needs a container, or when it needs a different container from the DAG-level one. If both root-level and step-level containers are present, the step-level container is used for that step.
+
+```yaml
+steps:
+  - id: fix_tests
+    action: harness.run
+    container:
+      image: my-codex-runner:latest
+      pull_policy: always
+      working_dir: /workspace
+      volumes:
+        - .:/workspace:rw
+    with:
+      provider: codex
+      prompt: "Fix the failing tests in this repository"
+      sandbox: workspace-write
+      skip-git-repo-check: true
+    timeout_sec: 600
+```
+
+Container rules:
+
+- The selected provider binary must exist inside the container that runs the step.
+- Dagu CLI providers and custom providers with `prompt_mode: arg` or `prompt_mode: flag` can run in a container.
+- `provider: builtin` cannot run in a container because it is an in-process provider.
+- `with.stdin` is not supported in a container.
+- Custom providers with `prompt_mode: stdin` are not supported in a container.
+- A step-level image-mode container creates a container for the step. Dagu uses the provider binary as the container entrypoint and passes provider arguments as the command.
+- Do not set `container.name` for image-mode harness steps. Use `container.exec` when the step must execute inside an existing container.
+- For a root-level container, Dagu executes the full provider command inside the shared DAG-level container.
+- A step-level container inherits user-defined runtime values such as DAG env, step env, params, secrets, and step outputs. The engine process environment is not injected.
+- A root-level shared-container harness env filters host-path runtime values such as `PWD`, DAG run log paths, artifact paths, and step stream paths. Do not rely on those host paths inside the shared container.
+- Step-level `container.env` overrides inherited values with the same key.
+- DAG resource limits are applied to created step-level harness containers and created DAG-level containers when the container runtime supports those limits. Existing-container exec mode cannot change that container's host resources.
+- Provider flags still belong under `with:`. For example, Codex `sandbox: workspace-write` configures Codex inside the outer container boundary.
+- Docker or Podman is selected by the Dagu service process. This is not configured in the DAG YAML.
 
 ## Pattern 1: Single Agent Step
 
-Use `params` for user-configurable prompts and `env` for defaults (model, agent, system prompt).
-
 ```yaml
-description: "Run a coding agent with a user-provided prompt"
-
-env:
-  - CLAUDE_MODEL: claude-sonnet-4-6
-
 params:
   - PROMPT: "Explain the main function in this project"
 
+harness:
+  provider: claude
+  model: sonnet
+  bare: true
+
 steps:
   - id: run_agent
-    script: |
-      unset CLAUDECODE
-      unset ANTHROPIC_API_KEY
-      claude -p --model "${CLAUDE_MODEL}" "${PROMPT}"
+    action: harness.run
+    with:
+      prompt: "${params.PROMPT}"
     output: RESULT
 ```
 
 ## Pattern 2: Multi-Agent Pipeline
 
-Chain agents, passing output via `${step_id.stdout}` file references.
+Chain agents, passing output between steps via env-scope `output:` variables or `${step_id.stdout}` file references.
 
 ```yaml
-description: "Research pipeline: research, review, refine"
 type: graph
 
 params:
@@ -64,105 +216,156 @@ params:
 
 steps:
   - id: research
-    description: "Deep research using Claude"
-    script: |
-      unset CLAUDECODE
-      unset ANTHROPIC_API_KEY
-      claude -p "Research every approach to: ${topic}. List all approaches with pros, cons, and when to use each."
+    action: harness.run
+    with:
+      prompt: "Research every approach to: ${params.topic}. List all approaches with pros, cons, and when to use each."
+      provider: claude
+      model: sonnet
+      bare: true
     output: RESEARCH
 
   - id: review
-    description: "Review research for gaps using Codex"
-    script: |
-      PROMPT_FILE=$(mktemp)
-      {
-        echo "Review this research for completeness and gaps:"
-        echo ""
-        cat "${research.stdout}"
-      } > "$PROMPT_FILE"
-      codex exec --skip-git-repo-check - < "$PROMPT_FILE"
-      rm -f "$PROMPT_FILE"
+    action: harness.run
+    with:
+      prompt: "Review the research provided on stdin for completeness and gaps"
+      # Interpolated before execution, then piped to the harness CLI on stdin.
+      stdin: |
+        Review this research for completeness and gaps:
+
+        ${env.RESEARCH}
+      provider: codex
+      full-auto: true
+      skip-git-repo-check: true
     depends: [research]
     output: REVIEW
 
   - id: refine
-    description: "Refine with review feedback using Claude"
-    script: |
-      unset CLAUDECODE
-      unset ANTHROPIC_API_KEY
-      {
-        echo "=== Research ==="
-        cat "${research.stdout}"
-        echo ""
-        echo "=== Review Feedback ==="
-        cat "${review.stdout}"
-      } | claude -p "Refine this research incorporating the review feedback provided via stdin."
+    action: harness.run
+    with:
+      prompt: "Refine this research incorporating the review feedback provided via stdin."
+      stdin: |
+        === Research ===
+        ${env.RESEARCH}
+
+        === Review Feedback ===
+        ${env.REVIEW}
+      provider: claude
+      model: sonnet
+      bare: true
     depends: [review]
     output: REFINED
 ```
 
-**Key technique:** `${step_id.stdout}` is a **file path** to the step's captured stdout. Use `cat "${step_id.stdout}"` to read its content. Use `output:` to capture stdout into a variable for string interpolation.
+`with.prompt` is the prompt. For host subprocess runs, Dagu CLI providers and custom `arg`/`flag` harnesses receive `with.stdin` on stdin as supplementary context. For host subprocess custom `stdin` harnesses, stdin receives the prompt, then a blank line, then `with.stdin` when both are present.
 
-## Agent Quick Examples
+## Pattern 3: Parameterized
+
+```yaml
+params:
+  - PROVIDER: claude
+  - MODEL: sonnet
+  - PROMPT: "Analyze this codebase"
+
+steps:
+  - id: agent
+    action: harness.run
+    with:
+      prompt: "${params.PROMPT}"
+      provider: "${params.PROVIDER}"
+      model: "${params.MODEL}"
+    output: RESULT
+```
+
+## Provider Examples
 
 ### Claude Code
-```bash
-claude -p "your prompt"                              # basic
-claude -p --model opus "your prompt"                 # model selection
-cat file.py | claude -p "Review this code"           # stdin
-claude -p --max-turns 5 "your prompt"                # limit turns
+
+```yaml
+steps:
+  - id: task
+    action: harness.run
+    with:
+      prompt: "Write tests for the auth module"
+      provider: claude
+      model: sonnet
+      effort: high
+      max-turns: 20
+      max-budget-usd: 2.00
+      permission-mode: auto
+      allowed-tools: "Bash,Read,Edit"
+      bare: true
+    timeout_sec: 300
+    output: RESULT
 ```
 
-### OpenAI Codex CLI
-```bash
-codex exec "your prompt"                             # basic
-cat prompt.txt | codex exec -                        # stdin
-codex exec --full-auto "your prompt"                 # auto mode
-codex exec --skip-git-repo-check "your prompt"       # non-git dirs
+### Codex
+
+```yaml
+steps:
+  - id: task
+    action: harness.run
+    with:
+      prompt: "Fix failing tests in src/"
+      provider: codex
+      full-auto: true
+      sandbox: workspace-write
+      ephemeral: true
+      skip-git-repo-check: true
+    timeout_sec: 300
 ```
 
-### Gemini CLI
-```bash
-gemini -p "your prompt"                              # basic
-gemini -p -m gemini-3.1-pro-preview "your prompt"    # model selection
-cat data.json | gemini -p "Analyze this data"        # stdin
+### Copilot
+
+```yaml
+steps:
+  - id: task
+    action: harness.run
+    with:
+      prompt: "Refactor the authentication middleware"
+      provider: copilot
+      autopilot: true
+      yolo: true
+      silent: true
+      no-ask-user: true
+      no-auto-update: true
+    timeout_sec: 300
 ```
 
 ### OpenCode
-```bash
-opencode run "your prompt"                           # basic
-opencode run --model anthropic/claude-sonnet-4-6 "prompt"  # model selection
+
+```yaml
+steps:
+  - id: task
+    action: harness.run
+    with:
+      prompt: "Refactor the database layer"
+      provider: opencode
+      format: json
+    timeout_sec: 300
 ```
 
-### Aider
-```bash
-aider -m "Add error handling" --yes-always main.go   # basic (edits files directly)
-aider -m "Fix bug" --model claude-sonnet-4-6 --yes-always --no-auto-commits buggy.py
+### Pi
+
+```yaml
+steps:
+  - id: task
+    action: harness.run
+    with:
+      prompt: "Design a rate limiting middleware"
+      provider: pi
+      thinking: high
+      tools: read,bash
+    timeout_sec: 300
 ```
-Note: Aider's `-m` is `--message` (not `--model`). Capture changes via `git diff` in a subsequent step.
 
-### Kiro CLI
-```bash
-kiro-cli chat --no-interactive --trust-all-tools "your prompt"
-kiro-cli chat --no-interactive --trust-tools read,write,shell "prompt"  # limited tools
-```
-Note: Auth via `kiro-cli login`. Model selection via `kiro-cli settings chat.defaultModel "model-name"`.
+## Notes
 
-## Tips
-
-1. **Use cheaper models for simple tasks** — Reserve powerful models for complex reasoning; use fast/cheap models for formatting, classification, slug generation, etc.
-
-   | Tier | Claude Code | Codex | Gemini CLI |
-   |------|-------------|-------|------------|
-   | Cheap/fast | `haiku` | `gpt-5.1-codex-mini` | `gemini-2.0-flash` |
-   | Balanced | `sonnet` | `gpt-5.4` | `gemini-2.5-flash` |
-   | Most capable | `opus` | `gpt-5.3-codex` | `gemini-3.1-pro-preview` |
-
-2. **Prompt as a parameter** — Expose the core prompt via `params:` so users can customize from UI/CLI without editing the DAG.
-3. **env for defaults** — Use `env:` for default model names, agent selection, and system prompts.
-4. **Large prompts via stdin** — Pipe file contents via stdin rather than embedding in args to avoid quoting issues and arg length limits.
-5. **Temp files for complex input** — When combining multiple sources, write to a temp file and pipe it in.
-6. **Working directory matters** — Agents that modify files operate relative to the working dir. Use `working_dir:` or `cd` in the script.
-7. **Output capture** — Use `output: VAR_NAME` for variable interpolation; use `${step_id.stdout}` for file-path-based access.
-8. **Timeouts** — Set generous `timeout_sec:` (300-600s+) on agent steps to avoid premature kills.
-9. **Retry on transient failures** — Add `retry_policy: { limit: 3, interval_sec: 30 }` to handle rate limits and network errors.
+1. **Model names** — Look up current model names from each provider's documentation. Do not rely on hardcoded names; they change frequently.
+2. **Prompt as a parameter** — Expose the prompt via `params:` so users can customize from UI/CLI without editing the DAG.
+3. **Timeouts** — Set `timeout_sec:` (300-600s+) on agent steps. Agent CLIs can run for minutes.
+4. **Retry on transient failures** — Add `retry_policy: { limit: 3, interval_sec: 30 }` to handle rate limits and network errors.
+5. **Working directory** — Use `working_dir:` on the step. The CLI operates relative to this directory.
+6. **Output capture** — Use string-form `output: VAR_NAME` for small flat values, declared `outputs:` for explicit `${steps.<step_id>.outputs.<name>}` values, object-form `output:` for structured `${step_id.output.*}` access, and `stdout.artifact` / `stderr.artifact` when large agent output, reports, JSON, Markdown, or logs should be stored as DAG-run artifacts. Use `${step_id.stdout}` only when a downstream step needs the stdout log file path.
+7. **Exit codes** — 0 = success, 1 = provider error, 124 = step timed out or cancelled.
+8. **Failure output** — Recent stderr is included in the error message on failure. When failed stdout exists, Dagu also includes a recent stdout tail and writes that tail to stderr.
+9. **Fallback behavior** — If the primary harness config fails and the context is still active, fallback entries are tried in order. Failed-attempt stdout is discarded; stderr remains visible in logs.

@@ -1,27 +1,33 @@
-name: "0_FrontendBuild"
+type: graph
 params:
-  - TARGET_CITY: "Almeria"
-  - SKIP_DOWNLOAD_IMAGES: "0"
-  - CLEAN_UP: "0"
+  TARGET_CITY: "Almeria"
+  SKIP_DOWNLOAD_IMAGES: "0"
 
 env:
   TARGET_CITY: ${TARGET_CITY}
   SKIP_DOWNLOAD_IMAGES: ${SKIP_DOWNLOAD_IMAGES}
-  CLEAN_UP: ${CLEAN_UP}
   BASE_URL: ${BASE_URL}
   BUNNY_STORAGE_ZONE: ${BUNNY_STORAGE_ZONE}
   BUNNY_STORAGE_API_KEY: ${BUNNY_STORAGE_API_KEY}
   BUNNY_PULL_ZONE_ID: ${BUNNY_PULL_ZONE_ID}
   BUNNY_ACCOUNT_API_KEY: ${BUNNY_ACCOUNT_API_KEY}
+  HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
+  HOST_FRONTEND_PATH: ${HOST_FRONTEND_PATH}
+  HOST_FRONTEND_DIST_PATH: ${HOST_FRONTEND_DIST_PATH}
+  HOST_SSH_PATH: ${HOST_SSH_PATH}
+  FRONTEND_IMAGE: ${FRONTEND_IMAGE}
+  FRONTEND_BUILD_IMAGE: ${FRONTEND_BUILD_IMAGE}
+  FRONTEND_NODE_MODULES_VOLUME: ${FRONTEND_NODE_MODULES_VOLUME}
 
 steps:
   - name: "snapshot_master_events"
-    command: >
+    id: snapshot_master_events
+    run: >
       env HOME=/tmp bash -lc 'set -eu;
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
       docker run --rm
-      -v /home/ubuntu/data_storage:/src_data:ro
-      -v /home/ubuntu/work/frontend_build/test_frontend:/repo
+      -v "$HOST_DATA_STORAGE_PATH:/src_data:ro"
+      -v "$HOST_FRONTEND_PATH:/repo"
       alpine:3.20
       sh -lc "
       set -eu;
@@ -34,7 +40,7 @@ steps:
         fi;
       done;
       if [ -z \"\$SRC_DIR\" ]; then
-        echo \"City data folder not found in /home/ubuntu/data_storage for $TARGET_CITY\";
+        echo \"City data folder not found in $HOST_DATA_STORAGE_PATH for $TARGET_CITY\";
         exit 1;
       fi;
       SRC_FILE=\"\$SRC_DIR/00_master/master_events.json\";
@@ -46,14 +52,16 @@ steps:
       "'
 
   - name: "commit_and_push_snapshot"
-    command: >
+    id: commit_and_push_snapshot
+    depends: [snapshot_master_events]
+    run: >
       env HOME=/tmp bash -lc 'set -eu;
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
       SNAPSHOT_PATH="data/$CITY_SLUG/master_events.json";
       docker run --rm
       --entrypoint sh
-      -v /home/ubuntu/work/frontend_build/test_frontend:/repo
-      -v /home/ubuntu/.ssh:/root/.ssh:ro
+      -v "$HOST_FRONTEND_PATH:/repo"
+      -v "$HOST_SSH_PATH:/root/.ssh:ro"
       -w /repo
       alpine/git:latest
       -lc "
@@ -72,12 +80,14 @@ steps:
       "'
 
   - name: "build_frontend"
-    command: >
+    id: build_frontend
+    depends: [commit_and_push_snapshot]
+    run: >
       env HOME=/tmp bash -lc 'set -eu;
-      IMAGE="infra_scripts-test_frontend_build:latest";
+      IMAGE="${FRONTEND_BUILD_IMAGE}";
       if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
         echo "Missing image: $IMAGE";
-        echo "Build it first with: docker compose --profile build build test_frontend_build";
+        echo "Build it first with: docker compose --profile build build frontend_build";
         exit 1;
       fi;
       EXTRA_ARGS="";
@@ -87,10 +97,13 @@ steps:
       docker run --rm
       --entrypoint sh
       -e ORBITA_CITY="$TARGET_CITY"
-      -v /home/ubuntu/work/frontend_build/test_frontend:/app
-      -v infra_scripts_test_frontend_node_modules:/app/node_modules
-      -v /home/ubuntu/work/frontend_build/test_frontend/dist:/app/dist
-      -v /home/ubuntu/data_storage:/home/ubuntu/data_storage
+      -e HOST_FRONTEND_PATH="$HOST_FRONTEND_PATH"
+      -e HOST_DATA_STORAGE_PATH="$HOST_DATA_STORAGE_PATH"
+      -v "$HOST_FRONTEND_PATH:/app"
+      -v "$HOST_FRONTEND_PATH:$HOST_FRONTEND_PATH"
+      -v "$FRONTEND_NODE_MODULES_VOLUME:/app/node_modules"
+      -v "$HOST_FRONTEND_DIST_PATH:/app/dist"
+      -v "$HOST_DATA_STORAGE_PATH:$HOST_DATA_STORAGE_PATH"
       "$IMAGE"
       scripts/docker_static_entrypoint.sh
       --city "$TARGET_CITY"
@@ -98,39 +111,24 @@ steps:
       --base-url "$BASE_URL"
       $EXTRA_ARGS'
 
-  - name: "cleanup_bunny"
-    command: >
+  - name: "upload_to_bunny"
+    id: upload_to_bunny
+    depends: [build_frontend]
+    run: >
       env HOME=/tmp bash -lc 'set -eu;
-      if [ "${CLEAN_UP}" != "1" ]; then
-        echo "CLEAN_UP != 1, skipping cleanup";
-        exit 0;
-      fi;
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
       docker run --rm --entrypoint sh
       -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE"
       -e BUNNY_STORAGE_API_KEY="$BUNNY_STORAGE_API_KEY"
       -e CITY_SLUG="$CITY_SLUG"
-      -v /home/ubuntu/work/frontend_build/test_frontend/dist:/app/dist
-      infra_scripts-test_frontend:latest
-      -c "set +e; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --delete --parallel=10 . .; bye\" || true"'
-
-  - name: "upload_to_bunny"
-    depends:
-      - "cleanup_bunny"
-      - "build_frontend"
-    command: >
-      docker run --rm --entrypoint sh
-      -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE"
-      -e BUNNY_STORAGE_API_KEY="$BUNNY_STORAGE_API_KEY"
-      -e CITY_SLUG="$CITY_SLUG"
-      -v /home/ubuntu/work/frontend_build/test_frontend/dist:/app/dist
-      infra_scripts-test_frontend:latest
-      -c "set -eu; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --parallel=25 . .; bye\""
+      -v "$HOST_FRONTEND_DIST_PATH:/app/dist"
+      "$FRONTEND_IMAGE"
+      -c "set -eu; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --parallel=25 . .; bye\""'
 
   - name: "purge_bunny_cache"
-    depends:
-      - "upload_to_bunny"
-    command: >
+    id: purge_bunny_cache
+    depends: [upload_to_bunny]
+    run: >
       env HOME=/tmp bash -lc 'set -eu;
       if [ -z "${BUNNY_PULL_ZONE_ID}" ]; then
         echo "BUNNY_PULL_ZONE_ID is not set, skipping cache purge";

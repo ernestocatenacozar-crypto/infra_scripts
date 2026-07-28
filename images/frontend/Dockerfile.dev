@@ -1,0 +1,22 @@
+FROM node:20-bookworm-slim
+
+WORKDIR /app
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    lftp \
+    python3 \
+    python3-pip \
+    ca-certificates \
+  && rm -rf /var/lib/apt/lists/*
+
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PYTHONUNBUFFERED=1
+
+COPY requirements.txt ./
+RUN python3 -m pip install --no-cache-dir --break-system-packages -r requirements.txt
+
+EXPOSE 5000
+
+# The repo is mounted at runtime (docker-compose). Keep a shell CMD so it works with the bind mount.
+CMD ["sh", "scripts/docker_dev_entrypoint.sh"]

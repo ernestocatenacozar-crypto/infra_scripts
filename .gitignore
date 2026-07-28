@@ -147,15 +147,6 @@ activemq-data/
 # SageMath parsed files
 *.sage.py
 
-# Environments
-.env
-.envrc
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
 
 # Spyder project settings
 .spyderproject
@@ -193,6 +184,12 @@ cython_debug/
 #   Ignore directories containing user credentials, local state, and settings.
 #   Learn more at https://abstra.io/docs
 .abstra/
+.local/
+.build/
+dagu/logs/*
+!dagu/logs/.gitkeep
+dagu/suspend/*
+!dagu/suspend/.gitkeep
 
 # Visual Studio Code
 #   Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
@@ -215,3 +212,4 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 .lol
+local_infra_scripts.code-workspace

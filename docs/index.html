@@ -1,57 +1,3 @@
-#!/usr/bin/env bash
-set -euo pipefail
-
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_DIR="${REPO_DIR:-${SCRIPT_DIR}}"
-MD_FILE="${MD_FILE:-endpoints.md}"
-HTML_FILE="${HTML_FILE:-docs/index.html}"
-DAGU_SERVICE="${DAGU_SERVICE:-dagu}"
-ENV_FILE="${ENV_FILE:-${REPO_DIR}/.env}"
-
-if [ -f "$ENV_FILE" ]; then
-  set -a
-  # shellcheck disable=SC1090
-  . "$ENV_FILE"
-  set +a
-fi
-
-DAGU_HOST_PORT="${DAGU_HOST_PORT:-3012}"
-SELENIUM_VNC_PORT="${SELENIUM_VNC_PORT:-7900}"
-REFINEMENT_PORTAL_PORT="${REFINEMENT_PORTAL_PORT:-5002}"
-FRONTEND_PORT="${FRONTEND_PORT:-5000}"
-
-TOKEN=$(curl -s -X PUT "http://169.254.169.254/latest/api/token" \
-  -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
-
-IP=$(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
-  http://169.254.169.254/latest/meta-data/public-ipv4)
-
-if [ -z "$IP" ]; then
-  echo "ERROR: Public IP not found"
-  exit 1
-fi
-
-cd "$REPO_DIR"
-
-mkdir -p "$(dirname "$HTML_FILE")"
-
-cat <<EOF > "$MD_FILE"
-# EC2 Service Endpoints
-
-## Dagu
-http://${IP}:${DAGU_HOST_PORT}
-
-## Selenium (noVNC)
-http://${IP}:${SELENIUM_VNC_PORT}
-
-## RefinementPortal
-http://${IP}:${REFINEMENT_PORTAL_PORT}
-
-## Frontend
-http://${IP}:${FRONTEND_PORT}
-EOF
-
-cat <<EOF > "$HTML_FILE"
 <!doctype html>
 <html lang="es">
 <head>
@@ -172,26 +118,26 @@ cat <<EOF > "$HTML_FILE"
     <section class="grid">
       <article class="card">
         <h2>Dagu</h2>
-        <p><code>http://${IP}:${DAGU_HOST_PORT}</code></p>
-        <a class="button" href="http://${IP}:${DAGU_HOST_PORT}" target="_blank" rel="noreferrer">Abrir Dagu</a>
+        <p><code>http://108.129.116.18:3012</code></p>
+        <a class="button" href="http://108.129.116.18:3012" target="_blank" rel="noreferrer">Abrir Dagu</a>
       </article>
 
       <article class="card">
         <h2>Selenium (noVNC)</h2>
-        <p><code>http://${IP}:${SELENIUM_VNC_PORT}</code></p>
-        <a class="button" href="http://${IP}:${SELENIUM_VNC_PORT}" target="_blank" rel="noreferrer">Abrir noVNC</a>
+        <p><code>http://108.129.116.18:7900</code></p>
+        <a class="button" href="http://108.129.116.18:7900" target="_blank" rel="noreferrer">Abrir noVNC</a>
       </article>
 
       <article class="card">
         <h2>Refinement Portal</h2>
-        <p><code>http://${IP}:${REFINEMENT_PORTAL_PORT}</code></p>
-        <a class="button" href="http://${IP}:${REFINEMENT_PORTAL_PORT}" target="_blank" rel="noreferrer">Abrir Portal</a>
+        <p><code>http://108.129.116.18:5002</code></p>
+        <a class="button" href="http://108.129.116.18:5002" target="_blank" rel="noreferrer">Abrir Portal</a>
       </article>
 
       <article class="card">
         <h2>Frontend</h2>
-        <p><code>http://${IP}:${FRONTEND_PORT}</code></p>
-        <a class="button" href="http://${IP}:${FRONTEND_PORT}" target="_blank" rel="noreferrer">Abrir Frontend</a>
+        <p><code>http://108.129.116.18:5000</code></p>
+        <a class="button" href="http://108.129.116.18:5000" target="_blank" rel="noreferrer">Abrir Frontend</a>
       </article>
     </section>
 
@@ -201,13 +147,3 @@ cat <<EOF > "$HTML_FILE"
   </main>
 </body>
 </html>
-EOF
-
-git config user.email "ec2@infra.local"
-git config user.name "EC2 Bootstrap"
-
-git add "$MD_FILE" "$HTML_FILE"
-git diff --cached --quiet || git commit -m "Update service endpoints (${IP})"
-git push origin main
-
-docker compose restart "$DAGU_SERVICE"

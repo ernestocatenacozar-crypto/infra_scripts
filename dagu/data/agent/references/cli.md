@@ -2,62 +2,67 @@
 
 Global flags on all commands: `--config/-c`, `--dagu-home`, `--quiet/-q`, `--cpu-profile`
 
+Advanced and deprecated flags below remain implemented in `internal/cmd/start.go`, `internal/cmd/enqueue.go`, `internal/cmd/exec.go`, and `internal/cmd/migrate.go`, so this reference keeps them documented even when they are mainly used by automation or backward-compatibility paths.
+
 ## Core Commands
 
 ### dagu start
 
 Execute a DAG.
 
-```
+```sh
 dagu start [flags] <dag> [-- params...]
 ```
 
 Flags:
+
 - `--params/-p` — Parameters (key=value or positional)
 - `--name/-N` — Override DAG name
 - `--run-id/-r` — Custom run ID
-- `--from-run-id` — Use a previous run as template for a new run
-- `--tags` — Additional tags (comma-separated key=value or key-only)
+- `--from-run-id` — Historic dag-run ID to use as the template for a new run
+- `--labels` — Additional labels (comma-separated key=value or key-only)
+- `--tags` — Deprecated alias for `--labels`
 - `--default-working-dir` — Default working directory for DAGs without explicit workingDir
-- `--worker-id` — Worker ID for distributed execution (defaults to `local`)
-- `--trigger-type` — How this run was initiated: `manual` (default), `scheduler`, `webhook`, `subdag`, `retry`, `catchup`
-- `--parent` — Parent dag-run reference (sub dag-runs only)
-- `--root` — Root dag-run reference (sub dag-runs only)
-
-### dagu exec
-
-Run a one-off command as a DAG run without a YAML file.
-
-```
-dagu exec [flags] -- <command> [args...]
-```
-
-Flags:
-- `--name/-N` — Name for the run
-- `--run-id/-r` — Custom run ID
-- `--workdir` — Working directory (default: current directory)
-- `--shell` — Override shell binary
-- `--base` — Path to a base DAG YAML whose defaults are applied
-- `--env/-E` — Environment variable (KEY=VALUE), repeatable
-- `--dotenv` — Path to a dotenv file, repeatable
-- `--worker-label` — Worker label selector (key=value) for distributed execution, repeatable
+- `--worker-id` — Worker ID executing this DAG run; auto-set in distributed mode and defaults to `local`
+- `--trigger-type` — Trigger source (`scheduler`, `manual`, `webhook`, `subdag`, `retry`, `catchup`); defaults to `manual`
 
 ### dagu enqueue
 
 Enqueue a DAG run for later execution.
 
-```
+```sh
 dagu enqueue [flags] <dag> [-- params...]
 ```
 
 Flags:
+
 - `--params/-p` — Parameters (key=value or positional)
 - `--name/-N` — Override DAG name
-- `--queue/-u` — Override the DAG-level queue definition
 - `--run-id/-r` — Custom run ID
-- `--tags` — Additional tags (comma-separated)
+- `--queue/-u` — Override the DAG-level queue definition
+- `--labels` — Additional labels (comma-separated key=value or key-only)
+- `--tags` — Deprecated alias for `--labels`
 - `--default-working-dir` — Default working directory for DAGs without explicit workingDir
-- `--trigger-type` — Trigger type (default: `manual`)
+- `--trigger-type` — Trigger source (`scheduler`, `manual`, `webhook`, `subdag`, `retry`, `catchup`); defaults to `manual`
+
+### dagu exec
+
+Execute a one-off command as a DAG run without a DAG YAML file.
+
+```sh
+dagu exec [flags] -- <command> [args...]
+```
+
+Flags:
+
+- `--run-id/-r` — Custom run ID
+- `--name/-N` — Override DAG name
+- `--workdir` — Working directory for the command (defaults to the current directory)
+- `--shell` — Override shell binary for the command
+- `--base` — Path to a base DAG YAML whose defaults are applied before inline overrides
+- `--env/-E` — Environment variable (`KEY=VALUE`) to include in the run; repeatable
+- `--dotenv` — Path to a dotenv file to load before execution; repeatable
+- `--worker-label` — Worker label selector (`key=value`) for distributed execution; repeatable
 
 ### dagu dequeue
 
@@ -75,7 +80,7 @@ Stop and restart a DAG run: `dagu restart <dag-name> [--run-id/-r <id>]`
 
 Retry a previous DAG run using the same run ID.
 
-```
+```sh
 dagu retry <dag> --run-id/-r <id> [--step <name>] [--worker-id <id>]
 ```
 
@@ -95,17 +100,19 @@ Show DAG run status: `dagu status <dag-name> [--run-id/-r <id>] [--sub-run-id/-s
 
 Show DAG run history.
 
-```
+```sh
 dagu history [dag-name]
 ```
 
 Flags:
+
 - `--from` — Start date/time in UTC (format: `2006-01-02` or `2006-01-02T15:04:05Z`)
 - `--to` — End date/time in UTC (same formats as `--from`)
 - `--last` — Relative time period (e.g. `7d`, `24h`, `1w`). Cannot combine with `--from`/`--to`
 - `--status` — Filter by status: `running`, `succeeded`, `failed`, `aborted`, `queued`, `waiting`, `rejected`, `not_started`, `partially_succeeded`
 - `--run-id` — Filter by run ID (partial match supported)
-- `--tags` — Filter by tags (comma-separated, AND logic)
+- `--labels` — Filter by labels (comma-separated key=value or key-only, AND logic)
+- `--tags` — Deprecated alias for `--labels`
 - `--format/-f` — Output format: `table` (default), `json`, `csv`
 - `--limit/-l` — Max results (default 100, max 1000)
 
@@ -115,7 +122,7 @@ Default: shows runs from the last 30 days, newest first.
 
 Remove old DAG run history. Active runs are never deleted.
 
-```
+```sh
 dagu cleanup <dag-name> [--retention-days <n>] [--dry-run] [--yes/-y]
 ```
 
@@ -123,11 +130,12 @@ dagu cleanup <dag-name> [--retention-days <n>] [--dry-run] [--yes/-y]
 
 Show JSON schema documentation. Use a dot-separated path to drill into nested sections.
 
-```
+```sh
 dagu schema <dag|config> [path]
 ```
 
 Examples:
+
 - `dagu schema dag` — All DAG root-level fields
 - `dagu schema dag steps` — Step definition structure
 - `dagu schema dag steps.container` — Container configuration
@@ -141,7 +149,7 @@ Examples:
 
 Show resolved configuration paths.
 
-```
+```sh
 dagu config
 ```
 
@@ -151,7 +159,7 @@ dagu config
 
 Start server + scheduler + optionally coordinator in one process. Coordinator enabled by default (disable with `DAGU_COORDINATOR_ENABLED=false`).
 
-```
+```sh
 dagu start-all [--host/-s <host>] [--port/-p <port>] [--dags/-d <dir>]
 ```
 
@@ -161,7 +169,7 @@ Also accepts `--coordinator.*` and `--peer.*` flags for distributed setup.
 
 Start web UI + REST API.
 
-```
+```sh
 dagu server [--host/-s <host>] [--port/-p <port>] [--dags/-d <dir>] [--tunnel/-t]
 ```
 
@@ -169,7 +177,7 @@ dagu server [--host/-s <host>] [--port/-p <port>] [--dags/-d <dir>] [--tunnel/-t
 
 Start cron scheduler. Monitors DAGs and triggers runs on schedule; also processes queued runs.
 
-```
+```sh
 dagu scheduler [--dags/-d <dir>]
 ```
 
@@ -188,7 +196,7 @@ Start distributed worker: `dagu worker [--worker.id/-w <id>] [--worker.max-activ
 `dagu sync <subcommand>` — Git sync operations for DAG definitions.
 
 | Subcommand | Description |
-|------------|-------------|
+| ---------- | ----------- |
 | `sync status` | Show sync status (repository, branch, per-DAG status) |
 | `sync pull` | Pull changes from remote |
 | `sync publish [dag] [--message/-m] [--all] [--force/-f]` | Publish local changes to remote |
@@ -200,9 +208,12 @@ Start distributed worker: `dagu worker [--worker.id/-w <id>] [--worker.max-activ
 
 ## Other Commands
 
-- `dagu ai install [--yes/-y] [--skills-dir <path>]` — Install DAG authoring skill into AI coding tools (Claude Code, Codex, etc.)
-- `dagu example [id]` — Show built-in example DAGs (12 available)
+- `dagu agent [--model <model>] [--soul <soul>]` — Start an interactive Dagu agent chat using the current CLI context
+- `dagu agent -p <prompt> [--model <model>] [--soul <soul>]` — Send one non-interactive prompt to the Dagu agent
+- `dagu agent history [--limit <n>]` — List Dagu agent sessions
+- `dagu agent resume <session-id> [-p <prompt>] [--model <model>] [--soul <soul>]` — Resume interactively or send one non-interactive prompt to a Dagu agent session
+- `dagu example [id]` — Show built-in example DAGs
+- `dagu migrate history` — Migrate legacy DAG run history from the v1.16 layout to the v1.17+ format and archive the old data
 - `dagu version` — Show version
 - `dagu upgrade [--check] [--version/-v <ver>] [--dry-run] [--yes/-y]` — Self-update binary
 - `dagu license <activate|deactivate|check>` — Manage license
-- `dagu migrate history` — Migrate data from v1.16 to v1.17+ format

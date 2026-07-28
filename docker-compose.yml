@@ -1,24 +1,26 @@
+name: ${COMPOSE_PROJECT_NAME}
+
 services:
   selenium:
     image: selenium/standalone-chrome:latest
-    container_name: selenium
     restart: unless-stopped
     profiles:
       - selenium
     ports:
-      - "4444:4444"
-      - "7900:7900"
+      - "${SELENIUM_PORT}:4444"
+      - "${SELENIUM_VNC_PORT}:7900"
     shm_size: 2g
     environment:
-      - SE_NODE_MAX_SESSIONS=1
-      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+      SE_NODE_MAX_SESSIONS: 1
+      SE_NODE_OVERRIDE_MAX_SESSIONS: "true"
 
   dagu:
-    build: ./dagu
-    container_name: dagu
+    image: ${DAGU_IMAGE}
+    env_file:
+      - .env
     restart: unless-stopped
     ports:
-      - "3012:6806"
+      - "${DAGU_HOST_PORT}:6806"
     volumes:
       - ./dagu/base.yaml:/var/lib/dagu/base.yaml
       - ./dagu/dags:/var/lib/dagu/dags
@@ -27,36 +29,48 @@ services:
       - ./dagu/logs:/var/lib/dagu/logs
       - ./dagu/suspend:/var/lib/dagu/suspend
       - /var/run/docker.sock:/var/run/docker.sock
-      - /home/ubuntu/work/fisgon:/deps/fisgon
-      - /home/ubuntu/work/test_frontend/dist:/dist
+      - ${HOST_FISGON_PATH}:/deps/fisgon
+      - ${HOST_FRONTEND_DIST_PATH}:/dist
     environment:
-      - DAGU_HOST=0.0.0.0
-      - DAGU_PORT=6806
-      - DAGU_AUTH_MODE=none
-      - TZ=Europe/Madrid
-      - BUNNY_STORAGE_API_KEY=${BUNNY_STORAGE_API_KEY}
-      - BUNNY_STORAGE_ZONE=${BUNNY_STORAGE_ZONE}
-      - BUNNY_PULL_ZONE_ID=${BUNNY_PULL_ZONE_ID}
-      - BUNNY_ACCOUNT_API_KEY=${BUNNY_ACCOUNT_API_KEY}
-      - BASE_URL=${BASE_URL}
+      DAGU_HOST: 0.0.0.0
+      DAGU_PORT: 6806
+      DAGU_AUTH_MODE: none
+      TZ: ${TZ}
+      BUNNY_STORAGE_API_KEY: ${BUNNY_STORAGE_API_KEY}
+      BUNNY_STORAGE_ZONE: ${BUNNY_STORAGE_ZONE}
+      BUNNY_PULL_ZONE_ID: ${BUNNY_PULL_ZONE_ID}
+      BUNNY_ACCOUNT_API_KEY: ${BUNNY_ACCOUNT_API_KEY}
+      BREVO_API_KEY: ${BREVO_API_KEY:-}
+      BREVO_SENDER_EMAIL: ${BREVO_SENDER_EMAIL:-}
+      BREVO_SENDER_NAME: ${BREVO_SENDER_NAME:-}
+      BASE_URL: ${BASE_URL}
+      DAGU_BASE_URL: ${DAGU_BASE_URL}
+      HOST_FISGON_PATH: ${HOST_FISGON_PATH}
+      FISGON_SCRAPER_IMAGE: ${FISGON_SCRAPER_IMAGE}
+      HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
+      DATABASE_PATH: ${DATABASE_PATH}
+      HOST_REFINEMENT_PORTAL_PATH: ${HOST_REFINEMENT_PORTAL_PATH}
+      HOST_FRONTEND_PATH: ${HOST_FRONTEND_PATH}
+      HOST_FRONTEND_DIST_PATH: ${HOST_FRONTEND_DIST_PATH}
+      HOST_SSH_PATH: ${HOST_SSH_PATH}
+      FRONTEND_IMAGE: ${FRONTEND_IMAGE}
+      FRONTEND_BUILD_IMAGE: ${FRONTEND_BUILD_IMAGE}
+      FRONTEND_NODE_MODULES_VOLUME: ${FRONTEND_NODE_MODULES_VOLUME}
 
-  fisgon_api:
-    build:
-      context: /home/ubuntu/work/event_flask_app
-    container_name: fisgon_api
+  refinement_portal:
+    image: ${REFINEMENT_PORTAL_IMAGE}
     restart: unless-stopped
     environment:
-      TZ: Europe/Madrid
-      PYTHONPATH: /app:/deps/fisgon
-      DATA_STORAGE_PATH: /home/ubuntu/data_storage/
-      FLASK_APP_ENV: ec2
-      DATA_STORAGE_PATH_EC2: /home/ubuntu/data_storage/
+      TZ: ${TZ}
+      HOST_FISGON_PATH: ${HOST_FISGON_PATH}
+      HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
+      DATABASE_PATH: ${DATABASE_PATH}
     ports:
-      - "5002:5002"
+      - "${REFINEMENT_PORTAL_PORT}:5002"
     volumes:
-      - /home/ubuntu/work/event_flask_app:/app
-      - /home/ubuntu/work/fisgon:/deps/fisgon
-      - /home/ubuntu/data_storage:/home/ubuntu/data_storage
+      - ${HOST_REFINEMENT_PORTAL_PATH}:/app
+      - ${HOST_FISGON_PATH}:${HOST_FISGON_PATH}
+      - ${HOST_DATA_STORAGE_PATH}:${HOST_DATA_STORAGE_PATH}
     command: ["python", "app.py"]
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://localhost:5002/health"]
@@ -64,38 +78,103 @@ services:
       timeout: 5s
       retries: 5
 
-  test_frontend:
+  frontend:
+    image: ${FRONTEND_IMAGE}
     build:
-      context: /home/ubuntu/work/test_frontend
-      dockerfile: Dockerfile.dev
-    container_name: test_frontend
+      context: ${HOST_FRONTEND_PATH}
+      dockerfile: ${HOST_INFRA_PATH}/images/frontend/Dockerfile.dev
+    user: "${UID:-1000}:${GID:-1000}"
     restart: unless-stopped
     environment:
-      ORBITA_CITY: almeria
+      ORBITA_CITY: ${ORBITA_CITY}
+      HOST_FRONTEND_PATH: ${HOST_FRONTEND_PATH}
+      HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
       CHOKIDAR_USEPOLLING: "1"
       PORT: "5000"
     ports:
-      - "5000:5000"
+      - "${FRONTEND_PORT}:5000"
     volumes:
-      - /home/ubuntu/work/test_frontend:/app
-      - test_frontend_node_modules:/app/node_modules
-      - /home/ubuntu/work/test_frontend/dist:/app/dist
-      - /home/ubuntu/data_storage:/home/ubuntu/data_storage
+      - ${HOST_FRONTEND_PATH}:${CONTAINER_APP_ROOT_FRONTEND}
+      - ${HOST_FRONTEND_PATH}:${HOST_FRONTEND_PATH}
+      - frontend_node_modules:${CONTAINER_FRONTEND_NODE_MODULES_PATH}
+      - ${HOST_FRONTEND_DIST_PATH}:${CONTAINER_APP_ROOT_BUILD}
+      - ${HOST_DATA_STORAGE_PATH}:${HOST_DATA_STORAGE_PATH}
 
-  test_frontend_build:
+  frontend_build:
+    image: ${FRONTEND_BUILD_IMAGE}
+    build:
+      context: ${HOST_FRONTEND_PATH}
+      dockerfile: ${HOST_INFRA_PATH}/images/frontend/Dockerfile.static
+    user: "${UID:-1000}:${GID:-1000}"
     profiles:
       - build
-    build:
-      context: /home/ubuntu/work/test_frontend
-      dockerfile: Dockerfile.static
     restart: "no"
     environment:
-      ORBITA_CITY: almeria
+      ORBITA_CITY: ${ORBITA_CITY}
+      HOST_FRONTEND_PATH: ${HOST_FRONTEND_PATH}
+      HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
     volumes:
-      - /home/ubuntu/work/test_frontend:/app
-      - test_frontend_node_modules:/app/node_modules
-      - /home/ubuntu/work/test_frontend/dist:/app/dist
-      - /home/ubuntu/data_storage:/home/ubuntu/data_storage
+      - ${HOST_FRONTEND_PATH}:${CONTAINER_APP_ROOT_FRONTEND}
+      - ${HOST_FRONTEND_PATH}:${HOST_FRONTEND_PATH}
+      - frontend_node_modules:${CONTAINER_FRONTEND_NODE_MODULES_PATH}
+      - ${HOST_FRONTEND_DIST_PATH}:${CONTAINER_APP_ROOT_BUILD}
+      - ${HOST_DATA_STORAGE_PATH}:${HOST_DATA_STORAGE_PATH}
+
+  newsletter_sync:
+    image: ${FRONTEND_IMAGE}
+    build:
+      context: ${HOST_FRONTEND_PATH}
+      dockerfile: ${HOST_INFRA_PATH}/images/frontend/Dockerfile.dev
+    user: "${UID:-1000}:${GID:-1000}"
+    profiles:
+      - newsletter
+    restart: "no"
+    environment:
+      ORBITA_CITY: ${ORBITA_CITY}
+      HOST_FRONTEND_PATH: ${HOST_FRONTEND_PATH}
+      HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
+      BREVO_API_KEY: ${BREVO_API_KEY:-}
+      BREVO_LIST_ID: ${BREVO_LIST_ID:-}
+      BREVO_MODIFIED_SINCE: ${BREVO_MODIFIED_SINCE:-}
+    volumes:
+      - ${HOST_FRONTEND_PATH}:${CONTAINER_APP_ROOT_FRONTEND}
+      - ${HOST_FRONTEND_PATH}:${HOST_FRONTEND_PATH}
+      - frontend_node_modules:${CONTAINER_FRONTEND_NODE_MODULES_PATH}
+      - ${HOST_DATA_STORAGE_PATH}:${HOST_DATA_STORAGE_PATH}
+    entrypoint: ["python3", "scripts/newsletter/sync_timeline_variants.py"]
+
+  newsletter_push:
+    image: ${FRONTEND_IMAGE}
+    build:
+      context: ${HOST_FRONTEND_PATH}
+      dockerfile: ${HOST_INFRA_PATH}/images/frontend/Dockerfile.dev
+    user: "${UID:-1000}:${GID:-1000}"
+    profiles:
+      - newsletter
+    restart: "no"
+    environment:
+      ORBITA_CITY: ${ORBITA_CITY}
+      HOST_FRONTEND_PATH: ${HOST_FRONTEND_PATH}
+      HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
+      BREVO_API_KEY: ${BREVO_API_KEY:-}
+      BREVO_SENDER_ID: ${BREVO_SENDER_ID:-}
+      BREVO_SENDER_EMAIL: ${BREVO_SENDER_EMAIL:-}
+      BREVO_SENDER_NAME: ${BREVO_SENDER_NAME:-}
+      BREVO_SUBJECT: ${BREVO_SUBJECT:-}
+      BREVO_CAMPAIGN_NAME: ${BREVO_CAMPAIGN_NAME:-}
+      BREVO_CAMPAIGN_ID: ${BREVO_CAMPAIGN_ID:-}
+      BREVO_PREVIEW_TEXT: ${BREVO_PREVIEW_TEXT:-}
+      BREVO_REPLY_TO: ${BREVO_REPLY_TO:-}
+      BREVO_LIST_ID: ${BREVO_LIST_ID:-}
+      BREVO_SEGMENT_IDS: ${BREVO_SEGMENT_IDS:-}
+      HTML_FILE: ${HTML_FILE:-}
+    volumes:
+      - ${HOST_FRONTEND_PATH}:${CONTAINER_APP_ROOT_FRONTEND}
+      - ${HOST_FRONTEND_PATH}:${HOST_FRONTEND_PATH}
+      - frontend_node_modules:${CONTAINER_FRONTEND_NODE_MODULES_PATH}
+      - ${HOST_DATA_STORAGE_PATH}:${HOST_DATA_STORAGE_PATH}
+    entrypoint: ["python3", "scripts/newsletter/push_to_brevo.py"]
 
 volumes:
-  test_frontend_node_modules:
+  frontend_node_modules:
+    name: ${FRONTEND_NODE_MODULES_VOLUME}

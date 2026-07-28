@@ -1,0 +1,77 @@
+type: graph
+params:
+  TARGET_CITY: "Almeria"
+
+steps:
+  - name: "generate_newsletter_html"
+    id: generate_newsletter_html
+    run: >
+      env HOME=/tmp bash -lc 'while IFS= read -r -d "" ENV_ENTRY; do export "$ENV_ENTRY"; done < /proc/1/environ;
+      set -eu;
+      IMAGE="${FRONTEND_IMAGE}";
+      if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
+        echo "Missing image: $IMAGE";
+        echo "Build it first with: docker compose build frontend";
+        exit 1;
+      fi;
+      docker run --rm
+      -e TARGET_CITY="$TARGET_CITY"
+      -e HOST_DATA_STORAGE_PATH="$HOST_DATA_STORAGE_PATH"
+      -v "$HOST_FRONTEND_PATH:/app"
+      -v "$HOST_FRONTEND_PATH:$HOST_FRONTEND_PATH"
+      -v "$FRONTEND_NODE_MODULES_VOLUME:/app/node_modules"
+      -v "$HOST_DATA_STORAGE_PATH:$HOST_DATA_STORAGE_PATH"
+      "$IMAGE"
+      python3 scripts/newsletter/generate_newsletter_html.py --city "$TARGET_CITY" --id brevo'
+
+  - name: "sync_contacts"
+    id: sync_contacts
+    depends: [generate_newsletter_html]
+    run: >
+      env HOME=/tmp bash -lc 'while IFS= read -r -d "" ENV_ENTRY; do export "$ENV_ENTRY"; done < /proc/1/environ;
+      set -eu;
+      IMAGE="${FRONTEND_IMAGE}";
+      if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
+        echo "Missing image: $IMAGE";
+        echo "Build it first with: docker compose build frontend";
+        exit 1;
+      fi;
+      BREVO_ENV_FILE="$(mktemp)";
+      trap "rm -f \"$BREVO_ENV_FILE\"" EXIT;
+      tr "\0" "\n" < /proc/1/environ | awk -F= "/^BREVO_[A-Z0-9_]*=/{print}" > "$BREVO_ENV_FILE";
+      docker run --rm
+      --env-file "$BREVO_ENV_FILE"
+      -e TARGET_CITY="$TARGET_CITY"
+      -e HOST_DATA_STORAGE_PATH="$HOST_DATA_STORAGE_PATH"
+      -v "$HOST_FRONTEND_PATH:/app"
+      -v "$HOST_FRONTEND_PATH:$HOST_FRONTEND_PATH"
+      -v "$FRONTEND_NODE_MODULES_VOLUME:/app/node_modules"
+      -v "$HOST_DATA_STORAGE_PATH:$HOST_DATA_STORAGE_PATH"
+      "$IMAGE"
+      sh -lc ". scripts/newsletter/setting_up_city_variables.sh \"\$TARGET_CITY\"; python3 scripts/newsletter/sync_timeline_variants.py"'
+
+  - name: "push_to_brevo"
+    id: push_to_brevo
+    depends: [sync_contacts]
+    run: >
+      env HOME=/tmp bash -lc 'while IFS= read -r -d "" ENV_ENTRY; do export "$ENV_ENTRY"; done < /proc/1/environ;
+      set -eu;
+      IMAGE="${FRONTEND_IMAGE}";
+      if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
+        echo "Missing image: $IMAGE";
+        echo "Build it first with: docker compose build frontend";
+        exit 1;
+      fi;
+      BREVO_ENV_FILE="$(mktemp)";
+      trap "rm -f \"$BREVO_ENV_FILE\"" EXIT;
+      tr "\0" "\n" < /proc/1/environ | awk -F= "/^BREVO_[A-Z0-9_]*=/{print}" > "$BREVO_ENV_FILE";
+      docker run --rm
+      --env-file "$BREVO_ENV_FILE"
+      -e TARGET_CITY="$TARGET_CITY"
+      -e HOST_DATA_STORAGE_PATH="$HOST_DATA_STORAGE_PATH"
+      -v "$HOST_FRONTEND_PATH:/app"
+      -v "$HOST_FRONTEND_PATH:$HOST_FRONTEND_PATH"
+      -v "$FRONTEND_NODE_MODULES_VOLUME:/app/node_modules"
+      -v "$HOST_DATA_STORAGE_PATH:$HOST_DATA_STORAGE_PATH"
+      "$IMAGE"
+      sh -lc ". scripts/newsletter/setting_up_city_variables.sh \"\$TARGET_CITY\"; python3 scripts/newsletter/push_to_brevo.py"'
