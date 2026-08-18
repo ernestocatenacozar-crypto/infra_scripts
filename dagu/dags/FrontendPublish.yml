@@ -76,7 +76,7 @@ steps:
       --committed-master \"data/\$CITY_SLUG/master_events.json\"
       --output \"dist/\$CITY_SLUG/publish_diff.json\"
       ";
-      docker run --rm --entrypoint python3 -v "$HOST_FRONTEND_DIST_PATH:/app/dist" "$FRONTEND_IMAGE" -c "import json, pathlib; p=pathlib.Path(\"/app/dist/$CITY_SLUG/publish_diff.json\"); d=json.loads(p.read_text()); total=sum((d.get(\"summary\") or {}).values()); print(\"Publish diff changes=%s\" % total); raise SystemExit(\"0 eventos que publicar\") if total == 0 else None";
+      docker run --rm --entrypoint python3 -v "$HOST_FRONTEND_DIST_PATH:/app/dist" "$FRONTEND_IMAGE" -c "import json, pathlib, sys; p=pathlib.Path(\"/app/dist/$CITY_SLUG/publish_diff.json\"); d=json.loads(p.read_text()); total=sum((d.get(\"summary\") or {}).values()); print(\"Publish diff changes=%s\" % total); sys.exit(\"0 eventos que publicar\") if total == 0 else sys.exit(0)";
       '
 
   - name: "commit_and_push_publish_snapshot"
