@@ -1,0 +1,49 @@
+params:
+  TARGET_CITY: "Almeria"
+  APPLY_CLEANUP: "0"
+  VERBOSE_TREE: "0"
+
+env:
+  TARGET_CITY: ${TARGET_CITY}
+  APPLY_CLEANUP: ${APPLY_CLEANUP}
+  VERBOSE_TREE: ${VERBOSE_TREE}
+  BUNNY_STORAGE_ZONE: ${BUNNY_STORAGE_ZONE}
+  BUNNY_STORAGE_API_KEY: ${BUNNY_STORAGE_API_KEY}
+  HOST_FRONTEND_PATH: ${HOST_FRONTEND_PATH}
+  HOST_FRONTEND_DIST_PATH: ${HOST_FRONTEND_DIST_PATH}
+  FRONTEND_IMAGE: ${FRONTEND_IMAGE}
+
+steps:
+  - name: "diff_bunny_orphans"
+    id: diff_bunny_orphans
+    run: >
+      env HOME=/tmp bash -lc 'set -eu;
+      CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
+      IMAGE="${FRONTEND_IMAGE}";
+      if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
+        echo "Missing image: $IMAGE";
+        echo "Build it first with: docker compose build frontend";
+        exit 1;
+      fi;
+      MODE="--dry-run";
+      if [ "${APPLY_CLEANUP}" = "1" ]; then
+        MODE="--apply";
+      fi;
+      VERBOSE_ARG="";
+      if [ "${VERBOSE_TREE}" = "1" ]; then
+        VERBOSE_ARG="--verbose-tree";
+      fi;
+      docker run --rm
+      --entrypoint python3
+      -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE"
+      -e BUNNY_STORAGE_API_KEY="$BUNNY_STORAGE_API_KEY"
+      -e TARGET_CITY="$TARGET_CITY"
+      -v "$HOST_FRONTEND_PATH:/app"
+      -v "$HOST_FRONTEND_DIST_PATH:/app/dist"
+      -w /app
+      "$IMAGE"
+      scripts/bunny_cleanup_orphans_http.py
+      --city "$CITY_SLUG"
+      --local-root "/app/dist/$CITY_SLUG"
+      $VERBOSE_ARG
+      $MODE'

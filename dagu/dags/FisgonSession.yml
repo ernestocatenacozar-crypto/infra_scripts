@@ -1,19 +1,18 @@
-name: "FisgonSession"
 params:
-  - TARGET_CITY: ""
-  - CREATE_SESSION: "0"
-  - CLOSE_SESSION: "0"
+  TARGET_CITY: ""
+  CREATE_SESSION: "0"
+  CLOSE_SESSION: "0"
 
 env:
   - HOST_FISGON_PATH: ${HOST_FISGON_PATH}
   - HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
   - DATABASE_PATH: ${DATABASE_PATH}
   - FISGON_SCRAPER_IMAGE: ${FISGON_SCRAPER_IMAGE}
-  - DAGU_BASE_URL: ${DAGU_BASE_URL}
 
 steps:
   - name: "session"
-    command: >
+    id: session
+    run: >
       bash -lc 'docker run --rm
       --network host
       -v "$HOST_FISGON_PATH:/app"
@@ -27,8 +26,8 @@ steps:
       -e TARGET_CITY
       -e CREATE_SESSION
       -e CLOSE_SESSION
-      -e DAG_RUN_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
-      -e DAG_RUN_LOG_URL="${DAGU_BASE_URL}/dags/${DAG_NAME}/log?remoteNode=local&step=session&dagRunId=${DAG_RUN_ID}"
+      -e DAG_RUN_URL="http://localhost:3013/dags/${DAG_NAME}?dagRunId=${DAG_RUN_ID}"
+      -e DAG_RUN_LOG_URL="http://localhost:3013/dags/${DAG_NAME}/log?remoteNode=local&step=session&dagRunId=${DAG_RUN_ID}"
       "$FISGON_SCRAPER_IMAGE";
       rc=$?;
       exit $rc'
