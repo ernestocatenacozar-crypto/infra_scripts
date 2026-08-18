@@ -1,0 +1,9 @@
+services:
+  dagu:
+    environment:
+      DOPPLER_TOKEN: ${DOPPLER_TOKEN:?DOPPLER_TOKEN is required for dagu}
+      DOPPLER_PROJECT: orbitando
+      DOPPLER_CONFIG: prd
+  refinement_portal:
+    environment:
+      PYTHONPATH: /app:${HOST_FISGON_PATH}

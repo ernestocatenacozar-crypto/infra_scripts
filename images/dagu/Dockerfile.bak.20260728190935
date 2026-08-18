@@ -17,8 +17,6 @@ RUN curl -fsSL "https://download.docker.com/linux/static/stable/x86_64/docker-${
     | tar -xz --strip-components=1 -C /usr/local/bin docker/docker \
   && chmod +x /usr/local/bin/docker
 
-RUN curl -Ls "https://cli.doppler.com/install.sh" | sh
-
 RUN curl -fsSL "https://github.com/dagu-org/dagu/releases/download/v${DAGU_VERSION}/dagu_${DAGU_VERSION}_linux_amd64.tar.gz" \
     | tar -xz -C /usr/local/bin dagu \
   && chmod +x /usr/local/bin/dagu

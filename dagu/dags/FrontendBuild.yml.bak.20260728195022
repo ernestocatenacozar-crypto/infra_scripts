@@ -2,18 +2,6 @@ type: graph
 params:
   TARGET_CITY: "Almeria"
   SKIP_DOWNLOAD_IMAGES: "0"
-  BASE_URL: ""
-  BUNNY_STORAGE_ZONE: ""
-  BUNNY_STORAGE_API_KEY: ""
-  BUNNY_PULL_ZONE_ID: ""
-  BUNNY_ACCOUNT_API_KEY: ""
-  HOST_DATA_STORAGE_PATH: "/home/ubuntu/data_storage/"
-  HOST_FRONTEND_PATH: "/home/ubuntu/work/test_frontend"
-  HOST_FRONTEND_DIST_PATH: "/home/ubuntu/work/test_frontend/dist"
-  HOST_SSH_PATH: "/home/ubuntu/.ssh"
-  FRONTEND_IMAGE: "orbitando_frontend:latest"
-  FRONTEND_BUILD_IMAGE: "orbitando_frontend_build:latest"
-  FRONTEND_NODE_MODULES_VOLUME: "orbitando_frontend_node_modules"
 
 env:
   TARGET_CITY: ${TARGET_CITY}

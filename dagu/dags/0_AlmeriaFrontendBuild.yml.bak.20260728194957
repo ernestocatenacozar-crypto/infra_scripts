@@ -1,0 +1,11 @@
+type: graph
+
+env:
+  TARGET_CITY: "Almeria"
+
+steps:
+  - name: "frontend_build"
+    id: frontend_build
+    run: >
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FrontendBuild.yml -- \
+      TARGET_CITY="$TARGET_CITY"'
