@@ -7,6 +7,7 @@ steps:
   - name: "frontend_build"
     id: frontend_build
     run: >
+<<<<<<< HEAD
       env HOME=/tmp bash -lc 'set -eu; while IFS= read -r -d "" envvar; do export "$envvar"; done < /proc/1/environ; /usr/local/bin/dagu start /var/lib/dagu/dags/FrontendBuild.yml -- \
       TARGET_CITY="$TARGET_CITY" \
       SKIP_DOWNLOAD_IMAGES="${SKIP_DOWNLOAD_IMAGES:-0}" \
@@ -22,3 +23,7 @@ steps:
       FRONTEND_IMAGE="$FRONTEND_IMAGE" \
       FRONTEND_BUILD_IMAGE="$FRONTEND_BUILD_IMAGE" \
       FRONTEND_NODE_MODULES_VOLUME="$FRONTEND_NODE_MODULES_VOLUME"'
+=======
+      env HOME=/tmp bash -lc '/usr/local/bin/dagu start /var/lib/dagu/dags/FrontendBuild.yml -- \
+      TARGET_CITY="$TARGET_CITY"'
+>>>>>>> fix_shit

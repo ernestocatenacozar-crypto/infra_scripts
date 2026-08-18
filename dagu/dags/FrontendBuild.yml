@@ -2,6 +2,7 @@ type: graph
 params:
   TARGET_CITY: "Almeria"
   SKIP_DOWNLOAD_IMAGES: "0"
+<<<<<<< HEAD
   BASE_URL: ""
   BUNNY_STORAGE_ZONE: ""
   BUNNY_STORAGE_API_KEY: ""
@@ -14,6 +15,8 @@ params:
   FRONTEND_IMAGE: "orbitando_frontend:latest"
   FRONTEND_BUILD_IMAGE: "orbitando_frontend_build:latest"
   FRONTEND_NODE_MODULES_VOLUME: "orbitando_frontend_node_modules"
+=======
+>>>>>>> fix_shit
 
 env:
   TARGET_CITY: ${TARGET_CITY}
@@ -135,7 +138,7 @@ steps:
       -e CITY_SLUG="$CITY_SLUG"
       -v "$HOST_FRONTEND_DIST_PATH:/app/dist"
       "$FRONTEND_IMAGE"
-      -c "set -eu; cd /app/dist/$CITY_SLUG; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"cd $CITY_SLUG; mirror -R --parallel=25 . .; bye\""'
+      -c "set -eu; ROOT_UPLOAD_CMDS=\"\"; [ ! -f /app/dist/sitemap.xml ] || ROOT_UPLOAD_CMDS=\"\$ROOT_UPLOAD_CMDS put -O / /app/dist/sitemap.xml;\"; [ ! -f /app/dist/robots.txt ] || ROOT_UPLOAD_CMDS=\"\$ROOT_UPLOAD_CMDS put -O / /app/dist/robots.txt;\"; [ ! -f /app/dist/llms.txt ] || ROOT_UPLOAD_CMDS=\"\$ROOT_UPLOAD_CMDS put -O / /app/dist/llms.txt;\"; cd /app/dist/$CITY_SLUG; LFTP_CMDS=\"\$ROOT_UPLOAD_CMDS cd /; cd $CITY_SLUG; mirror -R --parallel=25 . .; cd /;\"; lftp -u \"$BUNNY_STORAGE_ZONE,$BUNNY_STORAGE_API_KEY\" storage.bunnycdn.com -e \"\$LFTP_CMDS bye\""'
 
   - name: "purge_bunny_cache"
     id: purge_bunny_cache
