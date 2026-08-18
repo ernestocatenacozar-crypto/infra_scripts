@@ -213,3 +213,5 @@ __marimo__/
 .streamlit/secrets.toml
 .lol
 local_infra_scripts.code-workspace
+dagu/data/agent/references/cli.md
+dagu/data/agent/references/codingagent.md
