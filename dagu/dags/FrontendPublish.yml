@@ -76,7 +76,7 @@ steps:
       --committed-master \"data/\$CITY_SLUG/master_events.json\"
       --output \"dist/\$CITY_SLUG/publish_diff.json\"
       ";
-      docker run --rm --entrypoint python3 -v "$HOST_FRONTEND_DIST_PATH:/app/dist" "$FRONTEND_IMAGE" -c "import json, pathlib; p=pathlib.Path('/app/dist/$CITY_SLUG/publish_diff.json'); d=json.loads(p.read_text()); total=sum((d.get('summary') or {}).values()); print(f'Publish diff changes={total}'); raise SystemExit('0 eventos que publicar') if total == 0 else None";
+      docker run --rm --entrypoint python3 -v "$HOST_FRONTEND_DIST_PATH:/app/dist" "$FRONTEND_IMAGE" -c "import json, pathlib; p=pathlib.Path(\"/app/dist/$CITY_SLUG/publish_diff.json\"); d=json.loads(p.read_text()); total=sum((d.get(\"summary\") or {}).values()); print(\"Publish diff changes=%s\" % total); raise SystemExit(\"0 eventos que publicar\") if total == 0 else None";
       '
 
   - name: "commit_and_push_publish_snapshot"
@@ -85,11 +85,6 @@ steps:
     run: >
       env HOME=/tmp bash -lc 'set -eu;
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
-      if docker run --rm --entrypoint python3 -v "$HOST_FRONTEND_DIST_PATH:/app/dist" "$FRONTEND_IMAGE" -c "import json, pathlib, sys; p=pathlib.Path('/app/dist/$CITY_SLUG/publish_diff.json'); d=json.loads(p.read_text()); sys.exit(0 if sum((d.get('summary') or {}).values()) == 0 else 1)";
-      then
-        echo "No publish changes detected, skipping snapshot commit";
-        exit 0;
-      fi;
       SNAPSHOT_PATH="data/$CITY_SLUG/master_events.json";
       docker run --rm
       --entrypoint sh
@@ -136,11 +131,6 @@ steps:
     run: >
       env HOME=/tmp bash -lc 'set -eu;
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
-      if docker run --rm --entrypoint python3 -v "$HOST_FRONTEND_DIST_PATH:/app/dist" "$FRONTEND_IMAGE" -c "import json, pathlib, sys; p=pathlib.Path('/app/dist/$CITY_SLUG/publish_diff.json'); d=json.loads(p.read_text()); sys.exit(0 if sum((d.get('summary') or {}).values()) == 0 else 1)";
-      then
-        echo "No publish changes detected, skipping publish build";
-        exit 0;
-      fi;
       docker run --rm
       --entrypoint python3
       -e ORBITA_CITY="$TARGET_CITY"
@@ -160,11 +150,6 @@ steps:
     run: >
       env HOME=/tmp bash -lc 'set -eu;
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
-      if docker run --rm --entrypoint python3 -v "$HOST_FRONTEND_DIST_PATH:/app/dist" "$FRONTEND_IMAGE" -c "import json, pathlib, sys; p=pathlib.Path('/app/dist/$CITY_SLUG/publish_diff.json'); d=json.loads(p.read_text()); sys.exit(0 if sum((d.get('summary') or {}).values()) == 0 else 1)";
-      then
-        echo "No publish changes detected, skipping Bunny upload";
-        exit 0;
-      fi;
       MODE="--apply";
       if [ "${PUBLISH_UPLOAD_DRY_RUN}" = "1" ]; then
         MODE="--dry-run";
@@ -188,11 +173,6 @@ steps:
     run: >
       env HOME=/tmp bash -lc 'set -eu;
       CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
-      if docker run --rm --entrypoint python3 -v "$HOST_FRONTEND_DIST_PATH:/app/dist" "$FRONTEND_IMAGE" -c "import json, pathlib, sys; p=pathlib.Path('/app/dist/$CITY_SLUG/publish_diff.json'); d=json.loads(p.read_text()); sys.exit(0 if sum((d.get('summary') or {}).values()) == 0 else 1)";
-      then
-        echo "No publish changes detected, skipping cache purge";
-        exit 0;
-      fi;
       if [ -z "${BUNNY_PULL_ZONE_ID}" ]; then
         echo "BUNNY_PULL_ZONE_ID is not set, skipping cache purge";
         exit 0;
