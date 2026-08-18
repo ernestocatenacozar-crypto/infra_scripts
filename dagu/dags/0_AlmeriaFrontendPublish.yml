@@ -1,0 +1,22 @@
+type: graph
+
+env:
+  TARGET_CITY: "Almeria"
+
+steps:
+  - name: "frontend_publish"
+    id: frontend_publish
+    run: >
+      env HOME=/tmp bash -lc 'set -eu; while IFS= read -r -d "" envvar; do export "$envvar"; done < /proc/1/environ; /usr/local/bin/dagu start /var/lib/dagu/dags/FrontendPublish.yml -- \
+      TARGET_CITY="$TARGET_CITY" \
+      PUBLISH_UPLOAD_DRY_RUN="${PUBLISH_UPLOAD_DRY_RUN:-0}" \
+      BASE_URL="${BASE_URL:-}" \
+      BUNNY_STORAGE_ZONE="${BUNNY_STORAGE_ZONE:-}" \
+      BUNNY_STORAGE_API_KEY="${BUNNY_STORAGE_API_KEY:-}" \
+      BUNNY_PULL_ZONE_ID="${BUNNY_PULL_ZONE_ID:-}" \
+      BUNNY_ACCOUNT_API_KEY="${BUNNY_ACCOUNT_API_KEY:-}" \
+      HOST_DATA_STORAGE_PATH="${HOST_DATA_STORAGE_PATH:-/home/ubuntu/data_storage/}" \
+      HOST_FRONTEND_PATH="$HOST_FRONTEND_PATH" \
+      HOST_FRONTEND_DIST_PATH="$HOST_FRONTEND_DIST_PATH" \
+      HOST_SSH_PATH="$HOST_SSH_PATH" \
+      FRONTEND_IMAGE="$FRONTEND_IMAGE"'

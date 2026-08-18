@@ -1,0 +1,188 @@
+type: graph
+params:
+  TARGET_CITY: "Almeria"
+  PUBLISH_UPLOAD_DRY_RUN: "0"
+  BASE_URL: ""
+  BUNNY_STORAGE_ZONE: ""
+  BUNNY_STORAGE_API_KEY: ""
+  BUNNY_PULL_ZONE_ID: ""
+  BUNNY_ACCOUNT_API_KEY: ""
+  HOST_DATA_STORAGE_PATH: "/home/ubuntu/data_storage/"
+  HOST_FRONTEND_PATH: "/home/ubuntu/work/test_frontend"
+  HOST_FRONTEND_DIST_PATH: "/home/ubuntu/work/test_frontend/dist"
+  HOST_SSH_PATH: "/home/ubuntu/.ssh"
+  FRONTEND_IMAGE: "orbitando_frontend:latest"
+
+env:
+  TARGET_CITY: ${TARGET_CITY}
+  PUBLISH_UPLOAD_DRY_RUN: ${PUBLISH_UPLOAD_DRY_RUN}
+  BASE_URL: ${BASE_URL}
+  BUNNY_STORAGE_ZONE: ${BUNNY_STORAGE_ZONE}
+  BUNNY_STORAGE_API_KEY: ${BUNNY_STORAGE_API_KEY}
+  BUNNY_PULL_ZONE_ID: ${BUNNY_PULL_ZONE_ID}
+  BUNNY_ACCOUNT_API_KEY: ${BUNNY_ACCOUNT_API_KEY}
+  HOST_DATA_STORAGE_PATH: ${HOST_DATA_STORAGE_PATH}
+  HOST_FRONTEND_PATH: ${HOST_FRONTEND_PATH}
+  HOST_FRONTEND_DIST_PATH: ${HOST_FRONTEND_DIST_PATH}
+  HOST_SSH_PATH: ${HOST_SSH_PATH}
+  FRONTEND_IMAGE: ${FRONTEND_IMAGE}
+
+steps:
+  - name: "compare_publish_master"
+    id: compare_publish_master
+    run: >
+      env HOME=/tmp bash -lc 'set -eu;
+      CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
+      docker run --rm
+      --entrypoint sh
+      -v "$HOST_FRONTEND_PATH:/repo"
+      -v "$HOST_SSH_PATH:/root/.ssh:ro"
+      -w /repo
+      alpine/git:latest
+      -lc "
+      set -eu;
+      git config --global --add safe.directory /repo;
+      git checkout main;
+      git pull origin main
+      ";
+      docker run --rm
+      --entrypoint sh
+      -e TARGET_CITY="$TARGET_CITY"
+      -e CITY_SLUG="$CITY_SLUG"
+      -v "$HOST_FRONTEND_PATH:/app"
+      -v "$HOST_FRONTEND_DIST_PATH:/app/dist"
+      -v "$HOST_DATA_STORAGE_PATH:/src_data:ro"
+      -w /app
+      "$FRONTEND_IMAGE"
+      -lc "
+      set -eu;
+      SRC_DIR=\"\";
+      for d in /src_data/*; do
+        [ -d \"\$d\" ] || continue;
+        if [ \"\$(basename \"\$d\" | tr \"[:upper:]\" \"[:lower:]\")\" = \"\$CITY_SLUG\" ]; then
+          SRC_DIR=\"\$d\";
+          break;
+        fi;
+      done;
+      if [ -z \"\$SRC_DIR\" ]; then
+        echo \"City data folder not found in /src_data for \$TARGET_CITY\";
+        exit 1;
+      fi;
+      SRC_FILE=\"\$SRC_DIR/00_master/master_events.json\";
+      [ -f \"\$SRC_FILE\" ] || { echo \"Missing source file: \$SRC_FILE\"; exit 1; };
+      python3 scripts/publish_op/diff_master.py
+      --city \"\$CITY_SLUG\"
+      --new-master \"\$SRC_FILE\"
+      --committed-master \"data/\$CITY_SLUG/master_events.json\"
+      --output \"dist/\$CITY_SLUG/publish_diff.json\"
+      "'
+
+  - name: "commit_and_push_publish_snapshot"
+    id: commit_and_push_publish_snapshot
+    depends: [compare_publish_master]
+    run: >
+      env HOME=/tmp bash -lc 'set -eu;
+      CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
+      SNAPSHOT_PATH="data/$CITY_SLUG/master_events.json";
+      docker run --rm
+      --entrypoint sh
+      -e TARGET_CITY="$TARGET_CITY"
+      -e CITY_SLUG="$CITY_SLUG"
+      -v "$HOST_DATA_STORAGE_PATH:/src_data:ro"
+      -v "$HOST_FRONTEND_PATH:/repo"
+      -v "$HOST_SSH_PATH:/root/.ssh:ro"
+      -w /repo
+      alpine/git:latest
+      -lc "
+      set -eu;
+      SRC_DIR=\"\";
+      for d in /src_data/*; do
+        [ -d \"\$d\" ] || continue;
+        if [ \"\$(basename \"\$d\" | tr \"[:upper:]\" \"[:lower:]\")\" = \"\$CITY_SLUG\" ]; then
+          SRC_DIR=\"\$d\";
+          break;
+        fi;
+      done;
+      if [ -z \"\$SRC_DIR\" ]; then
+        echo \"City data folder not found in /src_data for \$TARGET_CITY\";
+        exit 1;
+      fi;
+      SRC_FILE=\"\$SRC_DIR/00_master/master_events.json\";
+      [ -f \"\$SRC_FILE\" ] || { echo \"Missing source file: \$SRC_FILE\"; exit 1; };
+      mkdir -p \"\$(dirname \"$SNAPSHOT_PATH\")\";
+      cp \"\$SRC_FILE\" \"$SNAPSHOT_PATH\";
+      git config --global --add safe.directory /repo;
+      git checkout main;
+      git add \"$SNAPSHOT_PATH\";
+      if git diff --cached --quiet -- \"$SNAPSHOT_PATH\"; then
+        echo \"No snapshot changes to commit for $SNAPSHOT_PATH\";
+        exit 0;
+      fi;
+      COMMIT_MSG=\"chore(snapshot): publish master_events for $CITY_SLUG \$(date -u +%Y-%m-%dT%H:%M:%SZ)\";
+      git -c user.name=\"Dagu Snapshot Bot\" -c user.email=\"dagu-snapshot@example.com\" commit -m \"\$COMMIT_MSG\" -- \"$SNAPSHOT_PATH\";
+      git push origin main
+      "'
+
+  - name: "build_publish"
+    id: build_publish
+    depends: [commit_and_push_publish_snapshot]
+    run: >
+      env HOME=/tmp bash -lc 'set -eu;
+      CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
+      docker run --rm
+      --entrypoint python3
+      -e ORBITA_CITY="$TARGET_CITY"
+      -v "$HOST_FRONTEND_PATH:/app"
+      -v "$HOST_FRONTEND_DIST_PATH:/app/dist"
+      -w /app
+      "$FRONTEND_IMAGE"
+      scripts/publish_op/build_publish.py
+      --city "$CITY_SLUG"
+      --diff "/app/dist/$CITY_SLUG/publish_diff.json"
+      --out "/app/dist"
+      --base-url "$BASE_URL"'
+
+  - name: "upload_publish_to_bunny"
+    id: upload_publish_to_bunny
+    depends: [build_publish]
+    run: >
+      env HOME=/tmp bash -lc 'set -eu;
+      CITY_SLUG="$(printf "%s" "$TARGET_CITY" | tr "[:upper:]" "[:lower:]")";
+      MODE="--apply";
+      if [ "${PUBLISH_UPLOAD_DRY_RUN}" = "1" ]; then
+        MODE="--dry-run";
+      fi;
+      docker run --rm
+      --entrypoint python3
+      -e BUNNY_STORAGE_ZONE="$BUNNY_STORAGE_ZONE"
+      -e BUNNY_STORAGE_API_KEY="$BUNNY_STORAGE_API_KEY"
+      -v "$HOST_FRONTEND_PATH:/app"
+      -v "$HOST_FRONTEND_DIST_PATH:/app/dist"
+      -w /app
+      "$FRONTEND_IMAGE"
+      scripts/publish_op/upload_publish.py
+      --manifest "/app/dist/$CITY_SLUG/publish_manifest.json"
+      --dist-root "/app/dist"
+      $MODE'
+
+  - name: "purge_bunny_cache"
+    id: purge_bunny_cache
+    depends: [upload_publish_to_bunny]
+    run: >
+      env HOME=/tmp bash -lc 'set -eu;
+      if [ -z "${BUNNY_PULL_ZONE_ID}" ]; then
+        echo "BUNNY_PULL_ZONE_ID is not set, skipping cache purge";
+        exit 0;
+      fi;
+      echo "Purging BunnyCDN cache for pull zone ${BUNNY_PULL_ZONE_ID}...";
+      HTTP_STATUS=$(docker run --rm curlimages/curl:latest
+      -s -o /dev/null -w "%{http_code}"
+      -X POST "https://api.bunny.net/pullzone/${BUNNY_PULL_ZONE_ID}/purgeCache"
+      -H "AccessKey: ${BUNNY_ACCOUNT_API_KEY}"
+      -H "Content-Type: application/json");
+      echo "HTTP status: $HTTP_STATUS";
+      if [ "$HTTP_STATUS" != "204" ]; then
+        echo "Cache purge failed with HTTP status $HTTP_STATUS";
+        exit 1;
+      fi;
+      echo "Cache purged successfully"'
